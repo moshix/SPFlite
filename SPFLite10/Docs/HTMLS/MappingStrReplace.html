@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>String replacement items – RA / RL / RR</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="String replacement items – RA / RL / RR">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="String replacement items – RA / RL / RR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingStrReplace"
+		  data-hnd-context="270"
+		  data-hnd-title="String replacement items – RA / RL / RR"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>String replacement items – RA / RL / RR</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A</span><span class="rvts140"> string-replacement item</span><span class="rvts6"> is used to replace one string with another string within the </span><span class="rvts140">result string</span><span class="rvts6">. Depending on the command code used, you can replace the left-most, right-most or all occurrences of some string with another one. If the replacement value is omitted or is a null (zero-length) string, the replacement operation acts as a deletion operation.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a </span><span class="rvts140">string-replacement item</span><span class="rvts6"> is encountered in the mapping string, it is applied to the </span><span class="rvts140">result string</span><span class="rvts6"> as it exists at that point in time. Thus, to do string replacement on the ‘final’ </span><span class="rvts140">result string</span><span class="rvts6"> in a certain way, you would place the </span><span class="rvts140">string-replacement item</span><span class="rvts6"> last (right-most) in the mapping string.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Because the action of a </span><span class="rvts140">string-replacement item</span><span class="rvts6"> is applied to the </span><span class="rvts140">result string</span><span class="rvts6"> and not to the </span><span class="rvts140">source string</span><span class="rvts6">, the mapping string can contain additional column-reference operands to the right of a </span><span class="rvts140">string -replacement item</span><span class="rvts6">, since the data characters in the </span><span class="rvts140">source string</span><span class="rvts6"> remain undisturbed in their original locations.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the following discussion, the command </span><span class="rvts40">RA</span><span class="rvts6"> will be used for illustrative purposes to generally represent the syntax of all three commands, since their format is identical. When a specific command is intended, the discussion will bring this out.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Syntax of a &nbsp;</span><span class="rvts140">string-replacement item:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">{ &nbsp;</span><span class="rvts40">RA</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">RL</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">RR</span><span class="rvts6"> &nbsp;} &nbsp; </span><span class="rvts140">string-replacement-pair &nbsp;</span><span class="rvts6">[ &nbsp;</span><span class="rvts140">column-reference</span><span class="rvts6"> &nbsp;]</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts40">RA</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">RL</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">RR</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Introduces the string-replacement item.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The command </span><span class="rvts40">RA</span><span class="rvts6"> will Replace </span><span class="rvts40">All</span><span class="rvts6"> occurrences of </span><span class="rvts140">first</span><span class="rvts6"> within the </span><span class="rvts140">result string</span><span class="rvts6"> with </span><span class="rvts140">second</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The command </span><span class="rvts40">RL</span><span class="rvts6"> Replaces the </span><span class="rvts40">Leftmost</span><span class="rvts6"> occurrence of </span><span class="rvts140">first</span><span class="rvts6"> within the </span><span class="rvts140">result string</span><span class="rvts6"> with </span><span class="rvts140">second</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The command </span><span class="rvts40">RR</span><span class="rvts6"> Replaces the </span><span class="rvts40">Rightmost</span><span class="rvts6"> occurrence of </span><span class="rvts140">first</span><span class="rvts6"> within the </span><span class="rvts140">result string</span><span class="rvts6"> with </span><span class="rvts140">second</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts140">String-replacement-pair:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Defines a pair of values. The pair is a quoted </span><span class="rvts140">string set</span><span class="rvts6"> or </span><span class="rvts140">string-pair, </span><span class="rvts6">in the format of:</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168">'</span><span class="rvts140">first</span><span class="rvts6"> </span><span class="rvts168">=</span><span class="rvts140">second</span><span class="rvts168">'</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- in string-set notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">or</span></p>
+<p class="rvps13"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168">'</span><span class="rvts140">first</span><span class="rvts168">'='</span><span class="rvts140">second</span><span class="rvts168">'</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- in string-pair notation</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">where </span><span class="rvts140">first</span><span class="rvts6"> and </span><span class="rvts140">second</span><span class="rvts6"> are text values. The </span><span class="rvts140">first</span><span class="rvts6"> and </span><span class="rvts140">second</span><span class="rvts6"> strings need not be of equal length. The </span><span class="rvts140">first</span><span class="rvts6"> string must not be null. The </span><span class="rvts140">second</span><span class="rvts6"> string can be </span><span class="rvts40">null</span><span class="rvts6">; if so, the replacement operation acts to </span><span class="rvts40">delete</span><span class="rvts6"> occurrences of the </span><span class="rvts140">first</span><span class="rvts6"> string.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps13"><span class="rvts6">By default, the casing of the </span><span class="rvts140">string-replacement-pair</span><span class="rvts6"> uses the current </span><span class="rvts40">PROFILE</span><span class="rvts6"> </span><span class="rvts40">CASE</span><span class="rvts6"> setting in effect. This can be overridden by a </span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">CT</span><span class="rvts6"> command code, or by using a type code suffix of </span><span class="rvts40">C</span><span class="rvts6">, </span><span class="rvts40">T</span><span class="rvts6"> or </span><span class="rvts40">X</span><span class="rvts6"> on the string-replacement-pair. </span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">When </span><span class="rvts40">CASE T</span><span class="rvts6"> mode is in effect, by any means, string comparisons between the </span><span class="rvts140">first</span><span class="rvts6"> value and the data in the </span><span class="rvts140">result string</span><span class="rvts6"> is done as case-insensitive; otherwise it is done as case-sensitive.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">When you use an explicit type code of </span><span class="rvts40">T</span><span class="rvts6"> on the </span><span class="rvts140">string-replacement-pair</span><span class="rvts6">, the replacement operation is performed as a </span><span class="rvts140">case-conformant change</span><span class="rvts6">. If these commands do not have an explicit type code of </span><span class="rvts40">T</span><span class="rvts6"> but simply ‘inherit’ a </span><span class="rvts40">PROFILE CASE T </span><span class="rvts6">or </span><span class="rvts40">CT</span><span class="rvts6"> setting, comparison of the </span><span class="rvts140">first</span><span class="rvts6"> value is done as case-insensitive but string replacement copies the </span><span class="rvts140">second</span><span class="rvts6"> value as-is without attempting to be </span><span class="rvts140">case-conformant.</span><span class="rvts6"> &nbsp;String replacement also takes place in &nbsp;mode if the separator between </span><span class="rvts140">first</span><span class="rvts6"> and </span><span class="rvts140">second</span><span class="rvts6"> is a </span><span class="rvts168">:</span><span class="rvts6"> colon instead of an </span><span class="rvts168">=</span><span class="rvts6"> equal sign.</span></p>
+<p class="rvps13"><span class="rvts207"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Special considerations when using hex strings: &nbsp;(1) The hex value is always treated as case-sensitive, as if in </span><span class="rvts40">CASE C</span><span class="rvts6"> mode. (2) The </span><span class="rvts168">=</span><span class="rvts6"> equal sign that separates the </span><span class="rvts140">first</span><span class="rvts6"> and </span><span class="rvts140">second</span><span class="rvts6"> parts in a </span><span class="rvts140">string set</span><span class="rvts6"> is written as an actual &nbsp;</span><span class="rvts168">=</span><span class="rvts6"> equal sign character, the same as in non-hex values. Example:</span><span class="rvts168"> </span><span class="rvts6">RA'F1F2=F8F9'X. (3) Whether specified as a literal </span><span class="rvts168">=</span><span class="rvts6"> equal sign or as a hex code, there can be only one equal sign in the hex value if specified as a single </span><span class="rvts140">string set.</span><span class="rvts6"> &nbsp;No such restrictions exist if the value is specified as a</span><span class="rvts140"> string pair</span><span class="rvts6">, like &nbsp;</span><span class="rvts6">RA'F1F2'='F8F9'X</span><span class="rvts6">.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">See the </span><span class="rvts165">Mapping Strings Quick Reference</span><span class="rvts6"> for a concise summary of how case sensitivity and case conformance are handled.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Column-reference:</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Specifies columns in the </span><span class="rvts140">result string</span><span class="rvts6"> to be modified. If </span><span class="rvts140">column reference</span><span class="rvts6"> is omitted, the entire</span><span class="rvts140"> result string</span><span class="rvts6"> can potentially be modified.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If desired, the two values can be specified as a </span><span class="rvts140">string pair</span><span class="rvts6">, using the syntax of </span><span class="rvts6">RA'first'='second'. This form is convenient when your strings contain equal signs as data. When you are not dealing with data having embedded equal signs, the shorter form will be easier to use. When you use the shorter </span><span class="rvts140">string set</span><span class="rvts6"> form, the string must contain only one </span><span class="rvts168">=</span><span class="rvts6"> equal sign.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note</span><span class="rvts6">. If you use a </span><span class="rvts140">string pair</span><span class="rvts6">, the syntax &nbsp;</span><span class="rvts6">RA'first'='second'</span><span class="rvts6"> allows for an alternate format, as </span><span class="rvts6">RC'first':'second'</span><span class="rvts6"> using a </span><span class="rvts6">:</span><span class="rvts6">&nbsp;colon instead of an </span><span class="rvts6">=</span><span class="rvts6"> equal sign. When you do this, the comparison of the </span><span class="rvts140">first</span><span class="rvts6"> value, and the substitution of the </span><span class="rvts140">second</span><span class="rvts6"> value, is done in a </span><span class="rvts140">case-conformant</span><span class="rvts6"> manner, as if a trailing type code of </span><span class="rvts40">T</span><span class="rvts6"> appeared on both values.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">string-replacement-pair</span><span class="rvts6"> represents </span><span class="rvts140">potential</span><span class="rvts6"> string replacements that may take place. It is not necessary for the </span><span class="rvts140">first</span><span class="rvts6"> value to actually exist in the </span><span class="rvts140">result string</span><span class="rvts6">. If none are present, it is not an error; no string replacement takes place, and the </span><span class="rvts140">result string</span><span class="rvts6"> will remain unmodified.</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For instance, to replace all occurrences of </span><span class="rvts6">one</span><span class="rvts6"> with </span><span class="rvts6">two</span><span class="rvts6">, &nbsp;you would use a </span><span class="rvts140">string-replacement item</span><span class="rvts6"> like</span></p>
+<p class="rvps10"><span class="rvts6">RA'one=two'</span></p>
+<p class="rvps9"><span class="rvts207"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A complete mapping string that used this item would look like:</span></p>
+<p class="rvps10"><span class="rvts6">M"1+ RA'one=two'"</span></p>
+<p class="rvps9"><span class="rvts207"> </span></p>
+<p class="rvps9"><span class="rvts6">or with the </span><span class="rvts40">1+</span><span class="rvts6"> implied by </span><span class="rvts140">auto-copy</span><span class="rvts6"> we can shorten this to:</span></p>
+<p class="rvps10"><span class="rvts6">M"RA'one=two'"</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To </span><span class="rvts40">delete</span><span class="rvts6"> all occurrences of </span><span class="rvts168">seven</span><span class="rvts6">, &nbsp;you would use a </span><span class="rvts140">string-replacement item</span><span class="rvts6"> like:</span></p>
+<p class="rvps10"><span class="rvts6">RA'seven'</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Since there is no </span><span class="rvts168">=</span><span class="rvts6"> equal sign in this string operand, and it is not specified as a </span><span class="rvts140">string pair</span><span class="rvts6">, the </span><span class="rvts140">second</span><span class="rvts6"> value has not been defined, and thus is null. When the commands are using in this way, the </span><span class="rvts40">R</span><span class="rvts6"> in the command name can be thought of as “</span><span class="rvts40">Remove</span><span class="rvts6">” instead of “</span><span class="rvts40">Replace</span><span class="rvts6">”. When </span><span class="rvts140">second</span><span class="rvts6"> is omitted, </span><span class="rvts40">RA</span><span class="rvts6"> = Remove All, </span><span class="rvts40">RL</span><span class="rvts6"> = Remove Leftmost, and </span><span class="rvts40">RR</span><span class="rvts6">&nbsp;=&nbsp;Remove Rightmost.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the event the value you wanted to remove has an embedded </span><span class="rvts168">=</span><span class="rvts6"> equal sign, the full string-pair format is required. For example, if you wanted to remove all instances of &nbsp;“</span><span class="rvts168">A=B</span><span class="rvts6">” &nbsp;it would require a command like this:</span></p>
+<p class="rvps10"><span class="rvts6">RA'A=B'=''</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Command-specific details:</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps105"><span class="rvts6">The </span><span class="rvts40">RA</span><span class="rvts6"> command will find all occurrences of </span><span class="rvts140">first</span><span class="rvts6"> and replace them with </span><span class="rvts140">second,</span><span class="rvts6"> or will delete the value of </span><span class="rvts140">first</span><span class="rvts6"> wherever it appears, if </span><span class="rvts140">second</span><span class="rvts6"> is a null string. When </span><span class="rvts40">RA</span><span class="rvts6"> finds an instance of </span><span class="rvts140">first</span><span class="rvts6"> and then replaces it with </span><span class="rvts140">second,</span><span class="rvts6"> as it resumes its scan of the </span><span class="rvts140">result string</span><span class="rvts6">, it will </span><span class="rvts40">not</span><span class="rvts6"> </span><span class="rvts40">rescan</span><span class="rvts6"> over any of the replacement data. Thus, if you were to specify a command of &nbsp;RA'Abc=AbcAbc'</span><span class="rvts6">, it would </span><span class="rvts40">not</span><span class="rvts6"> inspect any of the just-replaced data. The </span><span class="rvts40">RA</span><span class="rvts6"> logic passes over the </span><span class="rvts140">second</span><span class="rvts6"> replacement value, continuing on with its scan of the </span><span class="rvts140">result string</span><span class="rvts6"> at the portion of it that had not yet been examined.</span></li>
+</ul></ul>
+<p class="rvps105"><span class="rvts6"><br/></span></p>
+<p class="rvps105"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps105"><span class="rvts6">The </span><span class="rvts40">RL</span><span class="rvts6"> command will find the left-most occurrence of </span><span class="rvts140">first</span><span class="rvts6"> and replace it with </span><span class="rvts140">second,</span><span class="rvts6"> or will delete the value of </span><span class="rvts140">first</span><span class="rvts6"> if </span><span class="rvts140">second</span><span class="rvts6"> is a null string.</span></li>
+</ul></ul>
+<p class="rvps105"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps105"><span class="rvts6">The </span><span class="rvts40">RR</span><span class="rvts6"> command will find the right-most occurrence of </span><span class="rvts140">first</span><span class="rvts6"> and replace it with </span><span class="rvts140">second,</span><span class="rvts6"> or will delete the value of </span><span class="rvts140">first</span><span class="rvts6"> if </span><span class="rvts140">second</span><span class="rvts6"> is a null string.</span></li>
+</ul></ul>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

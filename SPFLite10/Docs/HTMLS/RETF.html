@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>RETF - Retrieve Forward Direction</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RETF - Retrieve Forward Direction">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="RETF - Retrieve Forward Direction" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="RETF"
+		  data-hnd-context="190"
+		  data-hnd-title="RETF - Retrieve Forward Direction"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>RETF - Retrieve Forward Direction</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts14">Syntax</span></p>
+<p class="rvps4"><span class="rvts396"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="525" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps217"><span class="rvts353">RETF</span></p>
+</td>
+<td width="525" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><br/>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts396"><br/></span></p>
+<p class="rvps4"><span class="rvts14">Operands</span></p>
+<p class="rvps4"><span class="rvts396"><br/></span></p>
+<p class="rvps5"><span class="rvts13">None</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts14">Description</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts36">RETF</span><span class="rvts35"> retrieves commands from the command stack moving in the direction from the oldest command in the command stack toward the most recent commands in the command stack, in the opposite direction done by </span><span class="rvts36">RETRIEVE</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Forward retrieve (</span><span class="rvts36">RETF</span><span class="rvts35">) retrieves the oldest command on the command stack, if </span><span class="rvts36">RETF</span><span class="rvts35"> is entered immediately after a command is executed, before performing a </span><span class="rvts36">RETRIEVE</span><span class="rvts35">. That is, the list of saved commands that can be retrieved is a circular list. </span></p>
+<p class="rvps97"><span class="rvts35">So, if </span><span class="rvts36">RETF</span><span class="rvts35"> is a retrieve forwards, then a regular </span><span class="rvts36">RETRIEVE</span><span class="rvts35"> is a retrieve backwards - that is, a command retrieval going backwards in time starting at the most recently issued command.</span></p>
+<p class="rvps97"><span class="rvts35">The Editor keeps the last 50 unique command lines available for retrieval. The list of previous commands is persistent, and will be saved and restored from one SPFLite session to the next.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There is only one list of saved commands, regardless of the number of file tabs currently open. So, when a command is retrieved, there is no connection between a command, the particular file tab where the command was originally issued, or the tab where the command is retrieved.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">See also the </span><a class="rvts33" href="RETRIEVE.html">RETRIEVE - Retrieve Previous Commands</a><span class="rvts12"> command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">See also </span><a class="rvts32" href="OptionsGeneral.html">Options - General</a><span class="rvts12"> for setting the minimum Retrieve length.</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts396"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

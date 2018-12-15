@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with File Profiles</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with File Profiles">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with File Profiles" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithFileProfiles"
+		  data-hnd-context="188"
+		  data-hnd-title="Working with File Profiles"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with File Profiles</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts101" href="WorkingwithFileProfiles.html#Whataboutfileswithnoextension?">What about files with no extension ?</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#TheDEFAULTProfile">The DEFAULT Profile</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#WhatsettingsaremaintainedineachProfile?">What settings are maintained in each Profile ?</a></p>
+<p class="rvps5"><a class="rvts101" href="WorkingwithFileProfiles.html#AutomaticColorizationlinkage">Automatic Colorization linkage</a></p>
+<p class="rvps5"><a class="rvts101" href="WorkingwithFileProfiles.html#ManagingchangestoaProfile">Managing changes to a Profile</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#Profiledisplay">Profile display</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#Profilelocking">Profile locking</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#ProfileUSING">Profile USING</a></p>
+<p class="rvps9"><a class="rvts101" href="WorkingwithFileProfiles.html#CopyingProfilesettings">Copying Profile settings</a></p>
+<p class="rvps9"><a class="rvts41" href="WorkingwithFileProfiles.html#The%20DEFAULT%20Profile"><br/></a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">There are many different settings and customization options that can be chosen when editing a file, such as whether to use Tab columns and where they are located, Auto Backup and Auto Save options, Caps mode, the definition of WORD characters, etc. With the different types of files you may edit, you will often need different settings for each file type.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Source files used in programming languages usually use different tab settings, colorization options, and delimiters. Text data files likewise often have differing requirements.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite provides the ability to save these settings individually for each different file type as described by the file extension, such as &nbsp;.BAT .TXT .CPP etc. SPFLite links a file's extension to its Profile, and will handle the creation and maintenance of Profiles automatically as you work with different file types.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Profile information is stored in the </span><span class="rvts40">SPFLite</span><span class="rvts6"> directory in a folder called </span><span class="rvts40">Profiles</span><span class="rvts6">. A Profile file has the </span><span class="rvts140">name</span><span class="rvts6"> of the profile, and an extension of </span><span class="rvts40">INI</span><span class="rvts6">. So, the Profile file of the profile name </span><span class="rvts40">TXT</span><span class="rvts6"> is stored in the file </span><span class="rvts139">SPFLite\Profiles\TXT.INI</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Whataboutfileswithnoextension?"></a>
+<span class="rvts40">What about files with no extension ?</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may occasionally need to store Profile information for files having no extension at all. One use for this is if you were trying to emulate an environment similar to that on an IBM mainframe, using the Hercules mainframe emulator, and you wanted to use mainframe-like dataset naming conventions for your PC files. (Mainframe data sets do not have extensions.)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This can be handled by using an option available on </span><a class="rvts41" href="OptionsGeneral.html">the General tab</a><span class="rvts6"> of the Global Options dialog, </span><a class="rvts41" href="OptionsGeneral.html#Use%20DIR%20name%20as%20PROFILE%20when%20no%20File%20extension%20?">Use DIR name as Profile when no File extension</a><a class="rvts300" href="OptionsGeneral.html">.</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If this is option unchecked, then SPFLite will use the </span><span class="rvts40">DEFAULT</span><span class="rvts6"> profile (see DEFAULT description below) for files of this type.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If this option is checked, then the</span><span class="rvts40"> parent directory</span><span class="rvts6"> where the file resides will be used as the profile name.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, suppose all COBOL source files are in a </span><span class="rvts139">COBOL</span><span class="rvts6"> directory. Under mainframe ISPF, it would be common to see these in a dataset named like </span><span class="rvts139">MYUSERID.TEST.COBOL</span><span class="rvts6"> with 'member names' like </span><span class="rvts139">MYCODE</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If your PC source file was stored in </span><span class="rvts62">C</span><span class="rvts139">:\MyUserid\TEST\COBOL\MyCode</span><span class="rvts6">, an SPFLite profile name of </span><span class="rvts302">COBOL</span><span class="rvts6"> would be used for the </span><span class="rvts139">MyCode</span><span class="rvts6"> file, because </span><span class="rvts139">COBOL</span><span class="rvts6"> is the parent directory of </span><span class="rvts139">MyCode</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><a name="TheDEFAULTProfile"></a>
+<span class="rvts40">The DEFAULT Profile</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">There are a wide variety of file types, which are still basically just common text files. (e.g. BAT, INI, CSV etc.) &nbsp;You can certainly have separate Profiles for each of these files, but after a while, you may find you have dozens of profiles, most of them having exactly the same set of options chosen. This is not only wasteful of space, but if you decide to alter one or two Profile options, you are faced with then making that change to a large number of Profiles.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Enter the DEFAULT profile.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The reserved profile name </span><span class="rvts40">DEFAULT</span><span class="rvts6"> has the following characteristics:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">It is so important that it is checked for at the beginning of every SPFLite run, and if it does not exist you will be prompted to immediately create one before SPFLite will proceed.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">When an edit of a previously unreferenced file type is requested, and SPFLite cannot find an existing Profile file, it displays the following popup message:</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><img alt="" style="padding : 1px;" src="lib/Default INI Prompt.jpg"></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Here you can choose to always use the DEFAULT.INI Profile for this new file type, proceed to create a separate new Profile for this file type, or select another existing Profile to use for this new file type.</span></p>
+<p class="rvps13"><span class="rvts6"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The </span><span class="rvts40">DEFAULT</span><span class="rvts6"> profile is also used as the model whenever a new file type Profile is created. That is, the profile named </span><span class="rvts40">DEFAULT</span><span class="rvts6"> becomes the "master default", the starting point for newly-created profiles.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The </span><span class="rvts40">DEFAULT</span><span class="rvts6"> profile is used as the profile for any files which do not have a file extension, if you have not chosen to "Use the DIR name as the profile". (See the description at the beginning of this section)</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The </span><span class="rvts40">DEFAULT</span><span class="rvts6"> profile is also used as the profile for the File Manager tab. Since the File Manager tab is not used for editing, what purpose does it serve there? &nbsp; It is used for the Find in Files command </span><a class="rvts41" href="FF.html">FF</a><span class="rvts6">. Since this is essentially a </span><span class="rvts40">FIND</span><span class="rvts6"> command, the Find in Files searches will use the </span><span class="rvts40">DEFAULT</span><span class="rvts6"> setting for the </span><span class="rvts40">CASE</span><span class="rvts6"> profile option from the </span><span class="rvts40">DEFAULT</span><span class="rvts6"> profile. (The </span><span class="rvts40">CASE</span><span class="rvts6"> setting and the </span><span class="rvts40">FIND WORDS</span><span class="rvts6">/</span><span class="rvts40">CHARS</span><span class="rvts6"> option can be temporarily changed by issuing this commands on the File Manager primary command line.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="WhatsettingsaremaintainedineachProfile?"></a>
+<span class="rvts40">What settings are maintained in each Profile ?</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The following settings are kept uniquely for each different Profile:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<div class="rvps9"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts308" href="ACTION.html">ACTION</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Specify automatic SAVE / VSAVE</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="AUTOBKUP.html">AUTOBKUP</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to create a backup file.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts308" href="AUTOCAPS.html">AUTOCAPS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to use AUTOCAPS support or not.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="AUTOSAVE.html">AUTOSAVE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to automatically save a file at END processing time.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="BNDS.html">BNDS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The left/right column boundaries for the file.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="CAPS.html">CAPS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether CAPS is to be forced on or not.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="CASE.html">CASE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Default case handling for FIND/CHANGE literals.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts306" href="CHANGE.html">CHANGE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether string changes are handled in Data Shift (DS) or Column Shift (CS) mode.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="COLSP.html">COLS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to display a fixed COLS line at top of screen.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts306" href="COLLATE.html">COLLATE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The code page used for the character set collating sequence</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="EOL.html">EOL</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The End of Line delimiter type used. e.g. CR, CRLF, etc.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts306" href="FOLD.html">FOLD</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether lower-case letters are displayed as if upper-case</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="HEX.html">HEX</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether HEX editing mode should be used as a default for the file type.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="HILITE.html">HILITE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to use automatic colorization support, and FIND / CHANGE highlighting.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" height="19" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="LRECL.html">LRECL</a></p>
+</td>
+<td width="728" height="19" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The logical record length for fixed length record types.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="MARK.html">MARK</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The current column MARK settings.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts307" href="MASK.html">MASK</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The current model MASK line</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" height="14" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="MINLEN.html">MINLEN</a></p>
+</td>
+<td width="728" height="14" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The minimum logical record length</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" height="14" style="padding: 1px;"><p class="rvps9"><a class="rvts304" href="PAGESetPAGEoption.html">PAGE</a></p>
+</td>
+<td width="728" height="14" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to use PAGE mode for EOL AUTO or EOL AUTONL files</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="PRESERVE.html">PRESERVE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether to retain trailing blanks on text lines or not.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="RECFM.html">RECFM</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The record format of the file.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="ScrollingtheText.html">SCROLL</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The default scroll amount for UP / DOWN / LEFT / RIGHT commands.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="SETUNDO.html">SETUNDO</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The number of UNDO levels to maintain.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="SOURCE.html">SOURCE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The data encoding used by the data (ANSI, UTF8, EBCDIC, etc.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="START.html">START</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The default positioning of a file when opened.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts306" href="STATEControlSavingofEditStateInf.html">STATE</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">Whether persistent STATE information is retained for this file type</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="SUBARG.html">SUBARG</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The unique SUBARG value for use during SUBMIT processing.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts307" href="SUBCMD.html">SUBCMD</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The SUBCMD value for use during SUBMIT processing.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="TABSP.html">TABS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The TABS On/Off setting; the </span><a class="rvts41" href="TABSL.html">==TABS&gt;</a><span class="rvts6"> line value specifies the actual Tab locations.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts304" href="WORD.html">WORD</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The current set of valid WORD characters.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="167" style="padding: 1px;"><p class="rvps9"><a class="rvts301" href="XTABS.html">XTABS</a></p>
+</td>
+<td width="728" style="padding: 1px;"><p class="rvps9"><span class="rvts6">The default tab spacing if loading files with embedded Tab characters.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Each of the above settings can be altered in either of two ways:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Directly with a primary command. The command name in each case is the same as the name in the left column above. (There is no </span><span class="rvts40">SCROLL</span><span class="rvts6"> command, though. To change the default scroll amount, just type into the SCROLL field on the edit screen.)</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">By using a pop-up dialog reached by using the </span><span class="rvts40">PROFILE EDIT xxx</span><span class="rvts6"> command, where </span><span class="rvts40">xxx</span><span class="rvts6"> is the desired profile name to be altered.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note:</span><span class="rvts6"> The BNDS, WORD, MARK and TABS line values are modified by altering the model line that are displayed. These model lines appear when you issue a </span><span class="rvts40">PROFILE</span><span class="rvts6"> primary command, or on demand by using the </span><a class="rvts41" href="BNDS.html">BNDS</a><span class="rvts6">, </span><a class="rvts41" href="WORD.html">WORD</a><span class="rvts6">, </span><a class="rvts41" href="MARK.html">MARK</a><span class="rvts6"> and </span><a class="rvts41" href="TABSL.html">TABS</a><span class="rvts6"> line commands.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="AutomaticColorizationlinkage"></a>
+<span class="rvts40">Automatic Colorization linkage</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you utilize </span><a class="rvts41" href="AutomaticColorizationFiles.html">Automatic Colorization Files</a><span class="rvts6">, </span><a class="rvts300" href="AutomaticColorizationFiles.html">the name of the colorization control file is derived from the name of the Profile or the name of the </a><a class="rvts305" href="AutomaticColorizationFiles.html">USING</a><a class="rvts300" href="AutomaticColorizationFiles.html"> parameter for the Profile (see </a><a class="rvts303" href="AutomaticColorizationFiles.html">Profile Using</a><a class="rvts300" href="AutomaticColorizationFiles.html">, below).</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ManagingchangestoaProfile"></a>
+<span class="rvts40">Managing changes to a Profile</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Profiles values can be critical to proper edit processing and it is prudent to protect these settings from being altered inadvertently. Here are some tools to assist you:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Profiledisplay"></a>
+<span class="rvts40">Profile display</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It is often necessary to display the current Profile. This can be done while editing a file of the type involved, by entering the </span><span class="rvts139">PROFILE</span><span class="rvts6"> command (without any extra operands) and pressing Enter. SPFLite will insert a series of lines into the display as follows:</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Profile Display.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This display shows you the current values for all profile settings.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Profilelocking"></a>
+<span class="rvts40">Profile locking</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you look at the first =PROF&gt; line above, you will notice the word </span><span class="rvts40">UNLOCKED</span><span class="rvts6">. This means that any changes you make to profile values will be automatically saved. If the value had shown as </span><span class="rvts40">LOCKED, </span><span class="rvts6">then</span><span class="rvts40"> </span><span class="rvts6">n</span><span class="rvts6">o changes to the Profile would be saved while the Profile is </span><span class="rvts40">LOCKED</span><span class="rvts6">. Any of the displayed values can be altered </span><span class="rvts40">for the duration of this edit session</span><span class="rvts6"> using the various profile-modifying commands, but the changes would not be permanently stored.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A profile can be locked once you have a set of values you wish to keep by issuing the </span><span class="rvts139">PROFILE LOCK</span><span class="rvts6"> command. Similarly, if you want to alter one of a locked Profile's settings permanently, you must issue a </span><span class="rvts139">PROFILE UNLOCK</span><span class="rvts6"> command first, make your change, and then issue a </span><span class="rvts139">PROFILE LOCK</span><span class="rvts6"> command to retain the lock going forward.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that if the profile is </span><span class="rvts40">LOCKED</span><span class="rvts6">, the lock prevents it from being permanently altered. The lock does </span><span class="rvts40">not</span><span class="rvts6"> prevent its settings from being temporarily altered during the course of an edit session. Those alterations simply won't be saved.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The keywords </span><span class="rvts40">LOCKED</span><span class="rvts6"> and </span><span class="rvts40">UNLOCKED</span><span class="rvts6"> can also be spelled as </span><span class="rvts40">LOCK</span><span class="rvts6"> and </span><span class="rvts40">UNLOCK</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="ProfileUSING"></a>
+<span class="rvts40">Profile USING</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may need to work with different file types that all have a common format. For example a programming language may use different file types for main programs, header files, include files, macro files etc. but may all be of the same format and must be treated the same.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Since SPFLite would ordinarily treat all these different file types as independent Profiles, it would make changing a given profile option a problem, because the change would have to be made to </span><span class="rvts40">each</span><span class="rvts6"> of the different file profiles. This is a time-consuming and error-prone process.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite allows a Profile </span><span class="rvts40">USING</span><span class="rvts6"> option which allows one Profile to reference another Profile's settings. So how does that help?</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Say we have a source language like </span><span class="rvts40">C</span><span class="rvts6"> (</span><span class="rvts40">.C</span><span class="rvts6">) which also has associated header files (</span><span class="rvts40">.H</span><span class="rvts6">). All that needs to happen is to create and customize the </span><span class="rvts40">C</span><span class="rvts6"> Profile as you desire. We can refer to this profile as the 'master' profile. Then, in the Profile for</span><span class="rvts40"> H</span><span class="rvts6"> you issue a </span><span class="rvts139">PROF USING C</span><span class="rvts6"> command to refer to the 'master profile' and the </span><span class="rvts40">H</span><span class="rvts6"> Profile will inherit all the settings from the C Profile, such as the </span><span class="rvts40">C</span><span class="rvts6"> colorization file if automatic colorization support is active. Now, only changes need to be make to the </span><span class="rvts40">C</span><span class="rvts6"> profile, and all profiles which are </span><span class="rvts40">USING</span><span class="rvts6"> the</span><span class="rvts40"> C</span><span class="rvts6"> profile will automatically reference the new settings in </span><span class="rvts40">C</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you are editing a file which is </span><span class="rvts40">USING</span><span class="rvts6"> another 'master' profile, and the master profile is </span><span class="rvts40">UNLOCKED</span><span class="rvts6">, then any changes you make will be saved in the master profile, meaning they will apply in the future to all file types which use the master profile.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts40">USING</span><span class="rvts6"> keyword can also be spelled as </span><span class="rvts40">USE</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="CopyingProfilesettings"></a>
+<span class="rvts40">Copying Profile settings</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you find yourself editing a file type for the first time, you may realize that a number of settings that must be customized for this new type are just like another file type which you have already defined. You can quickly copy all the settings from another profile with the </span><span class="rvts139">PROFILE COPY xxxx</span><span class="rvts6"> command. The other profile's settings will replace the one in the current profile. A</span><span class="rvts40"> PROFILE COPY</span><span class="rvts6"> operation is a one-time event. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you </span><span class="rvts40">COPY</span><span class="rvts6"> another profile, the settings of the two profiles are completely independent of each other; a subsequent modification of one of the profiles has no effect on the other profile. This is different than a</span><span class="rvts40"> PROFILE USING</span><span class="rvts6"> situation, where one profile is linked to another.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Profiles and the FF (Find in Files) Command"></a>
+<span class="rvts40">Profiles and the FF (Find in Files) Command</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The FF (Find in Files) command in File Manager will search all displayed filenames for your requested string. Since SPFLite supports a wide variety of file data formats (ASCII, EBCDIC, etc.), the FF command requires a File Profile to exist for all the files it is searching so that it can properly read the data for the search.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">However, a displayed list of files may contain other file formats which are never edited by SPFLite. If you are aware of these ahead of time, you can specify specific file types for exemption by the FF command. (See </span><a class="rvts44" href="OptionsFManager.html#SpecifyfilenameextensionsexemptfromFFfilesearches">Options -&gt; File Manager</a><span class="rvts6">)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Many times though, files slip through this process and trigger a pop-up during the FF search when it encounters an unknown file type. You will see the following displayed:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/FF Find In File 03.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This example was triggered by a .tta file type. At this point you can choose one of the 5 options.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Use the DEFAULT.INI file for this and any other .TTA &nbsp;files seen subsequently.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Create a new TTA.INI profile for this file type. It will be based on the DEFAULT.INI file.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Select another existing Profile to be USEd for .TTA files.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Skip this .TTA file, and add it to the FF search exemption list for future searches.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Cancel the entire FF search at this point.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

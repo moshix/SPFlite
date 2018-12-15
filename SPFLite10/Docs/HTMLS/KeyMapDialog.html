@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Using the KEYMAP Dialog</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using the KEYMAP Dialog">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Using the KEYMAP Dialog" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="KeyMapDialog"
+		  data-hnd-context="199"
+		  data-hnd-title="Using the KEYMAP Dialog"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Using the KEYMAP Dialog</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><a class="rvts96" href="KeyMapDialog.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts45" href="KeyMapDialog.html#Non-US104KeyKeyboards">Non-US 104 Key Keyboards</a></p>
+<p class="rvps5"><a class="rvts96" href="KeyMapDialog.html#UsingtheKeymapDialog">Using the Keymap Dialog</a></p>
+<p class="rvps5"><a class="rvts96" href="KeyMapDialog.html#ANoteaboutLineCommandMapping">A Note about Line Command Mapping</a></p>
+<p class="rvps5"><a class="rvts96" href="KeyMapDialog.html#CustomizingaSingleKey">Customizing a Single Key</a></p>
+<p class="rvps33"><a class="rvts45" href="KeyMapDialog.html#Entryofkeymappingdefinitions">Entry of key mapping definitions</a></p>
+<p class="rvps9"><a class="rvts45" href="KeyMapDialog.html#DealingwithpastingerrorsinKEYMAP">Dealing with pasting errors in KEYMAP</a></p>
+<p class="rvps9"><a class="rvts45" href="KeyMapDialog.html#Overriding(Passthru)Mappings">Overriding (Passthru) Mappings</a></p>
+<p class="rvps33"><a class="rvts45" href="KeyMapDialog.html#Availablekeymappingdefinitionoptions">Available key mapping definition options</a></p>
+<p class="rvps52"><a class="rvts45" href="KeyMapDialog.html#AssigningMultipleFunctions">Assigning Multiple Functions</a></p>
+<p class="rvps5"><a class="rvts45" href="KeyMapDialog.html#LocationofPrimaryCommandsinaMacro">Location of Primary Commands in a Macro</a></p>
+<p class="rvps33"><a class="rvts45" href="KeyMapDialog.html#AutoRepeat/SetCursorPosition">Auto Repeat / Set Cursor Position</a></p>
+<p class="rvps33"><a class="rvts45" href="KeyMapDialog.html#ControllingtheKeyboardRepeatRate">Controlling the Keyboard Repeat Rate</a></p>
+<p class="rvps33"><a class="rvts45" href="KeyMapDialog.html#FinalizingYourKeymapCustomization">Finalizing Your Keymap Customization</a></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The SPFLite Key Mapping Dialog appears as follows:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Keymap Screen.jpg"></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The Keymap dialog contains two basic areas. </span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The top half contains a map of a typical 104 key keyboard. Although layouts may differ on your computer, especially for laptop keyboards, the customization is performed via the logical key </span><span class="rvts85">name</span><span class="rvts35">, not its physical location. So regardless of </span><span class="rvts85">where</span><span class="rvts35"> a key is on your keyboard, customization is done using its </span><span class="rvts85">name</span><span class="rvts35">. Simply use the equivalent key on the provided layout.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">In the upper right hand corner, you will also see three icons representing the 3 mouse buttons. That is because these buttons are now defined in the same way as keyboard keys. (After all, that's what they are being treated like, in this function). The L, M and R refers to the Left, Middle and Right mouse buttons.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The definitions for each key are displayed in the same font as you choose for the edit session. So, if you have mapped some special-character keys, they will display here exactly as you see them in an edit session or in the </span><a class="rvts32" href="ListofKeyboardPrimitives.html#kb.CharSet">(CharSet)</a><span class="rvts35"> popup window.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Because these are </span><span class="rvts85">logical</span><span class="rvts35"> key definitions, SPFLite has no idea what your </span><span class="rvts85">physical</span><span class="rvts35"> keyboard layout really looks like. For laptops, you may not have all these keys; there may be only one Windows key instead of two. You also may not have a physical numeric pad, but may be able to generate those keys by holding down an auxiliary key, often labeled </span><span class="rvts36">Fn.</span><span class="rvts35"> &nbsp;For example, </span><span class="rvts36">Fn</span><span class="rvts35"> + the </span><span class="rvts85">regular</span><span class="rvts35"> 7 key may be the same as the </span><span class="rvts85">keypad 7 </span><span class="rvts35">key. </span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">This means it is possible you can define a key mapping for a key that doesn't exist on your keyboard. No harm is done, but you just wouldn't be able to use it. Consult your hardware documentation for details on your particular keyboard. SPFLite is unable to map auxiliary keys such as </span><span class="rvts36">Fn</span><span class="rvts35">, or any extra keys such as multimedia keys, that are outside the realm of a standard 104 keyboard.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="Non-US104KeyKeyboards"></a>
+<span class="rvts36">Non-US 104 Key Keyboards</span></p>
+<p class="rvps4"><span class="rvts36"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Some SPFLite users do not use a conventional US/English keyboard but instead use a national keyboard which contains additional keys required by other languages. Often, these keys require the use of the </span><span class="rvts36">AltGr</span><span class="rvts35"> key (the right-hand Alt key, which stands for Alternate Graphic). As well, the keyboard layouts differ, and there may more or fewer keys than the layout shown above. This can make SPFLite keyboard customization a challenge.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps11"><span class="rvts35">Note: &nbsp;It's important to bear in mind that SPFLite internally processes data using ANSI characters only, which are stored in the Microsoft 1252 character set. MS 1252 supports the Western European languages: Afrikaans, Basque, Catalan, Danish, Dutch, English, Faroese, Finnish, French, Galician, German, Icelandic, Indonesian, Italian, Malay, Norwegian, Portuguese, Spanish, Swahili, and Swedish. That's a lot, but it's not everything. If you need to type something in a language other than those, SPFLite may not be your best choice.</span></p>
+<p class="rvps11"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">These issues are assisted by:</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps37"><span class="rvts35">First, SPFLite automatically maps all alpha-numeric and special character keys which could use the </span><span class="rvts36">AltGr</span><span class="rvts35"> key to create national characters. These should all work correctly 'out of the box'. They all have their </span><span class="rvts36">Ctrl-Alt</span><span class="rvts35"> value set to </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">(Passthru)</a><span class="rvts35"> instead of the normal </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35">. The </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">(Passthru)</a><span class="rvts35"> setting allows the key to perform its Windows-defined default action. (This technique works because, on keyboards that possess an </span><span class="rvts36">AltGr</span><span class="rvts35"> key, they are designed to transmit the same keyboard data that would occur if you manually held down the </span><span class="rvts36">Ctrl</span><span class="rvts35"> and </span><span class="rvts36">Alt</span><span class="rvts35"> keys at the same time. So, for SPFLite purposes, the single key </span><span class="rvts36">AltGr</span><span class="rvts35"> and the two keys </span><span class="rvts36">Ctrl</span><span class="rvts35"> and </span><span class="rvts36">Alt</span><span class="rvts35"> used together, mean exactly the same thing. </span></li>
+</ul></ul>
+<p class="rvps37"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps37"><span class="rvts35">Second, to assist in identifying exactly which key on your physical keyboard is equivalent to which key on SPFLite's KeyMap dialog, a utility program has been included in the distribution. The link to it is in the SPFLite Start Menu folder; look for the </span><span class="rvts36">KeyboardTest</span><span class="rvts35"> entry. When clicked, this utility displays a console screen where you can type keys. For each key you press, it will display detailed keyboard status information. The right-hand entry on each line will identify the SPFLite key name which matches your physical key. The display looks like this:</span></li>
+</ul></ul>
+<p class="rvps36"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Keyboard Test.jpg"></p>
+<p class="rvps6"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The column headed KEYNAME is the one telling you which SPFLite key needs to be customized. In the sample shown, the keys pressed were the </span><span class="rvts36">A</span><span class="rvts35"> key, the </span><span class="rvts36">Enter</span><span class="rvts35"> key, and the </span><span class="rvts36">PageUp</span><span class="rvts35"> key. The KEYNAME string, like </span><span class="rvts36">PGUP</span><span class="rvts35">, corresponds to the name displayed in KEYMAP where you see the label </span><span class="rvts36">Current Key </span><span class="rvts35">for a given key.</span></p>
+<p class="rvps11"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Some keyboards have extra keys that are not used by SPFLite, and the KeyboardTest tool will report these keys as </span><span class="rvts36">Unknown key</span><span class="rvts35">. If this happens, you can use those keys in SPFLite for their original purpose, the same as a </span><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">(</a><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">Passthru</a><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">)</a><span class="rvts35"> key is used, but you will be unable to remap these unknown keys. That is because SPFLite does not know what its "keyboard scan code" means, and doesn't know what to do with it, except to "pass it through".</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The very fact that you can't map them means that you can't even map them to </span><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">(</a><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">Passthru</a><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">)</a><span class="rvts35">. The point is that SPFLite will pass-through any key codes it doesn't recognize </span><span class="rvts36">as if</span><span class="rvts35"> they were mapped to </span><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">(</a><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">Passthru</a><a class="rvts95" href="ListofKeyboardPrimitives.html#kb.passthru">)</a><span class="rvts35">. You don't have to do anything in SPFLite to use those keys - just use them.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">If you have a multi-media keyboard with keys for things like Play, Pause and volume controls, SPFLite never sees these keys, so you don't need to worry about them.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="UsingtheKeymapDialog"></a>
+<span class="rvts40">Using the Keymap Dialog</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The bottom half of the KeyMap dialog becomes active once you click on an individual key icon in the top half. In the screen display above, the </span><span class="rvts36">V</span><span class="rvts35"> key has been selected. Note the </span><span class="rvts36">V</span><span class="rvts35"> key graphic in the top half has been obscured, and the key is then displayed in the bottom half, along with the current action assignments for each of the eight possible chord combinations.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The right side of the bottom half provides reminders of the format of various command types you can enter in the key mapping definition fields.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Also, there is a button labeled </span><span class="rvts36">Show Character Map</span><span class="rvts35">. When clicked, a new separate dialog will be opened, with a character map that uses the ANSI collating sequence. See </span><a class="rvts32" href="KeyMappingOverview.html#Character%20Maps">Character Maps</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">At the bottom are two buttons </span><span class="rvts36">Cancel</span><span class="rvts35"> and </span><span class="rvts36">Done</span><span class="rvts35">. Clicking </span><span class="rvts36">Cancel</span><span class="rvts35"> will terminate the dialog without saving any changed keyboard assignments. Clicking the </span><span class="rvts36">Done</span><span class="rvts35"> button will save the changes and return to your edit session. Saved changes to the key map will take effect immediately; no restart of SPFLite is required to active them.</span></p>
+<p class="rvps11"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Within the Key Map window, you can jump from one of the eight various definitions (all the combinations of Shift, Ctrl and/or Alt) of a key to another by using the Tab and Backtab keys. This reduces the need to frequently alternate between the mouse and keyboard when entering many definitions for the same physical key.</span></p>
+<p class="rvps11"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ANoteaboutLineCommandMapping"></a>
+<span class="rvts40">A Note about Line Command Mapping</span></p>
+<p class="rvps4"><span class="rvts94"><br/></span></p>
+<p class="rvps46"><span class="rvts12">The </span><span class="rvts54">:</span><span class="rvts12"> colon notation for key-mapping of line commands that is utilized in IBM ISPF is not directly supported. In prior versions, if you tried it, you would have created invalid syntax. For example, if you previously mapped </span><span class="rvts11">Alt-R</span><span class="rvts12"> to just </span><span class="rvts54">:R</span><span class="rvts12">, when you use it, it would </span><span class="rvts11">not</span><span class="rvts12"> repeat a line but would simply report, </span><span class="rvts54">Unknown</span><span class="rvts12"> </span><span class="rvts54">command</span><span class="rvts12">. </span></p>
+<p class="rvps46"><span class="rvts12"><br/></span></p>
+<p class="rvps46"><span class="rvts12">Now, an attempt to define a key with a line command like </span><span class="rvts54">:R</span><span class="rvts12"> will result in a warning pop-up message advising the user that the command has been automatically converted to the SPFLite-compatible equivalent format of </span><span class="rvts54">{R}</span><span class="rvts12">.</span></p>
+<p class="rvps46"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="CustomizingaSingleKey"></a>
+<span class="rvts40">Customizing a Single Key</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts35">To customize a key, perform the following steps:</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts35">On the command line enter the </span><span class="rvts36">KEYMAP</span><span class="rvts35"> command and press Enter. The Keymap dialog (as shown above) will be displayed. (</span><span class="rvts36">KEY</span><span class="rvts35"> and </span><span class="rvts36">KEYS</span><span class="rvts35"> are aliases for </span><span class="rvts36">KEYMAP</span><span class="rvts35">.)</span></li>
+</ul></ul>
+<p class="rvps40"><span class="rvts86"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts35">On the keyboard graphic display, click on the key to be customized. The key will be obscured to indicate it is active, and the current settings for that key will be displayed in the lower half of the dialog.</span></li>
+</ul></ul>
+<p class="rvps36"><span class="rvts86"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts35">Click in the text box next to the particular chord (Normal, Shift, Ctrl, etc.) of the key you wish to alter.</span></li>
+</ul></ul>
+<p class="rvps36"><span class="rvts86"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts35">Enter your desired function definition. </span></li>
+</ul></ul>
+<p class="rvps41"><span class="rvts35"><br/></span></p>
+<p class="rvps30"><a name="Entryofkeymappingdefinitions"></a>
+<span class="rvts36">Entry of key mapping definitions</span></p>
+<p class="rvps41"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can enter key mapping definitions manually, or by pasting them in. You will see the text of each key mapping definition is displayed in the same font as your fixed-width editing font. (If you start up SPFLite with the </span><span class="rvts36">-KEYMAP</span><span class="rvts35"> command line option, you will temporarily see the dialog displayed with a default font.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To assist in remembering primitive function names, a drop-down list is provided in the lower right corner of the dialog, shown as </span><span class="rvts36">Valid keyboard Primitives</span><span class="rvts35">. If you open this list and select an item by clicking on it, the value will be placed in the clipboard. You can then paste that value into the text box for your desired key, using the </span><span class="rvts36">Ctrl-V</span><span class="rvts35"> key. This saves time and avoids typing errors.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can also paste any text into a definition field it you obtained it from outside the KEYMAP dialog, or even outside of SPFLite. It is your responsibility to ensure that such pasted mapping definitions are properly formatted. After you paste data, you can still manually modify or correct it as needed.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="DealingwithpastingerrorsinKEYMAP"></a>
+<span class="rvts36">Dealing with pasting errors in KEYMAP</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you were to inadvertently paste some very large amount of text into a key mapping field by mistake (say, if you forgot that you just placed a large amount of data into the Windows clipboard previously), you can press Ctrl-Z right away, which will 'undo' the paste operation and will erase the key definition field you were just working on. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To limit the effect of an inappropriate paste into one of these fields, if the clipboard contains multiple lines of text, only the first line will get pasted into a key mapping field.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Overriding(Passthru)Mappings"></a>
+<span class="rvts36">Overriding (Passthru) Mappings</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Ordinarily, key mappings that default to (Passthru) are left alone. But, you may have a requirement to override them. What sort of situations might call for this? &nbsp;Here are some possible examples:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">You have a non-US keyboard and some of the characters are in different locations</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Perhaps you want to try a non-QWERTY layout, like DVORAK</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">You want to 'invert' the shift-sense of a key. For example, let's say you use SPFlite mostly to write programs in a language that uses underscores a lot (like C) but you don't use the minus sign all that much. Suppose you wanted the minus/underscore key to produce underscores by itself and minus when shifted. You could invert the minus and underscore by putting a mapping of </span><span class="rvts89">[_]</span><span class="rvts35"> for the unshifted mapping and </span><span class="rvts89">[-]</span><span class="rvts35"> for the shifted one.</span></li>
+</ul></ul>
+<p class="rvps41"><span class="rvts35"><br/></span></p>
+<p class="rvps30"><a name="Availablekeymappingdefinitionoptions"></a>
+<span class="rvts36">Available key mapping definition options</span></p>
+<p class="rvps44"><span class="rvts36"><br/></span></p>
+<div class="rvps30"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(Passthru)</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">(Passthru)</a><span class="rvts35"> is a primitive keyboard function which simply says the key should “pass through” whatever Windows would normally have done when the key is pressed. This is the standard value for most of the alphanumeric keys, and provides the most obvious key assignment. So, for instance, you don't have to spell out that the plain </span><span class="rvts36">X</span><span class="rvts35"> key types “X” – you just “pass it through”. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If you attempt to completely blank-out or delete a key definition for a Normal or Shift form, SPFLite will replace it with </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">(Passthru)</a><span class="rvts35">. For other keys, erasing a definition will cause it to become </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35">. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">For the mouse </span><span class="rvts85">only</span><span class="rvts35">, </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.passthru">(Passthru)</a><span class="rvts35"> has no meaning and is treated the same as </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35">. </span></p>
+<p class="rvps42"><span class="rvts35"><br/></span></p>
+<p class="rvps48"><span class="rvts87"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" height="8" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(Null)</span></p>
+</td>
+<td width="787" height="8" style="padding: 1px;"><p class="rvps2"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35"> requests that no action be performed. This is the value for unassigned key combinations. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If you attempt to completely blank-out or delete a key definition (other than the Normal or Shift forms), SPFLite will replace it with </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">When you have a key mapped to a line command, there is an implied </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Enter)</a><span class="rvts35"> that is automatically inserted. In some cases, this implied </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Enter)</a><span class="rvts35"> may not be what you wish. To suppress the implied </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Enter)</a><span class="rvts35">, you can put </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.null">(Null)</a><span class="rvts35"> after all other commands or functions.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts85">command</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Any text entered </span><span class="rvts91">without</span><span class="rvts35"> being enclosed in </span><span class="rvts36">()</span><span class="rvts35">, </span><span class="rvts36">[]</span><span class="rvts35">, </span><span class="rvts36">{} </span><span class="rvts35">or</span><span class="rvts36"> &lt;&gt;</span><span class="rvts35"> characters is assumed to be an SPFLite primary command and its operands, and it will be entered as such on the command line. Such commands are processed </span><span class="rvts36">as if</span><span class="rvts35"> there was an implied (Enter) function on the command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts12">When text is entered on the command line, and a command key is pressed rather than the ENTER key, SPFLite concatenates the contents of the command line to the definition of the command key. The result is handled as a single, composite command by SPFLite. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">For example, when you use a Command key defined as a scroll command (</span><span class="rvts11">UP</span><span class="rvts12">, </span><span class="rvts11">DOWN</span><span class="rvts12">, </span><span class="rvts11">LEFT</span><span class="rvts12">, or </span><span class="rvts11">RIGHT</span><span class="rvts12">), the value entered on the command line becomes the </span><span class="rvts11">operand</span><span class="rvts12"> of the scroll command. Assume you have the </span><span class="rvts11">PageDn</span><span class="rvts12"> key mapped to the </span><span class="rvts11">DOWN</span><span class="rvts12"> primary command. Entering </span><span class="rvts11">HALF</span><span class="rvts12"> on the command line and then pressing the </span><span class="rvts11">PageDn</span><span class="rvts12"> key results in a composite command of </span><span class="rvts11">DOWN HALF</span><span class="rvts12"> being issued to scroll the screen down by half its height.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">You may choose to override this concatenation when you set up the command key definition by preceding the command with a </span><span class="rvts11">!</span><span class="rvts12"> (exclamation mark character). This causes the programmed command to </span><span class="rvts11">replace</span><span class="rvts12"> whatever is in the command line. e.g. If you have a key programmed for </span><span class="rvts11">RESET</span><span class="rvts12">, it would probably be wise to prefix it with a ! to prevent the </span><span class="rvts11">RESET</span><span class="rvts12"> command processor being confused by possible command line 'remnants' existing when the command key is pressed.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note:</span><span class="rvts12"> As mentioned above, a plain, unenclosed command is treated </span><span class="rvts11">as if</span><span class="rvts12"> there is an implied</span><span class="rvts35"> (Enter) function on the command. That works well if the only thing you want to do is a primary command. However, you might wish to combine line commands, primary commands and other functions in a single key mapping. To do that, you will need to explicitly specify each part. For the part of the mapping that has a primary command, you will have to use all the steps you would take if you did it manually, and the command itself becomes a text string in brackets. So, an implicit primary command might be </span><span class="rvts36">CHANGE ABC DEF</span><span class="rvts35">. If you wrote this as an explicit command as part of a larger key mapping string, the part for the primary command would be mapped as </span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts36">(Home)[CHANGE ABC DEF](Enter)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts87">{</span><span class="rvts85">line-cmd</span><span class="rvts87">}</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">A string enclosed in </span><span class="rvts36">{ }</span><span class="rvts35"> braces is treated as a </span><span class="rvts85">line command</span><span class="rvts35">. The text of the string will be entered in the line command area of the line on which the cursor is currently located. If the cursor is not currently on a valid line, then no action is performed. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In ISPF, a PF key might have assigned the value of </span><span class="rvts88">:I2</span><span class="rvts35"> to request an insertion of two lines, a notation which SPFLite does not support. That request in SPFLite is entered as </span><span class="rvts89">{I2}</span><span class="rvts35">. If you attempt to define a line command using the ISPF </span><span class="rvts36">:</span><span class="rvts35"> colon notation, SPFLite will automatically convert it to the brace notation and will issue a warning.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Line Command Toggling:</span><span class="rvts35"> &nbsp;If you have a key mapped to a line command like </span><span class="rvts36">{CC}</span><span class="rvts35">, and there is any existing line command </span><span class="rvts36">other than</span><span class="rvts35"> </span><span class="rvts36">CC</span><span class="rvts35"> in the sequence area, the </span><span class="rvts36">CC</span><span class="rvts35"> command will be entered there, replacing the existing command. If the sequence area </span><span class="rvts36">already</span><span class="rvts35"> has a </span><span class="rvts36">CC</span><span class="rvts35"> line command, and you press the key mapped to </span><span class="rvts36">{CC}</span><span class="rvts35">, the existing </span><span class="rvts36">CC</span><span class="rvts35"> line command will be erased. This line-command toggling action allows you to easily undo a line command if you placed it on a line by mistake.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">You can toggle the state of excluded lines and User Lines with the </span><span class="rvts36">TX</span><span class="rvts35"> and </span><span class="rvts36">TU</span><span class="rvts35"> line commands, respectively. </span><span class="rvts36">Suggested</span><span class="rvts35"> mappings that retain the current cursor location are as follows:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Ctrl-Alt X =</span><span class="rvts36"> {TX}(Enter)(Up)</span></p>
+<p class="rvps9"><span class="rvts35">Ctrl-Alt U = </span><span class="rvts36">{TU}(Enter)(Up)</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Implied (Enter): &nbsp;</span><span class="rvts35">When you have a key mapped to a line command such as </span><span class="rvts36">{CC}</span><span class="rvts35">, there is an implied (Enter) that is automatically inserted afterwards. This implied</span><span class="rvts36"> (Enter)</span><span class="rvts35"> may or may not be what you wish. If you don't want this implied </span><span class="rvts36">(Enter)</span><span class="rvts35">, there are some ways to to address this:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts35">To suppress the implied </span><span class="rvts36">(Enter)</span><span class="rvts35">, you can put </span><span class="rvts36">(Null)</span><span class="rvts35"> after all other commands or functions, like </span><span class="rvts36">{CC}(Null)</span><span class="rvts35">.</span></li>
+<li class="rvps2"><span class="rvts35">In IBM ISPF, a mapped line command will leave the cursor in the first position of the sequence area. You can replicate this action with </span><span class="rvts36">{CC}(LineNo)</span><span class="rvts35">.</span></li>
+<li class="rvps2"><span class="rvts35">As may be seen above in the</span><span class="rvts36"> TX/TU</span><span class="rvts35"> example, line commands which you need to have acted-upon right away </span><span class="rvts36">cannot</span><span class="rvts35"> have the implied</span><span class="rvts36"> (Enter)</span><span class="rvts35"> suppressed; otherwise, nothing will happen.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="Special Line Commands"></a>
+<span class="rvts36">Special Line Commands: &nbsp;</span><span class="rvts35">There are special line-command formats for labels and tags. Note that labels and tags can be set, cleared or toggled independently of each other and can coexist on the same line.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">.label}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Enter </span><span class="rvts85">label</span><span class="rvts35"> into sequence area</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">..label}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Toggle </span><span class="rvts85">label</span><span class="rvts35">; enter </span><span class="rvts85">label</span><span class="rvts35"> if no label present, else clear any label that is present</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">.}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clear any label that may be present</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">..}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clear any label that may be present; same as </span><span class="rvts87">{</span><span class="rvts88">.}</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">:tag}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Enter </span><span class="rvts85">tag</span><span class="rvts35"> into sequence area</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">::tag}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Toggle </span><span class="rvts85">tag</span><span class="rvts35">; enter </span><span class="rvts85">tag</span><span class="rvts35"> if no tag present, &nbsp;else clear any tag that is present</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">:}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clear any tag that may be present</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="134" style="padding: 1px;"><p class="rvps49"><span class="rvts87">{</span><span class="rvts88">::}</span></p>
+</td>
+<td width="453" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clear any tag that may be present; same as </span><span class="rvts87">{</span><span class="rvts88">:}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts35"><br/></span></p>
+<p class="rvps42"><span class="rvts87"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(</span><span class="rvts85">primitive</span><span class="rvts36">)</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Just as with </span><span class="rvts36">(PassThru) </span><span class="rvts35">and </span><span class="rvts36">(Null) </span><span class="rvts35">above, any string enclosed in </span><span class="rvts36">( )</span><span class="rvts35"> parentheses is treated as a keyboard primitive function. Keyboard primitives are those functions</span><span class="rvts85"> other than </span><span class="rvts35">line commands or primary commands. There are currently over 90 keyboard primitive functions available. Only primitive names predefined by SPFLite may be specified.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">To assist in remembering primitive function names, a drop-down list is provided in the lower right corner of the dialog, shown as </span><span class="rvts36">Valid keyboard Primitives</span><span class="rvts35">. If you open this list and select an item by clicking on it, the value will be placed in the clipboard. You can then paste that value into the text box for your desired key, using the </span><span class="rvts36">Ctrl-V</span><span class="rvts35"> key. This saves time and avoids typing errors.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts12">A description of all primitive functions is provided in the "</span><a class="rvts33" href="ListofKeyboardPrimitives.html">List of Keyboard Primitives</a><span class="rvts12">"</span></p>
+<p class="rvps42"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(</span><span class="rvts85">primitive</span><span class="rvts89">/</span></p>
+<p class="rvps47"><span class="rvts85">ClipName</span><span class="rvts36">)</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">For primitive functions which refer to the clipboard, the default is always the normal Windows clipboard. If you wish to direct the function to use a Private Named Clipboard, the clipboard name should be provided following the primitive name, separated by a / character. For example to perform a Copy operation to named clipboard </span><span class="rvts85">Fred</span><span class="rvts35">, you would enter </span><span class="rvts89">(COPY/FRED) </span><span class="rvts35">for the key value. To perform a Paste operation from named clipboard </span><span class="rvts85">Bill</span><span class="rvts35">, you would enter </span><span class="rvts89">(PASTE/BILL) </span><span class="rvts35">for the key value.</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(</span><span class="rvts85">cursorFunction</span><span class="rvts89">/</span></p>
+<p class="rvps47"><span class="rvts85">count</span><span class="rvts36">)</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">These five specific cursor movement functions only will accept a </span><span class="rvts36">count</span><span class="rvts35"> option. These functions are:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts36">(Left/</span><span class="rvts85">count</span><span class="rvts36">)</span></li>
+<li class="rvps2"><span class="rvts36">(Right/</span><span class="rvts85">count</span><span class="rvts36">)</span></li>
+<li class="rvps2"><span class="rvts36">(Up/</span><span class="rvts85">count</span><span class="rvts36">)</span></li>
+<li class="rvps2"><span class="rvts36">(Down/</span><span class="rvts85">count</span><span class="rvts36">)</span></li>
+<li class="rvps2"><span class="rvts36">(Column/</span><span class="rvts85">count</span><span class="rvts36">)</span></li>
+</ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The </span><span class="rvts85">count</span><span class="rvts35"> field causes the given function to move the cursor left, right, up or down the indicated number of columns or lines. For Column, </span><span class="rvts85">count</span><span class="rvts35"> indicates the absolute column number on the current data line where the cursor is to be positioned. For these functions, the </span><span class="rvts85">count</span><span class="rvts35"> field is similar to the </span><span class="rvts36">repetition factor</span><span class="rvts35"> described next, except that the performance in repositioning the cursor is </span><span class="rvts36">much</span><span class="rvts35"> faster.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If </span><span class="rvts85">count</span><span class="rvts35"> and the preceding slash are omitted, it is the same as if the value were </span><span class="rvts36">1</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(</span><span class="rvts91">n</span><span class="rvts35">:</span><span class="rvts85">primitive)</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps4"><span class="rvts35">You can also specify a </span><span class="rvts36">repetition factor</span><span class="rvts35"> for primitive functions. The repetition factor is specified as a decimal number just after the opening left parenthesis of the function, and followed by a colon.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts35">For example, the function </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.right">(Right)</a><span class="rvts35"> w</span><span class="rvts6">ill move the cursor one character to the right. If you wanted to move the cursor four positions to the right, you cold enter this as </span><span class="rvts36">(Right)(Right)(Right)(Right)</span><span class="rvts6">. </span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">With a repetition factor, this can be simplified to </span><span class="rvts40">(4:Right)</span><span class="rvts6">. </span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">Repetition factors can only be used within primitive functions in </span><span class="rvts40">( )</span><span class="rvts6"> parentheses, not on un-enclosed primary commands or on the other types of enclosed keyboard items like </span><span class="rvts40">[ ]</span><span class="rvts6">, </span><span class="rvts40">{ }</span><span class="rvts6"> or </span><span class="rvts40">&lt; &gt;</span><span class="rvts6">.</span></p>
+<p class="rvps42"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts12">A description of all primitive functions is provided in the "</span><a class="rvts33" href="ListofKeyboardPrimitives.html">List of Keyboard Primitives</a><span class="rvts12">"</span></p>
+<p class="rvps42"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">[</span><span class="rvts85">text-string</span><span class="rvts36">]</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Any text string enclosed in </span><span class="rvts36">[ &nbsp;]</span><span class="rvts35"> brackets will be entered at the current cursor location as if manually typed from the keyboard. This could be used, for example, to enter boilerplate text, or any other repetitive phrase. Embedded blanks are allowed in the text string. You could map a key to a foreign letter by putting that one letter in brackets, such as the letter </span><span class="rvts89">[</span><span class="rvts93">ø</span><span class="rvts89">]</span><span class="rvts35">.</span></p>
+<p class="rvps42"><span class="rvts35"><br/></span></p>
+<p class="rvps43"><span class="rvts36">Note:</span><span class="rvts35"> Former Tritus SPF users that were able to map a string like </span><span class="rvts36">ABC</span><span class="rvts35"> using a primary command of </span><span class="rvts36">DATA ABC</span><span class="rvts35"> can achieve the same thing with an SPFLite key mapping definition of</span><span class="rvts36"> [ABC].</span></p>
+<p class="rvps42"><span class="rvts86"><br/></span></p>
+<p class="rvps43"><span class="rvts35">What if your data actually </span><span class="rvts85">contains</span><span class="rvts35"> a left or right bracket? &nbsp;Just double any brackets you need to use as literal values.</span></p>
+<p class="rvps50"><span class="rvts35"><br/></span></p>
+<p class="rvps43"><span class="rvts35">Example: &nbsp;You want a key to generate: &nbsp; </span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">X[y] = Z</span></p>
+<p class="rvps43"><span class="rvts35">Solution: &nbsp;In the key definition field, you enter:</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">[X[[y]] = Z]</span></p>
+<p class="rvps42"><span class="rvts86"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">(nn:[</span><span class="rvts85">text-string</span><span class="rvts36">])</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">This variation of the normal text string enclosed in </span><span class="rvts36">[ &nbsp;]</span><span class="rvts35"> brackets is used when you desire a repetition of the provided string. In addition to being a simplified format, and allowing you to define long strings that would be awkward and error-prone to type manually, this method is also significantly faster in performance. This could be used, for example, to enter a long string of equal characters.</span></p>
+<p class="rvps42"><span class="rvts35"><br/></span></p>
+<p class="rvps43"><span class="rvts35">Example:</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">You want a key to generate a string of 40 * characters, so rather than entering:</span></p>
+<p class="rvps43"><span class="rvts35"> &nbsp; &nbsp; &nbsp; </span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">[****************************************]</span></p>
+<p class="rvps43"><span class="rvts89"><br/></span></p>
+<p class="rvps43"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92">you enter this instead:</span></p>
+<p class="rvps43"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">(40:[*])</span></p>
+<p class="rvps43"><span class="rvts89"><br/></span></p>
+<p class="rvps43"><span class="rvts35">Similarly if you enter:</span></p>
+<p class="rvps43"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">(4:[----+----|])</span></p>
+<p class="rvps43"><span class="rvts89"><br/></span></p>
+<p class="rvps43"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">it would be the same as</span></p>
+<p class="rvps43"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">[----+----|----+----|----+----|----+----|]</span></p>
+<p class="rvps43"><span class="rvts89"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="177" style="padding: 1px;"><p class="rvps47"><span class="rvts36">&lt;</span><span class="rvts85">key-label</span><span class="rvts36">&gt;</span></p>
+</td>
+<td width="787" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Text enclosed in </span><span class="rvts36">&lt;&gt;</span><span class="rvts35"> angle brackets is a </span><span class="rvts85">key label.</span><span class="rvts35"> &nbsp;If present, the optional &lt;</span><span class="rvts85">key-label</span><span class="rvts35">&gt; field must be </span><span class="rvts36">leftmost</span><span class="rvts35"> in the key definition field. A key label provides the text that will appear, along with the key name, at the bottom of the edit screen when the display of 1 or more Keyboard Help lines is enabled. (This is like the </span><span class="rvts36">PFSHOW</span><span class="rvts35"> command in prior versions of SPFLite.) &nbsp;See </span><a class="rvts33" href="OptionsScreen.html">Options - Screen</a><span class="rvts35"> for activating this option. For example, if the entry for the unshifted </span><span class="rvts36">F3</span><span class="rvts35"> key were coded as </span><span class="rvts36">&lt;End&gt;end</span><span class="rvts35"> then it would show on the bottom of the Edit screen as </span><span class="rvts36">F3=End</span><span class="rvts35">. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Note that what is shown as Keyboard Help is the key </span><span class="rvts36">label</span><span class="rvts35">, not the key </span><span class="rvts36">definition</span><span class="rvts35">. So, the label of the key that is displayed, and the definition of the key that is acted on, are completely different things.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Key labels are helpful if you (or some other user you are assisting) need to be reminded what certain keys do. Once you can remember the definitions, the display of the key labels can be removed to save screen space.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps51"><span class="rvts36"><br/></span></p>
+<p class="rvps51"><a name="AssigningMultipleFunctions"></a>
+<span class="rvts36">Assigning Multiple Functions</span></p>
+<p class="rvps51"><span class="rvts35"><br/></span></p>
+<p class="rvps33"><span class="rvts35">Multiple keyboard functions can be entered for one key. In fact, this is how keyboard macros are created, by "stringing together" a series of keyboard functions. (This is further discussed below under "Keyboard Macros".) &nbsp;When this is done, the functions are processed left to right. Suppose you wanted to put a label of .AA on the current line, then home the cursor, and issue a </span><span class="rvts36">CHANGE</span><span class="rvts35"> command against that labeled line. Say you wanted to call this activity the “ABC” key. (When you perform line and primary commands like this “the hard way” you may need an intermediate Enter after the part that sets the line label.) &nbsp;The following key entry could accomplish this:</span></p>
+<p class="rvps39"><span class="rvts86"><br/></span></p>
+<p class="rvps11"><span class="rvts89">&lt;ABC&gt;{.AA}(Enter)(Home)[CHANGE ABC DEF ALL .AA](Enter)</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">-- Version 1</span></p>
+<p class="rvps34"><span class="rvts86"><br/></span></p>
+<p class="rvps5"><span class="rvts35">However, there is no need to be so detailed. Since strings outside of any enclosures like </span><span class="rvts36">()</span><span class="rvts35">, </span><span class="rvts36">[]</span><span class="rvts35">, </span><span class="rvts87">{}</span><span class="rvts35"> and </span><span class="rvts36">&lt;&gt;</span><span class="rvts35"> represent primary commands, you can just enter the primary-command as-is, if there's only one of them. Also, there is an implied </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Enter)</a><span class="rvts35"> that takes place when line-command entries like </span><span class="rvts87">{</span><span class="rvts36">.AA}</span><span class="rvts35"> are used. That will eliminate the need for the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Home)</a><span class="rvts35"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enter">(Enter)</a><span class="rvts35"> functions above. The simplified, and faster version, looks like this:</span></p>
+<p class="rvps38"><span class="rvts86"><br/></span></p>
+<p class="rvps11"><span class="rvts89">&lt;ABC&gt;{.AA}CHANGE ABC DEF ALL .AA</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts90"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">-- Version 2</span></p>
+<p class="rvps34"><span class="rvts86"><br/></span></p>
+<p class="rvps5"><span class="rvts35">It is important to understand that the two macro definitions are equivalent. The reason it's important is that if you use the Keyboard Recording feature and type your keystrokes in, they will be recorded literally, much like what is seen in Version 1 above. You may wish to simplify it to something more like Version 2, for performance reasons.</span></p>
+<p class="rvps36"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="LocationofPrimaryCommandsinaMacro"></a>
+<span class="rvts36">Location of Primary Commands in a Macro</span><span class="rvts35"> </span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">When a macro contains a primary command, as the previous topic discussed, performance is improved when the command is </span><span class="rvts36">NOT</span><span class="rvts35"> enclosed in </span><span class="rvts36">[ &nbsp;]</span><span class="rvts35"> characters. However, if the primary command is </span><span class="rvts36">not</span><span class="rvts35"> the last action in the macro sequence, it should be entered as Version 1 above.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">For example, take a macro that is supposed to do a </span><span class="rvts36">PASTE</span><span class="rvts35"> command after the data line where the cursor is currently on, and keep the cursor from losing its current location. The macro should seemingly look like:</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps6"><span class="rvts89">(SaveCursor){A}PASTE(RestoreCursor)</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">But it would actually fail, as the characters </span><span class="rvts89">PASTE(RestoreCursor)</span><span class="rvts35"> would be entered in the line-command area, which won't work. After getting the </span><span class="rvts36">A</span><span class="rvts35"> line command where it's needed, we need to reposition the cursor up to the Home position. The macro must be coded as:</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps6"><span class="rvts89">(SaveCursor){A}(Home)[PASTE](Enter)(RestoreCursor)</span></p>
+<p class="rvps6"><span class="rvts89"><br/></span></p>
+<p class="rvps5"><span class="rvts35">which </span><span class="rvts36">would</span><span class="rvts35"> execute as we desire.</span></p>
+<p class="rvps6"><span class="rvts35"><br/></span></p>
+<p class="rvps30"><a name="AutoRepeat/SetCursorPosition"></a>
+<span class="rvts36">Auto Repeat / Set Cursor Position</span></p>
+<p class="rvps30"><span class="rvts35"><br/></span></p>
+<p class="rvps33"><span class="rvts35">This is a dual purpose field, so we will treat each separately.</span></p>
+<p class="rvps25"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts36">When a Keyboard Key is selected. </span><span class="rvts35">This checkbox next to each key entry specifies whether a particular key combination to </span><span class="rvts36">automatically</span><span class="rvts35"> </span><span class="rvts36">repeat</span><span class="rvts35"> if that key is </span><span class="rvts85">held down</span><span class="rvts35"> instead of being “just typed” quickly. For most normal typing keys, auto-repeat is desirable, because it makes the keyboard faster and more responsive. However, for some kinds of key mappings, auto-repeat could be a little </span><span class="rvts36">too</span><span class="rvts35"> responsive for your own good. For example, it is common to have the primary command </span><span class="rvts36">END</span><span class="rvts35"> assigned to F3. Let's say you had multiple tabs open for several files, and you intended to save and close of just </span><span class="rvts85">one</span><span class="rvts35"> of them, using F3. If you inadvertently held down your F3 key a little too long you might end up closing several or </span><span class="rvts36">all</span><span class="rvts35"> your edits before you were really done with them. For keys mapped to powerful commands like </span><span class="rvts36">END</span><span class="rvts35">, you should clear the checkbox, so that auto-repeat is disabled for that key. That way, keys with powerful commands that you want to carefully apply one at a time don't suddenly get repeated many times by mistake.</span></li>
+</ul></ul>
+<p class="rvps44"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps44"><span class="rvts36">When a Mouse Key is selected.</span><span class="rvts35"> &nbsp;This checkbox specifies whether, before any command action is performed, the </span><span class="rvts36">cursor should be moved</span><span class="rvts35"> to the character location on the screen where the click occurred. Depending on the particular command you are going to issue, you may or may not want the cursor moved from its current location. e.g. If all you wish a mouse button to do is move the cursor, you would tick this checkbox and leave the command as </span><span class="rvts36">(Null)</span><span class="rvts35">. Note that mouse buttons don't have an auto-repeat checkbox because mouse buttons do not auto-repeat when held down.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts86"><br/></span></p>
+<p class="rvps30"><a name="ControllingtheKeyboardRepeatRate"></a>
+<span class="rvts36">Controlling the Keyboard Repeat Rate</span></p>
+<p class="rvps30"><span class="rvts35"><br/></span></p>
+<p class="rvps33"><span class="rvts35">SPFLite respects the keyboard timing options that are configured in Windows. If you select the Windows Control Panel and then Keyboard Properties, you can set the keyboard Repeat Rate and Repeat Delay. </span></p>
+<p class="rvps33"><span class="rvts35"><br/></span></p>
+<p class="rvps33"><span class="rvts35">If you find that your keys are “jumping the gun” and repeating too soon when you hold them down, increasing the Repeat Delay may help. However, for most users, you will get the greatest productivity by making the keyboard operate as fast as possible.</span></p>
+<p class="rvps34"><span class="rvts86"><br/></span></p>
+<p class="rvps30"><a name="FinalizingYourKeymapCustomization"></a>
+<span class="rvts36">Finalizing Your Keymap Customization</span></p>
+<p class="rvps30"><span class="rvts35"><br/></span></p>
+<p class="rvps33"><span class="rvts35">Once you are finished with your mapping activities (and you may customize as many keys at once as you like), click the </span><span class="rvts85">Done</span><span class="rvts35"> button at the bottom. You don't have to “save” each key one at a time; </span><span class="rvts85">Done</span><span class="rvts35"> will save every key you have defined or modified.</span></p>
+<p class="rvps33" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

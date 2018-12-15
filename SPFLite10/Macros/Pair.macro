@@ -1,0 +1,104 @@
+' PAIR.MACRO
+'
+' Syntax:  PAIR                      with the cursor sitting on one end of a
+'                                    syntax 'pair'.  e.g. on a [ or a ) or a
+'                                    language KW like FOR or WHILE. The cursor
+'                                    will be moved to the matching 'pair'.
+
+'                                    The command would normally be assigned to
+'                                    a command key.
+
+' Locate the matching pair of the 'word' the cursor is on
+' The table of paired characters/keywords is at the bottom within 
+' the SUB LoadPairs.   Extend this table as desired.  
+' 
+' Note: This macro is a simple demo, and is not intended to be presented
+'       as a fully functional tool.  It does not support language defined
+'       comments, nor does it ignore data within quoted strings. It also 
+'       does not handle multi-word pairs like 'IF' and 'END IF'.
+'       It's simply a possible method for doing this.
+'
+'       Feel free to carry on development and post results in the SPFLite
+'       Forums.
+'
+' Author: George Deluca
+
+dim lword, ltxt, lchar, wordchrs as string
+dim i, paircount, lptr, col, dir, nest as number value 0 
+dim openpair(20) as string 
+dim closepair(20) as string 
+dim o, c, m as string value "" 
+
+lptr = Get_Csr_Lptr: col  = Get_Csr_Col               ' Get cursor location 
+if lptr = 0 then halt(fail, "Cursor is not in the text area")    '
+
+'----- Get the character at the cursor location 
+ltxt = Get_Line$(lptr)                                ' Fetch the line 
+lchar = mid$(ltxt, col, 1)                            ' Extract the character 
+
+'----- See if character is in the middle of a word 
+wordchrs = Get_Profile$("Word")                       ' Get list of valid word characters 
+if verify(lchar, wordchrs) = 0 then                   ' Yes, it's a valid word character 
+   lword = ucase$(Get_Curr_Word$)                     ' Get Upper version of the 'word' we're sitting on
+else                                                  ' 
+   lword = lchar                                      ' Make the single character our 'word' then 
+end if 
+
+'----- Go load the various known pairs 
+call loadpairs() 
+
+'----- Validate the 'word' chosen 
+for i = 1 to paircount                                ' In the open table? 
+   if lword = openpair(i) then                        ' Yes, we got it 
+      o = openpair(i): m = Closepair(i)               ' Save our open values / opposite value  
+      exit for                                        ' 
+   end if                                             ' 
+   if lword = closepair(i) then                       ' Yes, we got it 
+      c = closepair(i): m = openpair(i)               ' Save the close value / opposite value 
+      exit for                                        ' 
+   end if                                             ' 
+next i                                                ' 
+
+if o = "" and c = "" then halt(fail, "'word' under the cursor not a recognized 'pair'")
+
+'----- Decide which way we're matching 
+if o <> "" and c = "" then                            ' Forward match 
+   dir = 1: c = m                                     ' Set direction / close char 
+else                                                  ' Else it's backward 
+   dir = -1: o = c: c = m                             ' 
+end if                                                ' 
+
+'----- OK start the search 
+
+call NextColumn()                                     ' Adjust column 
+
+do until (ucase$(mid$(ltxt, col, len(c))) = c) and nest = 0   ' Found our opposite end?                  
+   if ucase$(mid$(ltxt, col, len(c))) = o then        ' A nest beginning? 
+      incr nest                                       ' 
+   elseif ucase$(mid$(ltxt, col, len(c))) = c then    ' A nest close?
+      decr nest                                       ' 
+   end if                                             ' 
+   call NextColumn()                                  ' 
+loop 
+
+
+Set_Csr(lptr, col, len(c))                            ' 
+halt("Match found")                                   ' 
+
+'----- Move to next column (and maybe next line) 
+Sub NextColumn() 
+col = col + dir                                       ' Adjust column 
+if col = 0  or col > len(ltxt)  then                  ' Outside line boundaries?
+   lptr = Get_Next_LPtr(lptr, dir, "DATA")            ' Adjust line pointer
+   if lptr = 0 then halt(fail, "Matching pair not found")  
+   ltxt = Get_Line$(lptr)                             ' Get the line's text 
+   col = iif(dir = 1, 1, len(ltxt))                   ' Set column  
+end if 
+end sub 
+
+'----- Init the pair table 
+sub LoadPairs() 
+   array assign OpenPair()  = "(", "[", "{", "FOR", "WHILE", "DO"
+   array assign ClosePair() = ")", "]", "}", "NEXT", "WEND", "LOOP"
+   paircount = 6              
+end sub 

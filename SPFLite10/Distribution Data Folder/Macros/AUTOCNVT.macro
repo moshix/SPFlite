@@ -1,0 +1,72 @@
+' AUTOCNVT.MACRO
+'
+' This macro will update a pre-Version 10 .AUTO file to the Version 10 format.
+'
+' Syntax: AUTOCnvt
+'
+' Author: George Deluca
+'
+SPF_Loop_Check(off)                                   ' In case doing a large Multi-Edit 
+dim lclText as string value ""
+dim i, cLPtr, oCount, DelCount, NumUSchemes as number value 0
+dim oprand(2) as string 
+dim DelList(10000) as number 
+dim USchemes(15) as number 
+
+if Get_Last_LPtr = 0 then halt(FAIL, "No lines in the file")
+
+for cLPtr = 1 to Get_Last_LPtr                        ' Loop through all lines
+   if Is_File(cLPtr) then                             ' If a FILE line (i.e. Multi-Edit) 
+      NumUSchemes = 0                                 ' Reset the # UCASE schemes 
+   end if 
+   if Is_Data(cLPtr) then                             ' Only do data lines
+      lclText = trimfull$(Get_Line$(cLPtr))           ' Get the text and elim double spaces 
+      oCount = parsecount(lclText, " ")               ' Get count of operands 
+      redim oprand(oCount) as string                  ' Redim table correct size 
+      parse lclText, oprand, " "                      ' Parse operands out 
+
+      '----- Check for comment/blank lines 
+      if trim$(lclText) = "" or left$(lclText, 1) = ";" then  ' Skip null/Comment  lines 
+         ' Do nothing
+
+      '----- Check for the statement types we care about
+
+      '----- Check for lines we'll delete
+      elseif ucase$(oprand(1)) = "NORMHI" then        ' 
+         DelCount += 1: DelList(DelCount) = cLPtr     ' 
+      elseif ucase$(oprand(1)) = "NORMLO" then        '
+         DelCount += 1: DelList(DelCount) = cLPtr     ' 
+      elseif ucase$(oprand(1)) = "LINEHI" then        '
+         DelCount += 1: DelList(DelCount) = cLPtr     ' 
+      elseif ucase$(oprand(1)) = "LINELO" then        '
+         DelCount += 1: DelList(DelCount) = cLPtr     ' 
+
+      '----- Check for a SCHEME requesting Uppercase
+      elseif ucase$(oprand(1)) = "SCHEME" then        '
+         DelCount += 1: DelList(DelCount) = cLPtr     '
+         if val(oprand(2)) > 100 then                 ' An Uppercase request? 
+            NumUSchemes += 1                          ' Save the Scheme number 
+            USchemes(NumUSchemes) = val(parse$(lclText, " ", 2)) - 100 
+         end if                                       ' 
+
+      '----- Check for a WORD referencing an Uppercase SCHEME
+      elseif ucase$(oprand(1)) = "WORD" then          '
+         for i = 1 to NumUSchemes                     ' See if an Uppercase request 
+            if val(oprand(2)) = USchemes(i) then      ' Got a match? 
+               if letter$(oprand(3)) <> "" then       ' And there are letters in the keyword 
+                  '----- Alter Scheme number          ' Then alter WORD to AUTOCAPS 
+                  spf_cmd("CHANGE 'WORD' 'AUTOCAPS' ." + format$(Get_LNum(cLPtr))) 
+               end if                                 ' 
+            end if                                    ' 
+         next i                                       ' 
+      end if                                          ' 
+   end if                                             ' 
+next cLPtr                                            ' 
+
+'----- Now do the deletions we've saved up 
+'----- Do in reverse order so line numbers aren't altered as we go
+For i = DelCount to 1 step -1                         ' 
+   Spf_Cmd("DELETE ." + format$(Get_LNum(DelList(i))))' Delete the line 
+next i                                                ' 
+SPF_Cmd("RESET")                                      '  
+halt("AUTOCnvt completed, please check result")

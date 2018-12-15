@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Tab Pages</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,,,,,,,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Tab Pages">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Tab Pages" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="TabPages"
+		  data-hnd-context="22"
+		  data-hnd-title="Working with Tab Pages"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Tab Pages</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Dataisolation">Data isolation</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Switchingbetweentabs">Switching between tabs</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Openinganewtab">Opening a new tab</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Closingatab">Closing a tab</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Indicatingfile-modifiedstatusinthetabheader">Indicating file-modified status in the tab header</a></p>
+<p class="rvps9"><a class="rvts45" href="TabPages.html#Example">Example</a></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">SPFLite divides the screen into multiple </span><span class="rvts11">tabbed sections</span><span class="rvts12">, to support the editing or browsing of multiple files from a single SPFLite instance. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">Each open file is displayed and manipulated within a separate tab page in the SPFLite window. These sections are often referred to as "file tabs" or just "tabs", but may contain any of the following within a tab:</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">File Manager</span><span class="rvts12">. Is always the left-most tab. The File Manager may display a directory list, or a File List.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Edit tab</span><span class="rvts12">. Contains a file opened for editing.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Empty tab</span><span class="rvts12">. Contains a new, empty file that has no name and has not yet been saved.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Cloned tab</span><span class="rvts12">. Contains a copy of an existing file, which has not yet been given a new name and has not yet been saved. A temporary name with an * and a file extension will appear.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Multi-Edit tab</span><span class="rvts12">. Contains a set of multiple files opened for editing.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Browse tab</span><span class="rvts12">. Contains a file opened for browse. Browse is a read-only edit session, in which changes cannot be saved.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Clipboard tab</span><span class="rvts12">. Contains the contents of the Windows clipboard, allowing you to directly edit it. At most one clipboard tab may be present.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">SET Edit tab</span><span class="rvts12">. Contains the values for all defined SET variables. At most one SET Edit tab may be present.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The screen below shows SPFLite with nine open tabs.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><br/>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/Nine Tabs.jpg"><span class="rvts12"> &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The base file name of a file being edited (without the file's path) is used as the label for each tab. When a file tab is selected (made active) the tab itself is displayed with a different background color, and the full filename, including the path, is shown in the SPFLite windows title bar.</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Dataisolation"></a>
+<span class="rvts11">Data isolation</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The data being edited in each tab is completely separate from the data in any other tabs. However, some SPFLite program data is used in common with all tabs. This includes:&nbsp;</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">The global settings controlled by the </span><a class="rvts32" href="Customize.html">Options</a><span class="rvts12"> settings</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">The Command retrieve stack used by the </span><a class="rvts32" href="RETRIEVE.html">RETRIEVE</a><span class="rvts12"> command</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">The Windows Clipboard</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">Any Named Private Clipboards you may have saved</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">The value of any </span><span class="rvts11">SET</span><span class="rvts12"> symbol names</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts12">The contents of Globally Stored Values saved by programmable macros</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Switchingbetweentabs"></a>
+<span class="rvts11">Switching between tabs</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">To switch between tabs you can either use the mouse to left-click on the desired tab, or you can use the SPFLite primary commands </span><a class="rvts32" href="SWAP.html">SWAP PREV</a><span class="rvts12"> to switch to the previous tab, and </span><a class="rvts32" href="SWAP.html">SWAP NEXT</a><span class="rvts12"> to switch to the next tab. Note: Both </span><span class="rvts11">SWAP PREV</span><span class="rvts12"> and </span><span class="rvts11">SWAP NEXT</span><span class="rvts12"> will wrap if there are no more tabs in the indicated direction. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">There is also a </span><a class="rvts33" href="SWAP.html">SWAP PRIOR</a><span class="rvts12"> command which can be used to alternate displays of two tabs. </span><span class="rvts11">SWAP PRIOR</span><span class="rvts12"> swaps to the previously displayed tab. </span><span class="rvts11">Note:</span><span class="rvts12"> If you click on one tab, and then click on a second (different) tab, then from that point on, each time you issue a </span><span class="rvts11">SWAP PRIOR</span><span class="rvts12"> command, it will alternate the active screen between those two tabs. That is, </span><span class="rvts11">SWAP PRIOR</span><span class="rvts12"> will always alternative between the last two active file tabs.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">If you use these functions in other software, you may wish to map </span><span class="rvts11">SWAP NEXT</span><span class="rvts12"> to</span><span class="rvts37"> </span><span class="rvts284">Ctrl-Tab and</span><span class="rvts285"> SWAP PREV</span><span class="rvts284"> to Ctrl-Shift-Tab for compatibility with these applications.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Whether you switch among file tabs using the mouse or the </span><span class="rvts285">SWAP</span><span class="rvts284"> commands, SPFLite will maintain your current cursor position in every file tab, where you will find it if you a leave a file tab and then return back to it.</span></p>
+<p class="rvps10"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Openinganewtab"></a>
+<span class="rvts11">Opening a new tab</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts12">When SPFLite is started, the File Manager tab will be displayed with your default directory list displayed. If you have enabled the Global Option for </span><a class="rvts33" href="OptionsGeneral.html#ReOpen%20last%20files%20at%20Start">Re-Open last file(s) at Start</a><span class="rvts12">, the files that were left open the last time SPFLite was closed will also appear in their own tabs. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">To open a file for Edit or Browse, enter the appropriate command character (</span><span class="rvts11">E</span><span class="rvts12"> or </span><span class="rvts11">B</span><span class="rvts12">) next to the desired files. Each selected file will be opened in its own tab. You can also select multiple files to be combined in a single Multi-Edit session with the </span><span class="rvts11">M</span><span class="rvts12"> line command. See </span><a class="rvts33" href="MultiEdit.html">Working with Multi-Edit Sessions</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">In File Manager, Left-Click on </span><span class="rvts11">New </span><span class="rvts12">in the Quick Launch bar (or enter a non-blank to its left), or enter the </span><span class="rvts11">EDIT NEW</span><span class="rvts12"> command, to open a new, empty file.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">You can return to the File Manager tab at any time to select other additional files for processing, by clicking on the File Manager tab, or by issuing a </span><span class="rvts11">SWAP HOME</span><span class="rvts12"> command. </span></p>
+<p class="rvps13"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Closingatab"></a>
+<span class="rvts11">Closing a tab</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">A tab will be closed when an </span><a class="rvts32" href="END.html">END</a><span class="rvts12"> command is issued. </span><a class="rvts33" href="END.html">END</a><span class="rvts12"> may also save the data depending on your </span><a class="rvts33" href="AUTOSAVE.html">AUTOSAVE</a><span class="rvts12"> setting. Following END processing the tab will be closed and disappear from the screen.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">If you issue a </span><span class="rvts11">CANCEL</span><span class="rvts12"> command rather then </span><span class="rvts11">END, </span><span class="rvts12">the edit data is deleted and the tab returned to an (Empty) status. The tab is </span><span class="rvts11">not</span><span class="rvts12"> closed by the </span><span class="rvts11">CANCEL</span><span class="rvts12"> command.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">You may also close a tab by Right-clicking on the tab header. This is treated as equivalent to issuing an </span><span class="rvts11">END</span><span class="rvts12"> command and all normal END processing takes place as usual.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">If you click on the main window close button </span><span class="rvts11">X</span><span class="rvts12">, SPFLite will close every tab. As each file is closed, the file is either saved or not saved, with or without a prompt to you, depending on how the </span><a class="rvts32" href="OptionsGeneral.html">AUTOSAVE</a><span class="rvts12"> option is set in the Profile for that file's type. &nbsp;</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="Indicatingfile-modifiedstatusinthetabheader"></a>
+<span class="rvts11">Indicating file-modified status in the tab header</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">SPFLite can provide a visible indication when a file has been modified but not yet saved, by altering the color of the text in the Tab header for that file. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The colors to be used are under your control, and are specified in the</span><a class="rvts33" href="OptionsScreen.html"> Options - Screen</a><span class="rvts12"> dialog. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">In order to benefit from this feature, it's up to you to pick good, contrasting colors. SPFLite does not predefine the color palettes during installation to accomplish this. The dialog below shows an example of how this might be done:</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Options - Screen.jpg"></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Example"></a>
+<span class="rvts36">Example</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here is an example of how these color choices would appear in the main edit window. The current file tab shows </span><span class="rvts36">red</span><span class="rvts35"> lettering because</span><span class="rvts36"> </span><span class="rvts71">MODIFIED.TXT</span><span class="rvts35"> is </span><span class="rvts36">modified</span><span class="rvts35">, while</span><span class="rvts61"> </span><span class="rvts72">SAVED.TXT</span><span class="rvts35"> is in </span><span class="rvts36">blue</span><span class="rvts35"> lettering because it is </span><span class="rvts36">unmodified</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Modified Tab Header.jpg"></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

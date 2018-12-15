@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Shifting Data</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shifting Data">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Shifting Data" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="ShiftingData"
+		  data-hnd-context="30"
+		  data-hnd-title="Shifting Data"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Shifting Data</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#DifferencesbetweenColumnShiftandDataShiftlinecommands">Differences between Column Shift and Data Shift line commands</a></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#IndentShift-anewkindofColumnShiftlinecommand">Indent Shift - a new kind of Column Shift line command</a></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#Data-ShiftingInsert-Modefunction">Data-Shifting Insert-Mode function</a></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#Data-Deletefunction">Data-Delete function</a></p>
+<p class="rvps5"><a class="rvts45" href="ShiftingData.html#Data-BackspaceandData-Delete-Mark">Data-Backspace and Data-Delete-Mark</a></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When you edit data, the editor automatically shifts characters on a line to the left or right to accommodate insertions or deletions. This shifting can be either implicit or explicit. Implicit shifts occur when </span><span class="rvts11">INS</span><span class="rvts12"> mode is in effect when you press the Insert key, deleting characters with the </span><span class="rvts11">DEL</span><span class="rvts12"> key, or when the </span><a class="rvts32" href="CHANGE.html">CHANGE</a><span class="rvts12"> command string-2 length is different from the string-1 length.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There are three new facilities available for shifting of data. These are </span><span class="rvts11">Data-Shifting Insert Mode</span><span class="rvts12">, and the </span><span class="rvts11">Data Delete</span><span class="rvts12"> function, described at the end of this section, and the </span><span class="rvts11">Indent Shift</span><span class="rvts12"> line commands described here.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Explicit shifts occur when you use the following line commands:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><a class="rvts270" href="ShiftLeft.html">(</a><span class="rvts95"> </span><span class="rvts266">or </span><a class="rvts270" href="ShiftLeft.html">((</a><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Column Shift Left</span></li>
+<li style="margin-left: 0px" class="rvps6"><a class="rvts270" href="ShiftRight.html">)</a><a class="rvts267" href="ShiftRight.html"> </a><span class="rvts269">or </span><a class="rvts270" href="ShiftRight.html">))</a><span class="rvts268"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Column Shift Right</span></li>
+<li style="margin-left: 0px" class="rvps6"><a class="rvts270" href="ShiftDataLeft.html">&lt;</a><span class="rvts95"> </span><span class="rvts266">or</span><span class="rvts95"> </span><a class="rvts270" href="ShiftDataLeft.html">&lt;&lt;</a><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Data Shift Left</span></li>
+<li style="margin-left: 0px" class="rvps6"><a class="rvts270" href="ShiftDataRight.html">&gt;</a><span class="rvts95"> </span><span class="rvts266">or</span><span class="rvts95"> </span><a class="rvts270" href="ShiftDataRight.html">&gt;&gt;</a><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Data Shift Right</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts270">[</span><span class="rvts95"> </span><span class="rvts266">or</span><span class="rvts95"> </span><span class="rvts270">[[</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Indent Shift Left</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts270">]</span><span class="rvts95"> </span><span class="rvts266">or</span><span class="rvts95"> </span><span class="rvts270">]]</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">Indent Shift Right</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Two columns is the standard default for shift operations. This default can be changed to any number of columns desired (in the range of 1 through 999 columns) by a General Options setting. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When shifting a block of lines more or less than the default, enter the amount on the first or last line of the block. If you enter it in both places, the line shifts only if both amounts are the same.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="DifferencesbetweenColumnShiftandDataShiftlinecommands"></a>
+<span class="rvts11">Differences between Column Shift and Data Shift line commands</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There are some significant differences between Column shifts and Data Shifts. Shifting occurs within the column boundaries (either the default - the whole line) or those specified with the </span><a class="rvts32" href="BOUNDS.html">BOUNDS</a><span class="rvts12"> command or the </span><a class="rvts32" href="BNDS.html">BNDS</a><span class="rvts12"> line command. </span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Column Shift</span><span class="rvts12"> moves all characters within the bounds without altering their relative spacing. Characters shifted past the bounds are deleted. That is, blanks are inserted at the bound </span><span class="rvts50">from</span><span class="rvts12"> which the characters are being shifted, and the characters are deleted at the </span><span class="rvts50">opposite</span><span class="rvts12"> bound. So, this shift is called a destructive shift because information shifts within column boundaries without regard to its contents, and can result in the loss of data with no error being noted. </span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Data Shift</span><span class="rvts12"> moves characters non-destructively within the BOUNDS. The end-result of a data shift is a change in the widths of one or more spans of blanks; nonblank data will not be changed or deleted.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For data shift left attempts that exceed the current Left BOUNDS setting, text movement stops at the left bound.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note:</span><span class="rvts12"> The ISPF editor marks lines with ==ERR&gt; flags when a data shift operation can only be partially completed, either because of the data contents of the line or the current location of the BOUNDS. SPFLite recognizes the same conditions, but currently does not support the display of ==ERR&gt; flags. Instead, it will display a message if there were any lines that could not completely shifted. The message will say "Data shifting incomplete" and will report the number of lines for which the full shifting amount could not be applied.</span></p>
+<p class="rvps11"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Data shifting works by moving contiguous spans of nonblank characters as a unit, and 'pushing' adjacent spans of characters as needed to make sure there is no data loss. When spans of nonblank characters are separated by only one space, that space is never collapsed (deleted); that way, the spans of nonblank data are never 'run together'.</span></p>
+<p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts12">For a data shift right, shifting can occur up to and including the right bound column. If the right bound is MAX, right-shifting the data line may result in making it longer.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For a data shift left, shifting can occur up to but not including the right bound column.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If left BOUND column of the data line is nonblank, it defines a "label" field, which is locked at that position and is not moved during either a left or right data shift.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:</span><span class="rvts12"> &nbsp;The Data Shift commands are intended to allow for non-destructive shifting of the kind of data that appears in typical programming-language statements, by applying some general rules. These rules require a certain amount of parsing and analysis of your data. The support in SPFLite for Data Shifting commands has been extensively tested, and great efforts were made to ensure that it handles data in an ISPF compatible manner. However, because these general rules may or may not be applicable or useful in your particular situation, you should inspect the results of a Data Shift to ensure you obtained the results you intended, until you are familiar with how this feature operates.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Example:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts49">=BNDS&gt;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span></p>
+<p class="rvps6"><span class="rvts49">000010&nbsp;&nbsp;&nbsp;&nbsp;Word1&nbsp;&nbsp;&nbsp;&nbsp;Word2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Word3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wordn</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If a Data Shift Right command of &gt;10 is entered on line 00010 the result would be</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts49">=BNDS&gt; &nbsp; &nbsp;&lt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt;</span></p>
+<p class="rvps6"><span class="rvts49">000010 &nbsp; &nbsp;Word1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Word2 &nbsp; &nbsp; Word3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Wordn</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">As can be seen, &nbsp;</span><span class="rvts47">Word1</span><span class="rvts12"> and </span><span class="rvts47">Wordn</span><span class="rvts12"> &nbsp;have been left alone, and only the other data shifted.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:</span><span class="rvts12"> Data Shift line commands have the following features:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">Spaces contained inside of strings enclosed in </span><span class="rvts54">'</span><span class="rvts12"> single quotes or </span><span class="rvts54">"</span><span class="rvts12"> double quotes are considered 'protected' and will not be compressed or expanded as a result of data shifting. For this 'protection' to apply, the string must be properly closed. That is, there must a close-quote of the same kind that begins the string value. An individual quote (such as an apostrophe in a word like </span><span class="rvts11">don't</span><span class="rvts12">) is ignored for purposes of protecting spaces. There is presently no support for treating </span><span class="rvts54">`</span><span class="rvts12"> accent quotes in the same way; accent characters are ordinary data.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">IBM ISPF documentation states that both </span><span class="rvts54">'</span><span class="rvts12"> single quotes and </span><span class="rvts54">"</span><span class="rvts12"> double quotes are supposed to be handled the same way, but tests show that their string handling is not consistent with their documentation, and is release-dependent. SPFLite fully supports both quote types in this regard.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">When you perform data shifting on data that has colors, the colors are shifted as well, so that the underlying colors of your nonblank data will not change.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">If you issue a data shift command for a line that has colors, you need to be aware that </span><span class="rvts11">spaces can have colors as well</span><span class="rvts12">. Even though a space has no visible graphic symbol, there is still an underlying "color attribute byte" just like any other data character on a line. </span><span class="rvts11">Colorized spaces may or may not be visible, depending on the background highlight color you choose for it in the Screen Options dialog. </span><span class="rvts12">In most cases, this is not usually important, but if you issue commands like </span><span class="rvts11">FIND "ABC DEF" RED</span><span class="rvts12">, the string will only be found if it is </span><span class="rvts11">entirely</span><span class="rvts12"> RED, including the blank in the middle. When a Data Shift command moves spans of nonblank characters around on a line, existing spans of spaces can get larger or smaller. If these spans of spaces have color attributes, the attributes for the existing span of blanks are copied, as much as will fit, into the new span of blanks, if equal or shorter in length. If the new span is larger because blank data characters were inserted, the color attribute of the inserted blanks will be the same as the rightmost blank of the existing span of blanks (the rightmost color attribute is propagated). In the FIND example, if you had a string of "</span><span class="rvts20">ABC</span><span class="rvts275">&nbsp; &nbsp;</span><span class="rvts20">DEF</span><span class="rvts12">" with the blank in between having an attribute of RED, and it became "</span><span class="rvts20">ABC</span><span class="rvts275">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts20">DEF</span><span class="rvts12">", all the new blanks would also be RED, and everything should work fine. However, if for some reason you had a string like "</span><span class="rvts20">ABC</span><span class="rvts273">&nbsp; &nbsp;</span><span class="rvts274">&nbsp; &nbsp;&nbsp;</span><span class="rvts20">DEF</span><span class="rvts12">" in which the inner blanks had mixed color attributes, the color attributes are propagated on the right (the blue blanks are extended) or are truncated on the right. This may or may not be the results you intended. If your data has unusual color attributes, you may wish to avoid using data shifting on such data, or verify or re-establish the colors after the data has been modified by a data shifting operation.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">In order to properly handle quoted strings in the C language and similar syntax, a single or double quote preceded by a</span><span class="rvts11"> \ </span><span class="rvts12">backslash can be treated as ordinary data and not as a quote. This is an extension to ISPF, which does not recognize escapes in string data. Support for recognizing</span><span class="rvts11"> \</span><span class="rvts12"> backslash escapes is an </span><span class="rvts11">experimental feature</span><span class="rvts12">, enabled by the use of the SPFLite SET symbol </span><span class="rvts11">OPT.DS.ESCAPE</span><span class="rvts12">. If this SET symbol is defined as 1, backslash-escaped quotes will be bypassed; otherwise backslash characters will be treated as ordinary data. </span><span class="rvts11">Because this is an experimental feature, it is subject to change (or even removal) in future releases</span><span class="rvts12">.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">By default, spans of blanks are never compressed shorter than one blank. As an </span><span class="rvts11">experimental feature</span><span class="rvts12"> it is possible to make the default minimum size of the space between nonblank spans larger, by the use of the SPFLite SET symbol </span><span class="rvts11">OPT.DS.MINSIZE</span><span class="rvts12">. If you define this, the symbol can have a value from 1 to 9. For example, a COBOL programmer might want to shift items in the Data Division using a default MINSIZE of 2, so that level numbers are separated from data names by two spaces. If you define this value as greater than 1, and a data shift operation would "push" one span of nonblanks next to another, and the space between them was already less than the defined minimum, the spacing is left as is rather than being increased to the minimum. For example, if you set OPT.DS.MINSIZE to 2, and do a right data shift of 10, suppose you had string like &nbsp;"</span><span class="rvts54">ABC DEF</span><span class="rvts12">" &nbsp;that was pushed right. Since the space between ABC and DEF is just one blank, it stays that way and is not expanded to 2, even though the "minimum" size was set to 2. The MINSIZE value only applies to existing spans that were already larger than the minimum. </span><span class="rvts11">Because this is an experimental feature, it is subject to change (or even removal) in future releases</span><span class="rvts12">.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="IndentShift-anewkindofColumnShiftlinecommand"></a>
+<span class="rvts11">Indent Shift - a new kind of Column Shift line command</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite supports the </span><span class="rvts50">Indent Shift</span><span class="rvts12"> facility. In terms of how data interacts with Bounds, as described above, an Indent Shift may be thought of as a specialized form of Column Shift. When there is no </span><span class="rvts11">n</span><span class="rvts12"> value on an Indent Shift line command, the number of columns shifted is the same as the default shift columns value that appears in the General Options dialog. So, a simple </span><span class="rvts11">]</span><span class="rvts12"> command with no </span><span class="rvts11">n</span><span class="rvts12"> value works the same way as </span><span class="rvts11">)</span><span class="rvts12"> does. And, as always, a command like </span><span class="rvts11">)n</span><span class="rvts12"> overrides the default, so if the default is 4 and you say </span><span class="rvts11">)3</span><span class="rvts12"> you indent 3 columns.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">However, when a command like </span><span class="rvts11">]n</span><span class="rvts12"> is used, the </span><span class="rvts11">n</span><span class="rvts12"> value is </span><span class="rvts11">not</span><span class="rvts12"> an override</span><span class="rvts50">.</span><span class="rvts12"> &nbsp;Instead, the Indent Shift takes the established default number of columns and </span><span class="rvts50">multiplies it by</span><span class="rvts12"> </span><span class="rvts11">n</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">So, if the default columns was 4, and you issued a </span><span class="rvts11">]3</span><span class="rvts12"> line command, the number of columns shifted would be </span><span class="rvts11">4 x 3 = 12</span><span class="rvts12">. Suppose you are entering data, and wanted it formatted so that there were indentations at 4-column boundaries. Now, if you wanted to indent by 3 "indentation levels" you could use </span><span class="rvts11">]3</span><span class="rvts12"> rather than </span><span class="rvts11">)12</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Using Indent Shifts, you no longer have to think in terms of </span><span class="rvts50">columns</span><span class="rvts12">, but in terms of the number of </span><span class="rvts50">indentation levels</span><span class="rvts12"> you are working with. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">As an added convenience, because the Indent Shift line commands use the </span><span class="rvts11">[</span><span class="rvts12"> and </span><span class="rvts11">]</span><span class="rvts12"> bracket keys (which are non-shifted keys on many keyboards) these commands will be a little easier to type than </span><span class="rvts11">(</span><span class="rvts12"> and </span><span class="rvts11">)</span><span class="rvts12"> for most users.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Data-ShiftingInsert-Modefunction"></a>
+<span class="rvts11">Data-Shifting Insert-Mode function</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There is a close relationship between SPFLite's standard Insert Mode and the </span><span class="rvts36">) </span><span class="rvts35">Shift Right line command. For example, if a line command of )4 is issued, four blanks are inserted at the beginning of the line, which is the same thing that would happen if Insert Mode is enabled, then the cursor is moved to the beginning of the line, and then finally the spacebar is pressed four times.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">It is desirable to also have a relationship between an “insert mode” and the </span><span class="rvts36">&gt;</span><span class="rvts35"> Shift Right Data line command. It is now possible with the Data Shifting Insert Mode, enabled by the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> keyboard function.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">A suggested mapping for this key is Ctrl-Insert or Shift-Ctrl-Insert. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">By the way, it's technically possible to map the Shift-Insert key also, but that is not recommended. If you are entering capital letters by holding down the shift key and then press Insert, you probably just want to enter normal Insert Mode and not do something special.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> function will put the editor into Data Shifting Insert Mode, somewhat similar to the INS mode that occurs when the Insert key is pressed. Data Shifting Insert Mode allows data to be inserted into lines in a way similar to the way that the Data Shift line command </span><span class="rvts36">&gt;</span><span class="rvts35"> operates. Because of this, if you are inserting data that is formatted into columns, </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> will not disturb the column alignment, as long as two or more blanks separate the columns. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Looking at the example below, suppose we want to insert some data before the commas on each line, and we do not want to disturb the column containing CCC but want to keep it aligned. It may be possible to do this with </span><span class="rvts36">BOUNDS</span><span class="rvts35">, but </span><span class="rvts36">BOUNDS</span><span class="rvts35"> can be inconvenient to use. With Data Shifting Insert Mode, you can enter data and have SPFLite maintain the alignment of columns in a way similar to how a word processor would maintain the alignment of tabbed columns (without actually using tabs). </span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; </span></p>
+<p class="rvps9"><span class="rvts35">When Data Shift Insert Mode is in effect:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps130"><span class="rvts35">non-blanks are shifted right as new data keys (including spacebar) are pressed, as usual &nbsp;</span></li>
+</ul></ul>
+<p class="rvps130"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">when existing non-blanks are pushed to the right, and a span of two or more blanks follows the non-blanks, the span of blanks is shortened</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">a span of blanks will never be completely removed by shortening it; there will always remain at least one blank</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">the status indicator will show </span><span class="rvts276">INS</span><span class="rvts35"> instead of INS or OVR</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">pressing either of the the keys mapped to </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.insert">(Insert)</a><span class="rvts35"> or </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> will cause the status indicator to revert from &nbsp;</span><span class="rvts276">INS</span><span class="rvts35"> back to OVR</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For example, assuming the following data lines:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">A,B &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">AA,BB &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">AAA,BBB &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose we want to add 1, 22 and 333 before the commas on the data lines above. Using regular Insert Mode, this would first produce:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">A1,B &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">AA22,BB &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">AAA333,BBB &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">and the lines would have to be ‘repaired' to restore the alignment of the CCC column. With Data Shifting Insert Mode, the strings ending in B would be pushed to the right without moving the CCC column, as long as no data loss occurred. On line 3, that is not possible, and so its CCC value has to be pushed over:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">A1,B &nbsp; &nbsp; &nbsp;CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">AA22,BB &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">AAA333,BBB CCC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When multiple spans of blanks exist, they get “compressed” in left-to-right order, starting from the point on the line where the cursor is positioned and going rightward as needed.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a key mapped to </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> is pressed, the editor enters Data Shifting Insert Mode. To distinguish this mode from regular Insert Mode on the Status Line, the regular INS indicator is displayed in Green hi-lite as </span><span class="rvts276">INS</span><span class="rvts35"> instead.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the editor is in Data Shift Insert Mode, another function key mapped to either </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.insert">(Insert)</a><span class="rvts35"> or </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts35"> will return the status line to the OVR indicator.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Data-Deletefunction"></a>
+<span class="rvts11">Data-Delete function</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This function will delete text in the same way that </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.delete">(Delete)</a><span class="rvts6"> does, except that the data being "pulled left" by the delete action is "delimited" by any span of two or more blank characters. Because of this, if you are deleting data that is formatted into columns, </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts6"> will not disturb the column alignment, as long as two or more blanks separate the columns.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Unlike the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.datainsert">(DataInsert)</a><span class="rvts6"> function, </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts6"> does not define or toggle a "mode" but merely deletes a character, as described below.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">A suggested mapping for this key is Ctrl-Delete or Shift-Ctrl-Delete.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Let's take the same data from above, inserting an additional line, and compare </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.delete">(Delete)</a><span class="rvts6"> and </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts6">. Assuming</span><span class="rvts35"> the following data lines:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">A,B &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">AA,BB &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">AAA,BBB &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000004</span><span class="rvts89"> </span><span class="rvts272">AAAA,BBBB CCC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose we want to delete the words A, AA, AAA and AAAA. Using regular </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.delete">(Delete)</a><span class="rvts35"> function, this would produce:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">B &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">BB &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">BBB &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000004</span><span class="rvts89"> </span><span class="rvts272">BBBB CCC</span></p>
+<p class="rvps9"><span class="rvts272"><br/></span></p>
+<p class="rvps9"><span class="rvts35">and the CCC column gets shifted over. Using the </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts35"> function produces:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts271">000001</span><span class="rvts89"> </span><span class="rvts272">B &nbsp; &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000002</span><span class="rvts89"> </span><span class="rvts272">BB &nbsp; &nbsp; &nbsp; &nbsp;CCC</span></p>
+<p class="rvps9"><span class="rvts271">000003</span><span class="rvts89"> </span><span class="rvts272">BBB &nbsp; &nbsp; &nbsp; CCC</span></p>
+<p class="rvps9"><span class="rvts271">000004</span><span class="rvts89"> </span><span class="rvts272">BBBB CCC</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note that the CCC column gets shifted over on line 4. That is because there was only one space between the original BBBB and the CCC, and so the string "BBBB CCC" is treated as a "single unit" of text, and is pulled to the left. On lines 1-3, the CCC string in each case was preceded by two or more spaces, and so it does not get pulled to the left on those lines.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="Data-BackspaceandData-Delete-Mark"></a>
+<span class="rvts11">Data-Backspace and Data-Delete-Mark</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Two new functions are available that involve data shifting. These are </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.DataBackSpace">(DataBackspace)</a><span class="rvts12"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.DataDeleteMark">(DataDeleteMark)</a><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.DataBackSpace">(DataBackspace)</a><span class="rvts12"> is essentially a cursor-left-one followed by a </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.DataDeleteMark">(DataDeleteMark)</a><span class="rvts12"> will delete highlighted (marked) text in the same way that </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.datadelete">(DataDelete)</a><span class="rvts12"> does, but if there is no text highlighted, the function does nothing.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps6" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

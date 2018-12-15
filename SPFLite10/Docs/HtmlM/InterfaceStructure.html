@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Interface Structure</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Interface Structure">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Interface Structure" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="InterfaceStructure"
+		  data-hnd-context="16"
+		  data-hnd-title="Interface Structure"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Interface Structure</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Interface Structure</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Passing-control-to-your-macro">Passing control to your macro</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Primary-mode-vs-Line-mode-macros">Primary mode vs. Line mode macros</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Passing-information-between-macros-and-SPFLite">Passing information between macros and SPFLite</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Identifying-and-referencing-lines">Identifying and referencing lines</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Understanding-Line-Pointers-and-Line-Numbers">Understanding Line Pointers and Line Numbers</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Line-Pointers-or-Line-Numbers-Which-is-Better">Line Pointers or Line Numbers: &nbsp;Which is Better?</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#The-SPF-CMD-function-and-Line-Numbers-vs-Line-Pointers">The SPF_CMD function and Line Numbers vs. Line Pointers</a></p>
+<p class="rvps4"><a class="rvts41" href="InterfaceStructure.html#Understanding-Source-and-Destination-Line-Ranges">Understanding Source and Destination Line Ranges</a></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><a name="Passing-control-to-your-macro"></a>
+<span class="rvts13">Passing control to your macro</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">SPFLite determines that a command </span><span class="rvts13">is</span><span class="rvts11"> a macro when a command name is not recognized as a built-in command, but a file having the name of macroname.MACRO is found the in the SPFLite macro directory. This design means that (unlike mainframe ISPF) it is not possible to replace a built-in primary command with a macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">It </span><span class="rvts13">is possible</span><span class="rvts11"> to make a macro used as a </span><span class="rvts13">primary</span><span class="rvts11"> command with the same name as built-in </span><span class="rvts13">line</span><span class="rvts11"> command. For example, a primary-command macro named CC.MACRO is valid. However, that could be confusing, and for most people, it will be best if you avoid </span><span class="rvts13">any</span><span class="rvts11"> built-in command names, whether line-mode or command mode. This is especially true in case you write a macro that could be used both as a primary-command macro or as a line-command macro.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When SPFLite detects a macro is being invoked, it triggers the </span><span class="rvts13">thinBasic</span><span class="rvts11"> interpreter and passes it two things: the source of your macro from the macroname.MACRO file and the list of available SPFLite interface functions being made available. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The number of available interface functions is extensive (approaching 100) but don't let this put you off. Just like SPFLite's extensive list of Primary commands, Line commands, and Keyboard primitives, nobody will ever need or use all of them. We're just trying to ensure that we provide as extensive an interface as possible. Nothing is worse than developing a macro and saying "Gee, if there was only a function that would ....". We don't want that to happen to you.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13">thinBasic</span><span class="rvts11"> parses and analyzes your source code and begins execution of the interpreted code. At this point, the macro source code has still been provided no information whatsoever about SPFLite, or the file being edited.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">All information passed between the macro and SPFLite is handled via those custom functions which SPFLite made available when invoking </span><span class="rvts13">thinBasic</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">If you're a compiler geek or something, what SPFLite does is "inject" the SPFLite interface functions into the </span><span class="rvts13">thinBasic</span><span class="rvts11"> namespace, so that you don't have to declare or "include" them. (If you're not a compiler geek, then it's magic - and don't nobody ask no more questions.)</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Primary-mode-vs-Line-mode-macros"></a>
+<span class="rvts13">Primary mode vs. Line mode macros</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">SPFLite allows you to write macros that can be used on the primary command line, or in the line command area. The macro has the same structure either way. You would have to determine how your macro is getting called, by making queries against some SPFLite built-in functions.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">NOTE: You cannot have an SPFLite interaction in which you have macros used as line commands, </span><span class="rvts13">and</span><span class="rvts11"> any command on the primary command line (whether built-in SPFLite primary command or a primary-command macro), at the same time. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When you use a macro as primary command, and you have any pending line commands at the same time, these would usually consist of an </span><span class="rvts13">A</span><span class="rvts11"> or </span><span class="rvts13">B</span><span class="rvts11"> and/or a </span><span class="rvts13">CC</span><span class="rvts11"> block, to define the source lines and optional destination line.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts22">When a macro is being used as a primary command</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><a class="rvts12" href="FunctionDetails.html#FN.Is_Primary_Cmd">Is_Primary_Cmd</a><span class="rvts11"> will return TRUE</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts12" href="FunctionDetails.html#FN.Is_Line_Cmd">Is_Line_Cmd</a><span class="rvts11"> will return FALSE</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Src1_LPtr">Get_Src1_LPTR</a><span class="rvts11"> and </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Src2_LPtr">Get_Src2_LPTR</a><span class="rvts11"> return non-zero values if you have a line range defined using a </span><span class="rvts13">CC</span><span class="rvts11"> or </span><span class="rvts13">MM</span><span class="rvts11"> block, otherwise these will return zero.</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Src_LCmd$">Get_Src_LCMD$</a><span class="rvts11"> will return a </span><span class="rvts13">C</span><span class="rvts11">/</span><span class="rvts13">CC</span><span class="rvts11"> or M/MM line command if present, otherwise an empty (null) string value</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest1_LPtr">Get_Dest1_LPTR</a><span class="rvts11">, </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest2_LPtr">GET_Dest2_LPTR</a><span class="rvts11"> and </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest_LCmd$">Get_Dest_LCMD$</a><span class="rvts11"> will be set to appropriate values if you have defined a destination line range using </span><span class="rvts13">A</span><span class="rvts11">, </span><span class="rvts13">AA</span><span class="rvts11">, </span><span class="rvts13">B</span><span class="rvts11">, </span><span class="rvts13">BB</span><span class="rvts11">, </span><span class="rvts13">H</span><span class="rvts11">, </span><span class="rvts13">HH</span><span class="rvts11">, </span><span class="rvts13">W</span><span class="rvts11">, </span><span class="rvts13">WW</span><span class="rvts11">, </span><span class="rvts13">O</span><span class="rvts11">, </span><span class="rvts13">OO</span><span class="rvts11">, </span><span class="rvts13">OR</span><span class="rvts11"> or </span><span class="rvts13">ORR</span><span class="rvts11"> line commands, otherwise these will be zero or null.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts22">When a macro is being used as a line command</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><a class="rvts12" href="FunctionDetails.html#FN.Is_Line_Cmd">Is_Line_Cmd</a><span class="rvts11"> will return TRUE</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts12" href="FunctionDetails.html#FN.Is_Primary_Cmd">Is_Primary_Cmd</a><span class="rvts11"> will return FALSE</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Src1_LPtr">Get_Src1_LPTR</a><span class="rvts11"> and </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Src2_LPtr">Get_Src2_LPTR</a><span class="rvts11"> will return non-zero values</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Src_LCmd$">Get_Src_LCMD$</a><span class="rvts11"> will return the contents of the line command used to invoke the macro. For example, a macro </span><span class="rvts13">AX</span><span class="rvts11"> is invoked in response to a line command of </span><span class="rvts13">AX </span><span class="rvts11">or </span><span class="rvts13">AXX</span><span class="rvts11">.</span></li>
+<li style="margin-left: 0px" class="rvps7"><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest1_LPtr">Get_Dest1_LPTR</a><span class="rvts11">, </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest2_LPtr">GET_Dest2_LPTR</a><span class="rvts11"> and </span><a class="rvts21" href="FunctionDetails.html#FN.Get_Dest_LCmd$">Get_Dest_LCMD$</a><span class="rvts11"> will be set to appropriate values if you have defined a destination line range using </span><span class="rvts13">A</span><span class="rvts11">, </span><span class="rvts13">AA</span><span class="rvts11">, </span><span class="rvts13">B</span><span class="rvts11">, </span><span class="rvts13">BB</span><span class="rvts11">, </span><span class="rvts13">H</span><span class="rvts11">, </span><span class="rvts13">HH</span><span class="rvts11">, W, </span><span class="rvts13">WW</span><span class="rvts11">, </span><span class="rvts13">O</span><span class="rvts11">, </span><span class="rvts13">OO</span><span class="rvts11">, </span><span class="rvts13">OR</span><span class="rvts11"> or </span><span class="rvts13">ORR</span><span class="rvts11"> line commands in addition to the macro defined source range, otherwise these will be zero or null.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The name of a line-command macro is the name you'd use for a single line. So,</span><span class="rvts13"> for example</span><span class="rvts11">, if you wanted to create a line command called </span><span class="rvts13">AX</span><span class="rvts11">, your macro would be called </span><span class="rvts13">AX.MACRO</span><span class="rvts11">. If you want to use this command as a block-mode line-command macro, you can do it any of the normal ways you'd expect with an SPFLite built-in line command:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Define the beginning and end of the block with </span><span class="rvts13">AXX</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Put </span><span class="rvts13">AX</span><span class="rvts11"> on a line, and follow it with an </span><span class="rvts13">n</span><span class="rvts11">, </span><span class="rvts13">/</span><span class="rvts11"> or </span><span class="rvts13">\</span><span class="rvts11"> modifier</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Create a </span><span class="rvts13">SET</span><span class="rvts11"> name of the form </span><span class="rvts13">SET MACROMODE.AX = BLOCK</span><span class="rvts11"> if you only want to use </span><span class="rvts13">AX</span><span class="rvts11"> as a block-mode command</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Passing-information-between-macros-and-SPFLite"></a>
+<span class="rvts13">Passing information between macros and SPFLite</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To accomplish its desired actions, your macro must use the provided SPFLite functions to both fetch and to store data back and forth between SPFLite's data areas and the macro's own variable areas.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are four main types of provided functions:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="138" style="padding: 1px;"><p class="rvps15"><span class="rvts18">Get_xxxx</span></p>
+</td>
+<td width="860" style="padding: 1px;"><p class="rvps2"><span class="rvts11">The </span><span class="rvts18">Get_xxxx</span><span class="rvts11"> function calls will return the value of the requested SPFLite data item to the macro. These </span><span class="rvts18">Get_xxxx</span><span class="rvts11"> function calls can effectively be used as if they are variables. </span><span class="rvts18">Get_xxxx</span><span class="rvts11"> functions ending in a $ sign (like </span><span class="rvts18">Get_RECFM$</span><span class="rvts11">) return character strings, those without a $ sign return numeric values. (This is a standard BASIC naming convention.)</span></p>
+<p class="rvps16"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="138" style="padding: 1px;"><p class="rvps15"><span class="rvts18">Set_xxxx</span></p>
+</td>
+<td width="860" style="padding: 1px;"><p class="rvps2"><span class="rvts11">The </span><span class="rvts18">Set_xxxx</span><span class="rvts11"> function calls are used to alter the value of a specified SPFLite data item using the provided macro value. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="138" style="padding: 1px;"><p class="rvps15"><span class="rvts18">Is_xxxx</span></p>
+</td>
+<td width="860" style="padding: 1px;"><p class="rvps2"><span class="rvts11">The </span><span class="rvts35">IS_xxxx</span><span class="rvts11"> function calls are used to test the basic characteristics of the environment, of data items, and to test the line type of a specified line within the Edit session. SPFLite provides access to all of the different line types (including "special" ones), not just text data lines. Access is provided to NOTE lines, MASK lines, etc. The </span><span class="rvts18">Is_xxxx</span><span class="rvts11"> function calls will return TRUE if the line </span><span class="rvts13">is</span><span class="rvts11"> the requested type, and FALSE if it is any other type. For example, &nbsp;to test if a specific line is a normal text data line you would code </span><span class="rvts18">IF Is_DATA(line-ptr) THEN ....</span><span class="rvts11"> </span></p>
+<p class="rvps16"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Because special lines are not data lines, they only can have a line pointer to them - but never a line number; whereas a data line can have both a line pointer and a line number.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="138" style="padding: 1px;"><p class="rvps15"><span class="rvts18">SPF_xxxx</span></p>
+</td>
+<td width="860" style="padding: 1px;"><p class="rvps2"><span class="rvts11">The </span><span class="rvts35">SPF_xxxx</span><span class="rvts11"> function calls are used to request specific SPFLite services of a more complex nature, or ones which cannot be strictly described as a GET or SET operation. </span><span class="rvts18">SPF_CMD</span><span class="rvts11"> for example is used to pass a primary command to SPFLite for execution. </span></p>
+<p class="rvps16"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps14"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps4"><span class="rvts11">Each of these function calls is described in the Function Overview and Function Details sections.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Identifying-and-referencing-lines"></a>
+<span class="rvts13">Identifying and referencing lines</span></p>
+<p class="rvps2"><span class="rvts23"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To inspect or modify the lines in an Edit file, you must be able to identify which line of the file you are referring to when using the supplied SPFLite interface functions. This seems simple enough - couldn't we just use the visible line number itself to reference a line? &nbsp;</span><span class="rvts13">No.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">We need to be able to access all the different line types within an edit session, not just the text data lines. An edit session may have "special" lines such as </span><span class="rvts13">NOTE</span><span class="rvts11">, </span><span class="rvts13">BNDS</span><span class="rvts11">, </span><span class="rvts13">COLS</span><span class="rvts11">, </span><span class="rvts13">TABS</span><span class="rvts11">, etc. that we might want access, and these lines don't have line numbers.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The solution is to use something called a </span><span class="rvts13">line pointer </span><span class="rvts11">as the key to accessing the data. As long as you keep in mind that a line pointer can sometimes point to non-text lines, most of the time you can think of it </span><span class="rvts13">as</span><span class="rvts11"> a line number. To simplify things, most (but not all) of the custom interface functions work with line pointer parameters. We have been careful with naming conventions so you'll know what functions take what kind of arguments, and there are ways of converting between line numbers and line pointers.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The difference between a line </span><span class="rvts13">number</span><span class="rvts11"> and a line </span><span class="rvts13">pointer</span><span class="rvts11"> becomes an issue when calling the SPF_CMD function, and when interfacing with the external user (yourself) since the user never sees and is not aware of the line pointer values. So, line number values are provided by the user, and you may want to pass back line number values to the user, for example, in messages. To do this, you will need the conversion functions.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Conversion between a line </span><span class="rvts13">number</span><span class="rvts11"> and a line </span><span class="rvts13">pointer</span><span class="rvts11"> is a simple process. There are two companion functions whose sole purpose is to convert line pointers to line numbers, and line numbers to line pointers. A side benefit of the line number to line pointer conversion function is that it incorporates automatic support for line labels as well as line numbers. In that sense, it doesn't just accept </span><span class="rvts13">line</span><span class="rvts11"> </span><span class="rvts13">numbers</span><span class="rvts11"> but more generic </span><span class="rvts13">line references</span><span class="rvts11">, of which line numbers are one type.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The two conversion functions are </span><a class="rvts36" href="FunctionDetails.html#FN.Get_LNum">Get_LNum</a><span class="rvts11"> and </span><a class="rvts36" href="FunctionDetails.html#Fn.Get_LPtr">Get_LPtr.</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">But the most powerful reason for using line </span><span class="rvts13">pointers</span><span class="rvts11"> over line </span><span class="rvts13">numbers</span><span class="rvts11"> is that line </span><span class="rvts13">pointers</span><span class="rvts11"> are amenable to being adjusted arithmetically while line </span><span class="rvts13">numbers</span><span class="rvts11"> are not. Why so?</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Line numbers, especially if using the Quick Renum option, are not guaranteed to be consecutive. Line-Number + 1 simply cannot be guaranteed to point at the next line number. (e.g. lines may be numbered in increments of 10, or 5, or 1; there is no way of knowing)</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Line pointers however, will always point at a valid line of some type. (lets ignore the Top and Bottom boundary conditions for now). So you can always do a line-pointer + 1 calculation and you will always end up with a valid line pointer. This is the main reason that the macro interface functions are set up to use line </span><span class="rvts13">pointers</span><span class="rvts11"> almost exclusively. It's just easier in nearly all respects.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Understanding-Line-Pointers-and-Line-Numbers"></a>
+<span class="rvts13">Understanding Line Pointers and Line Numbers</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A line </span><span class="rvts13">number</span><span class="rvts11"> is the numeric value of the sequence number you see displayed on a data line. So, if you see a data line with a sequence number </span><span class="rvts13">000123</span><span class="rvts11"> then the line number is </span><span class="rvts13">123</span><span class="rvts11">. A valid line number will never be zero.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A line </span><span class="rvts13">pointer</span><span class="rvts11"> may be thought of as a numeric index to every visible line (special or ordinary) of the entire edit file, starting with 1 for the Top of Data line, and incremented by 1 for each subsequent line (special or ordinary) until the Bottom of Data line is reached.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">That is an important fact to remember: &nbsp;The Top of Data line will always have the known Line Pointer value of 1. You can use that fact when you are scanning the lines in your file, and you need a Line Pointer value as a starting point.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This means that you can scan a range of lines (special or ordinary) using a FOR/NEXT loop, checking the "type" of each line with an </span><span class="rvts13">Is_xxxx</span><span class="rvts11"> function, incrementing the line pointer by 1 each time, and taking appropriate action as needed. The most common such test will be checking for </span><span class="rvts13">Is_Data</span><span class="rvts11">, passing the function a line pointer argument.</span></p>
+<p class="rvps4"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11">Like line numbers, valid line pointers will never be zero. However, whatever </span><span class="rvts13">other</span><span class="rvts11"> values might be taken on by a line pointer, you should always let SPFLite inform you, and </span><span class="rvts13">not</span><span class="rvts11"> make assumptions about the value you may get. Future releases of SPFLite could change those assumptions, and if you were relying on a particular implementation, your macro might not work right in a future release. Don't try to be too 'tricky' with line pointers; just use them as the documentation and examples show you.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">What a line pointer definitely is </span><span class="rvts13">not</span><span class="rvts11"> is a true memory pointer to some dynamically-allocated storage area within </span><span class="rvts13">thinBasic</span><span class="rvts11">. Don't even </span><span class="rvts13">think</span><span class="rvts11"> of trying to use it that way.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When you have the Fast Renumber General option (within SPFLite Global Options) enabled, it may affect how the conversion functions handle converting a line pointer to a line number. Again, use the functions for what they are, and don't try to be too tricky with them or make assumptions about what the value is going to be.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="The-SPF-CMD-function-and-Line-Numbers-vs-Line-Pointers"></a>
+<span class="rvts13">The SPF_CMD function and Line Numbers vs. Line Pointers</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The SPF_CMD function is used to issue SPFLite primary commands. The command string you pass to the function looks just like one you would type in yourself on the primary command line. There are a few minor differences:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">SPF_CMD only takes one command. You cannot use a command separator character (like a </span><span class="rvts13">;</span><span class="rvts11"> semicolon) to perform multiple commands.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The special ! notation that erases the primary command area prior to executing the command is not supported. That feature is primarily in place to assist key-mapped commands to function properly in case there were any "left over" commands or operands in the primary command area, an issue that doesn't apply to a macro.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Presently, you cannot issue a macro call from a macro. So, in </span><span class="rvts13">AX.MACRO</span><span class="rvts11">, you cannot issue a call to</span><span class="rvts13"> SPF_CMD("BX") </span><span class="rvts11">for instance.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When you create a command string for SPF_CMD using string constants and expressions, and the command contains a line reference, you must determine if the reference is a line </span><span class="rvts13">number</span><span class="rvts11"> or a line </span><span class="rvts13">pointer</span><span class="rvts11">. Most macros will use line </span><span class="rvts13">pointers</span><span class="rvts11"> almost exclusively.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you have a Line Number value, you create the command string so that it appears the same as you would type it in on the primary command line. Recall that SPFLite allows what are called "temporary line labels" or "line number pseudo-labels", which are line numbers with a preceding dot.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For example, if you wanted to change ABCD to WXYZ on line 4 of the edit file, you could issue</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY .4 ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">However, if you have a Line Pointer value, you can't (directly) use such notation. For example, the line with ABCD might have a line </span><span class="rvts13">number</span><span class="rvts11"> of 4, but a line </span><span class="rvts13">pointer</span><span class="rvts11"> of 7. You may have gotten this value of 7 from a function call like GET_FIND_LPTR. Now, if you created a command like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY ." + TSTR$(GET_FIND_LPTR) + " ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">it would evaluate to this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY .7 ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">but </span><span class="rvts13">that won't work</span><span class="rvts11">, because it's referring to the wrong line. Since most SPFLite macro interface functions that deal with lines use line </span><span class="rvts13">pointers</span><span class="rvts11">, somehow we have to make SPF_CMD understand what we mean.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There's two ways to do this. First, you can use the conversion function GET_LNUM. In our example, that would convert the 7 into a 4:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY ." + TSTR$(GET_LNUM (GET_FIND_LPTR)) + " ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Second, SPF_CMD allows an alternative notation. If you use an </span><span class="rvts13">!</span><span class="rvts11"> exclamation point </span><span class="rvts13">instead of a dot</span><span class="rvts11">, SPF_CMD will understand the value to be for a line </span><span class="rvts13">pointer</span><span class="rvts11"> rather than a line </span><span class="rvts13">number</span><span class="rvts11">. When you do this, SPF_CMD will internally convert the line pointer for you into a line number.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">In our example, you would do this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY !" + TSTR$(GET_FIND_LPTR) + " ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">and it would evaluate to this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_CMD ("C ABCD WXZY !7 ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The SPF_CMD function would then see the exclamation point, take the number 7, internally call GET_LNUM itself to obtain the line number 4, and finally treat the command as if you issued:</span></p>
+<p class="rvps4"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">SPF_CMD ("C ABCD WXZY .4 ALL")</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Some points to keep in mind if you use the exclamation point notation:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">This notation </span><span class="rvts13">only</span><span class="rvts11"> works for the </span><span class="rvts13">SPF_CMD</span><span class="rvts11"> function, and no where else.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">This notation only applies to macros. You cannot issue this syntax on the regular primary command line.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The exclamation point must be preceded by a blank, and the number after it must be followed by a blank or the end of the string</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Exclamation points are only recognized if not in SPFLite quotes.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">So, a function call of </span><span class="rvts18">SPF_CMD ("C ABCD '!7' ALL")</span><span class="rvts11"> would have nothing to do with this notation; the </span><span class="rvts18">!7</span><span class="rvts11"> is just an ordinary string.</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><a name="Line-Pointers-or-Line-Numbers-Which-is-Better"></a>
+<span class="rvts13">Line Pointers or Line Numbers: &nbsp;Which is Better?</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Since there are two possible ways to refer to a line, which way is "better" ? &nbsp;To (probably) no one's surprise, the answer is, "it depends".</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A more appropriate question is, better for </span><span class="rvts13">what</span><span class="rvts11">? &nbsp;It depends on what you're doing in your macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">This question is similar to asking which is better, Celsius or Fahrenheit? &nbsp;It depends where you live. (Since George lives in Canada, and I live in the States, we each have our own preferences. Basically, whether it's 100 C or 212 F, you know you're in hot water ! - RH)</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are several factors to consider when making this decision:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The SPFLite macro interface functions take line </span><span class="rvts13">pointers</span><span class="rvts11">. So, this is the form you will use most often, and if line pointers are what you have, this will be the most efficient method. For the most common cases, you will get a line number (or label) as a macro argument, convert it to a line pointer using Get_LPTR, and use that value from then on.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The SPF_CMD function will accept either notation (as discussed above).</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">If you have one form, but need another, you can call a conversion function to get the desired value.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Line pointers may be somewhat transient, depending on what you're doing. For example, suppose you have several non-data lines in your file. These could be =PROF&gt; lines, =NOTE&gt; lines, =TABS&gt; lines, etc. You may also have excluded-line placeholders present. If you obtain a line </span><span class="rvts13">pointer</span><span class="rvts11">, and then these special lines disappear as a result of issuing a RESET command or by direct deletion, the line pointer may no longer be valid. A line </span><span class="rvts13">number</span><span class="rvts11"> will remain valid across a RESET command.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">It is important to understand that when a line </span><span class="rvts13">pointer</span><span class="rvts11"> becomes "invalid" it does </span><span class="rvts13">not</span><span class="rvts11"> mean you can't use it. For example, a line pointer might contain 5, meaning it's the fifth line from the beginning, counting the Top of Data as line-pointer line 1, but it would be the fourth data line. Now, if you inserted a =NOTE&gt; or =TABS&gt; line somewhere between the Top of Data and data line 4, or removed one already there, a line pointer of 5 won't point to data line number 4 any more. </span><span class="rvts13">But</span><span class="rvts11"> </span><span class="rvts13">that's won't stop you from using it. </span><span class="rvts11">You can still pass a value of 5 to any of the macro interface functions that take line pointer arguments - the function won't stop you or claim the number 5 was "invalid". However, if you do that, the 5 wouldn't refer to data line 4 any more, but to some </span><span class="rvts13">other</span><span class="rvts11"> line. That would almost certainly </span><span class="rvts13">not</span><span class="rvts11"> be what you wanted.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The point is, line pointers and line numbers </span><span class="rvts13">both</span><span class="rvts11"> have their place. You need to know what you're doing, and use them for what they are good for. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For line pointers, you must understand the rules that affect the validity of a line pointer reference, and stay within those rules. The main rule is that you must not "rock the boat" by doing anything that will change the relative line-pointer positions of data lines. Things that cause that are inserting and deleting (other) data lines, inserting or deleting special lines, and excluding or unexcluding lines. Special and excluded lines are affected by the </span><span class="rvts13">RESET</span><span class="rvts11"> command. Provided you don't do anything to invalidate a pointer, you can continue to use it without problems. (They are not "fragile" and won't "break" by themselves.)</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you are forced to "rock the boat" so to speak, then you may have to recalculate new line pointers. Suppose you needed to do a </span><span class="rvts13">RESET</span><span class="rvts11"> command that would impact the line pointer to a data line. You could "save" the pointer by (a) converting it to a line number, (b) issuing the </span><span class="rvts13">RESET</span><span class="rvts11"> command, and finally (c) converting the line number back to a line pointer. You could also put a label on the line, and retrieve the label's line pointer later on.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As long as you keep these rules in mind and live within them, everything will work just fine.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Understanding-Source-and-Destination-Line-Ranges"></a>
+<span class="rvts13">Understanding Source and Destination Line Ranges</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A macro will often need to refer to a line range. The way in which a macro obtains line-range information depends on whether is was launched as a line-command macro or as a primary-command macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Primary command macros may include line-range information as operands, such as line labels (including pseudo-label line numbers) and line tags. However, SPFLite will </span><span class="rvts13">not</span><span class="rvts11"> interpret such operands. It merely passes them along to the macro, which must retrieve them with the Get_Arg$ function and then interpret them as it sees fit. For line label operands, you would use the Get_LPTR function to convert them to a Line Pointer value, which is what most line-referencing macros use.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This means that if you create a macro called </span><span class="rvts13">ABC.MACRO</span><span class="rvts11">, you </span><span class="rvts13">can</span><span class="rvts11"> issue a primary macro command like </span><span class="rvts13">ABC .AA .BB</span><span class="rvts11">, but </span><span class="rvts13">you</span><span class="rvts11"> would have to write </span><span class="rvts13">thinBasic</span><span class="rvts11"> code to interpret arguments 1 and 2 so that you could utilize the provided labels.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This may seem like an inconvenience (and to a certain extent, it is) but this design allows you complete control over how you would use these labels. For example, you might wish to write a macro that took 3 or even 4 labels. Standard SPFLite primary command processing would treat that as a syntax error, but your macro code could do something to address your unique requirements. If SPFLite recognized a standard line-range operand on macros (and nothing else), it would simplify some tasks, but would hold you back from doing other things. For now, the design seems like a good compromise.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">While you don't have direct support for line labels on primary macro commands, you </span><span class="rvts13">do</span><span class="rvts11"> have the ability to query other line commands that may be pending when the macro is launched. These are </span><span class="rvts13">source line ranges</span><span class="rvts11"> and </span><span class="rvts13">destination line ranges</span><span class="rvts11">. Specifying source and destination line ranges is optional when launching a macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Technically, a line-command macro always defines its own source line range by its very presence in the line command area, so when you use a line-command macro, you always have an implicit source line range; it isn't optional.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For a primary-command macro, a </span><span class="rvts13">source</span><span class="rvts11"> line range can be a </span><span class="rvts13">CC</span><span class="rvts11"> or </span><span class="rvts13">MM</span><span class="rvts11"> block. Such blocks can be single lines, a range of lines defined by a C or M followed by </span><span class="rvts13">n</span><span class="rvts11"> or a </span><span class="rvts13">/</span><span class="rvts11"> or </span><span class="rvts13">\</span><span class="rvts11"> modifier, or a pair of </span><span class="rvts13">CC</span><span class="rvts11"> or </span><span class="rvts13">MM</span><span class="rvts11"> commands to define a block.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For a line-command macro, the macro name itself appears on one or two data lines to define the </span><span class="rvts13">source</span><span class="rvts11"> block. As discussed elsewhere, SPFLite automatically detects the single-line form vs. the block-mode form of a line command. For example, if you write a macro called AX, then you could do any of the following to define a source block:</span><span class="rvts13"> AX</span><span class="rvts11">, </span><span class="rvts13">AX</span><span class="rvts37">n</span><span class="rvts11">, </span><span class="rvts13">AX/</span><span class="rvts11">, </span><span class="rvts13">AX\</span><span class="rvts11">, </span><span class="rvts13">AXX</span><span class="rvts11"> or </span><span class="rvts13">AXAX</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For both primary-command and line-command macros, you can specify a </span><span class="rvts13">destination line range</span><span class="rvts11"> using any of the following line commands:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps8"><span class="rvts11">A, </span><span class="rvts13">AA</span><span class="rvts11">, B, </span><span class="rvts13">BB</span><span class="rvts11">, </span><span class="rvts13">H</span><span class="rvts11">, </span><span class="rvts13">HH</span><span class="rvts11">, </span><span class="rvts13">W</span><span class="rvts11">, </span><span class="rvts13">WW</span><span class="rvts11">, </span><span class="rvts13">O</span><span class="rvts11">, </span><span class="rvts13">OO</span><span class="rvts11">, </span><span class="rvts13">OR</span><span class="rvts11"> and </span><span class="rvts13">ORR</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The non-block forms </span><span class="rvts13">A</span><span class="rvts11">, </span><span class="rvts13">B</span><span class="rvts11">, </span><span class="rvts13">H</span><span class="rvts11">, </span><span class="rvts13">W</span><span class="rvts11">, </span><span class="rvts13">O</span><span class="rvts11"> and </span><span class="rvts13">OR</span><span class="rvts11"> can take the usual </span><span class="rvts13">n</span><span class="rvts11">, </span><span class="rvts13">/</span><span class="rvts11"> and </span><span class="rvts13">\</span><span class="rvts11"> modifiers. You can also specify a trailing </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> modifier.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13">SPFLite does not act upon source or destination line command operands when used by a macro.</span><span class="rvts11"> &nbsp;That means that </span><span class="rvts13">CC</span><span class="rvts11"> will </span><span class="rvts13">not</span><span class="rvts11"> copy lines, MM will </span><span class="rvts13">not</span><span class="rvts11"> move lines, </span><span class="rvts13">OO</span><span class="rvts11"> will </span><span class="rvts13">not</span><span class="rvts11"> overlay lines, </span><span class="rvts13">AA</span><span class="rvts11"> will </span><span class="rvts13">not</span><span class="rvts11"> intersperse copied data every few lines, HH will </span><span class="rvts13">not</span><span class="rvts11"> replace lines, and so on.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">But if that's true, what </span><span class="rvts13">does</span><span class="rvts11"> it do? &nbsp;What </span><span class="rvts13">good</span><span class="rvts11"> is it to use any of these things? &nbsp;These source and destination line ranges pass along information to the macro, which you can query and act on yourself. </span><span class="rvts13">You</span><span class="rvts11"> can decide which of any of these line commands you want to recognize in your macro, and decide what they will do if used. What SPFLite does is (a) ensures that only these line commands can coexist with your macro's execution, and no other ones, (b) makes sure that they are in the proper format, and properly matched if used in pairs, and (c) will extract any addition information like </span><span class="rvts13">n</span><span class="rvts11"> values and </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> and K modifiers that may be present, so you can look at them and act accordingly.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For the source line range, you have the following functions available:</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="90%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Src_LCmd$">Get_Src_LCmd$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get a string containing the name of the source line command. For line-command macros, this is the macro name (possibly a plural/block form) of the macro name. For primary-command macros, this may be a </span><span class="rvts13">C</span><span class="rvts11">/</span><span class="rvts13">CC</span><span class="rvts11"> or </span><span class="rvts13">M</span><span class="rvts11">/</span><span class="rvts13">MM</span><span class="rvts11"> command, or may be an empty (null) string if no </span><span class="rvts13">C</span><span class="rvts11">/</span><span class="rvts13">CC</span><span class="rvts11">/</span><span class="rvts13">M</span><span class="rvts11">/</span><span class="rvts13">MM</span><span class="rvts11"> was used with a primary-command macro.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" height="38" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Src1_LPtr">Get_Src1_Lptr</a></p>
+</td>
+<td width="1%" height="38" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get the line pointer of the first (or only) line in the source line range, or 0 if not applicable.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Src2_LPtr">Get_Src2_Lptr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get the line pointer of the last (or only) line in the source line range, or 0 if not applicable.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Src_Op">Get_Src_Op</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get optional </span><span class="rvts13">n</span><span class="rvts11"> value on the source line range. For example, if you have a source line range of </span><span class="rvts13">C5</span><span class="rvts11">, </span><span class="rvts13">Get_Src_Op</span><span class="rvts11"> will return the number </span><span class="rvts13">5</span><span class="rvts11">. The function returns 0 when no explicit command operand number is specified. For instance, if you define a source block such as </span><span class="rvts13">CC</span><span class="rvts11"> which happens to be 5 lines long, the function will still return 0, because the number 5 was not actually specified on the CC block.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Src_LMOD$">Get_Src_LMOD$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Gets the </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> (post-unexclude or post-exclude) modifier and </span><span class="rvts13">&amp;</span><span class="rvts11"> (Retain) modifier if one is present on the source line range. The returned value is always two characters long. Position 1 will contain </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> or blank, and position 2 will contain a </span><span class="rvts13">R</span><span class="rvts11"> or blank. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts13">/</span><span class="rvts11"> and </span><span class="rvts13">\</span><span class="rvts11"> line command modifiers are processed, if present, and this gets reflected in first and last LPTR values for the line range, but the &nbsp;</span><span class="rvts13">/</span><span class="rvts11"> and </span><span class="rvts13">\</span><span class="rvts11"> codes themselves are not returned as LMOD values.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For the destination line range, you have the following functions available:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps17"><table width="90%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Dest_LCmd$">Get_Dest_LCmd$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get a string containing the name of the destination line command. This may be an </span><span class="rvts13">A</span><span class="rvts11">/</span><span class="rvts13">AA</span><span class="rvts11">, </span><span class="rvts13">B</span><span class="rvts11">/</span><span class="rvts13">BB</span><span class="rvts11">, </span><span class="rvts13">H</span><span class="rvts11">/</span><span class="rvts13">HH</span><span class="rvts11">, </span><span class="rvts13">W</span><span class="rvts11">/</span><span class="rvts13">WW</span><span class="rvts11">, </span><span class="rvts13">O</span><span class="rvts11">/</span><span class="rvts13">OO</span><span class="rvts11">, or </span><span class="rvts13">OR</span><span class="rvts11">/</span><span class="rvts13">ORR</span><span class="rvts11"> command, or may be an empty (null) string if no </span><span class="rvts11">destination line range</span><span class="rvts11"> was specified.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" height="38" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Dest1_LPtr">Get_Dest1_Lptr</a></p>
+</td>
+<td width="1%" height="38" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get the line pointer of the first (or only) line in the </span><span class="rvts11">destination</span><span class="rvts11"> line range, or 0 if not applicable.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts38" href="FunctionDetails.html#FN.Get_Dest2_LPtr">Get_Dest2_Lptr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get the line pointer of the last (or only) line in the </span><span class="rvts11">destination</span><span class="rvts11"> line range, or 0 if not applicable.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts39" href="FunctionDetails.html#FN.Get_Dest_Op">Get_</a><a class="rvts38" href="FunctionDetails.html#FN.Get_Dest_Op">Dest</a><a class="rvts39" href="FunctionDetails.html#FN.Get_Dest_Op">_Op</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Get optional </span><span class="rvts13">n</span><span class="rvts11"> value on the destination line range. For example, if you have a destination line range of </span><span class="rvts13">H5</span><span class="rvts11">, </span><span class="rvts13">Get_Dest_Op</span><span class="rvts11"> will return the number </span><span class="rvts13">5</span><span class="rvts11">. The function returns 0 when no explicit command operand number is specified. For instance, if you define a destination block such as </span><span class="rvts13">HH</span><span class="rvts11"> which happens to be 5 lines long, the function will still return 0, because the number 5 was not actually specified on the </span><span class="rvts13">HH</span><span class="rvts11"> block.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33%" style="padding: 1px;"><p class="rvps18"><a class="rvts39" href="FunctionDetails.html#FN.Get_Dest_LMOD$">Get_</a><a class="rvts38" href="FunctionDetails.html#FN.Get_Dest_LMOD$">Dest</a><a class="rvts39" href="FunctionDetails.html#FN.Get_Dest_LMOD$">_LMOD$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Gets the </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> (post-unexclude or post-exclude) modifier and </span><span class="rvts13">&amp;</span><span class="rvts11"> (Retain) modifier if one is present on the destination line range. The returned value is always two characters long. Position 1 will contain </span><span class="rvts18">+</span><span class="rvts11"> or </span><span class="rvts18">-</span><span class="rvts11"> or blank, and position 2 will contain a </span><span class="rvts13">R</span><span class="rvts11"> or blank. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The </span><span class="rvts13">/</span><span class="rvts11"> and </span><span class="rvts13">\</span><span class="rvts11"> line command modifiers are processed, if present, and this gets reflected in first and last LPTR values for the line range, but the &nbsp;</span><span class="rvts13">/</span><span class="rvts11"> and </span><span class="rvts13">\</span><span class="rvts11"> codes themselves are not returned as LMOD values.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps17"><span class="rvts11"><br/></span></p>
+<p class="rvps17"><span class="rvts11">Note that when you use line macros in block form, or use destinations such as OR, you can define a 'block' by repeating the last character. (This is the same rule that ISPF uses, and we follow the ISPF rules on this.) &nbsp;So, the block form of a macro </span><span class="rvts13">AX</span><span class="rvts11"> is </span><span class="rvts13">AXX</span><span class="rvts11">. When you ask for the line command name of the source or destination using Get_Src_LCmd$ or Get_Dest_Lcmd$, you get the actual command used, which in this case is </span><span class="rvts13">AXX</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

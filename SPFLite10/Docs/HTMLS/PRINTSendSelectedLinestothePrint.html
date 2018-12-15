@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>PRINT - Send Selected Lines to the Printer</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PRINT - Send Selected Lines to the Printer">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="PRINT - Send Selected Lines to the Printer" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="PRINTSendSelectedLinestothePrint"
+		  data-hnd-context="124"
+		  data-hnd-title="PRINT - Send Selected Lines to the Printer"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>PRINT - Send Selected Lines to the Printer</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts107">Syntax</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="217" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts89">PRINT</span></p>
+</td>
+<td width="750" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">[ SETUP &nbsp; |</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;line-control-range </span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;[ NUM | NONUM ]</span></p>
+<p class="rvps2"><span class="rvts89">]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<p class="rvps2"><span class="rvts107">Operands</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="222" style="padding: 1px;"><p class="rvps9"><span class="rvts353">SETUP</span></p>
+</td>
+<td width="751" style="padding: 1px;"><p class="rvps2"><span class="rvts105">If </span><span class="rvts107">SETUP</span><span class="rvts105"> is specified, it should be the only operand. It requests SPFLite to display a printer selection dialog to allow selection of your desired SPFLite default printer and printer font.</span></p>
+<p class="rvps243"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="222" style="padding: 1px;"><p class="rvps9"><span class="rvts139">line-control-range</span></p>
+</td>
+<td width="751" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps243"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="222" style="padding: 1px;"><p class="rvps9"><span class="rvts139">X | NX</span></p>
+</td>
+<td width="751" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be examined, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be examined. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps243"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="222" style="padding: 1px;"><p class="rvps9"><span class="rvts139">U | NU</span></p>
+</td>
+<td width="751" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="222" style="padding: 1px;"><p class="rvps9"><span class="rvts139">NUM | NONUM</span></p>
+</td>
+<td width="751" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, the print output will </span><span class="rvts11">not</span><span class="rvts12"> contain the line numbers on the left. Specifying </span><span class="rvts11">NUM</span><span class="rvts12"> will cause these line numbers to be printed.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<p class="rvps2"><span class="rvts107">Description</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<p class="rvps9"><span class="rvts11">PRINT</span><span class="rvts12"> directs a hard copy listing of the file being edited to your chosen default printer using the formatting parameters you specified during </span><span class="rvts11">PRINT</span><span class="rvts12"> </span><span class="rvts11">SETUP</span><span class="rvts12"> processing. You must specify a line range, either via command line operands (the line-control-range) or via line commands. See </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12"> for full details of the selection options available.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The listing is formatted without the line numbers of the file in the Left margin. If desired the keyword </span><span class="rvts11">NUM</span><span class="rvts12"> may be entered to request the line numbers on the listing.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The PRINT SETUP dialog</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you issue the </span><span class="rvts36">PRINT SETUP</span><span class="rvts35"> command, the following dialog will appear:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Print Setup 01.jpg"></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Printer Selection</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The upper left portion shows the currently assigned printer and the chosen paper and orientation settings. If you wish to alter these settings, click the Choose Printer button and you will proceed to a standard Windows Printer selection dialog. Choose the printer and paper choices you desire and close the Printer selection dialog.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Font Selection</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The upper right portion shows the currently assigned Font selection along with the Font pitch and Bold setting. If you wish to alter these settings, click the Choose Font button and you will proceed to a standard Windows Font selection dialog. Choose the font, pitch and bold choices you desire and close the Font selection dialog.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts12">If you want to print in a font that matches the supplied </span><span class="rvts11">RASTER</span><span class="rvts12"> screen font, you can use </span><span class="rvts11">RasterTTF. RasterTTF</span><span class="rvts12"> is the Raster font converted to TrueType format. </span><span class="rvts11">RasterTTF</span><span class="rvts12"> has the same character set as Raster, but is intended primarily for printing files.</span><span class="rvts11"> RasterTTF</span><span class="rvts12"> has the advantage of being scalable, while Raster and Raster14 are crisper fonts for the screen. To print a mainframe-style "listing" file as 66 lines x 132 columns, you can use RasterTTF 11 Pitch, 0.5 top margin, 0.4 bottom margin, in landscape mode; there will still be room for a header and footer on the page.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Page Settings</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The middle section shows the current page settings. Your first choice here is to decide between measurements in Metric or English. Check the box labeled “Use Metric (mm) instead of inches?” if you wish to use Millimeters; otherwise leave unchecked to use inches.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Next, set the desired margin values into the 4 margin boxes.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Also located in this section are the options for Background banding. Two types of banding are available</span></p>
+<p class="rvps10"><span class="rvts36">Print Band Stripes</span><span class="rvts35"> &nbsp;This option, if activated, imitates the old striped continuous form paper commonly used for line printers. The alternating horizontal stripes can assist greatly when reading source listings and reports.</span></p>
+<p class="rvps10"><span class="rvts36">Print Band Lines</span><span class="rvts35"> This option simply draws a horizontal line across the page every three lines.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Print Band Stripe/Line Color</span><span class="rvts35"> This box allows you to select the color to use for the Band Stripe/Line. Choose something which is not too bold and obtrusive, but which still benefits the output. You may have to experiment with your printer. When using Band Stripes, some printers (particularly laser printers) do not handle shaded areas well.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Print in color? &nbsp;</span><span class="rvts35">If selected, and the file being edited has </span><span class="rvts36">HILITE AUTO ON </span><span class="rvts83">and</span><span class="rvts35"> has a valid </span><span class="rvts36">.AUTO</span><span class="rvts35"> file, then the output sent to the printer will be done in the same colors as screen colorization. Otherwise, the output will be in normal uncolored text.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Page Headers and Footers</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The bottom portion shows the page header and footer choices. Again, your first choice here is whether you want either of these to appear. There are two check boxes; one for Headers, one for footers. If you do not want either of these just clear their associated check box.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you choose either or both of the header/footers to appear, then the left-hand header, center header and right-hand header fields come into play. (Same for the footer fields.)</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Left-Hand Header/Footer</span></p>
+<p class="rvps9"><span class="rvts35">The data in this field will be left-justified in the Header/Footer line.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Center Header/Footer</span></p>
+<p class="rvps9"><span class="rvts35">The data in this field will be centered in the Header/Footer line.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Right-Hand Header/Footer</span></p>
+<p class="rvps9"><span class="rvts35">The data in this field will be right-justified in the Header/Footer line.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">All of these fields are optional, and can be used in any combination. Note that if you enter very long strings and the page width is insufficient to 'fit' the three fields in the line, there will be some unpredictable overlaying of fields. Be aware of the sizes of these fields, particularly when using substitution variables for filenames, as these can be quite long.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts290">Specifying the contents of headers and footers</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Headers and footers can hold any desired text. Normal text placed here is left unmodified and is used as-is. However, the flexibility available comes into play when you use one or more of the many variables available which are dynamically substituted at print time to contain the current date, time, filename etc.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The following variables are available for use. Note that variables indicated by a leading ~ tilde are substituted as-is with alphabetic characters unmodified, while those indicated by a leading ^ caret are substituted with alphabetic characters set to upper case.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<div class="rvps9"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="184" height="38" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~# or ^#</span></p>
+</td>
+<td width="479" height="38" valign="top" style="padding: 0px;"><p class="rvps24"><span class="rvts35">The current printed page number.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="37" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~d or ^d</span></p>
+</td>
+<td width="479" height="37" valign="top" style="padding: 0px;"><p class="rvps24"><span class="rvts35">The current file date as yyyy-mm-dd.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="54" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~f or ^f</span></p>
+</td>
+<td width="479" height="54" valign="top" style="padding: 0px;"><p class="rvps24"><span class="rvts35">The current base filename. For C:\MYDATA.TXT it would be MYDATA</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="36" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~n or ^n</span></p>
+</td>
+<td width="479" height="36" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts35">The current full filename including path.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="36" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~p or ^p</span></p>
+</td>
+<td width="479" height="36" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts35">The current file path.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="20" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~t or ^t</span></p>
+</td>
+<td width="479" height="20" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts35">The current file time as hh:mm:ss.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="19" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~x or ^x</span></p>
+</td>
+<td width="479" height="19" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts35">The current file extension. For MYDATA.TXT it would be TXT</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="184" height="58" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts89">~k(keyname) &nbsp; &nbsp; &nbsp;</span><span class="rvts137">or</span></p>
+<p class="rvps9"><span class="rvts89">^k(keyname)</span></p>
+</td>
+<td width="479" height="58" valign="top" style="padding: 0px;"><p class="rvps9"><span class="rvts35">The text returned from a keyboard definition where 'keyname' is the key name or keyboard primitive. This uses the new ~K() macro ability see the full description of these at “Working with ---”</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you have completed your setup, click on the Done button. Your print settings will be saved and used for all subsequent PRINT functions.</span></p>
+<p class="rvps2"><span class="rvts89"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Example</span></p>
+<p class="rvps2"><span class="rvts311"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you look back at the sample image above showing the </span><span class="rvts36">PRINT SETUP </span><span class="rvts35">dialog, the page headers and footers created when printing the file</span><span class="rvts36"> </span><span class="rvts89">C:\Data Dir\Source.ASM</span><span class="rvts36"> </span><span class="rvts35">using those parameters would appear as:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts88">----+----10---+----20---+----30---+----40---+----50---+----60---+----70</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts88">Header&gt; &nbsp;Source.ASM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SPFLite &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Page: 1</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts88">000001 Source lines</span></p>
+<p class="rvps9"><span class="rvts88">000002 Source lines</span></p>
+<p class="rvps9"><span class="rvts88">000003 Source lines</span></p>
+<p class="rvps9"><span class="rvts88">.</span></p>
+<p class="rvps9"><span class="rvts88">.</span></p>
+<p class="rvps9"><span class="rvts88">.</span></p>
+<p class="rvps9"><span class="rvts88">Footer&gt; &nbsp;File Date: 2012-01-13 09:10:34 &nbsp; &nbsp; &nbsp; &nbsp; Print Date: 2012-02-01 13::12:21</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note:</span><span class="rvts35"> The full text for the Right-Hand Footer is not visible in the image but contained:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts88">Print Date: ~K(ISODATE) ~K(ISOTIME)</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

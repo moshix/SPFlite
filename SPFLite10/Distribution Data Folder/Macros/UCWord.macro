@@ -1,0 +1,24 @@
+' UCWORD.MACRO
+' Lowercase the 'word' the cursor is located on
+' Syntax:  UCWORD                                     With cursor located on the word
+'                                                     to be upper-cased.   Typically the
+' Author George Deluca                                command would be assigned to a
+'                                                     command function key.
+'
+dim ltxt, ltxt2, lword as string
+dim i as number 
+
+lword = ucase$(Get_Curr_Word$)                        ' Get Upper version of the word
+if lword = "" then halt(fail, "No word under the cursor") 
+
+ltxt = Get_Line$(Get_CSR_LPtr)                        ' Get the line of text
+ltxt2 = ucase$(ltxt)                                  ' Uppercase the line
+
+i = instr(ltxt2, lword)                               ' Make sure we handle dup strings in the line
+while Get_Csr_Col < i or Get_Csr_Col >= i + len(lword)
+   i = instr(i + 1, ltxt2, lword)                     '
+wend                                                  '
+ltxt = left$(ltxt, i - 1) + lword + mid$(ltxt, i + len(lword)) ' Do the change
+Set_Line(Get_Csr_LPtr, ltxt)                          ' Put modified text back
+Set_Csr(Get_Csr_LPtr, i, 0)                           ' Put cursor on the start of the word
+halt                                                  ' Done

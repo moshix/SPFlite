@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Automatic Colorization Files</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automatic Colorization Files">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Automatic Colorization Files" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="AutomaticColorizationFiles"
+		  data-hnd-context="155"
+		  data-hnd-title="Automatic Colorization Files"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Automatic Colorization Files</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">Contents</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a class="rvts109" href="AutomaticColorizationFiles.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts109" href="AutomaticColorizationFiles.html#AutoCapitalizationSupport">Auto Capitalization Support</a></p>
+<p class="rvps5"><a class="rvts109" href="AutomaticColorizationFiles.html#SettingupAutomaticColorization">Setting up Automatic Colorization</a></p>
+<p class="rvps5"><a class="rvts109" href="AutomaticColorizationFiles.html#AutomaticColorizationFileCommandSyntax">Automatic Colorization File Command Syntax</a></p>
+<p class="rvps5"><a class="rvts109" href="AutomaticColorizationFiles.html">Sample Colorize File</a></p>
+<p class="rvps5"><span class="rvts450"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite can display source files with keywords and delimiters automatically highlighted in various colors to assist in the readability of source code. To do this, SPFLite requires an Automatic Colorization file, which describes the particular source language (e.g. reserved words, delimiters used, comment indicators, etc.)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When the PROFILE option </span><span class="rvts11">HILITE AUTO ON</span><span class="rvts12"> is chosen, (See the </span><a class="rvts32" href="HILITE.html">HILITE</a><span class="rvts12"> command) SPFLIte will look for an Automatic Colorization file to use in the colorization process. If no matching Automatic Colorization file can be found, the file will be displayed as if colorization had not been requested. Automatic Colorization is based on the </span><span class="rvts11">file extension</span><span class="rvts12"> of the file being edited.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For example, if editing a file MYSOURCE.BAS (a BASIC source program), SPFLIte will look in the \SPFlite\AUTO\ data directory for an Automatic Colorization file called </span><span class="rvts11">BAS.AUTO </span><span class="rvts12">to use to control the colorize process. Note the file extension (</span><span class="rvts11">BAS) </span><span class="rvts12">is used as the filename appended with the file type of </span><span class="rvts11">.AUTO</span><span class="rvts12">. Similarly, for a C++ source program stored with an extension of .cpp, SPFLite would look for the file </span><span class="rvts11">CPP.AUTO</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Many times, the source for one language is stored in a variety of file types (Header, Include, Macro, etc.) which would normally mean separate </span><span class="rvts11">AUTO</span><span class="rvts12"> files for each file type, a real maintenance nuisance. The SPFLIte Profile support allows you to 'point' a file type's profile to another already-existing profile. This way, all aspects of customization for a file type can be shared by other file types. This is performed by utilizing the </span><a class="rvts32" href="PROFILE.html">PROFILE</a><span class="rvts12"> command option USING to point at the base, shared profile. Automatic Colorization support also follows the same sharing link and will use the </span><span class="rvts11">AUTO</span><span class="rvts12"> Colorization file of the common profile. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The SPFLite web site has a down-loadable ZIP file containing a set of sample Colorization files for some of the common types. Note these files are </span><span class="rvts11">NOT</span><span class="rvts12"> to be considered exact and complete for </span><span class="rvts11">any</span><span class="rvts12"> of the languages provided. I created these very quickly from some keyword lists located on the web and they have received little or no real testing. The only one I'm fairly sure of is PowerBasic.AUTO since that is </span><span class="rvts11">my</span><span class="rvts12"> language of choice. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">As of Version 10, </span><span class="rvts11">AUTO</span><span class="rvts12"> files no longer specify the actual </span><span class="rvts51">colors</span><span class="rvts12"> to be used. The former </span><span class="rvts11">SCHEME</span><span class="rvts12"> statements are no longer used, and are now simply ignored. Similarly the </span><span class="rvts11">NORMHI</span><span class="rvts12">, </span><span class="rvts11">NORMLO</span><span class="rvts12">, </span><span class="rvts11">LINEHI</span><span class="rvts12">, and </span><span class="rvts11">LINELO </span><span class="rvts12">are ignored</span><span class="rvts11">.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The actual colors used by each SCHEME are now specified in </span><a class="rvts52" href="OptionsSchemes.html">OPTIONS -&gt; SCHEMES</a><span class="rvts61"> - </span><span class="rvts12">where it is now simpler to specify since it displays the result of your choices immediately.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">This means the sample files are simpler to customize to </span><span class="rvts51">your</span><span class="rvts12"> color preferences.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="AutoCapitalizationSupport"></a>
+<span class="rvts11">Auto Capitalization Support</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">As well as colorization support, SPFLite can be requested to capitalize all language keywords defined in the .AUTO file. For some computer languages, this can assist readability greatly. Note the uppercasing is done only during screen display, the actual text itself is not altered. Actual text changing can be done, See </span><a class="rvts33" href="AUTOCAPS.html">AUTOCAPS</a><span class="rvts12"> for more information on permanently altering the text itself.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To identify which keywords specified in the AUTO file are to be capitalized (it would be unusual to capitalize </span><span class="rvts11">every</span><span class="rvts12"> keyword defined in the AUTO file), all that is needed is to change the WORD directive to AUTOCAPS..</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For example, if the language keywords were previously controlled by a </span></p>
+<p class="rvps6"><span class="rvts12">WORD &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp;FOR</span></p>
+<p class="rvps5"><span class="rvts12">it would now be specified as </span></p>
+<p class="rvps6"><span class="rvts12">AUTOCAPS 1 &nbsp;FOR </span></p>
+<p class="rvps6"><span class="rvts47"><br/></span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="SettingupAutomaticColorization"></a>
+<span class="rvts11">Setting up Automatic Colorization</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">Locate the appropriate sample file for your language, copy it to the SPFLite \AUTO </span><span class="rvts11">Data</span><span class="rvts12"> folder. If you are unsure of what directory this is, simply enter the </span><a class="rvts32" href="OPTIONSSetGlobalEditorOptions.html">OPTION</a><span class="rvts12"> command and at the bottom of the dialog box it will display the location of the SPFLite INI file. The </span><span class="rvts11">AUTO</span><span class="rvts12"> colorize control files should be placed in the \AUTO folder within this directory. Ensure the base filename equals the normal extension used for the source. For example, if using PowerBasic as I do, you would copy and rename PowerBasic.AUTO to BAS.AUTO.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li class="rvps4"><span class="rvts12">Examine the SCHEME numbers used by the sample file and decide how this 'fits' with the SCHEMES you have specified in </span><a class="rvts52" href="OptionsSchemes.html">OPTIONS -&gt; SCHEMES</a><span class="rvts12">. Then simply alter the Scheme numbers in the WORD statements to your choice in SCHEMEs.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The structure is fairly simple (described below) and it should be easy to create or update these for any language. Should you update any of these, or create new ones for other languages, I encourage you to send them in to me; I will add them to the collection and make them available for all users.</span></p>
+<p class="rvps11"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="AutomaticColorizationFileCommandSyntax"></a>
+<span class="rvts11">Automatic Colorization File Command Syntax</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Automatic Colorization files consist of either:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts12">comments (blank lines, or lines starting with a </span><span class="rvts49">;</span><span class="rvts12"> in position 1)</span></li>
+<li style="margin-left: 0px" class="rvps11"><span class="rvts12">definition statements</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Definition Statements</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">Obsolete Statements</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">As of Version 10, the following Statement types are obsoleted. If present, they will be ignored:</span></p>
+<p class="rvps5"><span class="rvts11">SCHEME</span></p>
+<p class="rvps5"><span class="rvts11">NORMHI</span></p>
+<p class="rvps5"><span class="rvts11">NORMLO</span></p>
+<p class="rvps5"><span class="rvts11">LINEHI</span></p>
+<p class="rvps5"><span class="rvts11">LINELO</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note:</span><span class="rvts12"> A sample macro has been made available (</span><span class="rvts11">AUTOCnvt</span><span class="rvts12">) to simplify converting Pre-Version 10 AUTO files to the new format. Simply edit the AUTO file, and enter </span><span class="rvts11">AUTOCnvt</span><span class="rvts12"> on the command line. The macro will not remove </span><span class="rvts11">any</span><span class="rvts12"> comment lines, so if there are comment lines present describing your old SCHEME usage, you will need to manually review / delete them.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">COMMENT</span><span class="rvts12">n &nbsp; sn &nbsp; start &nbsp; end</span></p>
+</td>
+<td width="657" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Up to Nine comment definitions are supported </span><span class="rvts11">COMMENT1 thru COMMENT9. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts11">sn</span><span class="rvts12"> operand refers to the scheme number used to display the comment. Each </span><span class="rvts11">COMMENT</span><span class="rvts12">n statement </span><span class="rvts11">may</span><span class="rvts12"> reference different scheme's if desired, or the same scheme.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts11">start</span><span class="rvts12"> operand specifies the character (string) which indicates the beginning of comments. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts11">end</span><span class="rvts12"> operand can have one of three meanings: &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" class="rvps4"><span class="rvts11">0</span><span class="rvts12"> (zero) indicates the </span><span class="rvts11">start</span><span class="rvts12"> string can begin anywhere in a line and the remainder of the line is a comment</span></li>
+</ol>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+<li value="2" class="rvps4"><span class="rvts11">n </span><span class="rvts12">(positive number) indicates the </span><span class="rvts11">start</span><span class="rvts12"> operand is to be recognized </span><span class="rvts11">only</span><span class="rvts12"> in this position and the remainder of the line is a comment. (Like the COBOL comment indicator in position 7.). </span></li>
+</ol>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+<li value="3" class="rvps4"><span class="rvts11">string</span><span class="rvts12"> data indicates the comment starts with the </span><span class="rvts11">start</span><span class="rvts12"> operand and ends with </span><span class="rvts11">this</span><span class="rvts12"> operand. A typical example of this would be the comment markers /* */ or (* *).&nbsp;</span></li>
+</ol>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note:</span><span class="rvts12"> SPFLite does </span><span class="rvts11">not</span><span class="rvts12"> support multi-line comments. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11"><br/></span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">EXCLUDE</span><span class="rvts12"> &nbsp;col string</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts11">EXCLUDE</span><span class="rvts12"> statement request that all text lines which match the specified criteria be </span><span class="rvts11">excluded</span><span class="rvts12"> from further colorization processing. They will be displayed under control of the Normal Text Lo definition.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts50">col</span><span class="rvts12"> operand specifies a column number in which to look for the </span><span class="rvts50">string</span><span class="rvts12"> operand; a match will cause the line to be excluded. If the </span><span class="rvts50">col</span><span class="rvts12"> operand is coded as zero, the </span><span class="rvts50">string</span><span class="rvts12"> operand will be scanned for anywhere within the text line.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">You may code up to 10 </span><span class="rvts11">EXCLUDE</span><span class="rvts12"> statements.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" height="246" style="padding: 1px;"><p class="rvps5"><span class="rvts11">INCLUDE &nbsp;</span><span class="rvts12">col string</span></p>
+</td>
+<td width="657" height="246" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts11">INCLUDE</span><span class="rvts12"> statement request that </span><span class="rvts11">only</span><span class="rvts12"> text lines which match the specified criteria be passed on for further colorization processing. Lines which fail all </span><span class="rvts11">INCLUDE</span><span class="rvts12"> statement selection will be displayed under control of the Normal Text Lo definition</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts50">col</span><span class="rvts12"> operand specifies a column number in which to look for the </span><span class="rvts50">string</span><span class="rvts12"> operand; a match will cause the line to be included. If the </span><span class="rvts50">col</span><span class="rvts12"> operand is coded as zero, the </span><span class="rvts50">string</span><span class="rvts12"> operand will be scanned for anywhere within the text line.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">You may code up to 10 </span><span class="rvts11">INCLUDE</span><span class="rvts12"> statements.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note:</span><span class="rvts12"> If both EXCLUDE and INCLUDE statements are present, &nbsp;EXCLUDE processing is performed first, followed by INCLUDE processing.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">QUOTED</span><span class="rvts12"> &nbsp; sn</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts16">sn</span><span class="rvts12"> operand specifies the </span><span class="rvts11">Scheme</span><span class="rvts12"> number to be used for the display of quoted literal strings. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">NUMERIC &nbsp;</span><span class="rvts12">sn</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts16">sn</span><span class="rvts12"> operand specifies the </span><span class="rvts11">Scheme</span><span class="rvts12"> number to be used for the display of literal strings which are not identified as a keyword, </span><span class="rvts11">and</span><span class="rvts12"> contain only </span><span class="rvts11">numeric</span><span class="rvts12"> characters. Numeric characters are considered to be 0-9, period and comma.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note</span><span class="rvts12"> if the period or comma are also specified as delimiters in the </span><span class="rvts11">DELIMS </span><span class="rvts12">string, the DELIMS specification will take precedence. For example if the comma is a delimiter, the string </span><span class="rvts54">123,456</span><span class="rvts11"> </span><span class="rvts12">will be treated as a numeric string </span><span class="rvts54">123</span><span class="rvts12">, followed by a comma delimiter, followed by a numeric string </span><span class="rvts54">456</span><span class="rvts12">.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">If the NUMERIC statement is not provided, Numeric strings will be displayed under control of the Normal Text Lo definition</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">ESCAPECHR &nbsp; </span><span class="rvts12">x</span></p>
+</td>
+<td width="657" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">Literals in some languages allow embedded special characters (including the single or double quote) within a literal if they are preceded by an 'escape' character, which basically says to ignore the next character as a delimiter. For example, if </span><span class="rvts11">ESCAPECHR &nbsp;\</span><span class="rvts12"> is specified, then the following string would be a valid quoted literal. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts49">'What\'s&nbsp;the&nbsp;matter,&nbsp;didn\'t&nbsp;you&nbsp;understand'</span></p>
+<p class="rvps5"><span class="rvts49"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">DELIMS &nbsp; </span><span class="rvts12">string</span></p>
+</td>
+<td width="657" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts11">DELIMS</span><span class="rvts12"> statement defines the delimiters which the language uses to separate operands and language elements. Normally the string would be something like </span><span class="rvts11">+-*/=()^&lt;&gt;[]{},; </span><span class="rvts12">This string typically varies mostly due to what characters are allowable in variable names where sometimes characters like </span><span class="rvts11">_</span><span class="rvts12"> and </span><span class="rvts11">.</span><span class="rvts12"> are allowed. Note that when the language uses relational operators like BASIC's &lt;&gt; or &gt;= that the </span><span class="rvts11">individual</span><span class="rvts12"> characters are what should be entered. Note that the space need not be specified, it is </span><span class="rvts11">always</span><span class="rvts12"> a delimiter. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">MIXEDCASE &nbsp; </span><span class="rvts12">yes &nbsp;| &nbsp;no</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Some computer languages are sensitive to the case of the keywords and can have duplicate keywords that have different meaning depending on their case. (e.g. void and Void in Java) If </span><span class="rvts11">MIXEDCASE YES</span><span class="rvts12"> is specified, then the keyword search will be sensitive to the case of the words. If the default </span><span class="rvts11">MIXEDCASE NO</span><span class="rvts12"> is specified, keywords will be searched for regardless of case.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="267" style="padding: 1px;"><p class="rvps5"><span class="rvts11">WORD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts12">sn &nbsp; string</span></p>
+<p class="rvps5"><span class="rvts11">AUTOCAPS &nbsp;</span><span class="rvts12">sn &nbsp;string</span></p>
+</td>
+<td width="657" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The </span><span class="rvts11">WORD / AUTOCAPS </span><span class="rvts12">statements define the reserved words for the particular language. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts16">sn</span><span class="rvts12"> operand refers to the </span><span class="rvts11">Scheme</span><span class="rvts12"> number (defined in </span><a class="rvts52" href="OptionsSchemes.html">Options -&gt; Schemes</a><span class="rvts12">) used to display the word. Different </span><span class="rvts11">Scheme</span><span class="rvts12"> numbers may be used to classify reserved words into various categories. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">When </span><span class="rvts11">AUTOCAPS</span><span class="rvts12"> is used instead of </span><span class="rvts11">WORD</span><span class="rvts12">, it requests uppercasing of the specified keyword when it is detected.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">The </span><span class="rvts16">string</span><span class="rvts12"> specifies the actual reserved word. No embedded blanks are allowed, use multiple </span><span class="rvts11">WORD</span><span class="rvts12">s if needed. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note</span><span class="rvts12">: Each character entered in the </span><span class="rvts11">DELIMS </span><span class="rvts12">statement should be entered also with a </span><span class="rvts11">WORD</span><span class="rvts12"> statement. &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td valign="top" style="padding: 0px;"><p class="rvps5"><a name="SampleColorizeFile"></a>
+<span class="rvts11">Sample Colorize File</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts47">; SPFLite colorize file for DOS Batch files</span></p>
+<p class="rvps5"><span class="rvts47">;</span></p>
+<p class="rvps5"><span class="rvts47">QUOTED &nbsp; 5</span></p>
+<p class="rvps5"><span class="rvts47">COMMENT1 1 &nbsp;REM &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Either REM</span></p>
+<p class="rvps5"><span class="rvts47">COMMENT2 1 &nbsp;:: &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; or :: indicate comments</span></p>
+<p class="rvps5"><span class="rvts47">; Delimiters</span></p>
+<p class="rvps5"><span class="rvts47">DELIMS &nbsp; (),.:=@</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 6 &nbsp;(</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 6 &nbsp;)</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 3 &nbsp;,</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 3 &nbsp;.</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 3 &nbsp;:</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 3 &nbsp;=</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 3 &nbsp;@</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;aux &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Reserved words</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;com1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;com2</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;com3</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;com4</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;con</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;lpt1</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;lpt2</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;lpt3</span></p>
+<p class="rvps5"><span class="rvts47">WORD &nbsp; &nbsp; 4 &nbsp;prn</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;call &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;cd &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;defined &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;dir</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;do</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;echo</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;else</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;endlocal</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;equ</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;errorlevel</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;exist</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;exit</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;for</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;geq</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;goto</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;gtr</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;if</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;in</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;leq</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;lss</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;neq</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;not</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;nul</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;pause</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;set</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;setlocal</span></p>
+<p class="rvps5"><span class="rvts47">AUTOCAPS 3 &nbsp;shift</span></p>
+<p class="rvps5"><span class="rvts47"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

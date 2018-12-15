@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Unicode Mapping Files</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Unicode Mapping Files">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Unicode Mapping Files" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithUnicodeMappingFiles"
+		  data-hnd-context="288"
+		  data-hnd-title="Working with Unicode Mapping Files"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Unicode Mapping Files</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithUnicodeMappingFiles.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithUnicodeMappingFiles.html#How%20the%20Unicode%20Mapping%20File%20is%20defined">How the Unicode Mapping File is defined</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithUnicodeMappingFiles.html#How%20the%20Unicode%20Mapping%20File%20works">How the Unicode Mapping File works</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithUnicodeMappingFiles.html#A%20sample%20Unicode%20Mapping%20File%20application">A sample Unicode Mapping File application</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithUnicodeMappingFiles.html#Future%20plans%20for%20Unicode%20Mapping%20Files">Future plans for Unicode Mapping Files</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you have used one of the "Raster" fonts supplied with SPFLite, you may have noticed several "Ansi" characters that were not really Ansi at all. For instance, in location hex </span><span class="rvts40">8D</span><span class="rvts6"> you will see a &nbsp;</span><span class="rvts349">≤</span><span class="rvts6"> &nbsp;less-than-or-equal sign. That is </span><span class="rvts40">not</span><span class="rvts6"> Ansi, but it </span><span class="rvts40">is</span><span class="rvts6"> the same as the Unicode character </span><span class="rvts40">U+2264</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As you may know, SPFLite does not directly operate with Unicode data, but only with Ansi. Internally, all data that SPFLite deals with is Ansi data. So how is it that a &nbsp;</span><span class="rvts349">≤</span><span class="rvts6"> &nbsp;less-than-or-equal sign can appear in this position?</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The reason is that the supplied Raster fonts were custom-designed for SPFLite, and the extra characters you see occupy "unofficial" (unassigned) positions. SPFLite does not know or care what a byte of hex </span><span class="rvts40">8D</span><span class="rvts6"> means. It simply displays it, and allows the font definition to control what visually appears on your screen.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">All that is fine, if the only thing you do is </span><span class="rvts40">display</span><span class="rvts6"> your data. But what if you want to print it? &nbsp;Previously, SPFLite would simply send the Ansi data to your printer. When Windows receives this data, it internally converts the data as needed to Unicode. For example, in the Microsoft 1252 code page used for Ansi, the Euro symbol </span><span class="rvts349">€</span><span class="rvts6"> appears at location hex </span><span class="rvts40">80</span><span class="rvts6">, while its Unicode value is </span><span class="rvts40">U+20AC</span><span class="rvts6">. If you have a Euro symbol in the data you print, the hex </span><span class="rvts40">80</span><span class="rvts6"> value will eventually get converted to hex </span><span class="rvts40">20AC</span><span class="rvts6"> so that your printer will recognize it, and the right character is printed. Windows can do this because it "knows" what Ansi characters mean in terms of their Unicode definitions, which are standardized and well-known.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The case where a character of hex </span><span class="rvts40">8D</span><span class="rvts6"> is used is more complicated. That is because there </span><span class="rvts40">is no</span><span class="rvts6"> mapping for hex </span><span class="rvts40">8D</span><span class="rvts6">. There isn't any, because </span><span class="rvts94">we made it up</span><span class="rvts6">.&nbsp;</span><span class="rvts40"> It is a "private definition" that exists only within SPFLite.</span><span class="rvts6"> &nbsp;We added it because people often want to use characters like </span><span class="rvts349">≤</span><span class="rvts6">, </span><span class="rvts349">≥</span><span class="rvts6"> and </span><span class="rvts349">≠</span><span class="rvts6"> in their data, but plain Ansi doesn't provide them. In the past, SPFLite would have transmitted a hex </span><span class="rvts40">8D</span><span class="rvts6"> to your printer - but the printer would not know what to do with it, and it would either print it as a blank or as nothing at all (causing the line it was on to appear shifted over), or the printer might have printed some 'garbage' character instead.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The problem with printing hex </span><span class="rvts40">8D</span><span class="rvts6"> as a &nbsp;</span><span class="rvts349">≤</span><span class="rvts6"> &nbsp;less-than-or-equal sign is </span><span class="rvts40">not</span><span class="rvts6"> that this character is "unknown" or" illegal". It's just that it is </span><span class="rvts94">not known</span><span class="rvts6"> as </span><span class="rvts40">8D</span><span class="rvts6">. Somehow, we need to be able to convey to the printer that when an </span><span class="rvts40">8D</span><span class="rvts6"> is encountered, we really want to print </span><span class="rvts40">U+2264</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">By providing a Unicode Mapping File, these unusual characters can be printed just like any regular data.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="How the Unicode Mapping File is defined"></a>
+<span class="rvts40">How the Unicode Mapping File is defined</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A Unicode Mapping File is an ordinary text file that is located in the same </span><span class="rvts40">SPFLite</span><span class="rvts6"> directory where your </span><span class="rvts40">SPFLite.INI</span><span class="rvts6"> file exists. You will have to prepare and save this file into that directory yourself. A sample file appears below.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The mapping file must have one of the following names:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">SPFLite.Unicode</span></p>
+<p class="rvps10"><span class="rvts139">SPFLite.Print.Unicode</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For now, you can just use the short name, </span><span class="rvts40">SPFLite.Unicode</span><span class="rvts6">. See </span><a class="rvts44" href="WorkingwithUnicodeMappingFiles.html#Future%20plans%20for%20Unicode%20Mapping%20Files">Future plans for Unicode Mapping Files</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts40">If neither of these files exist in the SPFLite directory, SPFLite will handle printing the same as previously, with no character mapping performed. It is not an error if one of these files does not exist, and no message will appear.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A Unicode Mapping file contains the following elements:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">A "title" line containing </span><span class="rvts139">[Unicode]</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Optional blank lines, which are ignored</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Optional comments, starting with a leading </span><span class="rvts139">;</span><span class="rvts6"> semicolon, which are ignored</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">One or more mapping lines.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A </span><span class="rvts140">mapping line</span><span class="rvts6"> has the following format:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">X</span><span class="rvts164">nn</span><span class="rvts139">=U</span><span class="rvts164">nnnn</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The left side with </span><span class="rvts40">X</span><span class="rvts140">nn</span><span class="rvts6"> defines the Ansi character you wish to map. Let's say we want to map the less-than-or-equal character. So, the </span><span class="rvts40">X</span><span class="rvts140">nn</span><span class="rvts6"> would appear as </span><span class="rvts139">X8D</span><span class="rvts6">. The right side with </span><span class="rvts40">U</span><span class="rvts140">nnnn</span><span class="rvts6"> defines what Unicode character you want to print. The Unicode value for this character is </span><span class="rvts139">U2264</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">The </span><span class="rvts40">+</span><span class="rvts6"> plus sign, used to describe Unicode in formal publications, is not used here. Just say </span><span class="rvts139">U2264</span><span class="rvts6">, not </span><span class="rvts139">U+2264</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You must specify exactly two hex digits for the </span><span class="rvts40">X</span><span class="rvts140">nn</span><span class="rvts6"> side, and exactly four digits for the </span><span class="rvts40">U</span><span class="rvts140">nnnn</span><span class="rvts6"> side.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">On a mapping line, blank characters are ignored. If you wish, you can place an optional comment on a mapping line, by following the U</span><span class="rvts140">nnnn</span><span class="rvts6"> part with a </span><span class="rvts139">;</span><span class="rvts6"> semicolon and your comment. Here is an example of the less-than-or-equal mapping line, with a comment:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">X8D=U2264; less than or equal</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In case the same </span><span class="rvts40">X</span><span class="rvts140">nn</span><span class="rvts6"> value appeared more than once in the same Unicode Mapping File, the final one will override any prior entries. You can use this fact to store alternative mappings in your file. You would place the mappings you really want as last in your file, and prior ones would essentially be treated as comments. That way you can keep the unused, alternative values in your file without deleting them.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If any format errors are found in your Unicode Mapping File, an error message is displayed, and SPFLite will not use your mapping file, but will print your data file the same as previously, without any character mapping performed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="How the Unicode Mapping File works"></a>
+<span class="rvts40">How the Unicode Mapping File works</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you request SPFLite to send data to the printer, it looks for a Unicode mapping file in the </span><span class="rvts40">SPFLite</span><span class="rvts6"> directory, where the </span><span class="rvts40">SPFLite.INI</span><span class="rvts6"> file is located. It will first look for a file called </span><span class="rvts40">SPFLite.Print.Unicode</span><span class="rvts6">, and will use it if one is there; otherwise it will look for a file called </span><span class="rvts40">SPFLite.Unicode</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a Unicode Mapping File is found, the entries are validated and stored into memory. From that point on, any print requests will be transmitted to your printer directly in Unicode, rather than allowing Windows to convert your data to Unicode itself.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The trick here is that by defining your own Unicode Mapping File, </span><span class="rvts40">you</span><span class="rvts6"> decide which specific Unicode value is sent for any given Ansi character.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">It is not necessary to map every Ansi character to Unicode.</span><span class="rvts6"> &nbsp;Only map the characters that you really need to change from the usual definitions. For instance, the digit </span><span class="rvts40">5</span><span class="rvts6"> is </span><span class="rvts40">35</span><span class="rvts6"> in Ansi and </span><span class="rvts40">U+0035</span><span class="rvts6"> in Unicode. There is no reason to map such a character - unless you're doing something very unusual. So, even though a Unicode Mapping File could theoretically have 256 unique mappings, you are not likely to ever actually specify that many.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">While these unusual characters will likely only appear on your screen in the fonts provided with SPFLite (the Raster screen fonts), you can use </span><span class="rvts40">any</span><span class="rvts6"> True Type font to print with, provided it has the necessary characters. Because real True Type data is being sent to your printer, you are not limited to a printer font like </span><span class="rvts40">RasterTTF</span><span class="rvts6"> or our new </span><span class="rvts40">RasterTN</span><span class="rvts6"> True Type font. For instance, a Microsoft fixed font called </span><span class="rvts40">Consolas</span><span class="rvts6"> may be used to print these characters. You can also use </span><span class="rvts40">Courier New</span><span class="rvts6">, although you will need to confirm that this font has all the characters you might need. There may be many other font choices available to you.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can use the Windows utility </span><span class="rvts40">charmap</span><span class="rvts6"> to see what characters exist in a given font, or you could use a program like Microsoft Word, and select </span><span class="rvts40">Insert &gt; Symbol</span><span class="rvts6"> to see what is available. These tools will also show you the Unicode hex value you will need for your Unicode Mapping File.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="A sample Unicode Mapping File application"></a>
+<span class="rvts40">A sample Unicode Mapping File application</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here is a display of our revised Raster15 TN screen font. It is similar to the prior Raster15 font, but the extra characters you see are designed to make all of the symbols on an IBM 1403 printer with a TN print chain available. The particular placement of characters is dictated by the available free positions, and some values don't work well as printable data, like </span><span class="rvts40">CR</span><span class="rvts6">,</span><span class="rvts40">LF</span><span class="rvts6"> and </span><span class="rvts40">ESC</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">You may also notice that the added characters don't include superscript 1, 2 and 3, because they already existed in Ansi. You now have the full set of superscripts from </span><span class="rvts40">0</span><span class="rvts6"> to </span><span class="rvts40">9</span><span class="rvts6">, just not in adjacent locations.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">These new screen fonts, and the new </span><span class="rvts40">RasterTN</span><span class="rvts6"> True Type font, will be made available on the SPFLite web site about the same time that the Unicode Mapping File support is released. Check the web site for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Raster15.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You will notice that the "unusual" characters are in the Ansi range of hex </span><span class="rvts40">00</span><span class="rvts6"> to hex </span><span class="rvts40">1F</span><span class="rvts6">, and a few in the range of hex </span><span class="rvts40">80</span><span class="rvts6"> to </span><span class="rvts40">9F</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here is a sample</span><span class="rvts40"> SPFLite.Unicode</span><span class="rvts6"> mapping file that will allow you to print this data.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139">[Unicode]</span></p>
+<p class="rvps9"><span class="rvts139"><br/></span></p>
+<p class="rvps9"><span class="rvts139">X00=U0020;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">null as space</span></p>
+<p class="rvps9"><span class="rvts139">X01=U2502;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">box vertical</span></p>
+<p class="rvps9"><span class="rvts139">X02=U2534;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">box T up</span></p>
+<p class="rvps9"><span class="rvts139">X03=U252C;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">box T down</span></p>
+<p class="rvps9"><span class="rvts139">X04=U2191;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">arrow up</span></p>
+<p class="rvps9"><span class="rvts139">X05=U2193;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">arrow down</span></p>
+<p class="rvps9"><span class="rvts139">X06=U2192;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">arrow right</span></p>
+<p class="rvps9"><span class="rvts139">X07=U2190;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">arrow left, note that ASCII 07=BEL</span></p>
+<p class="rvps9"><span class="rvts139">X08=U0020;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">control BS as space</span></p>
+<p class="rvps9"><span class="rvts139">X09=U0020; &nbsp;control HT as space</span></p>
+<p class="rvps9"><span class="rvts139">X0A=U0020; &nbsp;control LF as space</span></p>
+<p class="rvps9"><span class="rvts139">X0B=U0020; &nbsp;control VT as space</span></p>
+<p class="rvps9"><span class="rvts139">X0C=U0020; &nbsp;control FF as space</span></p>
+<p class="rvps9"><span class="rvts139">X0D=U0020; &nbsp;control CR as space</span></p>
+<p class="rvps9"><span class="rvts139">X0E=U251C; &nbsp;box T right</span></p>
+<p class="rvps9"><span class="rvts139">X0F=U2524; &nbsp;box T left</span></p>
+<p class="rvps9"><span class="rvts139">X10=U2070; &nbsp;superscript 0</span></p>
+<p class="rvps9"><span class="rvts139">X11=U207A; &nbsp;superscript +</span></p>
+<p class="rvps9"><span class="rvts139">X12=U207D; &nbsp;superscript (</span></p>
+<p class="rvps9"><span class="rvts139">X13=U207E; &nbsp;superscript )</span></p>
+<p class="rvps9"><span class="rvts139">X14=U2074; &nbsp;superscript 4</span></p>
+<p class="rvps9"><span class="rvts139">X15=U2075; &nbsp;superscript 5</span></p>
+<p class="rvps9"><span class="rvts139">X16=U2076; &nbsp;superscript 6</span></p>
+<p class="rvps9"><span class="rvts139">X17=U2077; &nbsp;superscript 7</span></p>
+<p class="rvps9"><span class="rvts139">X18=U2078; &nbsp;superscript 8</span></p>
+<p class="rvps9"><span class="rvts139">X19=U2079; &nbsp;superscript 9</span></p>
+<p class="rvps9"><span class="rvts139">X1A=U0020; &nbsp;control EOF as space</span></p>
+<p class="rvps9"><span class="rvts139">X1B=U0020; &nbsp;control ESC as space</span></p>
+<p class="rvps9"><span class="rvts139">X1C=U2514; &nbsp;box LL</span></p>
+<p class="rvps9"><span class="rvts139">X1D=U2518; &nbsp;box LR</span></p>
+<p class="rvps9"><span class="rvts139">X1E=U250C; &nbsp;box UL</span></p>
+<p class="rvps9"><span class="rvts139">X1F=U2510; &nbsp;box UR</span></p>
+<p class="rvps9"><span class="rvts139">X7F=U0020; &nbsp;control DEL as space</span></p>
+<p class="rvps9"><span class="rvts139">X97=U2500; &nbsp;box horizontal</span></p>
+<p class="rvps9"><span class="rvts139">X81=U253C; &nbsp;box intersection</span></p>
+<p class="rvps9"><span class="rvts139">X90=U25AA; &nbsp;black square</span></p>
+<p class="rvps9"><span class="rvts139">X8D=U2264; &nbsp;LE</span></p>
+<p class="rvps9"><span class="rvts139">X8F=U2260; &nbsp;NE</span></p>
+<p class="rvps9"><span class="rvts139">X9D=U2265; &nbsp;GE</span></p>
+<p class="rvps9"><span class="rvts139">XA0=U0020; &nbsp;non-breaking space</span></p>
+<p class="rvps9"><span class="rvts139">XAF=U207B; &nbsp;superscript - 00AF may be OK too</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Notice that if you had data with embedded </span><span class="rvts40">CR</span><span class="rvts6"> and </span><span class="rvts40">LF</span><span class="rvts6"> characters (say, if your file was </span><span class="rvts40">RECFM F</span><span class="rvts6"> and </span><span class="rvts40">EOL NONE</span><span class="rvts6">), that might be valid as screen data while editing, but your printer may object. In addition, our Raster screen fonts have the special &nbsp;</span><span class="rvts350">CR</span><span class="rvts6"> &nbsp;and &nbsp;</span><span class="rvts350">LF</span><span class="rvts6"> &nbsp;symbols as single characters, but most printer fonts do not have these defined. To avoid such data causing problems for your printer, you should map these control codes to space (</span><span class="rvts40">U0020</span><span class="rvts6">) so that it won't interfere with the printer's normal operation.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you have a regular text file, rather than one with </span><span class="rvts40">EOL NONE</span><span class="rvts6">, SPFLite takes care of the line termination for you. Don't worry - even though you might have </span><span class="rvts40">CR</span><span class="rvts6"> and </span><span class="rvts40">LF</span><span class="rvts6"> mapped to U0020 as shown above, this </span><span class="rvts40">won't</span><span class="rvts6"> change how a regular text file is printed. You'd only get </span><span class="rvts40">CR</span><span class="rvts6"> and </span><span class="rvts40">LF</span><span class="rvts6"> changed to blanks if they were </span><span class="rvts40">data</span><span class="rvts6"> values in your file (in an</span><span class="rvts40"> EOL NONE</span><span class="rvts6"> file), but not when they are part of ordinary text file lines.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><a name="Future plans for Unicode Mapping Files"></a>
+<span class="rvts40">Future plans for Unicode Mapping Files</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">In theory</span><span class="rvts6">, based on the way we have designed the naming conventions for Unicode Mapping Files, it is conceivable that some day we could add support for mapping of </span><span class="rvts94">screen</span><span class="rvts6"> fonts, in addition to </span><span class="rvts94">printer</span><span class="rvts6"> fonts. If this were done, you could have one common mapping file for both, using a file of </span><span class="rvts40">SPFLite.Unicode</span><span class="rvts6">, or if the mappings were different, you could have an </span><span class="rvts40">SPFLite.Print.Unicode</span><span class="rvts6"> and an </span><span class="rvts40">SPFLite.Display.Unicode</span><span class="rvts6">. That would make it possible to use any fixed font as a display font (rather than just our special Raster screen fonts), and set aside certain special characters as alternative Ansi codes.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">In theory</span><span class="rvts6">, we could also tailor the Unicode mapping of files differently, depending on their file type, by adding some kind of enhanced </span><span class="rvts40">PROFILE</span><span class="rvts6"> support. If that were done, the default prefix of </span><span class="rvts40">SPFLite</span><span class="rvts6"> on a </span><span class="rvts40">.Unicode</span><span class="rvts6"> file would be changed to something else.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Such changes would be more involved than the basic Unicode mapping support we have presently added for printers. We are not making any promises as to if or when support for these features might be added. Any enhancements that are made will be announced on the SPFLite forum if and when they become available.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

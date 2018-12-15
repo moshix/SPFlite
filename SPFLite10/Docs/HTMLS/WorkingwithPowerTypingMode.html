@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Power Typing Mode</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Power Typing Mode">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Power Typing Mode" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithPowerTypingMode"
+		  data-hnd-context="189"
+		  data-hnd-title="Working with Power Typing Mode"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Power Typing Mode</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithPowerTypingMode.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#BasicconceptsofPowerTyping">Basic concepts of Power Typing</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithPowerTypingMode.html#PowerTypingcursor">Power Typing cursor</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#SupportforLEFTandRIGHTscrollinginPowerTypingmode">Support for LEFT and RIGHT scrolling in Power Typing mode</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#BasicfeaturesavailableinPowerTypingmode">Basic features available in Power Typing mode</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#DetailedlistofkeyboardprimitivefunctionsallowedinPowerTypingmode">Detailed list of keyboard primitive functions allowed in Power Typing mode</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#Example1:Basicfeatures">Example 1: Basic features</a></p>
+<p class="rvps9"><a class="rvts296" href="WorkingwithPowerTypingMode.html#Example2:Rightjustifyingdata">Example 2: Right justifying data</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithPowerTypingMode.html#Example3:Appendingastringtoacolumnofvaryingdata">Example 3: Appending a string to a column of varying data</a></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Power Typing is an editing facility in which, for each character you type, or each keyboard primitive function you use, the character is typed or the function is applied to every line in the Power Typing line range, in parallel, all at the same time. Every editing action you take is replicated on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Some editors refer to this capability as “column-mode editing” because the same action is applied at the same column position of every line at the same time, in parallel. You will generally find the editing capabilities of SPFLite's Power Typing to be more powerful than the “column mode” features of other editors, because the line range and </span><span class="rvts36">X|NX</span><span class="rvts35"> options allow for the selection of non-contiguous lines, and because of the wide range of keyboard functions you can use while you are within Power Typing mode. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You begin a Power Typing session with the </span><a class="rvts33" href="PTYPE.html">PTYPE</a><span class="rvts35"> command, using the lines you specify in the line-range operand or </span><span class="rvts36">C</span><span class="rvts35">/</span><span class="rvts36">CC</span><span class="rvts35"> block, which can be limited to just excluded (</span><span class="rvts36">X</span><span class="rvts35">) or just non-excluded (</span><span class="rvts36">NX</span><span class="rvts35">) lines if you wish. (See the description of </span><a class="rvts33" href="PTYPE.html">PTYPE</a><span class="rvts35"> for more information.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Once Power Typing mode begins, the edit display moves to the first line of the selected line range, in the same way a </span><span class="rvts36">LOCATE</span><span class="rvts35"> command would do. You will see the message, </span><span class="rvts36">Entering Power Type mode, Press Enter to exit</span><span class="rvts35">, and the status line will show </span><span class="rvts99">.</span><span class="rvts100">PowerType</span><span class="rvts99">.</span><span class="rvts98">.</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The cursor is then moved to column 1 of that first line, which then acts as a ‘prototype' or ‘model line'. The concept of the ‘model line' is especially important for certain aspects of Power Typing, such as highlighting and </span><a class="rvts33" href="Enumerating.html">enumerations</a><span class="rvts85">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">As you enter characters keys or invoke keyboard functions, you will see the effects reflected on the model line, and on every other line that is included in the Power Typing line range.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Power Typing mode remains in effect until you press Enter. Once that is done, the message </span><span class="rvts36">Entering Power Type mode, Press Enter to exit</span><span class="rvts35"> will disappear, and the status line indicator showing</span><span class="rvts98"> </span><span class="rvts99">.</span><span class="rvts100">PowerType</span><span class="rvts99">.</span><span class="rvts98"> </span><span class="rvts35">will be removed as well.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note 1: &nbsp;</span><span class="rvts35">Power Typing mode is allowed while within a multi-edit session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note 2:</span><span class="rvts35"> Keyboard Recording is allowed during Power Typing. However, since the status indicator is already showing </span><span class="rvts99">.</span><span class="rvts100">PowerType</span><span class="rvts99">.</span><span class="rvts35">, the usual &nbsp;message of </span><span class="rvts99">.</span><span class="rvts100">KB Recording</span><span class="rvts99">.</span><span class="rvts35"> will not appear. However, keyboard recording will still proceed as usual. When you press the key mapped to </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.record">(Record)</a><span class="rvts35">, which by default is the Scroll Lock key, you will see the SPFLite KeyMap dialog will appear. When you exit from KeyMap, Power Typing continues in effect. You can immediately use any keys you have added or changed in KeyMap in your resumed Power Typing session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="BasicconceptsofPowerTyping"></a>
+<span class="rvts290">Basic concepts of Power Typing</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are Power Typing, conceptually you are typing on one line – the top line of the line range you selected when you issued the </span><span class="rvts36">PTYPE</span><span class="rvts35"> command. This top line is called the </span><span class="rvts36">prototype</span><span class="rvts35"> or</span><span class="rvts36"> model line</span><span class="rvts35">. As you type on or edit the model line, every character you type and every editing action you take is duplicated on every other line in the line range at the same time, in parallel.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Since the design of Power Typing is based on the ‘model line' approach, you are constrained to focus your editing activities on this first ‘model line' even though the changes you make to it are propagated to every other line you are working with. Because of this, when you are in Power Typing mode, certain keystrokes, commands and editing features are not available:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">No line commands</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">No primary commands</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">No page </span><span class="rvts36">UP</span><span class="rvts35"> or page </span><span class="rvts36">DOWN</span><span class="rvts35"> scrolling functions</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">No </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.up">(Up)</a><span class="rvts35"> or </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.down">(Down)</a><span class="rvts35"> cursor movement functions</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">No cursor movements that would leave the current line, like </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.home">(Home)</a></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Because you cannot use line command or primary commands, much of the power of Power Typing comes from the extensive list of keyboard primitive functions that are allowed in Power Typing mode, which include almost all of the functions allowed during ordinary editing. If any of those functions provide editing you might wish to use during Power Typing, be sure to KEYMAP them to key combinations of your choice, so you'll have them at hand and ready to use when you being a Power Typing session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note: </span><span class="rvts35">Because the keyboard functions are a major source of Power Typing's </span><span class="rvts36">power</span><span class="rvts35">, that's a good reason why you should invest the time to understand how keyboard functions and key mapping operate, to get the most benefit out of Power Typing. The dividends you'll receive by doing so will make the learning curve is well worth it.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">See the </span><span class="rvts110">Power Typing examples</span><span class="rvts35"> at the end of this article for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="PowerTypingcursor"></a>
+<span class="rvts36">Power Typing cursor</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the </span><span class="rvts36">PTYPE</span><span class="rvts35"> command is issued, there is an implied multi-line cursor in effect, since all editing actions that take place on the top (model) line are replicated on every line that is within the </span><span class="rvts36">PTYPE</span><span class="rvts35"> line range. A set of vertical lines, one on each side of the real cursor will appear, starting from the real cursor itself to the last line of the </span><span class="rvts36">PTYPE</span><span class="rvts35"> line range. These lines are displayed using the same graphics used for MARK lines, and in the selected MARK color. This makes the point of editing activity on each line plainly visible. All of the screen shots in this section have been revised to show these new multi-line cursors.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="SupportforLEFTandRIGHTscrollinginPowerTypingmode"></a>
+<span class="rvts290">Support for LEFT and RIGHT scrolling in Power Typing mode</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you wish to scroll the file left or right while Power Typing, you can use the left and right arrows. Even though SPFLite in general does not allow primary commands to be executed while Power Typing, special support has been added so you can use keys that are mapped to the primary commands </span><span class="rvts36">LEFT</span><span class="rvts35"> and </span><span class="rvts36">RIGHT</span><span class="rvts35"> to accomplish this. Most users will have these keys mapped to F10 for </span><span class="rvts36">LEFT</span><span class="rvts35"> and F11 for </span><span class="rvts36">RIGHT</span><span class="rvts35">. You cannot enter these actual commands while Power Typing, because you cannot move the cursor to the primary command area. But, you </span><span class="rvts85">can</span><span class="rvts35"> type a mapped key, like F10 or F11, to do this. When this is done, SPFLite will respect the current </span><span class="rvts36">Scroll</span><span class="rvts35"> amount displayed in the upper-right corner of the screen.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="BasicfeaturesavailableinPowerTypingmode"></a>
+<span class="rvts290">Basic features available in Power Typing mode</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can do the following basic activities in Power Typing mode, assuming you have typical key mappings set up, most of which you will already have available by default:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Enter ordinary text, including special characters assigned in KEYMAP</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Move the cursor left and right</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Move the cursor to the beginning or end of the line</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Delete characters with DEL or Backspace key </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Erase to end of line</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Highlight text</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Delete highlighted text via the DEL or Backspace key</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Replace highlighted text with new text, with or without the INS mode being on</span></li>
+</ul></ul>
+<p class="rvps160"><span class="rvts35"><br/></span></p>
+<p class="rvps162"><span class="rvts35">You can also justify highlighted text (left, right or centered) and </span><a class="rvts33" href="Enumerating.html">enumerate</a><span class="rvts35"> highlighted text as decimal or hex numbers. These functions do not have default key mappings.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="DetailedlistofkeyboardprimitivefunctionsallowedinPowerTypingmode"></a>
+<span class="rvts290">Detailed list of keyboard primitive functions allowed in Power Typing mode</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can use the following keyboard functions while you are in Power Typing mode. A brief description of the effect of each function is provided. Any keyboard function that involves a clipboard can reference a Named Private Clipboard. For example, if you have a Named Private Clipboard of </span><span class="rvts36">myclip</span><span class="rvts35">, you can paste data from it during a Power Typing session with a function of </span><span class="rvts36">(Paste</span><span class="rvts89">/</span><span class="rvts36">myclip)</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Backspace) </span></p>
+<p class="rvps13"><span class="rvts35">Moves cursor left one column on the top (model) line, then deletes the character at that position on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(BackTab) </span></p>
+<p class="rvps13"><span class="rvts35">Moves cursor to prior tab position on the top (model) line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipDate) </span></p>
+<p class="rvps13"><span class="rvts35">Stores date string, in Windows-defined format, into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipIsoDate) </span></p>
+<p class="rvps13"><span class="rvts35">Stores date string, in format YYYY-MM-DD, into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipIsoTime) </span></p>
+<p class="rvps13"><span class="rvts35">Stores time string, in format HH:MM:SS, into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipName) </span></p>
+<p class="rvps13"><span class="rvts35">Stores the basic file name of the edit file into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipPath) </span></p>
+<p class="rvps13"><span class="rvts35">Stores the fully-qua file name of the edit file into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ClipTime) </span></p>
+<p class="rvps13"><span class="rvts35">Stores time string, in Windows-defined format, into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Copy) </span></p>
+<p class="rvps13"><span class="rvts35">Copy highlighted text from the top (model) line into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(CopyPaste) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, it performs a (Copy) operation. If there is no current highlighted text, it performs a (Paste) operation, storing the pasted text on every line beginning at the column where the cursor is located on the top (model) line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Cut) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, this will copy it to the Clipboard and will delete the selected characters from the top line, and from the same corresponding positions on every line. For example, if the highlighted text is in columns 1-5 on the top line, the text going to the clipboard comes from columns 1-5 of the top line, and columns 1-5 are deleted from every line. Characters to the right on each line are shifted left.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Date) </span></p>
+<p class="rvps13"><span class="rvts35">The current date, in Windows-defined format, is stored into every line at the current cursor location.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Delete) </span></p>
+<p class="rvps13"><span class="rvts35">The character at the current cursor location is deleted from every line. If there is currently highlighted text on the top (model) line, characters in the same corresponding positions are deleted on every line. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(EndOfLine) </span></p>
+<p class="rvps13"><span class="rvts35">Move the cursor to 1 character past the current end of the top (model) line. If the top (model) line contains trailing blanks, the cursor is placed after the last blank of that line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(EndOfText) </span></p>
+<p class="rvps13"><span class="rvts35">Move the cursor to 1 character past the last non-blank character in the top (model) line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Enum)</span></p>
+<p class="rvps13"><span class="rvts35">Enumerate (create sequence numbers) on each line of the Power Typing line range. There must be a highlighted field on the top (model) line, which holds the starting value and format information. (Enum) creates sequence numbers in decimal. To successfully enumerate a range of lines, Power Typing must be active, a highlighted field must be present, and an initial value with optional formatting, are required. See </span><a class="rvts288" href="Enumerating.html">Working With Enumerations</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(EnumHexLc) </span></p>
+<p class="rvps13"><span class="rvts35">Enumerate (create sequence numbers) on each line of the Power Typing line range. There must be a highlighted field on the top (model) line, which holds the starting value and format information. (EnumHexLc) creates sequence numbers in hex, and where hex numbers contain digits greater than </span><span class="rvts36">9</span><span class="rvts35">, the digits will be formatted as </span><span class="rvts36">a</span><span class="rvts35">‑</span><span class="rvts36">f</span><span class="rvts35"> in Lower Case. To successfully enumerate a range of lines, Power Typing must be active, a highlighted field must be present, and an initial value with optional formatting, are required. See </span><a class="rvts288" href="Enumerating.html">Working With Enumerations</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(EnumHexUc) </span></p>
+<p class="rvps13"><span class="rvts35">Enumerate (create sequence numbers) on each line of the Power Typing line range. There must be a highlighted field on the top (model) line, which holds the starting value and format information. (EnumHexUc) creates sequence numbers in hex, and where hex numbers contain digits greater than </span><span class="rvts36">9</span><span class="rvts35">, the digits will be formatted as </span><span class="rvts36">A</span><span class="rvts35">‑</span><span class="rvts36">F</span><span class="rvts35"> in Upper Case. To successfully enumerate a range of lines, Power Typing must be active, a highlighted field must be present, and an initial value with optional formatting, are required. See </span><a class="rvts288" href="Enumerating.html">Working With Enumerations</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(Erase) </span></p>
+<p class="rvps13"><span class="rvts35">Will replace all highlighted characters with an equal number of spaces, on the top (model) line, and every other line in the the Power Typing range in the same columns. It is an error to attempt to use (Erase) if no highlighting is present.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(EraseEol) </span></p>
+<p class="rvps13"><span class="rvts35">Will erase (delete) all characters from the cursor location to the end of line, including the character at the cursor location, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(Insert) </span></p>
+<p class="rvps13"><span class="rvts35">Will toggle the current Insert/Overtype status. The current status is always displayed in the status line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(IsoDate) </span></p>
+<p class="rvps13"><span class="rvts35">Will paste the current date, in ISO format, into the text at the current cursor location, on every line. ISO date format is YYYY-MM-DD.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(IsoTime) </span></p>
+<p class="rvps13"><span class="rvts35">Will paste the current time, in ISO format, into the text at the current cursor location, on every line. ISO time format is HH:MM:SS, 24 hr clock.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(JustifyC) </span></p>
+<p class="rvps13"><span class="rvts35">Text justification requires highlighted text on the top (model) line. The highlighted field defines a column range used during the text justification. (JustifyC) will center the text in the middle of the column range, on every line. Where an odd number of characters are involved in centering, there will be one more character on the right side of center than on the left side of center.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(JustifyL) </span></p>
+<p class="rvps13"><span class="rvts35">Text justification requires highlighted text on the top (model) line. The highlighted field defines a column range used during the text justification. (JustifyL) will left-justify the text within the column range, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(JustifyR) </span></p>
+<p class="rvps13"><span class="rvts35">Text justification requires highlighted text on the top (model) line. The highlighted field defines a column range used during the text justification. (JustifyR) will right-justify the text within the column range, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(LastTab) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor to the last defined tab in the Tabs line, if Tabs are currently active. If the last tab code on the Tabs line is a + plus sign, that is where the cursor will be positioned.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Left) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor one character to the left.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Lift)</span></p>
+<p class="rvps13"><span class="rvts35">Will copy all highlighted characters into the clipboard and then replace them with an equal number of spaces. Thus, the function is used to "lift" characters off the screen without the surrounding characters moving in any way. It is an error to attempt to use (Lift) if no characters are currently highlighted. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(LowerCase) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, the highlighted field defines a column range used during the operation. (LowerCase) will convert text to lower case within the column range, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(MarkEnd) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor to the last text character on the top (model) line in text selection mode. If selection mode is not already set, it will turn on mark mode and highlight the text from the current cursor location to the last text character on the top (model) line, and on the same corresponding columns on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(MarkLeft) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor left one character on the top (model) line in text selection mode. If selection mode is not already set, it will turn on mark mode and highlight the current cursor location on the top (model) line, and on the same corresponding columns on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(MarkRight) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor right one character on the top (model) line in text selection mode. If mark selection is not already set, it will turn on mark mode and highlight the current cursor location on the top (model) line, and on the same corresponding columns on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Paste) </span></p>
+<p class="rvps13"><span class="rvts35">Will paste the current Clipboard contents at the current cursor location, and on the same corresponding columns on every line. If the Clipboard contains multiple text lines, only the first line in the clipboard is used. The same string value is pasted into every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a name="kb.powercopy"></a>
+<span class="rvts36">(PowerCopy) </span></p>
+<p class="rvps13"><span class="rvts35">There must be currently highlighted text on the top (model) line. The highlighted field defines a column range used during the copy operation. The range of columns are copied to the clipboard from every line, as an array of individual string values. The format of the clipboard data is one text line per field copied, one per line in the Power Typing line range. That means you can paste the clipboard data from (PowerCopy), as a list of lines, into any Windows application using standard paste commands, such as Ctrl-V in NotePad. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a name="kb.powercut"></a>
+<span class="rvts36">(PowerCut)</span></p>
+<p class="rvps13"><span class="rvts35">This function operates the same way as (PowerCopy), except that the characters in the column range are deleted after being copied into the clipboard.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a name="kb.powerpaste"></a>
+<span class="rvts36">(PowerPaste) </span></p>
+<p class="rvps13"><span class="rvts35">The function requires that the clipboard contain one or more lines of text; these lines need not be of the same length. The lines of text are pasted left-justified starting at the column where the cursor is on the top (model) line. If there are more lines in the clipboard than lines in the Power Typing line range, the extra lines in the clipboard are not used. If there are more lines in the Power Typing line range than lines in the clipboard, the extra lines in the Power Typing line range are unchanged. If Insert Mode is on, data for each line in the clipboard pushes over the existing data on each line, and this data is inserted one line at a time, even when the lines in the clipboard are of differing lengths.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ResetInsert) </span></p>
+<p class="rvps13"><span class="rvts35">Saves the current setting of Insert Mode (for possible later use by RestoreInsert), and then turns Insert Mode off.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(RestoreCursor) </span></p>
+<p class="rvps13"><span class="rvts35">Will restore the column position of the cursor from a prior </span><span class="rvts36">(SaveCursor)</span><span class="rvts35"> function. When </span><span class="rvts36">(SaveCursor)</span><span class="rvts35"> and </span><span class="rvts36">(RestoreCursor)</span><span class="rvts35"> are using in Power Typing mode, they should be used together. No attempt should be made to save the cursor outside of Power Typing mode and then restore it while Power Typing is active, or vice-versa.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(RestoreInsert) </span></p>
+<p class="rvps13"><span class="rvts35">Sets the Insert Mode to whatever it was (on or off) before the most reset (SetInsert) or (ResetInsert) was done. If neither function has been done since SPFLite was started, (RestoreInsert) has no effect.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(Right) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor one character to the right.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(SaveCursor) </span></p>
+<p class="rvps13"><span class="rvts35">Will save the column position of the cursor, to be restored later by a </span><span class="rvts36">(RestoreCursor)</span><span class="rvts35"> function.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(SentenceCase) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, the highlighted field defines a column range used during the operation. (SentenceCase) will convert the first letter of the first word to upper case within the column range, and all other letters are converted to lower case, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(SetInsert) </span></p>
+<p class="rvps13"><span class="rvts35">Saves the current setting of Insert Mode (for possible later use by RestoreInsert), and then turns Insert Mode on.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(ScrollLeft) </span></p>
+<p class="rvps13"><span class="rvts35">Scrolls the screen to the left. The cursor remains in its current location.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(ScrollRight) </span></p>
+<p class="rvps13"><span class="rvts35">Scrolls the screen to the left. The cursor remains in its current location.</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Swap)</span></p>
+<p class="rvps13"><span class="rvts35">Will swap two areas marked on the model line in each PowerType line. </span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts36">(Tab) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor to the next tab stop if in the text area and Tabs are active. In Power Typing mode, (Tab) will never move the cursor off the top (model) line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(Time) </span></p>
+<p class="rvps13"><span class="rvts35">Will paste the current time into the text at the current cursor location, on every line. Format is HH:MM:SS AM. 12 hour clock with trailing AM/PM.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(TitleCase) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, the highlighted field defines a column range used during the operation. (TitleCase) will convert text to title case (capitalizing the first letter of every word, and lower-casing the rest of each word) within the column range, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(ToggleHome) </span></p>
+<p class="rvps13"><span class="rvts35">Based upon the contents of the top (model) line, if the cursor it at column 1, it will get repositioned to the left-most non-blank of the line; if not at column 1, it will get repositioned to column 1; if the line is blank, it will always position the cursor to column 1.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(TxtHome) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor to column 1 of the text data.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(UpperCase) </span></p>
+<p class="rvps13"><span class="rvts35">If there is currently highlighted text on the top (model) line, the highlighted field defines a column range used during the operation. (UpperCase) will convert text to upper case within the column range, on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(WordLeft) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor left to the beginning of the current word (if within a word) or to the beginning of the previous word if already at the beginning of a word. Cursor will never move off the current line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">(WordRight) </span></p>
+<p class="rvps13"><span class="rvts35">Will move the cursor left to the beginning of the next word Cursor will never move off the current line.</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Example1:Basicfeatures"></a>
+<span class="rvts290">Example 1: Basic features</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Because Power Typing is a very dynamic process, it can be hard to capture the ‘feel' of it in a static Help document such as this, but we will do our best.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's start with a small file:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 01.jpg"></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps163"><span class="rvts35">There are a number of ways of starting Power Typing mode on this file. Here is one using a </span><span class="rvts36">C/</span><span class="rvts35"> line command:</span></p>
+<p class="rvps163"><span class="rvts35"><br/></span></p>
+<p class="rvps163"><img alt="" style="padding : 1px;" src="lib/Power Typing 02.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">After you press Enter, you will see the Power Typing message and the </span><span class="rvts99">.</span><span class="rvts100">PowerType</span><span class="rvts99">.</span><span class="rvts98"> </span><span class="rvts35">indicator on the status line:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 03.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice that all the data lines are now highlighted. That tells you which lines are involved in the Power Typing session. This issue becomes more important if those lines are non-contiguous, such as if less than the whole file is involved, if you said X or NX on the PTYPE command, or if you used tags to select a non-contiguous set of lines, etc. Since we chose the whole file, the top (model) line is line 1. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice also the cursor is at column 1 of line 1, and the implied cursor is visibly shown with the vertical lines extending downward from the real cursor. That is the point where all data is going to be entered on every line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Keep in mind that you will stay in Power Typing mode until you press the Enter key.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you enter Power Typing mode, you will be placed in Overtype mode (OVR will appear on the status line) </span><span class="rvts85">even if it had been INS mode prior to starting </span><span class="rvts91">PTYPE</span><span class="rvts85"> mode</span><span class="rvts35">. Now, set Insert Mode on, and type the </span><span class="rvts36">*</span><span class="rvts35"> key three times. You will see this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 04.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The</span><span class="rvts36"> </span><span class="rvts89">***</span><span class="rvts36"> </span><span class="rvts35">is inserted into every line at the same time. Now, turn Insert Mode off. Suppose we want to change the lines so that the “one, two, three, four” is replaced by a sequential 3-digit number (an enumeration) starting with </span><span class="rvts36">501</span><span class="rvts35">. First, move the cursor to column 9 and press the key mapped to Erase to End of Line, normally mapped to the ESC key. You will see all the text from column 9 onward is erased on every line:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 05.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Next, replace the former variable-length text with a fixed-length string that includes the starting number. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You will type in the string, </span><span class="rvts131">501 of the file</span><span class="rvts35">. You type this string just once, and as you do, the text gets replicated on every line, at the same time:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 06.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, highlight the number 501 on the first line (as you will recall, the first line is the only one you can operate on). You can use the mouse or the keyboard (using arrow keys mapped to ‘mark' keyboard functions) to do the highlighting.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 07.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To complete the enumeration, you would type a key mapped to the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a><span class="rvts35"> function. Suppose you mapped Ctrl-E to do this prior to beginning your Power Typing session. Assuming you have, type Ctrl-E now. The enumeration will be done on every line, at the same time, and you will see this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 08.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Example2:Rightjustifyingdata"></a>
+<span class="rvts290">Example 2: Right justifying data</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">As another example, let's go back to the original data:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 09.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">We will highlight columns 6 through 18 to cover the variable-length part of these lines:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 10.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For sake of discussion, we will assume that the Justify functions are assigned as:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;[ &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyl">(JustifyL)</a></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;] &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyr">(JustifyR)</a></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;\ &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyc">(JustifyC)</a></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There are no installation defaults for the Justify functions, but you can make these anything you wish, of course. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Assuming you have your keys mapped that way, press </span><span class="rvts36">Ctrl Shift ]</span><span class="rvts35"> now. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This will right-justify the text on every line, in columns 6 through 18. Once done, you will see the text justified on each line:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 11.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you highlighted the same columns and pressed a key mapped to </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.uppercase">(UpperCase)</a><span class="rvts35"> it would convert those columns to upper case on every line, at the same time:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 12.jpg"></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">These are just a few examples of what is possible with Power Typing. You will also find the Power Copy, Power Cut and Power Paste functions to be especially useful. Once you have finished, just press the Enter key, and you will return to normal editing.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Example3:Appendingastringtoacolumnofvaryingdata"></a>
+<span class="rvts36">Example 3: Appending a string to a column of varying data</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><a class="rvts33" href="APPEND.html">APPEND</a><span class="rvts35"> primary command can be used to append a string to the end of multiple lines of varying lengths. For example, you could put a period at the end of a group of sentences between labels </span><span class="rvts36">.A</span><span class="rvts35"> and </span><span class="rvts36">.B</span><span class="rvts35"> by the command &nbsp;</span><span class="rvts88">APPEND '.' .A .B ALL</span><span class="rvts35">. But suppose you had a column of values and you needed to add some value to the end of each item, but the items were in the middle of the line rather than at the end. How could you do it? &nbsp;</span><span class="rvts36">Assuming all of the column of values are left-justified to begin with</span><span class="rvts35">, you can use Power Typing to achieve this.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To do this, you will need to map the text-justification functions to keys to make them available. For sake of discussion, let's again assume the following key mappings are in place. As usual, these are not defaults, and you would have to map these keys yourself.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;[ &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyl">(JustifyL)</a></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;] &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyr">(JustifyR)</a></p>
+<p class="rvps10"><span class="rvts35">Ctrl-Shift &nbsp;\ &nbsp;= &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.justifyc">(JustifyC)</a></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, let's make a file, similar to the one above, with some data we need to modify, and we will enter Power Typing mode:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 13.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose the task is to put parentheses around each of the words ONE, TWO, THREE and FOUR. Since these words are of varying lengths, how do we do it? &nbsp;First, highlight the columns over the words, so that the highlighting covers the longest word, which in this case is the five letters of the word THREE, and then one extra column. Notice that the status line shows PT Len 6, an indication that you are still in Power Typing mode and you highlighted a string of length 6.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This gives us:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 14.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, noting the keys you mapped above, right-justify the column of text:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 15.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Move the cursor to column 12 and type a right parenthesis:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 16.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Highlight the columns again as shown here:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 17.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Again, noting the keys you mapped above, left-justify the column of text:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 18.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Finally, move the cursor to column 6, type a left parenthesis, then press Enter to end Power Typing mode. Result:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Power Typing 19.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps10" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

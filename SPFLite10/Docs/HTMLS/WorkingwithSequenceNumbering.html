@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Sequence Numbering</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Sequence Numbering">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Sequence Numbering" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithSequenceNumbering"
+		  data-hnd-context="289"
+		  data-hnd-title="Working with Sequence Numbering"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Sequence Numbering</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Related-Commands">Related Commands</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts44" href="WorkingwithSequenceNumbering.html#DifferencesBetweenISPFNumberingandtheSPFLiteSupport">Differences Between ISPF Numbering and the SPFLite Support</a></p>
+<p class="rvps9"><a class="rvts44" href="WorkingwithSequenceNumbering.html#Protect-yourself-from-sequence-numbering-mistakes">Protect yourself from sequence numbering mistakes</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Dealing-with-the-two-use-case-of-sequence-numbering">Dealing with the two use case of sequence numbering</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Understanding-ISPF-sequence-numbering-types">Understanding sequence numbering types</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Dealing-with-sequence-numbers-that-get-in-your-way">Dealing with sequence numbers that get in your way</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Automatic-sequence-renumbering-during-SAVE-and-END">Automatic sequence renumbering during SAVE and END</a></p>
+<p class="rvps9"><a class="rvts44" href="WorkingwithSequenceNumbering.html#Determining-the-value-of-the-new-sequence-numbers-for-RENUM">Determining the value of the new sequence numbers for RENUM</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Determining-the-value-of-the-new-sequence-numbers-for-NUMBER">Determining the value of the new sequence numbers for NUMBER</a></p>
+<p class="rvps9"><a class="rvts160" href="WorkingwithSequenceNumbering.html#Synchronizing-sequence-numbers-with-SPFLite-using-RESEQ">Synchronizing sequence numbers with SPFLite</a></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Related-Commands"></a>
+<span class="rvts40">Related Commands</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">See the following commands for more detailed information about the SPFLite Sequence Numbering feature.</span></p>
+<div class="rvps9"><table width="75%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="171" style="padding: 1px;"><p class="rvps10"><a class="rvts44" href="AUTONUM.html">AUTONUM</a></p>
+</td>
+<td width="276" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Set Number lines automatically on SAVE</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="171" style="padding: 1px;"><p class="rvps10"><a class="rvts44" href="NUMBER.html">NUMBER</a></p>
+</td>
+<td width="276" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Verify and correct sequence numbers if needed</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="171" style="padding: 1px;"><p class="rvps10"><a class="rvts44" href="NUMTYPE.html">NUMTYPE</a></p>
+</td>
+<td width="276" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Define Numbering Style to be used</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="171" style="padding: 1px;"><p class="rvps10"><a class="rvts44" href="RENUM.html">RENUMBER</a></p>
+</td>
+<td width="276" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Renumber all sequence numbers</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="171" style="padding: 1px;"><p class="rvps10"><a class="rvts44" href="UNNUMBER.html">UNNUMBER</a></p>
+</td>
+<td width="276" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Remove sequence numbers</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">ISPF users have the ability to add, renumber and remove sequence numbers in their data, but this facility was never migrated to SPFLite since numbering of PC files is quite rare. However with with the increased use of IBM mainframe simulators (like Hercules) there is a place and need for such numbering. Starting in SPFLite version 8.5, you can now perform sequence-numbering actions using commands that are highly compatible with ISPF, and which also provide the additional flexibility you have come to expect from SPFLite.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Because the SPFLite Sequence Numbering feature is new, users are also encouraged to report any issues they encounter with it, to help us ensure it works as intended and meets your needs.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="DifferencesBetweenISPFNumberingandtheSPFLiteSupport"></a>
+<span class="rvts40">Differences Between ISPF Numbering and the SPFLite Support</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">There is a significant difference between the way ISPF and SPFLite manage files containing sequence numbers. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once a valid set of sequence numbers exist, ISPF will maintain sequence numbers as lines are inserted, copied and moved around within the file. This is done dynamically as you edit.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite does </span><span class="rvts40">not</span><span class="rvts6"> perform this function, line numbers are only set when a </span><a class="rvts44" href="NUMBER.html">NUMBER</a><span class="rvts6"> or </span><a class="rvts44" href="RENUM.html">RENUM</a><span class="rvts6"> command is performed, not dynamically during editing.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Differences can be summarized as:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">No dynamic numbering support from SPFLite. As a result, the concepts of </span><span class="rvts40">NUMBER ON</span><span class="rvts6"> and </span><span class="rvts40">NUMBER OFF</span><span class="rvts6"> do not exist, and these keywords are not supported by the Numbering &nbsp;commands.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Since the sequence number fields are simply treated as part of the normal data in SPFLite, the former ISPF concepts of </span><span class="rvts40">NUMBER DISPLAY </span><span class="rvts6">and </span><span class="rvts40">NUMBER NODISPLAY</span><span class="rvts6"> do not exist. Therefore the </span><span class="rvts40">DISPLAY</span><span class="rvts6"> and </span><span class="rvts40">NODISPLAY</span><span class="rvts6"> keywords are not supported by the </span><span class="rvts6">Numbering commands.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts40">AUTONUM</span><span class="rvts6"> with no operands in ISPF is treated as </span><span class="rvts40">AUTONUM ON</span><span class="rvts6">. This is not true in SPFLite, you must explicitly enter </span><span class="rvts40">ON</span><span class="rvts6"> or </span><span class="rvts40">OFF </span><span class="rvts6">as this is the normal SPFLite convention for On/Off settings</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">ISPF supports a LEVEL concept for the sequence field. SPFLite does not support this.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts6">ISPF supports files which have both COBOL </span><span class="rvts40">and</span><span class="rvts6"> Standard numbering. This was rarely, if ever, used. SPFLite will only allow one numbering style to be defined or applied at any given time. </span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts6">ISPF links the numbering style to the file </span><span class="rvts40">type</span><span class="rvts6">. SPFLite maintains the numbering style within the Edit </span><span class="rvts40">Profile</span><span class="rvts6">, which may or may not be the same name as the file extension.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The ISPF keywords NOSTD, NOCOBOL and NOCOB are also unsupported as they were used in ISPF to manage sequencing of a file when both STD and COBOL numbering types are in effect at the same time.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Protect-yourself-from-sequence-numbering-mistakes"></a>
+<span class="rvts40">Protect yourself from sequence numbering mistakes</span></p>
+<p class="rvps2"><span class="rvts173"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As with any new facility, if you choose to try the Numbering facilities, be cautious until you become familiar with it. Unlike many other commands, the Numbering commands have the potential to overlay and destroy data unexpectedly if you specify things incorrectly. Make sure you know how to use </span><a class="rvts44" href="UNDO.html">UNDO</a><span class="rvts6"> to reverse the effects of any editing action. Or simply use </span><a class="rvts44" href="CANCEL.html">CANCEL</a><span class="rvts6"> to exit your edit session, resolve the problem, and try again. Finally, it is recommended that you experiment with test files first, to help you understand how these commands operate. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Lastly, note that the sequence numbering commands consider a non-text file type as "exempt" from being numbered or renumbered, and will reject a numbering command from being applied to it. The file extensions of non-text files are listed in the File Manager tab of the SPFLite Global Options GUI. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If for any reason you believe the numbering commands are not operating in compliance with the documentation, please let us know on the SPFLite user forum.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Understanding-ISPF-sequence-numbering-types"></a>
+<span class="rvts40">Understanding sequence numbering types</span></p>
+<p class="rvps2"><span class="rvts6"> </span></p>
+<p class="rvps9"><span class="rvts6">Unlike ISPF, which only knew about two "types" of numbering: "Standard" numbering, and COBOL numbering, SPFLite has not tied itself to any preconceived ideas about where in a text line the sequence numbers should appear, nor their length. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite has introduced a new numbering command - </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> - to allow you to describe how </span><span class="rvts40">you</span><span class="rvts6"> want to place the sequence number field. Once defined by the </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> command, the NUMBER / RENUM / UNNUMBER commands all perform their function under control of those </span><span class="rvts40">NUMTYPE </span><span class="rvts6">specifications.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">So just what options can be specified?:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Sequence number fields may be from 4 to 8 characters in length.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">The field may be placed anywhere within the text record, </span><span class="rvts40">you</span><span class="rvts6"> specify the start and end columns.</span></li>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">If a text line is shorter than needed to contain the field, it will be automatically padded with sufficient blanks.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Fields may even be specified using relative columns </span><span class="rvts40">from the right end of the line</span><span class="rvts6">.</span></li>
+</ul>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">The numbering function can be requested to </span><span class="rvts94">truncate</span><span class="rvts6"> the line following the sequence field.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">You may request the sequence field be set equal to the SPFLite line number itself rather than an artificial incrementing number.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps127"><span class="rvts40">Note: &nbsp; </span><span class="rvts6">It is quite possible for you to specify a </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> specification that is </span><span class="rvts182">spectacularly</span><span class="rvts6"> harmful. SPFLite will slavishly follow your orders. E.G. If you </span><span class="rvts40">really</span><span class="rvts6"> specify putting sequence numbers right in columns 20-27 of your source file, SPFLite will not question it.</span></p>
+<p class="rvps127"><span class="rvts6"><br/></span></p>
+<p class="rvps127"><span class="rvts262"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts263">BE CAREFUL!</span></p>
+<p class="rvps127"><span class="rvts40"><br/></span></p>
+<p class="rvps129"><span class="rvts6">However, to help you, SPFLite doesn't just ignore the old ISPF standards. The </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> command accepts 3 shortcuts to accommodate this:</span></p>
+<div class="rvps129"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="264" style="padding: 1px;"><p class="rvps128"><span class="rvts40">NUMTYPE COB</span></p>
+</td>
+<td width="594" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Will setup a COBOL sequence field in columns 1 - 6.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="264" style="padding: 1px;"><p class="rvps128"><span class="rvts40">NUMTYPE STD</span></p>
+</td>
+<td width="594" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Will setup a standard sequence field in columns 73 - 80</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="264" style="padding: 1px;"><p class="rvps128"><span class="rvts40">NUMTYPE IBM</span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td width="594" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Will setup a standard sequence field in columns 73 - 80 and request truncation after column 80.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><a name="Dealing-with-sequence-numbers-that-get-in-your-way"></a>
+<span class="rvts40">Dealing with sequence numbers that get in your way</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">ISPF integrates the presence of sequence numbers into its editor logic. SPFLite does not. As a result, there is nothing "magic" or "special" about these numbers. They are just strings of digit characters that exist in your data. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In particular, ISPF maintains the screen locations for displayed sequence numbers if you use the LEFT or RIGHT primary commands (normally mapped to F10 and F11) so they don't shift on the screen. However, in SPFLite, LEFT and RIGHT will include those numbers as simply another part of your user data, and they will get shifted along with everything else.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As you edit your file, if you have sequence numbers, say in columns 73-80, these will get "pulled" or "pushed" as you use the DEL key or type data in Insert Mode. That may cause problems, including making your data invalid for the purposes you intend. For instance, it could create syntax errors in a source program.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To resolve such problems, you can UNNUMBER your file, perform your changes and then NUMBER the file..</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Automatic-sequence-renumbering-during-SAVE-and-END"></a>
+<span class="rvts40">Automatic sequence renumbering during SAVE and END</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite supports the &nbsp;AUTONUM ability. Simply issue </span><span class="rvts40">AUTONUM ON&nbsp;</span><span class="rvts6"> or </span><span class="rvts40">AUTONUM OFF</span><span class="rvts6"> to control this.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To use automatic sequence numbering a valid NUMTYPE specification must exist.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Determining-the-value-of-the-new-sequence-numbers-for-RENUM"></a>
+<span class="rvts40">Determining the value of the new sequence numbers for RENUM</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The RENUM commands will completely assign new sequence numbers. The starting number and increment are based on the number of lines in the file, and the specified size of the sequence number field. The following table summarizes this.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<div class="rvps10"><table width="70%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; background-color: #ffffff; border-spacing: 2px;">
+<tr valign="top">
+<td width="200" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps10"><span class="rvts6">File Size</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Sequence # Size</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Starting Number</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Increment</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="5" width="200" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Under 1000</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0010</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="5" width="200" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Under 10000</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00010</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="5" width="200" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Under 100000</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">000010</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="5" width="200" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Under 1000000</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">000001</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">0000010</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="128" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">00000100</span></p>
+</td>
+<td width="90" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">100</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Determining-the-value-of-the-new-sequence-numbers-for-NUMBER"></a>
+<span class="rvts40">Determining the value of the new sequence numbers for NUMBER</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts40">NUMBER</span><span class="rvts6"> command is different from </span><span class="rvts40">RENUM</span><span class="rvts6">, in that it will only </span><span class="rvts140">conditionally</span><span class="rvts6"> renumber a file, and then only where needed. Its primary purpose is to </span><span class="rvts40">verify</span><span class="rvts6"> that a file's sequence numbers are present, valid and in ascending order, and only acts to correct the file if those conditions are not met.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts40">NUMBER</span><span class="rvts6"> finds the file already contains a valid set of sequence numbers, </span><span class="rvts40">no action</span><span class="rvts6"> will be performed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Otherwise,</span><span class="rvts40"> NUMBER </span><span class="rvts6">attempts to correct out-of-sequence numbers in a way that causes the fewest changes to the current sequence numbers that are already present. As such, you may end up with lines numbered with varying increments between them. This is not an error, merely the result of keeping the current valid numbers and </span><span class="rvts40">fitting in</span><span class="rvts6"> the corrections between them. If your file is severely out of sequence, </span><span class="rvts40">NUMBER</span><span class="rvts6"> could end up abandoning most or all of the original sequence numbers. </span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Synchronizing-sequence-numbers-with-SPFLite-using-RESEQ"></a>
+<span class="rvts40">Synchronizing sequence numbers with SPFLite</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">ISPF provides two basic numbering options. NUMBER will attempt to change as little as possible, keeping existing sequence numbers when it can. RENUM changes every line, creating new numbers that have uniform values.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite provides a third option, using the </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> option </span><span class="rvts40">REAL</span><span class="rvts6">. Specifying </span><span class="rvts40">REAL</span><span class="rvts6"> on </span><span class="rvts40">NUMTYPE</span><span class="rvts6"> will cause the </span><span class="rvts40">RENUM</span><span class="rvts6"> command to &nbsp;use the line numbers known to SPFLite as the numeric values of the new sequence number field, rather than trying to retain any existing numbers or calculating new values for them. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

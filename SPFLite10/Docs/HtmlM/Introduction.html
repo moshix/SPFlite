@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Introduction</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Introduction">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Introduction" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Introduction"
+		  data-hnd-context="0"
+		  data-hnd-title="Introduction"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Introduction</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">The Edit Macro support in SPFLite provides a means to automate complex or repetitive editing tasks, and to create functions not available with SPFLite's existing built-in edit commands.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Operating Modes</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">SPFLite supports running macros in two modes.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">First, as Primary commands. As primary commands macros can utilize operands coded on the command line following the macro name and can also utilize line ranges marked via the built-in line commands. e.g. a primary macro can reference line ranges marked with </span><span class="rvts13">CC</span><span class="rvts11">/</span><span class="rvts13">CC</span><span class="rvts11"> markers.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Second, as Line commands. Line command macros can utilize either single line or block mode line marking. Being line commands, these macros usually have short names. Whether a line command is considered a single line or a block mode line command is discussed in the next section "</span><a class="rvts15" href="Macroformatandstructure.html">Macro Format and Structure</a><span class="rvts11">".</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For Line command macros, because of their nature, &nbsp;there are some additional restrictions on usage</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Line command macros cannot be entered at the same time as commands on the command line.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Only one line command macro at a time may be entered; and only one instance of that macro. e.g. for the macro </span><span class="rvts13">AX</span><span class="rvts11"> you could not enter a series of individual </span><span class="rvts13">AX</span><span class="rvts11"> line commands. A pair of block mode </span><span class="rvts13">AXX</span><span class="rvts11"> lines is considered </span><span class="rvts13">one</span><span class="rvts11"> instance.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Line command macros can not be entered at the same time as other built-in line commands which are considered 'source' line markers, like </span><span class="rvts13">CC</span><span class="rvts11"> or </span><span class="rvts13">MM</span><span class="rvts11">, since line command macros are themselves always treated as a source range.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Script Engine</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The script engine chosen to support the macro facility is called </span><span class="rvts13">thinBasic</span><span class="rvts11"> (</span><a class="rvts12" href="www.thinbasic.com">www.thinBasic.com</a><span class="rvts11">). </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Don't let the word "</span><span class="rvts13">thin</span><span class="rvts11">" fool you. </span><span class="rvts13">thinBasic</span><span class="rvts11"> is no "toy" language. This is a very capable script engine written in, and modeled after, PowerBasic (</span><a class="rvts12" href="www.powerbasic.com">www.PowerBasic.com</a><span class="rvts11">). Since SPFLite itself is written in PowerBasic, the interface between SPFLite and </span><span class="rvts13">thinBasic</span><span class="rvts11"> is quite straightforward, which makes possible a highly efficient implementation. All of our test scripts have run very quickly, and you should see similar good performance as you write your own scripts. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Being a BASIC variant, users with experience in typical programming or scripting languages should recognize most of the </span><span class="rvts13">thinBasic</span><span class="rvts11"> syntax. Many sample macros have been provided to help you get started.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As you will quickly notice, keywords and syntax in </span><span class="rvts13">thinBasic</span><span class="rvts11">, like SPFLite, are case-insensitive. When you read the documentation and sample code that follows, the choice of capitalization you see is simply a style choice. You are free to capitalize (or not) any way you see fit.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13">thinBasic</span><span class="rvts11"> components are included in the normal SPFLite install, so no separate install of </span><span class="rvts13">thinBasic</span><span class="rvts11"> itself is required. If however you would like to explore </span><span class="rvts13">thinBasic</span><span class="rvts11"> as a normal scripting language, then you should obtain their full install package and install it. We recommend, as of this writing (May 2013), you install release 1.9.6.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">If you go that route, be prepared for a lot of reading. The full </span><span class="rvts13">thinBasic</span><span class="rvts11"> help document is included in the basic SPFLite install, and can be accessed from the Start Menu SPFLite program group, or from within SPFLite itself by entering </span><span class="rvts14">HELP THINBASIC.&nbsp;</span><span class="rvts11"> You will be surprised how much is in it. By way of full disclosure, you may also find that some of the documentation is incomplete. The developers of </span><span class="rvts13">thinBasic</span><span class="rvts11"> tend to develop first and document later. It's a nice package, but it is what it is.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This document is organized into the following sections.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts13">The SPFLite interface</span><span class="rvts11">. This contains the reference documentation for each of the SPFLite interface calls.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts13">Working with the interface.</span><span class="rvts11"> &nbsp;This contains tutorials on interface techniques: &nbsp;How to handle command parameters, how to search for and manipulate text lines, how to create a new Line command, how to control the edit cursor location, etc.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts13">Sample macros. </span><span class="rvts11">Several of the included sample macros are shown with full comments.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts13">thinBasic essentials.&nbsp;</span><span class="rvts11"> This is a simplified introduction to </span><span class="rvts13">thinBasic</span><span class="rvts11">. It is not a complete and definitive description of all </span><span class="rvts13">thinBasic</span><span class="rvts11"> capabilities and functions, but should be enough to get you by. For more than that, refer to the </span><span class="rvts13">thinBasic</span><span class="rvts11"> Help file as described above.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Working with the thinBasic Interpreter</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As interpreters go, </span><span class="rvts13">thinBasic</span><span class="rvts11"> is quite sophisticated. However, it remains a true interpreter. What that means to you is that it does not perform a "full program parse" before beginning to execute your script. Instead, it reads, parses and executes a line at a time. So, if you have a macro that's 10 lines long, and there is an error in line 10, it will perform the first 9 statements, then halt with an error-detected message. You will have to correct your errors one at a time until you get past this.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">In practical terms, you may find it beneficial to write larger macros in pieces, starting small and testing a bit at a time, and adding more code as you go along, to minimize any problems from syntax errors you might introduce into your code.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You can also develop "pieces" of </span><span class="rvts13">thinBasic</span><span class="rvts11"> code and </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> them into your macro. Doing this is a way to 'modularize' your code, so that you can deal with tested pieces of </span><span class="rvts13">thinBasic</span><span class="rvts11"> code that you know will work correctly. This is a technique that might help you if your macro is quite large. See the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation regarding the </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement. </span><span class="rvts13">Note:</span><span class="rvts11"> &nbsp;At this point, the </span><span class="rvts13">#INCLUDE </span><span class="rvts11">statement does not appear to handle unqualified file names consistently. Until this is resolved, it would be prudent to fully qualify the included filenames.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Extended Line Command Modifiers</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Extended Line Command Modifiers">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Extended Line Command Modifiers" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="LineCommandExtensions"
+		  data-hnd-context="37"
+		  data-hnd-title="Extended Line Command Modifiers"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Extended Line Command Modifiers</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><a class="rvts84" href="LineCommandExtensions.html#Introduction">Introduction</a></p>
+<p class="rvps207"><a class="rvts84" href="LineCommandExtensions.html#Standardcommandformswithmodifiers">Standard command forms with modifiers</a></p>
+<p class="rvps207"><a class="rvts84" href="LineCommandExtensions.html#Retainline-commandmodifier">Retain line-command modifier</a></p>
+<p class="rvps207"><a class="rvts84" href="LineCommandExtensions.html#Forwardandbackwardmodifiers">Forward and backward modifiers</a></p>
+<p class="rvps207"><a class="rvts84" href="LineCommandExtensions.html#Post-excludeandpost-unexcludemodifiers">Post-exclude and post-unexclude modifiers</a></p>
+<p class="rvps9"><a class="rvts25" href="LineCommandExtensions.html#Coexistenceof&and%20/-modifiers">Coexistence of &amp; and +/- modifiers</a></p>
+<p class="rvps5"><a class="rvts84" href="LineCommandExtensions.html#Examples">Examples</a></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Many line commands support the use of Extended Line Command Modifiers. These are optional characters appended to the right end of a line command, requesting additional special processing to be performed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps204"><a name="Standardcommandformswithmodifiers"></a>
+<span class="rvts40">Standard command forms with modifiers</span></p>
+<p class="rvps204"><span class="rvts40"><br/></span></p>
+<p class="rvps205"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">The standard form of a line command with a modifier is is to place the modifier after the command </span><span class="rvts40">name</span><span class="rvts6">, rather than the end of the command as a whole.</span></p>
+<p class="rvps205"><span class="rvts6"><br/></span></p>
+<p class="rvps206"><span class="rvts6">For example, if a command to copy 5 lines (</span><span class="rvts40">C5) </span><span class="rvts6">was to be </span><span class="rvts40">retained</span><span class="rvts6"> with a </span><span class="rvts40">&amp;</span><span class="rvts6"> modifier, the standard form is </span><span class="rvts40">C&amp;5</span><span class="rvts6"> rather than </span><span class="rvts40">C5&amp;</span><span class="rvts6">. The standard way to lower-case 3 lines and then exclude them following the operation would be with a command </span><span class="rvts40">LC-3</span><span class="rvts6"> rather than </span><span class="rvts40">LC3-</span><span class="rvts6">.&nbsp;</span><span class="rvts40"> </span></p>
+<p class="rvps206"><span class="rvts40"><br/></span></p>
+<p class="rvps206"><span class="rvts6">However, SPFLite also accepts commands with modifiers in non-standard forms. When the display is refreshed, commands are redisplayed in their standard form. If you enter the command </span><span class="rvts40">C5&amp;</span><span class="rvts6">, it will be redisplayed as </span><span class="rvts40">C&amp;5</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Retainline-commandmodifier"></a>
+<span class="rvts40">Retain line-command modifier</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The addition of the modifier </span><span class="rvts40">&amp;</span><span class="rvts6"> to a line command requests that the command be </span><span class="rvts40">retained</span><span class="rvts6"> on the line following completion of the command rather than having the command disappear when completed. This is similar to the use of </span><span class="rvts40">&amp;</span><span class="rvts6"> prefix on the primary command line to retain the primary command. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This could be used, for example, when copying a range of line commands with a pair of </span><span class="rvts40">CC</span><span class="rvts6"> commands and you will be copying these lines to multiple scattered locations. If the </span><span class="rvts40">CC</span><span class="rvts6"> commands are entered as </span><span class="rvts40">CC&amp;</span><span class="rvts6"> commands and the destination as </span><span class="rvts40">A</span><span class="rvts6"> then following completion of the copy, the </span><span class="rvts40">CC&amp;</span><span class="rvts6"> commands will remain on the selected lines awaiting placement of the next </span><span class="rvts40">A</span><span class="rvts6"> line command for the next copy operation. When all copies are done, the </span><span class="rvts40">CC&amp;</span><span class="rvts6"> can be manually blanked, or cleared with a </span><a class="rvts316" href="RESETResetEditMode.html">RESET COMMAND</a><span class="rvts6"> command, usually abbreviated as </span><span class="rvts40">RES CMD</span><span class="rvts6">. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Note: &nbsp;</span><span class="rvts6">Once a command is "retained" on a line using </span><span class="rvts40">&amp;</span><span class="rvts6">, a simple </span><span class="rvts40">RESET</span><span class="rvts6"> command without </span><span class="rvts40">CMD</span><span class="rvts6"> </span><span class="rvts94">will not clear it</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you enter a pair of block commands, one with </span><span class="rvts40">&amp;</span><span class="rvts6"> and one without </span><span class="rvts40">&amp;</span><span class="rvts6">, the command without </span><span class="rvts40">&amp;</span><span class="rvts6"> will be "promoted" to one with the </span><span class="rvts40">&amp;</span><span class="rvts6"> on it. For example, if you enter </span><span class="rvts40">CC</span><span class="rvts6"> on one line and </span><span class="rvts40">CC&amp;</span><span class="rvts6"> on another, the </span><span class="rvts40">CC</span><span class="rvts6"> will be changed into </span><span class="rvts40">CC&amp;</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">&amp;</span><span class="rvts6"> line command option can be used with the </span><a class="rvts316" href="A.html">A</a><span class="rvts6">, </span><a class="rvts316" href="B.html">B</a><span class="rvts6">, </span><a class="rvts316" href="C.html">C</a><span class="rvts6">, </span><a class="rvts316" href="C.html">CC</a><span class="rvts6">, </span><a class="rvts316" href="H.html">H</a><span class="rvts6">, </span><a class="rvts316" href="H.html">HH</a><span class="rvts6">, </span><a class="rvts316" href="O.html">O</a><span class="rvts6">, </span><a class="rvts316" href="O.html">OO</a><span class="rvts6">, </span><a class="rvts41" href="OR.html">OR</a><span class="rvts6">, and </span><a class="rvts41" href="OR.html">ORR</a></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">Note</span><span class="rvts6">: Users of recent versions of IBM ISPF should be aware that SPFLite's implementation of the </span><span class="rvts40">&amp;</span><span class="rvts6"> modifier is different from the ISPF </span><span class="rvts40">K</span><span class="rvts6"> support. The SPFLite retain modifier applies to more commands, and the semantics are slightly different. SPFLite uses the </span><span class="rvts40">&amp;</span><span class="rvts6"> because SPFLite's support was not really compatible with ISPF, and for us to use </span><span class="rvts40">K</span><span class="rvts6"> was somewhat misleading.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Forwardandbackwardmodifiers"></a>
+<span class="rvts40">Forward and backward modifiers</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For line commands that accept a 'number of lines' operand, the Forward modifier </span><span class="rvts40">/</span><span class="rvts6"> and the Backward modifier </span><span class="rvts40">\</span><span class="rvts6"> may be used instead of a number to represent the range of lines starting from the one on which the command is placed to the beginning or end of the dataset. Appending a </span><span class="rvts40">/</span><span class="rvts6"> character requests all lines from the marked line Forward to the last line inclusive. Appending a </span><span class="rvts40">\</span><span class="rvts6"> character requests all lines from the marked line Backward to the top of the file inclusive.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For example, entering a </span><span class="rvts40">D\</span><span class="rvts6"> on line 3 would request deletion of lines 1 through 3. Entering a </span><span class="rvts40">C/</span><span class="rvts6"> on line 1 would select the entire file as the range to be used for whatever Primary command was entered.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Note: &nbsp;</span><span class="rvts6">Be careful using the </span><span class="rvts40">D</span><span class="rvts6"> line command with forward or backward modifiers. If you were to place </span><span class="rvts40">D/</span><span class="rvts6"> on line 1 of a file and press Enter, </span><span class="rvts40">every line of the file will be deleted.</span><span class="rvts6"> &nbsp;There are no safeguards, and no "are you sure" messages to prevent you from doing this by accident. If you did issue a &nbsp;</span><span class="rvts40">D/</span><span class="rvts6"> on line 1 and didn't mean to, you can either (a) immediately issue an </span><span class="rvts40">UNDO</span><span class="rvts6"> command, or (b) issue a </span><span class="rvts40">CANCEL</span><span class="rvts6"> command to get out of the edit session without saving the (now zero-length) file. Bear in mind that if you issue a </span><span class="rvts40">CANCEL</span><span class="rvts6"> command, you will lose </span><span class="rvts40">all</span><span class="rvts6"> changes you have made to your file that were done after the last time the file was saved. Because the </span><span class="rvts40">UNDO</span><span class="rvts6"> action may be more helpful than the </span><span class="rvts40">CANCEL</span><span class="rvts6"> action, be sure you have issued an appropriate </span><span class="rvts40">SETUNDO</span><span class="rvts6"> command to enable the </span><span class="rvts40">UNDO</span><span class="rvts6"> command to work as you need it to. The </span><span class="rvts40">SETUNDO</span><span class="rvts6"> status is defined in the Profile and is specific to each file type.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For marking lines using the Forward </span><span class="rvts40">/</span><span class="rvts6"> modifier, from a specific line to the bottom, this is equivalent to using a dummy 99999 operand to mean the rest of the file. IBM ISPF has no notation equivalent to the Backward </span><span class="rvts40">\</span><span class="rvts6"> modifier.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">/&nbsp;</span><span class="rvts6"> and </span><span class="rvts40">\&nbsp;</span><span class="rvts6"> line command options can be used with the </span><a class="rvts316" href="C.html">C</a><span class="rvts6">, </span><a class="rvts316" href="D.html">D</a><span class="rvts6">, </span><a class="rvts316" href="GGGGlueLinesTogether.html">G</a><span class="rvts6">, </span><a class="rvts316" href="H.html">H</a><span class="rvts6">, </span><a class="rvts316" href="J.html">J</a><span class="rvts6">, </span><a class="rvts316" href="LC.html">LC</a><span class="rvts6">, </span><a class="rvts316" href="M.html">M</a><span class="rvts6">, </span><a class="rvts316" href="O.html">O</a><span class="rvts6">, </span><a class="rvts41" href="OR.html">OR</a><span class="rvts6">, </span><a class="rvts316" href="R.html">R</a><span class="rvts6">, </span><a class="rvts316" href="S.html">S</a><span class="rvts6">, </span><a class="rvts316" href="SC.html">SC</a><span class="rvts6">, </span><a class="rvts316" href="TC.html">TC</a><span class="rvts6">, </span><a class="rvts41" href="TG.html">TG</a><span class="rvts6">, </span><a class="rvts41" href="TJ.html">TJ</a><span class="rvts6">, </span><a class="rvts316" href="TR.html">TR</a><span class="rvts6">, </span><a class="rvts316" href="UC.html">UC</a><span class="rvts6">, and </span><a class="rvts316" href="X.html">X</a><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts284">For </span><span class="rvts285">R</span><span class="rvts284"> and </span><span class="rvts285">TR</span><span class="rvts284"> line commands with / or \ modifiers, SPFLite converts these to an "equivalent block form" of </span><span class="rvts285">RR</span><span class="rvts284"> and </span><span class="rvts285">TRR</span><span class="rvts284">, and has nothing to do with repetition factors or line lengths. See the </span><a class="rvts339" href="R.html">R / RR - Repeat Lines</a><span class="rvts284"> and </span><a class="rvts339" href="TR.html">TR / TRR - Trim Trailing Blanks</a><span class="rvts284"> commands for more information.</span></p>
+<p class="rvps5"><span class="rvts284"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The Pad to Length line command </span><span class="rvts40">PL</span><span class="rvts6"> will accept a special modifier of</span><span class="rvts40"> </span><span class="rvts168">/</span><span class="rvts40"> </span><span class="rvts6">or </span><span class="rvts168">\</span><span class="rvts6">. When used in this way, a command of</span><span class="rvts40"> </span><span class="rvts168">PL/</span><span class="rvts6"> will pad all following lines to a minimum length of 1;</span><span class="rvts310"> </span><span class="rvts168">PL\</span><span class="rvts6"> will do the same to preceding lines. Placing </span><span class="rvts168">PL/</span><span class="rvts6"> on line 1 of a file can be used to ensure that all lines in the file have a minimum line length of 1; that is, it is a quick way to ensure there are no zero-length lines in the file. If you need to pad to a longer length (such as 4 for example), you can use the block mode version with </span><span class="rvts40">PLL4</span><span class="rvts6"> on line 1 and </span><span class="rvts40">PLL</span><span class="rvts6"> on the last line.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="PL.html">PL / PLL - Pad Lines</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Note: Re: foreign keyboards. Since the / and \ characters are shifted characters on many keyboards, SPFLite will accept a period </span><span class="rvts40">(.)</span><span class="rvts6"> in place or a </span><span class="rvts40">/ </span><span class="rvts6">and two periods </span><span class="rvts40">(..)</span><span class="rvts6"> in place of a </span><span class="rvts40">\ </span><span class="rvts6">to simplify typing.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps4"><a name="Post-excludeandpost-unexcludemodifiers"></a>
+<span class="rvts40">Post-exclude and post-unexclude modifiers</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The addition of one of </span><span class="rvts40">+</span><span class="rvts6"> or </span><span class="rvts40">-</span><span class="rvts6"> to a line command requests the lines specified by the command be excluded (</span><span class="rvts40">-</span><span class="rvts6">) or unexcluded (</span><span class="rvts40">+</span><span class="rvts6">) following the operation. For example, using </span><span class="rvts40">CC-</span><span class="rvts6"> instead of </span><span class="rvts40">CC</span><span class="rvts6"> for a copy operation requests the original lines being copied be excluded following the operation, just as if the range had been marked by </span><span class="rvts40">XX</span><span class="rvts6"> line commands. If you used a regular </span><span class="rvts40">CC</span><span class="rvts6"> block, and copied lines to an A- line, the original lines would not be excluded, but the new copies of those lines would be excluded.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">(See also comments below about commands such as </span><span class="rvts40">A&amp;-</span><span class="rvts6">).</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">+</span><span class="rvts6"> and </span><span class="rvts40">-</span><span class="rvts6"> line command options can be used with the </span><a class="rvts316" href="A.html">A</a><span class="rvts6">, </span><a class="rvts316" href="AA.html">AA</a><span class="rvts6">, </span><a class="rvts316" href="B.html">B</a><span class="rvts6">, </span><a class="rvts316" href="BB.html">BB</a><span class="rvts6">, </span><a class="rvts316" href="C.html">C</a><span class="rvts6">, </span><a class="rvts316" href="C.html">CC</a><span class="rvts6">, </span><a class="rvts316" href="H.html">H</a><span class="rvts6">, </span><a class="rvts316" href="H.html">HH</a><span class="rvts6">, </span><a class="rvts316" href="LC.html">LC</a><span class="rvts6">, </span><a class="rvts316" href="LC.html">LCLC</a><span class="rvts6">, </span><a class="rvts316" href="LC.html">LCC</a><span class="rvts6">, </span><a class="rvts316" href="O.html">O</a><span class="rvts6">, </span><a class="rvts316" href="O.html">OO</a><span class="rvts6">, </span><a class="rvts41" href="OR.html">OR/ORR,</a><span class="rvts6"> </span><a class="rvts316" href="R.html">R</a><span class="rvts6">, </span><a class="rvts316" href="R.html">RR</a><span class="rvts6">, </span><a class="rvts316" href="SC.html">SC</a><span class="rvts6">, </span><a class="rvts316" href="SC.html">SCSC</a><span class="rvts6">, </span><a class="rvts316" href="SC.html">SCC</a><span class="rvts6">, </span><a class="rvts316" href="TC.html">TC</a><span class="rvts6">, </span><a class="rvts316" href="TC.html">TCTC</a><span class="rvts6">, </span><a class="rvts316" href="TC.html">TCC</a><span class="rvts6">, </span><a class="rvts41" href="TG.html">TG</a><span class="rvts6">, </span><a class="rvts41" href="TJ.html">TJ</a><span class="rvts6">, </span><a class="rvts316" href="UC.html">UC</a><span class="rvts6">, </span><a class="rvts316" href="UC.html">UCUC</a><span class="rvts6">, </span><a class="rvts316" href="UC.html">UCC</a><span class="rvts6">, </span><a class="rvts316" href="ShiftLeft.html">(</a><span class="rvts6">, </span><a class="rvts316" href="ShiftLeft.html">((</a><span class="rvts6">, </span><a class="rvts316" href="ShiftRight.html">)</a><span class="rvts6">, </span><a class="rvts316" href="ShiftRight.html">))</a></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps2"><a name="Coexistenceof&amp;and+/-modifiers"></a>
+<span class="rvts36">Coexistence of &amp; and +/- modifiers</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts277">&amp;</span><span class="rvts35"> (Retain) line command modifier, and the </span><span class="rvts36">-</span><span class="rvts35">/</span><span class="rvts277">+</span><span class="rvts35"> (post-exclude and post-unexclude) line command modifier, can coexist for the line commands </span><span class="rvts36">A</span><span class="rvts35">, </span><span class="rvts36">B</span><span class="rvts35">, </span><span class="rvts36">C</span><span class="rvts35">/</span><span class="rvts36">CC</span><span class="rvts35">, </span><span class="rvts36">O</span><span class="rvts35">/</span><span class="rvts36">OO</span><span class="rvts35"> and </span><span class="rvts36">OR</span><span class="rvts35">/</span><span class="rvts36">ORR</span><span class="rvts35">. In </span><span class="rvts36">CC</span><span class="rvts35">, </span><span class="rvts36">OO</span><span class="rvts35"> and </span><span class="rvts36">ORR</span><span class="rvts35"> the lines that begin and end the block will not themselves be excluded or unexcluded by the </span><span class="rvts36">-</span><span class="rvts35">/</span><span class="rvts277">+</span><span class="rvts35"> modifier, but only the lines </span><span class="rvts85">within</span><span class="rvts35"> those blocks.</span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">Why would you wish to have both a </span><span class="rvts36">&amp;</span><span class="rvts35"> and a </span><span class="rvts36">+</span><span class="rvts35"> or </span><span class="rvts36">– </span><span class="rvts35">modifier at the same time? &nbsp;Consider an example where you might to gather a copy of several different blocks of lines, scattered throughout your edit file, and you want them copied to some fixed point, and you also want those lines to be initially excluded so they don't distract you. You could set up an </span><span class="rvts36">A&amp;-</span><span class="rvts35"> or </span><span class="rvts36">B&amp;-</span><span class="rvts35"> line command as the “sink” for those </span><span class="rvts36">CC</span><span class="rvts35"> or </span><span class="rvts36">MM</span><span class="rvts35"> line commands. </span></p>
+<p class="rvps9"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">Note that if you wanted all of the moved or copied lines to get copied to the kept copy point, and if you used an </span><span class="rvts36">A&amp;-</span><span class="rvts35"> for this, each group of lines would be copied just </span><span class="rvts85">after</span><span class="rvts35"> the </span><span class="rvts36">A&amp;-</span><span class="rvts35"> line, which means they would end up being just </span><span class="rvts85">before</span><span class="rvts35"> the last group of lines copied in. So, if you used </span><span class="rvts36">A&amp;-</span><span class="rvts35"> for that purpose, each successive group of lines would get copied in </span><span class="rvts85">reverse order,</span><span class="rvts35"> much like a ‘stack'. For most users, that will be a surprising and undesired effect. To get the lines copied in the same order as you issue the </span><span class="rvts36">CC</span><span class="rvts35"> or </span><span class="rvts36">MM</span><span class="rvts35"> line commands, the copy-point should be defined as </span><span class="rvts36">B&amp;-</span><span class="rvts35"> instead. A little trial and experimentation will make this point clear. Once your copying or moving of lines is complete, just go back and remove the persistent </span><span class="rvts36">A&amp;-</span><span class="rvts35"> or </span><span class="rvts36">B&amp;-</span><span class="rvts35"> command from the line it was on.</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps4"><a name="Examples"></a>
+<span class="rvts40">Examples</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Copy 3 lines after another and exclude the copied lines following the operation.</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">C3 &nbsp; &nbsp; AAA.....</span></p>
+<p class="rvps6"><span class="rvts139">000002 BBB.....</span></p>
+<p class="rvps6"><span class="rvts139">A- &nbsp; &nbsp; CCC.....</span></p>
+<p class="rvps6"><span class="rvts139">000004 DDD.....</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">would result in</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">000001 AAA.....</span></p>
+<p class="rvps6"><span class="rvts139">000002 BBB.....</span></p>
+<p class="rvps6"><span class="rvts139">000003 CCC.....</span></p>
+<p class="rvps6"><span class="rvts139">------ ----------------------- &lt; 000003 &gt; -------</span></p>
+<p class="rvps6"><span class="rvts139">000007 DDD.....</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Copy a line and after keep the copy command for re-use.</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">C&amp; &nbsp; &nbsp; AAA.....</span></p>
+<p class="rvps6"><span class="rvts139">000002 BBB.....</span></p>
+<p class="rvps6"><span class="rvts139">A &nbsp; &nbsp; &nbsp;CCC.....</span></p>
+<p class="rvps6"><span class="rvts139">000004 DDD.....</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">would result in</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">C&amp; &nbsp; &nbsp; AAA.....</span></p>
+<p class="rvps6"><span class="rvts139">000002 BBB.....</span></p>
+<p class="rvps6"><span class="rvts139">000003 CCC.....</span></p>
+<p class="rvps6"><span class="rvts139">000004 AAA...</span></p>
+<p class="rvps6"><span class="rvts139">000005 DDD.....</span></p>
+<p class="rvps11" style="page-break-before: always;"><span class="rvts139"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

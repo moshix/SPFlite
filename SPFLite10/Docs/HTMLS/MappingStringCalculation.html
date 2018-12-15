@@ -1,0 +1,1452 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Mapping String Calculation Operands</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mapping String Calculation Operands">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Mapping String Calculation Operands" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingStringCalculation"
+		  data-hnd-context="258"
+		  data-hnd-title="Mapping String Calculation Operands"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Mapping String Calculation Operands</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Topics</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a class="rvts160" href="MappingStringCalculation.html#Specifying-a-calculation-operand">Specifying a calculation operand</a></p>
+<p class="rvps9"><span class="rvts160">Introduction to the calculator</span></p>
+<p class="rvps9"><span class="rvts160">Specifying numeric literals</span></p>
+<p class="rvps9"><span class="rvts160">Specifying large numeric literals</span></p>
+<p class="rvps9"><span class="rvts160">Expression Operators</span></p>
+<p class="rvps9"><span class="rvts160">Operation and use of calculations in mapping strings</span></p>
+<p class="rvps9"><span class="rvts160">Calculator command-line test program</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><a name="Specifying-a-calculation-operand"></a>
+<span class="rvts176">Specifying a calculation operand</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For the sequence items </span><span class="rvts40">SD</span><span class="rvts6"> and </span><span class="rvts40">SX</span><span class="rvts6">, and the numeric conversion items </span><span class="rvts40">DD</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6">, you are allowed to perform arithmetic operations on the value before it is formatted as a numeric value. This is done by specifying a </span><span class="rvts140">calculation operand</span><span class="rvts6">, which is a string operand containing an arithmetic expression string. The expression string is processed by a </span><span class="rvts140">calculation function</span><span class="rvts6">, which evaluates the expression and produces a numeric result, which in turn is formatted by the </span><span class="rvts40">SD</span><span class="rvts6">, </span><span class="rvts40">SX</span><span class="rvts6">, </span><span class="rvts40">DD</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6"> mapping items.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can invoke an SPFLite </span><span class="rvts40">primary command </span><span class="rvts6">from an SPFLite macro, using the built-in macro function </span><span class="rvts139">SPF_Cmd()</span><span class="rvts6">. When you do this, and your SPFLite command is a CHANGE command with a </span><span class="rvts40">mapping string </span><span class="rvts6">(a </span><span class="rvts140">string-2</span><span class="rvts6"> operand with an </span><span class="rvts40">M</span><span class="rvts6"> string), the mapping string can contain one or more </span><span class="rvts40">SD</span><span class="rvts6">, </span><span class="rvts40">SX</span><span class="rvts6">, </span><span class="rvts40">DD</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> or </span><span class="rvts40">XX</span><span class="rvts6"> mapping items, which in turn may have </span><span class="rvts140">calculation operands</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can also invoke the </span><span class="rvts140">calculation function</span><span class="rvts6"> directly from an edit macro, using the built-in function </span><span class="rvts139">SPF_Calc()</span><span class="rvts6">. See the macro documentation for more information, by issuing the command </span><span class="rvts40">HELP MACRO</span><span class="rvts6"> from the SPFLite primary command line. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You are likely to find the </span><span class="rvts140">calculation function</span><span class="rvts6"> will allow you to perform any calculations you might need in connection with your use of mapping strings, and then some. The design of the calculation features was made with future enhancements and developments of SPFLite in mind.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="Introductiontothecalculator"></a>
+<span class="rvts167">Introduction to the calculator</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">calculation function </span><span class="rvts6">has the following features.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The </span><span class="rvts140">calculation function </span><span class="rvts6">accepts a </span><span class="rvts140">calculation operand</span><span class="rvts6"> as a string value, containing one or more arithmetic expressions. It processes this string and produces a numeric result. Only integer calculations are performed. The string is treated as case-insensitive.</span></li>
+</ol></ol>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="2" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The </span><span class="rvts140">calculation operand</span><span class="rvts6"> may contain one or more expressions, separated by ;&nbsp;semicolons. The main reason to specify more than one expression is to perform assignments to more than one variable, as generally only one variable is assigned per expression. In this sense, “expressions” are somewhat like “statements” in a programming language, although as used in the </span><span class="rvts140">calculation function</span><span class="rvts6">, it is not quite so formal. The last or only expression may optionally omit the final ;&nbsp;semicolon. Extra semicolons are ignored.</span></li>
+</ol></ol>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="3" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The </span><span class="rvts140">calculation function </span><span class="rvts6">operates with 64-bit integer arithmetic, which has a capacity of 19 decimal digits or 16 hex digits. The highest decimal value is 9,223,372,036,854,775,807 and so there are actually 18 full decimal digits available. Note that no check is made for numeric overflow. For applications involving the editor, it is unlikely you would exceed this limit.</span></li>
+</ol></ol>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="4" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">When the </span><span class="rvts140">calculation function</span><span class="rvts6"> is called, it is provided with an</span><span class="rvts140"> initial value</span><span class="rvts6">. For the numeric conversion items </span><span class="rvts40">DD</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6">, the</span><span class="rvts140"> initial value</span><span class="rvts6"> is the number acquired by the mapping item, and for the sequence items </span><span class="rvts40">SD</span><span class="rvts6"> and </span><span class="rvts40">SX</span><span class="rvts6">, the</span><span class="rvts140"> initial value</span><span class="rvts6"> is the </span><span class="rvts140">sequence number</span><span class="rvts6">. When you invoke the </span><span class="rvts140">calculation function</span><span class="rvts6"> from an edit macro using the built-in function </span><span class="rvts168">SPF_Calc()</span><span class="rvts6">, the </span><span class="rvts140">initial value</span><span class="rvts6"> is one of the supplied arguments.</span></li>
+</ol></ol>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="5" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">The </span><span class="rvts140">calculation function</span><span class="rvts6"> provides 26 </span><span class="rvts140">variables</span><span class="rvts6"> named A through Z, which you can use like variables in a conventional program. These variables are 64-bit integer values, which can be read and modified. A variable is read by its appearance as a term in an expression, and is modified by being on the left side of an assignment or swap operator. The variable names are case insensitive.</span></li>
+</ol></ol>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="6" style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">When the </span><span class="rvts140">calculation function </span><span class="rvts6">begins, the variables are pre-initialized as follows:</span></li>
+</ol></ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">Variable X and variable R both contain the </span><span class="rvts140">initial value</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">Variable </span><span class="rvts139">S</span><span class="rvts6"> contains the contents of the </span><span class="rvts140">sequence number</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">Variable </span><span class="rvts139">L</span><span class="rvts6"> contains the line number where the CHANGE command found the </span><span class="rvts140">source string</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">Variable </span><span class="rvts139">C</span><span class="rvts6"> contains the beginning column number where the CHANGE command found the </span><span class="rvts140">source string</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">For the </span><span class="rvts40">SD</span><span class="rvts6"> and </span><span class="rvts40">SX</span><span class="rvts6"> commands, variables </span><span class="rvts139">X</span><span class="rvts163">, </span><span class="rvts139">R</span><span class="rvts6"> and </span><span class="rvts139">S</span><span class="rvts6"> will all have the same value.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">The remaining 21 variables will be initialized to zero.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">You are free to modify any variables. Because the pre-initialized variables noted above define initial conditions, you may wish to treat these variables as read-only and avoid modifying them, unless their pre-initialized values are not needed.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps114"><span class="rvts6">When you call the </span><span class="rvts140">calculation function</span><span class="rvts6"> from the SPFLite built-in function </span><span class="rvts139">SPF_Calc()</span><span class="rvts6">, the pre-initialization of variables is handled somewhat differently. See the Help entry for </span><span class="rvts139">SPF_Calc()</span><span class="rvts6"> in </span><span class="rvts40">HELP MACRO</span><span class="rvts6"> for more information.</span></li>
+</ul></ul></ul>
+<p class="rvps114"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="7" style="margin-left: 0px; text-indent: 0px" class="rvps115"><span class="rvts6">For variable </span><span class="rvts139">S</span><span class="rvts6">, the </span><span class="rvts140">sequence number</span><span class="rvts6"> value associated with it is the</span><span class="rvts140"> ordinal number</span><span class="rvts6"> of the order in which a string was found during a </span><span class="rvts40">CHANGE ALL</span><span class="rvts6"> command. During the course of a </span><span class="rvts40">CHANGE ALL</span><span class="rvts6"> operation that contains a mapping string, which in turn contains a calculation operand, the </span><span class="rvts165">first</span><span class="rvts6"> string so found has a sequence number of 1, the </span><span class="rvts165">second</span><span class="rvts6"> has a sequence number of 2, etc. You can use this information to tailor the way you calculate the value returned from your expression. For instance, you may wish to develop a sequence number as a prefix or suffix of some name or string, or, you may wish to enumerate paragraphs or sections of a document that are not amenable to the use of the Enumeration keyboard functions (which require aligned columns of numbers). If you use the </span><span class="rvts140">calculation function</span><span class="rvts6"> in a context for which there is no defined sequence number, variable </span><span class="rvts139">S</span><span class="rvts6"> will contain zero.</span></li>
+</ol></ol>
+<p class="rvps115"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="8" style="margin-left: 0px; text-indent: 0px" class="rvps115"><span class="rvts6">After you perform your calculations, the </span><span class="rvts140">calculation function </span><span class="rvts6">determines and returns a final value as follows:</span></li>
+</ol></ol>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps113"><span class="rvts6">If you have assigned a new value to variable </span><span class="rvts139">R</span><span class="rvts6">, the last value assigned to variable </span><span class="rvts168">R</span><span class="rvts6"> will be used as the </span><span class="rvts140">returned value</span><span class="rvts6">. Variable </span><span class="rvts139">R</span><span class="rvts6"> takes on a role that a</span><span class="rvts168"> </span><span class="rvts139">RETURN</span><span class="rvts168"> </span><span class="rvts6">statement or a </span><span class="rvts140">function result value</span><span class="rvts6"> provides in many programming languages.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps113"><span class="rvts6">If you have </span><span class="rvts40">not</span><span class="rvts6"> have assigned a new value to variable </span><span class="rvts139">R</span><span class="rvts6">, but you </span><span class="rvts40">have</span><span class="rvts6"> assigned a new value to variable </span><span class="rvts139">X</span><span class="rvts6">, the last value assigned to variable </span><span class="rvts139">X</span><span class="rvts6"> will be used as the </span><span class="rvts140">returned value</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps113"><span class="rvts6">If you do not assign a value to either variable </span><span class="rvts139">R</span><span class="rvts6"> or variable </span><span class="rvts139">X</span><span class="rvts6">, but have specified one or more expressions, the value of the right-most or only expression is assumed to be the </span><span class="rvts140">returned value</span><span class="rvts6">. Because of such assumed returned values, you can make the expression simple and brief by omitting any assignments, if these are not needed. For example, if you just want to add 5 to the initial value, this may be done with </span><span class="rvts139">X+5</span><span class="rvts6">. When 5 is added to the initial value, it leaves the result as the last-evaluated expression. Since the expression </span><span class="rvts139">X+5</span><span class="rvts6"> makes no </span><span class="rvts165">assignments</span><span class="rvts6"> to </span><span class="rvts139">R</span><span class="rvts6"> or </span><span class="rvts139">X</span><span class="rvts6">, it is assumed that its calculated value is what you want as the result. For purposes of determining a </span><span class="rvts140">returned value</span><span class="rvts6">, assignments to any variables other than </span><span class="rvts139">R</span><span class="rvts6"> and </span><span class="rvts139">X</span><span class="rvts6"> are ignored.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps113"><span class="rvts6">If you have </span><span class="rvts165">both</span><span class="rvts6"> </span><span class="rvts140">assignments</span><span class="rvts6"> and </span><span class="rvts140">references</span><span class="rvts6"> to variable </span><span class="rvts139">R</span><span class="rvts6"> or variable </span><span class="rvts139">X</span><span class="rvts6">, </span><span class="rvts165">only the assignments</span><span class="rvts6"> will be considered when determining the return value. For example, if the initial value is </span><span class="rvts40">10</span><span class="rvts6">, the expression </span><span class="rvts139">R=X*2</span><span class="rvts168">;</span><span class="rvts6"> </span><span class="rvts139">R+1</span><span class="rvts6"> will return </span><span class="rvts40">20</span><span class="rvts6"> rather than </span><span class="rvts40">21</span><span class="rvts6">. That is because the last assignment to </span><span class="rvts139">R</span><span class="rvts6"> set it to </span><span class="rvts40">20</span><span class="rvts6">, and the fact that the </span><span class="rvts140">last expression</span><span class="rvts6"> had a value of </span><span class="rvts40">21</span><span class="rvts6"> is disregarded. If you wanted that final value to be returned, you would either have to make a second assignment like </span><span class="rvts139">R=X*2;</span><span class="rvts163"> </span><span class="rvts139">R+=1</span><span class="rvts6"> or you could omit all assignments and have a simple expression like </span><span class="rvts139">X*2+1</span><span class="rvts6">.</span></li>
+</ul></ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps116"><span class="rvts6">Because the </span><span class="rvts140">calculation function</span><span class="rvts6"> will often be used for very simple calculations, a further expression simplification is supported. When the leftmost part of the </span><span class="rvts140">calculation operand</span><span class="rvts6"> is a </span><span class="rvts40">binary</span><span class="rvts6"> </span><span class="rvts40">operator</span><span class="rvts6">, it is assumed that the expression is preceded by </span><span class="rvts167">an implied </span><span class="rvts196">X</span><span class="rvts167"> variable</span><span class="rvts6">. When the </span><span class="rvts140">calculation operand</span><span class="rvts6"> begins with </span><span class="rvts168">+</span><span class="rvts6"> or </span><span class="rvts168">–</span><span class="rvts6"> these are assumed to be binary operators (not unary), with an implied </span><span class="rvts40">X</span><span class="rvts6"> on the left. For instance, a </span><span class="rvts140">calculation operand</span><span class="rvts6"> of </span><span class="rvts139">+5</span><span class="rvts6"> will be assumed to mean </span><span class="rvts181">X</span><span class="rvts139">+5</span><span class="rvts6">, and then this will be treated as described in the preceding paragraph</span></p>
+<p class="rvps116"><span class="rvts6"><br/></span></p>
+<p class="rvps116"><span class="rvts6">When you use this shortcut, you must ensure that the resulting expression,</span><span class="rvts40"> </span><span class="rvts167">including the implied </span><span class="rvts196">X</span><span class="rvts167"> variable</span><span class="rvts6">, is syntactically correct.</span></p>
+<p class="rvps116"><span class="rvts6"><br/></span></p>
+<p class="rvps116"><span class="rvts6">The </span><span class="rvts40">X</span><span class="rvts6"> variable is </span><span class="rvts40">not</span><span class="rvts6"> implied when the </span><span class="rvts140">calculation operand </span><span class="rvts6">has a leading operator that is only used as unary. For example, a calculation operand of </span><span class="rvts139">!4</span><span class="rvts6"> would not imply </span><span class="rvts139">X!4</span><span class="rvts6"> because </span><span class="rvts139">!</span><span class="rvts6"> is the unary NOT operator. Thus, </span><span class="rvts139">!4</span><span class="rvts6"> would calculate the value of </span><span class="rvts139">!4</span><span class="rvts6"> without reference to variable </span><span class="rvts40">X</span><span class="rvts6">.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">The only case where this could be an issue is if you needed a leading </span><span class="rvts168">+</span><span class="rvts6"> or </span><span class="rvts168">–</span><span class="rvts6"> unary operator, since the </span><span class="rvts165">implied </span><span class="rvts167">X</span><span class="rvts6"> rules would be used, and a calculation adding to or subtracting from </span><span class="rvts40">X</span><span class="rvts6"> would be performed. An actual unary </span><span class="rvts168">+</span><span class="rvts6"> operator is never algebraically required, and can be omitted. However, if you needed an expression like </span><span class="rvts217">‑4*S</span><span class="rvts6"> and did </span><span class="rvts167">not</span><span class="rvts6"> want this to mean, </span><span class="rvts181">X</span><span class="rvts217">-4*S</span><span class="rvts6">, you would need to change your </span><span class="rvts140">calculation operand</span><span class="rvts6">. For the unary </span><span class="rvts168">–</span><span class="rvts6"> operator, if you really need to begin your expression this way, you can do any of the following:</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">- Precede the initial unary </span><span class="rvts168">–</span><span class="rvts6"> operator with a </span><span class="rvts168">;</span><span class="rvts6"> semicolon.</span></p>
+<p class="rvps104"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">example:</span><span class="rvts168"> &nbsp;</span><span class="rvts139">;</span><span class="rvts217">-4*S</span></p>
+<p class="rvps104"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">- Precede the initial unary </span><span class="rvts168">–</span><span class="rvts6"> operator with a </span><span class="rvts40">0</span><span class="rvts6">, which is numerically the same.</span></p>
+<p class="rvps104"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">example:</span><span class="rvts168"> &nbsp;</span><span class="rvts139">0</span><span class="rvts217">-4*S</span></p>
+<p class="rvps104"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">- Enclose the term having the initial unary </span><span class="rvts168">–</span><span class="rvts6"> operator in parentheses.</span></p>
+<p class="rvps104"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">example:</span><span class="rvts168"> &nbsp;</span><span class="rvts139">(</span><span class="rvts217">-4</span><span class="rvts139">)</span><span class="rvts217">*S</span><span class="rvts139">&nbsp;</span><span class="rvts6"> &nbsp; or &nbsp;&nbsp;</span><span class="rvts163"> </span><span class="rvts139">(</span><span class="rvts217">-4*S</span><span class="rvts139">)</span></p>
+<p class="rvps104"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">- Rewrite the expression so it does not begin with an initial unary </span><span class="rvts168">–</span><span class="rvts6"> operator.</span></p>
+<p class="rvps104"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">example:</span><span class="rvts168"> &nbsp;</span><span class="rvts139">S*-4</span><span class="rvts6"> &nbsp; &nbsp;or &nbsp;&nbsp;</span><span class="rvts163"> </span><span class="rvts139">4*-S</span></p>
+<p class="rvps104"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">- Rewrite the expression so it explicitly assigns variable </span><span class="rvts139">R</span><span class="rvts6"> or </span><span class="rvts139">X</span><span class="rvts6">.</span></p>
+<p class="rvps104"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">example:</span><span class="rvts168"> &nbsp;</span><span class="rvts139">R=</span><span class="rvts217">-4*S</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">If you specify a blank or empty expression, it will be determined that there </span><span class="rvts40">is</span><span class="rvts6"> no final value and that neither variable </span><span class="rvts139">R</span><span class="rvts6"> nor variable </span><span class="rvts139">X</span><span class="rvts6"> have been assigned, and then the </span><span class="rvts140">returned value</span><span class="rvts6"> will be made the same as the </span><span class="rvts140">initial value</span><span class="rvts6">. You can use this fact to specify blanks as a “no-operation” expression, if you sometimes don’t want to alter the initial value. Other “no-operation” expressions that will return the initial value unchanged include</span><span class="rvts163"> </span><span class="rvts139">R</span><span class="rvts163">,&nbsp;</span><span class="rvts139">X</span><span class="rvts163">,&nbsp;</span><span class="rvts139">R=X</span><span class="rvts6"> and expressions that only contain semicolons.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">The </span><span class="rvts140">calculation function </span><span class="rvts6">uses an expression syntax largely modeled on the C programming language. This was done to make these expressions as concise as possible. Some extensions to C syntax were made, to make it compatible with common usage in other languages, and to add additional operators to take the place of common arithmetic functions.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">A large number of arithmetic operators are available to calculate numeric values. These are unary (prefix) and binary (infix) operators. A number of binary operators can be used as </span><span class="rvts140">arithmetic assignment operators</span><span class="rvts6">. For example, to multiply variable </span><span class="rvts40">A</span><span class="rvts6"> by </span><span class="rvts40">5</span><span class="rvts6">, you can use </span><span class="rvts139">A</span><span class="rvts163">&nbsp;</span><span class="rvts139">=</span><span class="rvts163">&nbsp;</span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">*</span><span class="rvts163"> </span><span class="rvts139">5</span><span class="rvts6">, or as</span><span class="rvts168"> </span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">*=</span><span class="rvts163"> </span><span class="rvts139">5</span><span class="rvts168"> </span><span class="rvts6">with the</span><span class="rvts168"> </span><span class="rvts139">*=</span><span class="rvts6">&nbsp;</span><span class="rvts168"> </span><span class="rvts140">arithmetic assignment operator</span><span class="rvts6">. Unlike the C language, there are no increment or decrement operators like </span><span class="rvts168">++</span><span class="rvts6"> and </span><span class="rvts168">--</span><span class="rvts6">. If you want to increment variable </span><span class="rvts40">A</span><span class="rvts6">, you must use </span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">=</span><span class="rvts163"> </span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">+</span><span class="rvts163"> </span><span class="rvts139">1</span><span class="rvts6"> or </span><span class="rvts139">A</span><span class="rvts163">&nbsp;</span><span class="rvts139">+=</span><span class="rvts163">&nbsp;</span><span class="rvts139">1</span><span class="rvts6"> rather than </span><span class="rvts139">A++</span><span class="rvts6"> or </span><span class="rvts139">++A</span><span class="rvts6">. As noted above, if you just want to increment or decrement the initial value to produce the result value, you can do this with a </span><span class="rvts140">calculation operand</span><span class="rvts6"> of </span><span class="rvts139">+1</span><span class="rvts6"> or </span><span class="rvts139">-1</span><span class="rvts6"> respectively.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">When an operator like </span><span class="rvts168">*</span><span class="rvts6"> can be used as an </span><span class="rvts140">arithmetic assignment operator</span><span class="rvts6">, it is said to be </span><span class="rvts40">assignable</span><span class="rvts140">.</span><span class="rvts6"> &nbsp;Any binary operator that is </span><span class="rvts140">assignable</span><span class="rvts6"> may be used to modify a variable by putting a variable name on the left, then the operator, then an </span><span class="rvts168">=</span><span class="rvts6"> equal sign. Thus, the </span><span class="rvts165">assignable</span><span class="rvts6"> multiply operator</span><span class="rvts168"> </span><span class="rvts139">*</span><span class="rvts168"> </span><span class="rvts6">becomes</span><span class="rvts168"> </span><span class="rvts139">*=</span><span class="rvts168"> </span><span class="rvts6">with a variable name on its left, and an expression on its right, as in</span><span class="rvts168"> </span><span class="rvts139">A&nbsp;*=&nbsp;5.</span><span class="rvts6"> &nbsp;Because many operators are assignable, this is simply noted in the table, rather than listing them all separately. If you are familiar with C expressions, assignable operators like</span><span class="rvts168"> </span><span class="rvts139">A</span><span class="rvts163">&nbsp;</span><span class="rvts139">+=</span><span class="rvts163">&nbsp;</span><span class="rvts139">1</span><span class="rvts168"> </span><span class="rvts6">should be clear. Otherwise, you can use the longer form</span><span class="rvts168"> </span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">=</span><span class="rvts163"> </span><span class="rvts139">A</span><span class="rvts163"> </span><span class="rvts139">+</span><span class="rvts163"> </span><span class="rvts139">1</span><span class="rvts168"> </span><span class="rvts6">if you prefer.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">Calculation expressions follow typical rules for expression formation. Operator precedence, associativity and nested parentheses are handled as usual. An operator precedence table appears below. The table largely follows C expression rules.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">Numeric literals may be specified in decimal or hex. In either case, these values are converted to 64-bit integer values. An extended notation is available for specifying large numeric values more concisely.</span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">Variable names and/or numeric literals may not be adjacent to each other, either with or without intervening blanks. Some kind of operator, parentheses or other punctuation must separate these items. You can use underscores to clarify large numbers, such as </span><span class="rvts40">123_456</span><span class="rvts6">. You cannot begin a number with an underscore but these can be freely used elsewhere within the number. Blanks in expressions are ignored, except that multiple-character operators like </span><span class="rvts139">&lt;&gt;</span><span class="rvts6"> and numeric literals must not have embedded blanks. </span></li>
+</ul></ul>
+<p class="rvps117"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps117"><span class="rvts6">There is no direct support for conditional calculations, such as the </span><span class="rvts139">?</span><span class="rvts6"> and </span><span class="rvts139">:</span><span class="rvts6"> conditional operators in C. There is also no facility for defining tables or doing table lookups. Instead, the </span><span class="rvts140">calculation function</span><span class="rvts6"> uses the concept of </span><span class="rvts140">set expressions</span><span class="rvts6"> and </span><span class="rvts140">set indexing</span><span class="rvts6"> to serve both of these purposes, using a simplified syntax.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="Specifyingnumericliterals"></a>
+<span class="rvts167">Specifying numeric literals</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Literals may be specified in decimal or hex. You can optionally use underscores for readability with large numbers, and these will be ignored. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps118"><span class="rvts6">For decimal numbers, up to 19 digits may be used, and 18 </span><span class="rvts140">full</span><span class="rvts6"> decimal digits are available. The largest positive value is 9,223,372,036,854,775,807, and the smallest negative number is –9,223,372,036,854,775,808. If you attempt to specify a number outside these limits, an overflow will occur, and the resulting value will be the smallest negative number.</span></li>
+</ul></ul>
+<p class="rvps118"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps118"><span class="rvts6">For hex numbers, up to 16 hex digits may be used. Hex numbers are introduced by a leading </span><span class="rvts168">.</span><span class="rvts6">&nbsp;dot. Hex digits &gt; 9 are A to F and are case insensitive. For example, </span><span class="rvts139">255</span><span class="rvts6"> and </span><span class="rvts168">.</span><span class="rvts139">FF</span><span class="rvts6"> are the same value, and so are </span><span class="rvts139">65_535</span><span class="rvts6"> and </span><span class="rvts168">.</span><span class="rvts139">F_FFF</span><span class="rvts168"> </span><span class="rvts6">.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="Specifyinglargenumericliterals"></a>
+<span class="rvts167">Specifying large numeric literals</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">calculation function</span><span class="rvts6"> provides a means to concisely specify large decimal and hex values that have repeating digits. It is somewhat similar to </span><span class="rvts40">E</span><span class="rvts6"> notation commonly used for floating point numbers, but the same syntax provided will work in both decimal and hex integers (the </span><span class="rvts40">E</span><span class="rvts6">&nbsp;notation would not work in hex, since E is a hex digit) and is more flexible.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Large numbers may be required in applications involving calculations of checksums, hash keys or encryption values on your user data.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts182">If your work does not involve large numbers, you can skip the rest of this section.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The large number syntax relies on three suffixes, comparable to floating-point </span><span class="rvts40">E</span><span class="rvts6"> notation, namely a “Low Suffix”, a “High Suffix” and a “Repeated Suffix”. These are used the same as you might specify a floating point value of 5E4 to mean 50000.0. A number may have only one suffix, which appears at the end of the number without any intervening blanks. These suffixes operate as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">A </span><span class="rvts140">Low Suffix</span><span class="rvts6"> consists of the letter </span><span class="rvts139">L</span><span class="rvts6"> followed by a decimal number. The Low Suffix indicates the number of </span><span class="rvts40">0</span><span class="rvts6"> digits that are to be appended to the number. For example, to concisely specify the decimal number </span><span class="rvts139">700_000</span><span class="rvts6">, you would use </span><span class="rvts139">7L5</span><span class="rvts6">. To concisely specify the hex number </span><span class="rvts139">.F00_000</span><span class="rvts6">, you would use </span><span class="rvts139">.FL5</span><span class="rvts168"> </span><span class="rvts6">.</span></li>
+</ul></ul>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">A </span><span class="rvts140">High Suffix</span><span class="rvts6"> consists of the letter </span><span class="rvts168">H</span><span class="rvts6"> followed by a decimal number. The High Suffix indicates, </span><span class="rvts40">for decimal numbers</span><span class="rvts6">, the number of </span><span class="rvts40">9</span><span class="rvts6"> digits that are to be appended to the number, and </span><span class="rvts40">for hex numbers</span><span class="rvts6">, the number of </span><span class="rvts40">F</span><span class="rvts6"> digits that are to be appended to the number. For example, to concisely specify the decimal number </span><span class="rvts139">799_999</span><span class="rvts6">, you would use </span><span class="rvts139">7H5</span><span class="rvts6">. To concisely specify the hex number </span><span class="rvts139">.7FF_FFF</span><span class="rvts6">, you would use </span><span class="rvts139">.7H5</span></li>
+</ul></ul>
+<p class="rvps107"><span class="rvts139"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">A decimal number requires one leading digit before specifying a suffix. For instance, to concisely specify the decimal number </span><span class="rvts139">999_999_999</span><span class="rvts6">, you would could use either </span><span class="rvts139">9H8</span><span class="rvts6"> (an initial 9 digit, plus eight more 9’s) or </span><span class="rvts139">0H9</span><span class="rvts6"> (an initial 0 digit which is numerically ignored, plus nine more 9’s)</span></li>
+</ul></ul>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">Because a hex number is already introduced by the leading dot, it is not necessary to have any leading digits before specifying the hex High Suffix. For instance, to concisely specify the hex number </span><span class="rvts139">.FFFF_FFFF</span><span class="rvts6">, you could use </span><span class="rvts139">.H8</span><span class="rvts168"> </span><span class="rvts6">. </span></li>
+</ul></ul>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">A </span><span class="rvts140">Repeat Suffix</span><span class="rvts6"> consists of a decimal or hex digit, then the letter </span><span class="rvts139">R</span><span class="rvts6"> followed by a decimal number. The Repeat Suffix indicates the number of specified digits that are to be appended to the number, in cases where the digit in question being repeated is not necessarily </span><span class="rvts139">0</span><span class="rvts163">, </span><span class="rvts139">9</span><span class="rvts6"> (for decimal) or </span><span class="rvts139">F</span><span class="rvts6"> (for hex) where the </span><span class="rvts139">L</span><span class="rvts6"> or </span><span class="rvts139">H</span><span class="rvts6"> suffix might have been used. Because of the need to specify a digit to be repeated, you number must use at least one leading digit before using this suffix. For example, to concisely specify the decimal number </span><span class="rvts139">733_333</span><span class="rvts6">, you would use </span><span class="rvts139">73R5</span><span class="rvts6">. To concisely specify the hex number </span><span class="rvts139">.F33_333</span><span class="rvts6">, you would use </span><span class="rvts139">.F3R5</span><span class="rvts168"> </span><span class="rvts6">. Note that the count after the </span><span class="rvts168">R</span><span class="rvts6"> reflects the total number of digits, including the digit that precedes the </span><span class="rvts139">R</span><span class="rvts6">. For this reason, a repetition number less than 3 will not reduce the size of the literal and would normally not be used.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">The decimal number in a suffix is limited to 2 digits. Its value may not exceed 19 for a decimal number or 16 for a hex number; the minimum value is 1 in both cases. Additionally, the suffix cannot cause the final number of digits to exceed 19 for a decimal number or 16 for a hex number. If the decimal number in a suffix is outside these limits, a syntax error is detected and the calculation halts. For the mapping string, the returned value will be unchanged from the initial value. Readability underscores in numbers are ignored and do not affect the maximum number of digits allowed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="ExpressionOperators"></a>
+<span class="rvts167">Expression Operators</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The following table describes the operators, their precedence and associativity. Operators with higher precedence are performed ones with lower precedence. Higher-precedence operators are listed with higher precedence numbers. Operators at level 15, if present, are performed first, while operators at level 1, if present, are performed last.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This precedence follows the traditional C language expression syntax and semantics. As is true of many beginning C programmers, some may find the extensive number of operators and precedence levels to be intimidating. However, experience has shown that this arrangement actually implements the most frequently desired choice of actions, in cases where specifying the fewest number of parentheses is desired. Of course, whenever in doubt, you are free to use parentheses as needed to clarify to the </span><span class="rvts140">calculation function</span><span class="rvts6"> and to yourself what your intentions are.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Headings:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Oper: &nbsp;Operator</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Prec: &nbsp;Precedence level</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Assoc: &nbsp;Associativity:</span></li>
+</ul>
+<p class="rvps71"><span class="rvts6">LTR = Left to Right</span></p>
+<p class="rvps71"><span class="rvts6">RTL = Right to Left</span></p>
+<p class="rvps71"><span class="rvts6">NON = Non-Associative. Some operators are non-associative, because allowing two or more such operators in a row (without using parentheses) may be ambiguous or confusing.</span></p>
+<p class="rvps71"><span class="rvts6"><br/></span></p>
+<p class="rvps71"><span class="rvts40">Note</span><span class="rvts6">: &nbsp;Even where operators may be LTR or RTL, expressions must still be written carefully and properly. For example, </span><span class="rvts168">R</span><span class="rvts6"> </span><span class="rvts168">=</span><span class="rvts6"> </span><span class="rvts168">X</span><span class="rvts6"> </span><span class="rvts168">&lt;</span><span class="rvts6"> </span><span class="rvts168">Y</span><span class="rvts6"> </span><span class="rvts168">&lt;</span><span class="rvts6"> </span><span class="rvts168">Z</span><span class="rvts6"> is a “valid” expression, but it probably will not do what you want. First, </span><span class="rvts40">X &lt; Y</span><span class="rvts6"> is evaluated; if true, its value </span><span class="rvts40">1</span><span class="rvts6">, else </span><span class="rvts40">0</span><span class="rvts6">. Then, </span><span class="rvts40">Z</span><span class="rvts6"> is compared to </span><span class="rvts40">that</span><span class="rvts6"> result, so that you would be either be comparing </span><span class="rvts40">0&nbsp;&lt;&nbsp;Z</span><span class="rvts6"> or </span><span class="rvts40">1&nbsp;&lt;&nbsp;Z</span><span class="rvts6">. If your intent was to determine if </span><span class="rvts40">X</span><span class="rvts6">, </span><span class="rvts40">Y</span><span class="rvts6"> and </span><span class="rvts40">Z</span><span class="rvts6"> were in numeric order, the right way to do that is with</span><span class="rvts168"> R</span><span class="rvts6"> </span><span class="rvts168">=</span><span class="rvts6"> </span><span class="rvts168">(X</span><span class="rvts6"> </span><span class="rvts168">&lt;</span><span class="rvts6"> </span><span class="rvts168">Y)</span><span class="rvts6"> </span><span class="rvts168">&amp;&amp;</span><span class="rvts6"> </span><span class="rvts168">(Y</span><span class="rvts6"> </span><span class="rvts168">&lt;</span><span class="rvts6"> </span><span class="rvts168">Z)</span><span class="rvts6">.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Asgn: Assignable. If an operator is assignable, you can make the operator an assignment operator by adding a trailing </span><span class="rvts168">=</span><span class="rvts6"> equal sign.. For instance, the multiply operator * is assignable, so you can use a </span><span class="rvts168">*=</span><span class="rvts6"> multiply-and-assign operator. Only binary operators are capable of being assignable. Operators for which being assignable is not applicable will appear as “n/a” . When assignability is shown as No, it reflects an operation seldom needed or not easily incorporated by the syntax. If needed, the effect can usually be accomplished by a longer expression with an explicit assignment operator.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When you use an assignment operator such as</span><span class="rvts168"> *= </span><span class="rvts6">it no longer has its original precedence ( the * operator has an original precedence of 14) but rather the same precedence as the </span><span class="rvts168">:=</span><span class="rvts6"> assignment operator; namely, 2. All such assignment operators like </span><span class="rvts168">*=</span><span class="rvts6"> associate Right to Left, even though </span><span class="rvts168">*</span><span class="rvts6"> associates Left to Right. (Associating Right to Left is necessary for assignments, because the expression on the right has to be evaluated first, before it can be assigned to the variable on the left.)</span></li>
+</ul>
+<p class="rvps9"><span class="rvts209"><br/></span></p>
+<div class="rvps69"><table width="100%" border="1" cellpadding="0" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps111"><span class="rvts6">Oper</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">Prec</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">Assoc</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Description</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Asgn</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">+</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary arithmetic positive, ignored except to clarify an expression. Not needed, but supported to conform to conventional usage.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">-</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary arithmetic negation</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary logical not</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X = 0, !X = 1</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X not = 0, !X = 0</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">~</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary bitwise negation (one’s complement)</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">@</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary absolute value, like ABS function in Basic</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &lt; 0, @X = –X</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &gt;= 0, @X = X</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">$</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary sign function, like SGN function in Basic</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &lt; 0, $X = –1</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X = 0, $X = 0</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &gt; 0, $X = 1</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">$$</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">15</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Unary sign index function, like 2+SGN function in Basic</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &lt; 0, $X = 1</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X = 0, $X = 2</span></p>
+<p class="rvps9"><span class="rvts6">If </span><span class="rvts139">X &gt; 0, $X = 3</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">*</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">14</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Multiply</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">/</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">14</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Integer divide</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">%</span></p>
+<p class="rvps3"><span class="rvts139">\</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">14</span></p>
+<p class="rvps3"><span class="rvts6">14</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+<p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Modulus (remainder)</span></p>
+<p class="rvps9"><span class="rvts139">%</span><span class="rvts6"> is the C language operator, </span><span class="rvts139">\</span><span class="rvts6"> is a common alternative notation. Both have same meaning and are interchangeable.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that Integer Divide and Modulus (remainder) operators calculate in such a way that the quotient and remainder will have the same absolute values regardless of the signs of the dividend and divisor. This is done by doing a preliminary Divide or Modulus using the absolute values of the numeric terms, and then correcting the signs afterwards. Attempting a Divide or Modulus with a right-hand term of zero is an error which will halt the calculation and the mapping string that contains it.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">+</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">13</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Add</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">-</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">13</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Subtract</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&lt;&lt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise (unsigned) shift left. Zero bits are filled on the right.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you shift with a negative shift amount, it will reverse the direction of the shift. An expression of </span><span class="rvts139">X&nbsp;&lt;&lt;&nbsp;4</span><span class="rvts6"> will shift left 4 bits, while an expression of </span><span class="rvts139">X&nbsp;&lt;&lt;&nbsp;–4</span><span class="rvts6"> will operate the same as </span><span class="rvts139">X&nbsp;&gt;&gt;&nbsp;4</span><span class="rvts6">. The determination of a negative shift amount is not just a matter of an explicit </span><span class="rvts40">–</span><span class="rvts6"> minus sign operator, but is based on the evaluation of the expression.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&gt;&gt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise (unsigned) shift right. Zero bits are propagated on the left.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you shift with a negative shift amount, it will reverse the direction of the shift. An expression of</span><span class="rvts163"> </span><span class="rvts139">X&nbsp;&gt;&gt;&nbsp;4</span><span class="rvts6"> will shift right 4 bits, while an expression of </span><span class="rvts139">X&nbsp;&gt;&gt;&nbsp;–4</span><span class="rvts6"> will operate the same as </span><span class="rvts139">X&nbsp;&lt;&lt;&nbsp;4</span><span class="rvts6">. The determination of a negative shift amount is not just a matter of an explicit </span><span class="rvts40">–</span><span class="rvts6"> minus sign operator, but is based on the evaluation of the expression.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">+&gt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Numeric (signed) shift right. The sign bit is propagated on the left. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you shift with a negative shift amount, it will reverse the direction of the shift. An expression of </span><span class="rvts139">X&nbsp;+&gt;&nbsp;4</span><span class="rvts6"> will shift right 4 bits, while an expression of </span><span class="rvts139">X&nbsp;+&gt;&nbsp;–4</span><span class="rvts6"> will operate the same as </span><span class="rvts139">X&nbsp;&lt;&lt;&nbsp;4</span><span class="rvts6">. The determination of a negative shift amount is not just a matter of an explicit </span><span class="rvts40">–</span><span class="rvts6"> minus sign operator, but is based on the evaluation of the expression.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The operator </span><span class="rvts139">+&gt;</span><span class="rvts6"> is equivalent to the </span><span class="rvts139">&gt;&gt;&gt;</span><span class="rvts6"> operator in Java.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">#</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Numeric scale</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X # S</span><span class="rvts6">, the value X is divided by S. Each division operation is counted, with the first one treated as division number 1. After division, a test is made to see if the result is 0; if so, the </span><span class="rvts139">#</span><span class="rvts6"> operator halts; otherwise, the quotient is divided again and process repeats. The result of the </span><span class="rvts139">#</span><span class="rvts6"> operator is the count of the number of divisions performed. If S &lt; 2, </span><span class="rvts139">X # S</span><span class="rvts6"> produces 0.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When S is 10, </span><span class="rvts139">X # S</span><span class="rvts6"> &nbsp;is the number of decimal digits required to represent X. For example, </span><span class="rvts139">123456</span><span class="rvts163">&nbsp;</span><span class="rvts139">#</span><span class="rvts163">&nbsp;</span><span class="rvts139">10</span><span class="rvts6"> will produce 6. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When X is zero and S &gt;= 2, </span><span class="rvts139">X # S</span><span class="rvts6"> will produce 1.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">##</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise scale</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X ## S</span><span class="rvts6">, the value X is unsigned-shifted right by </span><span class="rvts139">S</span><span class="rvts6">, the same as done by </span><span class="rvts139">X&nbsp;&gt;&gt;&nbsp;S</span><span class="rvts6">. Each shift operation is counted, with the first one treated as shift number 1. After a shift, a test is made to see if the result is 0; if so, the </span><span class="rvts139">##</span><span class="rvts6"> operator halts; otherwise, the result is shifted again and process repeats. The result of the </span><span class="rvts139">##</span><span class="rvts6"> operator is the count of the number of shifts performed. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If S &lt; 1 or S &gt; 63,</span><span class="rvts139"> X ## S </span><span class="rvts6">produces 0.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When S is 4,</span><span class="rvts163"> </span><span class="rvts139">X ## S</span><span class="rvts6"> will report the number of hex digits required to represent X. For example, </span><span class="rvts139">.FF123</span><span class="rvts163">&nbsp;</span><span class="rvts139">##</span><span class="rvts163">&nbsp;</span><span class="rvts139">4</span><span class="rvts6"> will produce 5. When S is 1, </span><span class="rvts139">X ## S</span><span class="rvts6"> &nbsp;is the number of binary digits (bits) required to represent X. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When X is zero, and 1&lt;=S&lt;=63 , </span><span class="rvts139">X ## S</span><span class="rvts6"> will produce 1.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&gt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Greater Than.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is &gt; Y, the value of </span><span class="rvts139">X &gt; Y</span><span class="rvts6"> is 1.</span></p>
+<p class="rvps9"><span class="rvts6">If X is not &gt; Y, the value of </span><span class="rvts139">X &gt; Y</span><span class="rvts6"> is 0.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&lt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Less Than.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is &lt; Y, the value of </span><span class="rvts139">X &lt; Y</span><span class="rvts6"> is 1.</span></p>
+<p class="rvps9"><span class="rvts6">If X is not &lt; Y, the value of </span><span class="rvts139">X &lt; Y</span><span class="rvts6"> is 0.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&gt;=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Greater Than or Equal To.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is &gt;= Y, the value of </span><span class="rvts139">X &gt;= Y</span><span class="rvts6"> is 1.</span></p>
+<p class="rvps9"><span class="rvts6">If X is not &gt;= Y, the value of </span><span class="rvts139">X &gt;= Y</span><span class="rvts6"> is 0.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&lt;=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Less Than or Equal To.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is &lt;= Y, the value of </span><span class="rvts139">X &lt;= Y</span><span class="rvts6"> is 1.</span></p>
+<p class="rvps9"><span class="rvts6">If X is not &lt;= Y, the value of </span><span class="rvts139">X &lt;= Y</span><span class="rvts6"> is 0.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!&gt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Not Greater Than. This operator is equivalent to a MIN function in some programming languages.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X !&gt; Y</span><span class="rvts6">, the intent is to limit the value of X such that it is not greater than Y. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X&nbsp;is &gt;&nbsp;Y, the value of </span><span class="rvts139">X !&gt; Y</span><span class="rvts6"> is Y. </span></p>
+<p class="rvps9"><span class="rvts6">If X is not &gt; Y, the value of </span><span class="rvts139">X !&gt; Y</span><span class="rvts6"> is X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!&lt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Not Less Than. This operator is equivalent to a MAX function in some programming languages.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X !&lt; Y</span><span class="rvts6">, the intent is to limit the value of X such that it is not less than Y. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X&nbsp;is &lt;&nbsp;Y, the value of </span><span class="rvts139">X !&lt; Y</span><span class="rvts6"> is Y. </span></p>
+<p class="rvps9"><span class="rvts6">If X is not &lt; Y, the value of </span><span class="rvts139">X !&lt; Y</span><span class="rvts6"> is X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!&gt;=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Not Greater Than or Equal To</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X !&gt;= Y</span><span class="rvts6">, the intent is to limit the value of X such that it is not greater than or equal to Y. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X&nbsp;is &gt;=&nbsp;Y, the value of </span><span class="rvts139">X !&gt;= Y</span><span class="rvts6"> is Y</span><span class="rvts40">–</span><span class="rvts6">1 . </span></p>
+<p class="rvps9"><span class="rvts6">If X is not &gt;= Y, the value of </span><span class="rvts139">X !&gt;= Y</span><span class="rvts6"> is X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!&lt;=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Not Less Than or Equal To</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In the expression </span><span class="rvts139">X !&lt;= Y</span><span class="rvts6">, the intent is to limit the value of X such that it is not less than or equal to Y. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X&nbsp;is &lt;=&nbsp;Y, the value of </span><span class="rvts139">X !&lt;= Y</span><span class="rvts6"> is Y+1. </span></p>
+<p class="rvps9"><span class="rvts6">If X is not &lt;= Y, the value of </span><span class="rvts139">X !=&lt; Y</span><span class="rvts6"> is X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">!=</span></p>
+<p class="rvps3"><span class="rvts139">&lt;&gt;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">10</span></p>
+<p class="rvps3"><span class="rvts6">10</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+<p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Not Equal To</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139">!=</span><span class="rvts6"> is the C language operator, </span><span class="rvts139">&lt;&gt;</span><span class="rvts6"> is a common alternative notation. Both have same meaning and are interchangeable.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is equal to Y, the value of </span><span class="rvts139">X &lt;&gt; Y</span><span class="rvts6"> is 0.</span></p>
+<p class="rvps9"><span class="rvts6">If X is not equal Y, the value of </span><span class="rvts139">X &lt;&gt; Y</span><span class="rvts6"> is 1.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">==</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">10</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Equal To. </span><span class="rvts139">==</span><span class="rvts6"> is the C language operator.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X is not equal to Y, the value of </span><span class="rvts139">X == Y</span><span class="rvts6"> is 0.</span></p>
+<p class="rvps9"><span class="rvts6">If X is equal Y, the value of </span><span class="rvts139">X == Y</span><span class="rvts6"> is 1.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">10</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Equal To. The </span><span class="rvts140">calculation function</span><span class="rvts6"> defines the </span><span class="rvts139">=</span><span class="rvts6"> operator by context. When it appears </span><span class="rvts140">enclosed </span><span class="rvts6">within </span><span class="rvts139">()</span><span class="rvts6"> parentheses , the </span><span class="rvts139">=</span><span class="rvts6"> operator is treated as an alias for the </span><span class="rvts139">==</span><span class="rvts6"> comparison operator, meaning it has the same priority and associativity. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When </span><span class="rvts139">=</span><span class="rvts6"> appears with </span><span class="rvts139">[]</span><span class="rvts6"> set enclosures or is not enclosed, it is treated the same as the </span><span class="rvts139">:=</span><span class="rvts6"> explicit assignment operator. Only one </span><span class="rvts140">unenclosed </span><span class="rvts139">=</span><span class="rvts6"> may appear in a given </span><span class="rvts140">statement </span><span class="rvts6">or </span><span class="rvts140">set clause</span><span class="rvts6">. This means that expressions like &nbsp;</span><span class="rvts139">X&nbsp;=&nbsp;Y&nbsp;=&nbsp;Z</span><span class="rvts6"> are illegal.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">calculation function</span><span class="rvts6"> performs this context determination in order to prevent common misuse of </span><span class="rvts139">=</span><span class="rvts6"> and </span><span class="rvts139">==</span><span class="rvts6"> inside of comparison sub-expressions, to help prevent errors.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Because a plain </span><span class="rvts139">=</span><span class="rvts6"> outside of parentheses is assumed to be an assignment, if you wanted to perform a comparison instead, you must either use an explicit </span><span class="rvts139">==</span><span class="rvts6"> comparison operator, or put the expression with </span><span class="rvts139">=</span><span class="rvts6"> in parentheses.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps2"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&amp;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">9</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise AND</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">^</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise XOR</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">|</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Bitwise OR</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&amp;&amp;</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Logical AND. </span><span class="rvts139">X &amp;&amp; Y</span><span class="rvts6"> &nbsp;is equivalent to </span><span class="rvts139">!!X &amp; !!Y</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"> </span></p>
+<p class="rvps9"><span class="rvts6">If X=0 </span><span class="rvts40">or</span><span class="rvts6"> Y=0,</span><span class="rvts163"> </span><span class="rvts139">X &amp;&amp; Y</span><span class="rvts6"> = 0</span></p>
+<p class="rvps9"><span class="rvts6">If X not = 0 </span><span class="rvts40">and</span><span class="rvts6"> Y not = 0, </span><span class="rvts139">X &amp;&amp; Y</span><span class="rvts6"> = 1</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">^^</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Logical XOR. </span><span class="rvts139">X ^^ Y</span><span class="rvts6"> is equivalent to &nbsp;</span><span class="rvts139">!!X ^ !!Y</span><span class="rvts6">. The operator returns 1 if X and Y are logically different.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X=0 </span><span class="rvts40">and</span><span class="rvts6"> Y=0, </span><span class="rvts139">X ^^ Y</span><span class="rvts6"> = 0</span></p>
+<p class="rvps9"><span class="rvts6">If X = 0 </span><span class="rvts40">and</span><span class="rvts6"> Y not = 0, </span><span class="rvts139">X ^^ Y</span><span class="rvts6"> = 1</span></p>
+<p class="rvps9"><span class="rvts6">If X not = 0 </span><span class="rvts40">and</span><span class="rvts6"> Y = 0, </span><span class="rvts139">X ^^ Y</span><span class="rvts6"> = 1</span></p>
+<p class="rvps9"><span class="rvts6">If X not = 0 </span><span class="rvts40">and</span><span class="rvts6"> Y not = 0, </span><span class="rvts139">X ^^ Y</span><span class="rvts6"> = 0</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">||</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">LTR</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Logical OR. </span><span class="rvts139">X || Y</span><span class="rvts6"> &nbsp;is equivalent to </span><span class="rvts139">!!X | !!Y</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If X=0 </span><span class="rvts40">and</span><span class="rvts6"> Y=0, </span><span class="rvts139">X || Y</span><span class="rvts6"> = 0</span></p>
+<p class="rvps9"><span class="rvts6">If X not = 0 </span><span class="rvts40">or</span><span class="rvts6"> Y not = 0, </span><span class="rvts139">X || Y</span><span class="rvts6"> = 1</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">Yes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">::</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">3</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">NON</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Swap variables. Both the left-hand operand and the right-hand operand must be variables. The contents of the two variables are swapped. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It is not an error if the two variables are the same, but this would serve no purpose.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once the operator is executed, the value of the expression as a whole is the value of the variable on the left side after the swap occurs. That is, after X :: Y is performed, the value of the expression will be the new value of X which will be the former value of Y.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&lt;:</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">3</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">NON</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Conditional swap variables for &lt;=</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Both the left-hand operand and the right-hand operand must be variables. The operator implements a “sorting” or “ordering” function. In the expression </span><span class="rvts139">X &lt;: Y</span><span class="rvts6">, the intent is to conditionally swap the contents of the two variables, </span><span class="rvts40">if necessary</span><span class="rvts6">, so that the relationship &nbsp;X&nbsp;&lt;=&nbsp;Y holds true. If X &lt;= Y is already true, no swap occurs. If X &lt;= Y is false, a swap occurs.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It is not an error if the two variables are the same, but this would serve no purpose.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once the operator is executed, the value of the expression as a whole is the value of the variable on the left side, whether swapped or not. That is, after X &lt;: Y is performed, the value of the expression will be the new value of X which will be the former value of Y if a swap occurred, otherwise it will be the former value of X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">&gt;:</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">3</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">NON</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Conditional swap variables for &gt;=</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Both the left-hand operand and the right-hand operand must be variables. The operator implements a “sorting” or “ordering” function. In the expression </span><span class="rvts139">X &gt;: Y</span><span class="rvts6">, the intent is to conditionally swap the contents of the two variables, </span><span class="rvts40">if necessary</span><span class="rvts6">, so that the relationship &nbsp;X&nbsp;&gt;=&nbsp;Y holds true. If X&nbsp;&gt;=&nbsp;Y is already true, no swap occurs. If X&nbsp;&gt;=&nbsp;Y is false, a swap occurs.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It is not an error if the two variables are the same, but this would serve no purpose.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once the operator is executed, the value of the expression as a whole is the value of the variable on the left side, whether swapped or not. That is, after X &gt;: Y is performed, the value of the expression will be the new value of X which will be the former value of Y if a swap occurred, otherwise it will be the former value of X.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">[ ]</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">2</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Set expression</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A set expression provides a means both to evaluate expressions conditionally, and to do a simple table-lookup operation.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The general form of a set expression is:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts173">expr </span><span class="rvts213">select</span><span class="rvts40"> </span><span class="rvts168">[</span><span class="rvts6"> </span><span class="rvts173">expr </span><span class="rvts213">1</span><span class="rvts173"> </span><span class="rvts168">,</span><span class="rvts173"> expr </span><span class="rvts213">2</span><span class="rvts6"> </span><span class="rvts168">,</span><span class="rvts6"> … </span><span class="rvts173">expr </span><span class="rvts213">n</span><span class="rvts6"> </span><span class="rvts168">]</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Each expression inside the brackets is called a </span><span class="rvts140">set clause.</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">selector expression</span><span class="rvts6"> is evaluated. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps112"><span class="rvts6">If the value of the </span><span class="rvts140">selector expression</span><span class="rvts6"> </span><span class="rvts40">expr </span><span class="rvts214">select</span><span class="rvts40"> </span><span class="rvts6">is 1, then </span><span class="rvts173">expr </span><span class="rvts213">1</span><span class="rvts6"> becomes the value of the </span><span class="rvts140">set clause.</span><span class="rvts6"> &nbsp; &nbsp;</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps112"><span class="rvts6">If the value of the </span><span class="rvts140">selector expression</span><span class="rvts6"> </span><span class="rvts40">expr </span><span class="rvts214">select</span><span class="rvts40"> </span><span class="rvts6">is 2, then </span><span class="rvts173">expr </span><span class="rvts213">2</span><span class="rvts6"> becomes the value of the </span><span class="rvts140">set clause</span><span class="rvts6">, etc</span><span class="rvts140">.</span><span class="rvts6"> &nbsp;</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps112"><span class="rvts6">If the value of the </span><span class="rvts140">selector expression</span><span class="rvts6"> </span><span class="rvts40">expr </span><span class="rvts214">select</span><span class="rvts40"> </span><span class="rvts6">is &lt; 1 or &gt; </span><span class="rvts173">n</span><span class="rvts6"> then </span><span class="rvts173">expr </span><span class="rvts213">n</span><span class="rvts6"> becomes the value of the </span><span class="rvts140">set clause</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If your </span><span class="rvts140">selector expression</span><span class="rvts6"> is a conditional operator, in which </span><span class="rvts140">true</span><span class="rvts6"> expressions evaluate to 1 and </span><span class="rvts140">false</span><span class="rvts6"> expressions evaluate to 0, you would write an expression that used such a condition like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts140">conditionalExpression</span><span class="rvts6"> </span><span class="rvts168">[</span><span class="rvts6"> </span><span class="rvts140">truePart</span><span class="rvts6"> </span><span class="rvts168">,</span><span class="rvts6"> </span><span class="rvts140">falsePart</span><span class="rvts6"> </span><span class="rvts168">]</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, if you wanted a value of 123 if X is greater than 5, otherwise a value of 456, you would use:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts139">X &gt; 5 [123, 456]</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here, if X&gt;5 is true, the condition evaluates to 1, and the first set clause (123) is selected. If X&gt;5 is false, the condition evaluates to 0, which is an </span><span class="rvts140">out-of-bounds set selector</span><span class="rvts6">, resulting in the last set clause of the set expression (456) being selected by default.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Suppose you wanted to set the </span><span class="rvts140">return</span><span class="rvts6"> variable </span><span class="rvts139">R</span><span class="rvts6"> (or other variable) to one of these two values. In a programming language, you might do this with a statement something like,</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts201">if x &gt; 5 then r = 123 else r = 456 endif</span></p>
+<p class="rvps9"><span class="rvts7"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In a calculation operand, you could do the same thing with:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts139">R = X &gt; 5 [123, 456]</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You are allowed to use assignment operators within a set expression. For example, if you wanted a value of 123 assigned to variable R if X is greater than 5, otherwise a value of 456, you can rewrite the expression above as:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts139">X &gt; 5 [R=123, R=456]</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you use such expressions, only the selected set clause is executed, including any variable assignments within it; the remainder is skipped. Variable assignment operators in set clauses that are not selected are not performed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you want to use a </span><span class="rvts140">set expression</span><span class="rvts6"> to look up values, you write the set clauses in the order you want the selector expression to choose them. Suppose variable X was supposed to be from 1 to 3, and you wanted this converted to some special values, but set to 0 if it was out of range. You could do that with a set expression like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts139">X[123,456,789,0]</span></p>
+<p class="rvps13"><span class="rvts139"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">1</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">NON</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Assignment. The </span><span class="rvts140">calculation function</span><span class="rvts6"> defines the </span><span class="rvts139">=</span><span class="rvts6"> operator by context. When it appears within parentheses, the </span><span class="rvts139">=</span><span class="rvts6"> operator is treated as an alias for the </span><span class="rvts139">==</span><span class="rvts6"> comparison operator. When </span><span class="rvts139">=</span><span class="rvts6"> appears with </span><span class="rvts139">[]</span><span class="rvts6"> set enclosures or not enclosed, it is treated the same as the </span><span class="rvts139">:=</span><span class="rvts6"> operator. Only one </span><span class="rvts140">unenclosed </span><span class="rvts163">=</span><span class="rvts6"> may appear in a given </span><span class="rvts140">statement </span><span class="rvts6">or </span><span class="rvts140">set clause</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This means that expressions like &nbsp;</span><span class="rvts139">X&nbsp;=&nbsp;Y&nbsp;=&nbsp;Z</span><span class="rvts6"> are illegal, because when the </span><span class="rvts139">=</span><span class="rvts6"> operator is considered an assignment operator, it is </span><span class="rvts140">non-associative.</span><span class="rvts6"> &nbsp;That means the second equal sign has neither higher nor lower precedence than the first one, but is simply illegal. The first </span><span class="rvts139">=</span><span class="rvts6"> equal sign between </span><span class="rvts40">X</span><span class="rvts6"> and </span><span class="rvts40">Y</span><span class="rvts6"> is valid, but the one between </span><span class="rvts40">Y</span><span class="rvts6"> and </span><span class="rvts40">Z</span><span class="rvts6"> is invalid. The reason this is done is to prevent confusing the intent of the expression.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If the intent is to compare </span><span class="rvts40">Y</span><span class="rvts6"> and </span><span class="rvts40">Z</span><span class="rvts6"> for equality, and assign the comparison result to X, use </span><span class="rvts139">X = (Y = Z)</span><span class="rvts6"> &nbsp;or &nbsp;</span><span class="rvts139">X&nbsp;=&nbsp;Y&nbsp;==&nbsp;Z</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If the intent is to first assign </span><span class="rvts40">Z</span><span class="rvts6"> to </span><span class="rvts40">Y</span><span class="rvts6">, then assign </span><span class="rvts40">Y</span><span class="rvts6"> to </span><span class="rvts40">X</span><span class="rvts6">, use</span><span class="rvts163"> </span><span class="rvts139">X&nbsp;=&nbsp;Y&nbsp;:=&nbsp;Z</span><span class="rvts6"> &nbsp;or &nbsp;</span><span class="rvts139">X&nbsp;:=&nbsp;Y&nbsp;:=&nbsp;Z</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">calculation function</span><span class="rvts6"> performs this context determination in order to prevent common misuse of </span><span class="rvts139">=</span><span class="rvts6"> and </span><span class="rvts139">==</span><span class="rvts6"> inside of comparison sub-expressions.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The left-hand operand must be a variable name. The value of an assignment expression is the value assigned to the variable.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139"><br/></span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts212"><br/></span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts209"><br/></span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="59" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts139">:=</span></p>
+</td>
+<td width="86" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">1</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps3"><span class="rvts6">RTL</span></p>
+</td>
+<td width="385" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px; border-right: none;"><p class="rvps9"><span class="rvts6">Assignment. The left-hand operand must be a variable name. The value of an assignment expression is the value assigned to the variable. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts139">:=</span><span class="rvts6"> operator may be used in chained assignments (as shown above) and inside of parentheses and set expressions.</span></p>
+</td>
+<td width="168" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps111"><span class="rvts6">n/a</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="Operationanduseofcalculationsinmappingstrings"></a>
+<span class="rvts167">Operation and use of calculations in mapping strings</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As noted in the beginning of this article, calculation operands can be used with the sequence mapping items </span><span class="rvts40">SD</span><span class="rvts6"> and </span><span class="rvts40">SX</span><span class="rvts6">, and the numeric conversion mapping items </span><span class="rvts40">DD</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6"> in mapping strings.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For a complete description of mapping strings, see </span><span class="rvts165">Working with Mapping Strings</span><span class="rvts6">. For concise information on specific mapping commands, see </span><span class="rvts165">Mapping Strings Quick Reference Syntax and Examples</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here are some brief examples.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">1. Suppose you want to find some “words” and append a dash and a decimal numeric suffix to them. The first “word” gets a sequence number 1, the second get 2, etc. Let’s say your data looks like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts215">000151</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;one &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000152</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;two &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000153</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;three &nbsp; +++</span></p>
+<p class="rvps9"><span class="rvts215">000154</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;four &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can find “word” strings of varying length with a Regular Expression of </span><span class="rvts168">R'[a-z]+'</span><span class="rvts6">. In order for the </span><span class="rvts140">sequence number</span><span class="rvts6"> mechanism of mapping strings to function, you will have to use ALL in your CHANGE command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For the M string portion, you will want to do the following:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">emit the original word; you can do that with a </span><span class="rvts139">1+</span><span class="rvts6"> mapping code</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">emit a dash; this is done with a </span><span class="rvts139">'-'</span><span class="rvts6"> literal</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">create a sequence number value using the mapping command </span><span class="rvts139">SD</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you want the shortest possible number used as the numeric suffix, you would use the Varying length format, with </span><span class="rvts139">SDV</span><span class="rvts6"> or just </span><span class="rvts139">SD</span><span class="rvts6"> alone. If you wanted a fixed number of digits (say, </span><span class="rvts40">4</span><span class="rvts6">) you would specify a command like </span><span class="rvts139">SD4F</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Put that all together, and your CHANGE command would look like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts216"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts218">CHANGE ALL R'[a-z]+' M"1+ '-' SD4F"</span></p>
+<p class="rvps9"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts6">That would change your data as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts215">000151</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;one-0001 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000152</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;two-0002 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000153</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;three-0003 &nbsp; +++</span></p>
+<p class="rvps9"><span class="rvts215">000154</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;four-0004 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You will note that you can do all the above without the need of a </span><span class="rvts140">calculation operand</span><span class="rvts6">. But, suppose you didn’t want the suffix to be a value from </span><span class="rvts40">1</span><span class="rvts6"> by </span><span class="rvts40">1</span><span class="rvts6">, but a value from </span><span class="rvts40">0</span><span class="rvts6"> by </span><span class="rvts40">20</span><span class="rvts6"> plus a constant of </span><span class="rvts40">5</span><span class="rvts6">. The </span><span class="rvts139">SD</span><span class="rvts6"> command alone can’t do that, but used with a calculation operand, it can. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Recall from the description of the pre-initialized values for calculation variables, variable </span><span class="rvts139">S</span><span class="rvts6"> will contain the value of the original </span><span class="rvts140">sequence number</span><span class="rvts6">. In this example, that original </span><span class="rvts140">sequence number</span><span class="rvts6"> ranges from 1 to 4. To get the numbers the way you want, you would have to subtract one from the</span><span class="rvts140"> sequence number</span><span class="rvts6">, multiply it by 20, and then add 5. To make that the </span><span class="rvts140">returned value</span><span class="rvts6">, you would then assign the result to variable </span><span class="rvts139">R</span><span class="rvts6">. You would specify this in a </span><span class="rvts140">calculation operand</span><span class="rvts6"> as </span><span class="rvts139">R=(S-1)*20+5</span><span class="rvts6">. You incorporate the </span><span class="rvts140">calculation operand</span><span class="rvts6"> into the mapping string and issue your command like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts216"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts218">CHANGE ALL R'[a-z]+' M"1+ '-' SD4F'R=(S-1)*20+5'"</span></p>
+<p class="rvps9"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts6">That would change your data as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts215">000151</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;one-0005 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000152</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;two-0025 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts215">000153</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;three-0045 &nbsp; +++</span></p>
+<p class="rvps9"><span class="rvts215">000154</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;four-0065 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">2. Continuing with the first example, suppose what you wanted was, not to append a sequential number, but the actual line number where the data lines are found. Let’s say our data is similar to the first example, but there are excluded lines between them:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts194">****** ****************** Top of Data *******************</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000150 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000151</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;one &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000010 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000162</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;two &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000012 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000175</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;three &nbsp; +++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000014 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000190</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;four &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">****** ***************** Bottom of Data *****************</span></p>
+<p class="rvps9"><span class="rvts194"><br/></span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">We can accomplish this basically the same way as in example 1. We will again use the </span><span class="rvts139">SD</span><span class="rvts6"> command. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You might wonder how we can use </span><span class="rvts139">SD</span><span class="rvts6"> if we are not going to use the sequence number in the value. The answer is that when </span><span class="rvts139">SD</span><span class="rvts6"> has a </span><span class="rvts140">calculation operand</span><span class="rvts6">, the </span><span class="rvts140">calculation function</span><span class="rvts6"> is called and variables get pre-initialized as described above. However, there is no requirement that </span><span class="rvts168">SD</span><span class="rvts6"> or any of the other mapping commands that can use a </span><span class="rvts140">calculation operand</span><span class="rvts6"> must </span><span class="rvts40">reference</span><span class="rvts6"> variable </span><span class="rvts139">S</span><span class="rvts6"> or any other variable. For our second example here, we will simply ignore variable </span><span class="rvts139">S</span><span class="rvts6">. The reason </span><span class="rvts139">SD</span><span class="rvts6"> is the right command to use is that we want to “generate” a number that is </span><span class="rvts40">not</span><span class="rvts6"> based on our input data – which here consists of </span><span class="rvts140">words</span><span class="rvts6">, rather than </span><span class="rvts140">numbers</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts140">calculation operand</span><span class="rvts6"> here will be very simple. Variable </span><span class="rvts139">L</span><span class="rvts6"> contains the line number where the CHANGE command finds the words in question. We just have to make sure than only non-excluded lines are affected, and change the </span><span class="rvts140">calculation operand</span><span class="rvts6"> to copy the value of variable </span><span class="rvts139">L</span><span class="rvts6"> to variable </span><span class="rvts139">R</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You would issue your command like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts218"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts218">CHANGE ALL NX R'[a-z]+' M"1+ '-' SD4F'R=L'"</span></p>
+<p class="rvps9"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts6">That would change your data as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts194">****** ****************** Top of Data *******************</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000150 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000151</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;one-0151 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000010 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000162</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;two-0162 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000012 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000175</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;three-0175 &nbsp; +++</span></p>
+<p class="rvps9"><span class="rvts194">------ -------------------------------- &lt; 000014 &gt; ------</span></p>
+<p class="rvps9"><span class="rvts215">000190</span><span class="rvts168"> </span><span class="rvts216">***** &nbsp; &nbsp;four-0190 &nbsp; &nbsp;+++</span></p>
+<p class="rvps9"><span class="rvts194">****** ***************** Bottom of Data *****************</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">3. Converting data to a hash key. This is just a made-up example, but it may give you some idea of what you can do with calculation operands, when you have an elaborate computation to perform. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Suppose you had a series of 5-digit numbers, and you want to calculate a </span><span class="rvts140">hash value</span><span class="rvts6">. You have various issues to contend with:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">To make the process flexible, numbers &gt; 99999 will be limited to 5 digits using an initial modulus, just to be safe. That is done with </span><span class="rvts139">X \ 1L5</span><span class="rvts6">.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">You calculate a second modules into 100003, but some of your numbers could be zero, and you can’t divide by zero. Instead, when the divisor is zero you force it to one. </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">After taking a final modulus of 9973, the value will be in the range of 0 to 9972, but when the value was zero you want to force it to 9973.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Since we want to process original numeric data, this requires a </span><span class="rvts139">DD</span><span class="rvts6"> command instead of </span><span class="rvts139">SD</span><span class="rvts6">. To keep the example simple, the data will be in fixed columns:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts194">****** ****************** Top of Data *******************</span></p>
+<p class="rvps9"><span class="rvts215">000001</span><span class="rvts168"> </span><span class="rvts216">19453</span></p>
+<p class="rvps9"><span class="rvts215">000002</span><span class="rvts168"> </span><span class="rvts216">48470</span></p>
+<p class="rvps9"><span class="rvts215">000003</span><span class="rvts168"> </span><span class="rvts216">03085</span></p>
+<p class="rvps9"><span class="rvts215">000004</span><span class="rvts168"> </span><span class="rvts216">66247</span></p>
+<p class="rvps9"><span class="rvts194">****** ***************** Bottom of Data *****************</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The numbers themselves are found with a picture of </span><span class="rvts168">P'#####' 1 5</span><span class="rvts6">, and variable </span><span class="rvts139">X</span><span class="rvts6"> is set to this value. The result string will be 4 digits, so the basic </span><span class="rvts139">DD</span><span class="rvts6"> command will appear as </span><span class="rvts139">DD4F</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">The first modulus of X is calculated as &nbsp;</span><span class="rvts139">A=X\1L5</span><span class="rvts6">, to limit the values to 5 digits.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Divide this into 100003, but if the value from the first step was zero, substitute 1 instead. Adding the conditional expression A=0 to A, whenever A is zero the value would be replaced by 1. Tests for equality have lower precedence than addition, so this part must be in parentheses. This gives &nbsp;</span><span class="rvts139">B=100003\(A+(A=0)).</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">The final modulus is calculated as </span><span class="rvts139">R=B\9973.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Forcing a zero value to </span><span class="rvts40">9973</span><span class="rvts6"> requires a test for zero. Since assignments are also expressions that have the value assigned to the variable, we can take that assignment and compare it to zero. We have to use an explicit assignment of </span><span class="rvts139">:=</span><span class="rvts6"> so the expression is understood not to be a comparison operation. If it is zero, we can use the result of the comparison to select a substitute value for </span><span class="rvts139">R</span><span class="rvts6"> using a set expression that contains an assignment to </span><span class="rvts139">R</span><span class="rvts6">. When </span><span class="rvts139">R</span><span class="rvts6"> is not zero, we simply select a dummy set clause of </span><span class="rvts40">0</span><span class="rvts6">, which is discarded, leaving the value of </span><span class="rvts168">R</span><span class="rvts6"> unchanged.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This gives us the following calculation:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">A=X\1L5;B=100003\(A+(A=0));((R:=B\9973)=0)[R=9973,0]</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The complete CHANGE command would be:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139">C P'#####' 1 5 M"DD4F'A=X\1L5;B=100003\(A+(A=0));((R:=B\9973)=0)[R=9973,0]'"</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Of course, a command this long is something you would prepare ahead of time. You can place the mapping string into an SPFLite SET variable, like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139">SET MYMAP = `M"DD4F'A=X\1L5;B=100003\(A+(A=0));((R:=B\9973)=0)[R=9973,0]']`</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Then, issue the command as:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">C P'#####' 1 5 =MYMAP</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can also compose long mapping strings in an SPFLite edit macro, and issue them using the </span><span class="rvts139">SPF_Cmd()</span><span class="rvts6"> built-in function. The results of the CHANGE command would appear as follows. Note that these results were tested using the actual calculation function, and verified with an Excel spreadsheet:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts194">****** ****************** Top of Data *******************</span></p>
+<p class="rvps9"><span class="rvts215">000001</span><span class="rvts168"> </span><span class="rvts216">2738 &nbsp;</span></p>
+<p class="rvps9"><span class="rvts215">000002</span><span class="rvts168"> </span><span class="rvts216">3063 &nbsp;</span></p>
+<p class="rvps9"><span class="rvts215">000003</span><span class="rvts168"> </span><span class="rvts216">1283 &nbsp;</span></p>
+<p class="rvps9"><span class="rvts215">000004</span><span class="rvts168"> </span><span class="rvts216">3837 &nbsp;</span></p>
+<p class="rvps9"><span class="rvts194">****** ***************** Bottom of Data *****************</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><a name="Calculatorcommandlinetestprogram"></a>
+<span class="rvts167">Calculator command-line test program</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Because the use of a calculator in a text editor is a somewhat novel feature, you may need a little practice working with it to be sure you understand how it works. One way to do that is by creating experimental mapping strings with calculation operands, and observing how they operate on test data. However, that process could be somewhat time-consuming. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">An easier way to explore this is with a small command-line test program called&nbsp;</span><span class="rvts139"> mapping_calc.exe. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This program will first prompt you for an initial sequence number (seq -‑&gt;). If you use expressions that reference variable </span><span class="rvts139">S</span><span class="rvts6">, this will provide an incrementing value for each calc expression you supply, starting with the number you enter. If you just press Enter, the starting number will be </span><span class="rvts40">1</span><span class="rvts6">. If you provide a starting number of </span><span class="rvts40">0</span><span class="rvts6">, variable </span><span class="rvts139">S</span><span class="rvts6"> will be set to </span><span class="rvts40">0</span><span class="rvts6"> each time the </span><span class="rvts140">calculation function</span><span class="rvts6"> is called, and the value will not be incremented.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You cannot directly set the values of the Line-number variable </span><span class="rvts139">L</span><span class="rvts6"> or the Column-number variable </span><span class="rvts139">C</span><span class="rvts6">. Instead, </span><span class="rvts139">mapping_calc.exe</span><span class="rvts6"> will assign random numbers to these values for testing purposes, with variable </span><span class="rvts139">L</span><span class="rvts6"> receiving random numbers between 1 and 1000, and variable </span><span class="rvts139">C</span><span class="rvts6"> receiving random numbers between 1 and 80.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The program will then prompt you for an initial value (init&nbsp;‑&gt;) and a calculation operand (calc&nbsp;‑&gt;). The initial value is used to initialize variables </span><span class="rvts139">R</span><span class="rvts6"> and </span><span class="rvts139">X</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You type these in as you would in a mapping string (just the calculation part). It will then return the calculated result in decimal (dec -‑&gt;) and hex (hex -‑&gt;), and report any errors it may have found. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If a specific column is associated with an error, it will appear at the beginning of the error message in parentheses. For example, if you specified a calculation operand of </span><span class="rvts139">R=X/\2</span><span class="rvts6"> this would be an error, since both </span><span class="rvts139">/</span><span class="rvts6"> and </span><span class="rvts139">\</span><span class="rvts6"> are binary operators, and there is no such operator as </span><span class="rvts139">/\</span><span class="rvts6">. Since the error would be detected when the </span><span class="rvts139">\</span><span class="rvts6"> was reached in position 5 of the expression, you would see the error message &nbsp;(5): Calc operand has syntax error at \.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To terminate the program, simply press Enter twice at the (init&nbsp;‑&gt;) prompt, or click on the [x] Windows button. In this program, hex values are entered and displayed with a leading </span><span class="rvts168">.</span><span class="rvts6"> dot notation. You can use this hex format for both the initial value and in the calculation expression itself, as described above in the section </span><span class="rvts165">Specifying numeric literals</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts139">mapping_calc.exe </span><span class="rvts6">program is distributed with the SPFLite installation.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts209"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

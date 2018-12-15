@@ -1,0 +1,50 @@
+; SPFLite colorize file for DOS Batch files
+QUOTED   5
+COMMENT1 1  REM  0             Either REM
+COMMENT2 1  ::   1             or :: indicate comments
+; Delimiters
+DELIMS  (),.:=@
+WORD 6 (
+WORD 6 )
+WORD 3 ,
+WORD 3 .
+WORD 3 :
+WORD 3 =
+WORD 3 @
+AUTOCAPS 4  aux                Reserved words
+WORD     3  call               .
+WORD     3  cd                 .
+AUTOCAPS 4  com1               .
+AUTOCAPS 4  com2
+AUTOCAPS 4  com3
+AUTOCAPS 4  com4
+AUTOCAPS 4  con
+WORD     3  defined                            HELP
+WORD     3  dir
+WORD     3  do
+WORD     3  echo
+WORD     3  else
+WORD     3  endlocal
+WORD     3  equ
+WORD     3  errorlevel
+WORD     3  exist
+WORD     3  exit
+WORD     3  for
+WORD     3  geq
+WORD     3  goto
+WORD     3  gtr
+WORD     3  if
+WORD     3  in
+WORD     3  leq
+AUTOCAPS 4  lpt1
+AUTOCAPS 4  lpt2
+AUTOCAPS 4  lpt3
+WORD     3  lss
+WORD     3  neq
+WORD     3  not
+WORD     3  nul
+WORD     3  pause
+AUTOCAPS 4  prn
+WORD     3  set
+WORD     3  setlocal
+WORD     3  shift

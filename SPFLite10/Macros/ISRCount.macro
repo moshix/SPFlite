@@ -1,0 +1,19 @@
+' ISRCount.MACRO
+'                                                                   
+'  ISRCOUNT counts the number of occurrences of a string, and       
+'           issues a message.                                      
+'                                                                   
+' Syntax: ISRCOUNT string                                           
+'                                                                   
+' Author: George Deluca                                             
+' Original by IBM in the Macros documentation
+
+dim msg as string 
+if Get_Arg$(0) = "" then halt(fail, "Missing search argument") ' Better have an operand
+
+SPF_Cmd("FIND ALL " + SPF_Quote$(Get_Arg$(0)))        ' Issue a FIND ALL command
+if Get_RC <> 0 then  halt(fail, "No occurrences of: " + Get_Arg$(1)) ' Tell of error 
+
+msg = Get_Msg$                                        ' Get the SPFLite message text 
+' Issue our own format message
+halt("ISRCount found", Get_Arg$(0), parse$(msg, " ", 4), "times") 

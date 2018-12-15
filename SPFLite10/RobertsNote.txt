@@ -1,0 +1,61 @@
+Hello to all of you in the SPFLite user community,
+
+I have been working with George for quite a long while on SPFLite.  I think his
+work goes back to 2005, and I would be surprised if I wasn't in there nagging
+him to change things very shortly afterwards.  I can't really remember how long
+I have been at it with George (where "being at it" is both in the sense of
+working on it and arguing with him about it), but it's been so long that I
+basically can't remember when I wasn't working on it.  My most obvious
+contribution is the documentation, since I have written a lot of it and revised
+lots more.  A dead give-away: wherever the doc is long-winded and wordy, you can
+thank/blame me for it.  George likes things short and sweet.  Less obvious are
+many of the commands that were either added or extensively changed.  I designed
+a lot of these, debated with George about them, and tested them before writing
+the doc.  I also wrote and revised small sections of the code, while to be sure
+George has written the lion's share of it.
+
+So, for better or worse, I have had a big influence on what SPFLite is today.  I
+am hopeful that most of that is for the better, though honesty compels me to
+admit that at times I have talked George into implementing some things that
+didn't turn out that great or that would have been better not being done.  Those
+aspects are in the minority, but as with all software, it's always a work in
+progress and is never perfect.
+
+Somewhere in the SPFLite doc it says that software is designed by mere mortals.
+I am now at a point in life where being a mere mortal is all too literal, for I
+am facing my own mortality.  For some time, I have had to deal with heart
+disease, and now I have been told I have cancer.  In an odd sort of way, I feel
+like a kid again, having my parents tell me, "OK, time to put the toys away." If
+you are someone who really enjoys code, writing software in general, and working
+on SPFLite in particular, often feels like playing with toys.  Each new command
+or feature accomplished is like another toy in the toy box.  And no, I don't
+want to put the toys away.  If I were asked when I would ever grow up, my answer
+could only be, "Why should I?  I don't want to".  Unfortunately, now I have to.
+
+So, my involvement in SPFLite will necessarily be coming to an end, and will now
+only consist of answering user forum questions when I have time.  I know that
+George has his own health issues too.  (I am about to turn 66, and he is 10
+years to the day older than me).  So, for both of us, our stint on "The SPFLite
+Show" is drawing to a close, whether we want it to or not.  Being the "co-host"
+has been a blast, while it lasted.
+
+My wish for all of you is that someone in the user community would take up the
+challenge of carrying on the legacy of SPFLite that George started.  I helped
+him as much as I could, but he deserves the credit for this; I could never have
+done on my own what he did.  I am just grateful he allowed me to help, and put
+up with me as long as he did.  If there is a bright and ambitious user out
+there, by all means - try it.  All software exists because someone said, "Hey, I
+could do it better than that!" And, maybe you can.  I can tell you that it would
+be well worth the effort, and it would give both of us a sense of satisfaction
+to know that what we made would live on after we are gone.
+
+While we are still here, continue to put this software to the test, and point
+out any shortcomings.  That is the only way things get better, by having
+involved users.  In the end, doing what is in the best interests of you as the
+user community is what writing software is all about.
+
+Regards and best wishes,
+
+Robert Hodge
+Troy, Michigan
+December, 2018

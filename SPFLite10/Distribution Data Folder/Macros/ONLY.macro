@@ -1,0 +1,15 @@
+' ONLY.MACRO
+'
+' This is the ONLY macro described in the Help under the
+' "Macros for fun and profit" topic.
+'
+if Get_Arg$(0) <> "" then 
+  SPF_Cmd("NEXCLUDE ALL " + SPF_Quote$(Get_Arg$(1)) + " " + Get_Arg$(2,0)) 
+else
+  if Get_Curr_Word$ <> "" then 
+     SPF_Cmd("NEXCLUDE ALL " + SPF_Quote$(Get_Curr_Word$))
+  else
+     halt(FAIL, "There is no word under the cursor")
+  end if
+end if
+halt

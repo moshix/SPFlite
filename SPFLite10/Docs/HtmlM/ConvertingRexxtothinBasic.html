@@ -1,0 +1,1513 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Converting Rexx to thinBasic</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Converting Rexx to thinBasic">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Converting Rexx to thinBasic" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="ConvertingRexxtothinBasic"
+		  data-hnd-context="22"
+		  data-hnd-title="Converting Rexx to thinBasic"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Converting Rexx to thinBasic</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Introduction">Introduction</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Miscellaneous%20Considerations">Miscellaneous Considerations</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#General%20Statements">General Statements</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Program%20Control%20Structures">Program Control Structures</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Operators">Operators</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Macro%20Headers">Macro Headers</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#ISREDIT%20calls">ISREDIT calls</a></p>
+<p class="rvps4"><a class="rvts12" href="ConvertingRexxtothinBasic.html#Rexx%20Functions%20%20">Rexx Functions </a></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts13">Introduction</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you come from an IBM ISPF background, you may have used or written TSO/Rexx scripts to interface with ISPF. While our </span><span class="rvts13">thinBasic</span><span class="rvts11"> scripts and the capabilities of SPFLite are not exactly the same, there are enough similarities that you may be able to convert </span><span class="rvts13">some</span><span class="rvts11"> existing Rexx scripts to </span><span class="rvts13">thinBasic</span><span class="rvts11"> and have them perform useful work in the SPFLite environment.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You will not be able to convert ISPF-specific features, like access to the Dialog Manager, Table Services, File Tailoring, etc. but for scripts that simply interface with an edit session, there is enough functional commonality that a workable conversion may be possible.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">We can't give you every possible conversion strategy and technique, or cover every syntax requirement, but the following may be a good starting point to help you. Because this topic is large and complicated, what is presented here should be considered as the first draft of a work in progress. We invite all users with ISPF/Rexx experience to test out these ideas, and we welcome any and all suggestions for improving on these conversion strategies.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Keep in mind, in addition to ISPF vs. SPFLite differences, that the </span><span class="rvts13">thinBasic</span><span class="rvts11"> functions and features are </span><span class="rvts13">comparable</span><span class="rvts11"> but may not be </span><span class="rvts13">identical</span><span class="rvts11"> to Rexx. Be sure to consult the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation for any features you are not familiar with, and to ensure that function parameters and results are what you expected.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Miscellaneous Considerations"></a>
+<span class="rvts13">Miscellaneous Considerations</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">A major difference between Rexx and </span><span class="rvts13">thinBasic</span><span class="rvts11"> is that Rexx treats all values as strings, which you don't need to declare, whereas </span><span class="rvts13">thinBasic</span><span class="rvts11"> is a more "strongly typed" language, and does require you to predeclare string and numeric variables before you use them.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">If you have Rexx code that is checking return codes from ISREDIT and ISPEXEC calls, be aware the SPFLite return codes are different. Both treat a return code of 0 as "normal" and non-zero is usually treated as a "problem occurred". Beyond that, there is no similarity.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Rexx scripts return messages back to ISPF using a call to ISPEXEC SETMSG MSG(msgID). In many cases, this call will reference two Dialog variables, </span><span class="rvts13">ZerrSm</span><span class="rvts11"> and </span><span class="rvts13">ZerrLm</span><span class="rvts11">, the "short error message" and "long error message". ISPF will first display a "short" message, and if you press F1, it will first display the longer message, then launch a Help panel. SPFLite does not implement this two-stage messaging; there is only a single message displayed by SET_MSG. If you are converting ISPF Rexx scripts with ISPEXEC SETMSG calls, you will have to pick the message you like the best (either short or long) as the one and only message displayed. Because the SPFLite screen can handle fairly long messages, you may want to choose the </span><span class="rvts13">ZerrLm</span><span class="rvts11"> value for SET_MSG. If you really need both the short and long messages, you may wish to call MSGBOX instead of SET_MSG. (You might use the "long" message as the MSGBOX message, and the "short" message as the MSGBOX title.) &nbsp;Some message ID codes for ISPEXEC SETMSG refer to fixed messages in the ISPF message library, and do not use the contents of Dialog variables </span><span class="rvts13">ZerrSm</span><span class="rvts11"> and </span><span class="rvts13">ZerrLm</span><span class="rvts11">. You would need to know what those messages were, and/or have access to a copy of that library, to be able to convert such messages to SPFLite.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">ISREDIT commands that deal with lines use visible line number values. SPFLite uses the Line Pointer concept. In most cases, you can treat Line Pointers as if they were line numbers, for purposes of converting the Rexx script. You will need to add code to ensure that IS_DATA(linePointer) is TRUE, so you don't attempt to process non-data lines in your edit file.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Any Rexx statements involving LINE functions such as LINEIN and LINEOUT that you wish to convert to </span><span class="rvts13">thinBasic</span><span class="rvts11"> will require a </span><span class="rvts13">USES "FILE"</span><span class="rvts11"> statement in your macro. Be aware that if you attempt to perform file I/O on files that SPFLite already has opened, it could result in runtime conflicts. If you attempt to modify SPFLite control files, such as Profile INI files or the SPFLite configuration file, it could cause SPFLite to malfunction. We won't say you cannot attempt such things, but you need to be careful if you do. We cannot guarantee that such techniques will work. If you try this, be sure to back up the SPFLite control files first so you have a recovery strategy.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Rexx has a command called INTERPRET, which will take a string and treat it as a Rexx statement, which is immediately parsed and executed. </span><span class="rvts13">thinBasic</span><span class="rvts11"> does not have an INTERPRET capability per se, but it does have a series of functions that begin with "Eval" which are used to evaluate string and math expressions. If you are converting a Rexx script with INTERPRET, one of the Eval functions may work for you, if the Rexx INTERPRET operation is limited to dynamic expression evaluation. Consult the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation for more information on the Eval functions.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Rexx scripts tend to frequently use the PARSE facility. Often this is simply to grab arguments passed to a subroutine or to read values from a file or queue. However, you may run into cases where PARSE is being used in more complex ways. </span><span class="rvts13">thinBasic</span><span class="rvts11"> has a PARSE function, which operates differently than Rexx, but it may be enough for simpler cases. Otherwise, you may have a bit of work to do converting this.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Rexx has a novel way of storing string values, in which you can define a fixed "base" variable name and append a dynamic "stem" to it. Rexx uses this stem approach to substitute for arrays, which is doesn't support. If you have a Rexx script that uses stemmed variables, you may have considerable work to convert them. Often, Rexx stem variables are simply used as arrays, and </span><span class="rvts13">thinBasic</span><span class="rvts11"> supports these natively. If your Rexx script does anything fancier than that with stems, you might be able to use SPFLite Globally Stored Data as a substitute for stem variables.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">ISPF has a way to store variable values in the "shared pool" or the "profile pool" using ISPEXEC VGET and ISPEXEC VPUT. If you have a script that does this, you will have to rewrite it. Here are some strategies for going about this:</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">You can get edit Profile values using Get_Profile$, and can set Profile values using a SPF_CMD call, like SET_CMD("EOL CRLF")</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Other than standard Profile values, you cannot add user-defined values to an SPFLite edit profile</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">For "shared variables", Globally Stored Data may be sufficient, as long as you understand it is not persistent across SPFLite instances. Once you close down SPFLite and restart it, the values will be gone.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">If you want to store persistent values, you can use Set_SETVAR and Get_SETVAR$ to access the SPFLite SET variable pool. If you do this, be careful not to inadvertently write over any existing values. You can use SET names that have dots in them; this allows you to form "qualified SET names". Adopt a consistent naming convention for the SET symbols you define this way.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Because SPFLite SET names are persistent, you need to evaluate whether the script you are converting intended its variables to be persistent or not. If not, using SET names may not be not the right approach, and you may wish to use Globally Stored Data instead.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">For example, if you are converting a script that stored name ABC in the shared pool, and XYZ in the profile pool, you could use those pool names as SET name qualifiers. Keep in mind that if you call Get_SETVAR for an undefined name, the function will return an empty (null) string. Example:</span></li>
+</ul></ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps10"><span class="rvts37">Rexx</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts18">"ISPEXEC VGET ABC SHARED"</span></p>
+<p class="rvps10"><span class="rvts18">"ISPEXEC VGET XYZ PROFILE"</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts18">"ISPEXEC VPUT ABC SHARED"</span></p>
+<p class="rvps10"><span class="rvts18">"ISPEXEC VPUT XYZ PROFILE"</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts37">SPFLite</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps10"><span class="rvts18">DIM ABC,XYZ AS STRING</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts18">ABC = Get_SETVAR ("SHARED.ABC")</span></p>
+<p class="rvps10"><span class="rvts18">XYZ = Get_SETVAR ("PROFILE.XYZ")</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts18">Set_SETVAR ("SHARED.ABC", ABC)</span></p>
+<p class="rvps10"><span class="rvts18">Set_SETVAR ("PROFILE.XYZ", XYZ)</span></p>
+<p class="rvps10"><span class="rvts18"><br/></span></p>
+<p class="rvps10"><span class="rvts34"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="General Statements"></a>
+<span class="rvts13">General Statements</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ADDRESS</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not needed</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ARG, PARSE ARG</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">Get_Arg$</span></p>
+<p class="rvps2"><span class="rvts18">UCASE$(Get_Arg())</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">CALL routine</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">routine &nbsp; &nbsp;</span><span class="rvts14"> </span><span class="rvts67">[CALL keyword not used]</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DO</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">see Program Control Structures below</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DROP</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">REDIM</span><span class="rvts14"> </span><span class="rvts67">may apply, but probably not needed</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">EXIT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">HALT</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">EXIT returnCode</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">HALT (returnCode, "message")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">IF</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">see Program Control Structures below</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">INTERPRET</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">thinBasic </span><span class="rvts18">Eval</span><span class="rvts67"> functions may apply. See thinBasic help for more information.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ITERATE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ITERATE FOR|WHILE|DO</span></p>
+<p class="rvps2"><span class="rvts67">thinBasic </span><span class="rvts18">ITERATE</span><span class="rvts67"> cannot reference an outer nested block, but only the closest one</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">LEAVE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">EXIT FOR|WHILE|DO</span></p>
+<p class="rvps2"><span class="rvts67">thinBasic </span><span class="rvts18">EXIT</span><span class="rvts67"> has a "number of times" operand to exit from multiple FOR/NEXT blocks</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">LINEIN</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">USES "FILE"</span></p>
+<p class="rvps2"><span class="rvts67">various I/O statements; see thinBasic Help</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">LINEOUT</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">USES "FILE"</span></p>
+<p class="rvps2"><span class="rvts67">various I/O statements; see thinBasic Help</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">NOP &nbsp; &nbsp;</span><span class="rvts11">(used for "do nothing" branches of IF statements)</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">NOP</span></p>
+<p class="rvps2"><span class="rvts67"><br/></span></p>
+<p class="rvps2"><span class="rvts11">-- thinBasic does not natively have a NOP statement, but SPFLite has added one. It is essentially a SUB named NOP that does nothing. -- </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">NUMERIC</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">PARSE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">thinBasic has a number of parsing functions, including </span><span class="rvts18">PARSE, PARSE$, PARSECOUNT </span><span class="rvts67">and</span><span class="rvts18"> PARSESET$</span><span class="rvts67">, as well as several other string functions. See the thinBasic documentation for more information.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">PROCEDURE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SUB </span><span class="rvts67">and</span><span class="rvts18"> FUNCTION</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">PULL</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">PUSH</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">QUEUE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">RAISE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported. In Rexx, </span><span class="rvts18">RAISE</span><span class="rvts67"> is sometimes used to simulate a </span><span class="rvts18">GOTO</span><span class="rvts67"> statement, which thinBasic does not support either. It is possible some use of </span><span class="rvts18">EXIT</span><span class="rvts67"> may be applied.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">RETURN </span><span class="rvts34">[</span><span class="rvts67">expression</span><span class="rvts34">]</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">RETURN </span><span class="rvts34">[</span><span class="rvts67">expression</span><span class="rvts34">]</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SAY</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">SAY </span><span class="rvts34">string</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_DEBUG</span></p>
+<p class="rvps2"><span class="rvts18">SET_MSG</span></p>
+<p class="rvps2"><span class="rvts18">MSGBOX</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">USES "CONSOLE"</span></p>
+<p class="rvps2"><span class="rvts18">PRINTL </span><span class="rvts34">string</span><span class="rvts18"> &nbsp;' displays on a console window</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' PRINT instead of PRINTL will output the</span></p>
+<p class="rvps2"><span class="rvts18">' </span><span class="rvts34">string</span><span class="rvts18"> without a line terminator.</span></p>
+<p class="rvps2"><span class="rvts18">' You can use CLS to clear the screen</span></p>
+<p class="rvps2"><span class="rvts18">' See CONSOLE module documentation for more</span></p>
+<p class="rvps2"><span class="rvts18">' details.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SIGNAL</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts67">not supported. In Rexx, </span><span class="rvts18">SIGNAL</span><span class="rvts67"> is sometimes used to simulate a </span><span class="rvts18">GOTO</span><span class="rvts67"> statement, which thinBasic does not support either. It is possible some use of </span><span class="rvts18">EXIT</span><span class="rvts67"> may be applied.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">TRACE</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_TRACE</span></p>
+<p class="rvps2"><span class="rvts67">functionality is different</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Program Control Structures"></a>
+<span class="rvts13">Program Control Structures</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The main difference here is that Rexx uses a common DO ... END structure for all blocks of code (like PL/1 which it is modeled after) while </span><span class="rvts13">thinBasic</span><span class="rvts11"> has unique delimiters for each type of block. You will also notice that in Rexx you will often see an END prior to an ELSE, &nbsp;ELSE IF or WHEN/OTHERWISE clauses, whereas in </span><span class="rvts13">thinBasic</span><span class="rvts11"> for ELSE, ELSEIF and CASE, that is not necessary.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Note that in </span><span class="rvts13">thinBasic</span><span class="rvts11">:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">ELSEIF is all one word</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">END IF is two words, where the IF part is required</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">END SELECT is two words, where the SELECT part is required</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">In FOR/NEXT loops, NEXT does not require an index name afterwards like NEXT N. It's just NEXT. Specifying the N value </span><span class="rvts13">is</span><span class="rvts11"> supported and is probably a good idea for documenting purposes.</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">SELECT CASE defines a common expression, which is tested by each CASE clause, whereas a Rexx SELECT defines a test at each WHEN clause, and there is no common expression on the Rexx SELECT clause. This means there is more to do than merely changing keywords; may will have to restructure your SELECT statements. If your WHEN clauses compare against a common value, you can move that value into the SELECT CASE expression. Otherwise, you can specify this as </span><span class="rvts13">SELECT CASE OF</span><span class="rvts11">, and ensure that each WHEN clause is rewritten to be a CASE clause with an expression that produces a "truth" value of -1 or 0. You can ensure that by enclosing each expression in the </span><span class="rvts13">thinBasic</span><span class="rvts11"> function </span><span class="rvts13">IsTrue</span><span class="rvts11">. </span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">The </span><span class="rvts13">OF</span><span class="rvts11"> keyword is a bit of "magic" supported by SPFLite; just code it as is when converting Rexx SELECT statements.</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">If you are converting a Rexx WHEN clause that is already in the form of a comparison like COUNT = 5, the expression will automatically produce a </span><span class="rvts13">thinBasic</span><span class="rvts11"> "truth value" of -1 or 0, and so enclosing it in a </span><span class="rvts13">thinBasic</span><span class="rvts11"> function </span><span class="rvts13">IsTrue</span><span class="rvts11"> would not be required.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts34">statement1 </span><span class="rvts18">;</span><span class="rvts34"> statement2</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts34">statement1 </span><span class="rvts18">:</span><span class="rvts34"> statement2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">if </span><span class="rvts34">cond</span><span class="rvts18"> then </span><span class="rvts34">statement</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">if </span><span class="rvts34">cond</span><span class="rvts18"> then statement</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">if </span><span class="rvts34">cond1</span><span class="rvts18"> then do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement1</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+<p class="rvps2"><span class="rvts18">else if </span><span class="rvts34">cond2</span><span class="rvts18"> then</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement2</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+<p class="rvps2"><span class="rvts18">else do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement3</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">if </span><span class="rvts34">cond1</span><span class="rvts18"> then</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement1</span></p>
+<p class="rvps2"><span class="rvts18">elseif </span><span class="rvts34">cond2</span><span class="rvts18"> then</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement2</span></p>
+<p class="rvps2"><span class="rvts18">else</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement3</span></p>
+<p class="rvps2"><span class="rvts18">end if</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">do i = 1 to 10</span></p>
+<p class="rvps2"><span class="rvts18">&nbsp;</span><span class="rvts34"> </span><span class="rvts18">if </span><span class="rvts34">cond1</span><span class="rvts18"> then leave</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">do i = 1 to 10 by -1</span></p>
+<p class="rvps2"><span class="rvts18">&nbsp;</span><span class="rvts34"> </span><span class="rvts18">if </span><span class="rvts34">cond1</span><span class="rvts18"> then leave</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">for i = 1 to 10</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond1</span><span class="rvts18"> then exit for</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp; &nbsp;statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate for</span></p>
+<p class="rvps2"><span class="rvts18">next</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">for i = 1 to 10 step -1</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond1</span><span class="rvts18"> then exit for</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp; &nbsp;statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate for</span></p>
+<p class="rvps2"><span class="rvts18">next</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">do while </span><span class="rvts34">cond</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp; &nbsp;</span><span class="rvts18">if </span><span class="rvts34">cond1</span><span class="rvts18"> then leave</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">do while </span><span class="rvts34">cond</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond1</span><span class="rvts18"> then exit do</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp; &nbsp;statement</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;if </span><span class="rvts34">cond2</span><span class="rvts18"> then iterate do</span></p>
+<p class="rvps2"><span class="rvts18">loop</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">do forever</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts34">statement</span></p>
+<p class="rvps2"><span class="rvts18">loop</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">select</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;when </span><span class="rvts34">cond1</span><span class="rvts18"> </span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">statement1</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp;&nbsp;</span><span class="rvts18"> end</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;when </span><span class="rvts34">var = value</span><span class="rvts18"> </span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">statement2</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp;&nbsp;</span><span class="rvts18"> end</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;when </span><span class="rvts34">var1 = value1, var2 = value2</span><span class="rvts18"> </span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">statement3</span></p>
+<p class="rvps2"><span class="rvts34"> &nbsp;&nbsp;</span><span class="rvts18"> end</span></p>
+<p class="rvps2"><span class="rvts18">/* ... */</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;otherwise do</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">statement3</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;end</span></p>
+<p class="rvps2"><span class="rvts18">end</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' NOTE 1: In Rexx, a comma-separated expr</span></p>
+<p class="rvps2"><span class="rvts18">' list on WHEN implies an AND test</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">select case of</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;case IsTrue(</span><span class="rvts34">cond1</span><span class="rvts18">)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; </span><span class="rvts34">statement1</span></p>
+<p class="rvps2"><span class="rvts34"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;case var = value</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; </span><span class="rvts34">statement2</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;case (var1 = value1) and (var2 = value2)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;statement3</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;case else</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">statement3</span></p>
+<p class="rvps2"><span class="rvts34"><br/></span></p>
+<p class="rvps2"><span class="rvts18">end select</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' NOTE 1: the "of" after SELECT CASE is a</span></p>
+<p class="rvps2"><span class="rvts18">' keyword supported only within SPFLite.</span></p>
+<p class="rvps2"><span class="rvts18">' It won't work in stand-alone thinBasic.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' NOTE 2: In thinBasic, a comma-separated expr</span></p>
+<p class="rvps2"><span class="rvts18">' list on CASE implies an OR test</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18"> , &nbsp; &nbsp;</span><span class="rvts11">(comma as line continuation)</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18"> _ &nbsp; &nbsp;</span><span class="rvts11">(underscore as line continuation)</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/* line comment */</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">/*</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; block comment</span></p>
+<p class="rvps2"><span class="rvts18">*/</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/* line comment */</span></p>
+<p class="rvps2"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (or)</span></p>
+<p class="rvps2"><span class="rvts18">' line comment</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">/*</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; block comment</span></p>
+<p class="rvps2"><span class="rvts18">*/</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' NOTE: Using /* */ as block comments is</span></p>
+<p class="rvps2"><span class="rvts18">' non-standard for BASIC, but thinBasic </span></p>
+<p class="rvps2"><span class="rvts18">' allows it.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Operators"></a>
+<span class="rvts13">Operators</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Operators that are the same are not mentioned</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&amp;</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">AND</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">|</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">OR</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">||</span><span class="rvts11"> &nbsp; &nbsp; (concatenate)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&amp;</span></p>
+<p class="rvps2"><span class="rvts18">+</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/= &nbsp;\= &nbsp;</span><span class="rvts79">¬</span><span class="rvts18">= &nbsp;&lt;&gt; &nbsp;&gt;&lt;</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&lt;&gt;</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&lt;&lt; &nbsp;&lt;&lt;= &nbsp;&gt;&gt; &nbsp;&gt;&gt;= &nbsp;==</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&lt; &nbsp;&lt;= &nbsp;&gt; &nbsp;&gt;= &nbsp;=</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts79">¬</span><span class="rvts6"> &nbsp; &nbsp;\</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">NOT</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">one two &nbsp; &nbsp; &nbsp; </span><span class="rvts11">(concatenation with blank)</span><span class="rvts18"> &nbsp;</span></p>
+<p class="rvps2"><span class="rvts18">(one)(two) &nbsp; &nbsp;</span><span class="rvts11">(abuttal)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">one &amp; " " &amp; two</span></p>
+<p class="rvps2"><span class="rvts18">one&amp;two</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts11">(real divide)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts11">(integer divide)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">\</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">(power)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">^</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">&amp;&amp;</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">XOR</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Macro Headers"></a>
+<span class="rvts13">Macro Headers</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/* REXX other comments */</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT MACRO (arg1,arg2) PROCESS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">' macname.MACRO </span></p>
+<p class="rvps2"><span class="rvts18">DIM arg1,arg2 AS STRING</span></p>
+<p class="rvps2"><span class="rvts18">arg1 = Get_Arg$(1)</span></p>
+<p class="rvps2"><span class="rvts18">arg2 = Get_Arg$(2)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">/* REXX other comments */</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT MACRO (arg1,arg2) NOPROCESS"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT PROCESS RANGE C"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">' macname.MACRO </span></p>
+<p class="rvps2"><span class="rvts18">DIM arg1,arg2 AS STRING</span></p>
+<p class="rvps2"><span class="rvts18">DIM _ZFRANGE,_ZLRANGE AS NUMBER = 0</span></p>
+<p class="rvps2"><span class="rvts18">arg1 = Get_Arg$(1)</span></p>
+<p class="rvps2"><span class="rvts18">arg2 = Get_Arg$(2)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">if is_line_cmd and _</span></p>
+<p class="rvps2"><span class="rvts18">(get_src_lcmd$="C" or get_src_lcmd$="CC") then</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;_ZFRANGE = get_src1_lptr</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;_ZLRANGE = get_src2_lptr</span></p>
+<p class="rvps2"><span class="rvts18">end if</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="ISREDIT calls"></a>
+<span class="rvts13">ISREDIT calls</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT AUTOSAVE ON|OFF PROMPT|NOPROMPT"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("AUTOSAVE ON|OFF PROMPT|NOPROMPT")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = BLKSIZE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("LRECL")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT BOUNDS left right"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("BOUNDS left right")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (left,right) = BOUNDS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">left = Get_Lbound</span></p>
+<p class="rvps2"><span class="rvts18">right = Get_Rbound</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = CAPS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("CAPS")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT CAPS = ON|OFF"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("CAPS ON|OFF")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT CHANGE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("C operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" height="76" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (times) = CHANGE_COUNTS"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT (times,lines) = CHANGE_COUNTS"</span></p>
+</td>
+<td width="480" height="76" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM msg, times, lines AS STRING</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("CHANGE operands")</span></p>
+<p class="rvps2"><span class="rvts18">msg = GET_MSG$</span></p>
+<p class="rvps2"><span class="rvts18">times = PARSE$(msg, " ", 4)</span></p>
+<p class="rvps2"><span class="rvts18">lines = PARSE$(msg, " ", 7)</span></p>
+<p class="rvps2"><span class="rvts18">if lines = "" then lines = times</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT COPY operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("COPY operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (line,col) = CURSOR"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">line = Get_LNUM(Get_CSR_LPTR))</span></p>
+<p class="rvps2"><span class="rvts18">col = Get_CSR_COL</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT CURSOR = line col"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SET_CSR(line,col,0)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT CUT operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("CUT operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = DATA_CHANGED"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps21"><span class="rvts11">var = IIF$(GET_MODIFIED,"YES","NO")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT DELETE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("DELETE operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT EXCLUDE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("EXCLUDE operands")</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("X operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT FIND operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("FIND operands")</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("F operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (times) = FIND_COUNTS"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT (times,lines) = FIND_COUNTS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM msg, times, lines AS STRING</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("FIND operands")</span></p>
+<p class="rvps2"><span class="rvts18">msg = GET_MSG$</span></p>
+<p class="rvps2"><span class="rvts18">times = PARSE$(msg, " ", 4)</span></p>
+<p class="rvps2"><span class="rvts18">lines = PARSE$(msg, " ", 7)</span></p>
+<p class="rvps2"><span class="rvts18">if lines = "" then lines = times</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT FLIP operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("FLIP operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT HEX = ON|OFF"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("HEX ON|OFF")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT var = HEX"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("HEX")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT HIDE operand"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("HIDE")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT RESET HIDE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("RESET HIDE")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT HILITE [ON|OFF] [AUTO] [FIND]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("HILITE [ON|OFF] [AUTO] [FIND]")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT INSERT label|linenum [lines]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE I" &amp; TSTR$(lines) &amp; label)</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE N" &amp; TSTR$(lines) &amp; label)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = LABEL .label|linenum"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_Label$(GET_LPTR(label))</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LABEL .label|linenum = .newlabel</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE '.newlabel' .label")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = LINE .label|linenum"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_LINE$(GET_LPTR(label_or_linenum))</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LINE .label|linenum = data"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SET_LINE(GET_LPTR(label_or_linenum),data)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LINE_AFTER .label|linenum = data"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE N label_or_linenum")</span></p>
+<p class="rvps2"><span class="rvts18">SET_LINE(GET_LPTR(label_or_linenum)+1,data)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LINE_AFTER .label|linenum = NOTELINE data"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE NOTE label_or_linenum")</span></p>
+<p class="rvps2"><span class="rvts18">SET_LINE(GET_LPTR(label_or_linenum)+1,data)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" height="108" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LINE_BEFORE .label|linenum = data"</span></p>
+</td>
+<td width="480" height="108" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM LPTR AS NUMBER</span></p>
+<p class="rvps2"><span class="rvts18">LPTR = GET_LPTR(.label|linenum) - 1</span></p>
+<p class="rvps2"><span class="rvts18">IF LPTR &gt; 0 THEN</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; SPF_CMD("LINE N !" &amp; TSTR$(LPTR))</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; SET_LINE(LPTR+1, data) </span></p>
+<p class="rvps2"><span class="rvts18">END IF</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LINE_BEFORE .label|linenum = NOTELINE data"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM LPTR AS NUMBER</span></p>
+<p class="rvps2"><span class="rvts18">LPTR = GET_LPTR(.label|linenum) - 1</span></p>
+<p class="rvps2"><span class="rvts18">IF LPTR &gt; 0 THEN</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; SPF_CMD("LINE NOTE !" &amp; TSTR$(LPTR))</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; SET_LINE(LPTR+1, data) </span></p>
+<p class="rvps2"><span class="rvts18">END IF</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = LINENUM .label"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_LNUM(GET_LPTR(".label"))</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT LOCATE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LOCATE operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = LRECL"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("LRECL")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = MEMBER"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_FILEBASE$</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT PASTE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("PASTE operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT PRESERVE ON|OFF|C"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("PRESERVE ON|OFF|C")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = PRESERVE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("PRESERVE")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT PROCESS [DEST] [RANGE </span><span class="rvts34">cmd1</span><span class="rvts18"> [</span><span class="rvts34">cmd2</span><span class="rvts18">]]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts80">The ISPF line command names </span><span class="rvts82">cmd1</span><span class="rvts80"> and </span><span class="rvts82">cmd2</span><span class="rvts80"> can be up to 6 characters and can contain any alphabetic or special character except blank, hyphen (-), or apostrophe (</span><span class="rvts81">’</span><span class="rvts80">). SPFLite line command names are not predeclared in this way, but use the GET_SRC_LCMD$ and GET_DEST_LCMD$ functions. You cannot define arbitrary line command names for use in a macro the way ISPF does this. If you use the macro as a primary command, possible source commands are C/CC and M/MM, while line-command macros use the name of the macro itself as the name of the source line range. Possible destination commands are A/AA, B/BB, H/HH, W/WW, O/RR and OR/ORR for both types of macros.</span></p>
+<p class="rvps2"><span class="rvts80"><br/></span></p>
+<p class="rvps2"><span class="rvts80">SPFLite line command names are currently limited to four characters.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = RANGE_CMD"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_SRC_LCMD$</span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts11">-- or --</span></p>
+<p class="rvps2"><span class="rvts18">var = GET_DEST_LCMD$</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT RCHANGE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("RCHANGE")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = RECFM"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_PROFILE$("RECFM")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT REPLACE operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("REPLACE operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT RFIND"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("RFIND")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SEEK operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("FIND operands DX")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (times) = SEEK_COUNTS"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT (times,lines) = SEEK_COUNTS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM msg, times, lines AS STRING</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("FIND operands DX")</span></p>
+<p class="rvps2"><span class="rvts18">msg = GET_MSG$</span></p>
+<p class="rvps2"><span class="rvts18">times = PARSE$(msg, " ", 4)</span></p>
+<p class="rvps2"><span class="rvts18">lines = PARSE$(msg, " ", 7)</span></p>
+<p class="rvps2"><span class="rvts18">if lines = "" then lines = times</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = SESSION"</span></p>
+<p class="rvps2"><span class="rvts11">-- may return EDIT or VIEW --</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">var = GET_SESSION_TYPE$</span></p>
+<p class="rvps2"><span class="rvts11">-- may return EDIT, BROWSE or other values --</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ZerrSm = "short message"</span></p>
+<p class="rvps2"><span class="rvts18">ZerrLm = "long message"</span></p>
+<p class="rvps2"><span class="rvts18">"ISPEXEC "SETMSG MSG(msgCode)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">Set_Msg ([rc,] ZerrLm)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts11">-- see notes above about ISPEXEC SETMSG --</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SETUNDO operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("SETUNDO number")</span></p>
+<p class="rvps2"><span class="rvts11">-- SPFLite SETUNDO not compatible with ISPF --</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SHIFT ( lnum_or_label [n]"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT SHIFT ) lnum_or_label [n]"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT SHIFT &lt; lnum_or_label [n]"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT SHIFT &gt; lnum_or_label [n]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE (n !" &amp; GET_LPTR(lnum_or_label)))</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE )n !" &amp; GET_LPTR(lnum_or_label)))</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE &lt;n !" &amp; GET_LPTR(lnum_or_label)))</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE &gt;n !" &amp; GET_LPTR(lnum_or_label)))</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SORT operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("SORT operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SOURCE operand"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT (var) = SOURCE"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT RESET SOURCE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("SOURCE operand")</span></p>
+<p class="rvps2"><span class="rvts18">var = GET_PROFILE$("SOURCE")</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("RESET SOURCE")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT SUBMIT operands"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("SUBMIT operands")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT TABS ON|OFF"</span></p>
+<p class="rvps2"><span class="rvts18">"ISREDIT (var) = TABS"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("TABS ON|OFF")</span></p>
+<p class="rvps2"><span class="rvts18">var = GET_PROFILE$("TABS")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT (var) = TABSLINE"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">DIM var AS STRING </span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE TABS !2")</span></p>
+<p class="rvps2"><span class="rvts18">var = GET_LINE$(3)</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE D !3") &nbsp; </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT = TABSLINE = data"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE TABS !2")</span></p>
+<p class="rvps2"><span class="rvts18">SET_LINE$(3,data)</span></p>
+<p class="rvps2"><span class="rvts18">SPF_CMD("LINE D !3") &nbsp; </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT TFLOW lnum_or_label [n]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE TF" &amp; n &amp; "lnum_or_label") </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">"ISREDIT TSPLIT lnum_or_label [n]"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">SPF_CMD("LINE TS" &amp; n &amp; "lnum_or_label") </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Rexx Functions  "></a>
+<span class="rvts13">Rexx Functions &nbsp;</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">Rexx</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts37">thinBasic</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">abbrev(longString,shortString)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">StartsWith(longString,shortString,0)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">abs(value)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">abs(value)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">address()</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">n/a</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">arg()</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">get_arg_count</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">arg(n)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">get-arg$(n)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">center(string,len)</span></p>
+<p class="rvps2"><span class="rvts18">center(string,len,pad)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">cset$(string,len)</span></p>
+<p class="rvps2"><span class="rvts18">cset$(string,len,pad)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">changestr(needle,haystack,newneedle)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">replace$(haystack,needle,newneedle)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">copies(string,n)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">repeat$(n,string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">countstr(needle,haystack)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">tally(haystack,needle)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">date()</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">date$() &nbsp; &nbsp;</span><span class="rvts11">(format operands are different)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">delstr(string,pos,len)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">strdelete$(string,pos,len)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">str = directory()</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">directory(newdirectory)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">USES "FILE"</span></p>
+<p class="rvps2"><span class="rvts18">str = DIR_GetCurrent</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">USES "FILE"</span></p>
+<p class="rvps2"><span class="rvts18">DIR_Change(newdirectory)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">filespec("Drive",fullpath)</span></p>
+<p class="rvps2"><span class="rvts18">filespec("Path",fullpath)</span></p>
+<p class="rvps2"><span class="rvts18">filespec("Location",fullpath)</span></p>
+<p class="rvps2"><span class="rvts18">filespec("Name",fullpath)</span></p>
+<p class="rvps2"><span class="rvts18">filespec("Extension",fullpath)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">USES "FILE" ' -- for all calls</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">LEFT$(FILE_PATHSPLIT(fullpath,%Path_root),2)</span></p>
+<p class="rvps2"><span class="rvts18">MID$(FILE_PATHSPLIT(fullpath,%Path_Rootpath),3)</span></p>
+<p class="rvps2"><span class="rvts18">FILE_PATHSPLIT(fullpath,%Path_Rootpath)</span></p>
+<p class="rvps2"><span class="rvts18">FILE_PATHSPLIT(fullpath,%Path_FileExt)</span></p>
+<p class="rvps2"><span class="rvts18">FILE_PATHSPLIT(fullpath,%Path_Ext)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">format()</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">format$() &nbsp; &nbsp;</span><span class="rvts11">(format operands are different)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">insert(new,target,pos)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">strinsert$(target,new,pos)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">left(string,len)</span></p>
+<p class="rvps2"><span class="rvts18">left(string,len,pad)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">left$(string,len)</span></p>
+<p class="rvps2"><span class="rvts18">lset$(left$(string,len),len,pad)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">lastpos(needle,haystack)</span></p>
+<p class="rvps2"><span class="rvts18">lastpos(needle,haystack,start)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">instr(-1,needle,haystack)</span></p>
+<p class="rvps2"><span class="rvts18">instr(start-len(haystack)-1,needle,haystack)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">length(string)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">len(string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">lower(string)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">lcase$(string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">max(str1,str2,etc)</span></p>
+<p class="rvps2"><span class="rvts18">max(num1,num2,etc)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">max$(str1,str2,etc)</span></p>
+<p class="rvps2"><span class="rvts18">max(num1,num2,etc)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">min(str1,str2,etc)</span></p>
+<p class="rvps2"><span class="rvts18">min(num1,num2,etc)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">min$(str1,str2,etc)</span></p>
+<p class="rvps2"><span class="rvts18">min(num1,num2,etc)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">pos(needle,haystack)</span></p>
+<p class="rvps2"><span class="rvts18">pos(needle,haystack,start)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">instr(,needle,haystack)</span></p>
+<p class="rvps2"><span class="rvts18">instr(start,needle,haystack)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">reverse(string)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">strreverse$(string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">right(string,len)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">right$(string,len)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">sign(number)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">sgn(number)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">space(string)</span></p>
+<p class="rvps2"><span class="rvts18">space(string,n)</span></p>
+<p class="rvps2"><span class="rvts18">space(string,0)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">trimfull$(string)</span></p>
+<p class="rvps2"><span class="rvts18">replace$(trimfull$(string)," ",lset$("",3))</span></p>
+<p class="rvps2"><span class="rvts18">remove$(string, " ")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">strip(string)</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Both")</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Leading")</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Trailing")</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">strip(string,,char)</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Both",char)</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Leading",char)</span></p>
+<p class="rvps2"><span class="rvts18">strip(string,"Trailing",char)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">trim$(string)</span></p>
+<p class="rvps2"><span class="rvts18">trim$(string)</span></p>
+<p class="rvps2"><span class="rvts18">ltrim$(string)</span></p>
+<p class="rvps2"><span class="rvts18">rtrim$(string)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">trim$(string,char)</span></p>
+<p class="rvps2"><span class="rvts18">trim$(string,char)</span></p>
+<p class="rvps2"><span class="rvts18">ltrim$(string,char)</span></p>
+<p class="rvps2"><span class="rvts18">rtrim$(string,char)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">substr(data,pos,len)</span></p>
+<p class="rvps2"><span class="rvts18">substr(data,pos)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">mid$(data,pos,len)</span></p>
+<p class="rvps2"><span class="rvts18">mid$(data,pos)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">time()</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">time$ &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">(format is different)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">translate(string)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ucase$(string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">translate(string,newCharSet,oldCharSet)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">replace$(string, ANY oldCharSet, newCharSet)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">trunc(string)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18">' trunc is often used to extract a "qualified</span></p>
+<p class="rvps2"><span class="rvts18">' option" like "3" from a string like "3.4"</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">extract$(string,".")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">upper(string)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">ucase$(string)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">verify(string,charset)</span></p>
+</td>
+<td width="480" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts18">verify(,string,charset)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

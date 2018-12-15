@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Line Tags</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,,,,,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Line Tags">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Line Tags" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithLineTags"
+		  data-hnd-context="13"
+		  data-hnd-title="Working with Line Tags"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Line Tags</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Example:Changingtaggedlines">Example: Changing tagged lines</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Whyusetaggedlines?%20%20">Why use tagged lines ?</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Relativelinetagnotation">Relative line tag notation</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Linelabelandlinetagco-location">Line label and line tag co-location</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Primary-commandtagusage">Primary-command tag usage</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Primary-commandtagexamples">Primary-command tag examples</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#TheTAGprimarycommand">The TAG primary command</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#Usingtagsforlinecontrolranges">Using tags for line control ranges</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithLineTags.html#TheDROPandKEEPcommands">The DROP and KEEP commands</a></p>
+<p class="rvps5"><a class="rvts101" href="WorkingwithLineTags.html#UsingLabelsandTagswiththeLINECommand">Using Labels and Tags with the LINE Command</a></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite contains an exciting new technology extension to ISPF: </span><span class="rvts36">Line Tags</span><span class="rvts85">.&nbsp;</span><span class="rvts35"> You will note a number of similarities between a line tag and a line label. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note:</span><span class="rvts35"> &nbsp;</span><span class="rvts36">User Lines</span><span class="rvts35"> provide an alternate means to segregate lines into two groups, known as</span><span class="rvts36"> U lines</span><span class="rvts35"> and</span><span class="rvts36"> V lines</span><span class="rvts35">, where U lines are a set of lines of particular interest to a user at a given point in time, and "non-User" lines are everything else. The terms </span><span class="rvts36">User Line</span><span class="rvts35"> and </span><span class="rvts36">U line</span><span class="rvts35"> mean the same thing; and, </span><span class="rvts36">non-User Line</span><span class="rvts35">, </span><span class="rvts36">V line</span><span class="rvts35"> and </span><span class="rvts36">ordinary data line</span><span class="rvts35">, all mean the same thing. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">User lines have a number of similarities with excluded lines, but User lines are not hidden and then revealed the way excluded lines are. If you only need two types of lines to work with, using User Lines may be simpler than using tagged lines.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">See </span><a class="rvts32" href="WorkingwithUserlines.html">Working with User lines</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A </span><span class="rvts85">line tag</span><span class="rvts35"> is a </span><span class="rvts89">:</span><span class="rvts35"> colon followed by one or more letters, and appears in the sequence area. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note: </span><span class="rvts35">The line number sequence area size on the edit screen is adjustable from 5 to 8 positions. This means the maximum size of a label or tag that you can type into a sequence area is from 4 to 7 letters, after the leading dot or colon. Internally, SPFLite maintains an 8-position sequence area, and only displays as much as will fit. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">This means that labels and tags on the primary command line can actually use the maximum internal size (a dot or colon plus up to 7 letters). When you do this, only part of the label or tag is displayed, but the entire value is present. That should not pose a problem if the tags are being managed by macros, but if you enter such tags manually, be careful you don't confuse yourself, since you won't see the entire tag displayed on the edit screen.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Tags are associated with the data line itself, not the particular line number they are on at the moment. So, if lines are inserted or deleted prior to a tagged line, or if the tagged line itself is moved, the tag stays with the line.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can enter a tag on a line by typing it in the sequence area, and you can remove by blanking it out, just like you would with a label. However, as you will see, there are other, more powerful ways of tagging and untagging lines.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The major difference between a tag and a label is that the </span><span class="rvts36">same</span><span class="rvts35"> tag name can appear on </span><span class="rvts36">multiple</span><span class="rvts35"> lines. Like labels, tags can be used on primary commands to reference a set of lines to be acted upon.</span></p>
+<p class="rvps2"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">If you like, you can think of the single dot that precedes a label, and the two dots that make up the colon preceding a tag, to help you remember that a label applies to a single line, while tags apply to multiple lines (usually).</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">A given tag name usually will end up appearing on multiple lines, because that's where tags derive their power. But there is no reason why a particular tag name can't be on just a single line.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Example:Changingtaggedlines"></a>
+<span class="rvts36">Example: Changing tagged lines</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's say we have the following file, and manually entered a tag name of </span><span class="rvts89">:T</span><span class="rvts35"> on the lines shown, and then issue a </span><span class="rvts36">CHANGE</span><span class="rvts35"> command that uses those lines:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Line Tags 01.jpg"></p>
+<p class="rvps10"><span class="rvts283"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are done, the file display will look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Line Tags 02.jpg"></p>
+<p class="rvps10"><span class="rvts283"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Tags are </span><span class="rvts85">persistent.</span><span class="rvts35"> &nbsp;If you are editing this file and have a PROFILE option of </span><span class="rvts36">STATE ON</span><span class="rvts35">, and these tags are present, you can close this file and then reopen it later, and again, the three</span><span class="rvts36"> :T</span><span class="rvts35"> tag names will still be there. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Why use tagged lines ?&nbsp;</span><a name="Whyusetaggedlines?  "></a>
+<span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Well, consider why </span><span class="rvts85">excluded</span><span class="rvts35"> lines are used. (Review "</span><a class="rvts33" href="WorkingwithExcludedLines.html">Working with excluded lines</a><span class="rvts35">" section as needed for more information). Excluded lines are a way to sub-divide, or </span><span class="rvts85">partition</span><span class="rvts35">, a file into two groups or subsets: the </span><span class="rvts85">excluded</span><span class="rvts35"> group, and the </span><span class="rvts85">unexcluded</span><span class="rvts35"> group. You can use </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> on commands to select between these two groups. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">But suppose you needed </span><span class="rvts85">three</span><span class="rvts35"> or </span><span class="rvts85">four</span><span class="rvts35"> groups – or maybe, </span><span class="rvts85">lots</span><span class="rvts35"> of groups. What if you needed to do extensive work on one or more of these groups, including things like </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> that normally unexclude lines when string are found and changed, and thus might change a line from being in one group to being in another? &nbsp;Excluded lines don't help much any more in cases like this. But </span><span class="rvts85">tagged</span><span class="rvts35"> lines </span><span class="rvts36">do</span><span class="rvts35">. Tagged lines are a much more powerful facility for managing your data. You will see this as the discussion proceeds.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You may wish to review </span><a class="rvts33" href="KeyboardMacros.html#Case%20Study:%20Implementing%20Bookmarks">Case Study: Implementing Bookmarks</a><span class="rvts35"> in </span><a class="rvts33" href="KeyboardMacros.html">Keyboard Macros</a><span class="rvts35"> for an example that combines line tags and key mapping.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Two points to note here:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">First, because tags are more powerful than exclusions, there is more involved in using them. There are additional commands and considerations. These are discussed in detail. Be prepared to do a little studying up before you grasp the whole picture.</span></li>
+</ul></ul>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">Second, labeled lines, tagged lines, excluded lines </span><span class="rvts36">and</span><span class="rvts35"> User Lines can be </span><span class="rvts36">combined</span><span class="rvts35"> for even more powerful data selection capabilities. Users involved in activities like data management will see possibilities to perform certain types of </span><span class="rvts85">data mining</span><span class="rvts35"> operations on text data, using labeled, tagged, excluded, and User lines, which could be quite useful in inspecting or analyzing very large text files.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Relativelinetagnotation"></a>
+<span class="rvts36">Relative line tag notation</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Like labels, tags may take a </span><span class="rvts85">relative</span><span class="rvts35"> notation, although it's a bit simpler. (The relative label formats &nbsp;</span><span class="rvts36">&lt; &nbsp;&lt;= &nbsp;&gt;</span><span class="rvts35"> &nbsp;and &nbsp;</span><span class="rvts36">&gt;=</span><span class="rvts35"> &nbsp;are not used on tags.)</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A&nbsp;</span><span class="rvts85"> relative tag</span><span class="rvts35"> defines a collection of lines in the edit file with respect to a tag. The following relative line tags exist:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">:ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines tagged with </span><span class="rvts89">:ABC</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; </span></p>
+<p class="rvps9"><span class="rvts89">:\ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">:&lt;&gt;ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">:¬ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines </span><span class="rvts85">other than</span><span class="rvts35"> lines tagged with </span><span class="rvts89">:ABC</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">:ZALL</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines having any tag whatsoever regardless of tag name</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; </span></p>
+<p class="rvps9"><span class="rvts89">:\ZALL</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">:&lt;&gt;ZALL</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">:¬ZALL</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines having no tag present</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note that </span><span class="rvts88">:ABC</span><span class="rvts35"> is just an </span><span class="rvts85">example</span><span class="rvts35"> here, whereas </span><span class="rvts88">:ZALL</span><span class="rvts35"> is literally specified as a special tag name, reserved to collectively reference </span><span class="rvts85">all</span><span class="rvts35"> lines having a line tag of any kind. It is illegal to actually enter a tag of </span><span class="rvts88">:ZALL</span><span class="rvts35"> into the sequence area of a line.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">Z</span><span class="rvts35"> prefix on </span><span class="rvts36">ALL</span><span class="rvts35"> comes from conventions IBM uses for ISPF reserved names, such as </span><span class="rvts88">.ZFIRST</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps2"><a name="Linelabelandlinetagco-location"></a>
+<span class="rvts36">Line label and line tag co-location</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts85">label</span><span class="rvts35"> of a line, and the </span><span class="rvts85">tag</span><span class="rvts35"> of a line, are two separate, independent attributes of a line (along with the exclusion status of a line). This means a line may be labeled or not labeled, tagged or not tagged, and excluded or not excluded, all independently of each other.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a line has both a label and a tag at the same time, the screen display will only show the </span><span class="rvts85">label</span><span class="rvts35">, since a label is always unique, but a tag is normally not unique. What happens is that the usually-blank column between the sequence area and column 1 of the data line will contain a </span><span class="rvts89">:</span><span class="rvts35"> colon as a reminder that there is a tag defined for that line. You can't </span><span class="rvts85">see</span><span class="rvts35"> the tag, but at least you know one is </span><span class="rvts85">there</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">Sometimes that usually-blank column is called the </span><span class="rvts85">gap column.</span><span class="rvts35"> &nbsp;As with character positions in the sequence area, the gap column has no column number. </span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's say we have the following file, and we manually entered a tag name of </span><span class="rvts89">:T</span><span class="rvts35"> on lines 2, 4 and 6, and then on line 4, then we also entered a label of </span><span class="rvts36">.AA</span><span class="rvts35"> The file display will look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Line Tags 03.jpg"></p>
+<p class="rvps10"><span class="rvts283"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice the </span><span class="rvts89">:</span><span class="rvts35"> colon after label .AA on line 4. Suppose you put the cursor on line 4, column 4, where the </span><span class="rvts320">A</span><span class="rvts35"> of </span><span class="rvts127">A</span><span class="rvts35">BC is underlined above. The status line for the line/column indicator will look like this. Notice that in addition to the line and column, you will see the hidden tag name:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp;L &nbsp;000004 &nbsp;C 4 &nbsp;:T </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The status line </span><span class="rvts85">only</span><span class="rvts35"> shows tag names when the tag for a line is </span><span class="rvts85">hidden</span><span class="rvts35">. When there is no tag/label co-location going on, the line/column display will not display tag names, even for lines that </span><span class="rvts85">have</span><span class="rvts35"> tags.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">Why not just show tag names all the time in the line/column display, instead of only when there is co-location? &nbsp;Mainly to keep the status line as simple and uncluttered as possible. We don't want to distract you with information you can see anyway just by looking at the main screen.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, just to explore this idea, suppose we were to set up the following keyboard mapping:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Alt-period</span><span class="rvts35"> = </span><span class="rvts89">{.}</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Alt-semicolon</span><span class="rvts35"> = </span><span class="rvts89">{:}</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">These are not defaults; you would have to do this key mapping yourself.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This will allow us to use the keyboard to clear the sequence area of labels or tags – even in cases where you couldn't directly get to a tag, or type over it, because co-location was hiding it. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you placed the cursor on line 4, and were to press </span><span class="rvts36">Alt-period</span><span class="rvts35">, the </span><span class="rvts85">label</span><span class="rvts35"> and colon would go away, the tag would reappear, and line 4 would look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Line Tags 04.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Whereas, if you placed the cursor on line 4, and were to press </span><span class="rvts36">Alt-semicolon</span><span class="rvts35">, the </span><span class="rvts85">tag</span><span class="rvts35"> and colon would go away, and the line 4 would look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Line Tags 05.jpg"></p>
+<p class="rvps10"><span class="rvts283"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In both cases, once the label/tag co-location is no longer present, the </span><span class="rvts36">:</span><span class="rvts35"> colon in the gap column and the extra </span><span class="rvts36">:T</span><span class="rvts35"> tag name that was present in the status line's line/column display will disappear.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Primary-commandtagusage"></a>
+<span class="rvts36">Primary-command tag usage</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In any primary command that references data lines, a tag name can be used instead of a label or pair of labels. Only one tag may appear (except for the </span><span class="rvts36">TAG</span><span class="rvts35"> primary command, which has a special syntax.)</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can combine tags and labels on the same command to select lines. What happens is that the list of effective lines is the </span><span class="rvts85">intersection</span><span class="rvts35"> of the labels and tags, so that only the tags that exist within the specified line label range are available to the command.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can combine the </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> option, and the </span><span class="rvts36">MX</span><span class="rvts35"> or </span><span class="rvts36">DX</span><span class="rvts35"> option, along with tags, on various commands, just as you could do if you were selecting lines or line ranges using labels.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If a command has both a tag name and </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35">, then lines with the given tag are selected limited by their </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> status.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Primary-commandtagexamples"></a>
+<span class="rvts36">Primary-command tag examples</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :T</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines tagged with :T.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :T X</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines tagged with :T, limited to excluded lines only. Changed lines will be unexcluded.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :T X DX</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines tagged with :T, limited to excluded lines only. Changed lines will remain excluded.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :\T</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines which are NOT tagged with :T.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :T .A .B &nbsp;X</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines which are tagged with :T, limited to excluded lines only, that are within the range of labels .A and .B</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :ZALL</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines tagged with a tag of any kind.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ABC DEF ALL :\ZALL NX MX</span></p>
+<p class="rvps10"><span class="rvts35">Change text on all lines which have no tags of any kind and are not excluded. Changed lines will be made excluded afterwards.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="TheTAGprimarycommand"></a>
+<span class="rvts36">The TAG primary command</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The full potential of line tags is only realized when you use the </span><span class="rvts36">TAG</span><span class="rvts35"> primary command to set, clear or toggle a given line tag </span><span class="rvts85">en masse</span><span class="rvts35"> across many lines. It's a powerful command, and has many options. The </span><a class="rvts33" href="TAG.html">TAG</a><span class="rvts35"> command description also discusses it, but let's go over it here. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">Database users may see conceptual similarities between the </span><span class="rvts36">TAG</span><span class="rvts35"> command and SQL's UPDATE / SELECT WHERE statements.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here's the syntax of it:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts36">TAG</span><span class="rvts35"> </span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">[ :</span><span class="rvts85">tag-name</span><span class="rvts35"> ]</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts85">search-string</span><span class="rvts35"> [ </span><span class="rvts36">NF</span><span class="rvts35"> ] ]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts85">start-column</span><span class="rvts35"> [ </span><span class="rvts85">end-column</span><span class="rvts35"> ] ] </span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts320">ON</span><span class="rvts35"> | </span><span class="rvts36">OFF</span><span class="rvts35"> | </span><span class="rvts36">TOGGLE</span><span class="rvts35"> | </span><span class="rvts36">ASSERT</span><span class="rvts35"> | </span><span class="rvts36">SET</span><span class="rvts35"> ]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts36">FIRST</span><span class="rvts35"> | </span><span class="rvts36">LAST</span><span class="rvts35"> | </span><span class="rvts36">NEXT</span><span class="rvts35"> | </span><span class="rvts36">PREV</span><span class="rvts35"> | </span><span class="rvts320">ALL </span><span class="rvts35">]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ &nbsp;</span><span class="rvts36">PREFIX</span><span class="rvts35"> | </span><span class="rvts36">SUFFIX</span><span class="rvts35"> | </span><span class="rvts36">WORD</span><span class="rvts35"> | </span><span class="rvts287">CHAR</span><span class="rvts35"> ]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts85">line-control-range</span><span class="rvts35"> ]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts36">X</span><span class="rvts35"> | </span><span class="rvts36">NX</span><span class="rvts35"> ]</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps71"><span class="rvts35">[ </span><span class="rvts36">MX</span><span class="rvts35"> | </span><span class="rvts36">DX</span><span class="rvts35"> ] </span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">That's a lot. We will take this one step at a time.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">The </span><span class="rvts85">tag-name</span><span class="rvts35"> names the tag that is to be set, cleared or toggled. It's optional, because if you omit it, </span><span class="rvts36">TAG</span><span class="rvts35"> can be used to </span><span class="rvts85">clear</span><span class="rvts35"> all tags in a given line range when you are doing a </span><span class="rvts36">TAG OFF</span><span class="rvts35"> or </span><span class="rvts36">TAG ASSERT</span><span class="rvts35"> operation. Normally you will be using the </span><span class="rvts85">tag-name</span><span class="rvts35"> operand., and for </span><span class="rvts36">ON</span><span class="rvts35"> and </span><span class="rvts36">TOGGLE</span><span class="rvts35"> it is required. The </span><span class="rvts85">tag-name</span><span class="rvts35"> here represents the </span><span class="rvts85">target</span><span class="rvts35"> of the </span><span class="rvts36">TAG</span><span class="rvts35"> command's activity – what tag name will be used to set tags on with, for example. So, this tag is called the </span><span class="rvts85">target tag name.</span><span class="rvts35"> &nbsp;The target tag, when used, </span><span class="rvts36">must</span><span class="rvts35"> appear immediately after the </span><span class="rvts36">TAG</span><span class="rvts35"> command name, and no where else.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps104"><span class="rvts35">Otherwise, it could possibly get confused with being part of the line-control range, and we wouldn't want </span><span class="rvts85">that</span><span class="rvts35"> to happen, would we?</span></p>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<p class="rvps104"><span class="rvts35">This is one of the few places where SPFLite has positional requirements for its command options. In most cases, you can put operands in any order you want, but not for this one.</span></p>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts35">The</span><span class="rvts85"> search-string</span><span class="rvts35"> is used to locate particular lines for which you wish to set, clear, assert or toggle a line tag. If you omit the </span><span class="rvts85">search-string,</span><span class="rvts35"> the command does not base its line-selection criteria on the </span><span class="rvts85">contents</span><span class="rvts35"> of the lines, only their </span><span class="rvts91">location</span><span class="rvts35"> in the file. A </span><span class="rvts85">search-string</span><span class="rvts35"> is required for the </span><span class="rvts36">ASSERT</span><span class="rvts35"> option. </span><span class="rvts36">Note</span><span class="rvts35">: &nbsp;A search-string on a </span><span class="rvts36">TAG</span><span class="rvts35"> command is just like a search-string on a </span><span class="rvts36">FIND</span><span class="rvts35"> command, which means the same kinds of SPF string types are permitted, such as </span><span class="rvts36">C</span><span class="rvts35">, </span><span class="rvts36">T</span><span class="rvts35">, </span><span class="rvts36">X</span><span class="rvts35">, </span><span class="rvts36">P</span><span class="rvts35"> and </span><span class="rvts36">R</span><span class="rvts35"> strings.</span></li>
+</ul></ul>
+<p class="rvps90"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts35">If you use a </span><span class="rvts85">search-string,</span><span class="rvts35"> you can use the </span><span class="rvts36">NF</span><span class="rvts35"> option, which means </span><span class="rvts85">not found.</span><span class="rvts35"> &nbsp;It works just like the </span><span class="rvts36">NFIND</span><span class="rvts35"> command does, by selecting lines in which the </span><span class="rvts85">search-string</span><span class="rvts35"> is </span><span class="rvts36">not</span><span class="rvts35"> found. (Recall that the </span><span class="rvts36">NFIND</span><span class="rvts35"> command can also be spelled as </span><span class="rvts36">NF</span><span class="rvts35">.)</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps104"><span class="rvts35">Why didn't we make an </span><span class="rvts36">NTAG</span><span class="rvts35"> command or something, to be “consistent” with </span><span class="rvts36">NFIND</span><span class="rvts35">? &nbsp;Since </span><span class="rvts36">TAG</span><span class="rvts35"> is pretty complicated already, having </span><span class="rvts85">two</span><span class="rvts35"> complicated tag commands just didn't seem like a good idea. Besides, most of what an </span><span class="rvts36">NTAG</span><span class="rvts35"> command would have done is covered by the </span><span class="rvts36">ASSERT</span><span class="rvts35"> option, so keep reading.</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">The </span><span class="rvts85">start-column</span><span class="rvts35"> and </span><span class="rvts85">end-column</span><span class="rvts35"> are used to limit the columns where the </span><span class="rvts85">search-string</span><span class="rvts35"> is searched for, and this works just like it does on a FIND command.</span></li>
+</ul></ul>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">The </span><span class="rvts36">ON</span><span class="rvts35">, </span><span class="rvts36">OFF</span><span class="rvts35">, </span><span class="rvts36">TOGGLE</span><span class="rvts35">, </span><span class="rvts36">ASSERT</span><span class="rvts35"> and </span><span class="rvts36">SET</span><span class="rvts35"> control what exactly the </span><span class="rvts36">TAG</span><span class="rvts35"> command is going to do. Normally you are going to use </span><span class="rvts36">TAG</span><span class="rvts35"> to </span><span class="rvts85">tag</span><span class="rvts35"> things, and so </span><span class="rvts36">ON</span><span class="rvts35"> is the default. You can abbreviate </span><span class="rvts36">TOGGLE</span><span class="rvts35"> to </span><span class="rvts36">TOG</span><span class="rvts35">. </span><span class="rvts36">ON</span><span class="rvts35"> and </span><span class="rvts36">OFF</span><span class="rvts35"> are straight-forward. To </span><span class="rvts36">TOGGLE</span><span class="rvts35"> a tag means (a) if a line has no tag, set the specified tag name, (b) if the line </span><span class="rvts85">has</span><span class="rvts35"> the specified tag, clear that tag, and (c) if the line has a tag </span><span class="rvts85">other than</span><span class="rvts35"> the specified tag, </span><span class="rvts85">leave that tag alone; don't change it and don't clear it.</span></li>
+</ul></ul>
+<p class="rvps71"><span class="rvts85"><br/></span></p>
+<p class="rvps13"><span class="rvts35">The </span><span class="rvts36">SET</span><span class="rvts35"> option requires a tag name and a search-string. If the search string is found on the line (or, not found if the </span><span class="rvts36">NF</span><span class="rvts35"> option is used), then the line is assigned the tag name. If search string is not found on the line (or, is found, if the NF option is used), then the line is cleared of any existing tags. </span><span class="rvts36">SET</span><span class="rvts35"> may thus be used to assign a tag to a line range without have to pre-clear any existing tags in a separate step.</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">The </span><span class="rvts36">ASSERT</span><span class="rvts35"> option calls for some explanation. The short answer of what </span><span class="rvts36">ASSERT</span><span class="rvts35"> does is this: &nbsp;It does exactly the same thing that </span><span class="rvts36">OFF</span><span class="rvts35"> does, but the sense of the </span><span class="rvts36">NF</span><span class="rvts35"> option in inverted. What in the world does </span><span class="rvts85">that</span><span class="rvts35"> mean? &nbsp;Well, if you wanted to “assert” that a string existed on an </span><span class="rvts85">already</span><span class="rvts35"> tagged line, what would it mean in practice? &nbsp;You would have to check to see if the string was there, and if it was, you'd leave the existing tag alone and not change it. But if the string wasn't there, you would erase the tag, since your “assertion test” had failed. So, a command like </span><span class="rvts36">TAG OFF ‘string' NF</span><span class="rvts35"> would accomplish this – tags are turned off if the string is not found. However, even though that is a perfectly good TAG command, it kind of looks like a “double negative” with “backward logic”. It's just not the way people generally think about things. So, instead of this double-negative stuff, you can use “positive logic” and describe this operation in terms of what you </span><span class="rvts85">want</span><span class="rvts35"> to be there, instead of what you </span><span class="rvts85">don't</span><span class="rvts35"> want to be there. So, the command </span><span class="rvts36">TAG ASSERT ‘string'</span><span class="rvts35"> will do exactly the same thing as </span><span class="rvts36">TAG OFF ‘string' NF</span><span class="rvts35">, without forcing your poor brain through contortions and back-flips trying to figure it out.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"> </span></p>
+<p class="rvps13"><span class="rvts35">You can also use </span><span class="rvts36">NF</span><span class="rvts35"> on </span><span class="rvts36">ASSERT</span><span class="rvts35">, though it would probably be used less frequently than </span><span class="rvts36">ASSERT</span><span class="rvts35"> without </span><span class="rvts36">NF</span><span class="rvts35">. What would an </span><span class="rvts36">ASSERT NF</span><span class="rvts35"> be used for? &nbsp;Say you had some tagged lines, and you wanted to make sure (assert) that some unwanted string was not there (</span><span class="rvts36">NF</span><span class="rvts35">). You </span><span class="rvts85">could</span><span class="rvts35"> say </span><span class="rvts36">TAG OFF ‘string'</span><span class="rvts35">, but if you have gotten into the habit of thinking in terms of assertions rather than just on/off, this format could be useful to you. Whether you use </span><span class="rvts36">OFF</span><span class="rvts35"> or </span><span class="rvts36">ASSERT</span><span class="rvts35"> is really a case of which makes more sense to you at the time.</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">The </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35">, </span><span class="rvts36">NEXT</span><span class="rvts35">, and </span><span class="rvts36">ALL</span><span class="rvts35"> options are like </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> as well. Normally you will want to act upon </span><span class="rvts85">all</span><span class="rvts35"> lines that meet the search criteria of the command; that's where the power of the </span><span class="rvts36">TAG</span><span class="rvts35"> command lies, after all. So, unlike other similar commands that default to </span><span class="rvts36">NEXT</span><span class="rvts35">, the </span><span class="rvts36">TAG</span><span class="rvts35"> command defaults to </span><span class="rvts36">ALL</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">You should be aware that there is no “repeat tag” command that is comparable to </span><span class="rvts36">RFIND</span><span class="rvts35"> or </span><span class="rvts36">RCHANGE</span><span class="rvts35">. If you choose to use </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> on </span><span class="rvts36">TAG</span><span class="rvts35">, it would ordinarily involve manual cursor placement if you wanted to repeat your initial single-line </span><span class="rvts36">TAG</span><span class="rvts35"> command. However, you can use the ITERATOR Technique to get around this. See the </span><span class="rvts33">Application Note: The ITERATOR Technique</span><span class="rvts35"> in </span><span class="rvts33">Command Macro Support</span><span class="rvts35"> for more information.</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts36">PREFIX</span><span class="rvts35">, </span><span class="rvts36">SUFFIX</span><span class="rvts35">, </span><span class="rvts36">WORD</span><span class="rvts35"> and </span><span class="rvts36">CHAR</span><span class="rvts35"> are just like </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35">, with </span><span class="rvts36">CHAR</span><span class="rvts35"> being the default.</span></li>
+</ul></ul>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">The </span><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">NX</span><span class="rvts35"> options are like </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35">. They limit the selection of lines that </span><span class="rvts36">TAG</span><span class="rvts35"> will operate on to either excluded or unexcluded lines.</span></li>
+</ul></ul>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps104"><span class="rvts35">Tagging or untagging a line is comparable to finding a string with </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35">; this is true whether you actually put a string value on the TAG command or not. So, tagging a line that is excluded will unexclude it. If you want to modify that action, you can use the </span><span class="rvts36">MX</span><span class="rvts35"> or </span><span class="rvts36">DX</span><span class="rvts35"> options, which work the same way as they do on a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">One important point to remember is that </span><span class="rvts36">TAG</span><span class="rvts35"> will either set a tag on, off or toggle it, </span><span class="rvts36">if</span><span class="rvts35"> the lines provided to </span><span class="rvts36">TAG</span><span class="rvts35"> meet the criteria you specify. If they</span><span class="rvts85"> don't</span><span class="rvts35"> meet that criteria, the “tag status” of such lines is unchanged – existing tags will be left alone, and untagged lines will not get tagged, it they are not selected for processing by the </span><span class="rvts36">TAG</span><span class="rvts35"> command. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">So, for example, a </span><span class="rvts36">TAG :T ON 'string'</span><span class="rvts35"> will tag lines having '</span><span class="rvts85">string</span><span class="rvts35">', but other lines that </span><span class="rvts85">already</span><span class="rvts35"> had some kind of tag but didn't' have '</span><span class="rvts85">string</span><span class="rvts35">' will not be “untagged” – they will be left alone.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Remember that </span><span class="rvts36">TAG ASSERT ‘string'</span><span class="rvts35"> is the same as </span><span class="rvts36">TAG OFF ‘string' NF</span><span class="rvts35">, and </span><span class="rvts36">TAG ASSERT ‘string' NF</span><span class="rvts35"> is the same as </span><span class="rvts36">TAG OFF ‘string'</span><span class="rvts35">. They both describe the same action, one with positive logic and one with negative logic.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Usingtagsforlinecontrolranges"></a>
+<span class="rvts36">Using tags for line control ranges</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">And now, saving the best for last …</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice the </span><span class="rvts85">line-control-range</span><span class="rvts35"> operand. Just like other commands, this operand allows you to select one or more lines to operate on. If you don't specify a line-control-range, </span><span class="rvts36">TAG</span><span class="rvts35"> will operate on a </span><span class="rvts36">CC</span><span class="rvts35"> block, if you have defined one. If you haven't defined a </span><span class="rvts36">CC</span><span class="rvts35"> block, </span><span class="rvts36">TAG</span><span class="rvts35"> will operate on the entire file, subject to any other options you may have specified.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Otherwise, the </span><span class="rvts85">line-control-range</span><span class="rvts35"> operand can be one or two line labels (including relative line notation), and/or it can be a line tag (or relative tag notation), and/or a </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> excluded-line selection.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The line control range for </span><span class="rvts36">TAG</span><span class="rvts35"> can have a </span><span class="rvts85">tag?</span><span class="rvts35"> &nbsp;Yes. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The way this works is that a tag-name </span><span class="rvts85">here,</span><span class="rvts35"> as a line-control-range, chooses which lines the </span><span class="rvts36">TAG</span><span class="rvts35"> command will operate on. The tag-name at the </span><span class="rvts85">beginning</span><span class="rvts35"> of the TAG command is then used to specify a </span><span class="rvts85">new</span><span class="rvts35"> tag name to be given to all chosen lines. If any of those lines </span><span class="rvts85">already</span><span class="rvts35"> have a tag, they will be replaced by the new tag, if the </span><span class="rvts36">ON</span><span class="rvts35"> option is used or is defaulted.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">If there can be </span><span class="rvts85">two</span><span class="rvts35"> tag names in a </span><span class="rvts36">TAG</span><span class="rvts35"> command, how do I know which is which? &nbsp;The tag immediately following the </span><span class="rvts36">TAG</span><span class="rvts35"> command name is the value used for setting or toggling the new tag name on a data line. That tag is called the </span><span class="rvts85">target tag name. </span><span class="rvts35">A tag name appearing anywhere else is considered to be part of the line-control range, used for selecting eligible lines. Tag names in the line-control range can be also a relative tag like </span><span class="rvts88">:\ABC</span><span class="rvts35">, but the target tag cannot be; it has to be a simple tag name. </span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps13"><span class="rvts35">This is one of the few places in SPFLite where there are order dependencies on primary command operands. In most cases, the order you specify things doesn't matter, but here it does.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What could a </span><span class="rvts36">TAG</span><span class="rvts35"> command with two tags present be used for?</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Well, suppose you wanted to find all lines that had the set of strings GORT, KLATU, BARADA and NIKTO on them. </span><span class="rvts36">But</span><span class="rvts35">, the strings could be in </span><span class="rvts85">any order</span><span class="rvts35">, and might be separated by an unknown amount of text. You might be able to create a regular expression to find </span><span class="rvts85">two</span><span class="rvts35"> such strings, but to find </span><span class="rvts85">four</span><span class="rvts35"> of them, in any order, would require 4 * 3 * 2 = 24 different possible orderings. Even if you're an expert at regular expressions, that would be pretty tough.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here's where tags comes to the rescue. What we can do is first find all lines with GORT on them, and tag them as :G. Then, </span><span class="rvts85">only looking at the lines tagged with :G,</span><span class="rvts35"> find lines with KLATU, and tag them with :K, etc. When you're done, you will have a set of lines tagged with :N which will contain the set of all four words, regardless of the order they appear on the line. You can call these strings </span><span class="rvts36">WORDS</span><span class="rvts35"> on the </span><span class="rvts36">TAG</span><span class="rvts35"> command, if that's what they are, just like on a </span><span class="rvts36">FIND</span><span class="rvts35"> command. (We'll skip that here.) &nbsp;The sequence of TAG commands would work like this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :G 'GORT' &nbsp; </span></p>
+<p class="rvps10"><span class="rvts89">TAG :K 'KLATU' &nbsp;:G</span></p>
+<p class="rvps10"><span class="rvts89">TAG :B 'BARADA' :K</span></p>
+<p class="rvps10"><span class="rvts89">TAG :N 'NIKTO' &nbsp;:B</span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps71"><span class="rvts35">If you wanted to, the initial TAG could be limited to a line range, like this:</span></p>
+<p class="rvps154"><span class="rvts89">TAG :G 'GORT' .ABC .DEF</span></p>
+<p class="rvps71"><span class="rvts35">or to a CC block, or to an excluded range, like this:</span></p>
+<p class="rvps154"><span class="rvts89">TAG :G 'GORT' X</span></p>
+<p class="rvps71"><span class="rvts35">but we'll continue with the discussion assuming that we're starting with the whole file, not just part of it.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The final tag </span><span class="rvts89">:N</span><span class="rvts35"> can then be used to access only those lines having all four words. Now, suppose you wanted to view </span><span class="rvts85">only</span><span class="rvts35"> these lines. You could say</span><span class="rvts89"> X ALL :\N </span><span class="rvts35">to exclude all lines that don't contain these four words, or you could say</span><span class="rvts89"> DELETE ALL :\N </span><span class="rvts35">to delete them.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Is it </span><span class="rvts85">necessary</span><span class="rvts35"> to use all those tag names? &nbsp;Is there any way we can get by with using fewer names? &nbsp;Yes. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">Don't try to just </span><span class="rvts85">alternate</span><span class="rvts35"> tags, like using :A then :B then :A again, in order to achieve this. It won't work right.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, if you were to enter a </span><span class="rvts36">TAG</span><span class="rvts35"> command that looks like </span><span class="rvts89">TAG</span><span class="rvts35"> </span><span class="rvts89">:T</span><span class="rvts35"> </span><span class="rvts89">'string'</span><span class="rvts35"> </span><span class="rvts89">:T</span><span class="rvts35">, it's asking the editor to select lines </span><span class="rvts85">already</span><span class="rvts35"> tagged with </span><span class="rvts89">:T</span><span class="rvts35"> that have '</span><span class="rvts85">string</span><span class="rvts35">' on them, and then tag them with</span><span class="rvts85"> </span><span class="rvts89">:T</span><span class="rvts85"> again.</span><span class="rvts35"> &nbsp;That won't do what we want here.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">In plain English, it's called “going nowhere fast”, and is just as useful as saying </span><span class="rvts36">CHANGE ABC ABC ALL</span><span class="rvts35">. However, SPFLite is nice enough to remind you of this fact, and will report, </span><span class="rvts36">No lines (re)tagged</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">However, you </span><span class="rvts85">can</span><span class="rvts35"> selectively </span><span class="rvts85">remove</span><span class="rvts35"> tags from lines in which a desired string is not found. So, you can reduce the number of tags needed to just one. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">It's a little bit more complicated syntax, but you can use the </span><span class="rvts36">RETRIEVE</span><span class="rvts35"> or </span><span class="rvts36">CRETRIEV</span><span class="rvts35"> command (often mapped to F12) to pull up the more-complicated command and type over it; that will make it a little easier to do. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's revise the example above using just one tag:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :A &nbsp;'GORT' &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF 'KLATU' &nbsp;NF :A</span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF 'BARADA' NF :A</span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF 'NIKTO' &nbsp;NF :A</span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp;</span></p>
+<p class="rvps9"><span class="rvts35">That's a little better. The first </span><span class="rvts36">TAG</span><span class="rvts35"> proceeds like the previous example. The remaining </span><span class="rvts36">TAG</span><span class="rvts35"> commands successively “whittle away” at the list of lines represented by tag </span><span class="rvts89">:A</span><span class="rvts35">, so that any lines where the required words are not found (</span><span class="rvts89">NF</span><span class="rvts35">) no longer qualify as being in the </span><span class="rvts89">:A</span><span class="rvts35"> list, and </span><span class="rvts85">their</span><span class="rvts35"> </span><span class="rvts89">:A</span><span class="rvts35"> tags get turned </span><span class="rvts89">OFF</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">If you format the command as shown above, you can almost read it, going left to right: “Turn any</span><span class="rvts36"> TAG OFF</span><span class="rvts35"> where the WORD &nbsp;'KLATU' is Not Found (NF) on lines currently tagged with :A.</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps13"><span class="rvts35">You </span><span class="rvts85">could</span><span class="rvts35"> say, TAG </span><span class="rvts36">:A</span><span class="rvts35"> OFF WORD 'KLATU' NF </span><span class="rvts36">:A</span><span class="rvts35">, but since you are </span><span class="rvts85">only</span><span class="rvts35"> dealing with lines </span><span class="rvts85">already</span><span class="rvts35"> tagged as </span><span class="rvts36">:A</span><span class="rvts35"> and you aren't renaming it to something else, there is no need to specify the target </span><span class="rvts85">tag-name</span><span class="rvts35"> after the TAG command name. It's easier to just leave it out.</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps13"><span class="rvts35">A fine point: &nbsp;It will not work if you happen to attempt a command like TAG </span><span class="rvts36">:B</span><span class="rvts35"> </span><span class="rvts36">OFF</span><span class="rvts35"> WORD 'KLATU' NF </span><span class="rvts36">:A</span><span class="rvts35">. In a command like this, all lines selected for the tag command are coming from lines tagged with :A. If you then ask TAG to turn off lines having tag :B, the </span><span class="rvts36">TAG OFF</span><span class="rvts35"> function will confirm the existing tag before clearing it. It will not find any lines with :B on them, and so you will get the </span><span class="rvts36">No lines (re)tagged</span><span class="rvts35"> message. However, there is nothing wrong in itself with asking for specific tags to be cleared. Suppose you had a range of lines from .ONE to .TWO and you wanted any line tags of :B removed but lines with any </span><span class="rvts85">other</span><span class="rvts35"> tags left alone. You can say </span><span class="rvts36">TAG :B OFF .ONE .TWO </span><span class="rvts35">and that is perfectly fine.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, the results of the tagging operation can be found using the tag </span><span class="rvts89">:A</span><span class="rvts35">, and you don't have to keep track of which tag name to use, because there's only one.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">One more fine point. The command </span><span class="rvts36">TAG OFF 'KLATU' NF :A</span><span class="rvts35"> removes any tag from lines already tagged with :A in which the string is not found. Suppose you left off the :A tag and just said, </span><span class="rvts36">TAG OFF 'KLATU' NF</span><span class="rvts35">. Would that “work” ? &nbsp;In many cases, it would. What happens is that you would be asking the editor to look at </span><span class="rvts85">every</span><span class="rvts35"> line of the file, and to remove </span><span class="rvts85">every</span><span class="rvts35"> tag on </span><span class="rvts85">every</span><span class="rvts35"> line where </span><span class="rvts85">that</span><span class="rvts35"> particular string is not found. There are two problems with this. First, if the file is very large, re-examining every line, instead of limiting the search to only lines that had </span><span class="rvts85">already</span><span class="rvts35"> been tagged with :A in the prior step, could take longer. Second, if you had any </span><span class="rvts85">other</span><span class="rvts35"> tags you were using for any </span><span class="rvts85">other</span><span class="rvts35"> purpose, they would be cleared out as well. You are free to take this shortcut if you wish, but it's important to understand what you are asking for.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you get in the habit of doing this type of tagging with a single tag name, you may need to clear out any existing ones before you start. Otherwise your results might include more lines than you intended. Tags can be cleared by using </span><span class="rvts89">TAG :A OFF</span><span class="rvts35">. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">One more thing about </span><span class="rvts36">TAG</span><span class="rvts35"> and </span><span class="rvts36">RETRIEVE. TAG</span><span class="rvts35"> is mostly forgiving about the order you type the operands to it. So, the list of commands above can be rewritten to put the string last. Let's do that, and to keep it even simpler, we will dispense with the quotes, too (we are among friends here, right?) &nbsp;So, you'd have this series of commands:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :A GORT &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF NF :A KLATU </span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF NF :A BARADA</span></p>
+<p class="rvps10"><span class="rvts89">TAG OFF NF :A NIKTO </span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp;</span></p>
+<p class="rvps9"><span class="rvts35">Now, for the third and fourth commands, you can retrieve what you entered for the second command, press the End key, backspace over the string (or use the mouse to do the same thing) and then type in the new string each time. That way you only have to type the part of TAG that is different and not redo the whole thing all over again.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Hopefully if you are still with us so far, you may agree that this technique will work and you can follow along the explanation. You may also feel it's a little weird. Remember what we said about </span><span class="rvts36">ASSERT</span><span class="rvts35"> and double negatives? &nbsp;That's why it exists – to address problems like this. The task at hand that we </span><span class="rvts85">really</span><span class="rvts35"> want to do is to </span><span class="rvts85">assert</span><span class="rvts35"> that the desired words are </span><span class="rvts85">present</span><span class="rvts35">. That particular viewpoint is more important than the whys and hows of turning off tags if the word are </span><span class="rvts85">not</span><span class="rvts35"> present. It is for problems like this that </span><span class="rvts36">ASSERT</span><span class="rvts35"> was made. Let's rewrite this from negative logic to positive logic.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :A GORT &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps10"><span class="rvts89">TAG ASSERT KLATU :A </span></p>
+<p class="rvps10"><span class="rvts89">TAG ASSERT BARADA :A</span></p>
+<p class="rvps10"><span class="rvts89">TAG ASSERT NIKTO :A </span></p>
+<p class="rvps2"><span class="rvts35"> &nbsp;</span></p>
+<p class="rvps9"><span class="rvts35">Does this make more sense? &nbsp;First, find all lines with GORT, then assert that those lines also have KLATU and the other words. Now, let's take it a step further, and say that we want to make sure (assert) that the word REMEMBER is </span><span class="rvts85">not</span><span class="rvts35"> present on any of the lines tagged with :A. That can be done like this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG ASSERT REMEMBER NF :A </span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">Why go through the trouble of using </span><span class="rvts36">ASSERT</span><span class="rvts35">? &nbsp;Why was it even made available? &nbsp;Mainly for users editing very large data files. In the process of doing “data mining” activities, they may have a large number of tags set throughout their file. It is very important as one is trimming off tags, looking for exactly the right data, that you ask for the right things at the right time. By being able to describe tagging operations in the terms (positive or negative logic) that make the most sense to </span><span class="rvts36">you</span><span class="rvts35"> it will decrease the likelihood that you would make a mistake.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="TheDROPandKEEPcommands"></a>
+<span class="rvts36">The DROP and KEEP commands</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Our discussion of tags so far has dealt with tagged lines as individual ‘units' each acted upon independently. When you use </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35">, you can deal with tagged lines in groups.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A </span><span class="rvts85">tag group</span><span class="rvts35"> is a set of two or more adjacent lines that have the same tag name. A tag group is preceded and followed by:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The Top of Data or Bottom of Data line</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">A line without a tag</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">A line with a different tag than the tag group has</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Notice it says </span><span class="rvts85">two or more lines.</span><span class="rvts35"> &nbsp;If you have single, individual tagged lines where the line before or after does not have the same tag, that line is not a tag group. Such ‘lone' tagged lines are ignored by </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> may be thought of as “structured </span><span class="rvts36">DELETE</span><span class="rvts35"> commands”. The purpose of both of them is to delete lines. The </span><span class="rvts36">DROP</span><span class="rvts35"> command is focused on which lines are to be deleted, while </span><span class="rvts36">KEEP</span><span class="rvts35"> is focused on what lines are </span><span class="rvts85">not</span><span class="rvts35"> to be deleted.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What is the idea behind </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35">?</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Well, if you have used one or more </span><span class="rvts36">TAG</span><span class="rvts35"> commands to group together blocks of lines having some common feature, it is possible that some of those lines are duplicates. </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> provide a means to quickly get rid of all those duplicate lines in a single command.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> apply their deletion rules to</span><span class="rvts85"> every tag group in the entire file</span><span class="rvts35"> having the specified tag name.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">The reason there aren't options like </span><span class="rvts36">PREV</span><span class="rvts35"> and </span><span class="rvts36">NEXT</span><span class="rvts35">, etc. is that if you only wanted to work on a small area, you could just manually delete lines and not use </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35">. If you need to work on a large block of the file, but not the entire file, you can use line labels on a </span><span class="rvts36">TAG</span><span class="rvts35"> command to limit their range .</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps13"><span class="rvts35">You mean you can have labels </span><span class="rvts85">and</span><span class="rvts35"> tags on the same command at the same time? &nbsp;Yes. It works by selecting lines with the specified tag, but only those within the line label range. This feature works on the </span><span class="rvts36">TAG</span><span class="rvts35"> command, and any others that accept generalized line-range arguments, but not on </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> themselves.</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps13"><span class="rvts35">For example, if you had several tag groups defined using tag </span><span class="rvts36">:T,</span><span class="rvts35"> but you didn't want tag groups between lines .A and .B to be modified, you could use a </span><span class="rvts36">TAG</span><span class="rvts35"> command to temporarily rename the </span><span class="rvts36">:T</span><span class="rvts35"> tags between </span><span class="rvts36">.A</span><span class="rvts35"> and </span><span class="rvts36">.B</span><span class="rvts35"> to something else (let's call it </span><span class="rvts36">:TT</span><span class="rvts35"> for “temporary”</span><span class="rvts36"> :T</span><span class="rvts35"> tag). Then, use your </span><span class="rvts36">DROP</span><span class="rvts35"> or </span><span class="rvts36">KEEP</span><span class="rvts35"> as usual, referencing tag</span><span class="rvts36"> :T</span><span class="rvts35">. Once you're done, you can use another </span><span class="rvts36">TAG</span><span class="rvts35"> command to rename the </span><span class="rvts36">:TT</span><span class="rvts35"> tags back to </span><span class="rvts36">:T</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For example, suppose you had a file with blank lines in it, and you wanted to collapse spans of multiple blank lines into single blank lines. Here is a way you could to this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :B OFF</span></p>
+<p class="rvps10"><span class="rvts89">TAG :B P'^' NF</span></p>
+<p class="rvps10"><span class="rvts89">KEEP FIRST :B</span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This does the following:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">Ensure that no lines are tagged with :B in the file.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">Search the entire file for lines in which non-blank characters (P'^') are not found (</span><span class="rvts36">NF</span><span class="rvts35">). Lines that are entirely blank will not have any non-blank characters.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">For each tag block having line tag </span><span class="rvts36">:B</span><span class="rvts35">, </span><span class="rvts36">KEEP</span><span class="rvts35"> only the </span><span class="rvts36">FIRST</span><span class="rvts35"> line of each block (delete all </span><span class="rvts85">other</span><span class="rvts35"> lines except for the </span><span class="rvts36">FIRST</span><span class="rvts35"> line of each block)</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A command like </span><span class="rvts36">TAG &nbsp;:B &nbsp;P'^' &nbsp;NF</span><span class="rvts35"> &nbsp;may seem a little unusual: Find lines in which </span><span class="rvts85">non-blanks are not found?</span><span class="rvts35"> &nbsp;However, this is necessary to handle situations where a “blank” line is actually a zero-length line. In those cases, there is no data on the line to </span><span class="rvts85">find.</span><span class="rvts35"> &nbsp;So, we have to define the search in terms of </span><span class="rvts85">not</span><span class="rvts35"> finding something, so that those </span><span class="rvts85">zero-length</span><span class="rvts35"> lines will be found and tagged along with our search for </span><span class="rvts85">blank</span><span class="rvts35"> lines.</span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This example also illustrates why lone tagged lines are not considered as tag </span><span class="rvts85">blocks</span><span class="rvts35">. If they were, </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> might delete them as well, and rather than getting rid of </span><span class="rvts85">duplicate</span><span class="rvts35"> lines, you'd get rid of </span><span class="rvts85">every</span><span class="rvts35"> line. There is no need for </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> to delete </span><span class="rvts85">every</span><span class="rvts35"> line, since we already have </span><span class="rvts36">DELETE</span><span class="rvts35"> for that purpose.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Since only </span><span class="rvts85">blank</span><span class="rvts35"> lines were selected, it probably doesn't matter whether the first or last line of each block is retained; the effect is the same. When you apply this technique to your own data, you may have some particular reason why you might want to use the </span><span class="rvts36">LAST</span><span class="rvts35"> line vs. the </span><span class="rvts36">FIRST</span><span class="rvts35"> one.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Recalling the note above, suppose you wanted to remove extra blank lines, but </span><span class="rvts36">not</span><span class="rvts35"> inside the range of .A and .B, where .A precedes .B in the file; assume .A and .B are already defined. </span><span class="rvts36">DROP</span><span class="rvts35"> and </span><span class="rvts36">KEEP</span><span class="rvts35"> don't directly support this, since they do not take generalized line-range operands with label ranges or </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> options. Instead, you could accomplish it with something like this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">TAG :B OFF</span></p>
+<p class="rvps10"><span class="rvts89">TAG :B P'^' NF</span></p>
+<p class="rvps10"><span class="rvts89">TAG :BT :B .A .B</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">-- inside the range .A to .B rename tags :B to :BT</span></p>
+<p class="rvps10"><span class="rvts89">KEEP FIRST :B</span><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">-- the lines tagged with :BT are ignored</span></p>
+<p class="rvps10"><span class="rvts89">TAG :B :BT .A .B</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">-- rename the temporary :BT tags back to :B</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose you had wanted to remove </span><span class="rvts85">all</span><span class="rvts35"> groups of multiple blank lines, but any individual blank lines are to be left as is. This could be done by replacing the </span><span class="rvts36">KEEP</span><span class="rvts35"> command above with </span><span class="rvts36">DROP</span><span class="rvts35">:</span></p>
+<p class="rvps2"><span class="rvts88"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DROP ALL :B</span></p>
+<p class="rvps10"><span class="rvts88"><br/></span></p>
+<p class="rvps4"><a name="UsingLabelsandTagswiththeLINECommand"></a>
+<span class="rvts40">Using Labels and Tags with the LINE Command</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can manage line labels and line tags using the LINE primary command. For example, to put a tag of :ABC on line 10, you can issue the command:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">LINE ':ABC' .10 </span></p>
+<p class="rvps6"><span class="rvts139"> </span></p>
+<p class="rvps5"><span class="rvts6">Remember to quote the label, because in this example, the first operand</span><span class="rvts139"> ':ABC' </span><span class="rvts6">is what goes into the sequence area, and the second operand</span><span class="rvts139"> .10 </span><span class="rvts6">is where the first operand is placed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When doing a normal edit, there is usually no need to do such a thing; you would just put the tag on the line directly. However, when running a programmable macro the LINE primary command is the only way to do this. You would need to 'wrap' the LINE primary command in an SPF_CMD function call in your </span><span class="rvts40">.MACRO</span><span class="rvts6"> file, like this:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">SPF_CMD ("LINE ':ABC' .10") </span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">It is possible to set, clear and toggle both line labels and line tags from the LINE primary command. The possible options are as follows:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter label into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle label; enter label if no label present, </span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any label that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any label that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any label that may be present; same as</span><span class="rvts139"> LINE '.'</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter tag into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle tag; enter tag if no tag present,</span><span class="rvts139"> &nbsp;</span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any tag that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any tag that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any tag that may be present; same as</span><span class="rvts139"> LINE ':'</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="LINE.html">LINE - Apply Line Command</a><span class="rvts6"> and </span><a class="rvts41" href="WorkingwithLINE.html">Working with the LINE Primary Command</a><span class="rvts6"> for more information on the LINE command.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="KeyMapDialog.html#Special%20Line%20Commands">Special Line Commands</a><span class="rvts6"> in </span><a class="rvts41" href="KeyMapDialog.html">Using the KEYMAP Dialog</a><span class="rvts6"> for more information on performing these same actions within a KEYMAP definition.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts98"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

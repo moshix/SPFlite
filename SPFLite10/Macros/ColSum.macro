@@ -1,0 +1,85 @@
+' ColSum.MACRO
+' Summ specified columns, insert =NOTE> lines with the result.
+' Syntax:   COLSUM  [c1s  c1e] [c2s  c2e] ... .L1 .L2  A series of column start/end pairs
+' 
+'           Line range can be marked with CC/CC instead of .L1 .L2 if desired
+' 
+' 
+' SPFLite version - George Deluca
+' Original idea from:  F. DAVID MCRITCHIE, "THE REXX MACROS TOOLBOX" 1989/05/12
+'
+dim scol(25) as number
+dim ecol(25) as number
+dim CSum(25) as number
+dim tt as string 
+
+dim i, j, numpairs, L1, L2, HadLNum, LastLPtr as number value 0 
+
+if Get_Arg_Count = 0 then halt(fail, "No column operands detected") ' Better be some
+
+if Get_Arg_Count \ 2 <> Get_Arg_Count / 2 then halt(fail, "Column operands must be in pairs")  
+
+NumPairs = 1 
+for i = 1 to Get_Arg_Count                            ' See if line range operands
+   if left$(Get_Arg$(i), 1) = "." then                ' A range operand? 
+      HadLNum = 1                                     ' remember we had a range 
+      if L1 = 0 then                                  ' Save 
+         l1 = Get_LPtr(Get_Arg$(i))                   ' Convert to LPtr 
+      elseif l2 = 0 then                              ' 
+         l2 = Get_LPtr(Get_Arg$(i))                   ' 
+      else                                            ' Too many 
+         halt(fail, "More than 2 line range operands detected")
+      end if                                          ' 
+   else                                               ' Else not a line range operand 
+      if val(Get_Arg$(i)) = 0 then                    ' Better be a number 
+         halt(fail, "Invalid column number: " + Get_Arg$(i)) ' Kill invalid ones
+      end if                                          ' 
+
+      if scol(NumPairs) = 0 then                      ' No start col in this pair? 
+         scol(NumPairs) = val(Get_Arg$(i))            ' then save this 
+      elseif ecol(NumPairs) = 0 then                  ' End column yet? 
+         ecol(NumPairs) = val(Get_Arg$(i))            ' then save this 
+         if eCol(NumPairs) < scol(NumPairs) then      ' In order? 
+            halt(fail, "Invalid column ranger: " + tstr$(scol(NumPairs)) + " " + tstr$(ecol(NumPairs)))
+         end if                                          ' 
+      else                                            ' Must start new pair 
+         incr NumPairs                                ' 
+         scol(NumPairs) = val(Get_Arg$(i))            ' Start next pair
+      end if                                         
+   end if 
+next i
+
+If HadLNum then                                       ' Line range specified 
+   if L1 = 0 or L2 = 0 then                           ' But not valid ones 
+      halt(fail, "Invalid line range operands")       ' Kill it
+   end if                                             ' 
+end if                                                ' 
+
+if scol(NumPairs) = 0 then halt(fail, "No column ranges specified") ' Kill it if none 
+
+if L1 = 0 and Get_Src1_LPtr = 0 then                  ' No line range, use ALL 
+   L1 = 1: L2 = Get_Last_LPtr                         ' 
+
+elseif L1 <> 0 and Get_Src1_LPtr <> 0 then            ' Both types? 
+   halt(fail, "Line range specified in two places")   ' Kill it
+
+elseif L1 = 0 and Get_Src1_LPtr <> 0 then             ' Line range ops?
+   L1 = Get_Src1_LPtr:  L2 = Get_Src2_LPtr            ' Pick them up 
+end if                                                ' 
+
+for i = L1 to L2                                      ' Loop through the line range
+   if Is_Data(i) then                                 ' Data lines only 
+      tt = trim$(Get_Line$(i))                        ' Get the trimmed text
+      LastLPtr = i                                    ' Save last LPtr processed  
+      for j = 1 to NumPairs                           ' Add the columns 
+         CSum(j) = CSum(j) + val(mid$(tt, scol(j), ecol(j) - scol(j) + 1)) 
+      next j 
+   end if                                             ' 
+next                                                  '
+for i = 1 to NumPairs                                 ' Dump answers 
+   tt = "Sum(" + tstr$(scol(i)) + ":" + tstr$(ecol(i)) + ") is " + format$(cSum(i)) 
+   SPF_CMD("LINE Note !" + tstr$(LastLPtr))           ' Insert a line after this one 
+   Set_Line(LastLPtr + 1, tt)                         ' 
+   incr LastLPtr                                      ' Adjust LPtr for the inserted line 
+next i 
+halt                                                  ' Done

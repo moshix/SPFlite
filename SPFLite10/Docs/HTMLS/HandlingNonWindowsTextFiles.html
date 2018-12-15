@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Handling Non-Windows Text Files</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Handling Non-Windows Text Files">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Handling Non-Windows Text Files" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="HandlingNonWindowsTextFiles"
+		  data-hnd-context="36"
+		  data-hnd-title="Handling Non-Windows Text Files"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Handling Non-Windows Text Files</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a class="rvts45" href="HandlingNonWindowsTextFiles.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts101" href="HandlingNonWindowsTextFiles.html#Commonsettingsfornon-Windowsfiles">Common settings for non-Windows files</a></p>
+<p class="rvps5"><a class="rvts101" href="HandlingNonWindowsTextFiles.html#Determiningfileattributesthroughexperimentation">Determining file attributes through experimentation</a></p>
+<p class="rvps9"><a class="rvts45" href="HandlingNonWindowsTextFiles.html#EBCDICfiles">EBCDIC files</a></p>
+<p class="rvps9"><a class="rvts45" href="HandlingNonWindowsTextFiles.html#CustomTranslationTables">Custom Translation Tables</a></p>
+<p class="rvps9"><a class="rvts45" href="HandlingNonWindowsTextFiles.html#UsingtheEOLsettingsAUTOandAUTONL">Using the EOL settings AUTO and AUTONL</a></p>
+<p class="rvps189"><a class="rvts45" href="HandlingNonWindowsTextFiles.html#HandlingfileswithloneCRcharacters">Handling files with lone CR characters</a></p>
+<p class="rvps188"><span class="rvts36"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">We are normally unconcerned with the file format of common text files or source programs, since most Windows functions and tools naturally work with this format, which is simple variable-length text. That format is often compatible with other, non-Windows systems, but not always.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Occasionally you will attempt to open a file from another system, only to get a disorganized or unreadable screen display - so you know something is wrong with the data's content or format, or with SPFLite's understanding of the file. The problem could be one of several factors:</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<div class="rvps5"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="191" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Record Format</span></p>
+</td>
+<td width="843" style="padding: 1px;"><p class="rvps2"><span class="rvts6">There are three basic formats used to organize how multiple text lines are stored in a file. This setting is specified for the Profile variable by using the </span><a class="rvts41" href="RECFM.html">RECFM</a><span class="rvts6"> command. They are:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="221" style="padding: 1px;"><p class="rvps2"><span class="rvts40">U - Undefined</span></p>
+</td>
+<td width="616" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Undefined</span><span class="rvts6"> is the norm for Windows text files; the individual text lines may be any length and are separated by unique delimiter characters. See Line Delimiters below.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="221" style="padding: 1px;"><p class="rvps2"><span class="rvts40">F - Fixed</span></p>
+</td>
+<td width="616" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Fixed</span><span class="rvts6"> indicates that all text lines are the same length, known as the Logical Record Length. See Logical Record Length below. Note that Fixed records </span><span class="rvts40">may</span><span class="rvts6"> be stored with or without Line Delimiters as well.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="221" style="padding: 1px;"><p class="rvps2"><span class="rvts40">V - Variable</span></p>
+</td>
+<td width="616" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Variable</span><span class="rvts6"> indicates the text lines may be of any length and are </span><span class="rvts40">not</span><span class="rvts6"> separated by unique delimiters, but are written with a prefix field for each line which indicates the length of that particular line. The prefix field is known as an </span><span class="rvts40">RDW</span><span class="rvts6"> for Record Descriptor Word.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="221" style="padding: 1px;"><p class="rvps2"><span class="rvts40">VBI - Variable Big-Endian</span></p>
+</td>
+<td width="616" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Variable Big-Endian</span><span class="rvts6"> indicates the text lines may be of any length and are </span><span class="rvts40">not</span><span class="rvts6"> separated by unique delimiters, but are written with a prefix field for each line which indicates the length of that particular line. The prefix field is known as an </span><span class="rvts40">RDW</span><span class="rvts6"> for Record Descriptor Word. </span><span class="rvts40">VBI </span><span class="rvts6">specifies an RDW of 4 bytes in </span><span class="rvts40">big</span><span class="rvts6">-endian format containing the length of the data record </span><span class="rvts40">not</span><span class="rvts6"> including the RDW itself.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="221" style="padding: 1px;"><p class="rvps2"><span class="rvts40">VLI - Variable Little-Endian</span></p>
+</td>
+<td width="616" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Variable</span><span class="rvts6"> indicates the text lines may be of any length and are </span><span class="rvts40">not</span><span class="rvts6"> separated by unique delimiters, but are written with a prefix field for each line which indicates the length of that particular line. The prefix field is known as an </span><span class="rvts40">RDW</span><span class="rvts6"> for Record Descriptor Word. </span><span class="rvts40">VLI </span><span class="rvts6">specifies an RDW of 4 bytes in </span><span class="rvts40">little</span><span class="rvts6">-endian format containing the length of the data record </span><span class="rvts40">not</span><span class="rvts6"> including the RDW itself.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td width="191" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Line Delimiters</span></p>
+</td>
+<td width="843" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Windows text files typically separate text lines from each other by using a pair of special characters, the CR (Carriage Return) and LF (Line Feed) characters, having the hex value X'0D0A'. This pair is normally referred to as CRLF for short. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Unix, Linux and newer Macintosh systems use just the LF character. Other systems (in older Macintosh systems and some few others) may use just the CR character, but that usage is rare.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Some systems even have their own 1 or 2 byte unique delimiter strings. You might also wish to temporarily define your own line delimiters. For example, it could be convenient to temporarily treat a comma as the end of the line if you had a type of file called a CSV, or Comma-Separated-Value.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">SPFLite allows you to process all these types (including files </span><span class="rvts40">without</span><span class="rvts6"> delimiters) by setting the Profile option </span><a class="rvts41" href="EOL.html">EOL</a><span class="rvts6"> to the requirements of your file.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">There are also files which are not even consistent within themselves, seemingly using CRLF, LF, FF, and CR combinations in weird combinations. An example of this are SYSOUT files from mainframe emulators such as Hercules. SPFLite addresses such files by providing the </span><span class="rvts40">EOL</span><span class="rvts6"> types of </span><span class="rvts40">AUTO</span><span class="rvts6"> and </span><span class="rvts40">AUTONL</span><span class="rvts6">, discussed later in this article.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="191" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Character Set</span></p>
+</td>
+<td width="843" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Even though the Line delimiter (</span><span class="rvts40">EOL</span><span class="rvts6">) may be correct, the data in a text file may be using some other character set encoding technique. If the data seems to be total gibberish, or perhaps has a few extraneous characters at the beginning that don't seem to belong, this could be the cause. SPFLite supports the following character sets via the Profile </span><a class="rvts41" href="SOURCE.html">SOURCE</a><span class="rvts6"> variable. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Note regarding Unicode</span></p>
+<p class="rvps2"><span class="rvts182"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The Unicode support in SPFLite is quite limited. SPFLite is </span><span class="rvts40">not</span><span class="rvts6"> a true Unicode text editor, as all editing functions take place internally in native ANSI (Windows MS-1252) mode. The SPFLite support is provided to allow reading in and writing Unicode files which </span><span class="rvts40">only contain characters that map to normal ANSI characters. </span><span class="rvts6">This may sound very restrictive, but many Unicode files are stored in UTF format because web servers demand that format, </span><span class="rvts40">not</span><span class="rvts6"> because there is a true requirement for the additional (non-ANSI) characters supported in Unicode. For this type of application, the SPFLite support is perfectly adequate.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you truly need the ability to edit the </span><span class="rvts40">full</span><span class="rvts6"> Unicode character set, then SPFLite will </span><span class="rvts40">not</span><span class="rvts6"> handle your requirements.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The following are supported:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="154" style="padding: 1px;"><p class="rvps2"><span class="rvts40">ANSI</span></p>
+</td>
+<td width="550" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This is the default and is the normal Windows character set. ANSI is also known as MS-1252, which is a superset of ISO-8859-1 and the first 256 bytes of Unicode.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="154" style="padding: 1px;"><p class="rvps2"><span class="rvts40">UTF8</span></p>
+</td>
+<td width="550" style="padding: 1px;"><p class="rvps2"><span class="rvts12">This format of encoding (one of the Unicode types) is the most 'economic' as the base ANSI characters are stored as 8 bit characters, and only special characters (above ANSI 127 are encoded as larger values.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="154" style="padding: 1px;"><p class="rvps2"><span class="rvts11">UTF16</span></p>
+<p class="rvps2"><span class="rvts11">UTF16LE</span></p>
+</td>
+<td width="550" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Another Unicode format, this format of encoding uses 16 bits for each character. There are two types of UTF16, LE (Little Endian) and BE (Big Endian) which refer to the byte order of the encoded 16 bit value. The normal value for Windows based systems is UTF16/UTF16LE, since the Intel processors that run Windows are Little-Endian devices.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="154" style="padding: 1px;"><p class="rvps2"><span class="rvts11">UTF16BE</span></p>
+</td>
+<td width="550" style="padding: 1px;"><p class="rvps2"><span class="rvts12">And another Unicode format, this one uses 16 bits for each character. The encoded 16 bit value is stored in Big-Endian format. UTF16BE is used on IBM mainframe systems like z/OS when they process Unicode data as 16-bit values.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="154" style="padding: 1px;"><p class="rvps2"><span class="rvts11">EBCDIC</span></p>
+</td>
+<td width="550" style="padding: 1px;"><p class="rvps2"><span class="rvts12">This is the standard 8-bit encoding used by IBM mainframe systems. Some further information on EBCDIC is at the end of this article</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td width="191" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Logical Record Length</span></p>
+</td>
+<td width="843" style="padding: 1px;"><p class="rvps2"><span class="rvts6">When the Record Format is set to </span><span class="rvts40">F</span><span class="rvts6"> (for fixed), the length of the fixed record must be specified using the </span><a class="rvts41" href="LRECL.html">LRECL</a><span class="rvts6"> command. The </span><span class="rvts40">LRECL</span><span class="rvts6"> is set to </span><span class="rvts40">0</span><span class="rvts6"> (zero) for conventional Windows variable-length records that are terminated by a CRLF pair.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you need to enforce a </span><span class="rvts40">minimum</span><span class="rvts6"> logical record length that is greater than zero, see </span><a class="rvts41" href="LineLengths.html">Managing Line Lengths</a><span class="rvts6"> and </span><a class="rvts41" href="MINLEN.html">MINLEN - Set Minimum Record Length</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Commonsettingsfornon-Windowsfiles"></a>
+<span class="rvts40">Common settings for non-Windows files</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">What should you specify when something is obviously not right? &nbsp;It is best to check with the provider of the file, or determine the type of system on which it was created. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<div class="rvps5"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="387" style="padding: 1px;"><p class="rvps4"><span class="rvts6">If it was a Unix/Linux system or newer Macintosh, then try the following:</span></p>
+</td>
+<td width="490" style="padding: 1px;"><p class="rvps2"><span class="rvts40">RECFM U, &nbsp;EOL LF, &nbsp;SOURCE ANSI, &nbsp;LRECL 0</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="387" style="padding: 1px;"><p class="rvps4"><span class="rvts6">If it was an IBM mainframe, then try either:</span></p>
+</td>
+<td width="490" style="padding: 1px;"><p class="rvps2"><span class="rvts40">RECFM V, &nbsp;EOL NONE, &nbsp;SOURCE EBCDIC, &nbsp;LRECL 0</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp;or</span></p>
+<p class="rvps2"><span class="rvts40">RECFM F, &nbsp;EOL NONE, &nbsp;SOURCE EBCDIC, &nbsp;LRECL nn</span></p>
+<p class="rvps2"><span class="rvts6">where </span><span class="rvts40">nn</span><span class="rvts6"> is a record length based on what the file usage appears to be.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="387" style="padding: 1px;"><p class="rvps4"><span class="rvts6">If it is a web document such as HTML, then try:</span></p>
+</td>
+<td width="490" style="padding: 1px;"><p class="rvps2"><span class="rvts40">RECFM U, &nbsp;EOL CRLF, &nbsp;SOURCE UTF8, &nbsp;LRECL 0</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps4"><a name="Determiningfileattributesthroughexperimentation"></a>
+<span class="rvts40">Determining file attributes through experimentation</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you lack exact information about the file's format, it may become a matter of trial and error to resolve. Sometimes it will require loading as a simple normal text file and carefully examining the data. It is sometimes helpful here to set SPFLIte to use a good ANSI font such as </span><span class="rvts40">Raster</span><span class="rvts6"> (included in the optional Font Package on the web site) since it will correctly show line delimiter control characters like CR and LF in a visible format, making it easier to work out what you're looking at. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">For very difficult file issues, you may need to exit SPFLite and examine the data with a Hex Editor. Several free versions are available on the Internet. One such hex editor may be found at &nbsp;http://www.catch22.net/ </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When playing with these parameters trying to find the correct settings, it is sometimes helpful to rename the problem file to a unique file type (e.g PROBLEM.TRYIT ) so that you don't interfere with the options for a currently valid file profile. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Be sure to issue a </span><span class="rvts40">PROFILE UNLOCK</span><span class="rvts6"> on this test profile. Then you can simply </span><span class="rvts40">EDIT</span><span class="rvts6"> the file, examine it, alter one or more of the Profile variables you are experimenting with, </span><span class="rvts40">CANCEL</span><span class="rvts6"> out and </span><span class="rvts40">EDIT</span><span class="rvts6"> it again to try the new settings. You can repeat this in a trial-and-error approach, or see if the originator of the file has documentation on the file's format.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Note:</span><span class="rvts6"> &nbsp;Once you 'get it right' &nbsp;remember that SPFLite will, using the same Profile, now successfully write files in this format. For example, say you &nbsp;have a profile for a file type of </span><span class="rvts40">EBC</span><span class="rvts6"> (for EBCDIC). You can now 'convert' a &nbsp;normal Windows text file to this format by simply editing the Windows text file, entering </span><span class="rvts40">PROFILE USING EBC</span><span class="rvts6">, and then using </span><span class="rvts40">CREATE</span><span class="rvts6">/</span><span class="rvts40">REPLACE</span><span class="rvts6"> to write the new file. Then </span><span class="rvts40">CANCEL</span><span class="rvts6"> out of the edit session. Make sure the original file's Profile is </span><span class="rvts40">LOCKED</span><span class="rvts6"> before doing this to prevent making the </span><span class="rvts40">USING</span><span class="rvts6"> permanent. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="EBCDICfiles"></a>
+<span class="rvts36">EBCDIC files</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite internally handles all data as Ansi characters. This is equivalent to the Windows 1252 character set, which is a superset of the first 256 characters of Unicode. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note:&nbsp;</span><span class="rvts35"> </span><span class="rvts36">IBM</span><span class="rvts35"> has its own ideas about code pages. What Microsoft calls Windows 1252 isn't as simple to IBM. The reason is that 1252 has changed over the years, most recently to add the Euro character. Even though the exact characters present in this code page have changed, Microsoft still calls it 1252. However, IBM considers "1252" to mean a Windows code page 1252 of the past, prior to the advent of the Euro and some other changes they made. IBM considers the Windows 1252 code page of today to be called </span><span class="rvts36">5348</span><span class="rvts35">. They take this position because they have to support things like DB/2 databases, where database administrators have to know precisely what data </span><span class="rvts36">is</span><span class="rvts35">, and is </span><span class="rvts36">not</span><span class="rvts35">, present in CHARACTER database fields, and the old vs. new 1252 are just </span><span class="rvts36">not</span><span class="rvts35"> the same thing. For the record, SPFLite's idea of 1252 is the same as IBM's idea of 5348. That is, we support the </span><span class="rvts36">current</span><span class="rvts35"> Windows 1252 code page definition of today.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can also edit EBCDIC files, by setting up a PROFILE for a given file type (that is, a file name extension) that has </span><span class="rvts36">SOURCE EBCDIC</span><span class="rvts35"> associated with it. Only Ansi characters are displayed on the edit screen.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In order for SPFLite to handle EBCDIC data, it must translate it from EBCDIC to Ansi while editing, and from Ansi back to EBCDIC for storing externally. To do that, a translation table is required. SPFLite has already defined such a table, and normally there is nothing you need to do, but the following just explains the process.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Presently, only one translation table is supplied with SPFLite, which converts between Windows 1252 (Ansi) and IBM EBCDIC code page 1140. Code page 1140 is a modern code set, comprised of an earlier code page 037 plus the Euro character. Page 1140 is commonly used in North America for nearly all IBM z/OS mainframe installations. The particular tables used by SPFLite are two-way lossless tables that are based on published IBM code-table documentation. Any otherwise unallocated characters have a unique one-to-one translation, so that no data will be lost or mistranslated while editing the Ansi version of your EBCDIC data, even for “binary” data. (Even the "unallocated characters" have lossless translations based on IBM specifications; we did not "make up" any rules for this just for SPFLite.) &nbsp;If for any reason this table is not suitable for your use (if you need EBCDIC national characters outside the North American and/or European characters in Code Page 1140) it is possible to provide your own table. See </span><a class="rvts33" href="HandlingNonWindowsTextFiles.html#Custom%20EBCDIC%20translation%20tables">Custom EBCDIC translation tables</a><span class="rvts35"> below.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">This default table performs a translation which is identical to the translation performed in the Hercules mainframe emulator when using a configuration file parameter line of</span><span class="rvts297"> </span><span class="rvts89">CODEPAGE 1252/1140</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite does not dictate how lines are terminated in EBCDIC files. You decide how you want this to be handled. All the existing CR/LF combinations can be used with EBCDIC, and their EBCDIC equivalents are used to terminate lines. SPFLite also supports the EBCDIC New Line character NL = X'15' as an EOL value. Additionally, you may use the non-standard file formats noted below. Users of the Hercules mainframe emulator who need to edit EBCDIC files may find cases where fixed-length files and EOL NONE is required.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">There is nothing to prevent you from specifying </span><span class="rvts36">EOL NL</span><span class="rvts35"> in an </span><span class="rvts36">ANSI</span><span class="rvts35"> file. However, the ANSI equivalent of EBCDIC X'15' is X'85', which is not a standard ANSI text delimiter, and so NL may be of limited usefulness outside of EBCDIC files.</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="CustomTranslationTables"></a>
+<span class="rvts36">Custom Translation Tables</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note:</span><span class="rvts35"> Translation tables.</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">File extension is </span><span class="rvts36">.SOURCE</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">The default file name for EBCDIC is </span><span class="rvts36">EBCDIC.SOURCE</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">More than one translation table can exist at the same time besides</span><span class="rvts36"> EBCDIC.SOURCE</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Translation tables need not translate between ANSI and EBCDIC. They may be used to translate between different variants of ASCII code pages, such as between ASCII 437 or ASCII 850 and ANSI 1252.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">The new format of the translation tables is much different</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The format of the table over predecessor versions has a number of benefits. One of them is that when a translation table is in Round-Trip/Lossless mode, only one 'side' of the translation table is needed, since the two 'halves' are like mirror images of each other anyway. When SPFLite knows you have such a table, it validates that the values in the table are consistent with that. That means, for each of 256 possible character values in a table, each one must appear once and only once for the table to be valid.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Independent of SPFLite, software is being written to directly generate SPFLite translation tables from IBM-provided code page data, known as </span><span class="rvts36">UCM files</span><span class="rvts35">. This software is in development and will be made available when ready. Once this new software is ready, a full discussion of all these issues will be documented.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Meantime, to get an idea about the new</span><span class="rvts36"> .SOURCE</span><span class="rvts35"> format, here is an example of what the</span><span class="rvts89"> TxtToSource.exe </span><span class="rvts35">conversion program does to the old </span><span class="rvts36">EBCDIC.TXT</span><span class="rvts35"> file, showing the key features of the new format:</span></p>
+<p class="rvps9"><span class="rvts297"><br/></span></p>
+<p class="rvps9"><span class="rvts88">TT &nbsp;TITLE='SPFLITE TRANSLATION TABLE' &nbsp;MODE=RT</span></p>
+<p class="rvps9"><span class="rvts88">TT &nbsp;GENDATE='2013-11-29 14:36:46'</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">** &nbsp;SOURCE file was created from conversion of 'EBCDIC.TXT'</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">** &nbsp;AE comment: &nbsp;ASCII 1252 =&gt; EBCDIC 1140</span></p>
+<p class="rvps9"><span class="rvts88">** &nbsp;EA comment: &nbsp;EBCDIC 1140 =&gt; ASCII 1252</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">** &nbsp;_0 &nbsp;_1 &nbsp;_2 &nbsp;_3 &nbsp;_4 &nbsp;_5 &nbsp;_6 &nbsp;_7 &nbsp;_8 &nbsp;_9 &nbsp;_A &nbsp;_B &nbsp;_C &nbsp;_D &nbsp;_E &nbsp;_F &nbsp;EA</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">0* &nbsp;00 &nbsp;01 &nbsp;02 &nbsp;  &nbsp; œ &nbsp;09 &nbsp; † &nbsp;7F &nbsp;97 &nbsp;8D &nbsp;8E &nbsp;0B &nbsp;0C &nbsp;0D &nbsp;  &nbsp;  &nbsp;0*</span></p>
+<p class="rvps9"><span class="rvts88">1* &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; … &nbsp;08 &nbsp; ‡ &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;’ &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;1*</span></p>
+<p class="rvps9"><span class="rvts88">2* &nbsp; ¤ &nbsp;81 &nbsp; ‚ &nbsp; ƒ &nbsp; „ &nbsp;0A &nbsp; &nbsp; &nbsp;  &nbsp; ˆ &nbsp; ‰ &nbsp; Š &nbsp; ‹ &nbsp; Œ &nbsp;05 &nbsp;06 &nbsp;07 &nbsp;2*</span></p>
+<p class="rvps9"><span class="rvts88">3* &nbsp;90 &nbsp; ‘ &nbsp;  &nbsp; “ &nbsp; ” &nbsp; • &nbsp; – &nbsp;  &nbsp; ˜ &nbsp; &nbsp;™ &nbsp; š &nbsp; › &nbsp;14 &nbsp;15 &nbsp; ž &nbsp;1A &nbsp;3*</span></p>
+<p class="rvps9"><span class="rvts88">4* &nbsp; &nbsp; &nbsp;A0 &nbsp; â &nbsp; ä &nbsp; à &nbsp; á &nbsp; ã &nbsp; å &nbsp; ç &nbsp; ñ &nbsp; ¢ &nbsp; . &lt; &nbsp; ( &nbsp; + &nbsp; | &nbsp;4*</span></p>
+<p class="rvps9"><span class="rvts88">5* &nbsp; &amp; &nbsp; é &nbsp; ê &nbsp; ë &nbsp; è &nbsp; í &nbsp; î &nbsp; ï &nbsp; ì &nbsp; ß &nbsp; ! &nbsp; $ &nbsp; * &nbsp; ) &nbsp; ; &nbsp; ¬ &nbsp;5*</span></p>
+<p class="rvps9"><span class="rvts88">6* &nbsp; - &nbsp; / &nbsp; Â &nbsp; Ä &nbsp; À &nbsp; Á &nbsp; Ã &nbsp; Å &nbsp; Ç &nbsp; Ñ &nbsp; ¦ &nbsp; , &nbsp; % &nbsp; _ &nbsp; &gt; &nbsp; ? &nbsp;6*</span></p>
+<p class="rvps9"><span class="rvts88">7* &nbsp; ø &nbsp; É &nbsp; Ê &nbsp; Ë &nbsp; È &nbsp; Í &nbsp; Î &nbsp; Ï &nbsp; Ì &nbsp; ` &nbsp; : &nbsp; # &nbsp; @ &nbsp; ' &nbsp; = &nbsp; " &nbsp;7*</span></p>
+<p class="rvps9"><span class="rvts88">8* &nbsp; Ø &nbsp; a &nbsp; b &nbsp; c &nbsp; d &nbsp; e &nbsp; f &nbsp; g &nbsp; h &nbsp; i &nbsp; « &nbsp; » &nbsp; ð &nbsp; ý &nbsp; þ &nbsp; ± &nbsp;8*</span></p>
+<p class="rvps9"><span class="rvts88">9* &nbsp; ° &nbsp; j &nbsp; k &nbsp; l &nbsp; m &nbsp; n &nbsp; o &nbsp; p &nbsp; q &nbsp; r &nbsp; ª &nbsp; º &nbsp; æ &nbsp; ¸ &nbsp; Æ &nbsp; € &nbsp;9*</span></p>
+<p class="rvps9"><span class="rvts88">A* &nbsp; µ &nbsp; ~ &nbsp; s &nbsp; t &nbsp; u &nbsp; v &nbsp; w &nbsp; x &nbsp; y &nbsp; z &nbsp; ¡ &nbsp; ¿ &nbsp; Ð &nbsp; Ý &nbsp; Þ &nbsp; ® &nbsp;A*</span></p>
+<p class="rvps9"><span class="rvts88">B* &nbsp; ^ &nbsp; £ &nbsp; ¥ &nbsp; · &nbsp; © &nbsp; § &nbsp; ¶ &nbsp; ¼ &nbsp; ½ &nbsp; ¾ &nbsp; [ &nbsp; ] &nbsp; ¯ &nbsp; ¨ &nbsp; ´ &nbsp; × &nbsp;B*</span></p>
+<p class="rvps9"><span class="rvts88">C* &nbsp; { &nbsp; A &nbsp; B &nbsp; C &nbsp; D &nbsp; E &nbsp; F &nbsp; G &nbsp; H &nbsp; I &nbsp; ­ &nbsp; &nbsp;ô &nbsp; ö &nbsp; ò &nbsp; ó &nbsp; õ &nbsp;C*</span></p>
+<p class="rvps9"><span class="rvts88">D* &nbsp; } &nbsp; J &nbsp; K &nbsp; L &nbsp; M &nbsp; N &nbsp; O &nbsp; P &nbsp; Q &nbsp; R &nbsp; ¹ &nbsp; û &nbsp; ü &nbsp; ù &nbsp; ú &nbsp; ÿ &nbsp;D*</span></p>
+<p class="rvps9"><span class="rvts88">E* &nbsp; \ &nbsp; ÷ &nbsp; S &nbsp; T &nbsp; U &nbsp; V &nbsp; W &nbsp; X &nbsp; Y &nbsp; Z &nbsp; ² &nbsp; Ô &nbsp; Ö &nbsp; Ò &nbsp; Ó &nbsp; Õ &nbsp;E*</span></p>
+<p class="rvps9"><span class="rvts88">F* &nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9 &nbsp; ³ &nbsp; Û &nbsp; Ü &nbsp; Ù &nbsp; Ú &nbsp; Ÿ &nbsp;F*</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">EA &nbsp;_0 &nbsp;_1 &nbsp;_2 &nbsp;_3 &nbsp;_4 &nbsp;_5 &nbsp;_6 &nbsp;_7 &nbsp;_8 &nbsp;_9 &nbsp;_A &nbsp;_B &nbsp;_C &nbsp;_D &nbsp;_E &nbsp;_F &nbsp;EA</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">0_ &nbsp;00 &nbsp;01 &nbsp;02 &nbsp;03 &nbsp;9C &nbsp;09 &nbsp;86 &nbsp;7F &nbsp;97 &nbsp;8D &nbsp;8E &nbsp;0B &nbsp;0C &nbsp;0D &nbsp;0E &nbsp;0F &nbsp;0_</span></p>
+<p class="rvps9"><span class="rvts88">1_ &nbsp;10 &nbsp;11 &nbsp;12 &nbsp;13 &nbsp;9D &nbsp;85 &nbsp;08 &nbsp;87 &nbsp;18 &nbsp;19 &nbsp;92 &nbsp;8F &nbsp;1C &nbsp;1D &nbsp;1E &nbsp;1F &nbsp;1_</span></p>
+<p class="rvps9"><span class="rvts88">2_ &nbsp;A4 &nbsp;81 &nbsp;82 &nbsp;83 &nbsp;84 &nbsp;0A &nbsp;17 &nbsp;1B &nbsp;88 &nbsp;89 &nbsp;8A &nbsp;8B &nbsp;8C &nbsp;05 &nbsp;06 &nbsp;07 &nbsp;2_</span></p>
+<p class="rvps9"><span class="rvts88">3_ &nbsp;90 &nbsp;91 &nbsp;16 &nbsp;93 &nbsp;94 &nbsp;95 &nbsp;96 &nbsp;04 &nbsp;98 &nbsp;99 &nbsp;9A &nbsp;9B &nbsp;14 &nbsp;15 &nbsp;9E &nbsp;1A &nbsp;3_</span></p>
+<p class="rvps9"><span class="rvts88">4_ &nbsp;20 &nbsp;A0 &nbsp;E2 &nbsp;E4 &nbsp;E0 &nbsp;E1 &nbsp;E3 &nbsp;E5 &nbsp;E7 &nbsp;F1 &nbsp;A2 &nbsp;2E &nbsp;3C &nbsp;28 &nbsp;2B &nbsp;7C &nbsp;4_</span></p>
+<p class="rvps9"><span class="rvts88">5_ &nbsp;26 &nbsp;E9 &nbsp;EA &nbsp;EB &nbsp;E8 &nbsp;ED &nbsp;EE &nbsp;EF &nbsp;EC &nbsp;DF &nbsp;21 &nbsp;24 &nbsp;2A &nbsp;29 &nbsp;3B &nbsp;AC &nbsp;5_</span></p>
+<p class="rvps9"><span class="rvts88">6_ &nbsp;2D &nbsp;2F &nbsp;C2 &nbsp;C4 &nbsp;C0 &nbsp;C1 &nbsp;C3 &nbsp;C5 &nbsp;C7 &nbsp;D1 &nbsp;A6 &nbsp;2C &nbsp;25 &nbsp;5F &nbsp;3E &nbsp;3F &nbsp;6_</span></p>
+<p class="rvps9"><span class="rvts88">7_ &nbsp;F8 &nbsp;C9 &nbsp;CA &nbsp;CB &nbsp;C8 &nbsp;CD &nbsp;CE &nbsp;CF &nbsp;CC &nbsp;60 &nbsp;3A &nbsp;23 &nbsp;40 &nbsp;27 &nbsp;3D &nbsp;22 &nbsp;7_</span></p>
+<p class="rvps9"><span class="rvts88">8_ &nbsp;D8 &nbsp;61 &nbsp;62 &nbsp;63 &nbsp;64 &nbsp;65 &nbsp;66 &nbsp;67 &nbsp;68 &nbsp;69 &nbsp;AB &nbsp;BB &nbsp;F0 &nbsp;FD &nbsp;FE &nbsp;B1 &nbsp;8_</span></p>
+<p class="rvps9"><span class="rvts88">9_ &nbsp;B0 &nbsp;6A &nbsp;6B &nbsp;6C &nbsp;6D &nbsp;6E &nbsp;6F &nbsp;70 &nbsp;71 &nbsp;72 &nbsp;AA &nbsp;BA &nbsp;E6 &nbsp;B8 &nbsp;C6 &nbsp;80 &nbsp;9_</span></p>
+<p class="rvps9"><span class="rvts88">A_ &nbsp;B5 &nbsp;7E &nbsp;73 &nbsp;74 &nbsp;75 &nbsp;76 &nbsp;77 &nbsp;78 &nbsp;79 &nbsp;7A &nbsp;A1 &nbsp;BF &nbsp;D0 &nbsp;DD &nbsp;DE &nbsp;AE &nbsp;A_</span></p>
+<p class="rvps9"><span class="rvts88">B_ &nbsp;5E &nbsp;A3 &nbsp;A5 &nbsp;B7 &nbsp;A9 &nbsp;A7 &nbsp;B6 &nbsp;BC &nbsp;BD &nbsp;BE &nbsp;5B &nbsp;5D &nbsp;AF &nbsp;A8 &nbsp;B4 &nbsp;D7 &nbsp;B_</span></p>
+<p class="rvps9"><span class="rvts88">C_ &nbsp;7B &nbsp;41 &nbsp;42 &nbsp;43 &nbsp;44 &nbsp;45 &nbsp;46 &nbsp;47 &nbsp;48 &nbsp;49 &nbsp;AD &nbsp;F4 &nbsp;F6 &nbsp;F2 &nbsp;F3 &nbsp;F5 &nbsp;C_</span></p>
+<p class="rvps9"><span class="rvts88">D_ &nbsp;7D &nbsp;4A &nbsp;4B &nbsp;4C &nbsp;4D &nbsp;4E &nbsp;4F &nbsp;50 &nbsp;51 &nbsp;52 &nbsp;B9 &nbsp;FB &nbsp;FC &nbsp;F9 &nbsp;FA &nbsp;FF &nbsp;D_</span></p>
+<p class="rvps9"><span class="rvts88">E_ &nbsp;5C &nbsp;F7 &nbsp;53 &nbsp;54 &nbsp;55 &nbsp;56 &nbsp;57 &nbsp;58 &nbsp;59 &nbsp;5A &nbsp;B2 &nbsp;D4 &nbsp;D6 &nbsp;D2 &nbsp;D3 &nbsp;D5 &nbsp;E_</span></p>
+<p class="rvps9"><span class="rvts88">F_ &nbsp;30 &nbsp;31 &nbsp;32 &nbsp;33 &nbsp;34 &nbsp;35 &nbsp;36 &nbsp;37 &nbsp;38 &nbsp;39 &nbsp;B3 &nbsp;DB &nbsp;DC &nbsp;D9 &nbsp;DA &nbsp;9F &nbsp;F_</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps9"><span class="rvts88">// &nbsp;_0 &nbsp;_1 &nbsp;_2 &nbsp;_3 &nbsp;_4 &nbsp;_5 &nbsp;_6 &nbsp;_7 &nbsp;_8 &nbsp;_9 &nbsp;_A &nbsp;_B &nbsp;_C &nbsp;_D &nbsp;_E &nbsp;_F &nbsp;//</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="UsingtheEOLsettingsAUTOandAUTONL"></a>
+<span class="rvts36">Using the EOL settings AUTO and AUTONL</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The End of Line profile options AUTO and AUTONL allow for automatic detection of line terminations, possibly containing inconsistent and spurious line terminators, so that files edited across different system, mainframe SYSOUT files, and other inconsistently-terminated text files can be opened, viewed and edited in a reasonable way. </span><span class="rvts36">EOL AUTO</span><span class="rvts35">/</span><span class="rvts36">AUTONL</span><span class="rvts35"> may be applied to non-mainframe files as well, to handle situations where a file's line termination is inconsistent for some reason. A possible cause of this is a file shared between Windows and Unix on a network and edited with different editors that apply different line endings. Line terminations under </span><span class="rvts36">EOL AUTO</span><span class="rvts35">/</span><span class="rvts36">AUTONL</span><span class="rvts35"> are handled as follows:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps196"><span class="rvts35">FF (form feed) characters delimit lines, and cause a =PAGE&gt; marker to be placed in the sequence area. Notes:</span></li>
+</ul></ul>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps197"><span class="rvts35">Scrolling commands</span><span class="rvts36"> PAGE UP</span><span class="rvts35"> and </span><span class="rvts36">PAGE DOWN</span><span class="rvts35"> will locate these marked lines.</span></li>
+</ul></ul></ul>
+<p class="rvps197"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps115"><span class="rvts35">Since </span><span class="rvts36">PAGE UP</span><span class="rvts35"> and </span><span class="rvts36">PAGE DOWN</span><span class="rvts35"> will move the file to these =PAGE&gt; marker lines, which may have a variable number of lines involved, to regain the ‘full screen motion' that </span><span class="rvts36">PAGE UP</span><span class="rvts35"> and </span><span class="rvts36">PAGE DOWN</span><span class="rvts35"> does in other files, you can use a scroll amount of </span><span class="rvts36">HALF</span><span class="rvts35"> or </span><span class="rvts36">DATA</span><span class="rvts35">, or you could enter a numeric value for a specific number of lines. For most users who would have used </span><span class="rvts36">PAGE UP</span><span class="rvts35"> and </span><span class="rvts36">PAGE DOWN</span><span class="rvts35">, scrolling </span><span class="rvts36">UP</span><span class="rvts35">/</span><span class="rvts36">DOWN</span><span class="rvts35"> by the </span><span class="rvts36">DATA</span><span class="rvts35"> scroll amount should work well for them.</span></li>
+</ul></ul></ul>
+<p class="rvps197"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps115"><span class="rvts35">When you have a file that shows this =PAGE&gt; marker on a line, and you </span><span class="rvts36">PRINT</span><span class="rvts35"> this file, you will have a Form Feed sent to the printer for every line containing the =PAGE&gt; marker.</span></li>
+</ul></ul></ul>
+<p class="rvps197"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps196"><span class="rvts35">A lone LF (line feed) is treated as a line delimiter equivalent to CR,LF</span></li>
+</ul></ul>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">“Spurious” CR characters that seemingly don't belong there, such as CR,CR,LF are ignored. For example, in the sequence CR,CR,LF, the first CR is spurious; the remaining CR,LF pair is a normal line termination.</span></li>
+</ul></ul>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps196"><span class="rvts35">A CR,FF or CR,LF,FF sequence is considered as the end of one line, followed by a page separator line. </span></li>
+</ul></ul>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps196"><span class="rvts35">A hex value of X'1A' at the end of the file is ignored.</span></li>
+</ul></ul>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<p class="rvps196"><span class="rvts35"><br/></span></p>
+<p class="rvps201"><span class="rvts36">PAGE Profile Support</span></p>
+<p class="rvps201"><span class="rvts35"><br/></span></p>
+<p class="rvps202"><span class="rvts35">An extension to the </span><span class="rvts36">AUTO / AUTONL</span><span class="rvts35"> support is the </span><a class="rvts33" href="PAGESetPAGEoption.html">PAGE</a><span class="rvts95"> </span><span class="rvts347">Profile option. When selected (ON) and an </span><span class="rvts348">AUTO / AUTONL </span><span class="rvts347">file is processed, the screen display will, when fewer lines exist on a page than the screen height, leave the bottom of the screen page blank rather than display the beginning lines of the next page. This presents a more normal 'print page' format for viewing. </span></p>
+<p class="rvps202"><span class="rvts347"><br/></span></p>
+<p class="rvps202"><span class="rvts347">If only </span><span class="rvts348">UP PAGE</span><span class="rvts347"> and </span><span class="rvts348">DOWN PAGE </span><span class="rvts347">commands are used to scroll, this 'page mode' will be retained. Scrolling via the mouse-wheel, or via the arrow keys, will suspend PAGE mode till the next time an </span><span class="rvts348">UP PAGE</span><span class="rvts347"> or </span><span class="rvts348">DOWN PAGE</span><span class="rvts347"> command is used.</span></p>
+<p class="rvps199"><span class="rvts83"><br/></span></p>
+<p class="rvps188"><a name="HandlingfileswithloneCRcharacters"></a>
+<span class="rvts36">Handling files with lone CR characters</span></p>
+<p class="rvps199"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A “</span><span class="rvts36">lone CR</span><span class="rvts35">” character – that is, </span><span class="rvts36">a CR not followed by LF, FF or another CR</span><span class="rvts35"> – is sometimes produced by older software that attempted to </span><span class="rvts85">overprint</span><span class="rvts35"> the data in order to simulate underscores or bold print. It may also exist in non-Windows text files; older versions of Macintosh and some lesser-known systems used CR as a line termination. Because of this, a lone CR character might be used for two different, conflicting purposes. To handle this, you may choose between </span><span class="rvts36">EOL AUTO</span><span class="rvts35"> and</span><span class="rvts36"> EOL AUTONL</span><span class="rvts35">. These two options work as follows:</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">For all but the “lone CR” situation, </span><span class="rvts36">EOL AUTO</span><span class="rvts35"> and </span><span class="rvts36">EOL AUTONL</span><span class="rvts35"> work identically.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When </span><span class="rvts36">EOL</span><span class="rvts35"> is set to </span><span class="rvts36">AUTONL</span><span class="rvts35"> and SPFLite detects a lone CR in a file, it is considered to be a “new line” and is treated as if the lone CR were actually a normal CR/LF line termination.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When </span><span class="rvts36">EOL</span><span class="rvts35"> is set to </span><span class="rvts36">AUTO</span><span class="rvts35"> and SPFLite detects a lone CR in a file, it is considered to be an overprint request. At this point, SPFLite will buffer the lines involved in the overprint request until a ‘normal' line terminator is found, and then it attempts to simulate an overprint. This means that, on a column-by-column basis, it examines the characters that are attempting to ‘occupy' the same column at the same time. For each two characters involved in this way:</span></p>
+<p class="rvps199"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps200"><span class="rvts35">When a blank and a non-blank character are in the same column, the non-blank character ‘wins out'.</span></li>
+</ul></ul>
+<p class="rvps200"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps200"><span class="rvts35">When two non-blank characters are in the same column, and they are identical, it is recognized as a “bold font” type of overprint, and is not a problem; the non-blank character is retained.</span></li>
+</ul></ul>
+<p class="rvps200"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps200"><span class="rvts35">When two non-blank characters are in the same column, but one of the non-blank characters is an underscore, the non-underscore character ‘wins out'. That way, the underscore character will never ‘obliterate' the meaningful data.</span></li>
+</ul></ul>
+<p class="rvps200"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps200"><span class="rvts35">When two non-blank characters are in the same column, and they are not identical, and neither is an underscore, an “overprint clash” has occurred. When this happens, the first such character is retained and any others are discarded. Where SPFLite detects this, it will issue a warning message. If you frequently see this warning, it suggests the file having lone CR characters was not written to overprint, but either has foreign line delimiters or is perhaps ‘damaged' in some way. The way to address this is to change the setting from</span><span class="rvts36"> EOL AUTO</span><span class="rvts35"> to </span><span class="rvts36">EOL AUTONL</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps198" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

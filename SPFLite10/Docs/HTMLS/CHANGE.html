@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>CHANGE - Change a Data String</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CHANGE - Change a Data String">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="CHANGE - Change a Data String" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="CHANGE"
+		  data-hnd-context="91"
+		  data-hnd-title="CHANGE - Change a Data String"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>CHANGE - Change a Data String</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts107">Syntax</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="239" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps217"><span class="rvts89">CHANGE</span></p>
+</td>
+<td width="887" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">from-string &nbsp; to-string</span></p>
+<p class="rvps2"><span class="rvts89">[ start-column [ end-column ] ]</span></p>
+<p class="rvps2"><span class="rvts89">[ FIRST | LAST | </span><span class="rvts395">NEXT</span><span class="rvts89"> | PREV | ALL ]</span></p>
+<p class="rvps2"><span class="rvts89">[ PREFIX | SUFFIX | WORD | </span><span class="rvts131">CHAR</span><span class="rvts89"> ]</span></p>
+<p class="rvps2"><span class="rvts89">[ LEFT | RIGHT ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TRUNC ]</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-change-request]</span></p>
+<p class="rvps2"><span class="rvts89">[ DS | CS ]</span></p>
+<p class="rvps2"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89">[ MX | DX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<p class="rvps4"><span class="rvts107">Operands</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="218" height="38" style="padding: 1px;"><p class="rvps233"><span class="rvts353">from-string</span></p>
+</td>
+<td width="755" height="38" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The search string you want to change</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts353">to-string</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The string you want to replace from-string</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts353">start-column</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Left column of a range (with end-column) within which the from-string value must be found. If no end-column operand, then the from-string operand must be found starting in start-column.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts353">end-column</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Right column of a range (with start-column) within which the from-string value must be found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">FIRST</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find the first occurrence of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">LAST</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the bottom of the data and searches backward to find the last occurrence of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts363">NEXT</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the first position after the current cursor location and searches ahead to find the next occurrence of from-string. </span><span class="rvts11">NEXT</span><span class="rvts12"> is the default.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">PREV</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the current cursor location and searches backward to find the previous occurrence of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" height="29" style="padding: 1px;"><p class="rvps217"><span class="rvts54">ALL</span></p>
+</td>
+<td width="755" height="29" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find all occurrences of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">LEFT</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">LEFT causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the left-most occurrence of search-string is changed, and any other instances on that same line are unchanged.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">RIGHT</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts22">RIGHT causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the right-most occurrence of search-string is changed, and any other instances on that same line are unchanged.</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">TRUNC</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts22">TRUNC will cause the remainder of the line, </span><span class="rvts21">following</span><span class="rvts22"> the replacement CHANGE string, to be deleted (truncated).</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">PREFIX</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates from-string at the beginning of a word.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">WORD</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates from-string when it is delimited on both sides by blanks or other non-Word characters.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts363">CHAR</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates from-string regardless of what precedes or follows it.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">SUFFIX</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates from-string at the end of a word.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">line-control-range</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-selection-criteria</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the from-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-change-request</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request can also be made to highlight the string following completion of the command. The full syntax and allowable operands which make up a color-change-request &nbsp;are discussed in </span><a class="rvts33" href="ColorChangeRequestSpecification.html">"Color Change Request Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">X | NX</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be examined, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be examined. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">U | NU</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">CS | DS</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies the Column Shift / Data Shift mode for this particular CHANGE command. See </span><a name="Effect of CHANGE Command on Column-Dependent Data"></a>
+<a class="rvts33" href="FindingandChangingData.html#Effect%20of%20CHANGE%20Command%20on%20Column-Dependent%20Data">Effect of CHANGE Command on Column-Dependent Data</a><span class="rvts35"> for the significance of this operand. If not specified, the default CS/DS value for this file's Profile will be used.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If a CS or DS is the </span><span class="rvts36">only </span><span class="rvts35">operand of the CHANGE command, the specified value will be set as the default for the file's Profile.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">MX</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts11">MX</span><span class="rvts12"> requests that all lines which DO contain from-string be excluded from the display following command processing. MX = Make Excluded.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">DX</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts11">DX</span><span class="rvts12"> requests that lines which DO contain from-string, which, if excluded, would normally be made visible, be left in their excluded status. DX = Don't change Excluded status</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="218" style="padding: 1px;"><p class="rvps217"><span class="rvts54">TOP</span></p>
+</td>
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the second screen line (as ISPF does) if the line is not on the current screen. If </span><span class="rvts11">TOP</span><span class="rvts12"> is coded, then the line is always repositioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">CHANGE</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">C, CHG </span><span class="rvts13">or</span><span class="rvts14"> CHA</span></p>
+<p class="rvps5"><span class="rvts14">PREFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">PRE </span><span class="rvts13">or</span><span class="rvts14"> PFX</span></p>
+<p class="rvps5"><span class="rvts14">SUFFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUF </span><span class="rvts13">or</span><span class="rvts14"> SFX</span></p>
+<p class="rvps5"><span class="rvts14">WORDS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">WORD</span></p>
+<p class="rvps5"><span class="rvts14">CHARS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CHAR</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts107">Description</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can use the </span><span class="rvts11">CHANGE</span><span class="rvts12"> command to change one string to another either singly, or for all occurrences. As well optional operands allow you to restrict the column boundaries within which it operates, along with other characteristics of the string searched for. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To change the next occurrence of ME to YOU without specifying any other qualifications:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">On the command line type:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts49">CHANGE ME YOU</span></p>
+<p class="rvps11"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Press Enter. This command changes only the next occurrence of the letters ME to YOU. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Since no other qualifications were specified, the letters ME can be:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li class="rvps4"><span class="rvts12">Uppercase or a mixture of uppercase and lowercase. (Depends on </span><span class="rvts11">CASE</span><span class="rvts12"> setting, see the </span><a class="rvts32" href="CASE.html">CASE</a><span class="rvts12"> command)</span></li>
+<li class="rvps4"><span class="rvts12">At the beginning of a word (prefix), the end of a word (suffix), or the entire word (word) </span></li>
+<li class="rvps4"><span class="rvts12">In an excluded line or a nonexcluded line</span></li>
+<li class="rvps4"><span class="rvts12">Anywhere within the current boundaries.</span></li>
+</ul></ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To change the next occurrence of ME to YOU, but only if the letters are uppercase:</span></p>
+<div class="rvps209"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="14" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">On the command line type:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts49">CHANGE C'ME' YOU</span></p>
+<p class="rvps11"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Press Enter. This type of change is called a case sensitive string change (note the C that precedes the search string) because it changes the next occurrence of the letters ME to YOU only if the letters are found in uppercase. However, since no other qualifications were specified, the change occurs no matter where the letters are found, as outlined in the preceding list.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">For more information, including other types of search strings, see </span><a class="rvts33" href="FindingandChangingData.html">Finding and Changing Data</a><span class="rvts12"> and </span><a class="rvts33" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts12">.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps217"><span class="rvts12"></span><br/><span class="rvts12">The following example changes the first plus in the file to a minus. However, the plus must be the first character of a word:</span><br/><span class="rvts12"></span><br/><span class="rvts54">&nbsp;&nbsp;</span><span class="rvts49">CHANGE&nbsp;'+'&nbsp;'-'&nbsp;FIRST&nbsp;PREFIX</span><br/><span class="rvts12"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="14" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps211"><span class="rvts12">The following example changes the last plus in the file to a minus. However, the plus must be the last character of a word; and it must be found on an excluded line: &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts12"></span><br/><span class="rvts47">&nbsp;&nbsp;</span><span class="rvts49">CHANGE&nbsp;'+'&nbsp;'-'&nbsp;LAST&nbsp;SUFFIX&nbsp;X</span><br/><span class="rvts12"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="14" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps211"><span class="rvts12">The following example changes the first plus that precedes the cursor position to a minus. However, the character must be a stand alone character (not part of any other word); it must be on a nonexcluded line; and it must exist within columns 1 and 5: &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts12"></span><br/><span class="rvts47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts49">CHANGE&nbsp;'+'&nbsp;'-'&nbsp;PREV&nbsp;WORD&nbsp;NX&nbsp;1&nbsp;5</span><br/><span class="rvts12"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="14" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps72"><span class="rvts12">The following example changes all words ABC to DEF from the line at label .A to the line at label .B. If the word ABC appears more than once in any given line, only the left-most one is changed, and any additional occurrences of ABC on the same line are ignored:</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; </span><span class="rvts49">CHANGE LEFT ABC DEF .A .B ALL</span></p>
+<p class="rvps2"><span class="rvts49"><br/></span></p>
+<p class="rvps72"><span class="rvts12">The following example changes all strings "XYZ" which are highlighted in BLUE to "PQR". The resulting string will remain colored BLUE.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; </span><span class="rvts49">CHANGE ALL "XYZ" BLUE "PQR"</span></p>
+<p class="rvps2"><span class="rvts49"><br/></span></p>
+<p class="rvps2"><span class="rvts49"><br/></span></p>
+<p class="rvps72"><span class="rvts12">The TRUNC keyword will cause the CHANGE command to truncate the line after point where the change-string replaces the find-string. The following example changes the characters </span><span class="rvts48">"END)"</span><span class="rvts12"> to </span><span class="rvts48">"END."</span><span class="rvts12"> and deletes all remaining characters on the line.</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts12"> &nbsp; &nbsp;</span><span class="rvts49">CHANGE &nbsp;"END)" &nbsp;"END." &nbsp;TRUNC</span></p>
+<p class="rvps72"><span class="rvts49"><br/></span></p>
+<p class="rvps72"><span class="rvts12">which will alter the line</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts49"> COMING TO AN END) BUT NOT BEFORE &nbsp;</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts12">into</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts49"> COMING TO AN END.</span></p>
+<p class="rvps72"><span class="rvts49"><br/></span></p>
+<p class="rvps72"><span class="rvts12">When using TRUNC, the change string can be a zero-length string, which results in truncating the find-string and everything that follows it. The following example deletes the character </span><span class="rvts48">")"</span><span class="rvts12"> and all remaining characters on the line.</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts12"> &nbsp; &nbsp;</span><span class="rvts49">CHANGE &nbsp;")" &nbsp;"" &nbsp;TRUNC</span></p>
+<p class="rvps72"><span class="rvts49"><br/></span></p>
+<p class="rvps72"><span class="rvts12">which will alter the line</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts49"> COMING TO AN END) BUT NOT BEFORE &nbsp;</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts12">into</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps72"><span class="rvts49"> COMING TO AN END</span></p>
+<p class="rvps72"><span class="rvts49"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;When the </span><span class="rvts11">CHANGE</span><span class="rvts12"> search operand is a Regular Expression (a string with an R type code) and reverse-order searching is done with </span><span class="rvts11">PREV</span><span class="rvts12"> or </span><span class="rvts11">LAST</span><span class="rvts12">, only the left-most occurrence on any given line is changed. That is, the command</span></p>
+<p class="rvps72"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts49">CHANGE R'ABC' 'XYZ' PREV</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">is treated as if it were specified as</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts49">CHANGE LEFT R'ABC' 'XYZ' PREV</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">and</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts49">CHANGE R'ABC' 'XYZ' LAST</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">is treated as if it were specified as</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts49">CHANGE LEFT R'ABC' 'XYZ' LAST</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">This limitation stems from the regular-expression engine used by SPFLite. </span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

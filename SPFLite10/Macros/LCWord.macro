@@ -1,0 +1,22 @@
+' LCWORD.MACRO
+' Lowercase the 'word' the cursor is located on
+' Syntax:  LCWORD                                     With cursor located on the word
+'                                                     to be lower-cased.   Typically the
+' Author George Deluca                                command would be assigned to a
+'                                                     command function key.
+dim ltxt, ltxt2, lword as string
+dim i as number 
+
+lword = lcase$(Get_Curr_Word$)                        ' Get lower version of the word
+if lword = "" then halt(fail, "No word under the cursor") ' Better have one
+ltxt = Get_Line$(Get_Csr_LPtr)                        ' Get the line of text
+ltxt2 = lcase$(ltxt)                                  ' Lowercase the line
+
+i = instr(ltxt2, lword)                               ' Make sure we handle dup strings in the line
+while Get_Csr_Col < i or Get_Csr_Col >= i + len(lword) - 1
+   i = instr(i + 1, ltxt2, lword)                     '
+wend                                                  '
+ltxt = left$(ltxt, i - 1) + lword + mid$(ltxt, i + len(lword)) ' Do the changekey
+Set_Line(Get_Csr_LPtr, ltxt)                          ' Put modified text back
+Set_Csr(Get_Csr_LPtr, i, 0)                           ' Put cursor on the start of the word
+halt                                                  ' Done

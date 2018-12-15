@@ -1,0 +1,8 @@
+License agreement for the package:
+SPFLite
+
+This software is distributed under the terms of the GNU General
+Public License, Version 3, June 2007.
+The terms of version 3 of the license are in a file called GPL-3.txt
+which you will find in the root install folder.
+

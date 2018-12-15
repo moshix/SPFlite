@@ -1,0 +1,145 @@
+
+Processing E:\GDrive\SPFLite10\SPFLite.ci 12/14/2018 1:47:06 PM
+Log file: E:\GDrive\SPFLite10\SPFLite.log 
+Generating Sources... 
+Compiling Gentee Sources... 
+Build setup file: E:\GDrive\SPFLite10\SPFLiteSetup.exe 
+Adding temporary file(s) to EXE 
+E:\Temp\gentee01\english.lng 12/14/2018 1:47:06 PM 4014  45.96%
+E:\GDrive\SPFLite10\Misc Graphics\SPFLite10.jpg 8/20/2018 11:24:29 AM 4262  94.88%
+E:\GDrive\SPFLite10\Distribution\License.txt 12/3/2018 3:55:38 PM 272  80.51%
+C:\Program Files (x86)\CreateInstall\res\leftimg\uninstall\uninstall - 1.bmp 11/10/2002 3:56:02 AM 20678  28.19%
+C:\Program Files (x86)\CreateInstall\res\leftimg\install\install - 1.bmp 11/10/2002 3:56:02 AM 20678  33.44%
+Build setup file: E:\Temp\gentee01\uninstall.exe 
+Adding uninstall file(s) to EXE 
+Getting list of files 
+Packing files... 
+================================ 
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Array.bmp 7/4/2003 6:01:34 AM 344  39.82%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numbers.bmp 2/6/2004 3:58:40 AM 822  54.50%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Byte.bmp 2/6/2004 3:58:42 AM 822  23.35%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Cur.bmp 2/6/2004 3:59:02 AM 822  55.35%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Double.bmp 2/6/2004 3:59:02 AM 822  24.81%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_DWord.bmp 2/6/2004 3:58:42 AM 822  14.84%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Ext.bmp 2/6/2004 3:59:02 AM 822  19.95%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Integer.bmp 2/6/2004 3:58:42 AM 822  21.65%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Long.bmp 2/6/2004 3:58:42 AM 822  17.88%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_QUAD.bmp 2/6/2004 3:58:42 AM 822  20.68%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Single.bmp 2/6/2004 3:59:02 AM 822  17.03%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Numeric_Word.bmp 2/6/2004 3:58:42 AM 822  28.71%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Root.bmp 7/4/2003 6:27:48 AM 876  86.75%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Strings.bmp 7/4/2003 6:01:42 AM 860  86.62%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Strings_Dynamic.bmp 4/19/2009 10:13:04 AM 822  57.05%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Strings_Fixed_Asciiz.bmp 4/19/2009 10:23:24 AM 822  28.83%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_Strings_Fixed_String.bmp 4/19/2009 10:24:12 AM 822  16.30%
+E:\GDrive\SPFLite10\Distribution\Lib\Images\_UDTs.bmp 10/24/2003 4:50:38 AM 632  80.53%
+E:\GDrive\SPFLite10\Distribution\Lib\ODBC352.dll 9/9/2010 11:07:56 AM 143872  29.60%
+E:\GDrive\SPFLite10\Distribution\Lib\TB_XML60.dll 7/2/2007 5:16:00 PM 39936  57.93%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_ADO.dll 6/19/2011 7:47:00 PM 24576  89.56%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Biff.dll 9/5/2011 8:45:46 PM 20992  80.96%
+E:\GDrive\SPFLite10\Distribution\Lib\thinbasic_Bundle.dll 9/5/2011 9:00:56 PM 501760  100.00%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_CGI.dll 9/5/2011 8:45:54 PM 32256  94.76%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_COM.dll 4/5/2010 1:27:24 PM 26112  90.28%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_COMM.dll 9/5/2011 8:45:58 PM 12800  69.11%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Console.dll 9/5/2011 8:46:00 PM 26624  81.34%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Crypto.dll 9/5/2011 8:46:06 PM 25600  76.66%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Dictionary.dll 9/5/2011 8:46:16 PM 16896  69.73%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_DT.dll 9/5/2011 8:46:20 PM 21504  65.39%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Eval.dll 9/5/2011 8:46:24 PM 55296  94.50%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Exe.dll 9/5/2011 8:46:42 PM 15360  70.50%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_File.dll 9/5/2011 8:46:46 PM 33792  78.21%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_FileLine.dll 9/5/2011 8:46:54 PM 10240  57.05%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_FTP.dll 9/5/2011 8:46:56 PM 44032  88.96%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_GDIp.dll 6/19/2011 7:47:20 PM 14848  64.00%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_iComplex.dll 9/5/2011 8:45:40 PM 19456  79.15%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Inet.dll 9/5/2011 8:47:02 PM 23552  74.27%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_INI.dll 9/5/2011 8:47:06 PM 15360  63.61%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_LAN.dll 9/5/2011 8:47:12 PM 12800  56.71%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_LL.dll 9/5/2011 8:47:08 PM 17920  68.20%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Math.dll 9/5/2011 8:47:14 PM 38400  87.40%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_OnlineScores.dll 8/21/2011 7:34:20 PM 11264  57.20%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_OS.dll 9/5/2011 8:47:26 PM 37888  87.09%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Oxygen.dll 9/4/2011 10:21:32 AM 113152  96.39%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_PC.dll 9/5/2011 8:47:32 PM 11776  57.44%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_RAS.dll 9/5/2011 8:47:36 PM 10752  52.43%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Registry.dll 9/5/2011 8:47:38 PM 18432  64.42%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_SAPI.dll 9/5/2011 8:47:42 PM 14336  61.36%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_SMTP.dll 9/5/2011 8:47:48 PM 47104  89.15%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_STAT.dll 9/5/2011 8:48:00 PM 19456  72.24%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TBAI.dll 5/18/2011 5:05:22 AM 14336  68.28%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TBASS.dll 9/5/2011 8:48:04 PM 140288  97.04%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TBDI.dll 8/26/2007 1:40:00 PM 13824  72.93%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TBEM.dll 7/31/2010 3:21:08 PM 32256  33.57%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TBGL.dll 9/4/2011 10:21:58 AM 99328  94.71%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TcpUdp.dll 9/5/2011 8:48:14 PM 17408  90.24%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_TImage.dll 9/5/2011 8:48:14 PM 123392  97.69%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Tokenizer.dll 9/5/2011 8:50:54 PM 35840  85.11%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Trace.dll 9/5/2011 8:51:02 PM 230912  97.98%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_Trace.Ini 5/23/2013 1:42:18 PM 109  100.00%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_UI.dll 9/5/2011 8:51:42 PM 161792  92.87%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_UIAdv.dll 9/5/2011 8:45:26 PM 49664  90.22%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_VBRegExp.dll 9/5/2011 8:53:16 PM 14848  80.44%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_WMI.dll 9/5/2011 8:53:28 PM 23040  76.36%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_XPRINT.dll 9/5/2011 8:53:22 PM 18432  76.49%
+E:\GDrive\SPFLite10\Distribution\Lib\thinBasic_ZLIB.dll 9/5/2011 8:53:32 PM 8704  58.93%
+E:\GDrive\SPFLite10\Distribution\Lib\thinRAS.dll 9/25/2001 5:26:30 AM 9728  86.09%
+E:\GDrive\SPFLite10\Distribution\Lib\zLib.dll 6/29/2011 8:45:06 PM 100352  56.51%
+E:\GDrive\SPFLite10\Distribution\Adobe.ico 7/3/2011 10:19:16 AM 9662  36.83%
+E:\GDrive\SPFLite10\Distribution\Changes Pre V7.txt 11/22/2013 3:47:32 PM 143699  35.36%
+E:\GDrive\SPFLite10\Distribution\Changes Pre V8.txt 12/17/2015 3:08:04 PM 166884  35.29%
+E:\GDrive\SPFLite10\Distribution\Changes.txt 12/14/2018 1:44:31 PM 56065  33.82%
+E:\GDrive\SPFLite10\Distribution\Contacts.txt 6/26/2013 10:22:46 AM 492  56.09%
+E:\GDrive\SPFLite10\Distribution\EBCDIC.SOURCE 10/24/2013 9:35:40 AM 1201  54.95%
+E:\GDrive\SPFLite10\Distribution\GPL-3.txt 11/6/2018 3:40:05 PM 35823  35.11%
+E:\GDrive\SPFLite10\Distribution\Help.ico 1/1/1995 12:00:00 AM 766  44.38%
+E:\GDrive\SPFLite10\Distribution\Install DEFAULT.INI 12/27/2014 3:39:07 PM 433  69.28%
+E:\GDrive\SPFLite10\Distribution\Install SPFLite.INI 9/27/2018 1:03:30 PM 4522  33.90%
+E:\GDrive\SPFLite10\Distribution\Install SPFLite.Kbd 12/27/2014 3:39:00 PM 12819  9.15%
+E:\GDrive\SPFLite10\Distribution\KeyboardTest.exe 7/16/2011 6:14:02 PM 65536  46.77%
+E:\GDrive\SPFLite10\Distribution\License.txt 12/3/2018 3:55:38 PM 272  52.94%
+E:\GDrive\SPFLite10\Distribution\OpenWithSPFLite - 32 Bit Systems.reg 2/11/2015 2:56:56 PM 308  76.62%
+E:\GDrive\SPFLite10\Distribution\OpenWithSPFLite - 64 Bit Systems.reg 2/11/2015 2:57:29 PM 153  85.62%
+E:\GDrive\SPFLite10\Distribution\pcre3.dll 6/15/2013 11:30:44 PM 321536  43.84%
+E:\GDrive\SPFLite10\Distribution\SPFLite Edit Macros.chm 12/14/2018 1:29:35 PM 370392  100.00%
+E:\GDrive\SPFLite10\Distribution\SPFLite Edit Macros.pdf 12/14/2018 1:30:27 PM 8742034  100.00%
+E:\GDrive\SPFLite10\Distribution\SPFLite Forums.url 6/25/2013 1:59:26 PM 55  116.36%
+E:\GDrive\SPFLite10\Distribution\SPFLite Website.url 6/25/2013 12:45:24 PM 49  118.36%
+E:\GDrive\SPFLite10\Distribution\SPFLite.chm 12/14/2018 1:21:50 PM 21051940  100.00%
+E:\GDrive\SPFLite10\Distribution\SPFLite.exe 12/14/2018 1:18:19 PM 459264  93.81%
+E:\GDrive\SPFLite10\Distribution\SPFLite.pdf 12/14/2018 1:26:15 PM 9176770  95.46%
+E:\GDrive\SPFLite10\Distribution\SPFLite10.ico 6/9/2018 9:51:59 AM 17542  35.56%
+E:\GDrive\SPFLite10\Distribution\SPFLite10.jpg 8/20/2018 11:24:29 AM 4262  95.21%
+E:\GDrive\SPFLite10\Distribution\SPFLiteVersion10.chm 10/11/2018 1:21:53 PM 234743  97.41%
+E:\GDrive\SPFLite10\Distribution\SPFSUBMIT.exe 1/16/2012 11:29:52 AM 237568  48.76%
+E:\GDrive\SPFLite10\Distribution\SPFTest.exe 10/20/2015 11:25:37 AM 75264  81.52%
+E:\GDrive\SPFLite10\Distribution\thinBasic.chm 1/23/2016 10:50:20 AM 3501811  98.67%
+E:\GDrive\SPFLite10\Distribution\thinCore.dll 1/23/2016 10:51:58 AM 182272  96.82%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\Align.macro 7/17/2013 12:31:26 PM 763  52.55%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\AllCaps.macro 7/17/2013 12:34:16 PM 2453  34.36%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\AUTOCNVT.macro 10/12/2018 3:09:10 PM 3665  31.86%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\CLS.macro 7/17/2013 12:35:06 PM 40  122.50%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\ColSum.macro 7/17/2013 12:40:06 PM 4538  34.28%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\CT.macro 7/17/2013 12:42:10 PM 1546  35.83%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\DOS.macro 7/17/2013 12:42:48 PM 118  72.03%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\FlipFlop.macro 7/17/2013 12:44:48 PM 1482  36.43%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\ISRBox.macro 7/17/2013 12:46:36 PM 1769  33.74%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\ISRCount.macro 7/17/2013 12:50:04 PM 1025  37.26%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\ISRMask.macro 7/17/2013 12:51:30 PM 1298  35.67%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\LCWord.macro 5/20/2015 12:37:58 PM 1368  33.77%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\ONLY.macro 7/17/2013 12:54:02 PM 406  53.69%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\Pair.macro 7/17/2013 12:57:24 PM 4950  34.82%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\PB.macro 7/17/2013 12:59:00 PM 2653  41.27%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\RM.macro 7/17/2013 1:01:42 PM 1177  34.40%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\rv.macro 8/12/2014 1:23:44 PM 1867  16.60%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\TableLkup.Data 8/13/2015 12:53:28 PM 55  116.36%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\TableLkup.macro 8/13/2015 12:52:40 PM 3366  42.92%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\UCWord.macro 5/20/2015 12:39:45 PM 1353  39.83%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\XEvery.macro 7/17/2013 1:10:06 PM 2970  31.85%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\XF.macro 7/17/2013 1:11:58 PM 2678  36.03%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\XFLY.macro 7/17/2013 1:12:54 PM 530  40.75%
+E:\GDrive\SPFLite10\Distribution Data Folder\Macros\XPOP.macro 7/17/2013 1:14:02 PM 726  17.07%
+E:\GDrive\SPFLite10\Distribution Data Folder\EBCDIC.SOURCE 10/24/2013 9:35:40 AM 1201  52.87%
+================================ 
+All files: 124 [ 46391KB => 44847KB ] 
+File Size E:\GDrive\SPFLite10\SPFLiteSetup.exe: 44964 KB 
+Finish Successful 12/14/2018 1:47:45 PM

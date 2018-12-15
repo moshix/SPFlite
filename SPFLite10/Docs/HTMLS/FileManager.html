@@ -1,0 +1,1155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with the File Manager</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,New keyword">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with the File Manager">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with the File Manager" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="FileManager"
+		  data-hnd-context="23"
+		  data-hnd-title="Working with the File Manager"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with the File Manager</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#ExampleofFileManagerdisplay">Example of File Manager display</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#FileManagerscreenlayout">File Manager screen layout</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Directoryrefresh">Directory refresh</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Specifyingthecriteriafordirectorydisplays">Specifying the criteria for directory displays</a></p>
+<p class="rvps9"><a class="rvts294" href="FileManager.html#ExtendedFilePatternSupport">Extended File Pattern Support</a></p>
+<p class="rvps9"><a class="rvts295" href="FileManager.html#FileManagerprimarycommands">File Manager primary commands</a></p>
+<p class="rvps9"><a class="rvts296" href="FileManager.html#FileManagerlinecommands">File Manager line commands</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#FileManagerALLcommandandFileLists">File Manager ALL command and File Lists</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Mouseselectionoffiles">Mouse selection of files</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Changingthefiledisplayorder">Changing the file display order</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#ManagingFileLists">Managing File Lists</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#FileListNoteSupport">File List Note Support</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#Performingafilesearch">Performing a file search</a></p>
+<p class="rvps9"><a class="rvts45" href="FileManager.html#FindinFiles(FF)syntax">Find in Files (FF) syntax</a></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The SPFLite File Manager is designed to provide a powerful, easy-to-use interface for file selection and file management. This includes a wide range of capabilities to manage file operations, and support for File Lists (collections of files) to provide quick access to frequently used files and directories. server.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note</span><span class="rvts35">: The file extension of a File List file is </span><span class="rvts36">.FLIST</span><span class="rvts35">. When speaking informally about one or more of such lists, we use the more conversational phrase "File List" or "File Lists". </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">File Manager features:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">A variety of predefined File Lists: </span><span class="rvts36">Recent Files, Favorite Files, Open Files, FF Result Lists, Recent Paths </span><span class="rvts35">and </span><span class="rvts36">Profile Lists.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">Directory path lists </span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">Extensive File Pattern matching can be used on the file names to display only wanted files.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">Large scrollable line-command field can be used to enter long line-command names, or commands with arguments (like </span><span class="rvts36">Add</span><span class="rvts35"> and </span><span class="rvts36">Rename</span><span class="rvts35">). This field is padded with _ characters. Note that if the File/Path being displayed is flagged as Read-Only, the field will be padded with . i.e. </span><span class="rvts137">......</span><span class="rvts35"> instead of </span><span class="rvts137">_____</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">A Global Options tab is available for the File Manager. This gathers all global options relating to the File Manager into a single dialog, which makes them easier to find and modify as needed. Enter </span><span class="rvts36">OPTIONS FM</span><span class="rvts35"> to reach these settings.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">The </span><span class="rvts36">ALL</span><span class="rvts35"> line command can be used to apply selected File Manager line commands to every file named in a File List. See discussion below for more information.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">File Manager options are set in the </span><a class="rvts33" href="OptionsFManager.html">Options - File Manager</a><span class="rvts35"> settings page:</span></p>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">When you check </span><a class="rvts292" href="OptionsFManager.html#Close%20SPFLite%20with%20last%20tab%20?">Close SPFLite with last file tab</a><span class="rvts110">,</span><span class="rvts35"> SPFLite will terminate when the last active Edit/Browse Tab closes. If unchecked, and no file tabs are open, SPFLite continues running and the File Manager remains open.</span></li>
+</ul></ul>
+<p class="rvps140"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">When you check </span><a class="rvts33" href="OptionsFManager.html#Confirm%20file%20Deletes%20?">Confirm file Deletes</a><span class="rvts35"> a popup message will appear when you request a file to be deleted, giving you a chance to confirm that you are deleting the right file.</span><span class="rvts36">For data security reasons, we recommend you enable this option.</span></li>
+</ul></ul>
+<p class="rvps140"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">When you check </span><a class="rvts33" href="OptionsFManager.html#Display%20File%20Manager%20Help%20?">Display File Manager Help</a><span class="rvts35">, a Help legend appears at the bottom of the File Manager screen, showing available File Manager line commands that can be used. Depending on whether you are viewing a directory list, a </span><span class="rvts36">Recent Files</span><span class="rvts35"> File List or a </span><span class="rvts36">Named Favorites</span><span class="rvts35"> File List, different help legends with different line-command codes are shown. Because different help legends are displayed, and different features are supported on the various screens of the File Manager, most users will benefit from enabling the File Manager Help display. (This is especially so in view of the fact that the File Manager gets progressively updated with new features, which you might not otherwise be aware of.) &nbsp;If you need more room on the File Manager screen and can remember the various codes, this option can be unchecked to regain some space.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="ExampleofFileManagerdisplay"></a>
+<span class="rvts36">Example of File Manager display</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/File Manager Sample.jpg"></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="FileManagerscreenlayout"></a>
+<span class="rvts36">File Manager screen layout</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The top part of the File Manager display contains 4 lines which will always be present, even during scrolling operations of the displayed list. These lines are:</span></p>
+<div class="rvps9"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="160" style="padding: 1px;"><p class="rvps144"><span class="rvts36">Quick Launch Bar</span></p>
+</td>
+<td width="654" style="padding: 1px;"><p class="rvps142"><span class="rvts35">This line contains mouse click-able options to provide fast switching between common selections. For keyboard fanatics, each option also has a single character input field to its left; you can select an option by entering any non-blank character in this field. The Quick Launch options are:</span></p>
+<p class="rvps142"><span class="rvts35"><br/></span></p>
+<div class="rvps142"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">New</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests opening a new, empty Edit tab. Use this for creating a new file from scratch.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">FilePath</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of files based on the </span><span class="rvts36">File Path/Name</span><span class="rvts35"> and </span><span class="rvts36">File Patterns</span><span class="rvts35"> values entered on the 2nd and 3rd lines of the header area.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Recent</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Request a display of recently accessed files</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Found</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of the latest results from an FF (Find in Files) search command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Opened</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of all files currently opened for processing in other tabs.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Favorites</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of the list of files you have identified as your 'favorite' files. These are identified using the </span><a class="rvts33" href="FAVORITE.html">FAVORITE</a><span class="rvts35"> command or the File Manager </span><a class="rvts33" href="FileManager.html#File%20Manager%20line%20commands">ADD</a><span class="rvts35"> line command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Lists</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of all your saved File Lists.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Paths</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of recently used File Paths.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" style="padding: 1px;"><p class="rvps2"><span class="rvts40">Profiles</span></p>
+</td>
+<td width="552" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Requests a display of all your current Edit Profiles.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps143"><span class="rvts36"><br/></span></p>
+<p class="rvps143"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="160" style="padding: 1px;"><p class="rvps144"><span class="rvts36">File Path/Name</span></p>
+<p class="rvps144"><span class="rvts36">File Patterns</span></p>
+</td>
+<td width="654" style="padding: 1px;"><p class="rvps2"><span class="rvts35">These lines provide the criteria for a Directory folder display. See </span><a class="rvts33" href="FileManager.html#Specifying%20the%20criteria%20for%20directory%20displays">Criteria</a><span class="rvts35"> for details.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="160" style="padding: 1px;"><p class="rvps145"><span class="rvts36">Column Header</span></p>
+</td>
+<td width="654" style="padding: 1px;"><p class="rvps2"><span class="rvts35">This provided headings for the file list display as well as being a click-able selection line to change the sort order of the display. See </span><a class="rvts33" href="FileManager.html#Changing%20the%20file%20display%20order">Changing the file display order</a><span class="rvts35"> for details.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Following these header lines will be the detailed list display you have requested. The left side of each line always contains a Line Command input field followed immediately by the filename. The remaining columns of the display are under your control, you can select what other columns to display, and what order they will be in from left to right. See </span><a class="rvts33" href="OptionsFManager.html">Options - File Manager</a><span class="rvts35"> for details.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This portion of the display is scrollable when needed using PgUp/PgDown, Mouse scroll wheel, or keyboard Up/Down keys.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If </span><span class="rvts36">HiLite Recent / Active Dates</span><span class="rvts35"> has been activated, the dates in the Date column will be hi-lighted appropriately. Note the dates in the example hi-lighted in Red and Blue. See </span><a class="rvts52" href="OptionsFManager.html#HighlightRecentActivedates">HiLite Recent / Active Dates</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Directoryrefresh"></a>
+<span class="rvts36">Directory refresh</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Once File Manager has displayed a directory, it will refresh the display with the results of any file activity the next time the File Manager screen is displayed, either by a swap between File Manager and some other tab, by performing some action on the File Manager screen itself, or just pressing Enter.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Specifyingthecriteriafordirectorydisplays"></a>
+<span class="rvts36">Specifying the criteria for directory displays</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are displaying a directory, the header portion of the File Manager screen contains input fields where you specify the directory you wish to be displayed and what file types should be included. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In the </span><span class="rvts36">File Path/Name</span><span class="rvts35"> field, enter the directory name you wish to be displayed. This may be a simple drive letter like </span><span class="rvts89">C:\ </span><span class="rvts35">or a subdirectory like </span><span class="rvts89">C:\MYDIR\</span><span class="rvts35">. Path names with embedded blanks are simply typed as-is, with no quoting required. A trailing backslash in a path name should be specified, without the </span><span class="rvts36">\</span><span class="rvts35"> the name will not be treated as a path request.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">File Patterns</span><span class="rvts35"> field should contain a list of one or more file patterns or “wildcards” of files you wish to display. The format used is the based on that used by Windows Explorer or the command line. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A </span><span class="rvts36">?</span><span class="rvts35"> question mark matches any single character.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">An </span><span class="rvts89">*</span><span class="rvts35"> asterisk matches zero or more characters up to the </span><span class="rvts36">next</span><span class="rvts35"> specified mask character (or end of filename).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A double asterisk </span><span class="rvts89">**</span><span class="rvts35"> matches zero or more characters up to the </span><span class="rvts36">last</span><span class="rvts35"> occurrence of the next specified mask character. For example </span><span class="rvts89">**.</span><span class="rvts36"> </span><span class="rvts35">would mimic Windows Explorer handling of </span><span class="rvts89">*.</span><span class="rvts35"> which skips to the </span><span class="rvts36">last</span><span class="rvts35"> period in the name.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To display all files in a directory, specify </span><span class="rvts89">*</span><span class="rvts35"> or </span><span class="rvts89">*.*</span><span class="rvts35"> as usual. Multiple file patterns are allowed, each separated by a semicolon. Example: &nbsp;</span><span class="rvts89">*.BAS;*.TXT;*.INC;*.H</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The initial sort order is by ascending file Name. See </span><a class="rvts292" href="FileManager.html#Changing%20the%20file%20display%20order">Changing the file display order</a><span class="rvts35"> below for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The last-used File Path, File Patterns and Sort criteria in effect when SPFLite is terminated are remembered and used for the opening display the next time SPFLite is started. So, if you change the sort order to descending by size, for instance, it will be that way the next time.</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="ExtendedFilePatternSupport"></a>
+<span class="rvts36">Extended File Pattern Support</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite supports an enhancement to File Patterns to provide extended flexibility in file selection when needed.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Normal file patterns are inclusive; that is, they specify what files to </span><span class="rvts40">include</span><span class="rvts6">. You can also specify what files to </span><span class="rvts40">exclude</span><span class="rvts6"> from the selection process. This is done by preceding an exclusive mask string with a </span><span class="rvts139">-</span><span class="rvts6"> minus sign. For example, you can say </span><span class="rvts139">-*.INC</span><span class="rvts6"> to exclude </span><span class="rvts40">.INC</span><span class="rvts6"> files from the list. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Inclusive masks can optionally include a leading </span><span class="rvts139">+</span><span class="rvts6"> plus sign, but this is implied and not needed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">How does file inclusion and exclusion work? &nbsp; A file is processed against the File Mask string from left to right, and each pattern in the File Mask is tested against the file name for a match. An overall match result (true or false) is created based on the individual tests. </span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Note:</span><span class="rvts6"> Even if one test in a chain of tests fails, the remaining tests are still evaluated. This makes it possible to selected files based on rules that amount to, "I want files of one type, except when they are of a second type I don't want, unless those files are of a third type that I really do want."</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Inclusive Masks:</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">If matched, the overall match result is true. If not matched, the match result flag is left unchanged.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Excluding Masks:</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">If matched, the overall match result is false. If not matched, the overall match result is left unchanged.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Examples:</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<div class="rvps6"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Filename:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts62">TestFile.TXT</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Mask:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts62">*.TXT;-Test*.*</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Result:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts6">The file would </span><span class="rvts40">not</span><span class="rvts6"> be selected. It is accepted by </span><span class="rvts62">*.TXT</span><span class="rvts6"> but is rejected by </span><span class="rvts62">-Test*.*</span><span class="rvts6">. The final overall match result is false.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><br/>
+</td>
+<td width="937" style="padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Filename:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts62">TestFile.TXT</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Mask:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts62">*.TXT;-Test*.*;*File.*</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="69" style="padding: 1px;"><p class="rvps2"><span class="rvts6">Result:</span></p>
+</td>
+<td width="937" style="padding: 1px;"><p class="rvps2"><span class="rvts6">The file </span><span class="rvts40">would</span><span class="rvts6"> be selected. It is accepted by </span><span class="rvts62">*.TXT</span><span class="rvts6"> but is rejected by </span><span class="rvts62">-Test*.*;</span><span class="rvts6"> but then is accepted by the </span><span class="rvts62">*File.*</span><span class="rvts6"> mask. The final overall match result is true.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note:</span><span class="rvts6"> &nbsp;If you begin a File Pattern with an exclusion mask, like </span><span class="rvts139">-*.tmp</span><span class="rvts6">, SPFLite will internally prefix this with an </span><span class="rvts40">*;</span><span class="rvts6"> &nbsp;since beginning with an exclusion mask is illogical.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts94">Set Symbol support in File Patterns</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The File Patterns string may now include SET symbols for cases where you may wish to save complex mask strings as symbols for easier use when needed. They are used as replacements for masks as follows: (assume set symbol </span><span class="rvts62">ABC=*.*</span><span class="rvts6"> and set symbol </span><span class="rvts62">DEF=*.TXT)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For inclusive masks enter as </span><span class="rvts62">=abc </span><span class="rvts6">which would be treated as </span><span class="rvts62">*.*</span><span class="rvts6">, or if you prefer explicit inclusive indication &nbsp;</span><span class="rvts62">+=abc</span></p>
+<p class="rvps9"><span class="rvts62"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A mask of </span><span class="rvts62">=abc;-=def</span><span class="rvts6"> would be treated as </span><span class="rvts62">*.*;-*.txt</span><span class="rvts6"> </span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps13"><span class="rvts62"><br/></span></p>
+<p class="rvps2"><a name="FileManagerprimarycommands"></a>
+<span class="rvts289">File Manager primary commands</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The File Manager supports the following primary commands, any of which can be mapped to a key using the KEYMAP facility. Some File Manager primary commands have the same name as Editor primary commands, but they do not all perform the same function. Refer to the list below for a complete description of each command's function.</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<div class="rvps9"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">ALL</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Allows a request to perform a specified Line command against all displayed filenames in the current list. e.g. </span><span class="rvts171">ALL MEDIT</span><span class="rvts35"> would open all listed files in a single MEdit session</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">BOTTOM</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Scroll to the bottom of the directory or File List display. </span><span class="rvts36">BOTTOM</span><span class="rvts35"> can also be spelled as </span><span class="rvts36">BOT</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">BROWSE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Browse a file, or without a file name, open a Browse dialog window. To browse a named file that has embedded blanks, enclose the name in quotes. </span><span class="rvts36">BROWSE</span><span class="rvts35"> can also be spelled as </span><span class="rvts36">BRO</span><span class="rvts35"> or </span><span class="rvts36">B</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CASE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">To set the default CASE to be used by the FF command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CLIP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Open an edit session to directly edit the contents of the Windows Clipboard.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CLONE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clone a copy of an existing file. You </span><span class="rvts36">must</span><span class="rvts35"> specify the filename operand when using this command in File Manager</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CMD</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Used to execute an external program or script.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CRETRIEV</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Conditionally move the cursor to the Home position or Retrieve the last saved command from the Retrieve Stack.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><a name="FMDefault"></a>
+<span class="rvts36">DEFAULT</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Normally, a left-click on a File Manager line item, will be interpreted as an </span><span class="rvts36">S</span><span class="rvts35"> or </span><span class="rvts36">SELECT</span><span class="rvts35"> line command. You may change this default command assumption using the </span><span class="rvts36">DEFAULT </span><span class="rvts35">command. e.g. DEFAULT BROWSE would cause a left-click to Browse the selected file. The setting is not permanent and is not remembered between SPFLite sessions.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">DOWN</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Scroll the display down by the amount shown in the Scroll amount field. Typically mapped to the PageDn key.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">EDIT</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Edit a file, or without a file name, open an Edit dialog window. To edit a named file that has embedded blanks, enclose the name in quotes.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">END</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Close a directory or File List display, returning the display to its parent directory or to the File List that had previously been displayed. Once a directory list is at a root directory like </span><span class="rvts36">C:\</span><span class="rvts35"> the </span><span class="rvts36">END</span><span class="rvts35"> command will have no further effect.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">EXCLUDE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Exclude files from a File List display based on a mask style operand.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">FF</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The Find in Files command </span><span class="rvts36">FF</span><span class="rvts35"> searches all currently displayed file names for a string value. See </span><a class="rvts292" href="FileManager.html#Performing%20a%20file%20search">Performing a file search</a><span class="rvts35"> below.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Do not confuse the File Manager's Find in Files command </span><span class="rvts36">FF</span><span class="rvts35"> with the Edit/Browse command </span><span class="rvts36">FF</span><span class="rvts35">, which is an alias of the familiar </span><span class="rvts36">FIND</span><span class="rvts35"> editor command. The two commands are merely spelled the same but are unrelated.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">FIND</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">FIND</span><span class="rvts35"> command in File Manager searches the displayed file list for a simple string argument, handy to locate a file in a long directory list. Only simple search strings are supported, not the special string types such as P'xx', R'xx' or X'xx'. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Do not confuse the File Manger's </span><span class="rvts36">FIND</span><span class="rvts35"> command with the Edit/Browse command </span><span class="rvts36">FIND</span><span class="rvts35">. The two commands are merely spelled the same but are unrelated.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">HELP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Display the SPFLite Help facility. </span><span class="rvts36">HELP</span><span class="rvts35"> followed by a command name displays the SPFLite Help facility and positions the display at the Help information for that command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">KEYMAP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Brings up the SPFLite KEYMAP facility</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><a name="FMLocate"></a>
+<span class="rvts36">LOCATE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts36">LOCATE</span><span class="rvts35"> in File Manager is used to quickly locate the file called </span><span class="rvts85">name</span><span class="rvts35"> in the file list, and may only be used when the list is in </span><span class="rvts36">Name+</span><span class="rvts35"> or </span><span class="rvts36">Name-</span><span class="rvts35"> order. If no files are found that exactly match the </span><span class="rvts85">name</span><span class="rvts35"> operand, </span><span class="rvts36">LOCATE</span><span class="rvts35"> will try to find the first file name in the list that begins with </span><span class="rvts85">name</span><span class="rvts35">. If there are no files that match </span><span class="rvts85">name</span><span class="rvts35"> or begin with </span><span class="rvts85">name</span><span class="rvts35">, </span><span class="rvts36">LOCATE</span><span class="rvts35"> will find the first file that is greater than </span><span class="rvts85">name</span><span class="rvts36">. LOCATE</span><span class="rvts35"> can also be spelled as </span><span class="rvts36">LOC</span><span class="rvts35"> or </span><span class="rvts36">L</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Note that the File Manager </span><span class="rvts36">LOCATE</span><span class="rvts35"> command is unrelated to the editor </span><span class="rvts36">LOCATE</span><span class="rvts35"> command. See also the </span><span class="rvts36">FIND</span><span class="rvts35"> command above.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">MAKELIST</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Create a new File List with a new name, based on the files that currently appear on a directory display or another File List display. </span><span class="rvts36">MAKELIST</span><span class="rvts35"> can also either completely replace an existing File List with a new set of filenames, or you can request a </span><span class="rvts36">merge</span><span class="rvts35"> of the current list of files with those already in an existing File List. See the </span><span class="rvts36">REPLACE</span><span class="rvts35"> and </span><span class="rvts36">APPEND</span><span class="rvts35"> operand descriptions in </span><a class="rvts33" href="MAKELIST.html">MAKELIST</a><span class="rvts36">. MAKELIST</span><span class="rvts35"> can also be spelled as </span><span class="rvts36">ML</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">OPEN</span></p>
+<p class="rvps2"><span class="rvts36">OPENV</span></p>
+<p class="rvps2"><span class="rvts36">OPENB</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Open a file in a new SPFLite instance. To open a named file that has embedded blanks, enclose the name in quotes. The OPENV and OPENB variations can be used to open the new session in View or Browse mode, instead of the normal Edit mode if desired.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">OPTIONS</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Bring up the SPFLite Global Options window. See </span><a class="rvts33" href="OPTIONSSetGlobalEditorOptions.html">OPTIONS - Set Global Editor Options</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">PRINT SETUP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><a class="rvts33" href="PRINTSendSelectedLinestothePrint.html">PRINT SETUP</a><span class="rvts35"> command may be launched from File Manager of from an edit session. </span><span class="rvts36">PRINT</span><span class="rvts35"> without the </span><span class="rvts36">SETUP</span><span class="rvts35"> keyword may only be issued from an edit session, not from File Manager. To print a file from File Manager, use the </span><span class="rvts36">P</span><span class="rvts35"> line command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">RESET</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Resets the hidden status of Excluded and/or Forgotten files in a File List</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">RETF</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Retrieves the ‘next' saved command from the Retrieve Stack, in a forward direction, opposite to that done by the </span><span class="rvts36">RETRIEVE</span><span class="rvts35"> command. </span><span class="rvts36">RETF</span><span class="rvts35"> can be used when you are looking for a particular saved command using </span><span class="rvts36">RETRIEVE</span><span class="rvts35"> and you inadvertently ‘pass up' the one you wanted; you can then use </span><span class="rvts36">RETF</span><span class="rvts35"> to ‘go the other way' to get the passed-up command. If you continue to issue </span><span class="rvts36">RETF</span><span class="rvts35"> commands (usually from a mapped key like Shift-F12), successively newer entries are retrieved in a forward direction.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">RETRIEVE</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Retrieve the last saved command from the Retrieve Stack. If you continue to issue </span><span class="rvts36">RETRIEVE</span><span class="rvts35"> commands (usually from a mapped key like F12), successively older entries are retrieved in a backward direction.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">SET</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts36">SET</span><span class="rvts35"> brings up the SET Variable Editor.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">SWAP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts36">SWAP PREV</span><span class="rvts35"> and </span><span class="rvts36">SWAP NEXT</span><span class="rvts35"> are used to select the previous or next tab on the SPFLite display, which may be the File Manager tab or an edit session tab. Other </span><span class="rvts36">SWAP</span><span class="rvts35"> options are also available. See </span><a class="rvts33" href="SWAP.html">SWAP - Switch to a Selected File Tab</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">TOP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Scroll to the top of the directory or File List display.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">UP</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Scroll the display up by the amount shown in the Scroll amount field. Typically mapped to the Page Up key.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="141" style="padding: 1px;"><p class="rvps2"><span class="rvts36">VIEW</span></p>
+</td>
+<td width="791" style="padding: 1px;"><p class="rvps2"><span class="rvts35">View a file, or without a file name, open a View dialog window. To view a named file that has embedded blanks, enclose the name in quotes. </span><span class="rvts36">VIEW</span><span class="rvts35"> can also be abbreviated as </span><span class="rvts36">V</span><span class="rvts35">.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="FileManagerlinecommands"></a>
+<span class="rvts290">File Manager line commands</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Next to each line entry in the File Manager display is an underlined area where you may enter commands to be performed against the line entry. The command entry area is a scrollable field, so there is no restriction on the full length of any command entered. In addition, the width of the FIle Manager line command field can be adjusted, by setting a column width for it on the </span><a class="rvts32" href="OptionsFManager.html">File Manager Global Options</a><span class="rvts35"> dialog. However, most FM line commands may be entered as simple single character values. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Lines with names ending in </span><span class="rvts89">\</span><span class="rvts35"> backslash are directories, where </span><span class="rvts89">..\</span><span class="rvts35"> means the “parent” directory, using the common notation for this. Directories can be selected by a mouse left-click or with the line command </span><span class="rvts89">S</span><span class="rvts35">, which will cause the File Manager list to be refreshed with the contents of the selected folder. If you select multiple directories at once, only the last (lowest on the screen) will be used. Only a limited number of commands can be used on directories.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Many File Manager line command fields are much longer than the 1-character codes used in prior versions. This allows commands like </span><span class="rvts36">ADD</span><span class="rvts35"> and </span><span class="rvts36">RENAME</span><span class="rvts35"> to take an operand field, and it also allows for future enhancements to the File Manager. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">If you enter a line command that takes an operand, the line command field will scroll left and right to accommodate as large of an operand (like a file name) as you need.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts83">Multiple Line Selection</span></p>
+<p class="rvps9"><span class="rvts83"><br/></span></p>
+<p class="rvps9"><span class="rvts35">As of Version 8.0, you may select multiple lines in File Manager much as you select multiple lines in a normal Edit screen. All the commands which have a single character abbreviation (</span><span class="rvts36">A, B, C, D, E, F, J, M, N, P, R, S, T, U, V, X) </span><span class="rvts35">can select multiple lines either by using the paired block mode technique (</span><span class="rvts36">MM / MM, &nbsp;SS / SS, </span><span class="rvts35">etc) on the first and last lines of a range; or by adding a 'repeat' number to the end of the command (</span><span class="rvts36">S4, &nbsp;D3, </span><span class="rvts35">etc).</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The following line commands are available:</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<div class="rvps9"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">.Profile-name </span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">If a Profile override operand alone is provided as a line command, it will be taken as a request for an </span><span class="rvts36">Edit </span><span class="rvts35">of the file using the specified Profile override. i.e. it is a shortcut for entering </span><span class="rvts36">EDIT .Profile-name</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">A</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">[ </span><span class="rvts91">file-list-name</span><span class="rvts36"> ]</span></p>
+<p class="rvps2"><span class="rvts36">AA</span></p>
+<p class="rvps2"><span class="rvts36">ADD</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Add to favorites. If an optional </span><span class="rvts91">file-list-name</span><span class="rvts35"> is provided, the name of the file is added to the specified Named Favorites File List; otherwise it is added to the default (unnamed) </span><span class="rvts36">Favorite Files</span><span class="rvts35"> File List. You cannot add directories or other File List names to a File List. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">No harm is done if you attempt to add a file to a Favorite</span><span class="rvts36"> </span><span class="rvts35">File List if it's already there. It just "confirms" that the file name has been added.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">A given file can be recorded in as many different File Lists as you wish. To avoid creating a confusing situation, it is usually best to limit the number of File Lists a given file is recorded in.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">There is also available an </span><span class="rvts36">AUTOFAV </span><span class="rvts35">facility where files can be automatically added to Favorite lists. See "</span><a class="rvts33" href="UsingAUTOFAVtoaddtoFileLists.html">Using AUTOFAV to create FILISTs</a><span class="rvts35">".</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">ALL </span><span class="rvts91">command</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">ALL</span><span class="rvts35"> line command can only be applied to a File List. </span><span class="rvts91">command</span><span class="rvts35"> is a selected FIle Manager line command. SPFLite reads the File List to determine a list of files, and it applies </span><span class="rvts91">command</span><span class="rvts85"> </span><span class="rvts35">to each file. See discussion below for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ .Profile-name ]</span></p>
+<p class="rvps2"><span class="rvts36">BB</span></p>
+<p class="rvps2"><span class="rvts36">BRO</span></p>
+<p class="rvps2"><span class="rvts36">BROWSE</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Browse the file. In Browse mode, </span><span class="rvts36">NO</span><span class="rvts35"> changes can be made to a file whatsoever. Browsing a File List is permitted. See the </span><span class="rvts36">E</span><span class="rvts35"> command below for more information. Note that you can use </span><span class="rvts36">ALL B</span><span class="rvts35"> to </span><span class="rvts36">Browse</span><span class="rvts35"> all the files listed in a FIle List.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the Profile override operand is provided, the Browse will be started using the provided Profile name rather than the one implied by the file's extension.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">CANCEL &nbsp;| &nbsp;CAN </span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">CANCEL</span><span class="rvts35"> command is only allowed to be used on files displayed by the Open Files display. It executes a </span><span class="rvts36">CANCEL</span><span class="rvts35"> command for the specified file and returns to the File Manager Display</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">C</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">[ .Profile-name ]</span></p>
+<p class="rvps2"><span class="rvts36">CC</span></p>
+<p class="rvps2"><span class="rvts36">CLONE</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Clone the file. Cloning a file provides a convenient way to create a copy of a file for editing. You will be prompted for a new filename for the cloned file. An optional Profile name may be entered if you wish to open the cloned file with a non-standard Profile name.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">A directory cannot be cloned with the </span><span class="rvts36">C</span><span class="rvts35"> line command, but you can accomplish essentially the same thing by using the </span><span class="rvts36">MAKELIST</span><span class="rvts35"> command on a directory. See </span><a class="rvts33" href="MAKELIST.html">MAKELIST - Create FILELIST</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">D</span></p>
+<p class="rvps2"><span class="rvts36">DD</span></p>
+<p class="rvps2"><span class="rvts36">DEL</span></p>
+<p class="rvps2"><span class="rvts36">DELETE</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Delete a file or directory. File deletion is protected by two features in SPFLite. The first is the File Manager Options checkbox </span><a class="rvts292" href="OptionsFManager.html#Confirm%20file%20Deletes%20?">Confirm File Deletes</a><span class="rvts35">. If checked, a popup message will ask for confirmation before the file deletion is dealt with.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The second is the General Options checkbox </span><a class="rvts292" href="OptionsGeneral.html#Delete%20to%20Recycle%20Bin%20?">Delete to Recycle Bin</a><span class="rvts35">. This option controls the kind of deletion that occurs. If checked, a popup message will ask for confirmation before the file is </span><span class="rvts127">Recycled</span><span class="rvts35"> &nbsp; If unchecked, a popup message will ask for confirmation before the file is </span><span class="rvts127">Purged</span><span class="rvts35">. The term </span><span class="rvts36">purge</span><span class="rvts35"> means permanent deletion with no recourse.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Where SPFLite can detect it, the Delete command will also remove deleted file names from File Lists in a manner comparable to the Forget line command. If a </span><span class="rvts36">Delete</span><span class="rvts35"> or </span><span class="rvts36">Forget</span><span class="rvts35"> command causes all names to be removed from a File List, the File List itself will be deleted. If you delete a file which is named elsewhere in another File List, it will be removed from that File List the next time that File List is opened (unless the file name is "guarded").</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Deleting a File List is permitted. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">A directory can be deleted with the</span><span class="rvts36"> D</span><span class="rvts35"> line command, but only if it is empty.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the </span><span class="rvts36">DELETE</span><span class="rvts35"> command is issued against a file displayed under the Open Files display, it will execute a </span><span class="rvts36">CANCEL </span><span class="rvts36">DELETE</span><span class="rvts35"> command for the specified file and return to the File Manager Display</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">DIR</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The DIR command will switch the File Manager display to the folder containing the filename of this line using a File Pattern of *.*</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">E &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ .Profile-name ]</span></p>
+<p class="rvps2"><span class="rvts36">EE</span></p>
+<p class="rvps2"><span class="rvts36">EDIT</span></p>
+<p class="rvps2"><span class="rvts36"> .Profile-name</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Edit the file. Clicking on a file name is the same as entering the </span><span class="rvts36">E</span><span class="rvts35"> or </span><span class="rvts36">S</span><span class="rvts35"> line command, and causes the file to be edited.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">When </span><span class="rvts36">E</span><span class="rvts35"> is used on a File List, SPFLite brings up an Edit session on the File List file. A File List file is an ordinary text file managed by SPFLite, with one fully-qualified file name per line. You may add, change or delete lines in this file. Since these names are supposed to represent valid file names, you should edit this file carefully. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">File names in a File List which are Guarded will be shown preceded by a</span><span class="rvts36"> | </span><span class="rvts35">character.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">One reason to edit a File List is to add wildcard file name entries with </span><span class="rvts36">?</span><span class="rvts35"> and </span><span class="rvts36">*</span><span class="rvts35"> codes; another reason may be to import a large number of file names into a File List from an outside text file. Because the </span><span class="rvts36">Recent Files</span><span class="rvts35"> File List is automatically maintained by SPFLite, editing it is not recommended. A directory cannot be edited.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Note that you can use </span><span class="rvts36">ALL E</span><span class="rvts35"> to </span><span class="rvts36">Edit</span><span class="rvts35"> all the files listed in a FIle List.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the Profile override operand is provided, the Edit will be started using the provided Profile name rather than the one implied by the file's extension.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If you click on a file name to invoke the Edit function, you can enter the .Profile-name by itself on the FM </span><span class="rvts36">line command</span><span class="rvts35"> area, then click on the file name, without having to use the </span><span class="rvts36">E</span><span class="rvts35"> or </span><span class="rvts36">EDIT</span><span class="rvts35"> command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">END</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">END</span><span class="rvts35"> command is only allowed to be used on files displayed by the Open Files display. It executes an </span><span class="rvts36">END</span><span class="rvts35"> command for the specified file and returns to the File Manager Display</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">F</span></p>
+<p class="rvps2"><span class="rvts36">FF</span></p>
+<p class="rvps2"><span class="rvts36">FORGET</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Forget the file. Applies only to entries created by a File List. The Forget operation 'hides' &nbsp;the line in the File List containing the file in question. When files have been 'forgotten' from a list, the total line at the bottom of the list will display the count of 'forgotten' files. Forgetting a file only hides an entry from a File List; it does </span><span class="rvts36">not</span><span class="rvts35"> delete the file. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The Forget action is remembered and the next time the File List is displayed, the forgotten files will still be hidden from the display.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Unlike SPFLite versions prior to Version 8.0 you may now Forget files even if they appear in a File List display as a result of a wildcard specification within the File List file.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">J</span></p>
+<p class="rvps2"><span class="rvts36">JJ</span></p>
+<p class="rvps2"><span class="rvts36">JOB</span></p>
+<p class="rvps2"><span class="rvts36">SUB</span></p>
+<p class="rvps2"><span class="rvts36">SUBMIT</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Job Submit. The file is “submitted” using existing user-defined </span><span class="rvts36">SUBMIT</span><span class="rvts35"> configuration settings as specified on the </span><a class="rvts33" href="OptionsSubmit.html">Options – Submit</a><span class="rvts35"> screen. The </span><span class="rvts36">SUBARG</span><span class="rvts35"> value, if any, defined for the file type of this file, will be properly defined as set up in the file type's PROFILE information. The action of the </span><span class="rvts36">J </span><span class="rvts35">command is the same as if the file were opened in an Edit session, and then the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> command were issued with no arguments.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">There is no direct way to debug a job submitted in File Manager with the </span><span class="rvts36">J</span><span class="rvts35"> command; there is no equivalent of the </span><span class="rvts36">DEBUG</span><span class="rvts35"> operand used by the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> command. If you need to debug a job submission using the </span><span class="rvts36">J</span><span class="rvts35"> command, the easiest way to do this is to specify a batch file name as the Submit Prototype command. In your batch file, you could issue a </span><span class="rvts36">PAUSE</span><span class="rvts35"> command to see any output produced, or take other debugging actions.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">L</span></p>
+<p class="rvps2"><span class="rvts36">LL</span></p>
+<p class="rvps2"><span class="rvts36">LINE</span></p>
+<p class="rvps2"><span class="rvts36">LINES</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Lines</span><span class="rvts35"> - create or update the STATE information which is used to provide the information shown in the LINES column of the File Manager display. This command will update that information without requiring a full opening of the file.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Note: </span><span class="rvts35">The Profile for the selected file's file-type must have the profile option of </span><span class="rvts36">STATE ON</span><span class="rvts35"> set. If not an error message will result.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">M</span></p>
+<p class="rvps2"><span class="rvts36">MM</span></p>
+<p class="rvps2"><span class="rvts36">MEDIT</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Multi-Edit. This is the ability to perform a multi-edit session. A </span><span class="rvts127">multi-edit session</span><span class="rvts35"> exists when you edit multiple files, at the same time, in the same edit tab. You begin a multi-edit session by selecting one or (usually) more files from a directory or File List display using the </span><span class="rvts36">M </span><span class="rvts35">line command. You can scroll up and down in the list to find all the files you want to place </span><span class="rvts36">M</span><span class="rvts35"> codes on, but don't press Enter until you have chosen all of them. Once you have decided upon the files to be multi-edited, press Enter. An edit session will appear with “</span><span class="rvts36">(M-Edit)</span><span class="rvts35">” as the label for the tab. Each file will be preceded by a ‘marker line' with </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> in the sequence area and the file's name next to it. When you </span><span class="rvts36">SAVE</span><span class="rvts35"> or </span><span class="rvts36">END</span><span class="rvts35"> a multi-edit session, </span><span class="rvts85">every</span><span class="rvts35"> file in the session will be saved at the same time. See </span><a class="rvts288" href="MultiEdit.html">Working with Multi-Edit Sessions</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Note:</span><span class="rvts35"> &nbsp;you can use </span><span class="rvts36">ALL M</span><span class="rvts35"> to start a </span><span class="rvts36">Multi-Edit</span><span class="rvts35"> session using all the files listed in a FIle List.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">N</span></p>
+<p class="rvps2"><span class="rvts36">NN</span></p>
+<p class="rvps2"><span class="rvts36">NORM</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Forget support for File Lists no longer actually deletes the forgotten files entries in the File List dataset. Similarly, displaying a File List which has entries in it for specific files, and those files no longer exist, does not trigger their removal from the file list, they are simply ignored. The </span><span class="rvts36">NORM</span><span class="rvts35"> (normalize) line command, used against a File List, will perform this periodic cleanup function.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">OPEN / O</span></p>
+<p class="rvps2"><span class="rvts36">OPENV / OV</span></p>
+<p class="rvps2"><span class="rvts36">OPENB / OB</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Open a file in a new SPFLite instance. The OPENV / OV and OPENB / OB variations can be used to open the new session in View or Browse mode, instead of the normal Edit mode if desired.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">P</span></p>
+<p class="rvps2"><span class="rvts36">PP</span></p>
+<p class="rvps2"><span class="rvts36">PRINT</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Print the file. The file is immediately sent to the printer using the currently configured printer settings, as defined by the </span><span class="rvts36">PRINT SETUP</span><span class="rvts35"> command. Note that the listing is produced unnumbered (the default), because since you cannot enter the NUM operand that is available with a </span><span class="rvts36">PRINT</span><span class="rvts35"> primary command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Files printed via this method are always printed in non-color mode. To print in full colorize mode, you must issue a PRINT command from a normal Edit/Browse tab.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">R</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">[ </span><span class="rvts91">newfilename</span><span class="rvts36"> ]</span></p>
+<p class="rvps2"><span class="rvts36">RR</span></p>
+<p class="rvps2"><span class="rvts36">REN</span></p>
+<p class="rvps2"><span class="rvts36">RENAME</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Rename a file or directory. You may specify the new filename directly as an operand to </span><span class="rvts36">Rename</span><span class="rvts35">; if omitted, you will be prompted for the new name.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">When you rename a file, if it is recorded within any current File Lists, the entries within those File Lists will also be renamed.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Renaming a File List is permitted. If you wish to save a </span><span class="rvts36">Recent Files</span><span class="rvts35"> File List or </span><span class="rvts36">Found Files</span><span class="rvts35"> File List once a set of files has been stored, you can rename it to some other name that ends in </span><span class="rvts36">.FLIST</span><span class="rvts35">. Then, the list will appear in the list of </span><span class="rvts36">Named Favorites</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts20">Note</span><span class="rvts35">: &nbsp;Do not confuse the File Manager line command </span><span class="rvts36">REN</span><span class="rvts35"> with the editor primary command </span><span class="rvts36">REN</span><span class="rvts35">. In File Manager, </span><span class="rvts36">REN</span><span class="rvts35"> means </span><span class="rvts36">RENAME</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In SPFLite prior to release 8.5, the editor primary command </span><span class="rvts36">REN</span><span class="rvts35"> was an abbreviation for the command </span><span class="rvts36">RENAME</span><span class="rvts35">. As of SPFLite version 8.5, the editor primary command </span><span class="rvts36">REN</span><span class="rvts35"> is now an abbreviation for the sequence numbering command </span><span class="rvts36">RENUM</span><span class="rvts35">. This change was made for ISPF compatibility.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">SAVE</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">SAVE</span><span class="rvts35"> command is only allowed to be used on files displayed by the Open Files display. It executes a </span><span class="rvts36">SAVE</span><span class="rvts35"> command for the specified file and returns to the File Manager display</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">S &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ .Profile-name ]</span></p>
+<p class="rvps2"><span class="rvts36">SS</span></p>
+<p class="rvps2"><span class="rvts36">SEL</span></p>
+<p class="rvps2"><span class="rvts36">SELECT</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Select the file. For data files, Select is the same as Edit. Clicking on a file name is the same as entering the </span><span class="rvts36">E</span><span class="rvts35"> or </span><span class="rvts36">S</span><span class="rvts35"> line command, and causes the file to be edited.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">For directories and File Lists, Select will open the directory or File List and its contents will replace the currently displayed list. Thus,</span><span class="rvts36"> for a File List, Select and Edit are not the same thing</span><span class="rvts35">, whereas for regular files, they </span><span class="rvts36">are</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the Profile override operand is provided, the Edit will be started using the provided Profile name rather than the one implied by the file's extension.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If you click on a file name to invoke the Select function, you can enter the .Profile-name by itself on the File manager </span><span class="rvts36">line command</span><span class="rvts35"> area, then click on the file name, without having to use the </span><span class="rvts36">S</span><span class="rvts35"> or </span><span class="rvts36">SEL</span><span class="rvts35"> command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">T</span></p>
+<p class="rvps2"><span class="rvts36">TT</span></p>
+<p class="rvps2"><span class="rvts36">TOUCH</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Touch the file. The file's timestamp is replaced by the current date and time. A Touch operation is commonly needed by users of MAKE and BUILD software. This operation is not allowed on directories and File Lists.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">U</span></p>
+<p class="rvps2"><span class="rvts36">UU</span></p>
+<p class="rvps2"><span class="rvts36">PUR</span></p>
+<p class="rvps2"><span class="rvts36">PURGE</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Purge (delete) the file. File deletion is protected by two features in SPFLite. The first is the File Manager Options checkbox </span><a class="rvts292" href="OptionsFManager.html#Confirm%20file%20Deletes%20?">Confirm File Deletes</a><span class="rvts35">. If checked, a popup message will ask for confirmation before the file deletion is dealt with. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The second is the General Options checkbox </span><a class="rvts292" href="OptionsGeneral.html#Delete%20to%20Recycle%20Bin%20?">Delete to Recycle Bin</a><span class="rvts35">. This option controls the kind of deletion that occurs. For the Purge line command, the </span><a class="rvts292" href="OptionsGeneral.html#Delete%20to%20Recycle%20Bin%20?">Delete to Recycle Bin</a><span class="rvts35"> option is ignored. In all cases, a popup message will ask for confirmation before the file is Purged. The term </span><span class="rvts36">purge</span><span class="rvts35"> means permanent deletion with no recourse.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Where SPFLite can detect it, it will remove purged files from File Lists in a manner comparable to the Forget line command. Purging a File List is permitted.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the </span><span class="rvts36">PURGE</span><span class="rvts35"> command is issued against a file displayed under the Open Files display, it will execute a </span><span class="rvts36">CANCEL PURGE</span><span class="rvts35"> command for the specified file and return to the File Manager display</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">V</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">[ .Profile-name ]</span></p>
+<p class="rvps2"><span class="rvts36">VV</span></p>
+<p class="rvps2"><span class="rvts36">VIEW</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">View the file. In View mode, changes can be made to a file but you cannot save them. Viewing a File List is permitted. See the </span><span class="rvts36">E</span><span class="rvts35"> command above for more information. Note that you can use </span><span class="rvts36">ALL V</span><span class="rvts35"> to </span><span class="rvts36">View</span><span class="rvts35"> all the files listed in a FIle List.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If the Profile override operand is provided, the Browse will be started using the provided Profile name rather than the one implied by the file's extension.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">WDIR</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Open a Windows Explorer window for the folder containing this file. The selected file will be highlighted in the Explorer display.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="233" style="padding: 1px;"><p class="rvps2"><span class="rvts36">X</span></p>
+<p class="rvps2"><span class="rvts36">XX</span></p>
+</td>
+<td width="604" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Exclude (</span><span class="rvts36">X</span><span class="rvts35">) is available for hiding files from the File Manager display. Visually this looks the same as </span><span class="rvts36">F</span><span class="rvts35">orget, but Excluded lines are not 'remembered' between sessions, the effect lasts only as long as the current list display is shown.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="FileManagerALLcommandandFileLists"></a>
+<span class="rvts36">File Manager ALL command and File Lists</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">You can apply selected File Manager line commands to a File List, and the commands will be applied, not to the File List </span><span class="rvts36">itself</span><span class="rvts35">, but to the files named </span><span class="rvts36">within</span><span class="rvts35"> the File List. For example, to edit all of the files named in a File List, you would issue the File Manager line command </span><span class="rvts36">ALL E</span><span class="rvts35"> for that File List.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The </span><span class="rvts36">ALL</span><span class="rvts35"> command is followed by one of the following commands (all valid abbreviations of these commands are allowed):</span></p>
+<p class="rvps6"><span class="rvts36">BROWSE</span></p>
+<p class="rvps6"><span class="rvts36">CLONE</span></p>
+<p class="rvps6"><span class="rvts36">DELETE</span></p>
+<p class="rvps6"><span class="rvts36">EDIT</span></p>
+<p class="rvps6"><span class="rvts36">MEDIT</span></p>
+<p class="rvps6"><span class="rvts36">NORM</span></p>
+<p class="rvps6"><span class="rvts36">PRINT</span></p>
+<p class="rvps6"><span class="rvts36">PURGE</span></p>
+<p class="rvps6"><span class="rvts36">SELECT </span><span class="rvts35">(same as </span><span class="rvts36">EDIT</span><span class="rvts35">)</span></p>
+<p class="rvps6"><span class="rvts36">TOUCH</span></p>
+<p class="rvps6"><span class="rvts36">VIEW</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts287">WARNING!</span></p>
+<p class="rvps5"><span class="rvts287"><br/></span></p>
+<p class="rvps5"><span class="rvts35">The ALL command, if used against a File List which contains generic path requests, could effectively be directed at what might be hundreds of files. Even if you do not normally receive prompts for file deletes, you will still receive </span><span class="rvts36">one single prompt</span><span class="rvts35"> for the </span><span class="rvts36">ALL D </span><span class="rvts35">command. But a single wrong reply and you could have a </span><span class="rvts36">huge</span><span class="rvts35"> problem. </span><span class="rvts83">Take care!</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Mouseselectionoffiles"></a>
+<span class="rvts36">Mouse selection of files</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You may select a file for editing, or a directory or File List to be displayed, by clicking on its name with the left mouse button. If you click on any of the underscore characters next to the name, the cursor will be moved to the left hand column of the line command area. This is a quick way to get the cursor moved so you can enter a File Manager line command. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you click on a name it will be treated as if the Select line command </span><span class="rvts36">S</span><span class="rvts35"> were used. This default of </span><span class="rvts36">S</span><span class="rvts35"> can be altered using the </span><a class="rvts293" href="FileManager.html#FM%20DEFAULT">DEFAULT</a><span class="rvts35"> command.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For files, the mouse-select action is the same as the Edit line command </span><span class="rvts36">E</span><span class="rvts35"> / </span><span class="rvts36">EDIT</span><span class="rvts35">, and the file will be opened in a new edit tab. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For directories and File Lists, the mouse-select action opens up the directory or File List, and its contents replaces the current display. To return from a lower-level directory to its parent, or to return to the prior display from a File List display, use the primary </span><span class="rvts36">END</span><span class="rvts35"> command (traditionally mapped to F3), or right-click on the File Manager tab. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Changingthefiledisplayorder"></a>
+<span class="rvts36">Changing the file display order</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When specifying the sort criteria below, the settings are saved as defaults for the </span><span class="rvts36">current</span><span class="rvts35"> FM display type. e.g. Recent, Favorites, Paths, etc. Separate sort criteria are saved for each of the display types chosen via the Quick Launch bar. This allows you to maintain unique preferences for the differing list types.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The default sort criteria is to sort ascending on filename. The sort order may be changed at any time, by clicking on the column heading for the column you wish to sort on. These column headings are:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<div class="rvps10"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Dir</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Specifies where Directory lines are to be placed (Top, Bottom, or In-line)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Name</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">sorts on file name</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Note</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">sorts on the Note data</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Ext</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">sorts on file name extension</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Size</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">sorts on file size in bytes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="109" style="padding: 1px;"><p class="rvps2"><span class="rvts36">Date</span></p>
+</td>
+<td width="823" style="padding: 1px;"><p class="rvps2"><span class="rvts35">sorts on the file's date and time</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">Dir</span><span class="rvts35"> heading does not actually alter the Sort criteria or direction, but is located here for convenience. When clicked, it will 'rotate' through three settings:</span></p>
+<p class="rvps10"><span class="rvts36">Dir+</span><span class="rvts35"> which requests directory entries are to appear first in the list.</span></p>
+<p class="rvps10"><span class="rvts36">Dir-</span><span class="rvts35"> &nbsp;which requests directory entries are to appear last in the list.</span></p>
+<p class="rvps10"><span class="rvts36">Dir* &nbsp;</span><span class="rvts35">which requests directory entries be placed alphabetically in the list.</span></p>
+<p class="rvps10"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">If you click on the other column headings, you will see a </span><span class="rvts36">+</span><span class="rvts35"> code to indicate that column is in ascending order, and a </span><span class="rvts36">–</span><span class="rvts35"> sign to indicate that column is in descending order. For the Name column, this will appear as </span><span class="rvts36">Name+</span><span class="rvts35"> or </span><span class="rvts36">Name–</span><span class="rvts35">. When no code is present on a heading, the list is being sorted by some other column.</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">Because the most common reason to display files in </span><span class="rvts36">Date</span><span class="rvts35"> order is to find the most recent ones, clicking on the </span><span class="rvts36">Date</span><span class="rvts35"> column when not already active will first show </span><span class="rvts36">Date–</span><span class="rvts35"> and the list will be in descending date/time order starting with the most recent. Clicking on the heading again will show </span><span class="rvts36">Date+</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Similarly, because the most common reason to display files in </span><span class="rvts36">Size</span><span class="rvts35"> order is to find the largest ones, clicking on the </span><span class="rvts36">Size</span><span class="rvts35"> column when not already active will first show </span><span class="rvts36">Size–</span><span class="rvts35"> and the list will be in descending size order starting with the largest. Clicking on the heading again will show </span><span class="rvts36">Size+</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a given column is being used as the sort criteria, the data in that column appears in the high-intensity text color, rather than the standard low-intensity text color. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="ManagingFileLists"></a>
+<span class="rvts36">Managing File Lists</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The next major topic </span><a class="rvts33" href="WorkingwithFileLists.html">Working With File Lists</a><span class="rvts35"> provide an extensive description of File Lists and their creation and management.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="FileListNoteSupport"></a>
+<span class="rvts36">File List Note Support</span></p>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<p class="rvps141"><span class="rvts35">Support is provided for maintaining a Note field for the files displayed by a File List. Notes are intended to provide a small reminder or tracking field associated with each file in a File List. Entirely optional, you can use the Note field for any purpose which may be useful to you. To activate Note support, you must add the Note column to the optional fields displayed by File Manager. See </span><a class="rvts33" href="OptionsFManager.html">Options - File Manager</a><span class="rvts35"> for how to specify this.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Performingafilesearch"></a>
+<span class="rvts36">Performing a file search</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">The Find in Files command </span><span class="rvts36">FF</span><span class="rvts35"> searches all currently displayed file names for a string value. You can search a directory list, the</span><span class="rvts36"> Recent Files</span><span class="rvts35"> File List or any other File List. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">FF</span><span class="rvts35"> command searches every file that is displayed in the current list. To search a ‘selective' list of files, you can start with a directory list and use the </span><span class="rvts36">File Patterns</span><span class="rvts35"> field with one or more wildcards to reduce the number of displayed files. You can also add files to a favorites list with the </span><span class="rvts36">A</span><span class="rvts35"> line command or the </span><span class="rvts36">FAV</span><span class="rvts35"> edit primary command, and then issue the </span><span class="rvts36">FF</span><span class="rvts35"> command while the </span><span class="rvts36">Favorite Files</span><span class="rvts35"> File List is displayed. If you search a File List, you can remove files from the list with the </span><span class="rvts36">Forget</span><span class="rvts35"> line command </span><span class="rvts36">F</span><span class="rvts35"> before doing the </span><span class="rvts36">FF</span><span class="rvts35"> command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If the </span><span class="rvts36">FF</span><span class="rvts35"> command finds at least one matching file, it creates (or updates) the </span><span class="rvts36">Found Files</span><span class="rvts35"> File List and then displays it. When displaying a Found Files list, the </span><span class="rvts36">FF</span><span class="rvts35"> search command used to create the list will be shown next to the Found Files title on the File Manager display. This will remind you how the Found list was created if you should open it at a later time than its initial creation.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can issue the </span><span class="rvts36">FF</span><span class="rvts35"> command using the </span><span class="rvts36">Found Files</span><span class="rvts35"> File List itself. If you do this with different search strings, you will successively refine the list. That is, if you say FF ABC, then FF DEF, then FF XYZ, you will end up with a </span><span class="rvts36">Found Files</span><span class="rvts35"> File List that only shows files that contain all three strings ABC, DEF and XYZ. Each time you use a different search against the Found Files File List, the list will get recreated and will (usually) be shorter than it was before.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Of course, if you use an </span><span class="rvts36">FF</span><span class="rvts35"> command against the </span><span class="rvts36">Found Files</span><span class="rvts35"> File List with the </span><span class="rvts36">same</span><span class="rvts35"> search string you used to create it, you would just be searching the files you </span><span class="rvts36">already found</span><span class="rvts35">, and it would </span><span class="rvts36">re-find the same files all over again</span><span class="rvts35">. That would be called 'going no where fast' (or as a friend used to describe it, "the department of redundancy department").</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">You really want to use </span><span class="rvts36">different</span><span class="rvts35"> search strings each time, unless some outside process is changing the files and you truly need to reconfirm your prior results. That might be a legitimate need, but only in very rare cases.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">Find in Files</span><span class="rvts35"> command </span><span class="rvts36">FF</span><span class="rvts35"> uses a syntax similar to (but simpler than) the editor </span><span class="rvts36">FIND</span><span class="rvts35"> command.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note:</span><span class="rvts35"> the Edit primary command </span><span class="rvts36">FIND</span><span class="rvts35"> has an alias of </span><span class="rvts36">FF</span><span class="rvts35">. The Edit command </span><span class="rvts36">FF</span><span class="rvts35"> has no relation to the File Manager </span><span class="rvts36">FF</span><span class="rvts35"> command.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts287">Interrupting an FF search</span></p>
+<p class="rvps9"><span class="rvts287"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the FF command commences a search, it displays a small pop-up dialog:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/FF Break Pop-up.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">which shows the ongoing progress of the search. You may interrupt the search at any point by left-clicking on the 'Break' button on this dialog. The FF command will complete processing with whatever located files it has already found and display the Found Files list.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="FindinFiles(FF)syntax"></a>
+<span class="rvts36">Find in Files (FF) syntax</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">FF </span><span class="rvts85">string</span><span class="rvts35"> &nbsp;[ CHARS | WORD | PREFIX | SUFFIX ] &nbsp;[ NF ]</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Operands:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts85">string</span></p>
+<p class="rvps13"><span class="rvts35">Any string value accepted in an edit session is permitted here. The </span><span class="rvts85">string</span><span class="rvts35"> may be unquoted, or quoted without a string type, or may be quoted with a string type of C, T, X, P or R. Unquoted strings, or strings quoted without a string type, are assumed to be of type </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">T</span><span class="rvts35">, depending on the C/T case indicator on the status line. If the status line indicator shows </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">C W</span><span class="rvts35">, a case-sensitive search is done, and if </span><span class="rvts36">T</span><span class="rvts35"> or </span><span class="rvts36">T W</span><span class="rvts35"> appears, a case-insensitive search is done. You can use the </span><span class="rvts36">CASE C</span><span class="rvts35"> or</span><span class="rvts36"> CASE T</span><span class="rvts35"> command in File Manager to change the C/T indicator.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">CHARS</span><span class="rvts35"> | </span><span class="rvts36">WORD</span><span class="rvts35"> | </span><span class="rvts36">PREFIX</span><span class="rvts35"> | </span><span class="rvts36">SUFFIX</span></p>
+<p class="rvps13"><span class="rvts35">Specifies the ‘search context' for the string, the same as is done for the </span><span class="rvts36">FIND</span><span class="rvts35"> command in the editor. If not specified, either a </span><span class="rvts36">CHARS</span><span class="rvts35"> search or a </span><span class="rvts36">WORD</span><span class="rvts35"> search is done. If the status line indicator shows </span><span class="rvts36">C W</span><span class="rvts35"> or </span><span class="rvts36">T W</span><span class="rvts35">, a </span><span class="rvts36">WORD</span><span class="rvts35"> search is done, and if just </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">T</span><span class="rvts35"> appears, a CHARS search is done. You can change the default search context with the </span><span class="rvts36">FIND WORDS</span><span class="rvts35"> or </span><span class="rvts36">FIND CHARS</span><span class="rvts35"> command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">NF</span></p>
+<p class="rvps13"><span class="rvts35">If the Not Found option </span><span class="rvts36">NF</span><span class="rvts35"> is used, a search is made for files that do </span><span class="rvts36">not</span><span class="rvts35"> have the </span><span class="rvts85">string</span><span class="rvts35"> present on any line.</span></p>
+<p class="rvps104" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

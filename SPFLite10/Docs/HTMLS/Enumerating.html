@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Enumerations</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Enumerations">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Enumerations" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Enumerating"
+		  data-hnd-context="187"
+		  data-hnd-title="Working with Enumerations"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Enumerations</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts36"> </span></p>
+<p class="rvps9"><a class="rvts45" href="Enumerating.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="Enumerating.html#CombiningFastEnumerationwithLineExclusion">Combining Fast Enumeration with Line Exclusion</a></p>
+<p class="rvps9"><a class="rvts45" href="Enumerating.html#Enumerationpatterns">Enumeration patterns</a></p>
+<p class="rvps9"><a class="rvts45" href="Enumerating.html#Examples">Examples</a></p>
+<p class="rvps180"><a class="rvts45" href="Enumerating.html#Handlingofblanksintheprefix">Handling of blanks in the prefix</a></p>
+<p class="rvps186"><a class="rvts45" href="Enumerating.html#UseoftheENUMWITHcommand">Use of the ENUMWITH command</a></p>
+<p class="rvps171"><a class="rvts45" href="Enumerating.html#ApplicationNote:Usingakeyboardmacrotoautomaticallyinsertsequencenumbers">Application Note: Using a keyboard macro to automatically insert sequence numbers</a></p>
+<p class="rvps2"><span class="rvts36"> </span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The Enumerate Facility allows a selected set of columns in a range of lines to be </span><span class="rvts36">enumerated</span><span class="rvts35">, that is, sequenced starting from an initial value on the first line and incremented for each subsequent line, within a fixed field on a set of lines. Enumeration values are always right-justified within the field. The increment amount defaults to </span><span class="rvts36">1</span><span class="rvts35"> and can be changed with the </span><a class="rvts33" href="ENUMWITH.html">ENUMWITH</a><span class="rvts35"> primary command; see discussion below. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There are two kinds of enumeration that you may perform:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts83">Power Enumeration</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">Power Typing mode must be enabled</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">One or more columns on the first line (the ‘model line' of the Power Typing line range) must be highlighted</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">The first highlighted line must contain a decimal number in the highlighted field if you intend to use </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a><span class="rvts35">, or a hex number in the field if you intend to use </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> or </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts83">Fast Enumeration</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">A multiple-line ("2-D") column of text is highlighted (Power Typing is not in effect)</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><span class="rvts35">The first highlighted line must contain a decimal number in the highlighted field if you intend to use </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a><span class="rvts35">, or a hex number in the field if you intend to use </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> or </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When these conditions are true, a mapped Enumerate keyboard primitive command can be issued. If the requisite conditions are not present, attempting these commands will result in an error message. The Enumerate commands that you can map to a key are the following:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps161"><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The two hex enumeration functions control how digits A-F should be cased, where </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> makes digits greater than 9 in lower case, and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35"> makes them upper case. Based on user preference, it is likely that a given user would only select one of these two functions on a regular basis.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The highlighted field on the first line of selected text constitute the </span><span class="rvts85">‘initial'</span><span class="rvts35"> or </span><span class="rvts85">‘base'</span><span class="rvts35"> value of the enumeration, defining the first value in the sequence. All subsequent lines (in increasing line number order) in the line range are incremented for each new line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If a Power Typing range is being used, it might not consist of physically adjacent lines, such as when </span><span class="rvts36">X</span><span class="rvts35"> | </span><span class="rvts36">NX</span><span class="rvts35"> or </span><span class="rvts36">U</span><span class="rvts35"> | </span><span class="rvts36">NU</span><span class="rvts35"> is specified, or a range of tagged lines is specified. The enumeration only applies to the </span><span class="rvts85">selected</span><span class="rvts35"> lines, and has no bearing on the </span><span class="rvts85">physical</span><span class="rvts35"> line numbering involved. So if physical lines 1 and 7 are being ‘Power Typed' (but </span><span class="rvts85">not</span><span class="rvts35"> the lines between them) and an enumeration starts at line 1 begins with a base value of </span><span class="rvts36">5001</span><span class="rvts35"> and an increment of </span><span class="rvts36">1</span><span class="rvts35">, line 7 gets the </span><span class="rvts85">second</span><span class="rvts35"> enumeration value of </span><span class="rvts36">5002</span><span class="rvts35">, </span><span class="rvts85">not</span><span class="rvts35"> the seventh one which would have been </span><span class="rvts36">5007</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="CombiningFastEnumerationwithLineExclusion"></a>
+<span class="rvts36">Combining Fast Enumeration with Line Exclusion</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you would like to quickly enumerate many lines, but also want to convenience of the Fast Enumeration method, you can exclude the majority of the affected lines, leaving only the first and last ones visible. Then, set up your model line, and enumerate the range. You will see the full range enumerated once you unexclude them.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Example: &nbsp;Lines 1 to 5 need to be enumerated. (The example is small, but imagine if you had hundreds or thousands of lines; the same method would still work.) &nbsp;Lines 2-4 are excluded, line 1 is set up as the model line, a starting value is created, and then the entire line range is highlighted. This works because the text-selection highlighting is also applied to all the lines within the the excluded range. Notice on the status line the size of the selected area is a length of 3 characters wide by &nbsp;5 lines (</span><span class="rvts36">Len 3 x 5</span><span class="rvts35">), even though you only physically selected 3 lines.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Enumeration 01.jpg"></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Then, issue the desired enumeration function as you have mapped it. You will see the final line containing 005 as expected:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Enumeration 02.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Finally, unexclude the lines to see all of them:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Enumeration 03.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Enumerationpatterns"></a>
+<span class="rvts36">Enumeration patterns</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The highlighted field on the first line defines a </span><span class="rvts85">pattern</span><span class="rvts35"> used to describe how the enumeration process is to be done, in addition to providing an initial starting value. Enumerated values are assigned in ascending order by incrementing the starting value for each new line where subsequent enumeration values are stored. The enumeration pattern is in the form &nbsp;</span><span class="rvts16">prefix</span><span class="rvts11"> &nbsp;</span><span class="rvts16">digits</span><span class="rvts11"> &nbsp;</span><span class="rvts16">suffix</span><span class="rvts35">, where the prefix and suffix are optional.</span></p>
+<p class="rvps173"><span class="rvts11"><br/></span></p>
+<div class="rvps182"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="102" style="padding: 1px;"><p class="rvps177"><span class="rvts16">prefix</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The optional </span><span class="rvts50">prefix</span><span class="rvts12"> may consist of any string of characters (including digits characters themselves) as long as the last character is a non-digit.</span><span class="rvts35"> &nbsp;Neither </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35"> nor </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> will adjust the casing of the prefix string; the value is left as-is. (For example, if you had a prefix of </span><span class="rvts36">0x</span><span class="rvts35"> in a C program, </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35"> will not change </span><span class="rvts36">0x</span><span class="rvts35"> into </span><span class="rvts36">0X</span><span class="rvts35">.)</span></p>
+<p class="rvps164"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="102" style="padding: 1px;"><p class="rvps177"><span class="rvts16">digits</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts12">For </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a><span class="rvts12">, </span><span class="rvts50">digits</span><span class="rvts12"> are the characters </span><span class="rvts11">0</span><span class="rvts12">-</span><span class="rvts11">9</span><span class="rvts12">. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps178"><span class="rvts12">For </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts12"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts12">, </span><span class="rvts50">digits</span><span class="rvts12"> are the characters </span><span class="rvts11">0</span><span class="rvts12">-</span><span class="rvts11">9</span><span class="rvts12">, </span><span class="rvts11">A</span><span class="rvts12">-</span><span class="rvts11">F</span><span class="rvts12"> and </span><span class="rvts11">a</span><span class="rvts12">-</span><span class="rvts11">f</span><span class="rvts12">.</span></p>
+<p class="rvps178"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts35">At least one digit must be present. The </span><span class="rvts85">digits</span><span class="rvts35"> value may contain a maximum of 9 full decimal digits or 8 hex digits, since the underlying arithmetic to increment values is done with 32-bit integers. The maximum decimal value is 4294967295 and the maximum hex value is FFFFFFFF. If the maximum value is reached and there are more lines to be enumerated, the number value wraps around to zero.</span></p>
+<p class="rvps167"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If sufficient data lines are enumerated to cause a maximum value to be developed (such as 999 in a 3-position decimal field) then the value will wrap around to zero and continue forward. </span></p>
+<p class="rvps167"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If a wrap-around-to-zero occurs, the zero and positive values will not have any leading zeros. If an exact size or number of leading zeros is required and wrap-around may occur, you may wish to perform the Enumeration in two steps; one from the initial value to the maximum value, followed by zero to the final value. Another approach is to allow the Enumeration function to operate over the entire range, and the overlay a line containing 0 characters in the required positions. The overlay command will only replace blanks with zeros, and so you can safely pad an Enumeration value to any number of desired leading digits.</span></p>
+<p class="rvps167"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The function </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35"> will adjust all </span><span class="rvts85">digits</span><span class="rvts35"> greater than </span><span class="rvts36">9</span><span class="rvts35"> to upper case </span><span class="rvts11">A</span><span class="rvts12">-</span><span class="rvts11">F</span><span class="rvts35">, even on the first (model) line. The function </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> will adjust all </span><span class="rvts85">digits</span><span class="rvts35"> greater than </span><span class="rvts36">9</span><span class="rvts35"> to lower case </span><span class="rvts11">a</span><span class="rvts12">-</span><span class="rvts11">f</span><span class="rvts35">, even on the first (model) line. </span></p>
+<p class="rvps166"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="102" style="padding: 1px;"><p class="rvps177"><span class="rvts16">suffix</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts12">The optional </span><span class="rvts50">suffix</span><span class="rvts12"> may consist of any string of non-digit characters.</span><span class="rvts35"> &nbsp;Neither </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts35"> nor </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts35"> will adjust the casing of the suffix string; the value is left as-is.</span></p>
+<p class="rvps164"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps164"><span class="rvts80"><br/></span></p>
+<p class="rvps165"><a name="Examples"></a>
+<span class="rvts11">Examples</span></p>
+<p class="rvps165"><span class="rvts323"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps183"><span class="rvts11">the Ada number</span><span class="rvts322"> &nbsp; </span><span class="rvts54">16#FF#</span><span class="rvts80"> &nbsp; </span></li>
+</ul></ul>
+<p class="rvps174"><span class="rvts12">the prefix is</span><span class="rvts80"> &nbsp;</span><span class="rvts54">16#</span><span class="rvts80">,</span><span class="rvts12"> the </span><span class="rvts50">digits</span><span class="rvts12"> value is</span><span class="rvts80"> </span><span class="rvts54">FF</span><span class="rvts80"> </span><span class="rvts12">and the suffix value is</span><span class="rvts80"> </span><span class="rvts54">#</span></p>
+<p class="rvps184"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps183"><span class="rvts11">the C number</span><span class="rvts322"> &nbsp; </span><span class="rvts54">0xFF&nbsp;</span><span class="rvts322"> &nbsp; &nbsp;</span></li>
+</ul></ul>
+<p class="rvps174"><span class="rvts12">the prefix is</span><span class="rvts80"> &nbsp;</span><span class="rvts54">0x</span><span class="rvts80">, </span><span class="rvts12">the </span><span class="rvts50">digits</span><span class="rvts12"> value is</span><span class="rvts80"> </span><span class="rvts54">FF</span><span class="rvts80"> </span><span class="rvts12">and there is no suffix</span></p>
+<p class="rvps184"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps183"><span class="rvts11">the Basic number&nbsp;</span><span class="rvts322"> &nbsp;</span><span class="rvts54">&amp;H123</span><span class="rvts80"> &nbsp;</span></li>
+</ul></ul>
+<p class="rvps174"><span class="rvts12">the prefix is</span><span class="rvts80"> &nbsp;</span><span class="rvts54">&amp;H</span><span class="rvts80">, </span><span class="rvts12">the </span><span class="rvts50">digits</span><span class="rvts12"> value is</span><span class="rvts80"> </span><span class="rvts54">123</span><span class="rvts80"> </span><span class="rvts12">and there is no suffix</span></p>
+<p class="rvps184"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps183"><span class="rvts11">the IBM assembler number</span><span class="rvts322"> &nbsp; </span><span class="rvts54">X'FF'</span><span class="rvts80"> &nbsp; &nbsp;</span></li>
+</ul></ul>
+<p class="rvps174"><span class="rvts12">the prefix value is</span><span class="rvts80"> &nbsp;</span><span class="rvts54">X'</span><span class="rvts80">, &nbsp;</span><span class="rvts12">the </span><span class="rvts50">digits</span><span class="rvts12"> value is</span><span class="rvts80"> </span><span class="rvts54">FF</span><span class="rvts80"> </span><span class="rvts12">and the suffix value is</span><span class="rvts80"> </span><span class="rvts48">'</span></p>
+<p class="rvps184"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps183"><span class="rvts11">the simple string</span><span class="rvts322"> &nbsp; </span><span class="rvts54">Page &nbsp;1</span><span class="rvts48"> &nbsp; &nbsp;</span></li>
+</ul></ul>
+<p class="rvps175"><span class="rvts12">the prefix value is</span><span class="rvts80"> &nbsp;</span><span class="rvts54">Page..</span><span class="rvts48"> </span><span class="rvts12">(note that</span><span class="rvts11"> . </span><span class="rvts12">represents blanks), the </span><span class="rvts50">digits</span><span class="rvts12"> value is</span><span class="rvts82"> </span><span class="rvts54">1</span><span class="rvts80">,</span><span class="rvts12"> and there is no suffix</span></p>
+<p class="rvps185"><span class="rvts98"><br/></span></p>
+<p class="rvps179"><a name="Handlingofblanksintheprefix"></a>
+<span class="rvts11">Handling of blanks in the prefix</span></p>
+<p class="rvps179"><span class="rvts98"><br/></span></p>
+<p class="rvps180"><span class="rvts12">The enumerate function will utilize blanks in the prefix to accommodate changes in length of the digits string as enumeration takes place. This is done to retain formatting as much as possible. Some examples of how this works (note that</span><span class="rvts11"> . </span><span class="rvts12">represents </span><span class="rvts50">blanks</span><span class="rvts12">):</span></p>
+<p class="rvps176"><span class="rvts12"><br/></span></p>
+<p class="rvps168"><span class="rvts54">...&amp;Hff</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">enumerates as</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">...&amp;Hff</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">..&amp;H100</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">..&amp;H101</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">etc.</span></p>
+<p class="rvps168"><span class="rvts80"><br/></span></p>
+<p class="rvps168"><span class="rvts54">Page..8</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">enumerates as</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">Page..8</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">Page..9</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">Page.10</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">etc.</span></p>
+<p class="rvps168"><span class="rvts80"><br/></span></p>
+<p class="rvps168"><span class="rvts54">..(98)</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">enumerates as</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">..(98)</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">..(99)</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">.(100)</span><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">etc.</span></p>
+<p class="rvps181"><span class="rvts98"><br/></span></p>
+<p class="rvps168"><span class="rvts54">(..98)</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">enumerates as</span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">(..98)</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">(..99)</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">(.100)</span><span class="rvts48"> </span><span class="rvts48"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">etc.</span></p>
+<p class="rvps170"><span class="rvts12"><br/></span></p>
+<p class="rvps169"><a name="UseoftheENUMWITHcommand"></a>
+<span class="rvts11">Use of the ENUMWITH command</span></p>
+<p class="rvps169"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12">Normally, the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enum">(Enum)</a><span class="rvts11">,</span><span class="rvts12"> </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexuc">(EnumHexUc)</a><span class="rvts11"> </span><span class="rvts12">and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.enumhexlc">(EnumHexLc)</a><span class="rvts12"> functions increment each successive line by </span><span class="rvts11">1</span><span class="rvts12">. You can change the increment value to something other than </span><span class="rvts11">1</span><span class="rvts12"> by using the </span><a class="rvts33" href="ENUMWITH.html">ENUMWITH</a><span class="rvts12"> primary command. When you do this, the increment value applies to all edit sessions until you change it, but it will reset back to </span><span class="rvts11">1</span><span class="rvts12"> when SPFLite is restarted. See </span><a class="rvts33" href="ENUMWITH.html">ENUMWITH - Change Increment for Enumerate Functions</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps169"><span class="rvts12"><br/></span></p>
+<p class="rvps170"><a name="ApplicationNote:Usingakeyboardmacrotoautomaticallyinsertsequencenumbers"></a>
+<span class="rvts11">Application Note: Using a keyboard macro to automatically insert sequence numbers</span></p>
+<p class="rvps170"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12">You may a file containing a fixed column of sequence numbers that need to be frequently renumbered. IBM ISPF has several "numbering" commands, such as </span><span class="rvts11">AUTONUM</span><span class="rvts12">, </span><span class="rvts11">NUMBER</span><span class="rvts12">, </span><span class="rvts11">NONUMBER</span><span class="rvts12">, </span><span class="rvts11">RENUM</span><span class="rvts12"> and </span><span class="rvts11">UNNUMBER</span><span class="rvts12">. Because PC data is not generally "card-image based", like mainframe data, SPFLite does not support these commands. However, you can use the Enumerate feature of Power Typing to place (or remove) sequence numbers anywhere you wish.</span></p>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12">You can automate the process of resequencing a file by placing the operation into a keyboard macro. Here is the general outline of how you could do this:</span></p>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps172"><span class="rvts12">Define a keyboard macro to resequence your data; see example below</span></li>
+<li style="margin-left: 0px" class="rvps172"><span class="rvts12">When you are likely to resequence the file several times, put labels like</span><span class="rvts49">.A</span><span class="rvts12"> and </span><span class="rvts49">.B</span><span class="rvts12"> to mark the beginning and end of the file, and enter Power Typing mode with </span><span class="rvts49">PTYPE .A .B</span></li>
+<li style="margin-left: 0px" class="rvps172"><span class="rvts12">If you resequence the file only occasionally, mark the block of lines using a </span><span class="rvts49">CC</span><span class="rvts12"> block, &nbsp;and enter Power Typing mode with </span><span class="rvts54">PTYPE</span></li>
+<li style="margin-left: 0px" class="rvps172"><span class="rvts12">Press the key mapped to your keyboard macro</span></li>
+</ul></ul>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12">Suppose the data you want to resequence was a COBOL program that uses columns 1-6 for sequence numbers. Here is a macro that would enumerate columns 1 to 6. Let's assume you are going to map this to Ctrl-Shift N. So, you would enter KeyMap, and in the Ctrl-Shift N item, you would enter the following:</span></p>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12"> &nbsp; &nbsp; &nbsp; </span><span class="rvts49">(TxtHome)[000001](Left)(6:MarkLeft)(Enum)(Enter)</span></p>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts12">Here's what happens when you run this macro:</span></p>
+<p class="rvps171"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">(TxtHome)</span></p>
+<p class="rvps172"><span class="rvts12">The cursor is placed in column 1 of the model line</span></p>
+<p class="rvps172"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">[000001]</span></p>
+<p class="rvps172"><span class="rvts12">The initial value of the sequence gets stored in columns 1-6 of every line in the Power Typing range</span></p>
+<p class="rvps172"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">(Left)</span></p>
+<p class="rvps172"><span class="rvts12">The cursor is moved from column 7 to column 6</span></p>
+<p class="rvps172"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">(6:MarkLeft)</span></p>
+<p class="rvps172"><span class="rvts12">Columns 1-6 are highlighted, going in reverse order</span></p>
+<p class="rvps172"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">(Enum)</span></p>
+<p class="rvps172"><span class="rvts12">All lines in the Power Typing range are numbered</span></p>
+<p class="rvps172"><span class="rvts12"><br/></span></p>
+<p class="rvps171"><span class="rvts11">(Enter)</span></p>
+<p class="rvps172"><span class="rvts12">This ends the Power Typing session</span></p>
+<p class="rvps13" style="page-break-before: always;"><span class="rvts98"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>SUBMIT - Pass Lines to an External Command File</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SUBMIT - Pass Lines to an External Command File">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="SUBMIT - Pass Lines to an External Command File" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="SUBMIT"
+		  data-hnd-context="171"
+		  data-hnd-title="SUBMIT - Pass Lines to an External Command File"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>SUBMIT - Pass Lines to an External Command File</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Syntax</span></p>
+<p class="rvps4"><span class="rvts170"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="237" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps189"><span class="rvts89">SUBMIT</span></p>
+</td>
+<td width="897" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps221"><span class="rvts89">[&nbsp;</span><span class="rvts367"> </span><span class="rvts89">line-control-range ] &nbsp; &nbsp;</span></p>
+<p class="rvps221"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps221"><span class="rvts89">[ U | NU ] &nbsp; </span></p>
+<p class="rvps221"><span class="rvts89">[ &nbsp;</span><span class="rvts365">[</span><span class="rvts89"> argument-list </span><span class="rvts365">]</span><span class="rvts89"> &nbsp;]</span></p>
+<p class="rvps221"><span class="rvts89">[ DEBUG ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Operands</span></p>
+<p class="rvps4"><span class="rvts104"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="227" height="92" style="padding: 1px;"><p class="rvps189"><span class="rvts89">line-control-range</span></p>
+</td>
+<td width="746" height="92" style="padding: 1px;"><p class="rvps222"><span class="rvts35">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool for specifying the range of lines to be selected, and may include line labels, line-number pseudo-labels, relative labels and line tags. The full syntax and allowable operands that make up line control ranges are </span><span class="rvts12">discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details</span><span class="rvts98">.</span></p>
+<p class="rvps188"><span class="rvts98"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="227" style="padding: 1px;"><p class="rvps189"><span class="rvts89">X | NX</span></p>
+</td>
+<td width="746" style="padding: 1px;"><p class="rvps222"><span class="rvts35">Specifies a subset of the line range to be processed. </span><span class="rvts36">X</span><span class="rvts35"> requests only excluded lines are to be submitted, </span><span class="rvts36">NX</span><span class="rvts35"> requests only non-excluded lines are to be submitted. If neither </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> are specified, all lines in the range will be submitted without regard to their exclusion status.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="227" style="padding: 1px;"><p class="rvps189"><span class="rvts89">U | NU</span></p>
+</td>
+<td width="746" style="padding: 1px;"><p class="rvps9"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="227" style="padding: 1px;"><p class="rvps189"><span class="rvts137">[ </span><span class="rvts376">[</span><span class="rvts137">argument-list</span><span class="rvts376">]</span><span class="rvts366"> </span><span class="rvts137">]</span></p>
+<p class="rvps189"><span class="rvts137"><br/></span></p>
+<p class="rvps189"><span class="rvts376"><br/></span></p>
+</td>
+<td width="746" style="padding: 1px;"><p class="rvps222"><span class="rvts35">An optional list of zero or more arguments, enclosed in actual </span><span class="rvts368">[</span><span class="rvts89"> </span><span class="rvts368">]</span><span class="rvts35"> bracket characters. Empty brackets will be accepted but are otherwise ignored. (Note in the syntax description, the italicized, highlighted brackets are meant to be literally specified, while the non-italicized brackets are there to show that the argument-list portion is optional.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps222"><span class="rvts35">Any arguments in this list that contain embedded blanks must be enclosed in double quotes. No other quote type will work, simply because the arguments are destined for a Windows command line, and that is the format that Windows requires for arguments having embedded blanks.</span></p>
+<p class="rvps222"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="227" style="padding: 1px;"><p class="rvps189"><span class="rvts378">DEBUG</span></p>
+</td>
+<td width="746" style="padding: 1px;"><p class="rvps9"><span class="rvts35">If specified, keeps the Windows command prompt window open after the submit program is run, as a debugging aid. You will see the command and its execution in the command prompt window, and you can type in more commands if you wish. To return to SPFLite, type the command EXIT and press Enter, or close the window by clicking on the X at the top of the window. You will see on the Windows title line of the command prompt window the words, </span><span class="rvts36">SUBMIT Debug Window - Enter EXIT to continue</span><span class="rvts35">.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps5"><span class="rvts14">SUBMIT</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUB</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts11">Description</span></p>
+<p class="rvps4"><span class="rvts104"><br/></span></p>
+<p class="rvps189"><span class="rvts35">The SPFLite </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command allows a program or batch file to be launched from SPFLite. Prior to executing the program or batch file, a copy of an entire edit file, or selected contents of it, are written to a temporary file. In particular, this means that a modified edit file need not be saved prior to being submitted; ‘temporary' changes can be made to a file, then the file may be submitted that included those temporary changes, and then finally those changes could be canceled, if desired.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">Temporary files created by SPFLite are periodically purged. The purge occurs during SPFLite startup time, when all files in the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> Working Directory that match a file pattern of </span><span class="rvts36">SUB*.*</span><span class="rvts35"> and are two or more days old are deleted. The user is free to manually delete these files sooner, if desired.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">A number of </span><span class="rvts85">submit codes</span><span class="rvts35"> are supported to provide arguments to the submit command. A submit code generally consists of a </span><span class="rvts36">~</span><span class="rvts35"> tilde and a single letter (case insensitive), except for the </span><span class="rvts36">~K</span><span class="rvts35"> &nbsp;and </span><span class="rvts36">~S</span><span class="rvts35"> codes that have an extended syntax. Note: Any submit code that represents or contains a directory path as a string will contain only that path, without any enclosing quotes, even if the path contains embedded blanks. It is the user's responsibility to enclose submit codes on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command in quotes when there is a possibility that the values might have embedded blanks.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">Submit codes may be specified anywhere on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command as needed. It would be considered unusual for a </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command to contain more than one instance of the same kind of submit code, but SPFLite does not prevent such usage.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">A submit code can alternatively be coded with a </span><span class="rvts36">^</span><span class="rvts35"> circumflex instead of a </span><span class="rvts36">~</span><span class="rvts35"> tilde, such as </span><span class="rvts36">^R</span><span class="rvts35">. When this is done, the given submit code essentially works the same way, but the string value that is substituted for it is converted to upper case. This may be useful when the submit prototype command launches a batch script, so that the case of certain batch script arguments can be ignored.</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">The defined submit codes are as follows:</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~1</span><span class="rvts98">, </span><span class="rvts89">^1</span><span class="rvts98"> &nbsp;</span><span class="rvts364">through</span><span class="rvts98"> &nbsp;</span><span class="rvts89">~9</span><span class="rvts98">, </span><span class="rvts89">^9</span></p>
+<p class="rvps223"><span class="rvts35">A specific argument number specified in the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command that was enclosed in brackets; the enclosing argument brackets on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command are removed. For example, the primary command </span><span class="rvts36">SUBMIT [one "two three"]</span><span class="rvts35"> causes the </span><span class="rvts36">~1</span><span class="rvts35"> code to be replaced by the value of </span><span class="rvts36">one</span><span class="rvts35"> and </span><span class="rvts36">^1</span><span class="rvts35"> to be replaced by the value of </span><span class="rvts36">ONE</span><span class="rvts35"> wherever they appear on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command. Submit codes </span><span class="rvts36">~9</span><span class="rvts35"> and </span><span class="rvts36">^9</span><span class="rvts35"> are “catch-all” codes that represent argument 9 and beyond, if there are ten or more argument strings supplied.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~A</span><span class="rvts98">, </span><span class="rvts89">^A</span></p>
+<p class="rvps223"><span class="rvts35">All arguments specified in the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command that were enclosed in brackets; the enclosing argument brackets on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command are removed. For example, the primary command </span><span class="rvts36">SUBMIT [one "two three"]</span><span class="rvts35"> causes the </span><span class="rvts36">~A</span><span class="rvts35"> code to be replaced by the value of </span><span class="rvts36">one "two three"</span><span class="rvts35"> wherever </span><span class="rvts36">~A</span><span class="rvts35"> appears on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~C</span><span class="rvts98">, </span><span class="rvts89">^C</span></p>
+<p class="rvps223"><span class="rvts35">The full path name of the configuration-files directory of SPFLite. A sample value for </span><span class="rvts36">~C </span><span class="rvts35">would be “</span><span class="rvts36">C:\Documents and Settings\George\My Documents\SPFLite</span><span class="rvts35">”.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~D</span><span class="rvts98">, </span><span class="rvts89">^D</span></p>
+<p class="rvps223"><span class="rvts35">The current directory date of the original file, in the ISO format </span><span class="rvts36">YYYY-MM-DD</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~E</span><span class="rvts98">, </span><span class="rvts89">^E</span></p>
+<p class="rvps223"><span class="rvts35">The full path name of the executables directory of SPFLite; the directory into which SPFLite was installed. A sample value for </span><span class="rvts36">~E</span><span class="rvts35"> would be “</span><span class="rvts36">C:\Program Files\SPFLite</span><span class="rvts35">”.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~F</span><span class="rvts98">, </span><span class="rvts89">^F</span></p>
+<p class="rvps223"><span class="rvts35">The simple file name of the original file without the path or extension. When submitting from the clipboard, this will be an empty string. For file name </span><span class="rvts36">C:\ONE\TWO.TXT</span><span class="rvts35">, </span><span class="rvts36">~F</span><span class="rvts35"> contains </span><span class="rvts36">TWO</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~I</span><span class="rvts98">, </span><span class="rvts89">^I</span></p>
+<p class="rvps223"><span class="rvts35">The full path and file name of the temporary file containing the selected contents of the current </span><span class="rvts36">EDIT</span><span class="rvts35"> (or </span><span class="rvts36">BROWSE</span><span class="rvts35"> or Clipboard) session from which the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> primary command was issued. The </span><span class="rvts36">~I</span><span class="rvts35"> code must be present on the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command line for the submit process to operate according to its intended purpose. It would be considered unusual for a </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command not to contain the </span><span class="rvts36">~I</span><span class="rvts35"> code, but SPFLite does not enforce such usage. Names for temporary submit files have the general form </span><span class="rvts36">SUBMIT_JOB12345.TXT</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~J</span><span class="rvts98">, </span><span class="rvts89">^J</span></p>
+<p class="rvps223"><span class="rvts35">A job ID, formatted as </span><span class="rvts36">JOBnnnnn</span><span class="rvts35">. JOB is constant and </span><span class="rvts36">nnnnn</span><span class="rvts35"> will be an incrementing number &nbsp;starting at 1 and incremented by 1 for every submitted job. The </span><span class="rvts36">~J</span><span class="rvts35"> counter is kept in the </span><span class="rvts36">SPFLite.INI</span><span class="rvts35"> file as the persistent value </span><span class="rvts36">JobNumber</span><span class="rvts35">, and is installation-initialized to 1. This provides a means of assigning every job a unique job number and a unique file name for the temporary files that get created.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~K(ISODATE)</span><span class="rvts98">, </span><span class="rvts89">^K(ISODATE)</span></p>
+<p class="rvps223"><span class="rvts344">The current date when batch process submitted, in the format </span><span class="rvts343">YYYY-MM-DD</span><span class="rvts344">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~K(ISOTIME)</span><span class="rvts98">, </span><span class="rvts89">^K(ISOTIME)</span></p>
+<p class="rvps223"><span class="rvts35">The current time when batch process submitted, in the format</span><span class="rvts36"> HH:MM:SS</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~K(</span><span class="rvts367">primitive</span><span class="rvts89">)</span><span class="rvts311">, </span><span class="rvts89">^K(</span><span class="rvts367">primitive</span><span class="rvts89">)</span></p>
+<p class="rvps223"><span class="rvts35">Any of the keyboard primitives which emit data may be used, as well as any key definitions which contain either un-bracketed strings (like primary commands) or those bracketed in </span><span class="rvts36">[ ]</span><span class="rvts35"> brackets (i.e. simple keyboard text strings. Keys are specified by their official name, which can be seen when the key is selected in the </span><span class="rvts36">KEYMAP</span><span class="rvts35"> dialog. For example, </span><span class="rvts36">~K(F2)</span><span class="rvts35"> substitutes the string assigned to the F2 key. For key variations, prefix the keyname with the letters S,C or A (Shift, Control or Alt) in any combination followed by a </span><span class="rvts36">–</span><span class="rvts35"> dash: </span><span class="rvts36">~K(S-F2)</span><span class="rvts35"> for Shift-F2; </span><span class="rvts36">~K(CA-Home)</span><span class="rvts35"> for Control-Alt-Home.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">~M</span><span class="rvts98">, </span><span class="rvts89">^M</span></p>
+<p class="rvps13"><span class="rvts35">Provides extended file Mode information. This submit code may be passed to any desired program, but is intended for use with a future version of the SPFSUBMIT.EXE program. The Mode information can be used to handle cases where SUBMIT is used with files of non-standard file formats, character sets, etc. This information is taken from the current Profile values. When a new file is being submitted, or a file is submitted from the File Manager using the J line command that has no existing profile, the DEFAULT profile's values are used. When the &nbsp;</span><span class="rvts89">~M or</span><span class="rvts98"> </span><span class="rvts89">^M</span><span class="rvts35"> code is used, a set of 7 command-line parameters are generated, in the following format:</span></p>
+<p class="rvps223"><span class="rvts35"><br/></span></p>
+<p class="rvps223"><span class="rvts344"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">-SUB:m -EOL:eee -LEN:nnn -FMT:fff -SRC:sss -TAB:ttt -EBC:D </span></p>
+<p class="rvps223"><span class="rvts35"><br/></span></p>
+<p class="rvps13"><span class="rvts35"> where</span></p>
+<p class="rvps71"><span class="rvts89">-SUB:m </span><span class="rvts35">is a Submit method code. </span></p>
+<p class="rvps104"><span class="rvts35">J = submitted from File Manager with J line command</span></p>
+<p class="rvps104"><span class="rvts35">S = submitted from edit session with SUBMIT command</span></p>
+<p class="rvps104"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts89">-EOL:eee </span><span class="rvts35">is the current EOL setting, such as CRLF</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts89">-LEN:nnn </span><span class="rvts35">is the current LRECL setting, which is 0 for a standard text file</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts89">-FMT:fff </span><span class="rvts35">is the current RECFM setting, which is U for a standard text file</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts89">-SRC:sss </span><span class="rvts35">is the current SOURCE setting, which is ANSI for a standard text file</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts89">-TAB:ttt </span><span class="rvts35">is the current XTABS setting</span></p>
+<p class="rvps71"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts89">~N</span><span class="rvts98">, </span><span class="rvts89">^N</span></p>
+<p class="rvps223"><span class="rvts344">The full, complete name of the original file, path included. For file name </span><span class="rvts343">C:\ONE\TWO.TXT</span><span class="rvts344">, </span><span class="rvts343">~N</span><span class="rvts344"> contains </span><span class="rvts343">C:\ONE\TWO.TXT</span><span class="rvts344">. </span></p>
+<p class="rvps223"><span class="rvts344"><br/></span></p>
+<p class="rvps223"><span class="rvts344">Note: Since SPFLite has opened, and has access to the original file during the </span><span class="rvts343">EDIT</span><span class="rvts344"> or </span><span class="rvts343">BROWSE</span><span class="rvts344"> session, it could present run-time issues if any user program or script tried to open and modify the same original file while SPFLite still had ‘ownership' of it. It is possible such usage might succeed, but SPFLite cannot guarantee the outcome under such circumstances. Users are advised to treat the </span><span class="rvts343">~N</span><span class="rvts344"> code as an “information-only” value and not attempt to open the file during the time SPFLite has the underlying </span><span class="rvts343">EDIT</span><span class="rvts344"> file open.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~P</span><span class="rvts98">, </span><span class="rvts89">^P</span></p>
+<p class="rvps223"><span class="rvts35">The path of the directory containing the original file. When submitting from the clipboard, this will an empty string. For file name </span><span class="rvts36">C:\ONE\TWO.TXT</span><span class="rvts35">, </span><span class="rvts36">~P</span><span class="rvts35"> contains </span><span class="rvts36">C:\ONE</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~R</span><span class="rvts98">, </span><span class="rvts89">^R</span></p>
+<p class="rvps223"><span class="rvts35">When specified, </span><span class="rvts36">~R</span><span class="rvts35"> is expanded to the full path name of a temporary file (a “Response file”) used to provide job results status from the user's job submission procedure. This temporary file name will have an SPFLite-provided name incorporating the current job number, and an extension of </span><span class="rvts36">.TXT</span><span class="rvts35">. These temporary files are located in the user-specified </span><span class="rvts36">SUBMIT</span><span class="rvts35"> working directory. When the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> prototype command contains the </span><span class="rvts36">~R</span><span class="rvts35"> code, SPFLite will monitor the temporary Results file for any changes to it, and will display the lines of this file in a popup display. The user is responsible for formatting and writing a brief, meaningful message to this file. Use of the </span><span class="rvts36">~R</span><span class="rvts35"> response file code is optional; when omitted; SPFLite makes no attempt to monitor for a Results file. One source for creating the Results file is the standard output of the </span><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> utility program if redirected to a text file. Note that SPFLite will create this as an empty file when ~R or ^R are specified; and then it monitors that file name for any file-create or file-update activity. Names created as response-file names have the general form </span><span class="rvts36">SUBRESULTS_JOB12345.TXT</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~S(</span><span class="rvts367">name</span><span class="rvts89">), ^S(</span><span class="rvts367">name</span><span class="rvts89">)</span></p>
+<p class="rvps223"><span class="rvts35">When specified, the string value of the defined SET variable </span><span class="rvts91">name</span><span class="rvts36"> </span><span class="rvts35">is substituted. See the </span><a class="rvts33" href="SET.html">SET</a><span class="rvts35"> primary command for more information on defining SET variables.</span></p>
+<p class="rvps220"><span class="rvts89"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~T</span><span class="rvts98">, </span><span class="rvts89">^T</span></p>
+<p class="rvps223"><span class="rvts35">The current directory time of the original file, in the ISO format </span><span class="rvts36">HH:MM:SS</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~X</span><span class="rvts98">, </span><span class="rvts89">^X</span></p>
+<p class="rvps223"><span class="rvts35">The file extension of the original file, including the leading dot, or else an empty string if file has no extension. When submitting from the clipboard, this will be an empty string. For file name </span><span class="rvts36">C:\ONE\TWO.TXT</span><span class="rvts35">, </span><span class="rvts36">~X</span><span class="rvts35"> contains </span><span class="rvts36">.TXT</span><span class="rvts35">.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts89">~Z</span><span class="rvts98">, </span><span class="rvts89">^Z</span></p>
+<p class="rvps223"><span class="rvts35">The contents of the </span><span class="rvts36">SUBARG</span><span class="rvts35"> string. A </span><span class="rvts36">SUBARG</span><span class="rvts35"> string is defined on the PROFILE-level for a given file type, and is defined by edit primary command </span><span class="rvts36">SUBARG</span><span class="rvts35">. </span><span class="rvts36">SUBARG</span><span class="rvts35"> takes one operand, a </span><span class="rvts85">submit argument</span><span class="rvts35"> string. This value must be quoted if it contains embedded blanks; any of the 3 quote types are permitted. The contents of </span><span class="rvts36">SUBARG</span><span class="rvts35"> may be displayed by issuing </span><a class="rvts293" href="SUBARG.html">SUBARG</a><span class="rvts35"> with no operand, or by issuing the </span><span class="rvts36">PROFILE</span><span class="rvts35"> command to see this value along with all other profile settings. When a </span><span class="rvts36">SUBARG</span><span class="rvts35"> value for a given file type is undefined, the value of </span><span class="rvts36">~Z</span><span class="rvts35"> is </span><span class="rvts36">OFF</span><span class="rvts35">, as a 3-character upper case value. The value is undefined by default and can be undefined by issuing </span><span class="rvts36">SUBARG OFF</span><span class="rvts35">. Thus, </span><span class="rvts36">OFF</span><span class="rvts35"> (in any upper or lower-case spelling) is reserved. Any other </span><span class="rvts36">SUBARG</span><span class="rvts35"> value may be set, and is accepted as-is (the value is not upper-cased). Note that if you actually wish to use </span><span class="rvts36">OFF</span><span class="rvts35"> and </span><span class="rvts36">ON</span><span class="rvts35"> as values, that is possible, except that </span><span class="rvts36">OFF</span><span class="rvts35"> will always appear in upper case, while an </span><span class="rvts36">ON</span><span class="rvts35"> value, if &nbsp;used, appears just as you enter it on the </span><span class="rvts36">SUBARG</span><span class="rvts35"> command. It is not possible to define the </span><span class="rvts36">~Z</span><span class="rvts35"> code as an empty string. The value </span><span class="rvts36">OFF</span><span class="rvts35"> is handled the way it is to make checking for it easier in batch scripts.</span></p>
+<p class="rvps223"><span class="rvts35"><br/></span></p>
+<p class="rvps223"><span class="rvts344">Note: What would the</span><span class="rvts98"> </span><span class="rvts130">SUBARG</span><span class="rvts89"> ~Z </span><span class="rvts35">value be used for? &nbsp;The submit edit file's extension is available from the</span><span class="rvts98"> </span><span class="rvts89">~X</span><span class="rvts98"> </span><span class="rvts35">code, so that can be used to tailor a submit script based on file type. Suppose a </span><span class="rvts85">group</span><span class="rvts35"> of related files had some common requirement; then, the file type alone might not be enough to make the required distinction. Or, perhaps files are being submitted that do not have a file extension. The </span><span class="rvts36">SUBARG</span><span class="rvts35"> value provides a means to tailor the submit process in these special circumstances.</span></p>
+<p class="rvps223"><span class="rvts35"><br/></span></p>
+<p class="rvps223"><span class="rvts35"><br/></span></p>
+<p class="rvps188"><span class="rvts35">See </span><a class="rvts33" href="SUBARG.html">SUBARG - Set Default SUBMIT Argument</a><span class="rvts35"> and </span><a class="rvts33" href="WorkingwiththeSUBMITCommand.html">Working with the SUBMIT Command</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps188"><span class="rvts98"><br/></span></p>
+<p class="rvps4"><span class="rvts36">Examples</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To submit all of the data as a batch process:</span></p>
+<p class="rvps10"><span class="rvts89">SUBMIT</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To submit lines between labels .START and .END as a batch process:</span></p>
+<p class="rvps10"><span class="rvts89">SUBMIT .START .END</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts344">To submit all of the data to a batch process, with the arguments "ONE" and "TWO THREE":</span></p>
+<p class="rvps10"><span class="rvts89">SUBMIT [ONE "TWO THREE"]</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To submit only non-excluded lines as a batch process:</span></p>
+<p class="rvps10"><span class="rvts89">SUBMIT NX</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To submit only excluded lines not having tag :T between lines .A and .B as a batch process:</span></p>
+<p class="rvps10"><span class="rvts89">SUBMIT X :\T .A .B</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts98"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

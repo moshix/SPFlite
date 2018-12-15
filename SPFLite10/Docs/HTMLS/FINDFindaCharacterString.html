@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>FIND - Find a Character String</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FIND - Find a Character String">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="FIND - Find a Character String" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="FINDFindaCharacterString"
+		  data-hnd-context="103"
+		  data-hnd-title="FIND - Find a Character String"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>FIND - Find a Character String</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts107">Syntax</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="239" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps225"><span class="rvts89"><br/></span></p>
+<p class="rvps225"><span class="rvts89">FIND</span></p>
+</td>
+<td width="887" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps2"><span class="rvts89"><br/></span></p>
+<p class="rvps2"><span class="rvts89">WORDS | CHARS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Alter search context)</span></p>
+<p class="rvps2"><span class="rvts89"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="239" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts89">FIND</span></p>
+<p class="rvps225"><span class="rvts89"><br/></span></p>
+<p class="rvps225"><span class="rvts137">Alias - </span><span class="rvts89">FF</span></p>
+<p class="rvps9"><span class="rvts12">(See </span><a class="rvts33" href="FINDFindaCharacterString.html#Line%20Range%20/%20Pending%20Copy%20Conflict">Line Range / Pending Copy Conflict</a><span class="rvts12"> discussion below.)</span></p>
+</td>
+<td width="887" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">search-string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Perform a normal FIND)</span></p>
+<p class="rvps2"><span class="rvts89">[ start-column [ end-column ] ]</span></p>
+<p class="rvps2"><span class="rvts89">[ FIRST | LAST | </span><span class="rvts395">NEXT</span><span class="rvts89"> | PREV | ALL ]</span></p>
+<p class="rvps2"><span class="rvts89">[ PREFIX | SUFFIX | WORD | </span><span class="rvts131">CHAR</span><span class="rvts89"> ]</span></p>
+<p class="rvps2"><span class="rvts89">[ LEFT | RIGHT ]</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-change-request ]</span></p>
+<p class="rvps2"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89">[ MX | DX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<p class="rvps2"><span class="rvts107">Operands</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<p class="rvps9"><span class="rvts105">There are two basic formats for the </span><span class="rvts107">FIND</span><span class="rvts105"> command as shown in the syntax boxes above. The first is used to alter the basic search context as it relates to use of the WORD option in normal searching. This is covered below under the heading &nbsp;"Search Context".</span></p>
+<p class="rvps9"><span class="rvts105"><br/></span></p>
+<p class="rvps9"><span class="rvts105">The following operand descriptions are for the normal use of the </span><span class="rvts107">FIND</span><span class="rvts105"> command.</span></p>
+<p class="rvps2"><span class="rvts352"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">search-string</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The search string that identifies the lines to be found</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">start-column</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Left column of a range (with end-column) within which the search-string value must be found. If no end-column operand, then the search-string operand must be found starting in start-col.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">end-column</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Right column of a range (with start-column) within which the search-string value must be found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">FIRST</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find the first occurrence of search-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">LAST</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the bottom of the data and searches backward to find the last occurrence of search-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts302">NEXT</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the first position after the current cursor location and searches ahead to find the next occurrence of search-string. </span><span class="rvts11">NEXT</span><span class="rvts12"> is the default.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">PREV</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the current cursor location and searches backward to find the previous occurrence of search-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">ALL</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find all occurrences of search-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">LEFT</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts11">LEFT</span><span class="rvts12"> causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the left-most occurrence of search-string is found, and any other instances on that same line are ignored.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">RIGHT</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts11">RIGHT</span><span class="rvts12"> causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the right-most occurrence of search-string is found, and any other instances on that same line are ignored.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">PREFIX</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates search-string at the beginning of a word.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">WORD</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates search-string when it is delimited on both sides by blanks or other non-Word characters.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts302">CHAR</span></p>
+<p class="rvps225"><span class="rvts302"><br/></span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates search-string regardless of what precedes or follows it.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">SUFFIX</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates search-string at the end of a word.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">line-control-range</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">See also the </span><a class="rvts33" href="FINDFindaCharacterString.html#Line%20Range%20/%20Pending%20Copy%20Conflict">Line Range / Pending Copy Conflict</a><span class="rvts12"> discussion below.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">color-selection-criteria</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the search-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">color-change-request</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for highlighting of the found string. The full syntax and allowable operands for the color-change-request are discussed in </span><a class="rvts33" href="ColorChangeRequestSpecification.html">"Color Change Request Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">X | NX</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be examined, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be examined. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">U | NU</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be examined. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be examined, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be examined. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">MX</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts11">MX</span><span class="rvts12"> requests that all lines which DO contain search-string be excluded from the display following command processing. </span></p>
+<p class="rvps2"><span class="rvts12">MX = Make Excluded.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">DX</span></p>
+</td>
+<td width="892" style="padding: 1px;"><p class="rvps2"><span class="rvts11">DX</span><span class="rvts12"> requests that lines which DO contain search-string, which, if excluded, would normally be made visible, be left in their excluded status. DX = Don't change Excluded status</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="240" style="padding: 1px;"><p class="rvps225"><span class="rvts139">TOP</span></p>
+</td>
+<td width="892" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the 2nd screen line (as ISPF does) if the line is not on the current screen. If TOP is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">FIND</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">F</span></p>
+<p class="rvps5"><span class="rvts14">PREFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">PRE </span><span class="rvts13">or</span><span class="rvts14"> PFX</span></p>
+<p class="rvps5"><span class="rvts14">SUFFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUF </span><span class="rvts13">or</span><span class="rvts14"> SFX</span></p>
+<p class="rvps5"><span class="rvts14">WORDS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">WORD</span></p>
+<p class="rvps5"><span class="rvts14">CHARS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CHAR</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps2"><span class="rvts11">Description</span></p>
+<p class="rvps2"><span class="rvts104"><br/></span></p>
+<p class="rvps9"><span class="rvts12">You can use the </span><span class="rvts11">FIND</span><span class="rvts12"> command to locate line(s) within the file which contain a specified string. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">To find the next occurrence of the letters ELSE without specifying any other qualifications:</span></p>
+<p class="rvps10"><span class="rvts12">On the Command line, type:</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps13"><span class="rvts54">FIND&nbsp;ELSE</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Press Enter. Since no other qualifications were specified, the letters ELSE can be:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts12">Uppercase or a mixture of uppercase and lowercase (assuming that </span><span class="rvts11">CASE T</span><span class="rvts12"> is in effect)</span></li>
+<li style="margin-left: 0px" class="rvps71"><span class="rvts12">At the beginning of a word (prefix), the end of a word (suffix), or the entire word (word).</span></li>
+<li style="margin-left: 0px" class="rvps71"><span class="rvts12">In either an excluded or a non excluded line.</span></li>
+<li class="rvps2"><span class="rvts12">Anywhere within the current boundaries.</span></li>
+</ul></ul></ul>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">To find the next occurrence of the letters ELSE, but only if the letters are uppercase:</span></p>
+<p class="rvps10"><span class="rvts12">On the Command line, type:</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps13"><span class="rvts54">FIND&nbsp;C'ELSE'</span></p>
+<p class="rvps13"><span class="rvts54"><br/></span></p>
+<p class="rvps9"><span class="rvts12">Press Enter. This type of search is called a character string search (note the </span><span class="rvts11">C</span><span class="rvts12"> that precedes the search string) because it finds the next occurrence of the letters ELSE only if the letters are in uppercase. However, since no other qualifications were specified, the letters can be found anywhere in the file, as outlined in the preceding list.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">For more information, including other types of search strings, see </span><a class="rvts33" href="FindingandChangingData.html">Finding and Changing Data</a><span class="rvts12"> and </span><a class="rvts33" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts12">.</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;When the </span><span class="rvts11">FIND</span><span class="rvts12"> search operand is a Regular Expression (a string with an </span><span class="rvts11">R</span><span class="rvts12"> type code) and reverse-order searching is done with </span><span class="rvts11">PREV</span><span class="rvts12"> or </span><span class="rvts11">LAST</span><span class="rvts12">, only the left-most occurrence on any given line is found. That is, the command</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">FIND R'ABC' PREV</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts12">is treated as if it were specified as</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">FIND LEFT R'ABC' PREV</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts12">and</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">FIND R'ABC' LAST</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts12">is treated as if it were specified as</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">FIND LEFT R'ABC' LAST</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note:&nbsp;</span><span class="rvts35"> FIND cannot be used to find zero-length blank lines based on a string. See </span><a class="rvts33" href="NFIND.html">NFIND</a><span class="rvts35"> for an example of how to do this.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="Setting the search context with FIND WORDS and FIND CHARS"></a>
+<span class="rvts11">Setting the search context with FIND WORDS and FIND CHARS</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Operands</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts89">WORD | WORDS &nbsp; &nbsp;|</span></p>
+<p class="rvps9"><span class="rvts89">CHAR | CHARS</span></p>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note</span><span class="rvts35">: </span><span class="rvts36">WORD</span><span class="rvts35"> and </span><span class="rvts36">WORDS</span><span class="rvts35"> are interchangeable, as are </span><span class="rvts36">CHAR</span><span class="rvts35"> and </span><span class="rvts36">CHARS</span><span class="rvts35">.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Description</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This variation of the </span><span class="rvts36">FIND</span><span class="rvts35"> command is a special extension to the syntax of the </span><span class="rvts36">FIND</span><span class="rvts35"> command, and must be specified </span><span class="rvts36">exactly as shown</span><span class="rvts35">, with no other regular </span><span class="rvts36">FIND</span><span class="rvts35"> operands.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">FIND WORDS</span><span class="rvts35"> is used to set the default search context to </span><span class="rvts36">WORD</span><span class="rvts35"> mode.</span></p>
+<p class="rvps9"><span class="rvts36">FIND CHARS</span><span class="rvts35"> is used to set the default search context to </span><span class="rvts36">CHARS</span><span class="rvts35"> mode. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This means that whenever a </span><span class="rvts36">FIND</span><span class="rvts35">, </span><span class="rvts36">CHANGE</span><span class="rvts35"> or similar command is used, and none of the operands </span><span class="rvts36">CHARS</span><span class="rvts35">, </span><span class="rvts36">WORD</span><span class="rvts35">, </span><span class="rvts36">PREFIX</span><span class="rvts35"> or </span><span class="rvts36">SUFFIX</span><span class="rvts35"> are specified, the </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> command will proceed using the default assigned here.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This is convenient, for example, &nbsp;when many </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> commands are required that need </span><span class="rvts36">WORD</span><span class="rvts35"> mode. By setting the search context to </span><span class="rvts36">WORD</span><span class="rvts35"> mode, the operand </span><span class="rvts36">WORD</span><span class="rvts35"> can be omitted from the individual </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> commands, making them shorter and faster to type.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">CHARS</span><span class="rvts35"> mode is the installation default, and is how ISPF normally operates. The main reason to issue</span><span class="rvts36"> FIND CHARS</span><span class="rvts35"> would be to change back to the standard active after a </span><span class="rvts36">FIND WORDS</span><span class="rvts35"> command had been issued.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Setting the search context in this manner is only a default, applied when none of the operands </span><span class="rvts36">CHARS</span><span class="rvts35">, </span><span class="rvts36">WORD</span><span class="rvts35">, </span><span class="rvts36">PREFIX</span><span class="rvts35"> or </span><span class="rvts36">SUFFIX</span><span class="rvts35"> are specified. Any of these keywords can be used on a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> to override the current default search context, whatever it may be at that time.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the default search context is set to </span><span class="rvts36">WORDS</span><span class="rvts35">, a W will appear the </span><span class="rvts36">C</span><span class="rvts35">/</span><span class="rvts36">T</span><span class="rvts35"> indicator on the status line that shows the current </span><span class="rvts36">CASE C</span><span class="rvts35">/</span><span class="rvts36">T</span><span class="rvts35"> mode. Thus, depending on the </span><span class="rvts36">CASE</span><span class="rvts35"> mode, the indicator will show either &nbsp;</span><span class="rvts36">C&nbsp; W</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts36">T&nbsp; W</span><span class="rvts35"> &nbsp;on the status line.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you issue a </span><span class="rvts36">RESET</span><span class="rvts35"> command with no operands, the default search context will revert to the system-wide default (either </span><span class="rvts36">WORDS</span><span class="rvts35"> or </span><span class="rvts36">CHARS</span><span class="rvts35">) that is defined on the Options - General screen using the checkbox, </span><a class="rvts33" href="OptionsGeneral.html#Use%20WORD%20as%20the%20default%20for%20FIND/CHANGE%20commands%20?">Use WORD as the default for FIND/CHANGE commands</a><span class="rvts35">. If that default is </span><span class="rvts36">CHARS</span><span class="rvts35"> (checkbox not checked) the indicator will revert to either </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">T</span><span class="rvts35"> on the status line. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The search context checkbox defined on the </span><a class="rvts33" href="OptionsGeneral.html">Options - General</a><span class="rvts35"> screen is the default when a file is opened. You can set the search option to </span><span class="rvts36">FIND</span><span class="rvts35"> </span><span class="rvts36">CHARS</span><span class="rvts35"> or </span><span class="rvts36">FIND WORDS</span><span class="rvts35"> any time you wish on any file tab. This setting is not saved in the profile.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Line Range / Pending Copy Conflict"></a>
+<span class="rvts11">Line Range / Pending Copy Conflict - a Play in Three Acts</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts94">Synopsis</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts6">When there is a pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> block, </span><span class="rvts40">FIND</span><span class="rvts6"> will </span><span class="rvts94">keep</span><span class="rvts6"> the block pending, so you can use </span><span class="rvts40">FIND</span><span class="rvts6">, </span><span class="rvts40">RFIND</span><span class="rvts6"> and/or scrolling commands to locate a place for the pending lines to be copied into. This understanding provides SPFLite with ISPF compatibility, and is the way </span><span class="rvts40">FIND</span><span class="rvts6"> with pending </span><span class="rvts40">C/CC</span><span class="rvts6"> blocks is commonly used on the mainframe.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts6">When there is a pending </span><span class="rvts40">C/CC or M/MM</span><span class="rvts6"> block, a new alias of FIND called </span><span class="rvts40">FF</span><span class="rvts6"> will use the &nbsp;block to define the range of lines to be searched for, </span><span class="rvts94">instead of</span><span class="rvts6"> keeping the lines pending. This is how </span><span class="rvts40">FIND</span><span class="rvts6"> used to work before a recent change was made to it. (This new alias </span><span class="rvts40">FF</span><span class="rvts6"> is not the File Manager command of the same name. See the final note at the end of this section for more information.)</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This new arrangement resolves a long-running conflict that pitted IBM ISPF compatibility with our desire for SPFLite to provide as many productivity extensions as possible. We appreciate everyone's patience as we worked through this issue and "threaded the needle the right way". </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">It is quite a tale, and here it is, told in three acts ...</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts94">Act I</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The extended line-range-operand support provided by SPFLIte allowed you to specify a line range that a primary command is to use, either by specific command line operands (like</span><span class="rvts40"> .FROM .TO</span><span class="rvts6"> &nbsp;or</span><span class="rvts40"> .20 .250</span><span class="rvts6">), or by marking the line range with </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> line commands.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This extended line-range-operand support was a </span><span class="rvts40">general</span><span class="rvts6"> feature that applied to </span><span class="rvts40">all</span><span class="rvts6"> primary commands that took a line range, including </span><span class="rvts40">FIND</span><span class="rvts6">. Therein lies the rub ...</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts94">Act II</span></p>
+<p class="rvps2"><span class="rvts94"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It was found that a common use case in ISPF was to first define a block of lines using </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6">, and then use the </span><span class="rvts40">FIND</span><span class="rvts6"> command to locate a destination for those lines to be copied into, a task usually involving repetitive </span><span class="rvts40">FIND</span><span class="rvts6"> commands (via </span><span class="rvts40">RFIND</span><span class="rvts6">) and/or manual scrolling. By SPFLite making the general assumption (for </span><span class="rvts40">every</span><span class="rvts6"> primary command, including </span><span class="rvts40">FIND</span><span class="rvts6">) that a </span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">MM</span><span class="rvts6"> block </span><span class="rvts40">always</span><span class="rvts6"> defined a line range, that assumption prevented this commonly-practiced ISPF use case from being performed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here's an example of this problem:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Suppose you want to copy line </span><span class="rvts40">2500</span><span class="rvts6"> to some other part of the file, a long way from line 2500. You're not sure </span><span class="rvts40">where</span><span class="rvts6"> the right place </span><span class="rvts40">is</span><span class="rvts6"> to copy the line, but you do know there's a string of </span><span class="rvts40">ABC</span><span class="rvts6"> somewhere near where the new line needs to go. Also, there's more than one ABC in the file, and so just finding </span><span class="rvts40">one</span><span class="rvts6"> of them is not enough; you have to find the </span><span class="rvts40">right</span><span class="rvts6"> ABC.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">Incidentally, there is no string of </span><span class="rvts40">ABC</span><span class="rvts6"> on line 2500 itself. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">So, you </span><span class="rvts40">wanted</span><span class="rvts6"> to do this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Scene I</span></p>
+<p class="rvps9"><span class="rvts94"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Enter a </span><span class="rvts40">C</span><span class="rvts6"> line command on line 2500</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Go to the top of file, with an </span><span class="rvts40">UP MAX</span><span class="rvts6">, or maybe with a mapped key like Alt Page-Up or Ctrl Page-Up</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Enter on the command line, </span><span class="rvts40">FIND "ABC"</span><span class="rvts6"> to find the next ABC in the file</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">You </span><span class="rvts40">might</span><span class="rvts6"> find the right ABC, or you might </span><span class="rvts40">not</span><span class="rvts6">. You may have to keep searching, probably with </span><span class="rvts40">RFIND</span><span class="rvts6"> (mapped to the F5 key) or maybe by manually scrolling up and down.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">All this time, there a message on the screen, "</span><span class="rvts40">Pending Destination line range command</span><span class="rvts6">", because the </span><span class="rvts40">C</span><span class="rvts6"> is waiting for you to decide where you want to put an </span><span class="rvts40">A</span><span class="rvts6"> or </span><span class="rvts40">B</span><span class="rvts6"> somewhere, to finish what the </span><span class="rvts40">C</span><span class="rvts6"> started.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Finally, you make the decision, pick a line, put an </span><span class="rvts40">A</span><span class="rvts6"> command on it, press Enter, and the line is copied.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Well, that's what you </span><span class="rvts40">wanted</span><span class="rvts6"> to do, and in IBM ISPF, that's how it always worked. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">However, because of the general feature (added in "Act I"), </span><span class="rvts40">every</span><span class="rvts6"> primary command that took a line range (</span><span class="rvts94">including</span><span class="rvts6"> </span><span class="rvts40">FIND</span><span class="rvts6">), treated a pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> block as defining the range of lines that the primary command (</span><span class="rvts40">FIND</span><span class="rvts6">, in this case) was to operate on. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Thus, what </span><span class="rvts40">actually</span><span class="rvts6"> happened was this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Scene II</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Enter a </span><span class="rvts40">C</span><span class="rvts6"> line command on line 2500</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Go to the top of file, with an UP MAX or maybe with a mapped key like Alt Page-Up or Ctrl Page-Up</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Enter on the command line, </span><span class="rvts40">FIND "ABC"</span><span class="rvts6"> to find the next ABC in the file</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Because there is a pending </span><span class="rvts40">C</span><span class="rvts6"> command on line 2500, </span><span class="rvts40">FIND</span><span class="rvts6"> decides that it is supposed to </span><span class="rvts40">only look at line 2500 !</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Line 2500, the only line </span><span class="rvts40">FIND</span><span class="rvts6"> inspected, does </span><span class="rvts40">not</span><span class="rvts6"> have a string of ABC - not that you wanted to look at line 2500 anyway</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts40">FIND</span><span class="rvts6"> finds </span><span class="rvts40">nothing</span><span class="rvts6">, and reports, "Bottom of data reached".</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Hmm ... that's not right. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">What happened in </span><span class="rvts94">Scene II</span><span class="rvts6"> is not ISPF compatible, and doesn't do anything useful. So, the </span><span class="rvts40">FIND</span><span class="rvts6"> command was recently </span><span class="rvts40">exempted</span><span class="rvts6"> from the general line-range-defining role of </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> and </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6">, in the name of ISPF compatibility, to make it possible to </span><span class="rvts40">FIND</span><span class="rvts6"> with an active/pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> block present. Because of that exemption, </span><span class="rvts40">FIND</span><span class="rvts6"> with a pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> works like </span><span class="rvts94">Scene I</span><span class="rvts6"> shows it to work. </span></p>
+<p class="rvps9"><span class="rvts6"> </span></p>
+<p class="rvps2"><span class="rvts94">Act III</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The exemption for </span><span class="rvts40">FIND</span><span class="rvts6"> that was added in </span><span class="rvts94">Act II</span><span class="rvts6"> is great, and solves a big problem. However, that exemption for </span><span class="rvts40">FIND</span><span class="rvts6"> removed the convenience of SPFlite's ability of </span><span class="rvts40">FIND</span><span class="rvts6"> to use </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> and </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> as general command line-ranges, which is also an important and valuable use case - too useful to give up.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, suppose you wanted to quickly count the number of left parentheses in the first 100 lines of the file. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You would </span><span class="rvts40">like</span><span class="rvts6"> to be able to do something this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Scene III</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Put a line command of </span><span class="rvts40">C\ </span><span class="rvts6">on line 100. This applies the </span><span class="rvts40">C</span><span class="rvts6"> command from line 100 back to line 1</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Issue the command </span><span class="rvts40">FIND '(' ALL</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">You would </span><span class="rvts40">like</span><span class="rvts6"> the command to issue a message like, </span><span class="rvts40">CHARS '(' found 45 times</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">But, that won't work, because of the exemption added in </span><span class="rvts94">Act II</span><span class="rvts6">. The block of lines is just "left hanging", and you get a message, </span><span class="rvts40">"Pending Destination line command range</span><span class="rvts6">". So, it doesn't do anything </span><span class="rvts40">wrong</span><span class="rvts6"> - it just doesn't do anything </span><span class="rvts40">period</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To restore that capability, a </span><span class="rvts40">FIND</span><span class="rvts6"> command alias of </span><span class="rvts40">FF</span><span class="rvts6"> has been defined. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">What </span><span class="rvts40">FF</span><span class="rvts6"> does is to treat any pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> line commands as defining the find operation's line range to search for, rather than keeping those lines as "pending" while scrolling through the data. So, the new </span><span class="rvts40">FF</span><span class="rvts6"> command works like the old </span><span class="rvts40">FIND</span><span class="rvts6"> command did, before the </span><span class="rvts40">FIND</span><span class="rvts6"> exemption was put in. That's because </span><span class="rvts40">FF</span><span class="rvts6"> uses &nbsp;pending </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> line commands in the "general" way that other SPFLite primary commands do, and not like the "exempted </span><span class="rvts40">FIND</span><span class="rvts6">" command does.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In other words, the following now </span><span class="rvts40">will</span><span class="rvts6"> </span><span class="rvts40">work</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Scene IV</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Put a line command of </span><span class="rvts40">C\ </span><span class="rvts6">on line 100. This applies the </span><span class="rvts40">C</span><span class="rvts6"> command from line 100 back to line 1</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Issue the command </span><span class="rvts40">FF '(' ALL</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The command </span><span class="rvts40">will</span><span class="rvts6"> issue a message like, </span><span class="rvts40">CHARS '(' found 45 times</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Other than the different name, and the different way that </span><span class="rvts40">C</span><span class="rvts6">/</span><span class="rvts40">CC</span><span class="rvts6"> and </span><span class="rvts40">M</span><span class="rvts6">/</span><span class="rvts40">MM</span><span class="rvts6"> blocks are handled, </span><span class="rvts40">FF</span><span class="rvts6"> and </span><span class="rvts40">FIND</span><span class="rvts6"> are the </span><span class="rvts94">same command</span><span class="rvts6"> and accept exactly the same parameters.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note: &nbsp;</span><span class="rvts35">The Find in Files command </span><span class="rvts36">FF</span><span class="rvts35"> should not be confused with the new </span><span class="rvts36">FF</span><span class="rvts35"> alias for the edit primary command </span><span class="rvts36">FIND</span><span class="rvts35">; the two commands are not related. However, if you issue a File Manager command of </span><span class="rvts36">FF ABC</span><span class="rvts35">, and then open a file listed in the Found FIles FILELIST, you can quickly find the string ABC by retrieving the </span><span class="rvts36">FF</span><span class="rvts35"> command (usually by the command mapped to F12). Assuming there is no outstanding </span><span class="rvts36">CC</span><span class="rvts35"> or </span><span class="rvts36">MM</span><span class="rvts35"> blocks in the edit file, the </span><span class="rvts36">FF ABC</span><span class="rvts35"> in the edit session will find the string ABC within the file, the same way that a regular FIND edit command would. This can be a time-saving shortcut.</span></p>
+<p class="rvps10" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

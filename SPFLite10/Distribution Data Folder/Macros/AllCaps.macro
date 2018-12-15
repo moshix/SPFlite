@@ -1,0 +1,42 @@
+' AllCaps.MACRO
+' Capitalize all words in list 
+' Syntax:   ALLCAPS [X | NX] [WORD | CHARS | PREFIX | SUFFIX] string1 string2 ... 
+'                        --   ---- 
+' 
+' SPFLite version - George Deluca
+' Original REXX Author:  F. DAVID MCRITCHIE, "THE REXX MACROS TOOLBOX" 1989/05/12
+'
+dim wtype, xtype, ptype, str, ccmd as string 
+dim i, AllRC as number 
+
+wtype = "WORD"                                        ' Set default WORD operand
+xtype = "NX"                                          ' Set default X/NX operand
+ptype = ""                                            ' Set default Prefix/Suffix operand
+i = 1                                                 ' Starting operand number
+AllRC = 0                                             ' Global RC
+
+if Get_Arg_Count = 0 then HALT(fail, "No operands detected") ' Better be some ops 
+
+for i = 1 to Get_Arg_Count                            ' Loop through the operands 
+   str = ucase$(Get_Arg$(i))                          ' Get the next operand word
+   if str = "NX" or str = "X" then                    ' Watch for X / NX
+      xtype = str                                     '
+   elseif str = "CHAR" or str = "CHARS" then          ' Watch for CHAR(S) / WORD
+      wtype = ""                                      '
+   elseif str = "WORD" then                           '
+      wtype = "WORD"                                  '
+      ptype = ""                                      '
+   elseif str = "PREFIX" or str = "SUFFIX" then       ' Watch for Prefix / Suffix
+      wtype = ""                                      '
+      ptype = str                                     '
+   else                                               ' Not a keyword, do a CHANGE command then
+      SPF_Cmd("CHANGE ALL " + xtype + " " + wtype + " " + ptype + " " + SPF_Quote$(str) + " " + SPF_Quote$(str)) 
+      if Get_RC = 0 then AllRC = 1                    ' Remember if we were successful
+   end if                                             '
+next                                                  '
+if AllRC = 0 then                                     ' Issue appropriate message
+   Set_Msg(8, "None of the strings were found")       '
+else                                                  '
+   Set_Msg(0, "")                                     '
+end if                                                '
+halt                                                  ' Done

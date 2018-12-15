@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Command Chaining</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Command Chaining">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Command Chaining" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithCommandChaining"
+		  data-hnd-context="247"
+		  data-hnd-title="Working with Command Chaining"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Command Chaining</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts40">Introduction</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite provides a new editing concept: </span><span class="rvts40">Command Chaining</span><span class="rvts6">. To help you understand this concept as quickly as possible, the key features of Command Chaining are presented below in question and answer format.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What is Command Chaining ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Command Chaining allows you to perform a series of Edit primary commands, passing a common set of data lines from one command to the next, so you can apply several command operations to the same set of lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Only Primary commands can be chained.&nbsp;</span><span class="rvts6"> There is presently no support to chain </span><span class="rvts40">line</span><span class="rvts6"> commands. This facility could properly be called the "Primary Command Chaining" facility, but we'll drop the “Primary” to be brief.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Command Chaining only applies to data lines, not to “special” lines like NOTE lines.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What kind of primary commands can be chained ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Chaining of primary commands is provided to perform a set of operations on a related set of data lines. Such commands are called </span><span class="rvts40">chainable</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Chainable commands can be found in the Primary Commands section of the Help document. Only commands that show a </span><span class="rvts40">syntax</span><span class="rvts6"> containing a </span><span class="rvts40">line-control-range</span><span class="rvts6"> operand are chainable. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Commands like </span><span class="rvts40">UP</span><span class="rvts6"> and </span><span class="rvts40">DOWN</span><span class="rvts6"> do not take a line-control-range, so they are not chainable. However, "non-chainable" commands have no impact on commands that </span><span class="rvts40">are</span><span class="rvts6"> chainable. So, if a non-chainable command like </span><span class="rvts40">UP</span><span class="rvts6"> or </span><span class="rvts40">DOWN</span><span class="rvts6"> is issued in between chainable commands, it does not affect or disturb the way the chain operates. In this sense, non-chainable commands are "ignored" for purposes of the command chain.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Is Command Chaining related to issuing multiple commands using a command separator ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">No, not directly. The command separator character, normally the </span><span class="rvts286">;</span><span class="rvts6"> semicolon, allows you to issue more than one primary command on the same Edit primary command line. For example,</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps136"><span class="rvts286">X ALL ; FIND ABC ALL</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">first excludes all lines in the file, and then finds (and unexcludes) all lines containing the string </span><span class="rvts40">ABC</span><span class="rvts6">. However, the </span><span class="rvts40">X</span><span class="rvts6"> and </span><span class="rvts40">FIND</span><span class="rvts6"> commands have no relationship to each other. They are simply two commands that happen to be performed one after the other.&nbsp;</span><span class="rvts40"> These two commands here are </span><span class="rvts182">not</span><span class="rvts40"> a command chain</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may find issuing a command chain using multiple commands separated by semicolon to be convenient, but that is not required. Chained commands can also be issued individually, without the semicolon notation.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Why would I want to use Command Chaining ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The main reason to do this is when you want to apply a number of commands to a set of lines that are determined by the outcome of some initial command like </span><span class="rvts40">FIND ALL</span><span class="rvts6"> or </span><span class="rvts40">CHANGE ALL</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Couldn't I use regular tags, X|NX lines, or U|NU lines to do what Command Chaining does ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Yes, and for some situations, you may still want to do that. However, those techniques require a "set-up phase" where you have to define a set of tagged or marked lines. That is useful if your set of lines is "going to be around for a while".</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The advantage of Command Chaining is that when you have a common set of lines needed by several commands, but it's a "one time" situation, using a Command Chain is easier, because you don't need any "set-up" process. You can simply chain your commands together, without needing to first define tags or User Lines, and then having to remove such tags or User-Line marks afterwards.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">How is Command Chaining different than multiple commands per command line ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">SPFLite maintains “lists” of which lines are “involved” in a particular command. You can then use one of these “lists” in a subsequent command. The use of a such a list is how command chaining is implemented.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The multiple commands involved in a sequence of chained commands can appear on one primary command line (separated by semicolons), or on separate lines. So, the two features can be combined or used individually, since they are separate and distinct concepts.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What do I need to know about these “lists” of lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For Command Chaining, SPFLite deals with four kinds of “lists” of data lines when executing a primary command. These are </span><span class="rvts40">eligible</span><span class="rvts6"> lines, </span><span class="rvts40">reached</span><span class="rvts6"> lines, </span><span class="rvts40">affected</span><span class="rvts6"> lines and </span><span class="rvts40">unaffected</span><span class="rvts6"> lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Each list of lines may contain zero or more data lines, and are discussed below.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What are </span><span class="rvts173">eligible</span><span class="rvts40"> lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a primary command is issued that accepts a line-control-range operand, SPFLite takes into account any </span><span class="rvts40">X|NX</span><span class="rvts6">, </span><span class="rvts40">U|NU</span><span class="rvts6">, line-range labels and/or tags that may be specified, and whether </span><span class="rvts40">PREV</span><span class="rvts6">, </span><span class="rvts40">NEXT</span><span class="rvts6">, </span><span class="rvts40">FIRST</span><span class="rvts6">, </span><span class="rvts40">LAST</span><span class="rvts6"> or </span><span class="rvts40">ALL</span><span class="rvts6"> is used, as well as any implied operands. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The list of all lines that SPFLite could possibly look at, in order to perform a command such as </span><span class="rvts40">CHANGE</span><span class="rvts6">, is the </span><span class="rvts40">eligible</span><span class="rvts140"> </span><span class="rvts40">list</span><span class="rvts140">.&nbsp;</span><span class="rvts140"> </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Unless a data line is eligible, it will not be involved in command chaining.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What are </span><span class="rvts173">reached</span><span class="rvts40"> lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A reached line is an eligible line that a primary command has “looked at” in the course of its operation. The list of all reached lines is the </span><span class="rvts40">reached list</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Why would the </span><span class="rvts173">reached lines</span><span class="rvts40"> be different than the </span><span class="rvts173">eligible lines</span><span class="rvts40">?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The main reason is whether the operand </span><span class="rvts40">ALL</span><span class="rvts6"> appeared on the command, or if </span><span class="rvts40">ALL</span><span class="rvts6"> was implied by a particular command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, suppose you had a 10 line file, and only line 5 contains the string </span><span class="rvts40">ABC</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If the file is positioned at the Top of Data, and you said </span><span class="rvts40">CHANGE ABC DEF</span><span class="rvts6">, the command has an implied </span><span class="rvts40">NEXT</span><span class="rvts6"> operand. That is, it will change the next </span><span class="rvts40">ABC</span><span class="rvts6"> into </span><span class="rvts40">DEF</span><span class="rvts6">, if one exists. In your file, the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command would start at line 1 looking for </span><span class="rvts40">ABC</span><span class="rvts6">. When it got to line 5, it finds </span><span class="rvts40">ABC</span><span class="rvts6">, changes it to </span><span class="rvts40">DEF</span><span class="rvts6">, and stops. So, it has </span><span class="rvts40">reached</span><span class="rvts6"> lines 1 through 5, because it had to “look” at those lines in order to find the first </span><span class="rvts40">ABC</span><span class="rvts6"> (the “next” one, starting from line 1). Since the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command stopped looking after it got to line 5,</span><span class="rvts40"> lines 6 through 10 were not reached.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">However, if you said, </span><span class="rvts40">CHANGE ABC DEF ALL</span><span class="rvts6">, SPFLite has to “look” at every line in the file, to be certain that every occurrence of </span><span class="rvts40">ABC</span><span class="rvts6"> is located. Thus, it will have </span><span class="rvts40">reached</span><span class="rvts6"> all lines in the file, from 1 to 10. In that case, the command will have reached every eligible line, and so the eligible list and the reached list would be the same set of lines.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">How can I remember the difference between </span><span class="rvts173">eligible</span><span class="rvts40"> and </span><span class="rvts173">reached</span><span class="rvts40"> lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a primary command has the </span><span class="rvts40">ALL</span><span class="rvts6"> operand, the eligible and reached lines will be the same. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When certain primary commands like </span><span class="rvts40">UC</span><span class="rvts6"> are used, they are applied to all lines in the line-control-range, even if you don't use the </span><span class="rvts40">ALL</span><span class="rvts6"> keyword. For </span><span class="rvts40">UC</span><span class="rvts6">, the “</span><span class="rvts40">ALL</span><span class="rvts6">” is implied. In such commands, the eligible and reached lines will be the same.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When the primary command does not have either an explicit </span><span class="rvts40">ALL</span><span class="rvts6"> or an implied </span><span class="rvts40">ALL</span><span class="rvts6">, it is possible the number lines reached is fewer than the number of eligible lines.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What are </span><span class="rvts173">affected</span><span class="rvts40"> lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">An</span><span class="rvts140"> </span><span class="rvts40">affected line </span><span class="rvts6">is a </span><span class="rvts140">reached</span><span class="rvts6"> line on which the primary command does something, such as find or change a string, or modify the data on the line in some way. The list of all affected lines is the </span><span class="rvts40">affected list</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What are </span><span class="rvts173">unaffected</span><span class="rvts40"> lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">An unaffected line is a </span><span class="rvts140">reached</span><span class="rvts6"> line on which the primary command did not find a search string or otherwise did not modify the data on the line in any way. The list of all unaffected lines is the </span><span class="rvts40">unaffected list</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To be precise, an unaffected line is a reached line that does not fall under the category of “affected”. That is, you could say,</span><span class="rvts40"> unaffected = reached – affected</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">How do I reference the various types of lines that SPFLite maintains ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Because each of these various sets of lines could contain zero or more lines of data, and they might not be contiguous (adjacent) lines, it is very similar to the way SPFLite handles user-defined tags. Thus, SPFLite uses </span><span class="rvts40">tag notation</span><span class="rvts6"> to describe these lists of lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The tags for these lines begin with a </span><span class="rvts40">Z</span><span class="rvts6">, and so they are called “</span><span class="rvts40">Z tags</span><span class="rvts6">”.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">You refer to the list of </span><span class="rvts40">reached</span><span class="rvts6"> lines using the tag </span><span class="rvts139">:Z</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">You refer to the list of </span><span class="rvts40">affected</span><span class="rvts6"> lines using the tag </span><span class="rvts139">:ZF</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">You refer to the list of </span><span class="rvts40">non-affected</span><span class="rvts6"> lines using the tag </span><span class="rvts139">:ZNF</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The list of </span><span class="rvts40">eligible</span><span class="rvts6"> lines for a given command is internally managed by SPFLite.&nbsp;</span><span class="rvts40"> There is no Z tag for the eligible list.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What do I need to know about Z tags ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">A Z tag is a “special” tag defined by SPFLite. You cannot place a Z tag in the sequence area (line-number field) of a data line, either manually, with a key mapping, or with a macro.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">A Z tag is specified on a primary command, just like a “regular” tag that you defined yourself.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">A primary command cannot contain both a Z tag and a regular user-defined tag.</span></li>
+</ul>
+<p class="rvps73"><span class="rvts6"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">A Z tag represents a “condition” or “state” of a data line, based on the outcome of a prior command, and is not an actual tag in the conventional sense. That means a data line which is referenced by a Z tag in a chained command could already have a regular user-defined tag. The two uses do not conflict.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">When are the affected lines the same as the reached lines ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a command like</span><span class="rvts40"> FIND ABC ALL</span><span class="rvts6"> is executed, some lines may have </span><span class="rvts40">ABC</span><span class="rvts6"> and some lines may not. So, for any given line, the outcome of the search for the string </span><span class="rvts40">ABC</span><span class="rvts6"> is </span><span class="rvts40">conditional</span><span class="rvts6">, because it may or may not be found. In such cases </span><span class="rvts40">:Z</span><span class="rvts6"> and </span><span class="rvts40">:ZF</span><span class="rvts6"> may not contain the same list of lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For commands like </span><span class="rvts40">UC</span><span class="rvts6">, every eligible line is converted to upper case, and so it is </span><span class="rvts40">unconditional</span><span class="rvts6">, since it is not dependent on whether a string is found or not.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If a command is unconditional, the lines reached and the lines affected will be the same. That means in such cases that </span><span class="rvts40">:Z</span><span class="rvts6"> and </span><span class="rvts40">:ZF</span><span class="rvts6"> will contain the same list of lines, and so</span><span class="rvts40"> :Z</span><span class="rvts6"> and</span><span class="rvts40"> :ZF</span><span class="rvts6"> could be used interchangeably for such commands.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Which command and which lines do Z tags refer to ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a Z tag appears on a primary command, it</span><span class="rvts40"> refers back</span><span class="rvts6"> to the prior primary command that</span><span class="rvts40"> immediately preceded</span><span class="rvts6"> the command where the Z tag itself appears.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, consider the following command chain:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps136"><span class="rvts139">FIND ABC ALL ; UC :ZF</span></p>
+<p class="rvps136"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The Z tag </span><span class="rvts40">:ZF</span><span class="rvts6"> refers back to the command which immediately preceded it, which is the </span><span class="rvts40">FIND</span><span class="rvts6"> command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In this example, SPFLite </span><span class="rvts40">creates</span><span class="rvts6"> the various Z lists for the </span><span class="rvts40">current</span><span class="rvts6"> command, but you </span><span class="rvts40">refer</span><span class="rvts6"> to lists that were created on the </span><span class="rvts40">previous</span><span class="rvts6"> command using the Z tags.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">That only makes sense. A Z tag like </span><span class="rvts139">:ZF</span><span class="rvts6"> couldn't refer to lines on the </span><span class="rvts140">current</span><span class="rvts6"> command, because </span><span class="rvts139">:ZF</span><span class="rvts6"> is a list of lines that had been found </span><span class="rvts140">already</span><span class="rvts6">, and that list of lines is the very place where the current command is going to 'look' to perform its operations. If </span><span class="rvts139">:ZF</span><span class="rvts6"> meant lines on the </span><span class="rvts140">current</span><span class="rvts6"> command, it would be referring to "found" lines that hadn't even been found yet.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">A Z tag never refers to lines that are reached, affected or unaffected by the command that a Z tag itself appears on.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, in the command,</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps136"><span class="rvts139">CHANGE ABC DEF ALL :ZF</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">the Z tag </span><span class="rvts40">:ZF</span><span class="rvts6"> does </span><span class="rvts40">not</span><span class="rvts6"> refer to any lines changed by this CHANGE command </span><span class="rvts40">itself</span><span class="rvts6">, but by whatever command immediately </span><span class="rvts40">preceded</span><span class="rvts6"> this CHANGE command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A Z tag </span><span class="rvts40">always "points to the left"</span><span class="rvts6"> to the prior command.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Do the Z tags :ZF and :ZNF mean Found and Not Found ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Sometimes, but not always. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">For the </span><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6"> commands, </span><span class="rvts40">:ZF</span><span class="rvts6"> is the list of all reached lines where the search string was </span><span class="rvts40">Found</span><span class="rvts6">. The </span><span class="rvts40">:ZNF</span><span class="rvts6"> tag is the list of all reached lines where the search string was </span><span class="rvts40">Not Found</span><span class="rvts6">. (Of course, for </span><span class="rvts40">CHANGE</span><span class="rvts6">, the command has to </span><span class="rvts40">find</span><span class="rvts6"> a string first in order to </span><span class="rvts40">change</span><span class="rvts6"> it.) &nbsp;For these cases, this may help you to remember which Z tag means what.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 50px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps135"><span class="rvts6">For other types of commands, if you think of the reached lines as the “Z lines”, then </span><span class="rvts40">:ZF</span><span class="rvts6"> is the set of “</span><span class="rvts40">Z</span><span class="rvts6"> lines” that were "Found to be affected" by the command, and </span><span class="rvts40">:ZNF</span><span class="rvts6"> is the set of “</span><span class="rvts40">Z</span><span class="rvts6"> lines” that were "Not Found to be affected" by the command.</span></li>
+</ul>
+<p class="rvps135"><span class="rvts6"><br/></span></p>
+<p class="rvps137"><span class="rvts6">Presently, any chainable commands that take a search string are conditional commands, and will define the</span><span class="rvts40"> :ZF</span><span class="rvts6"> and</span><span class="rvts40"> :ZNF</span><span class="rvts6"> tags in a way that will mean Found or Not Found. Commands like </span><span class="rvts40">UC</span><span class="rvts6"> that are unconditional also define the</span><span class="rvts40"> :ZF</span><span class="rvts6"> and</span><span class="rvts40"> :ZNF</span><span class="rvts6"> tags, but they are not important, and you only need to be concerned with the</span><span class="rvts40"> </span><span class="rvts6">tag </span><span class="rvts40">:Z</span><span class="rvts6"> for these commands.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">How is the notion of affected and unaffected lines handled for “Negative logic” commands like NFIND ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For </span><span class="rvts40">NFIND</span><span class="rvts6">, the command locates all lines that do </span><span class="rvts40">not</span><span class="rvts6"> contain a search string. So, the object of the </span><span class="rvts40">NFIND</span><span class="rvts6"> command is to </span><span class="rvts40">find</span><span class="rvts6"> </span><span class="rvts40">lines</span><span class="rvts6"> rather than to </span><span class="rvts40">find</span><span class="rvts6"> </span><span class="rvts40">strings</span><span class="rvts6">. That is, the lines located by </span><span class="rvts40">NFIND ABC ALL</span><span class="rvts6"> are the lines that did </span><span class="rvts40">not</span><span class="rvts6"> contain </span><span class="rvts40">ABC.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If SPFLite strictly followed the rules discussed above, lines </span><span class="rvts40">not</span><span class="rvts6"> containing the search string would be the "affected" lines, which would be represented by </span><span class="rvts40">:ZF</span><span class="rvts6">, rather than by by </span><span class="rvts40">:ZNF</span><span class="rvts6">. For example, the commands </span><span class="rvts40">X ALL ; NFIND ABC ALL</span><span class="rvts6"> would result in unexcluding all lines not containing </span><span class="rvts40">ABC</span><span class="rvts6">. So, the </span><span class="rvts94">finding</span><span class="rvts6"> of </span><span class="rvts40">ABC</span><span class="rvts6">, and the unexcluding </span><span class="rvts94">affect</span><span class="rvts6">, </span><span class="rvts40">would never occur on the same lines.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">That would have meant that the Z tag</span><span class="rvts40"> :ZF</span><span class="rvts6"> would be the list of lines where ABC was </span><span class="rvts40">not</span><span class="rvts6"> found, and </span><span class="rvts40">:ZNF</span><span class="rvts6"> would be where ABC </span><span class="rvts40">was</span><span class="rvts6"> found.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Most users would see that as "backwards" and find it hard to understand or remember.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">To avoid this confusion,</span><span class="rvts6"> in cases where "Negative logic" commands are used that specify a search string:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">the Z tag </span><span class="rvts40">:ZF</span><span class="rvts6"> will always represent lines where the search string was </span><span class="rvts40">Found</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">the Z tag </span><span class="rvts40">:ZNF</span><span class="rvts6"> will always represent lines where the search string was</span><span class="rvts40"> Not Found</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">So, you can always think of</span><span class="rvts40"> :ZF</span><span class="rvts6"> and :</span><span class="rvts40">ZNF</span><span class="rvts6"> as representing lines where a search string was either </span><span class="rvts40">Found</span><span class="rvts6">, or </span><span class="rvts40">Not Found</span><span class="rvts6">, regardless of whether the command was a "Positive logic" or a "Negative logic" type.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Bear in mind that "Negative logic" commands always require a search string, since they act on lines where the string is not found.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The commands affected by this are </span><span class="rvts40">NDELETE</span><span class="rvts6">, </span><span class="rvts40">NFIND</span><span class="rvts6">, </span><span class="rvts40">NEXCLUDE</span><span class="rvts6">, </span><span class="rvts40">NFLIP</span><span class="rvts6">, </span><span class="rvts40">NREVERT</span><span class="rvts6">, </span><span class="rvts40">NULINE</span><span class="rvts6"> and </span><span class="rvts40">NSHOW</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">How are DELETE and NDELETE commands with search strings handled ?</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a command of the form </span><span class="rvts40">DELETE ABC ALL</span><span class="rvts6"> is issued, every line where </span><span class="rvts40">ABC</span><span class="rvts6"> is found is deleted. Since every "affected" line is now gone, </span><span class="rvts40">the affected list is empty</span><span class="rvts6">. That means the Z tag </span><span class="rvts40">:ZF</span><span class="rvts6"> will have no lines. Any reached lines that were </span><span class="rvts40">not</span><span class="rvts6"> deleted because ABC was </span><span class="rvts40">not</span><span class="rvts6"> found will be in </span><span class="rvts40">:ZNF</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Likewise, when a command of the form </span><span class="rvts40">NDELETE ABC ALL</span><span class="rvts6"> is issued, every line where </span><span class="rvts40">ABC</span><span class="rvts6"> is </span><span class="rvts40">not</span><span class="rvts6"> found is deleted. Since every "affected" line is now gone, the affected list is empty. However, because of the considerations noted above about "Negative logic" commands, the roles of </span><span class="rvts40">:ZF</span><span class="rvts6"> and </span><span class="rvts40">:ZNF</span><span class="rvts6"> are reversed in this command, so that they reflect whether the search string was found or not. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">That means, for </span><span class="rvts40">NDELETE</span><span class="rvts6">, the Z tag </span><span class="rvts40">:ZNF</span><span class="rvts6"> will have no lines, because the command requests that any lines where </span><span class="rvts40">ABC</span><span class="rvts6"> is not found is to be deleted. (There are no longer any "not found" lines, because the command got rid of them all.) &nbsp;Any reached lines that were </span><span class="rvts40">not</span><span class="rvts6"> deleted because ABC </span><span class="rvts40">was</span><span class="rvts6"> found (</span><span class="rvts40">that is, lines where ABC can still be found</span><span class="rvts6">) will be in </span><span class="rvts40">:ZF</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">What happens if a command chain is used out of context ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The first time you issue a command in an Edit session, since no prior command has been issued, the Z tags </span><span class="rvts40">:Z</span><span class="rvts6">, </span><span class="rvts40">:ZF</span><span class="rvts6"> and </span><span class="rvts40">:ZNF</span><span class="rvts6"> are empty and do not refer to any lines in your file.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you attempt to reference a &nbsp;Z tag of </span><span class="rvts40">:Z</span><span class="rvts6">, </span><span class="rvts40">:ZF</span><span class="rvts6"> and </span><span class="rvts40">:ZNF</span><span class="rvts6"> when it is empty or undefined, you will just get a "not found" or "end of data reached" condition.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Are </span><span class="rvts182">line</span><span class="rvts40"> commands permitted within a primary command chain ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Yes. You can intersperse one or more line commands in between primary commands. A Z tag on a primary command refers back to the last </span><span class="rvts40">primary</span><span class="rvts6"> command, not to any </span><span class="rvts40">line</span><span class="rvts6"> commands you may have issued. The line commands do not affect or disturb the way the "chain" operates.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As noted above, commands like </span><span class="rvts40">UP</span><span class="rvts6"> and </span><span class="rvts40">DOWN</span><span class="rvts6"> are not "chainable" but may appear in between primary commands that are chainable. Thus, you can use </span><span class="rvts40">UP</span><span class="rvts6"> and </span><span class="rvts40">DOWN</span><span class="rvts6"> (probably mapped to Page Up and Page Down keys) to locate a line on which you want to issue one or more line commands, before resuming the use of primary commands within a chain.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Can the LINE primary command be used in chaining ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Yes</span><span class="rvts40">. LINE</span><span class="rvts6"> is a regular primary command that accepts a line-control-range operand, and so it can be chained.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Can an unconditional command be simulated as a conditional one for chaining purposes ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Sometimes. For example, the </span><span class="rvts40">UC</span><span class="rvts6"> command unconditionally converts all lines to upper case. This is "unconditional" in the sense that lines that are already in upper case, lines with no alphabetic data, and even blank lines can be "successfully" converted to upper case.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Suppose you wanted </span><span class="rvts40">UC</span><span class="rvts6"> to be conditional, and you wanted to shift all data lines 4 columns to the right if any data lines contained lower cases letters that were converted to upper case letters. Here is how you could do it:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">FIND P'&lt;' ALL .1 .100 ; UC :ZF ALL ; LINE ')4' ALL :Z</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts40">FIND</span><span class="rvts6"> locates all lines having any lower case letters. The </span><span class="rvts40">UC</span><span class="rvts6"> converts only those lines with lower case to upper case. The </span><span class="rvts40">LINE</span><span class="rvts6"> command applies the right-shift 4 line command </span><span class="rvts40">)4</span><span class="rvts6"> to all the lines processed by </span><span class="rvts40">UC</span><span class="rvts6">, which were the lines found to have lower case letters by </span><span class="rvts40">FIND</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Such techniques will work in some, but not all, cases. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Where this cannot be applied, you may need to use traditional tags, </span><span class="rvts40">X|NX</span><span class="rvts6"> lines, </span><span class="rvts40">U|NU</span><span class="rvts6"> lines, or macros to accomplish your task.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">If I use multiple commands per command line, where are the messages for them displayed ?</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When multiple commands per command line are used (separated by semicolon), the message issued by the </span><span class="rvts40">last</span><span class="rvts6"> command will appear on the edit screen, preceded by a </span><span class="rvts40">+</span><span class="rvts6"> plus sign. If you issue the </span><span class="rvts40">HELP</span><span class="rvts6"> command (usually mapped to the </span><span class="rvts40">F1</span><span class="rvts6"> key) a popup will display the messages produced by each command, in the order issued.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Messages for multiple commands are handled this way regardless of whether the commands involve chaining or not.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Example of command chaining</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Suppose you wanted to perform a </span><span class="rvts40">CHANGE</span><span class="rvts6"> on a set of lines, then you wanted to convert all of those lines just changed to upper case, and finally you wanted to shift all of those lines 4 columns to the right. How might you go about such a task?</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps134"><span class="rvts139">CHANGE ABC DEF .1 .100 ALL ; UC :ZF ALL ; LINE ')4' ALL :Z</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note: The </span><span class="rvts40">UC</span><span class="rvts6"> applies to all lines changed by the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command, so </span><span class="rvts40">:ZF</span><span class="rvts6"> is required. Since </span><span class="rvts40">UC</span><span class="rvts6"> is an unconditional command, either </span><span class="rvts40">:Z</span><span class="rvts6"> or </span><span class="rvts40">:ZF</span><span class="rvts6"> would work for the </span><span class="rvts40">LINE</span><span class="rvts6"> command; they would have the same set of lines defined. We use</span><span class="rvts40"> :Z</span><span class="rvts6"> here instead of </span><span class="rvts40">:ZF</span><span class="rvts6"> because it is shorter.</span></p>
+<p class="rvps2" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

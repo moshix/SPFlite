@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Line Control Range Specification</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Line Control Range Specification">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Line Control Range Specification" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="PCLineRange"
+		  data-hnd-context="82"
+		  data-hnd-title="Line Control Range Specification"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Line Control Range Specification</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps224"><span class="rvts284">Many of the primary commands support line range operands to specify the specific lines which the command is to work on. Rather than repeat these details in each command syntax diagram, whenever the parameter </span><span class="rvts285">line-range-operand</span><span class="rvts284"> appears, the following operands can be substituted.</span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Syntax</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts88"><br/></span></p>
+<p class="rvps225"><span class="rvts88">[</span></p>
+<p class="rvps225"><span class="rvts88"> &nbsp;{ .start-label &nbsp;| .start-line-number | Relative-start-label } </span></p>
+<p class="rvps225"><span class="rvts88"><br/></span></p>
+<p class="rvps225"><span class="rvts88"> &nbsp; &nbsp;[ </span><span class="rvts385">AND</span><span class="rvts88"> &nbsp;| &nbsp;OR ]</span></p>
+<p class="rvps225"><span class="rvts88"> </span></p>
+<p class="rvps225"><span class="rvts88"> &nbsp;[ {.end-label &nbsp;| &nbsp; .end-line-number | Relative-end-label } ]</span></p>
+<p class="rvps225"><span class="rvts88">]</span></p>
+<p class="rvps225"><span class="rvts88"><br/></span></p>
+<p class="rvps225"><span class="rvts88">[</span></p>
+<p class="rvps225"><span class="rvts88"> &nbsp;{ :tag | Relative-tag }</span></p>
+<p class="rvps225"><span class="rvts88">]</span></p>
+<p class="rvps225"><span class="rvts88"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts285">Alternative Line Command Specification - CC and MM Blocks</span></p>
+<p class="rvps225"><span class="rvts284"><br/></span></p>
+<p class="rvps226"><span class="rvts284">In addition to the line number ranges being specified on the command line, all Primary commands which accept line-range-operand format will also accept the line range via line commands. The </span><a class="rvts339" href="C.html">C/CC</a><span class="rvts284"> and </span><a class="rvts339" href="M.html">M/MM</a><span class="rvts284"> line commands can be used to mark the lines to be used and then the primary command entered without a line range specification.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts11">Single character text selection operands</span></p>
+<p class="rvps225"><span class="rvts11"><br/></span></p>
+<p class="rvps226"><span class="rvts12">An optional shortcut method is available for entering the line range operands if suitable. When a text area is selected via a mouse-drag operation of via keyboard Shift-arrow keys, the line and column range of the selected text is remembered for future re-use. If you enter the single character </span><span class="rvts11">#</span><span class="rvts12"> in the command line, it will be substituted with the start/end line numbers of the select block. e.g &nbsp;</span><span class="rvts11">#</span><span class="rvts12"> could end up as </span><span class="rvts11">.20 .30 </span><span class="rvts12">if that were the previous selected line range.</span></p>
+<p class="rvps226"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts285"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Operands</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">start-line-number</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should specify the starting line number of a range. This will be either a simple numeric value, or, for those primary commands like </span><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6"> that also support column range operands, the value should be a dotted numeric to distinguish it from the column operand(s). e.g. </span><span class="rvts40">.123</span><span class="rvts6"> would describe line 000123.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">start-label</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a valid label of an existing line to use as the start of range. e.g. </span><span class="rvts40">.from</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">relative-start-label</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a properly formed relative label. A relative label is one which, between the initial period and the first character of the label name, contains one of the conditional operands of </span><span class="rvts40">&lt;</span><span class="rvts6">, </span><span class="rvts40">&gt;, &lt;=</span><span class="rvts6">, </span><span class="rvts40">&gt;=</span><span class="rvts6">, </span><span class="rvts40">\</span><span class="rvts6">, </span><span class="rvts40">¬, </span><span class="rvts6">or </span><span class="rvts40">&lt;&gt;</span><span class="rvts6">. e.g. </span><span class="rvts40">.&lt;ABC</span><span class="rvts6"> or </span><span class="rvts40">.&lt;&gt;DD</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The conditional operands have their normal meanings of equal, less than, greater than, less than or equal, greater than or equal, and not equal. </span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts40">Note:</span><span class="rvts6"> that when both a start-label and an end-label are specified, and no relative operands are coded, the start-label &nbsp;is assumed to be coded as </span><span class="rvts40">&gt;= </span><span class="rvts6">and the end-label coded as </span><span class="rvts40">&lt;=</span><span class="rvts6">. to match prior SPFLite line range conventions. Together with the default of </span><span class="rvts40">AND</span><span class="rvts6"> (next topic), this provides the normal range request of 'all lines from </span><span class="rvts40">:A</span><span class="rvts6"> thru </span><span class="rvts40">:B</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts182">AND</span><span class="rvts40"> &nbsp;| &nbsp;OR</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">You may optionally code </span><span class="rvts40">AND</span><span class="rvts6"> or </span><span class="rvts40">OR</span><span class="rvts6"> between the start and end label references. If you code neither, </span><span class="rvts40">AND</span><span class="rvts6"> is always assumed.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">This enables you to code requests such as:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139">.&lt;ABC OR .&gt;DEF</span></p>
+<p class="rvps9"><span class="rvts139"><br/></span></p>
+<p class="rvps2"><span class="rvts387">which would request all lines </span><span class="rvts386">before</span><span class="rvts387"> .ABC and all lines </span><span class="rvts386">after</span><span class="rvts387"> .DEF</span></p>
+<p class="rvps2"><span class="rvts387"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">end-line-number</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should specify the ending line number of a range. This will be either a simple numeric value, or, for those primary commands like </span><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6"> that also support column range operands, the value should be a dotted numeric to distinguish it from the column operand(s). e.g. </span><span class="rvts40">.456</span><span class="rvts6"> would describe line 000456.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">end-label</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a valid label of an existing line to use as end of range. e.g. </span><span class="rvts40">.to</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">relative-end-label</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a properly formed relative label. A relative label is one which, between the initial period and the first character of the label name, contains one of the conditional operands of </span><span class="rvts40">&lt;</span><span class="rvts6">, </span><span class="rvts40">&gt;, &lt;=</span><span class="rvts6">, </span><span class="rvts40">&gt;=</span><span class="rvts6">, </span><span class="rvts40">\</span><span class="rvts6">, </span><span class="rvts40">¬, </span><span class="rvts6">or </span><span class="rvts40">&lt;&gt;</span><span class="rvts6">. e.g. </span><span class="rvts40">.&lt;ABC</span><span class="rvts6"> or </span><span class="rvts40">.&lt;&gt;DD</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The conditional operands have their normal meanings of equal, less than, greater than, less than or equal, greater than or equal, and not equal.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">:tag</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a valid tagname in the file. The 'range' of lines processed will be ALL lines which are currently tagged with the specified tagname. e.g. </span><span class="rvts40">:XXX</span><span class="rvts6"> would refer to </span><span class="rvts40">all</span><span class="rvts6"> lines which are marked with the </span><span class="rvts40">:XXX</span><span class="rvts6"> tagname.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">relative-tag</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">This should be a properly formed relative tag. A relative label is one which, between the initial colon and the first character of the label name, contains one of the conditional operands of </span><span class="rvts40">=</span><span class="rvts6">, &nbsp;</span><span class="rvts40">\</span><span class="rvts6">, </span><span class="rvts40">¬, </span><span class="rvts6">or </span><span class="rvts40">&lt;&gt;</span><span class="rvts6">. e.g. </span><span class="rvts40">:=ABC</span><span class="rvts6"> or </span><span class="rvts40">:&lt;&gt;DD</span><span class="rvts6">. Note that because tag-names can be present on multiple lines in the file, only equal and not equal conditions can be specified.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The conditional operands have their normal meanings of equal and not equal.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Description</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<p class="rvps9"><span class="rvts284">The following examples should make this much clearer. They are shown using a </span><span class="rvts285">FIND</span><span class="rvts284"> command, but line range processing applies to many of the Primary commands:</span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "ABC" 1 10 .AAA .BBB</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "ABC" in columns 1 to 10 on lines from the line labeled .AAA to the line labeled .BBB.</span></p>
+<p class="rvps9"><span class="rvts383"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "DEF" 3 30 .110 .120</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "DEF" in columns 3 to 30 on lines 110 thru 120.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "GHI" 3 30 .110 .120 :T</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "GHI" in columns 3 to 30 on lines tagged with :T, in lines 110 thru 120.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "JKL" .&lt;PROC</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "JKL" anywhere on lines from the top of file up to the line preceding the line labeled .PROC. i.e. the range requested is all lines whose line number is </span><span class="rvts384">less than</span><span class="rvts383"> the line labeled .PROC.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "MNO" 3 8 .&gt;=CC .&lt;=DD</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "MNO" in columns 3 to 8 on lines from the line labeled .CC to the line labeled .DD inclusive.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "PQR" :XTAG</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "PQR" anywhere on any line currently tagged with the tag-name </span><span class="rvts384">:XTAG</span><span class="rvts383">.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "STU" :¬BG</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "STU" anywhere on any line </span><span class="rvts384">not</span><span class="rvts383"> currently tagged with tagname </span><span class="rvts89">:BG</span><span class="rvts384">. </span></p>
+<p class="rvps10"><span class="rvts383">The tag notation </span><span class="rvts89">:¬BG</span><span class="rvts383"> can also be specified as </span><span class="rvts89">:&lt;&gt;BG</span><span class="rvts383"> or </span><span class="rvts89">:\BG</span><span class="rvts383"> , and all of these have the same meaning.</span></p>
+<p class="rvps13"><span class="rvts383"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Additional Criteria</span></p>
+<p class="rvps2"><span class="rvts284"><br/></span></p>
+<p class="rvps224"><span class="rvts284">Many of the primary commands provide additional selection abilities (like the</span><span class="rvts285"> X|NX</span><span class="rvts284"> and </span><span class="rvts285">U|NU</span><span class="rvts284"> keyword operands) which work in conjunction with the normal action of the line range operands described above. Check the detailed description of the individual primary command.</span></p>
+<p class="rvps224" style="page-break-before: always;"><span class="rvts297"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

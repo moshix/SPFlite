@@ -1,0 +1,1079 @@
+; %VK_ESCAPE       001
+&H1B, " ", "ESC     ",  32,  32,    1,   12, "N.....", "ESC"
+U/(EraseEOL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F1           002
+&H70, " ", "F1      ",  32,  32,   67,   12, "NSCA..", "F1"
+./!Help
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F2           003
+&H71, " ", "F2      ",  32,  32,  100,   12, "NSCA..", "F2"
+./Reset
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F3           004
+&H72, " ", "F3      ",  32,  32,  133,   12, "NSCA..", "F3"
+./End
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F4           005
+&H73, " ", "F4      ",  32,  32,  166,   12, "NSCA..", "F4"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F5           006
+&H74, " ", "F5      ",  32,  32,  215,   12, "NSCA..", "F5"
+./Rfind
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F6           007
+&H75, " ", "F6      ",  32,  32,  248,   12, "NSCA..", "F6"
+./Rchange
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F7           008
+&H76, " ", "F7      ",  32,  32,  281,   12, "NSCA..", "F7"
+./UP
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F8           009
+&H77, " ", "F8      ",  32,  32,  314,   12, "NSCA..", "F8"
+./DOWN
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F9           010
+&H78, " ", "F9      ",  32,  32,  363,   12, "NSCA..", "F9"
+./SWAP
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F10          011
+&H79, " ", "F10     ",  32,  32,  399,   12, "NSCA..", "F10"
+./LEFT
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F11          012
+&H7A, " ", "F11     ",  32,  32,  432,   12, "NSCA..", "F11"
+./RIGHT
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_F12          013
+&H7B, " ", "F12     ",  32,  32,  465,   12, "NSCA..", "F12"
+./CRETRIEV
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_SNAPSHOT     014
+&H2C, "E", "PrtScr  ",  32,  32,  508,   12, "NSCA.U", "PRTSCR"
+U/(PrtScrnClipboard)
+U/(PrtScrnPrinter)
+U/(PrtTextClipboard)
+U/(PrtScrnLog)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; %VK_SCROLL       015
+&H91, " ", "ScrlLock",  32,  32,  541,   12, "N..A..", "SCRLK"
+./(Record)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_PAUSE        016
+&H13, " ", "Pause   ",  32,  32,  574,   12, "NSCA..", "PAUSE"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_OEM_3        017
+&HC0, " ", "BkQuote ",  32,  32,    1,   55, "NSCA..", "`"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_1            018
+&H31, " ", "I1      ",  32,  32,   34,   55, "NSCA..", "1"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_2            019
+&H32, " ", "I2      ",  32,  32,   67,   55, "NSCA..", "2"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_3            020
+&H33, " ", "I3      ",  32,  32,  100,   55, "NSCA..", "3"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_4            021
+&H34, " ", "I4      ",  32,  32,  133,   55, "NSCA..", "4"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_5            022
+&H35, " ", "I5      ",  32,  32,  166,   55, "NSCA..", "5"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_6            023
+&H36, " ", "I6      ",  32,  32,  199,   55, "NSCA..", "6"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_7            024
+&H37, " ", "I7      ",  32,  32,  232,   55, "NSCA..", "7"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_8            025
+&H38, " ", "I8      ",  32,  32,  265,   55, "NSCA..", "8"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_9            026
+&H39, " ", "I9      ",  32,  32,  298,   55, "NSCA..", "9"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_0            027
+&H30, " ", "I0      ",  32,  32,  331,   55, "NSCA..", "0"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_MINUS    028
+&HBD, " ", "Dash    ",  32,  32,  364,   55, "NSCA..", "-"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_PLUS     029
+&HBB, " ", "Equal   ",  32,  32,  397,   55, "NSCA..", "="
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_BACK         030
+&H08, " ", "Bksp    ",  66,  32,  430,   55, "NSCA..", "BKSP"
+./(BackSpace)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_Tab          031
+&H09, " ", "ITab    ",  48,  32,    1,   88, "NSC...", "TAB"
+./(tab)
+./(backtab)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_Q            032
+&H51, " ", "Q       ",  32,  32,   50,   88, "NSCA..", "Q"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_W            033
+&H57, " ", "W       ",  32,  32,   83,   88, "NSCA..", "W"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_E            034
+&H45, " ", "E       ",  32,  32,  116,   88, "NSCA..", "E"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_R            035
+&H52, " ", "R       ",  32,  32,  149,   88, "NSCA..", "R"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_T            036
+&H54, " ", "T       ",  32,  32,  182,   88, "NSCA..", "T"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_Y            037
+&H59, " ", "Y       ",  32,  32,  215,   88, "NSCA..", "Y"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_U            038
+&H55, " ", "U       ",  32,  32,  248,   88, "NSCA..", "U"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_I            039
+&H49, " ", "I       ",  32,  32,  281,   88, "NSCA..", "I"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_O            040
+&H4F, " ", "O       ",  32,  32,  314,   88, "NSCA..", "O"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_P            041
+&H50, " ", "P       ",  32,  32,  347,   88, "NSCA..", "P"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_4        042
+&HDB, " ", "LSqBrkt ",  32,  32,  380,   88, "NSCA..", "["
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_6        043
+&HDD, " ", "RSqBrkt ",  32,  32,  413,   88, "NSCA..", "]"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_RETURN       044
+&H0D, " ", "Enter   ",  40,  66,  456,   88, "NSCA..", "ENTER"
+./(NewLine)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+;-----------------------------------------------------------------------------------------------
+; %VK_CAPITAL      045
+&H14, " ", "CapsLk  ",  56,  32,    1,  121, ".....D", "CAPSLK"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_A            046
+&H41, " ", "AA      ",  32,  32,   59,  121, "NSCA..", "A"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_S            047
+&H53, " ", "S       ",  32,  32,   92,  121, "NSCA..", "S"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_D            048
+&H44, " ", "D       ",  32,  32,  125,  121, "NSCA..", "D"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_F            049
+&H46, " ", "F       ",  32,  32,  158,  121, "NSCA..", "F"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_G            050
+&H47, " ", "G       ",  32,  32,  191,  121, "NSCA..", "G"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_H            051
+&H48, " ", "H       ",  32,  32,  224,  121, "NSCA..", "H"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_J            052
+&H4A, " ", "J       ",  32,  32,  257,  121, "NSCA..", "J"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_K            053
+&H4B, " ", "K       ",  32,  32,  290,  121, "NSCA..", "K"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_L            054
+&H4C, " ", "L       ",  32,  32,  323,  121, "NSCA..", "L"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_1        055
+&HBA, " ", "SemColon",  32,  32,  356,  121, "NSCA..", ";"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_7        056
+&HDE, " ", "Quote   ",  32,  32,  389,  121, "NSCA..", "'"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_5        057
+&HDC, " ", "BSlash  ",  32,  32,  422,  121, "NSCA..", "\"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+;-----------------------------------------------------------------------------------------------
+; %VK_SHIFT Left   058
+&H10, " ", "Shift2  ",  66,  32,    1,  154, ".....D", "LSHIFT"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_Z            059
+&H5A, " ", "Z       ",  32,  32,   68,  154, "NSCA..", "Z"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_X            060
+&H58, " ", "X       ",  32,  32,  101,  154, "NSCA..", "X"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_C            061
+&H43, " ", "C       ",  32,  32,  134,  154, "NSCA..", "C"
+./(PassThru)
+./(PassThru)
+U/(Copy)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_V            062
+&H56, " ", "V       ",  32,  32,  167,  154, "NSCA..", "V"
+./(PassThru)
+./(PassThru)
+U/(paste)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_B            063
+&H42, " ", "B       ",  32,  32,  200,  154, "NSCA..", "B"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_N            064
+&H4E, " ", "N       ",  32,  32,  233,  154, "NSCA..", "N"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_M            065
+&H4D, " ", "M       ",  32,  32,  266,  154, "NSCA..", "M"
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_COMMA    066
+&HBC, " ", "Comma   ",  32,  32,  299,  154, "NSCA..", ","
+./(Passthru)
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(Passthru)
+; %VK_OEM_PERIOD   067
+&HBE, " ", "Period  ",  32,  32,  332,  154, "NSCA..", "."
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; %VK_OEM_2        068
+&HBF, " ", "Slash   ",  32,  32,  365,  154, "NSCA..", "/"
+./(Passthru)
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(Passthru)
+; %VK_SHIFT Right  069
+&H10, " ", "Shift3  ",  98,  32,  398,  154, ".....D", "RSHIFT"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_CONTROL      070
+&H11, " ", "Ctrl    ",  48,  32,    1,  187, "N....U", "LCTRL"
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; %VK_LWIN         071
+&H5B, " ", "Windows ",  48,  32,   50,  187, ".....D", "LWIN"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_MENU         072
+&H12, " ", "Alt     ",  48,  32,   99,  187, "N....U", "LALT"
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; %VK_SPACE        073
+&H20, " ", "Space   ", 154,  32,  148,  187, "NSCA..", "SPACE"
+./(Passthru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_MENU         074
+&H12, "E", "Alt     ",  48,  32,  303,  187, "N....U", "RALT"
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; %VK_LWIN         075
+&H5C, " ", "Windows ",  48,  32,  351,  187, ".....D", "RWIN"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_APPS         076
+&H5D, "E", "WinMenu ",  48,  32,  400,  187, "NSCA..", "APPMENU"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_CONTOL       077
+&H11, "E", "Ctrl    ",  48,  32,  449,  187, "N....U", "RCTRL"
+U/(Enter)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_INSERT       078
+&H2D, "E", "IInsert ",  32,  32,  508,   55, "NSCA..", "INS"
+./(insert)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_HOME         079
+&H24, "E", "Home    ",  32,  32,  541,   55, "NSCA..", "HOME"
+./(home)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_PGUP         080
+&H21, "E", "PgUp    ",  32,  32,  574,   55, "NSCA..", "PGUP"
+./Up
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_DELETE       081
+&H2E, "E", "Del     ",  32,  32,  508,   88, "NSCA..", "DEL"
+./(delete)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./This entry is Reserved, Do NOT use.
+; %VK_END          082
+&H23, "E", "IEnd    ",  32,  32,  541,   88, "NSCA..", "END"
+./(endofline)
+./(MarkEnd)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_PGDN         083
+&H22, "E", "PgDn    ",  32,  32,  574,   88, "NSCA..", "PGDN"
+./Down
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_UP           084
+&H26, "E", "Up      ",  32,  32,  541,  154, "NSCA..", "UP"
+./(up)
+./(markup)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_DOWN         085
+&H28, "E", "Down    ",  32,  32,  541,  187, "NSCA..", "DOWN"
+./(down)
+./(markdown)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_LEFT         086
+&H25, "E", "ILeft   ",  32,  32,  508,  187, "NSCA..", "LEFT"
+./(left)
+./(markleft)
+./(wordleft)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_RIGHT        087
+&H27, "E", "IRight  ",  32,  32,  574,  187, "NSCA..", "RIGHT"
+./(right)
+./(markright)
+./(wordright)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+;-----------------------------------------------------------------------------------------------
+; %VK_NUMLOCK      088
+&H90, "E", "NumLock ",  32,  32,  617,   55, "NSCA.D", "NUMLK"
+./(Null)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_DIVIDE       089
+&H6F, "E", "KPSlash ",  32,  32,  650,   55, "NSCA..", "KP/"
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_MULITPLY     090
+&H6A, " ", "KPAster ",  32,  32,  683,   55, "NSCA..", "KP*"
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_SUBTRACT     091
+&H6D, " ", "KPMinus ",  32,  32,  716,   55, "NSCA..", "KP-"
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_HOME  7      092
+&H24, " ", "KP7     ",  32,  32,  617,   88, "NSCA..", "KP7"
+./(Home)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_UP    8      093
+&H26, " ", "KP8     ",  32,  32,  650,   88, "NSCA..", "KP8"
+./(Up)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_PGUP  9      094
+&H21, " ", "KP9     ",  32,  32,  683,   88, "NSCA..", "KP9"
+./Up
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_ADD          095
+&H6B, " ", "KPPlus  ",  32,  66,  716,   88, "NSCA..", "KP+"
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_LEFT  4      096
+&H25, " ", "KP4     ",  32,  32,  617,  121, "NSCA..", "KP4"
+./(Left)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_CLEAR 5      097
+&H0C, " ", "KP5     ",  32,  32,  650,  121, "NSCA..", "KP5"
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_RIGHT 6      098
+&H27, " ", "KP6     ",  32,  32,  683,  121, "NSCA..", "KP6"
+./(Right)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_END   1      099
+&H23, " ", "KP1     ",  32,  32,  617,  154, "NSCA..", "KP1"
+./(End)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_DOWN  2      100
+&H28, " ", "KP2     ",  32,  32,  650,  154, "NSCA..", "KP2"
+./(Down)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_PGDN  3      101
+&H22, " ", "KP3     ",  32,  32,  683,  154, "NSCA..", "KP3"
+./Down
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_RETURN       102
+&H0D, "E", "KPEnter ",  32,  66,  716,  154, "NSCA..", "KPENTER"
+./(Enter)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_INSERT 0     103
+&H2D, " ", "KP0     ",  66,  32,  617,  187, "NSCA..", "KP0"
+./(insert)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; %VK_DELETE       104
+&H2E, " ", "KPPeriod",  32,  32,  683,  187, "NSCA..", "KP."
+./(delete)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./This entry is Reserved, Do NOT use.
+; Pseudo LMB Entry 105
+&HFD, " ", "LMB",  32,  32,  617,   12, "NSCA..", "LMB"
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; Pseudo MMB Entry 106
+&HFE, " ", "MMB",  32,  32,  667,   12, "NSCA..", "MMB"
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; Pseudo RMB Entry 107
+&HFF, " ", "RMB",  32,  32,  716,   12, "NSCA..", "RMB"
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)

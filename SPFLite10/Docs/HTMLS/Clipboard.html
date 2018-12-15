@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Windows Clipboard, Cut and Paste</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Windows Clipboard, Cut and Paste">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Windows Clipboard, Cut and Paste" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Clipboard"
+		  data-hnd-context="26"
+		  data-hnd-title="Windows Clipboard, Cut and Paste"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Windows Clipboard, Cut and Paste</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><a class="rvts101" href="Clipboard.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#ClassicISPF-styleCUTandPASTE">Classic ISPF-style CUT and PASTE</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#%20SPFLiteclipboardmode">SPFLite clipboard mode</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#Windows-Stylecutandpaste">Windows-Style cut and paste</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#SPFLiteNamedPrivateClipboards">SPFLite Named Private Clipboards</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#CopyandCutoperations">Copy and Cut operations</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#Pasteoperations">Paste operations</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#HybridCopyprimitive(CopyPaste)">Hybrid Copy primitive (CopyPaste)</a></p>
+<p class="rvps5"><a class="rvts45" href="Clipboard.html#PowerTypingandtheclipboard">Power Typing and the clipboard</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td valign="top" style="padding: 0px;"><p class="rvps5"><span class="rvts12">SPFLite provides two basic methods to support Cut and Paste and the Windows clipboard. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Clipboard support is only for plain-text data. While Windows allows many types of data formats to be stored in the clipboard, only those formats which can be converted to plain text (that is, ANSI characters) can be used. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Technically, Windows categorizes these formats as TEXT, OEMTEXT and UNICODE. The standard ANSI (Windows 1252) character set, which SPFLite uses internally for all its data, is what TEXT is.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">In practice, if you can paste characters into the Windows Notepad editor, and they display correctly, you can probably use them in SPFLite. If you try to paste text from a highly-formatted document in Microsoft Word, for example, you will lose all special formatting and some data may be lost or appear differently. And, if you tried to paste some highly specialized document, like a CAD drawing, you will probably get nothing.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="ClassicISPF-styleCUTandPASTE"></a>
+<span class="rvts11">Classic ISPF-style CUT and PASTE</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The first supported method operates like the original ISPF </span><span class="rvts11">CUT</span><span class="rvts12"> and </span><span class="rvts11">PASTE</span><span class="rvts12"> commands. The operations work on whole lines only, not on partial line contents.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">CUT command</span></p>
+<p class="rvps6"><span class="rvts12">Selection of data for Cut operation is done via normal use of &nbsp;</span><a class="rvts33" href="C.html">C/CC</a><span class="rvts12"> or </span><a class="rvts33" href="M.html">M/MM</a><span class="rvts12"> &nbsp; line commands. Following selection of the data, a </span><a class="rvts33" href="CUT.html">CUT</a><span class="rvts12"> command is entered on the command line. If &nbsp;</span><a class="rvts33" href="C.html">C/CC</a><span class="rvts12"> &nbsp;was used to select the data, the lines are </span><span class="rvts11">copied</span><span class="rvts12"> to the clipboard; if &nbsp;</span><a class="rvts33" href="M.html">M/MM</a><span class="rvts12"> was used, the lines will be copied to the Clipboard and then </span><span class="rvts11">deleted</span><span class="rvts12">.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: The </span><span class="rvts11">CUT</span><span class="rvts12"> primary command will do both </span><span class="rvts11">cutting</span><span class="rvts12"> and </span><span class="rvts11">copying</span><span class="rvts12"> actions. The command name </span><span class="rvts11">CUT</span><span class="rvts12"> adheres to the IBM ISPF naming convention for this command, even if it is a bit "inaccurate" of a term. IBM decided on the command name </span><span class="rvts11">CUT</span><span class="rvts12"> for ISPF a long time ago, before "cut" and "copy" had the more precise, commonly understood meanings they have today. If the line range is defined by a </span><span class="rvts11">C</span><span class="rvts12">/</span><span class="rvts11">CC</span><span class="rvts12"> block, or by any type of line-control-range operand on the primary command line, a </span><span class="rvts11">copy</span><span class="rvts12"> operation takes place. If the line range is defined by an </span><span class="rvts11">M</span><span class="rvts12">/</span><span class="rvts11">MM</span><span class="rvts12"> block, a </span><span class="rvts11">cut</span><span class="rvts12"> operation takes place.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Bear in mind that the </span><span class="rvts11">COPY</span><span class="rvts12"> primary command is used for copying outside files into the current edit session, and has nothing to do with the clipboard. To copy from the clipboard, the </span><span class="rvts11">PASTE</span><span class="rvts12"> command is required.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">PASTE command</span></p>
+<p class="rvps6"><span class="rvts12">To paste lines from the Clipboard, enter an </span><a class="rvts33" href="A.html">A,&nbsp;</a><span class="rvts12"> </span><a class="rvts33" href="B.html">B,&nbsp;</a><span class="rvts12"> </span><a class="rvts33" href="O.html">O/OO,</a><a class="rvts95" href="OR.html">&nbsp;</a><a class="rvts33" href="OR.html"> OR/ORR</a><span class="rvts12"> or </span><a class="rvts33" href="H.html">H/HH</a><span class="rvts12"> &nbsp;line command to indicate </span><span class="rvts11">where</span><span class="rvts12"> the lines are to be inserted, and then enter </span><a class="rvts33" href="PASTE.html">PASTE</a><span class="rvts12"> on the command line. If </span><a class="rvts33" href="A.html">A</a><span class="rvts12"> or </span><a class="rvts33" href="B.html">B</a><span class="rvts12"> was used to indicate position, the Clipboard lines will be inserted at the indicated point. If </span><a class="rvts33" href="O.html">O/OO</a><span class="rvts12"> was used the Clipboard lines will be overlaid on the indicated lines exactly like a Copy / Overlay operation using </span><a class="rvts33" href="C.html">C/CC</a><span class="rvts12"> and </span><a class="rvts33" href="O.html">O/OO</a><span class="rvts12"> line commands. If the </span><a class="rvts33" href="H.html">H/HH</a><span class="rvts12"> &nbsp;line commands were entered, the lines marked with </span><a class="rvts33" href="H.html">H/HH</a><span class="rvts12"> &nbsp;will be </span><span class="rvts11">replaced</span><span class="rvts12"> by the pasted lines.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note:</span><span class="rvts12"> if the file is empty at the time </span><a class="rvts33" href="PASTE.html">PASTE</a><span class="rvts12"> is entered, no </span><a class="rvts33" href="A.html">A</a><span class="rvts12"> or </span><a class="rvts33" href="B.html">B</a><span class="rvts12"> line command is needed. The Clipboard lines will simply be loaded into the file text area. Thus, a </span><span class="rvts11">PASTE</span><span class="rvts12"> into an empty is treated like there was an </span><span class="rvts11">A</span><span class="rvts12"> line command on the Top of Data line.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts104"> </span><a name=" SPFLiteclipboardmode"></a>
+<span class="rvts11">SPFLite clipboard mode</span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td valign="top" style="padding: 0px;"><p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite supports a startup mode known as </span><span class="rvts11">CLIP</span><span class="rvts12">. This mode is specified by coding the characters '</span><span class="rvts11">-CLIP'</span><span class="rvts12"> as a command-line operand when invoking SPFLite. In this mode, SPFLite will automatically load the contents of the Windows clipboard when started, and will save the current edit data back to the Windows clipboard on termination. See a discussion of the -CLIP command-line option under </span><a class="rvts32" href="StartingandEndingSPFLite.html">Starting SPFLite.</a><span class="rvts12"> &nbsp; In addition, the Primary command </span><a class="rvts32" href="CLIP.html">CLIP</a><span class="rvts12"> may be entered at any time to open a new edit tab containing the contents of the current Clipboard. After you are finished, the contents are returned to the clipboard when the tab is closed.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:</span><span class="rvts12"> &nbsp;It is important to understand that a CLIP Edit session </span><span class="rvts11">copies</span><span class="rvts12"> the clipboard into an SPFLite-controlled edit session dedicated to clipboard editing, and then </span><span class="rvts11">copies it back</span><span class="rvts12"> to the actual clipboard when you're done. </span><span class="rvts11">Remember: &nbsp;</span><span class="rvts12">The clipboard, and the clipboard edit session, are </span><span class="rvts11">not</span><span class="rvts12"> the same thing.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">While you are </span><span class="rvts11">in</span><span class="rvts12"> the CLIP Edit session, you are not actually modifying the Windows clipboard - only a copy of what it was, prior to the CLIP Edit session beginning. What that means is that, while you are in a CLIP Edit session, you could jump outside of it, to another SPFLite edit tab, or outside of SPFLite itself, then copy </span><span class="rvts11">more</span><span class="rvts12"> data to the Windows clipboard, and paste </span><span class="rvts11">that</span><span class="rvts12"> into your CLIP Edit session (or into </span><span class="rvts11">another</span><span class="rvts12"> CLIP Edit session), and you could continue doing that process as many times as you like. Only once you're done will the edit session be copied back to the Windows clipboard. This fact can make for some very interesting and powerful editing techniques.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:</span><span class="rvts12"> It is possible to have </span><span class="rvts11">many</span><span class="rvts12"> CLIP edit sessions active at the same time. Each CLIP Edit session will be initialized with the current contents of the Windows clipboard </span><span class="rvts11">at the time it is initiated</span><span class="rvts12">. You might want to do this to create some "temporary editing sessions". This is a perfectly legal (if a bit unusual) thing to do, but if you decide to do this, remember that each time you close a CLIP Edit session, the contents of </span><span class="rvts11">that</span><span class="rvts12"> session are copied back to the real Windows clipboard. Thus, if the final contents of the Windows clipboard when you are all done is important to you, you may have to carefully choose </span><span class="rvts11">which</span><span class="rvts12"> CLIP Edit session you close last.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="Windows-Stylecutandpaste"></a>
+<span class="rvts11">Windows-Style cut and paste</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To support Windows style cut and paste, SPFLite has several primitive keyboard functions. By </span><span class="rvts50">primitive</span><span class="rvts12">, we mean functions like TAB, NewLine, Insert, Delete etc. These functions take effect immediately when used, and are neither a Primary or Line command, and must be mapped to a key in order to be used.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">These functions can be seen when customizing the keyboard (see "</span><a class="rvts32" href="KeyboardCustomize.html">Keyboard Customization and Keyboard Macros</a><span class="rvts12">") &nbsp;and the functions may be assigned to whatever mappable keys you wish. The descriptions below are written in terms of the normal default assignment for these new keys.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="SPFLiteNamedPrivateClipboards"></a>
+<span class="rvts11">SPFLite Named Private Clipboards</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFlite supports a feature called Named Private Clipboards. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Named Private Clipboards are areas where the current contents of the edit file may be saved and restored. A Named Private Clipboard may be directly created or pasted into an edit file without going through the standard Windows clipboard first.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A Named Private Clipboard is a permanent area, stored as a file having a file extension of </span><span class="rvts11">CLIP</span><span class="rvts12"> and stored in the SPFLite directory under a folder called CLIP. SPFLite takes the "name" of the named clipboard and forms a file name of "</span><span class="rvts16">name</span><span class="rvts11">.CLIP</span><span class="rvts12">".</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Named Private Clipboards are available and shared with all active edit tabs, and are saved by SPFLite between sessions. So, whenever you start SPFLite, the named private clipboard contents from your last session are always available for use. You could, for example, use these to store frequently used 'boilerplate' text.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Use of Named Private Clipboards is entirely optional, and in no way affects the normal operation of the Windows clipboard functions in SPFLite.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A named clipboard is referred to by its name, which may be any user-selected name (which, as a "name", should avoid special characters and blanks). The name of a Named Private Clipboard should not be the same as any SPFLite keyword. In particular, you would run into problems if your Named Private Clipboard had any of the names &nbsp;</span><span class="rvts11">BEFORE &nbsp;AFTER &nbsp;ERASE &nbsp;REPLACE &nbsp;REP &nbsp;REPL &nbsp;APPEND &nbsp;X</span><span class="rvts12"> &nbsp;or &nbsp;</span><span class="rvts11">NX</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To cut text into a Named Private Clipboard, you simply include the </span><span class="rvts50">name</span><span class="rvts12"> in the </span><span class="rvts11">CUT</span><span class="rvts12"> primary command. To paste text from a Named Private Clipboard, you include the </span><span class="rvts50">name</span><span class="rvts12"> in the </span><span class="rvts11">PASTE</span><span class="rvts12"> primary command. See </span><a class="rvts33" href="CUT.html">CUT</a><span class="rvts12"> and </span><a class="rvts33" href="PASTE.html">PASTE</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can edit a named clipboard just as easily as editing the Windows clipboard, by specifying </span><span class="rvts11">CLIP</span><span class="rvts12"> </span><span class="rvts50">name</span><span class="rvts12">, where </span><span class="rvts50">name</span><span class="rvts12"> corresponds to a named clipboard created by a </span><span class="rvts11">CUT</span><span class="rvts12"> </span><span class="rvts50">name</span><span class="rvts12"> command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Keyboard functions that involve the clipboard can take an option to specify a Named Private Clipboard. The format of this option is a </span><span class="rvts139">/</span><span class="rvts35"> slash followed by the name of the Named Private Clipboard. For example, suppose a Named Private Clipboard of </span><span class="rvts36">myclip</span><span class="rvts35"> exists. To paste from the Windows clipboard, you would use the function</span><span class="rvts36"> </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts35">, but to paste from the </span><span class="rvts36">myclip</span><span class="rvts35"> private clipboard, you would use</span><span class="rvts6"> </span><span class="rvts40">(Paste</span><span class="rvts139">/</span><span class="rvts40">myclip)</span><span class="rvts6">. This technique works for every keyboard function that uses a clipboard, such as </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.copy">(Copy)</a><span class="rvts6">, </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.copypaste">(CopyPaste)</a><span class="rvts6">, </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts6">, </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.clippath">(ClipPath)</a><span class="rvts6">, etc.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="CopyandCutoperations"></a>
+<span class="rvts11">Copy and Cut operations</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">In order to perform a Copy or Cut, you need to select the desired text. Text may be selected by dragging over the text area with the left mouse button held down, or by use of the Arrow keys with the Shift key held down. The area being selected by these operations will be displayed in inverse video. (Note that using the Shift + Arrow keys is a default key mapping to the MARK functions. You can reassign these functions to any desired keys.)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To select a "2D" multi-line block of text with the mouse, you must hold down a Shift, Alt or Ctrl key first, unless you have enabled the Global Options checkbox that allows multi-line selects without the extra key. See </span><a class="rvts33" href="OptionsGeneral.html#Allow%202-D%20mouse%20selection%20without%20Shift/Ctrl/Alt%20?">Allow 2-D mouse selection without Shift/Ctrl/Alt</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Keyboard selection may proceed past screen boundaries if keyboard scrolling is activated (</span><a class="rvts32" href="OptionsKeyboard.html">Options - Keyboard</a><span class="rvts12">), but mouse selection is always restricted to a single visible screen. Mouse selection now supports a double-click to select a 'word' and highlight it.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The keyboard selection uses the keyboard functions </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.markleft">(MarkLeft)</a><span class="rvts12">, &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.markright">(MarkRight)</a><span class="rvts12">, &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.markup">(MarkUp)</a><span class="rvts12">, &nbsp;</span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.markdown">(MarkDown)</a><span class="rvts12"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.markend">(MarkEnd)</a><span class="rvts12">. These primitive functions are mapped to the Shift-Left, Shift-Right, Shift-Up, Shift-Down and Shift-End keys, which are commonly used in other text editor programs. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Note that using the Shift + Arrow keys is merely a default key mapping to the MARK functions at installation time. You can reassign these functions to any desired keys.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You may also highlight a large span of lines using the </span><a class="rvts33" href="TTTSelectTextLines.html">T/TT</a><span class="rvts12"> line command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Once selected, the data can be Copied with the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.copy">(Copy)</a><span class="rvts12"> function, Cut with the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.cut">(Cut)</a><span class="rvts12"> function or Lifted with the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.lift">(Lift)</a><span class="rvts12"> function. These primitive functions are mapped by default to the Ctrl-C and Ctrl-X keys, just as in Windows.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Pasteoperations"></a>
+<span class="rvts11">Paste operations</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts12"> function will paste the contents of the Windows clipboard, whether a single line or multiple lines.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Pasting may be done into any text line or the primary command line field. It is </span><span class="rvts11">not</span><span class="rvts12"> a full line paste like Classic ISPF paste; you may paste the text at any point in the existing data in the line. The paste command is also </span><span class="rvts11">sensitive</span><span class="rvts12"> to the current INS/OVR mode. If you are in Insert mode, the paste text will be inserted and existing text shifted right. If you are in OVR (non-insert) mode, the paste data will simply overtype the existing characters in the line.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The mapping of the primitive paste function </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts12"> defaults to the Ctrl-V key, just as in Windows.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="HybridCopyprimitive(CopyPaste)"></a>
+<span class="rvts11">Hybrid Copy primitive (CopyPaste)</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There is a hybrid primitive function called </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.copypaste">(CopyPaste)</a><span class="rvts12"> which can be used to make a dual-purpose key. When the key is pressed, if there is text selected on the screen, it acts exactly like the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.copy">(Copy)</a><span class="rvts12"> function. If there is </span><span class="rvts11">no</span><span class="rvts12"> selected text, it acts like the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts12"> key. A typical use of this would be to assign </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.copypaste">(CopyPaste)</a><span class="rvts12"> to the right mouse button (see </span><a class="rvts32" href="OptionsStatus.html">Options-Mouse</a><span class="rvts12"> for how to do this). </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">This provides a powerful editing action when doing cut/paste, and operates like the QuickEdit facility on the Windows command line.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="PowerTypingandtheclipboard"></a>
+<span class="rvts11">Power Typing and the clipboard</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When you are in Power Typing mode, you can use the Windows-style clipboard functions described above. In addition, you can use the functions that are specific to Power Typing. These are </span><a class="rvts33" href="WorkingwithPowerTypingMode.html#kb.powercopy">(PowerCopy)</a><span class="rvts12">, </span><a class="rvts33" href="WorkingwithPowerTypingMode.html#kb.powercut">(PowerCut)</a><span class="rvts12"> and </span><a class="rvts33" href="WorkingwithPowerTypingMode.html#kb.powerpaste">(PowerPaste)</a><span class="rvts12">. See the section on </span><a class="rvts33" href="WorkingwithPowerTypingMode.html">Working with Power Typing Mode</a><span class="rvts12"> for more information.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

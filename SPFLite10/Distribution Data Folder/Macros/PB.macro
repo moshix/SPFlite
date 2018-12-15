@@ -1,0 +1,53 @@
+' PB.MACRO
+' Run a batch compile of the current program.   If the compiler reports an error,
+' read the LOG file to locate the error, and move the cursor to the line in error
+' and display the compiler's error message.   This demonstrates how to read and
+' process an external file using the thinBasic FILE module.
+'
+' Syntax: PB
+'
+' Author: George Deluca
+' 
+dim cmd, errmsg, tt as string  
+dim errlin, errcol, i as number
+dim fHandle as DWORD
+uses "FILE"                                           ' Attach the FILE module
+
+   '----- Save unmodified files 
+   SPF_Cmd("SAVEALL COND") 
+
+   '----- Build command line to run the compiler 
+   cmd = $DQ + "D:\Google Drive\Misc Data\PBWin10.bat"  + $DQ + " "
+   cmd += $DQ + mid$(Get_FilePath$, 3) + $DQ + " "
+   cmd += $DQ + Get_FileName$ + $DQ
+
+   '----- Do the compile and get the RC result 
+   SPF_EXEC(cmd) 
+   if Get_RC = 0 then halt("PB10 compile successful")
+
+   '----- Handle the compiler error, get the LOG file 
+   fHandle = FILE_OPEN(Get_FilePath$ + "\" + Get_FileBase$ +  ".LOG" , "INPUT") 
+   if fHandle = 0 then halt(fail, "PB10 compile failed, can't open LOG file")
+   for i = 1 to 6                                     ' Read line 6 of the LOG 
+      errmsg = FILE_LineInput(fHandle)                ' 
+   next i                                             ' 
+   i = FILE_Close(fHandle)                            ' 
+
+   '----- Extract error line number, column and error message text 
+   '----- Sample error line:  Error 442 in C:\Documents\Source\try.bas(12:016):  THEN expected
+
+   tt = parse$(errmsg, any "()", 2)                   ' Get the (nnn:nnn) value 
+   errlin = val(tt)                                   ' Line number preceeds the : 
+   tt = mid$(tt, instr(tt, ":") + 1)                  ' 
+   errcol = val(tt)                                   ' Col number follows the :  
+   errmsg = parse$(errmsg, "):", 2)                   ' Message follows the ): 
+
+   '----- Issue an error message and set the cursor to the error line 
+   Set_Msg(fail,"Line: " + format$(errlin) + " Col: " + format$(errcol) + " " + errmsg) 
+   tt = Get_Line$(errlin + 1)                         ' Get the error line
+   if errcol > len(tt) then                           ' Long enough to hi-lite? 
+      tt = lset$(tt, errcol)                          ' Lengthen it 
+      Set_Line(errlin + 1, tt)                        ' Stuff it back 
+   end if                                             '  
+   Set_Csr(errlin + 1, errcol, 1)                     ' Hi-light the compiler's error location 
+   halt                                               ' Done

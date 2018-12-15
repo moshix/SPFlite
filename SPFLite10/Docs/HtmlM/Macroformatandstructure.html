@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Macro format and structure</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Macro format and structure">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Macro format and structure" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Macroformatandstructure"
+		  data-hnd-context="14"
+		  data-hnd-title="Macro format and structure"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Macro format and structure</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a class="rvts12" href="Macroformatandstructure.html#Introduction">Introduction</a></p>
+<p class="rvps4"><a class="rvts12" href="Macroformatandstructure.html#Macro%20Prototype">Macro Prototype</a></p>
+<p class="rvps4"><a class="rvts12" href="Macroformatandstructure.html#Macro%20Code%20structure">Macro Code structure</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts13">Introduction</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The format of a macro is a standard text file of thinBasic source statements stored in the SPFLite MACROS folder. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For most users, the full path of this folder will be:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps8"><span class="rvts11">C:\Users\</span><span class="rvts13">username</span><span class="rvts11">\My Documents\SPFLite\MACROS</span></p>
+<p class="rvps9"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The macro should be named &nbsp;</span><span class="rvts13">macname</span><span class="rvts11">.MACRO, where macname is the name with which you will be invoking the macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">The string "</span><span class="rvts13">macname</span><span class="rvts11">" is also what is returned by the Get_MacName$ function. As with everything else in SPFLite, macro names are case insensitive.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note: &nbsp;Because the macro's name gets parsed as part of a primary command or line command, you cannot use all legal Windows file name characters in a macro name, but should generally limit them to letters, digits and underscore. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Further, for line-command macros, the name must be even more restricted; the name cannot contain any digits, because they will be confused with numeric line-command operands. For line commands, the macro name should normally only contain letters to avoid problems. A few special characters were found to be acceptable, such as $ and @. We have not exhaustively tested every possible character, but if you can create a legal Windows file name with it, it will usually be valid as a macro name, except for the characters </span><span class="rvts13">+ - * ? : . </span><span class="rvts11">/ and</span><span class="rvts13"> \</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Line Macro names and Block Mode</span></p>
+<p class="rvps5"><span class="rvts11">For single line macros (e.g. do THIS to a single line) there is no problem, the line command = the macro name.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">When you want to create a macro that can act as a block mode command (like </span><span class="rvts13">CC</span><span class="rvts11">/</span><span class="rvts13">CC</span><span class="rvts11">) the following methods are used:</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Repeating the last character of the line command. Using the same example as above, the block form of </span><span class="rvts13">AX</span><span class="rvts11"> would be requested by entering </span><span class="rvts13">AXX</span><span class="rvts11">/</span><span class="rvts13">AXX</span><span class="rvts11">, and the macro still stored as </span><span class="rvts13">AX.MACRO</span><span class="rvts11">. This applies also to longer macro names. For example the block mode version of a macro called </span><span class="rvts13">BOX</span><span class="rvts11"> would be </span><span class="rvts13">BOXX</span><span class="rvts11">, &nbsp;or for a macro called </span><span class="rvts13">PRINT</span><span class="rvts11"> it would be </span><span class="rvts13">PRINTT</span><span class="rvts11">. </span></li>
+</ul></ul></ul>
+<p class="rvps10"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts11">Specifically tell SPFLite in what mode a macro name is to be treated. This is done by issuing a SET command of the format:</span></li>
+</ul></ul></ul>
+<p class="rvps10"><span class="rvts11"><br/></span></p>
+<p class="rvps10"><span class="rvts18">SET MACROMODE.macname = BLOCK | LINE</span></p>
+<p class="rvps10"><span class="rvts19"><br/></span></p>
+<p class="rvps10"><span class="rvts11">If a </span><span class="rvts13">SET MACROMODE</span><span class="rvts11"> has been issued for a macro name, the convention about repeating the last letter does not apply. Any length or format of macro name can be set unconditionally to a specific processing mode. </span></p>
+<p class="rvps10"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11">The only requirement SPFLite imposes on the format of a macro file is the macro prototype (or header), which must be the first line in the macro. Like everything else in SPFLite, the prototype is generally case-insensitive, unless it has default operands used as string values in FIND or CHANGE commands, for instance.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Macro Prototype"></a>
+<span class="rvts13">Macro Prototype</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The first line of a macro must always be the macro prototype. This is a simple thinBasic comment statement of the format:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">' macname.MACRO [ def-operand-1 def-operand-2 ... ]</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The </span><span class="rvts18">.MACRO</span><span class="rvts11"> part of the prototype is required. macname itself is optional, but should normally be the name of the macro. The brackets shown mean the list of operands is optional; don't actually code brackets here.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Currently, SPFLite does not demand that </span><span class="rvts13">macname,</span><span class="rvts11"> if coded, match the actual file name of the macro. However, for documentation purposes, it is best that you </span><span class="rvts13">do</span><span class="rvts11"> make the name agree, just to keep things straight as you develop and use your macros. It is possible that a later release of SPFLite will require that the prototype name agree with the file name, so it's best to make them agree now.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You may optionally enter default values for macro operands (if your macro uses command-line operands). These are simple space-delimited strings which provide defaults if the relative operand number is not overridden when the macro is called. For example, given the following prototype:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">' sample.MACRO &nbsp;aaa &nbsp;bbb &nbsp;ccc</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the macro were invoked with the primary command line as </span><span class="rvts18">Sample</span><span class="rvts11"> with no supplied arguments, then if the executing macro requested the number of operands via </span><span class="rvts18">Get_Arg_Count</span><span class="rvts14"> </span><span class="rvts11">it would receive 3. </span><span class="rvts18">Get_Arg$(1)</span><span class="rvts11"> would be </span><span class="rvts18">aaa</span><span class="rvts11">, &nbsp;</span><span class="rvts18">Get_Arg$(2)</span><span class="rvts11"> would be </span><span class="rvts18">bbb</span><span class="rvts11">, and </span><span class="rvts18">Get_Arg$(3)</span><span class="rvts11"> would be </span><span class="rvts18">ccc</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">More details on retrieving macro operands and working with them will be found in </span><a class="rvts12" href="AccessingCommandLineOperands.html">Accessing Command Line Operands</a><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Macro Code structure"></a>
+<span class="rvts13">Macro Code structure</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As described above, an SPFLite macro program is essentially "open code" in </span><span class="rvts13">thinBasic</span><span class="rvts11"> and has no "structure" per se. By that, it means there is no MAIN Sub/Function, execution just starts at the first line and continues on.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As a result, there is, by default, &nbsp;no built in mechanism for SPFLite to 'pass in' the operands. This is easily correctable by making the mainline code into a thinBasic SUB routine. If this is done, then the command line operands can be made available as passed parameters. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Before making this decision you should evaluate how you wish to handle your declared variables. In Open Code, all DIM'd variables are effectively Global and are 'visible' throughout your program. If you convert to structured mode and make the mainline a SUB, then DIM'd variables are only 'visible' throughout the mainline SUB. If you use additional SUB routines, then they will need to be passed any working data they require.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">More details of this support will be found in </span><a class="rvts12" href="AccessingCommandLineOperands.html">Accessing Command Line Operands</a><span class="rvts11">.</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com">Free Web Help generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

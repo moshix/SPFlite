@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Numeric conversion items – DD / DX / XD / XX</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Numeric conversion items – DD / DX / XD / XX">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Numeric conversion items – DD / DX / XD / XX" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingNumConv"
+		  data-hnd-context="272"
+		  data-hnd-title="Numeric conversion items – DD / DX / XD / XX"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Numeric conversion items – DD / DX / XD / XX</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A </span><span class="rvts140">numeric conversion item</span><span class="rvts6"> is used to convert and reformat data between decimal and hex numeric format (using </span><span class="rvts40">DX</span><span class="rvts6"> or </span><span class="rvts40">XD</span><span class="rvts6"> commands), or to modify the format of a decimal or hex number without converting it (using </span><span class="rvts40">DD</span><span class="rvts6"> or </span><span class="rvts40">XX</span><span class="rvts6"> commands). A </span><span class="rvts140">decimal number</span><span class="rvts6"> is considered to be a span of characters in the range of </span><span class="rvts40">0</span><span class="rvts6">-</span><span class="rvts40">9</span><span class="rvts6">; a </span><span class="rvts140">hex number </span><span class="rvts6">is considered to be a span of characters in the range of </span><span class="rvts40">0</span><span class="rvts6">-</span><span class="rvts40">9</span><span class="rvts6">, </span><span class="rvts40">A</span><span class="rvts6">-</span><span class="rvts40">F</span><span class="rvts6"> or </span><span class="rvts40">a</span><span class="rvts6">-</span><span class="rvts40">f</span><span class="rvts6">. Note that numeric conversions are designed for processing integer values only; if used on a floating-point number, it may not work or may only process the part to the left of the decimal point.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you specify a “simple” conversion item, the </span><span class="rvts165">complete column range</span><span class="rvts6"> is expected to contain valid digits of the type indicated; otherwise an error is reported.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">However, sometimes numeric data may not be in precise locations. For instance, you may have a comma-separated list of values of varying numbers of digits, and it may be necessary to “scan” your data to determine where the number is located. Your data may have leading or trailing spaces. You might need to find it using a left-to-right scan, or possibly a right-to-left scan. You may need to control how the converted number is formatted. To do these things, you can use a “formatted” conversion item.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you use these commands, the numeric value is first converted internally to a 64-bit integer; this limits the values to 16 hex digits or 19 decimal digits. Note that no check is made for numeric overflow, so do not exceed these limits. If your command includes a </span><span class="rvts140">calculation-operand</span><span class="rvts6">, the integer value is passed to the calculator function, which can be used to calculate a derived value from your original number. Finally, this integer is converted to a decimal or hex string value.</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Syntax of a </span><span class="rvts140">numeric conversion item:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> { &nbsp;</span><span class="rvts140">fixed-location-command</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts140">floating-location-command</span><span class="rvts6"> &nbsp; &nbsp;} &nbsp; [ &nbsp;</span><span class="rvts140">format</span><span class="rvts6"> &nbsp;] &nbsp;[ &nbsp;</span><span class="rvts140">sign-code</span><span class="rvts6"> &nbsp;] &nbsp;</span></p>
+<p class="rvps108"><span class="rvts6">[ &nbsp;</span><span class="rvts140">calculation-operand</span><span class="rvts6"> &nbsp;] &nbsp;</span><span class="rvts140">column-reference</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> </span><span class="rvts140">Fixed-location-command</span><span class="rvts6"> </span><span class="rvts140">: &nbsp; </span><span class="rvts40">DD</span><span class="rvts6"> | </span><span class="rvts40">DX </span><span class="rvts6">| </span><span class="rvts40">XD</span><span class="rvts6"> | </span><span class="rvts40">XX</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Defines the type of numeric conversion to be done. The columns selected may optionally contain leading and trailing spaces, and may optionally contain a leading </span><span class="rvts168">+</span><span class="rvts6"> or </span><span class="rvts168">–</span><span class="rvts6"> sign, but otherwise must be entirely numeric. The selected field must contain one and only one numeric value.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts40">DX</span><span class="rvts6"> converts selected columns of data from decimal characters to hex characters. When the resulting value contains hex digits greater than 9, by default, these digits will be rendered as upper-case </span><span class="rvts40">A</span><span class="rvts6">-</span><span class="rvts40">F</span><span class="rvts6">. If a </span><span class="rvts140">case conversion code</span><span class="rvts6"> of </span><span class="rvts40">&gt;</span><span class="rvts6"> (convert to upper case) or </span><span class="rvts40">&lt;</span><span class="rvts6"> (convert to lower case) is in effect prior to the </span><span class="rvts40">DX</span><span class="rvts6"> code, those case conversions will be respected, and hex-digit characters will be rendered accordingly. Otherwise, you can use a </span><span class="rvts140">case alteration code</span><span class="rvts6"> of </span><span class="rvts40">UC</span><span class="rvts6">, </span><span class="rvts40">LC</span><span class="rvts6">, </span><span class="rvts40">SC</span><span class="rvts6">, </span><span class="rvts40">TC</span><span class="rvts6"> or </span><span class="rvts40">IC</span><span class="rvts6"> afterwards, to alter the contents of the </span><span class="rvts140">result string</span><span class="rvts6"> once it has been formed.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts40">XD</span><span class="rvts6"> converts selected columns of data from hex characters to decimal characters.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts40">DD</span><span class="rvts6"> </span><span class="rvts140">recognizes</span><span class="rvts6"> selected columns of decimal characters, allowing them to be reformatted while remaining as a decimal number.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts40">XX</span><span class="rvts6"> </span><span class="rvts140">recognizes</span><span class="rvts6"> selected columns of hex characters, allowing them to be reformatted while remaining as a hex number.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Floating-location-command :</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Floating </span><span class="rvts40">DD</span><span class="rvts6"> , </span><span class="rvts40">DX</span><span class="rvts6">, </span><span class="rvts40">XD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6"> items have a special alternate syntax, as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">n</span><span class="rvts40">DD</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">D</span><span class="rvts195">n</span><span class="rvts40">D </span></p>
+<p class="rvps13"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">n</span><span class="rvts40">DX</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">D</span><span class="rvts195">n</span><span class="rvts40">X </span></p>
+<p class="rvps13"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">n</span><span class="rvts40">XD</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">X</span><span class="rvts195">n</span><span class="rvts40">D </span></p>
+<p class="rvps13"><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">n</span><span class="rvts40">XX</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">X</span><span class="rvts195">n</span><span class="rvts40">X</span></p>
+<p class="rvps9"><span class="rvts6"> </span></p>
+<p class="rvps13"><span class="rvts6">The number </span><span class="rvts173">n</span><span class="rvts6"> is a </span><span class="rvts140">relative field location</span><span class="rvts6"> when a numeric field is “floating” rather than being in fixed column positions. If </span><span class="rvts173">n</span><span class="rvts6"> is used, it must be a single decimal digit in the range of 1-9 (a digit of 0 should not be used). See </span><span class="rvts165">Handling of “floating” values</span><span class="rvts6"> below.</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Format:</span><span class="rvts6"> &nbsp; &nbsp;[ &nbsp;</span><span class="rvts173">w</span><span class="rvts6"> &nbsp;] &nbsp; </span><span class="rvts173">t</span></p>
+<p class="rvps9"><span class="rvts173"><br/></span></p>
+<p class="rvps9"><span class="rvts173">t</span><span class="rvts140"> :</span><span class="rvts6"> &nbsp; &nbsp;{ &nbsp;</span><span class="rvts40">F</span><span class="rvts6"> &nbsp;| &nbsp;</span><span class="rvts40">Z&nbsp;</span><span class="rvts6"> | &nbsp;</span><span class="rvts40">V</span><span class="rvts6"> &nbsp;}</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Provides a means of describing the resulting format of the numeric value:</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts173">w</span><span class="rvts6"> &nbsp;is a width field, specified as a numeric value of one or more decimal digits. The </span><span class="rvts173">w</span><span class="rvts6"> value is optional. If omitted for type </span><span class="rvts40">V</span><span class="rvts6">, the </span><span class="rvts173">w</span><span class="rvts6"> value is assumed to be </span><span class="rvts40">1</span><span class="rvts6">. If omitted for types </span><span class="rvts40">F</span><span class="rvts6"> and </span><span class="rvts40">Z</span><span class="rvts6">, the width of the output made the same as the input. For example, if you use a command of </span><span class="rvts40">DXF</span><span class="rvts6">, and the original decimal number had 3 digits, the hex value will have 3 digits, as if you had specified </span><span class="rvts40">DX3F</span><span class="rvts6">. A </span><span class="rvts173">w</span><span class="rvts6"> value of </span><span class="rvts40">0</span><span class="rvts6"> is treated the same as </span><span class="rvts40">1</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts173">t</span><span class="rvts6"> &nbsp;is a </span><span class="rvts140">format type code</span><span class="rvts6"> letter</span><span class="rvts140">.</span><span class="rvts6"> &nbsp;Type </span><span class="rvts40">F</span><span class="rvts6"> causes the converted value to be held in a fixed number of columns, as specified by the </span><span class="rvts173">w</span><span class="rvts6"> value, with non-significant positions on the left filled with “</span><span class="rvts40">0</span><span class="rvts6">” characters. Type </span><span class="rvts40">Z</span><span class="rvts6"> causes the converted value to be held in a fixed number of columns, as specified by the </span><span class="rvts173">w</span><span class="rvts6"> value, with non-significant positions on the left filled with blank characters. Type </span><span class="rvts40">V</span><span class="rvts6"> causes the converted value to be rendered in a variable number of columns. For type </span><span class="rvts40">V</span><span class="rvts6">, the </span><span class="rvts173">w</span><span class="rvts6"> value specifies the minimum number of digits to be rendered; if the numeric value does not need the full width </span><span class="rvts173">w</span><span class="rvts6"> to hold the value, the result is padded with “</span><span class="rvts40">0</span><span class="rvts6">” characters sufficient to make the field at least </span><span class="rvts173">w</span><span class="rvts6"> characters wide; if the value needs more than </span><span class="rvts173">w</span><span class="rvts6"> characters to represent it, no padding characters are used.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Sign-code:</span><span class="rvts6"> &nbsp;[ &nbsp;</span><span class="rvts40">S&nbsp;</span><span class="rvts6"> | &nbsp;</span><span class="rvts40">C</span><span class="rvts6"> &nbsp;]</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">If sign code </span><span class="rvts40">S</span><span class="rvts6"> is present, any leading </span><span class="rvts168">+</span><span class="rvts6">&nbsp;or&nbsp;</span><span class="rvts168">–</span><span class="rvts6"> sign found during processing will be retained and copied to </span><span class="rvts140">result string</span><span class="rvts6">. If sign code S is absent, any leading </span><span class="rvts168">+</span><span class="rvts6">&nbsp;or&nbsp;</span><span class="rvts168">–</span><span class="rvts6"> signs are ignored. Any spaces after the leading </span><span class="rvts168">+</span><span class="rvts6">&nbsp;or&nbsp;</span><span class="rvts168">–</span><span class="rvts6"> sign are considered to be part of the sign.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">If sign code </span><span class="rvts40">C</span><span class="rvts6"> is present, it is treated like sign code </span><span class="rvts40">S</span><span class="rvts6"> is, with the following addition: &nbsp;If a number contains a </span><span class="rvts40">0x</span><span class="rvts6"> or </span><span class="rvts40">0X</span><span class="rvts6"> prefix (as used in C, Java, and similar languages), that prefix is considered to be part of the </span><span class="rvts40">sign</span><span class="rvts6">, and not part of a </span><span class="rvts40">number</span><span class="rvts6">. The reason code </span><span class="rvts40">C</span><span class="rvts6"> is needed is that without it, a value like </span><span class="rvts40">0x12</span><span class="rvts6"> might be misinterpreted to be </span><span class="rvts40">two</span><span class="rvts6"> numbers, </span><span class="rvts40">0</span><span class="rvts6"> and </span><span class="rvts40">12</span><span class="rvts6">, separated by a delimiter of “</span><span class="rvts40">x</span><span class="rvts6">”. When converting from hex to decimal and a </span><span class="rvts140">sign code</span><span class="rvts6"> </span><span class="rvts40">C</span><span class="rvts6"> is present, any </span><span class="rvts40">0x</span><span class="rvts6"> or </span><span class="rvts40">0X</span><span class="rvts6"> prefix is dropped. When converting from decimal to hex and a </span><span class="rvts140">sign code</span><span class="rvts6"> </span><span class="rvts40">C</span><span class="rvts6"> is present, a </span><span class="rvts40">0x</span><span class="rvts6"> prefix is added.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Calculation-operand</span><span class="rvts6">:</span></p>
+<p class="rvps13"><span class="rvts40"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Allows arithmetic operations to be performed on the base numeric value before it is formatted. For a complete description of mapping string calculation operations, see </span><a class="rvts44" href="MappingStringCalculation.html">Calculation Operands</a><span class="rvts6">.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">For example, to perform a decimal-to-decimal reformatting with 4 fixed digits, and have the value multiplied by 2 and then having 3 added to it, you would specify a command of &nbsp;</span><span class="rvts6">DD4F'X*2+3'</span><span class="rvts6"> or &nbsp;</span><span class="rvts6">DD4F'*2+3</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Column-reference:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Selects the columns of data in the </span><span class="rvts140">source string</span><span class="rvts6"> that are to be converted (unless </span><span class="rvts140">dot notation</span><span class="rvts6"> is used to select column of data from the </span><span class="rvts140">result string</span><span class="rvts6">). The syntax of this field are the same as an ordinary column reference. A</span><span class="rvts140"> single column, remaining-columns, forward column-range </span><span class="rvts6">or</span><span class="rvts140"> reverse column range</span><span class="rvts6"> may be requested. No spaces or other characters not part of the syntax may appear between the conversion codes of </span><span class="rvts40">DX</span><span class="rvts6"> , </span><span class="rvts40">XD</span><span class="rvts6">, </span><span class="rvts40">DD</span><span class="rvts6"> or </span><span class="rvts40">XX</span><span class="rvts6"> (or their </span><span class="rvts140">formatted</span><span class="rvts6"> counterparts), and the column-reference specification. (It is possible to select columns in such a way as to reverse the order of the original digit characters, but this would not generally be very useful.)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Commands </span><span class="rvts40">DX</span><span class="rvts6"> and </span><span class="rvts40">XD</span><span class="rvts6"> involve a change of radix between decimal and hex. Commands </span><span class="rvts40">DD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6"> do not involve a change of radix between decimal and hex. For all commands, decimal or hex numeric strings are scanned for and recognized, and then reformatted using the </span><span class="rvts140">width</span><span class="rvts6"> and </span><span class="rvts140">format</span><span class="rvts6"> types. </span><span class="rvts40">DD</span><span class="rvts6"> may be thought of as “decimal-to-decimal” and </span><span class="rvts40">XX</span><span class="rvts6"> as “hex-to-hex”.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts165">Handling of “floating” values</span></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a </span><span class="rvts140">floating-location-command</span><span class="rvts6"> with the </span><span class="rvts173">n</span><span class="rvts6"> parameter is used, SPFLite will perform a “scan” of the selected value, looking for “spans” of digits. A “span” of digits is a contiguous span of characters that are valid for the type of number being converted.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The idea is that the value you are interested in is present </span><span class="rvts175">somewhere</span><span class="rvts6"> in the columns of data you have selected, but the precise location where that numeric field is may vary, or “float” from one particular instance of found data to the next. That is, if you repeatedly execute your CHANGE command with a mapping string, between one execution of CHANGE to the next, the exact place where your numeric data happens to be located may vary. So, trying to “grab” such numeric data with a fixed column range won’t work.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For </span><span class="rvts40">DX</span><span class="rvts6">-type and </span><span class="rvts40">DD</span><span class="rvts6">-type conversions, spans of digit characters must be in the range </span><span class="rvts40">0</span><span class="rvts6">‑</span><span class="rvts40">9</span><span class="rvts6">, and for </span><span class="rvts40">XD</span><span class="rvts6">-type and </span><span class="rvts40">XX</span><span class="rvts6">-type conversions, spans of digits must be in the range </span><span class="rvts40">0</span><span class="rvts6">‑</span><span class="rvts40">9</span><span class="rvts6">, </span><span class="rvts40">A</span><span class="rvts6">‑</span><span class="rvts40">F</span><span class="rvts6"> or </span><span class="rvts40">a</span><span class="rvts6">‑</span><span class="rvts40">f</span><span class="rvts6">. A “span” of digits is delimited by (a) the beginning and/or end of the selected value, or (b) </span><span class="rvts173">any</span><span class="rvts140"> </span><span class="rvts173">character</span><span class="rvts6"> outside the range of valid digits. After SPFLite performs such a scan, it is an error if a valid numeric value cannot be found. Bear in mind that “any” character that could act as a delimiter may be one you did not expect, such as a letter like </span><span class="rvts40">R</span><span class="rvts6">. You should understand your data to determine if these rules meet your requirements. Most numeric data you deal with will be delimited by commas or blanks, which will work fine. These commands cannot analyze your data any more precisely than determining if a character “is a digit” or “is not a digit” when looking for numbers.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You are free to scan the same original columns of data multiple times, selectively extracting more than one numeric value, by using a different </span><span class="rvts173">n</span><span class="rvts6"> value to determine the relative location where the desired numeric value is to be taken from.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A “floating” command can be directed to perform its scanning process either in a </span><span class="rvts7">left-to-right manner</span><span class="rvts6">, or in a </span><span class="rvts177">right-to-left manner</span><span class="rvts6">. The way this is indicated is in the </span><span class="rvts165">positioning</span><span class="rvts6"> of the </span><span class="rvts173">n</span><span class="rvts6"> parameter.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When the </span><span class="rvts197">n</span><span class="rvts6"> value appears </span><span class="rvts140">to the </span><span class="rvts197">left</span><span class="rvts6"> of the command code, like </span><span class="rvts7">3</span><span class="rvts40">DX</span><span class="rvts6"> or </span><span class="rvts7">3</span><span class="rvts40">XD</span><span class="rvts6">, it causes the scan to be done in a</span><span class="rvts7"> left-to-right manne</span><span class="rvts40">r</span><span class="rvts6">. Here, </span><span class="rvts7">3</span><span class="rvts40">DX</span><span class="rvts6"> means to look for the third span of decimal digits (the third decimal number) going</span><span class="rvts208"> </span><span class="rvts7">left-to-right</span><span class="rvts6">. </span><span class="rvts7">3</span><span class="rvts40">XD</span><span class="rvts6"> means to look for the third span of hex digits (the third hex number) going</span><span class="rvts208"> </span><span class="rvts7">left-to-right</span><span class="rvts6">. </span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When the </span><span class="rvts195">n</span><span class="rvts6"> value appears </span><span class="rvts140">to the </span><span class="rvts195">right</span><span class="rvts140"> of the first letter</span><span class="rvts6"> of the command code, like </span><span class="rvts40">D</span><span class="rvts177">3</span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">X</span><span class="rvts177">3</span><span class="rvts40">D</span><span class="rvts6">, it causes the scan to be done in a </span><span class="rvts177">right-to-left manner</span><span class="rvts6">. Here, </span><span class="rvts40">D</span><span class="rvts177">3</span><span class="rvts40">X</span><span class="rvts6"> means to look for the third span of decimal digits going </span><span class="rvts177">right-to-left</span><span class="rvts40">. X</span><span class="rvts177">3</span><span class="rvts40">D</span><span class="rvts6"> means to look for the third span of hex digits going </span><span class="rvts177">right-to-left</span><span class="rvts6">. </span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">The same rules apply to commands of types </span><span class="rvts40">DD</span><span class="rvts6"> and </span><span class="rvts40">XX</span><span class="rvts6">, when an </span><span class="rvts173">n</span><span class="rvts6"> value is used, except that no radix conversion takes place.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts165">Caution regarding the processing of floating-point (“real”) values</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Be mindful that the numeric conversion items are designed to operate on integer values, </span><span class="rvts40">not</span><span class="rvts6"> on floating-point (“real”) values that contain </span><span class="rvts40">decimal points</span><span class="rvts6">. For instance, if your data looks like </span><span class="rvts6">“123.456&nbsp;&nbsp;654.321”</span><span class="rvts6">, and you attempt to use a “floating” version of the numeric conversion commands, this string will appear to have </span><span class="rvts40">four</span><span class="rvts6"> numbers; namely, </span><span class="rvts40">123</span><span class="rvts6">, </span><span class="rvts40">456</span><span class="rvts6">, </span><span class="rvts40">654</span><span class="rvts6"> and </span><span class="rvts40">321</span><span class="rvts6">. The decimal points will </span><span class="rvts40">not</span><span class="rvts6"> be treated as part of the numeric values, but as </span><span class="rvts40">delimiters</span><span class="rvts6">. Using a “floating” command, the value </span><span class="rvts40">654</span><span class="rvts6"> is the </span><span class="rvts140">third</span><span class="rvts6"> value from the left, </span><span class="rvts40">not</span><span class="rvts6"> part of a </span><span class="rvts140">second</span><span class="rvts6"> value.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">See the </span><span class="rvts165">Quick Reference</span><span class="rvts6"> for examples on how to use numeric conversion items.</span></p>
+<p class="rvps9"><span class="rvts6"> </span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

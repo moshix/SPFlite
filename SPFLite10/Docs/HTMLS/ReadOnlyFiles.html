@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Read Only Files</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Read Only Files">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Read Only Files" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="ReadOnlyFiles"
+		  data-hnd-context="212"
+		  data-hnd-title="Working with Read Only Files"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Read Only Files</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#DeterminingthatafilehastheReadOnlyattribute">Determining that a file has the Read Only attribute</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#AccessingReadOnlyfilesfromtheSPFLiteFileManager">Accessing Read Only files from the SPFLite File Manager</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#EditingReadOnlyfilesfromanSPFLiteEditorBrowsewindow">Editing Read Only files from an SPFLite Edit or Browse window</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#ReadOnlyfilesandMEDIT">Read Only files and MEDIT</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#ActionstakenduringENDorSAVE">Actions taken during END or SAVE</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#ActionstakenduringRenameorDelete">Actions taken during Rename or Delete</a></p>
+<p class="rvps5"><a class="rvts84" href="ReadOnlyFiles.html#ActionsrequiringWindowsExplorerorotherexternalintervention">Actions requiring Windows Explorer or other external intervention</a></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">SPFLite will respect the Read Only attribute of a file. Because this action takes place automatically, there is not a lot for you to do, except to understand the process SPFLite uses to handle Read Only files.</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="DeterminingthatafilehastheReadOnlyattribute"></a>
+<span class="rvts40">Determining that a file has the Read Only attribute</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts94">From the Windows Explorer</span><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When Explorer displays a list of files, you can see the Read Only attribute (among other things) if you add the </span><span class="rvts40">Attributes</span><span class="rvts6"> column heading to the display. To do that, right-click on the Explorer heading line on some empty area, and a box of heading types will appear; click on </span><span class="rvts40">Attributes</span><span class="rvts6">. This column does not typically appear by default, unless you have made a global change to Explorer to have every file display contain this heading.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">To see the properties dialog for a particular file, where you can both display and change the Read Only attributes, right-click on the file name, and select Properties. You should see various attribute check-boxes, including Read Only. Here is a sample Windows Explorer display:</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/ReadOnlyProperties.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="AccessingReadOnlyfilesfromtheSPFLiteFileManager"></a>
+<span class="rvts40">Accessing Read Only files from the SPFLite File Manager</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When a file contains a Read Only attribute, the File Manager will change the line-command field for that file, so that it displays as </span><span class="rvts40">dots</span><span class="rvts6"> instead of underscores. This is a "flag" to remind you that you are dealing with a Read Only file. Here is a sample File Manager display:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/FM Read Only 01.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you click on a file name, or use the File Manager line commands </span><span class="rvts40">E</span><span class="rvts6"> (Edit) or </span><span class="rvts40">S</span><span class="rvts6"> (Select), SPFLite normally will open an </span><span class="rvts40">Edit</span><span class="rvts6"> session for the selected file. When the file has a Read Only attribute, the file will be opened in a </span><span class="rvts40">View</span><span class="rvts6"> session rather than an </span><span class="rvts40">Edit</span><span class="rvts6"> session. SPFLite detects the Read Only attribute and automatically switches the action from Edit to View. The first box of the Status Bar will, instead of simply showing </span><span class="rvts40">View</span><span class="rvts6"> will say </span><span class="rvts40">RdOnly. </span><span class="rvts6">Technically, this is only a cosmetic matter. You are actually </span><span class="rvts94">still</span><span class="rvts6"> in </span><span class="rvts40">View</span><span class="rvts6"> mode. The reason for changing the indicator is so you won't forget </span><span class="rvts40">why</span><span class="rvts6"> you are in Browse mode - it's because the file was found to be a Read Only file.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Read Only Edit.jpg"></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="EditingReadOnlyfilesfromanSPFLiteEditorBrowsewindow"></a>
+<span class="rvts40">Editing Read Only files from an SPFLite Edit or Browse window</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you issue the </span><span class="rvts40">EDIT</span><span class="rvts6"> primary command from an existing Edit or Browse session, SPFLite detects the Read Only attribute and automatically switches the action from Edit to View. You will get the same message here as you would when trying to edit a file from the File Manager.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ReadOnlyfilesandMEDIT"></a>
+<span class="rvts40">Read Only files and MEDIT</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">SPFLite does not currently support Read Only files participating in Multi-Edit sessions. If you want to use a Read Only file within </span><span class="rvts40">MEDIT</span><span class="rvts6">, you must remove the Read Only attribute, or copy the file to another name, and ensure that the copy of the file is not Read Only.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ActionstakenduringENDorSAVE"></a>
+<span class="rvts40">Actions taken during END or SAVE</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you attempt to </span><span class="rvts40">SAVE</span><span class="rvts6"> a Read Only file, the command will be rejected with an error message. If you have made changes to the file, these changes will not be saved during </span><span class="rvts40">END</span><span class="rvts6">. Instead you will see a popup message asking you to continue the </span><span class="rvts40">END</span><span class="rvts6"> operation without saving. </span><span class="rvts40">Yes</span><span class="rvts6"> is the same as a </span><span class="rvts40">CANCEL</span><span class="rvts6"> command, and </span><span class="rvts40">No </span><span class="rvts6">causes the </span><span class="rvts40">END</span><span class="rvts6"> to be ignored and you are returned to the Read Only browse screen. This is done regardless of the AUTOSAVE options currently in effect.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ActionstakenduringRenameorDelete"></a>
+<span class="rvts40">Actions taken during Rename or Delete</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">SPFLite will not allow you to rename or delete a Read Only file, and will issue an error message informing you of that. This applies to the Delete and Rename line commands (</span><span class="rvts40">D</span><span class="rvts6"> and </span><span class="rvts40">R</span><span class="rvts6">) in File Manager, as well as the </span><span class="rvts40">RENAME</span><span class="rvts6"> and </span><span class="rvts40">CANCEL DELETE</span><span class="rvts6"> or </span><span class="rvts40">CANCEL PURGE</span><span class="rvts6"> primary edit command.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ActionsrequiringWindowsExplorerorotherexternalintervention"></a>
+<span class="rvts40">Actions requiring Windows Explorer or other external intervention</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">During the design phase for respecting the Read Only attribute of files, consideration was given for allowing Delete and Rename capabilities, perhaps with a warning popup message, as well as the ability to set and clear the Read Only attribute from File Manager. However, if it's too easy to circumvent the protection, it can be almost as bad as not having any protection at all. As a result, the decision was made not to allow this.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Because of that, in order to provide the most protection for these files, if you have to take these actions, you will have to do so outside of SPFLite, and use the Windows Explorer or a command line prompt to rename or delete a Read Only file, or modify the Read Only attribute of a file.</span></p>
+<p class="rvps5" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,27 @@
+' ISRMask.MACRO
+'
+'  ISRMASK - Overlay a line with data from the mask line.
+'  Use either line command O/OO or OR/ORR to specify     
+'  which lines to overlay. O/OO causes nondestructive     
+'  overlay, and OR/ORR causes a destructive overlay.     
+'
+' Author: George Deluca 
+' Original by IBM in the Macros Documentation 
+' 
+dim mask as string
+dim i as number
+spf_debug(Get_Dest_LCmd$)
+if left$(Get_Dest_LCmd$, 1) <> "O" then halt(fail, "No overlay range has been selected") 
+
+mask = Get_Profile$("MASK")                           ' Fetch the MASK data
+
+for i = Get_Dest1_LPtr to Get_Dest2_LPtr              ' Loop through line range
+   if Is_Data(i) then                                 ' Only Data lines 
+      if Get_Dest_LCmd$ = "O" or Get_Dest_LCmd$ = "OO" then  ' Normal O/OO type overlay? 
+         SPF_Ovr(i, 1, mask)                          ' Overlay the mask
+      else                                            ' Must be OR/ORR type 
+         SPF_Ovr_Rep(i, 1, mask)                      ' Force Overlay the mask
+      end if                                          ' 
+   end if                                             ' End IsData 
+next                                                  '
+halt                                                  ' Done

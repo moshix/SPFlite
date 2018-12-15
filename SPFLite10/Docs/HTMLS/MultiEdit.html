@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Multi-Edit Sessions</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Multi-Edit Sessions">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Multi-Edit Sessions" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MultiEdit"
+		  data-hnd-context="192"
+		  data-hnd-title="Working with Multi-Edit Sessions"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Multi-Edit Sessions</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#SelectingasetoffilesfortheMulti-Editsession">Selecting a set of files for the multi-edit session</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#WorkingwithSPFLite'srepresentationofmultiplefilesinasingleEdittab">Working with SPFLite's representation of multiple files in a single edit tab</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#StoringdataduringSAVEandENDprocessing">Storing data during SAVE and END processing</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Simulatingamulti-browsewithSAVEAS">Simulating a multi-browse with SAVEAS</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Addingandremovingfilesfromamulti-editsession">Adding and removing files from a multi-edit session</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Linecommandspermittedon=FILE%3Elines">Line commands permitted on =FILE&gt; lines</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#The(ClipName)and(ClipPath)keyboardprimitivefunctionsinMulti-Edit">The (ClipName) and (ClipPath) keyboard primitive functions in Multi-Edit</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Creatingandusingorphanedlines">Creating and using orphaned lines</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Navigatingfromonefiletoanother">Navigating from one file to another</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Dealingwithexternalchangeswhileaneditisinprogress">Dealing with external changes while an edit is in progress</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Treatmentofunqualifiedfilenamesonprimarycommands">Treatment of unqualified file names on primary commands</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#ReadOnlyfilesandMEDIT">Read Only files and MEDIT</a></p>
+<p class="rvps9"><a class="rvts45" href="MultiEdit.html#Whatelsecanyoudoinamulti-editsession?">What else can you do in a multi-edit session ?</a></p>
+<p class="rvps9"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Multi-Edit is a new editing technology, not present in IBM ISPF. A multi-edit is an edit session containing multiple files under a single SPFLite edit tab.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts110">Why use Multi-Edit sessions?&nbsp;</span><span class="rvts35"> </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The main reason is increased productivity in quickly making large-scale, synchronized changes to multiple files at one time. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose you have several text files that are interrelated, containing common names and values that are defined and referenced throughout every file. (Program source files, containing the names of functions and variables, are one example of this.) &nbsp;Now, what if you wanted to make a new version of these files that involved changing these common names and values everywhere in every file. How would you go about doing it?</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You might have an existing list of files you need to work on, in a directory list or File List. Or, you could use a Find in Files command </span><span class="rvts36">FF</span><span class="rvts35"> to search for all files containing some string, which produces a Found Files File List. Even with the Find in Files command </span><span class="rvts36">FF</span><span class="rvts35">, now part of SPFLite, you would still have to manually apply the changes to each file, one file at a time. When there are many changes and many files involved, that could be a long, tedious process. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's say you wanted to change the word ABC to DEF in every file: &nbsp;You would have open “file 1” from your list, issue a command like </span><span class="rvts36">CHANGE ABC DEF WORD ALL</span><span class="rvts35">, close the file, open “file 2”, and repeat the process, over and over again. Now, picture </span><span class="rvts85">lots</span><span class="rvts35"> of changes to </span><span class="rvts85">lots</span><span class="rvts35"> of files. You can see how labor-intensive this could get.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Ideally, you would like to be able to say, </span><span class="rvts36">CHANGE ABC DEF WORD ALL</span><span class="rvts35"> and have that change applied to every file containing the word ABC, all at the same time. With multi-edit, now you can!</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Some users of Windows GUI-type editors and software developers that use Integrated Development Environments (IDE's) are familiar with the powerful concept of a "refactoring editor". Our Multi-Edit facility is not exactly a refactoring editor, but it's pretty close. One advantage of SPFLite's Multi-Edit is that it's a general facility, one that can be used on any data, and is not dependent on a software development environment or any programming language. And, it fits within an ISPF-like architecture, something ISPF itself doesn't offer.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Bear in mind that you could have several multi-edit sessions open at the same time, as long as no file is involved in more than one edit session (whether a regular edit session or multi-edit session).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">We'll take this one step at a time.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="SelectingasetoffilesfortheMulti-Editsession"></a>
+<span class="rvts290">Selecting a set of files for the Multi-Edit session</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In the File Manager, start with a displayed list of files, and for each one that you want to be part of your Multi-Edit session, place an </span><span class="rvts36">M </span><span class="rvts35">line command on that line. The list of files can be a directory list, where you set the File Path and File Patterns fields, or it can be a File List display.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts36">Note: </span><span class="rvts35">You can apply selected File Manager line commands to a File List, and the commands will be applied, not to the File List </span><span class="rvts36">itself</span><span class="rvts35">, but to all the files named </span><span class="rvts36">within</span><span class="rvts35"> the File List. In particular, to start a Multi-Edit all of the files named in a File List, you can issue the File Manager line command </span><span class="rvts36">ALL M</span><span class="rvts35"> for that File List. See</span><a class="rvts33" href="FileManager.html#File%20Manager%20ALL%20command%20and%20FILELISTS"> File Manager ALL command and FILELISTS</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's say you have placed the files of interest into the </span><span class="rvts36">Favorite Files</span><span class="rvts35"> File List. Here is what the list might look like (the display is a little simplified here). We are going to select three files from this list, the AAA, BBB and JJJ files. To do this, place the Multi-Edit line command </span><span class="rvts36">M</span><span class="rvts35"> on each of these files, and after all of the </span><span class="rvts36">M</span><span class="rvts35"> codes are in place, then press Enter. If you have to, you can scroll up and down in the list, but don't press Enter until you are done putting </span><span class="rvts36">M</span><span class="rvts35"> codes on every file you want to edit.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Multi Edit 01.jpg"></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Once you press Enter, you are about to begin your first multi-edit session. (This is something you've never seen before in an ISPF-style editor, and probably not anywhere else, either.)</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="WorkingwithSPFLite'srepresentationofmultiplefilesinasingleEdittab"></a>
+<span class="rvts290">Working with SPFLite's representation of multiple files in a single Edit tab</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Once you have selected your files with the M command and pressed Enter, you will have a new file tab opened. Since there are multiple files involved, and no single name would be appropriate for the file tab label, you will instead see </span><span class="rvts36">(Multi-Edit)</span><span class="rvts35"> in the Windows title bar, and </span><span class="rvts36">(M-Edit)</span><span class="rvts35"> in the file tab label. The edit session display will look like this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Multi Edit 02.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Each of the files in the Multi-Edit session are separated by a </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> </span><span class="rvts85">separator line</span><span class="rvts35">. This separator line cannot be moved, modified or excluded. As you will notice the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator does not have a line number. This is because it is not ‘data' but merely denotes the start of a new file. You will also see that each </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line contains the fully-qualified name of the file that follows it. The actual characters </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> are called the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> </span><span class="rvts85">marker.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Take note of the line numbers. You will see that even though there are three files in this multi-edit session, the line numbers are consecutive from 1 up, but they represent three different files. Just to make this clear,</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000001</span><span class="rvts35"> is line 1 of file </span><span class="rvts36">AAA.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000002</span><span class="rvts35"> is line 2 of file </span><span class="rvts36">AAA.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000003</span><span class="rvts35"> is line 3 of file </span><span class="rvts36">AAA.TXT</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000004</span><span class="rvts35"> is line 1 of file </span><span class="rvts36">BBB.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000005</span><span class="rvts35"> is line 2 of file </span><span class="rvts36">BBB.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000006</span><span class="rvts35"> is line 3 of file </span><span class="rvts36">BBB.TXT</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000007</span><span class="rvts35"> is line 1 of file </span><span class="rvts36">JJJ.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000008</span><span class="rvts35"> is line 2 of file </span><span class="rvts36">JJJ.TXT</span></p>
+<p class="rvps108"><span class="rvts35">Line </span><span class="rvts36">000009</span><span class="rvts35"> is line 3 of file </span><span class="rvts36">TJJJ.TXT</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The reason the line numbers are consecutive is that, internally, SPFLite treats the </span><span class="rvts85">entire</span><span class="rvts35"> edit session as though it were a </span><span class="rvts85">single file.</span><span class="rvts35"> &nbsp;That is because it has read-in every file into memory in a single location. By doing this, it makes it possible to issue ordinary SPFLite editing commands that end up affecting multiple files.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you are following the example and look closely, you will see that the file names in each </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line are in the same order as they were in the File List they were selected from using the </span><span class="rvts36">M</span><span class="rvts35"> line command. This means that if you want or need the files in your multi-edit session to be in some particular order, you must sort the directory list or File List as you need it to be, prior to starting the multi-edit session. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The color of the multi-edit tab label is handled the same as regular file tab labels are, and if anything is updated, the color will change, if you have set up your color scheme to do this. Let's say that unmodified files will have a tab that looks like </span><span class="rvts61">(M-Edit)</span><span class="rvts35"> in blue. You will also notice on the Status line, where it would normally say </span><span class="rvts36">Edit</span><span class="rvts35">, instead it shows </span><span class="rvts36">3 Edit</span><span class="rvts35">. This means you have 3 files involved in this edit session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice in the display above, on line 3, the word </span><span class="rvts36">THREE</span><span class="rvts35"> is misspelled as </span><span class="rvts36">THRE</span><span class="rvts35">. Let's correct it, by typing over it and pressing Enter:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Multi Edit 03.jpg"></p>
+<p class="rvps10"><span class="rvts280"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What changes?</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The first </span><span class="rvts136">=FILE&gt;</span><span class="rvts35"> marker changes to </span><span class="rvts136">=FILE*</span><span class="rvts35"> to show that </span><span class="rvts36">this file</span><span class="rvts35"> has been modified.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The file tab will change color (depending on your color setup); let us say it now shows </span><span class="rvts317">(M-Edit)</span><span class="rvts35"> in red; that means that </span><span class="rvts36">this multi-edit session</span><span class="rvts35"> has changed. </span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The Status line will change from </span><span class="rvts36">3 Edit</span><span class="rvts35"> to </span><span class="rvts36">3 Edit 1*</span><span class="rvts35">. The notation </span><span class="rvts36">3 Edit 1*</span><span class="rvts35"> means, you have </span><span class="rvts36">3</span><span class="rvts35"> files involved in the multi-edit session, and </span><span class="rvts36">1</span><span class="rvts35"> of them has been </span><span class="rvts36">modified</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note: </span><span class="rvts35">When the sequence area width is set to 5, the </span><span class="rvts136">=FILE&gt;</span><span class="rvts35"> and =</span><span class="rvts136">FILE*</span><span class="rvts35"> markers are displayed as</span><span class="rvts317"> </span><span class="rvts136">FILE&gt;</span><span class="rvts35"> and</span><span class="rvts89"> </span><span class="rvts136">FILE*</span><span class="rvts35">, respectively.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose you wanted to change the word </span><span class="rvts36">FILE</span><span class="rvts35"> to </span><span class="rvts36">DATASET</span><span class="rvts35"> in all these files. How would you do it? &nbsp;Here is where the power of multi-edit comes into play. Within this edit session, you see 9 lines of data. To SPFLite, these 9 lines are treated internally as if they were a </span><span class="rvts85">single file</span><span class="rvts35">, rather than three. Because the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> markers </span><span class="rvts36">are not data</span><span class="rvts35">, the editing commands you normally use in SPFLite (with very few exceptions) simply ignore these marker lines. This means that you can change the data for </span><span class="rvts85">every</span><span class="rvts35"> file (or, as many of them as you'd like to) with a </span><span class="rvts85">single command.</span><span class="rvts35"> &nbsp;Here's how you change the word:</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts136">Command &gt; CHANGE FILE DATASET ALL</span></p>
+<p class="rvps4"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts85">It's just that simple!</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here is what your edit session will look like after you do this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Multi Edit 04.jpg"></p>
+<p class="rvps10"><span class="rvts280"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Again, what changes?</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">Now, </span><span class="rvts85">all</span><span class="rvts35"> </span><span class="rvts136">=FILE&gt;</span><span class="rvts35"> markers have changed to </span><span class="rvts136">=FILE*</span><span class="rvts35"> because every file has been modified</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The file tab continues to show </span><span class="rvts317">(M-Edit)</span><span class="rvts35"> in red to reflect that at least one file was modified. </span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The Status line will change from </span><span class="rvts36">3 Edit 1*</span><span class="rvts35"> to </span><span class="rvts36">3 Edit 3*</span><span class="rvts35">. The notation </span><span class="rvts36">3 Edit 3*</span><span class="rvts35"> means, you have 3 files involved in the edit session, and all 3 of them have been modified.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can get rid of the </span><span class="rvts71">==CHG&gt;</span><span class="rvts35"> markers by issuing a </span><span class="rvts36">RESET</span><span class="rvts35"> command, just as you would in a regular file.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="StoringdataduringSAVEandENDprocessing"></a>
+<span class="rvts290">Storing data during SAVE and END processing</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now that we have changed the data in all these files, let's save them. What do you need to do to save every one of these files? &nbsp;Just say </span><span class="rvts36">SAVE</span><span class="rvts35"> like you do for a regular file. You can type in the </span><span class="rvts36">SAVE</span><span class="rvts35"> command, or issue it from a mapped key. When you do this, SPFLite is aware that it's inside a multi-edit session, and it saves every file to the file location you see on each </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you say </span><span class="rvts36">SAVE</span><span class="rvts35"> in our example, you will see the message: &nbsp;</span><span class="rvts36">3 files saved</span><span class="rvts35">. All of the </span><span class="rvts36">*FILE&gt;</span><span class="rvts35"> markers revert back to </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> to show each file no longer has unsaved changes.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Will </span><span class="rvts36">SAVE</span><span class="rvts35"> always save </span><span class="rvts85">all</span><span class="rvts35"> files? &nbsp;Yes, just as a </span><span class="rvts36">SAVE</span><span class="rvts35"> command on a single-file Edit will save the file regardless of its modified status, so does </span><span class="rvts36">SAVE</span><span class="rvts35"> in a multi-edit session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you </span><span class="rvts36">END</span><span class="rvts35"> a multi-edit session and there are unsaved changes in any file, these will get saved according to the AUTOSAVE options in effect individually by file. </span><span class="rvts36">END</span><span class="rvts35"> will only save </span><span class="rvts85">modified</span><span class="rvts35"> files.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Note:</span><span class="rvts35"> &nbsp;When you </span><span class="rvts36">END</span><span class="rvts35"> a multi-edit session, the file type, and thus the PROFILE, for </span><span class="rvts85">each individual file,</span><span class="rvts36"> is individually respected</span><span class="rvts35">. That means some files might have different AUTOSAVE options. It's up to you how you want to handle this in cases where you do a multi-edit of files having different PROFILE settings.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can also </span><span class="rvts36">CANCEL</span><span class="rvts35"> a multi-edit session, discarding any unsaved changes that may exist across all the files you have open, just as you could for a regular edit session.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Simulatingamulti-browsewithSAVEAS"></a>
+<span class="rvts290">Simulating a multi-browse with SAVEAS</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There is no Browse equivalent of multi-edit; that is, there is no "multi-browse" command. However, there may be times when you might wish to temporarily work with a set of files (the way multi-edit does) without risking changes to any of the files (the way a Browse session does).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To accomplish this, you can begin a multi-edit session as normal, and then issue a </span><span class="rvts36">SAVEAS</span><span class="rvts35"> command with no operands. This will bring up a directory-browse dialog, where you choose a directory (or create one) where all the files in your multi-edit session are saved. Once you do this, you will begin a new multi-edit session in which each </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line will have the same file name and the (new) directory you have chosen.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can do the </span><span class="rvts36">SAVEAS</span><span class="rvts35"> selecting an existing, non-empty directory, but if any files within that directory have the same basic file names as the ones you are trying to save, the </span><span class="rvts36">SAVEAS</span><span class="rvts35"> operation will not be performed and no files will be saved. (</span><span class="rvts36">SAVEAS</span><span class="rvts35"> will not write over existing files.) &nbsp;Thus, the normal and preferred procedure is to create a new empty directory (or take steps to ensure that the </span><span class="rvts36">SAVEAS</span><span class="rvts35"> target directory is empty ahead of time) as part of your </span><span class="rvts36">SAVEAS</span><span class="rvts35"> process.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you begin a multi-edit session from a File List using files originating from more than one directory, SPFLite permits you to have files in different directories that have the same basic file name in the same multi-edit session. However, if you intend to do a </span><span class="rvts36">SAVEAS</span><span class="rvts35"> command, all of the basic file names involved must be unique, since the </span><span class="rvts36">SAVEAS</span><span class="rvts35"> command will save all of the files from your multi-edit session into the same directory. If they are not unique, you can continue to use your multi-edit session, but you will not be able to issue a </span><span class="rvts36">SAVEAS</span><span class="rvts35"> command.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you do a </span><span class="rvts36">SAVEAS</span><span class="rvts35"> command, every file currently in the multi-edit session is saved to the new location, even files not currently in a modified state.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Addingandremovingfilesfromamulti-editsession"></a>
+<span class="rvts290">Adding and removing files from a multi-edit session</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you issue a </span><span class="rvts36">D</span><span class="rvts35"> line command on a </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> marker, the marker line and all lines associated with that file will disappear. </span><span class="rvts36">This does NOT delete the file itself</span><span class="rvts35">, but it removes the file from the multi-edit session. Any unsaved changes that may exist for that file will be discarded, the same as when a </span><span class="rvts36">CANCEL</span><span class="rvts35"> command is issued. Because a </span><span class="rvts36">D</span><span class="rvts35"> line command on a </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> marker removes the file from the multi-edit session but does not delete it, you can think of using a </span><span class="rvts36">D</span><span class="rvts35"> line command this way as if it meant “</span><span class="rvts36">detach</span><span class="rvts35">” instead of “</span><span class="rvts36">delete</span><span class="rvts35">”.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">(When you use a </span><span class="rvts36">D</span><span class="rvts35"> line command on ordinary data lines that </span><span class="rvts85">follow</span><span class="rvts35"> the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line, the</span><span class="rvts36"> D</span><span class="rvts35"> will delete the data, just as it does in a regular file.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you wish to bring in another file to an existing multi-edit session, issue an </span><a class="rvts33" href="MEDIT.html">MEDIT</a><span class="rvts35"> primary command. This will create a new </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator line after the last data line in the last file, and then the data lines from the newly added file will appear after that. If you started editing a single file as an ordinary edit session, </span><span class="rvts36">MEDIT</span><span class="rvts35"> will convert the edit session to a multi-edit session and then add the file to the end.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Linecommandspermittedon=FILE>lines"></a>
+<span class="rvts290">Line commands permitted on =FILE&gt; lines</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">As mentioned, you can use the</span><span class="rvts36"> D</span><span class="rvts35"> line to remove a file from the multi-edit session. The following line commands are also available on the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator line:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">X </span><span class="rvts35">will exclude all the lines belonging to the file. It will not exclude the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator line itself. You will see the excluded-line placeholder in place of the data lines for that file, but the </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator line will always be visible and cannot be excluded.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">S </span><span class="rvts35">will unexclude all the lines belonging to the file, undoing what an X line command on a </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line did.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">A</span><span class="rvts35"> and </span><span class="rvts36">B</span><span class="rvts35"> can be put on this line if you are moving data lines after or before this point. </span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note that a</span><span class="rvts36"> =FILE&gt;</span><span class="rvts35"> line itself cannot be moved or copied, either directly or indirectly, or typed on, nor can it be changed manually or through primary or line commands.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">(Users of mainframe ISPF can compare how this works to the dashed line that separated an ISPF 3270 split-screen session. You could reposition the dashed line, but you could not get rid of it, unless you closed out the split-screen session. The principle here is very similar. In fact, since SPFLite does not support “split screen mode” as mainframe ISPF does, but does support Multi-Edit, you could use Multi-Edit to partially simulate an ISPF-like split-screen session, if you were so inclined.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="The(ClipName)and(ClipPath)keyboardprimitivefunctionsinMulti-Edit"></a>
+<span class="rvts290">The (ClipName) and (ClipPath) keyboard primitive functions in Multi-Edit</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">These functions normally return the file name or full path name of the edit file. In a multi-edit session, there are multiple files and thus multiple names. In this case, the </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.clipname">(ClipName)</a><span class="rvts35"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.clippath">(ClipPath)</a><span class="rvts35"> keyboard primitive functions will place into the clipboard the name of the particular file where the cursor is located at the moment, whether it is on a =</span><span class="rvts36">FILE&gt;</span><span class="rvts35"> line or is on any data line associated with that </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line. If the cursor is not in a “file area” when you use these functions, such as on the primary command line, it is an error, and the clipboard will not get anything stored into it.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.clipname">(ClipName)</a><span class="rvts35"> and </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.clippath">(ClipPath)</a><span class="rvts35"> keyboard primitive functions have also been enhanced to return the file name of a file that the cursor is on if you are in the File Manager.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Creatingandusingorphanedlines"></a>
+<span class="rvts290">Creating and using orphaned lines</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Normally, the Top of Data line in a multi-edit session is immediately followed by a </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator line and then line 1 of the first file. If you copy one or more data lines after the Top of Data line, these lines will have no </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> separator preceding them. These lines do not belong to any file at all, but are “</span><span class="rvts36">orphaned</span><span class="rvts35">” lines. During a </span><span class="rvts36">SAVE</span><span class="rvts35"> or </span><span class="rvts36">END</span><span class="rvts35"> command, orphaned lines are not saved.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can use orphaned lines as temporary data, perhaps data that you wish to edit and then copy or move to other parts of the multi-edit session. Having orphaned lines is not an error; you just need to be aware of how SPFLite treats these lines.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Navigatingfromonefiletoanother"></a>
+<span class="rvts290">Navigating from one file to another</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">LOCATE</span><span class="rvts35"> command has been extended with a </span><span class="rvts85">locate line-type</span><span class="rvts35"> of </span><span class="rvts36">FILE</span><span class="rvts35">. You can </span><span class="rvts36">LOCATE</span><span class="rvts35"> to the </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> </span><span class="rvts36">=FILE&gt;</span><span class="rvts35"> line using this command, by specifying </span><span class="rvts36">LOCATE FILE FIRST</span><span class="rvts35">, etc.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">As you do, you will see a message such as, &nbsp;</span><span class="rvts36">File 1 of 3 found</span><span class="rvts35">. You can use this information to help keep track of where you are in the multi-edit session, which may be useful if you have many files involved.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you need to find a certain file number and you have many files (let's say, 100 of them) there is no command to directly find the sixty-third file, for example. However, let's say you have the F5 key mapped to </span><span class="rvts36">RLOCFIND</span><span class="rvts35">, which will repeat the last </span><span class="rvts36">LOCATE</span><span class="rvts35"> or </span><span class="rvts36">FIND</span><span class="rvts35">, whichever has happened most recently, and the auto-repeat checkbox for that key is checked. You can first issue a</span><span class="rvts36"> LOCATE FILE FIRST</span><span class="rvts35">, and you will see the message (in this example), &nbsp;</span><span class="rvts36">File 1 of 100 found</span><span class="rvts35">. To find file 63, just hold down the F5 key until you (eventually) see the</span><span class="rvts36"> File 63 of 100 found </span><span class="rvts35">message. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">(In case you pass it up, you could also have Shift-F5 mapped to </span><span class="rvts36">RLOCFIND REVERSE</span><span class="rvts35"> (for example). Then, just hold down the Shift key and press F5 to go backwards until the right file number shows up in the message, and there you are. If you don't have a key for </span><span class="rvts36">RLOCFIND REVERSE</span><span class="rvts35"> set up, just slow down when you get near the right file number so you don't pass it up.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The command </span><span class="rvts36">LOCATE FILE</span><span class="rvts35"> must not be combined with </span><span class="rvts36">ALL</span><span class="rvts35"> or </span><span class="rvts36">MX</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Dealingwithexternalchangeswhileaneditisinprogress"></a>
+<span class="rvts290">Dealing with external changes while an edit is in progress</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite will keep track of every file involved in a multi-edit session, so that you are protected from, or notified about, external changes to any file in your multi-edit session, the same as you would for an individual edit file in the same situation.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Treatmentofunqualifiedfilenamesonprimarycommands"></a>
+<span class="rvts290">Treatment of unqualified file names on primary commands</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When an unqualified file name appears in a primary command issued from a multi-edit session, SPFLite must determine the directory to look at when resolving the file name.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The method it uses is the take the file path of the </span><span class="rvts36">last</span><span class="rvts35"> loaded file as the assumed directory. This means that commands like </span><span class="rvts36">MEDIT</span><span class="rvts35">, </span><span class="rvts36">COPY</span><span class="rvts35">, etc. that take file names will look in the directory where the last-loaded file was found to find files that are not fully-qualified on the command line.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This should be taken into account when you have multi-edit sessions that involve files from more than one directory, which can only happen if you started your multi-edit session from a File List display instead of from a directory list display.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ReadOnlyfilesandMEDIT"></a>
+<span class="rvts40">Read Only files and MEDIT</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">SPFLite does not currently support Read Only files participating in Multi-Edit sessions. If you want to use a Read Only file within </span><span class="rvts40">MEDIT</span><span class="rvts6">, you must remove the Read Only attribute, or copy the file to another name, and ensure that the copy of the file is not Read Only.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Whatelsecanyoudoinamulti-editsession?"></a>
+<span class="rvts290">What else can you do in a multi-edit session ?</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Basically, anything that you could do in a regular edit session, multiplied by the power of acting on multiple files at once. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The possibilities are intriguing:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">Exclude, Flip, and Show to manage the exclusion status of the lines</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">SORT</span><span class="rvts35"> across multiple files at a time (this </span><span class="rvts36">will</span><span class="rvts35"> work, but the results may surprise you; be certain this is what you intended)</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">Use tags to identify and edit lines across multiple files</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">Use Power Typing to interactively update data lines in parallel, across multiple files</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">SUBMIT</span><span class="rvts35"> jobs consisting of multiple files</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">Print multiple files at one time with a single </span><span class="rvts36">PRINT</span><span class="rvts35"> command</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Maybe you can come with interesting techniques of your own. If you do, please let us know!</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

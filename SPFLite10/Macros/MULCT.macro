@@ -1,0 +1,47 @@
+' MULCT.macro
+/*
+Function: LineCount the X and NX Lines in [M]EDIT Session and writes NX to file
+Syntax:   MULCT [X]
+Limits:   all M can can only process 499 files, 500 Msg Excessive operands for MEDIT command, >500 Crash
+          Get_Line$(lptr) RC8 Non modifyable line for FILE Line
+Author:   Johann Muehlhofer
+*/
+uses "FILE"
+  dim i, ip1, ip2, finr, fist as number value 0
+  dim lid as string
+    ip1 = SPF_Loop_Check("OFF")
+'   SPF_Cmd("res")
+    if Get_Arg_Count=1 and Get_Arg$(1)="X" then SPF_Cmd("X all")   ' for Line Counting per File
+    finr = FILE_Open(Get_INI_Path$+"\MULCT.LCT","OUTPUT")
+    ip1=1:lid=Get_FilePath$+Get_FileName$
+  for i = 1 to Get_Last_LPtr
+  if Get_Line_Type$(i) = "FILE" then
+' if Is_File(i) <> 0 then   ' -1 instead of 1 so i prefer above line
+   lid = Get_Line$(i)       ' will make request to George to return (eventualy 6 byte =FILE* +) FILE Line Data
+   if Get_RC<>0 then
+    Set_Msg(lid+" RC="+Get_RC+" MSG="+Get_Msg$+" LPtr="+i+" LNum="+Get_LNum(i+2))
+    lid=Get_FilePath$+Get_FileName$
+   endif
+  endif
+  if Get_Line_Type$(i) = "DATA" then
+  if Get_XStatus$(i) = "NX" then
+' if Get_Line_Len(i) = 0 then SPF_Cmd("loc "+Get_LNum(i))
+    fist = FILE_LinePrint(finr,string$(11," ")+Get_Line$(i))
+  ip1 = ip1 + 1
+  endif
+  endif
+  if Get_Line_Type$(i) = "EXCL" then
+    ip2=ip1+Get_XLINES(i)-1
+   if lid="" then
+    fist = FILE_LinePrint(finr,"  /"+string$(26," ")+rset$(Get_XLINES(i),7)+rset$(val(ip1),8)+rset$(val(ip2),8))
+   else
+    fist = FILE_LinePrint(finr,File_GetDateTime(lid)+rset$(File_Size(lid),10)+rset$(Get_XLINES(i),7)+rset$(val(ip1),8)+rset$(val(ip2),8)+" "+lid)
+    lid=""
+   endif
+    ip1=ip2+1
+  endif
+  next
+    fist = FILE_LinePrint(finr,Get_Session_Type$)
+    ip1 = SPF_Loop_Check("ON")
+fist = FILE_CLOSE(finr)<span style="font-family: Verdana, Arial; font-size: 10pt;">
+</span>

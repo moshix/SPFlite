@@ -1,0 +1,670 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Accessing Command Line Operands</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accessing Command Line Operands">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Accessing Command Line Operands" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="AccessingCommandLineOperands"
+		  data-hnd-context="24"
+		  data-hnd-title="Accessing Command Line Operands"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Accessing Command Line Operands</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps4"><a class="rvts28" href="AccessingCommandLineOperands.html#Introduction">Introduction</a></p>
+<p class="rvps4"><a class="rvts28" href="AccessingCommandLineOperands.html#Basic-operand-access">Basic operand access</a></p>
+<p class="rvps4"><a class="rvts28" href="AccessingCommandLineOperands.html#SUB-operand-access">SUB operand access</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#A-note-about-macro-parameter-data-type">A note about macro parameter data type</a></p>
+<p class="rvps4"><a class="rvts28" href="AccessingCommandLineOperands.html#Full-parse-access">Full-parse access</a></p>
+<p class="rvps7"><a class="rvts30" href="AccessingCommandLineOperands.html#How-to-access-the-parsed-out-operands">How to access the parsed out operands</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#How-to-specify-the-macro-command-syntax">How to specify the macro command syntax</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#How-to-specify-a-variable-number-of-values">How to specify a variable number of values</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#How-to-specify-optional-values">How to specify optional values</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#How-to-validate-tag-and-line-references">How to validate tag and line references</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#How-to-specify-keywords">How to specify keywords</a></p>
+<p class="rvps7"><a class="rvts28" href="AccessingCommandLineOperands.html#Example-Putting-SPF-Parse-all-together">Example: Putting SPF_Parse all together</a></p>
+<p class="rvps4"><a class="rvts28" href="AccessingCommandLineOperands.html#A-simple-macro-demo-in-all-three-command-operand-modes">A Simple Macro Demo in All Three Command Operand modes</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts13">Introduction</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Except for the simplest of macros, command line operands are necessary to tailor the actions performed by your macro. So, retrieving and 'sorting out' what operands have been entered is a necessary requirement for most macros. The SPFLite macro support provides three methods for handling the operands. Which is best for you? &nbsp;The deciding factors are the number, order and complexity of the operands, whether any are optional, and whether any are keywords which possibly are part of a "keyword group". The chart below will help you by summarizing the differences in the three levels of support.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">It is important to understand how the command line operands are handled. SPFLite does an initial parse of the &nbsp;command line operands, which are delimited by spaces or quotes as usual, and stores them into a table, which can be accessed with the </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$</a><span class="rvts11"> and </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg_Count">Get_Arg_Count</a><span class="rvts11"> functions.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">These operands are not initially categorized or sorted in any way. You would simply "get" them, using the functions described next.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are three types of macro operand access, as follows:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="158" style="padding: 1px;"><p class="rvps2"><span class="rvts13">Basic Access </span></p>
+</td>
+<td width="864" style="padding: 1px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">The number of operands is available via </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg_Count">Get_Arg_Count</a></li>
+</ul>
+<p class="rvps2"><span class="rvts31"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">Each operand can be accessed as </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$(n)</a><span class="rvts11">, where </span><span class="rvts13">n</span><span class="rvts11"> is the operand position on the command line; the first operand after the macro name itself is considered operand number 1. Operands are returned as STRING values, as indicated by the $ in the function name.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">If local variables are needed for processing the operand values, they must be declared in a DIM statement and assigned the </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$()</a><span class="rvts11"> value. These two steps can be combined if you wish, so that you could write </span><span class="rvts20">DIM FIRST_ARG AS STRING = GET_ARG$(1</span><span class="rvts13">)</span><span class="rvts11"> or these can be done as separate steps.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">All validation and handling of the operands is the responsibility of the macro code you write. </span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"> </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="158" style="padding: 1px;"><p class="rvps2"><span class="rvts13">SUB Operand Access</span></p>
+</td>
+<td width="864" style="padding: 1px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">In creating the SUB structure, the operands are assigned, from left to right, to the arguments defined in the SUB statement.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">Operands are accessed using the variable names used in the SUB statement, making the code much more readable. e.g. if the first operand of the SUB statement were coded as </span><span class="rvts20">start-line AS STRING</span><span class="rvts11"> it makes code much more readable to code </span><span class="rvts20">IF start-line = xxx</span><span class="rvts11"> than to code </span><span class="rvts20">IF Get_Arg$(1) = xxx&nbsp;</span><span class="rvts11"> as in the Basic Access mode.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">Local variables do not need to be declared with a DIM statement for storage of the data.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">All validation and handling of the operands is the responsibility of the macro code you write.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="158" style="padding: 1px;"><p class="rvps2"><span class="rvts13">Full Parse Access</span></p>
+</td>
+<td width="864" style="padding: 1px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">Most built-in SPFLite primary commands utilize 'order-independent' operands. For instance, you can say </span><span class="rvts20">CHG FRED BILL ALL</span><span class="rvts11"> or </span><span class="rvts20">CHG ALL FRED BILL</span><span class="rvts11"> or </span><span class="rvts20">CHG FRED ALL BILL</span><span class="rvts11"> and SPFLite will figure out what you mean. Additionally, many keyword operands have multiple aliases, such as PREFIX, PRE, and PFX. Handling all these variations of operand formats in a macro, using your own code and positional operand access methods, would be difficult and error-prone.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">The function </span><span class="rvts13">SPF_Parse</span><span class="rvts11"> does this 'sorting out' for you, identifying all the various operand types, keywords, and keyword aliases. This allows your macro to provide flexible operand handling with much less effort.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">The main requirement is for you to specify with the </span><span class="rvts13">SPF_Parse</span><span class="rvts11"> function the detailed syntax requirements of your command. This involves informing SPFLite as to how many labels, tags, numbers, string values and keywords you expect to be used.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts13">SPF_Parse</span><span class="rvts11"> is normally be invoked at the beginning of the macro, and, if no scanning errors are reported, all the command line operands will have been categorized and set up for easy retrieval when you need them. Since this is an ordinary function like others provided by SPFLite, you are free to call this function wherever it is most appropriate for your logic.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts11">The categorization supports operand types such as:</span></li>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">Line references (like </span><span class="rvts14">.AA &nbsp;.BB .123</span><span class="rvts11">)</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">Tag references (like </span><span class="rvts14">:DD :S1</span><span class="rvts11">)</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">Text literals (like </span><span class="rvts14">ABC &nbsp;C'DEF' K5</span><span class="rvts11">)</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">Numeric literals (like </span><span class="rvts14">10 20 30</span><span class="rvts11">)</span></li>
+<li style="margin-left: 0px" class="rvps4"><span class="rvts11">Keywords (like </span><span class="rvts14">ALL PREFIX | SUFFIX | WORD</span><span class="rvts11">)</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11">This support includes handling of aliases and mutually-exclusive keywords.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Optional validation of Line References and Tag operands can be performed for you. Invalid (undefined) label or tag operands will cause SPF_Parse to report a syntax error. Because this process is optional, you can decide if you expect your label or tag operands to already exist, or if they might be new labels or tags that the macro itself would define in the course of its operation. To validate a label using macro code, you can try converting a label to a line pointer using </span><a class="rvts21" href="FunctionDetails.html#FN.Get_LPtr">Get_Lptr</a><span class="rvts11">, where a non-zero result means the label is valid. To validate a tag, you can try issuing a command like </span><a class="rvts21" href="FunctionDetails.html#FN.SPF_Cmd">SPF_CMD</a><span class="rvts11">("LOC :ABC FIRST") and if you get RC=0 the tag should be valid.</span></li>
+</ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Parameter validation that is specific to your macro's application must be done by your code.</span></li>
+</ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Basic-operand-access"></a>
+<span class="rvts13">Basic operand access</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Using basic access, macro operands are accessed positionally by their position in the command string, from left to right. The total number of operands available is available by calling the </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg_Count">Get_Arg_Count</a><span class="rvts11"> function. Each individual operand is obtained by calling </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$(n)</a><span class="rvts24"> </span><span class="rvts25">where </span><span class="rvts32">n</span><span class="rvts25"> is the operand number; the first operand after the macro name itself is operand number 1.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The macro may have default operands specified by the macro prototype line (see </span><a class="rvts12" href="Macroformatandstructure.html#Macro%20Prototype">Macro Prototype</a><span class="rvts11">) &nbsp; For example, given the following prototype:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">' sample.MACRO &nbsp;aaa &nbsp;bbb &nbsp;ccc</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the macro were invoked with the primary command line as </span><span class="rvts18">Sample</span><span class="rvts11"> with no supplied arguments, then the </span><span class="rvts18">Get_Arg_Count</span><span class="rvts11"> function would return 3. </span><span class="rvts18">Get_Arg$(1)</span><span class="rvts11"> would be </span><span class="rvts18">aaa</span><span class="rvts11">, &nbsp;</span><span class="rvts18">Get_Arg$(2)</span><span class="rvts11"> would be </span><span class="rvts18">bbb</span><span class="rvts11">, and </span><span class="rvts18">Get_Arg$(3)</span><span class="rvts11"> would be </span><span class="rvts18">ccc</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the macro were invoked with the command &nbsp;</span><span class="rvts18">Sample RED GREEN BLUE YELLOW</span><span class="rvts14">,</span><span class="rvts11"> then the </span><span class="rvts18">Get_Arg_Count</span><span class="rvts11"> function would return 4. </span><span class="rvts18">Get_Arg$(1)</span><span class="rvts13"> </span><span class="rvts11">would be </span><span class="rvts18">RED</span><span class="rvts11">, &nbsp;</span><span class="rvts18">Get_Arg$(2)</span><span class="rvts11"> would be </span><span class="rvts18">GREEN</span><span class="rvts11">, </span><span class="rvts18">Get_Arg$(3)</span><span class="rvts11"> would be </span><span class="rvts18">BLUE</span><span class="rvts11">, and &nbsp;</span><span class="rvts18">Get_Arg$(4)</span><span class="rvts13"> </span><span class="rvts11">would be </span><span class="rvts18">YELLOW</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the macro were invoked with the command &nbsp;</span><span class="rvts18">Sample RED</span><span class="rvts14">,</span><span class="rvts11"> then the </span><span class="rvts18">Get_Arg_Count</span><span class="rvts11"> function would return 3. </span><span class="rvts18">Get_Arg$(1</span><span class="rvts14">)</span><span class="rvts11"> would be </span><span class="rvts18">RED</span><span class="rvts11">, &nbsp;</span><span class="rvts18">Get_Arg$(2)</span><span class="rvts13"> </span><span class="rvts11">would be </span><span class="rvts18">bbb</span><span class="rvts11">, and </span><span class="rvts18">Get_Arg$(3)</span><span class="rvts11"> would be </span><span class="rvts18">ccc</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">All other validation of the operands is the responsibility of the macro itself.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="SUB-operand-access"></a>
+<span class="rvts13">SUB operand access</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you choose to code your macro in a more "structured" design, then you can have the command line operands provided to you as passed parameters to your mainline SUB subroutine. To do this, certain considerations which must be met. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To convert your macro to a structured format, you must place an initial SUB subroutine header immediately after the macro prototype line, as described in </span><a class="rvts12" href="Macroformatandstructure.html#Macro%20Prototype">Macro Prototype</a><span class="rvts11">. If you do this, and you normally use your macro from the primary command line with some fixed maximum number of parameters, SPFLite will assign these for you just like any other SUB subroutine would receive them, so that calls to </span><span class="rvts18">Get_Arg$</span><span class="rvts11"> will not be needed.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This can be a quite useful feature, but it requires you to follow some fairly strict rules to take advantage of this</span><span class="rvts13">:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The initial </span><span class="rvts13">SUB</span><span class="rvts11"> subroutine follows all the rules of </span><span class="rvts13">thinBasic</span><span class="rvts11"> syntax, and must be ended by an </span><span class="rvts13">END SUB</span><span class="rvts11"> statement.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The SUB keyword must appear immediately following the SPFLite macro prototype line, meaning that the initial SUB keyword must be on line 2 of the MACRO file and no where else, and no comments may appear anywhere on the SUB statement.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The initial SUB line may be continued on multiple lines if needed, by placing an _ underscore at the end of each continued line except the last one, as required by standard </span><span class="rvts13">thinBasic</span><span class="rvts11"> line-continuation rules.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The type of </span><span class="rvts23">each</span><span class="rvts11"> parameter to the initial SUB must be </span><span class="rvts23">individually</span><span class="rvts11"> declared with </span><span class="rvts13">AS STRING</span><span class="rvts11">. No other data type will work.&nbsp;</span><span class="rvts13"> </span><span class="rvts23">Note this point carefully. If you fail to do this, your macro will not work correctly</span><span class="rvts11">.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">In the body of the initial SUB subroutine, you can optionally issue the HALT statement anywhere you wish to end the macro. Otherwise, an implied HALT will be automatically issued when the subroutine issues an EXIT SUB, or passes through the normal END SUB.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The initial SUB subroutine may have any valid name you wish.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The initial SUB subroutine name need not match the name (if any) on the macro prototype header that appears on line 1 of the MACRO file, or the name of the MACRO file itself. However, for clarity and documentation purposes, it is recommended that you </span><span class="rvts13">do</span><span class="rvts11"> make these names match. Future versions of SPFLite may or may not enforce such naming agreement.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">The parameters defined on the SUB statement are provided by merging the actual command line operands with the default operands which may be provided on the </span><a class="rvts12" href="Macroformatandstructure.html#Macro%20Prototype">Macro Prototype</a><span class="rvts11"> header. When no value exists in either location, a null string &nbsp;"" &nbsp;is &nbsp;passed as the parameter.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">SUB subroutine statements can only define a fixed number of parameters. If you wish to access parameters that were specified on the primary command line beyond these, or need to handle a variable number of parameters, the </span><span class="rvts18">Get_Arg$</span><span class="rvts11"> function and other related functions are available and can still be used as documented, even though you used an initial SUB subroutine.</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">When you write a macro with an initial SUB subroutine, and the macro is launched as a line-command macro, only the defaults on the macro prototype header will be passed, and if the prototype has no defaults, all of the parameters passed to the SUB will be empty (null) strings.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">NOTE: Unless you strictly follow the SUB formatting rules, SPFLite may not detect that you have put an initial SUB subroutine in your macro, and it will not get called.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">We have to perform a clever bit of "magic" to pull this off. SPFLite has to do a "read-ahead" and "peek" at your macro, and quickly analyze it to determine if you actually </span><span class="rvts13">have</span><span class="rvts11"> an initial SUB subroutine like this. When it finds one, it inserts a call to that SUB, passing the appropriate parameters as needed. To do that, and do it reliably, you </span><span class="rvts23">must</span><span class="rvts11"> ensure that the format of the SUB line strictly adheres to these rules.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">In the initial SUB subroutine, you are free to call other subroutines and functions as desired. These can be built-in functions, functions imported by USES statements, or additional SUB and FUNCTION routines that you write yourself.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">As with Basic Operand Access, validation of the command line operands is still entirely up to the macro code to perform.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="A-note-about-macro-parameter-data-type"></a>
+<span class="rvts13">A note about macro parameter data type</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">It is important that you follow rule noted above to define all operands AS STRING. For example, this macro,</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18">' sample.macro abc def</span></p>
+<p class="rvps4"><span class="rvts18">SUB sample (arg1,arg2,arg3 AS STRING)</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp;' ... statements</span></p>
+<p class="rvps4"><span class="rvts18">END SUB</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">is </span><span class="rvts13">incorrect</span><span class="rvts11">. The reason is that, as written, the </span><span class="rvts13">AS STRING</span><span class="rvts11"> clause does </span><span class="rvts23">not</span><span class="rvts11"> apply to all three parameters, but </span><span class="rvts23">only to the last one</span><span class="rvts11">. This is simply a </span><span class="rvts13">thinBasic</span><span class="rvts11"> syntax rule, and we have no control over it. However, you needn't worry about forgetting this rule, SPFLite will verify this has been done properly and reject the macro if it breaks the rule.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">What actually happens here is that when you have parameters written like "</span><span class="rvts18">arg1,arg2,</span><span class="rvts11">" with no type information specified, </span><span class="rvts13">thinBasic</span><span class="rvts11"> treats these as parameters of type </span><span class="rvts13">VARIANT</span><span class="rvts11">. It's too complicated to discuss here, except it's just not what you want. SPFLite will only pass you parameters as strings anyway, so you have to cooperate and do it the right way.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The correct way to write it is like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18">' sample.macro abc def</span></p>
+<p class="rvps4"><span class="rvts18">SUB sample (arg1 AS STRING, arg2 AS STRING, arg3 AS STRING)</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp;' ... statements</span></p>
+<p class="rvps4"><span class="rvts18">END SUB</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you like, you can put each parameter on a separate line, for readability and maintenance purposes, using line continuation like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18">' sample.macro abc def</span></p>
+<p class="rvps4"><span class="rvts18">SUB sample (arg1 AS STRING, _ </span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;arg2 AS STRING, _</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;arg3 AS STRING)</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp;' ... statements</span></p>
+<p class="rvps4"><span class="rvts18">END SUB</span></p>
+<p class="rvps5"><span class="rvts18"><br/></span></p>
+<p class="rvps5"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><a name="Full-parse-access"></a>
+<span class="rvts13">Full-parse access</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This support co-exists with all the Basic Access and SUB Operand Access methods for accessing macro operands. It make </span><span class="rvts13">no changes at all</span><span class="rvts11"> to the </span><span class="rvts13">Get_Arg$</span><span class="rvts11"> and </span><span class="rvts13">Get_Arg_Count</span><span class="rvts11"> functions, or to the support for SUB operand handling.</span></p>
+<p class="rvps4"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11">You are free to choose whatever method suits you best, and you also can combine these methods. For instance, your macro operands might have a "simple" format that does not need to be parsed, and also a more complex format. You can choose to do the full parse if you determine that the simple format is not present.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The idea is that a call to SPF_Parse is made, passing a set of parameters that describe the syntax of your macro's operands. Using these parameters, and the initially-created contents of the</span><span class="rvts13"> Get_Arg$</span><span class="rvts11"> data array, </span><span class="rvts13">SPF_Parse</span><span class="rvts11"> will 'sort out' and validate the macro operands according to your specifications. If all is well, it returns an RC=0, and makes all those parameters available for use. If a parsing or validation error is found, it will issue an RC=8 along with an error message which you can obtain with </span><span class="rvts13">Get_Msg$</span><span class="rvts11"> and display to the user. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Validation consists of the following:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Depending on the optional validation flags, verification that the number of operands entered of that type meets the specification. Using flags, you can control whether an operand count represents an exact count, or is an upper limit (where the lower limit is zero), or if it is to be taken as an optional, "all or nothing" count.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Where Line References are allowed, it can also validate that the line references entered are valid. For a line label like .ABC, the label must exist in your edit file to be "valid". For a line-number pseudo-label like .123, a data line on line 123 must exist, but since these are not actually labels, nothing else need be "defined".</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Where Tag operands are allowed, it can also validate that the Tag operands entered are valid Tags. A tag is valid if at least one tag of that name appears in your edit file.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Where single keyword operands are specified, it simply tracks whether the keyword was specified or not. It is not an error if the keyword is absent.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Where mutually exclusive keywords are specified, it validates that one and only one has been entered, &nbsp;This is the same principle used on SPFLite command like FIND, where you cannot say FIND FIRST LAST ABC.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Where keywords have multiple aliases, it accepts them all and 'normalizes' them to return the first specified keyword. e.g. if the alias list were specified as </span><span class="rvts14">(EXCL,EXCLUDE,EXC,X)</span><span class="rvts11"> then when any of them are entered it would be treated and returned as </span><span class="rvts14">EXCL</span><span class="rvts11">. This normalization process means that you don't have to check every possible spelling of a keyword, but only the first (left-most) one that appears in the list. This greatly simplifies the amount of work needed to check such keywords, since only value has to be tested.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">On the completion of a successful SPF_Parse, there should normally be no need to examine or use the Get_Arg$ array. There will be no unaccounted-for operands 'left over' that would be the responsibility of the macro. (If there </span><span class="rvts13">were</span><span class="rvts11"> unaccounted-for operands, these would be categorized as a syntax error. The fact that you don't </span><span class="rvts13">have</span><span class="rvts11"> a syntax error means the parsing completed successfully). </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">However, since the initially-created "arg" array is not modified by </span><span class="rvts13">Spf_Parse</span><span class="rvts11">, nothing prevents access using the functions discussed above, if you have that need.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-access-the-parsed-out-operands"></a>
+<span class="rvts13">How to access the parsed-out operands</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">SPF_Parse sorts and categorizes the command line operands into five groups:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps7"><table width="90%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts26">Keywords</span></p>
+</td>
+<td width="766" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts11">For all specified Keywords, you can call a single function to return a TRUE / FALSE indication of whether a particular keyword has been entered or not. For example, to see if the Keyword ALL had been specified, the code would be</span></p>
+<p class="rvps4"><span class="rvts14">IF Get_Arg_KW("ALL") then ...</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts11">When keywords are part of a mutually exclusive group (like WORD, PREFIX, SUFFIX) you may call a function to return </span><span class="rvts13">which</span><span class="rvts11"> of the keywords were specified. The code for this would be</span></p>
+<p class="rvps4"><span class="rvts14">IF Get_Arg_KWGroup$("list-name") then ...</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">This requires the creation of list-name to be used to refer to the group of keywords when specifying the keyword list. This is described in the details for </span><a class="rvts12" href="FunctionDetails.html#FN:SPF_PARSE">SPF</a><a class="rvts12" href="FunctionDetails.html#FN:SPF_PARSE">_</a><a class="rvts12" href="FunctionDetails.html#FN:SPF_PARSE">Parse</a><span class="rvts11"> below.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Use of the list-name and </span><a class="rvts12" href="FunctionDetails.html#FN:Get_Arg_KWGroup$">Get_Arg_KWGroup$</a><span class="rvts11"> function does </span><span class="rvts13">not</span><span class="rvts11"> prevent use of Get_Arg_KW for a specific keyword if you desire.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">(Just to be clear,</span><span class="rvts13"> all keywords are optional</span><span class="rvts11">. It would not really make sense to say that a keyword was mandatory every time you used a macro.)</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts26">Line References</span></p>
+</td>
+<td width="766" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts11">Your macro may specify that it requires any number of Line References, there is no limit. When retrieving Line References, they are returned by relative position, left to right. Their exact operand location, and whether there are intervening operands of other types is immaterial. You request the first Line Reference, the second Line Reference, etc. The code for this would be</span></p>
+<p class="rvps4"><span class="rvts14">start-line = Get_Arg_LRef$(n)</span></p>
+<p class="rvps2"><span class="rvts11">where 'n' specifies the required relative Line Reference number.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts26">Tag Operands</span></p>
+</td>
+<td width="766" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts11">Your macro may specify that it requires any number of Tag Operands, there is no limit. When retrieving Tag Operands, they are returned by relative position, left to right. Their exact operand location, and whether there are intervening operands of other types is immaterial. You request the first Tag Operand, the second Tag Operand, etc. The code for this would be</span></p>
+<p class="rvps4"><span class="rvts14">tag-name = Get_Arg_Tag$(n)</span></p>
+<p class="rvps2"><span class="rvts11">where 'n' specifies the required relativeTag Operand number.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts26">Text Literals</span></p>
+</td>
+<td width="766" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts11">Text operands are quoted strings or un-quoted strings which are not keywords nor not solely numeric. i.e. like the search and change strings of a CHANGE command.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Your macro may specify that it requires any number of Text Literals, there is no limit. When retrieving Text Literals, they are returned by relative position, left to right. Their exact operand location, and whether there are intervening operands of other types is immaterial. You request the first Text Literal, the second Text literal, etc. The code for this would be</span></p>
+<p class="rvps4"><span class="rvts14">srch-string = Get_Arg_TextLit$(n)</span></p>
+<p class="rvps2"><span class="rvts11">where 'n' specifies the required relative Text Literal number.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts26">Numeric Literals</span></p>
+</td>
+<td width="766" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts11">Numeric operands are un-quoted strings which are solely numeric digits. i.e. like the column range operands of a FIND command.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Your macro may specify that it requires any number of Numeric Literals, there is no limit. When retrieving Numeric Literals, they are returned by relative position, left to right. Their exact operand location, and whether there are intervening operands of other types is immaterial. You request the first Numeric Literal, the second Numeric literal, etc. The code for this would be</span></p>
+<p class="rvps4"><span class="rvts14">start-col = Get_Arg_NumLit$(n)</span></p>
+<p class="rvps2"><span class="rvts11">where 'n' specifies the required relative Numeric Literal number.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-specify-the-macro-command-syntax"></a>
+<span class="rvts13">How to specify the macro command syntax</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The SPF_Parse function may appear complicated at first, but don't let that hold you back from trying it. Let's have a look:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">RC = SPF_Parse(TxtLit-number, NumLit-number, LinRef-number, Tag-number, _</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ keyword-set, ]</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ keyword-set, ]</span></p>
+<p class="rvps12"><span class="rvts14"> ... </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">What do we have? &nbsp;Four numeric values, and then a series of optional keyword definitions. Let's see the details.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The first four operands specify how many of each of the non-keyword operands your macro will allow. For example, if your macro operands consists solely of two line reference operands, the coding is simply:</span></p>
+<p class="rvps7"><span class="rvts14">RC = SPF_Parse(0, 0, 2, 0)</span></p>
+<p class="rvps4"><span class="rvts11">which is pretty straight-forward.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If your macro added an optional "ALL" keyword, the coding becomes:</span></p>
+<p class="rvps7"><span class="rvts14">RC = SPF_Parse(0, 0, 2, 0, "ALL")</span></p>
+<p class="rvps4"><span class="rvts11">again, not unduly complicated.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-specify-a-variable-number-of-values"></a>
+<span class="rvts13">How to specify a variable number of values</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Many operands are optional. In our example above, the line references may be optional if the macro also allows you to mark the lines with a CC / CC line block. But if we code just the number </span><span class="rvts18">2</span><span class="rvts11"> as the Line Reference operand with nothing else, that means the operands are mandatory, and there must be exactly 2 of them. To allow a varying number of arguments, it is handled by adding the ARG_VAR as a "flag" to the count value, so that this parameter to the SPF_Parse call is changed from </span><span class="rvts18">2</span><span class="rvts11"> to </span><span class="rvts18">2+ARG_VAR</span><span class="rvts11">.. The ARG_VAR option will allow from 0 (zero) to the number specified to be entered.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">So if the TxtLit-number operand is coded as </span><span class="rvts18">2+ARG_VAR </span><span class="rvts11">it means there can be from 0 to 2 Text Literals.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The flag name ARG_VAR, like the ARG_OPT and ARG_DEF flags discussed next, are predefined by SPFLite.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-specify-optional-values"></a>
+<span class="rvts13">How to specify optional values</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Some macro parameters may be used in an optional, "all or nothing" manner. This can be handled by using the ARG_OPT validation flag. When ARG_OPT is added to a count value, it indicates that for this type of parameter the number of supplied values must either be zero or the exact count specified.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For example, if the number of line references is specified as &nbsp;</span><span class="rvts18">2+ARG_OPT </span><span class="rvts11">it indicates that there must be either </span><span class="rvts13">no </span><span class="rvts11">line references or </span><span class="rvts13">exactly two </span><span class="rvts11">line references.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You cannot combine the ARG_OPT flag and the ARG_VAR flag, since the meanings conflict. For instance, if a count value is specified as 2+ARG_VAR+ARG_OPT, the ARG_VAR implies that having one argument is valid, but ARG_OPT implies that it isn't, and these cannot both be true. If you attempt to use the flags this way, the SPF_Parse function will fail with a nonzero RC.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-validate-tag-and-line-references"></a>
+<span class="rvts27">How to validate tag and line references</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When Tags or Line References are used as operands, you may wish these entered values to be validated to ensure they correctly point at valid data lines. This can be handled by using the ARG_DEF validation option. When this is added to a value, it indicates that for this type of parameter data line reference must be valid. For example, if the number of line references ia entered as &nbsp;</span><span class="rvts18">2 + ARG_DEF </span><span class="rvts11">it indicates that there must be &nbsp;</span><span class="rvts13">two valid </span><span class="rvts11">line references.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="How-to-specify-keywords"></a>
+<span class="rvts13">How to specify keywords</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are two basic types of keywords, the simple "I'm here / I'm not here" type of keyword (like the RAW operand of CUT), and the mutually exclusive list of keywords (like ON / OFF, or WORD / PREFIX / SUFFIX)</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For the simple type, the keyword-set operand is just the keyword itself, couldn't be simpler. "ALL" or "TRUNC" &nbsp;etc.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For the mutually exclusive type, the various keywords are just entered, separated by commas. e.g. for an ON/OFF pair, the keyword-set would be coded as </span><span class="rvts14">"ON,OFF"</span><span class="rvts11">. For the WORD / PREFIX / SUFFIX example it would be </span><span class="rvts14">"WORD,PREFIX,SUFFIX"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When a keyword can be specified in various alias values, the normal single keyword value in the list is replaced by the list of aliases, enclosed in parentheses. As an example, a macro might accept either DELETE or PURGE as operands. These would normally be coded as </span><span class="rvts14">"DELETE,PURGE"</span><span class="rvts11">. But what if you wanted to accept DEL as an alternate for DELETE and PUR as an alternate for PURGE. It would then look like </span><span class="rvts14">"(DEL,DELETE),(PUR,PURGE)"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Almost done now, just one more wrinkle for keywords. In the above examples, any of the keywords can be tested for using the Get_Arg_KW function, but what if, for the WORD/PREFIX/SUFFIX example, you wanted to ask "Which one was entered" without having to test each one individually? &nbsp;This is possible, but you have to assign a 'list-name' to refer to that specific set of keywords. Then you can ask for which KW in the set was entered by using the Get_Arg_KWGroup$(list-name).</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">So where does the list-name go? &nbsp;It is inserted at the beginning of the list, followed by a colon (</span><span class="rvts18">:</span><span class="rvts11">). Our example here, using the list-name WTYPE, would be coded as:</span></p>
+<p class="rvps7"><span class="rvts11"> </span><span class="rvts14">"WTYPE:WORD,PREFIX,SUFFIX". </span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Asking for 'which one was entered' would be done by</span></p>
+<p class="rvps7"><span class="rvts11"> </span><span class="rvts14">wtype = Get_Arg_KWGroup$("WTYPE")</span><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Example-Putting-SPF-Parse-all-together"></a>
+<span class="rvts13">Example: Putting SPF_Parse all together</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A picture is worth a thousand words, so lets do an example. Here's a reasonably complex imaginary macro command whose syntax is similar to FIND and looks like:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">MACNAME search-str </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;[ start-col [ end-col] ] </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;[ start-line [ end-line] ]</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;[ WORD | PREFIX | SUFFIX ]</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;[ RED | GREEN | BLUE | YELLOW ]</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;[ ALL ]</span></p>
+<p class="rvps7"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts11">Lets code the SPF_Parse request to parse this command:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">IF SPF_Parse(1, 2 + ARG_VAR, 2 + ARG_VAR + ARG_DEF, 0, _</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "WTYPE:WORD,PREFIX,SUFFIX", _</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "COLOR:RED,GREEN,BLUE,YELLOW", _</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "ALL") then</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; Halt(FAIL, Get_Msg$)</span></p>
+<p class="rvps7"><span class="rvts14">END IF</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The first operand </span><span class="rvts18">1</span><span class="rvts11"> says there is 1 mandatory text literal (the search-str in the syntax diagram)</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The second operand </span><span class="rvts14">2 + ARG_VAR</span><span class="rvts11"> says there may be 0 to 2 optional numeric literals (the start-col and end-col in the syntax diagram)</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The third operand </span><span class="rvts14">2 + ARG_VAR + ARG_DEF</span><span class="rvts11"> says there are from 0 to 2 optional line references (the start-line and end-line in the syntax diagram and that if entered, the references should be validated as correct line references)</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The fourth operand </span><span class="rvts18">0</span><span class="rvts11"> says there are no allowable Tag operands.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The </span><span class="rvts14">"WTYPE:WORD,PREFIX,SUFFIX"</span><span class="rvts11"> operand specifies 3 mutually exclusive keywords, which can be referenced as a group using the list-name value of </span><span class="rvts14">WTYPE.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The </span><span class="rvts14">"COLOR:RED,GREEN,BLUE,YELLOW"</span><span class="rvts11"> operand specifies 4 mutually exclusive keywords, which can be referenced as a group using the list-name value of </span><span class="rvts14">COLOR.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The </span><span class="rvts14">"ALL" </span><span class="rvts11">operand specifies the simple keyword ALL which may be present or not present.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">The entire SPF_Parse function is coded as part of an IF ... THEN statement. Since SPF_Parse returns a non-zero value (8) if any parsing errors occur, it is usually simplest to test this way and use an SPF_SetMsg to issue the error message text provided by SPF_Parse. This text is obtained using a standard Get_ErrMsg$ function.</span></li>
+<li style="margin-left: 0px" class="rvps7"><span class="rvts11">Assuming SPF_Parse returns with no error status, the macro can continue at this point to use the parsed values, or to perhaps perform additional validation if required by the circumstances of the macro's function.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><a name="A-simple-macro-demo-in-all-three-command-operand-modes"></a>
+<span class="rvts13">A simple macro demo in all three command operand modes</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Here is a simple macro coded in the three different modes to show the differences. The syntax for this example is:</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">DEMOFIND srch-string [ ALL ]</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts13">Note:</span><span class="rvts11"> All examples below should probably use SPF_Quote$ to properly process the srch-string, but this has been left out to simplify the demonstration code.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13">Basic Operand Access</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' DEMOFIND.MACRO</span></p>
+<p class="rvps7"><span class="rvts14">DIM OpAll as STRING</span></p>
+<p class="rvps7"><span class="rvts14">IF Get_Arg_Count &lt; 1 then Halt(FAIL, "Missing search string")</span></p>
+<p class="rvps7"><span class="rvts14">OpAll = ucase$(Get_Arg$(2))</span></p>
+<p class="rvps7"><span class="rvts14">If OpAll &lt;&gt; "" and OpAll &lt;&gt; "ALL" then Halt(FAIL, "Unknown operand: " + OpAll))</span></p>
+<p class="rvps7"><span class="rvts14">SPF_CMD("FIND " + Get_Arg$(1) + " " + OpAll)</span></p>
+<p class="rvps7"><span class="rvts14">HALT</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts13">SUB Operand Access</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' DEMOFIND.MACRO</span></p>
+<p class="rvps7"><span class="rvts14">SUB DEMOFIND(srchstr as string, OpAll as STRING)</span></p>
+<p class="rvps7"><span class="rvts14">IF srchstr = "" then Halt(FAIL, "Missing search string")</span></p>
+<p class="rvps7"><span class="rvts14">If OpAll &lt;&gt; "" and OpAll &lt;&gt; "ALL" then Halt(FAIL, "Unknown operand: " + OpAll))</span></p>
+<p class="rvps7"><span class="rvts14">SPF_CMD("FIND " + srchstr + " " + OpAll)</span></p>
+<p class="rvps7"><span class="rvts14">Halt</span></p>
+<p class="rvps7"><span class="rvts14">END SUB</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts13">Full Parse Access</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' DEMOFIND.MACRO</span></p>
+<p class="rvps7"><span class="rvts14">if SPF_Parse(1, 0, 0, 0, "ALL") then Halt(FAIL, Get_Msg$")</span></p>
+<p class="rvps7"><span class="rvts14">SPF_CMD("FIND " + Get_Arg_TextLit$(1) + iif$(Get_KW("ALL"), " ALL", "")</span></p>
+<p class="rvps7"><span class="rvts14">HALT</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

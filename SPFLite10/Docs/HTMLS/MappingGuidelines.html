@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Guidelines for writing mapping strings</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Guidelines for writing mapping strings">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Guidelines for writing mapping strings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingGuidelines"
+		  data-hnd-context="284"
+		  data-hnd-title="Guidelines for writing mapping strings"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Guidelines for writing mapping strings</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Much like Regular Expressions, mapping strings, with their various commands and operands, can be somewhat cryptic at times, and for all but the simplest cases they may not be something that will easily “roll off the tip of your tongue”. Naturally, the more complex your mapping or modification operations are, the more complex the mapping string will be. You may need to reread the documentation (perhaps each time you use it), and plan out in advance what these strings will contain.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may benefit by saving off some mapping commands you have found useful, along with a few descriptive notes, into a text file to have them handy, like having a “cheat sheet”. That way, if you need to use them again, you can refer to your notes instead of always having to reread this documentation. Or, you can specifying an external mapping string item of </span><span class="rvts40">SV</span><span class="rvts6"> to fetch a </span><span class="rvts40">SET</span><span class="rvts6"> variable containing part of a mapping string. You can also use an SPFLite </span><span class="rvts40">SET</span><span class="rvts6"> variable to define an entire mapping string, and then you would specify it on your </span><span class="rvts40">CHANGE</span><span class="rvts6"> command with an </span><span class="rvts40">=</span><span class="rvts6">&nbsp;equal sign followed by the name of the </span><span class="rvts40">SET</span><span class="rvts6"> variable.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You can look at the provided examples to help understand how mapping strings are written; if one is close to what you need, you may be able to copy and tailor it. When working with your own data, there are a few ways to go about defining a mapping string. For short data, the simplest way may be to just write some sample data on a piece of paper, drawing lines where various substrings of your data are located, and counting the columns. Then, write down each ‘piece’ of your data as you want it reformatted, in left-to-right order, so that each ‘piece’ is an </span><span class="rvts140">item</span><span class="rvts6"> in a mapping string, as described above.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For longer data, you can use SPFLite to help. If you highlight a string on a line, you will see its length displayed on the status line, like </span><span class="rvts40">Len 8</span><span class="rvts6">. If you place your data on a line by itself, left-justified on column 1, you will see the length of the line on the status line when the cursor is on that line of data, &nbsp;like </span><span class="rvts40">Line Len 8</span><span class="rvts6">. Be certain the line is</span><span class="rvts140"> trimmed</span><span class="rvts6"> to sure you don’t count any trailing blanks. You can trim a line of data by using the </span><span class="rvts40">TR</span><span class="rvts6"> line command. The </span><span class="rvts140">virtual highlighting pens</span><span class="rvts6"> feature of SPFLite may also be useful.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You also have the </span><span class="rvts40">L</span><span class="rvts6">/</span><span class="rvts40">C</span><span class="rvts6"> display on the status line, which shows the Line number and Column number where the cursor is located. If your data is on line 125, you will see a display of </span><span class="rvts40">L 000125 C 8</span><span class="rvts6"> when the cursor is on the last column your data.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Finally, you can issue the </span><span class="rvts40">COLS</span><span class="rvts6"> line command to show you column positions.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Bear in mind that the “column numbers” or “column ranges” in a mapping string are the </span><span class="rvts40">relative positions</span><span class="rvts6"> of your data. Those numbers have nothing to do with where (what actual column positions) on a</span><span class="rvts140"> data line</span><span class="rvts6"> that your data is found in the course of executing a </span><span class="rvts40">CHANGE</span><span class="rvts6"> command. You must visualize your data </span><span class="rvts140">as if</span><span class="rvts6"> it were left-justified on column 1 of a line, for purposes of numbering the positions, even though your data may actually appear anywhere, in any columns of a line.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Remember that many mapping commands are what is termed “modifying commands”. That means they are designed to alter the contents of the </span><span class="rvts140">result string</span><span class="rvts6">. To use such commands on data that is in the </span><span class="rvts140">source string,</span><span class="rvts6"> you have to first copy some or all of the </span><span class="rvts140">source string</span><span class="rvts6"> to the </span><span class="rvts140">result string</span><span class="rvts6">. The easiest way to do that is with a column-copying command of </span><span class="rvts168">1+</span><span class="rvts6"> at the beginning of your mapping string. You will see examples in the documentation that use this technique. However, for many commands (but not all), the </span><span class="rvts140">auto-reference</span><span class="rvts6"> and </span><span class="rvts140">auto-copy</span><span class="rvts6"> features mean that oftentimes you won’t need to use a </span><span class="rvts140">column reference</span><span class="rvts6"> of </span><span class="rvts168">1+</span><span class="rvts6"> to reference or copy the entire </span><span class="rvts140">source string</span><span class="rvts6">, because it will be implied and will happen automatically.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may come across cases where a single mapping operation is not powerful enough to do what you need. When that happens, it’s possible you could do part of the mapping in one pass, and in the process, insert or append to the </span><span class="rvts140">result string</span><span class="rvts6"> some special character of your choosing as a “marker”. Then, you would go back with another </span><span class="rvts40">CHANGE</span><span class="rvts6"> command that looked for strings containing that special “marker” character, and do the remaining data reformatting that you were unable to complete in the first pass – either with another </span><span class="rvts40">M</span><span class="rvts6"> string or perhaps a conventional string of type </span><span class="rvts40">C</span><span class="rvts6">, </span><span class="rvts40">T</span><span class="rvts6"> or </span><span class="rvts40">X</span><span class="rvts6">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To improve performance, and limit the second pass to only those lines affected by the first pass, you could use </span><span class="rvts140">Command Chaining</span><span class="rvts6"> techniques involving a “</span><span class="rvts40">Z&nbsp;tag</span><span class="rvts6">” of </span><span class="rvts6">:ZF</span><span class="rvts6"> on your second </span><span class="rvts40">CHANGE</span><span class="rvts6"> command. See the Help article </span><a class="rvts166" href="WorkingwithCommandChaining.html">Working with Command Chaining</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When using this technique, be mindful of what characters have special meaning in a Picture or Regular Expression string if you use them. (In some cases, you might need to </span><span class="rvts140">escape</span><span class="rvts6"> certain special Picture characters with a </span><span class="rvts6">\</span><span class="rvts6"> backslash.) &nbsp;In Pictures, you may be able to use </span><span class="rvts6">()</span><span class="rvts6"> parentheses, or symbols such as</span><span class="rvts168"> </span><span class="rvts6">¢ £</span><span class="rvts168"> </span><span class="rvts6">or </span><span class="rvts6">€</span><span class="rvts6"> &nbsp;which are uncommon but are treated as ordinary data characters in these strings. You can also use the single and double “word processing quotes” in the ANSI range of X'91' to X'94' as delimiters. These are just some possibilities for you to explore. The </span><span class="rvts40">KEYMAP</span><span class="rvts6"> facility can be used to map any suitable characters to the desired keys so you can have them readily available to type.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When even such advanced mapping-string techniques are not enough for your needs, an </span><span class="rvts140">execute-macro string,</span><span class="rvts6"> also known as an “</span><span class="rvts40">E</span><span class="rvts6"> string”, may be useful. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Finally, as with any other aspect of SPFLite, if you have questions or need help with this feature, the SPFLite online forum is available to assist you. Of course, if you do that, the first question we will ask is, </span><span class="rvts140">Have you read the documentation?</span><span class="rvts6"> &nbsp;So be sure to start with that important first step.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts167">Examples</span></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For examples of mapping string usage, see </span><a class="rvts44" href="CommandSpecificSyntaxandExamples.html">Command Specific Syntax and Examples</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts168"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">What is a Help Authoring tool?</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

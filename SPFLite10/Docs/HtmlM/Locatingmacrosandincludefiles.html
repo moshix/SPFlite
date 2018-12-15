@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Locating macros and include files</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Locating macros and include files">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Locating macros and include files" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Locatingmacrosandincludefiles"
+		  data-hnd-context="25"
+		  data-hnd-title="Locating macros and include files"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Locating macros and include files</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a class="rvts21" href="Locatingmacrosandincludefiles.html#Introduction">Introduction</a></p>
+<p class="rvps4"><a class="rvts21" href="Locatingmacrosandincludefiles.html#Automatic%20modification%20of%20the%20#INCLUDE%20statement%20at%20run%20time">Automatic modification of the #INCLUDE statement at run time</a></p>
+<p class="rvps4"><a class="rvts21" href="Locatingmacrosandincludefiles.html#Automatic%20insertion%20of%20#INCLUDEDIR%20directive%20at%20run%20time">Automatic insertion of #INCLUDEDIR directive at run time</a></p>
+<p class="rvps4"><a class="rvts21" href="Locatingmacrosandincludefiles.html#Support%20for%20SET%20names%20in%20#INCLUDE%20statements">Support for SET names in #INCLUDE statements</a></p>
+<p class="rvps4"><a class="rvts21" href="Locatingmacrosandincludefiles.html#Using%20relative%20paths%20for%20included%20files">Using relative paths for included files</a></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts13">Introduction</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">As stated previously, macros are stored in the SPFLite MACROS folder, which will be</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps8"><span class="rvts11">C:\Users\</span><span class="rvts13">username</span><span class="rvts11">\My Documents\SPFLite\MACROS</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you are writing a simple, one-file macro, that is all you need to know. If you are writing a large macro in a modular fashion, or are writing a series of related macros having code in common, you would benefit from using </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements to organize your macro code into smaller and more manageable pieces.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The macro engine we use, called </span><span class="rvts13">thinBasic</span><span class="rvts11">, allows for </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements. However, in earlier versions of SPFLite, these were not convenient to use. According to the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation, an </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement with no explicit path is searched for in the following order:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" style="margin-left: 0px" class="rvps7"><span class="rvts11">the current script path</span></li>
+<li value="2" style="margin-left: 0px" class="rvps7"><span class="rvts11">\thinBasic\inc</span></li>
+<li value="3" style="margin-left: 0px" class="rvps7"><span class="rvts11">any #INCLUDEDIR paths in effect</span></li>
+</ol></ol>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When </span><span class="rvts13">thinBasic</span><span class="rvts11"> is integrated into other software like SPFLite, step 2 becomes "\Program Files\SPFLite\inc". That can be a problem. Putting changeable user data under the Program Files directory is not a good idea, and starting with Windows 7, you may need Administrator privileges to do that. Since SPFLite has already set aside the MACROS folder, it makes more sense to be looking for included macro files there.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Automatic modification of the #INCLUDE statement at run time"></a>
+<span class="rvts13">Automatic modification of the #INCLUDE statement at run time</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To make this process simpler, SPFLite now will modify your </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements, so that if it detects a file name that has </span><span class="rvts13">no</span><span class="rvts11"> "path qualifier" at the beginning of the name, the location of the SPFLite MACROS folder is added to the file name. That way, any "simple" names you use on </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements will automatically be searched for in the same place that your main macro is located.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">This "modification" to your </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements only involves altering an internal copy of these statements in memory, as they are being processed. Your </span><span class="rvts13">#INCLUDE </span><span class="rvts11">file itself on disk is not changed. SPFLite will never modify your macro or include files.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">In deciding when to apply this modification, the beginning of the file name is examined. If that name begins with </span><span class="rvts18">/</span><span class="rvts11"> or </span><span class="rvts18">\</span><span class="rvts11"> or </span><span class="rvts18">.</span><span class="rvts11"> or if the second character of the name has a </span><span class="rvts18">:</span><span class="rvts11"> colon, it is assumed to have an "explicit path", and the file name is not modified.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">Note that </span><span class="rvts13">included</span><span class="rvts11"> file names do not have to end with </span><span class="rvts13">.macro</span><span class="rvts11"> but can be anything you wish. A common extension is .</span><span class="rvts13">inc</span><span class="rvts11"> but that is entirely up to you.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This automatic modification of </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements is done only in the main macro file, </span><span class="rvts13">not</span><span class="rvts11"> in nested files included by the main macro file. That is because these are read by thinBasic directly, and SPFlite does not "see" them.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For instance, if you write an </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement like this,</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "myfile.inc"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The name </span><span class="rvts18">"myfile.inc"</span><span class="rvts11"> does not begin with </span><span class="rvts18">/</span><span class="rvts11"> or </span><span class="rvts18">\</span><span class="rvts11"> or </span><span class="rvts18">.</span><span class="rvts11"> or a drive letter like </span><span class="rvts20">C:</span><span class="rvts11">. SPFLite will see that there is no path qualifier on the file name, and will internally change the statement to something like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "</span><span class="rvts20">C:\Users\username\My Documents\SPFLite\MACROS\</span><span class="rvts18">myfile.inc"</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Automatic insertion of #INCLUDEDIR directive at run time"></a>
+<span class="rvts13">Automatic insertion of #INCLUDEDIR directive at run time</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Like many languages, </span><span class="rvts13">thinBasic</span><span class="rvts11"> allows </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements to be nested. When you do this, </span><span class="rvts13">thinBasic</span><span class="rvts11"> itself reads those nested files. </span><span class="rvts22">SPFLite is not involved in that process, and does not read or see </span><span class="rvts23">nested</span><span class="rvts22"> #INCLUDE statements</span><span class="rvts11">. Because of this, the special handling described above is </span><span class="rvts13">not</span><span class="rvts11"> done for such nested includes.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To help with this situation, SPFLite will automatically insert an </span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> directive just prior to the first </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement it detects in your main macro file (again, this is done internally - not to your macro file on disk). The "created" </span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> directive will specify the path to the SPFLite MACROS folder, so that nested includes will be searched for there.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">The </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> and </span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> statements are documented in the </span><span class="rvts13">thinBasic</span><span class="rvts11"> Help. Issue a</span><span class="rvts13"> HELP BASIC</span><span class="rvts11"> command from SPFLite to bring up this Help.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Suppose you wanted you write your own </span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> directives as well. Will that work? &nbsp;Yes. You need to specify any desired </span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> directives prior to your first </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement. This will cause </span><span class="rvts13">thinBasic</span><span class="rvts11"> to look for included files in the locations you specify, in the order you write them. SPFLite will simply ensure that, if an included file is not found in any of </span><span class="rvts13">those</span><span class="rvts11"> locations, it will look in the SPFLite MACROS folder as a "last resort" search location.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This process should be taken into account if you are planning on creating some complicated search-path for a very involved macro or set of macros, that might also involve multiple versions of files (like, "test" vs. "production" versions). If you put a copy of an included file in the SPFLite MACROS folder, </span><span class="rvts13">and</span><span class="rvts11"> you issue an </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement that, for whatever reason, does not find this file elsewhere, it </span><span class="rvts13">will</span><span class="rvts11"> look the file in the SPFLite MACROS folder as the default search location. If that is not what you want, you should not put files in that default folder, but only in the explicit locations you need them to be in.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If your macro never issues an &nbsp;</span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement, it will not insert this &nbsp;</span><span class="rvts13">#INCLUDEDIR</span><span class="rvts11"> directive.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Support for SET names in #INCLUDE statements"></a>
+<span class="rvts13">Support for SET names in #INCLUDE statements</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You may wish to organize your included files into folders other than the default SPFLite MACROS folder, but you also would probably not like to use absolute path names embedded in your </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements. SPFLite now allows you do to this.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you write an </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement like this,</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "=abc\myfile.inc"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">SPFLite will look up the SET name you specify ("abc" in the example) and substitute the value of the SET variable into your &nbsp;</span><span class="rvts13">#INCLUDE </span><span class="rvts11">statement. SET names are defined by the SET primary command.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Suppose you issued the following SET primary command:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">SET abc = "C:\mypath"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Then, when you run your macro that has the </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement above, the SET name is detected and looked up, and it value is substituted prior to thinBasic processing it. So, the file that actually gets included is:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "C:\mypath\myfile.inc"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If your SET name "abc" happens to be undefined when you run your macro that has the </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statement above, SPFLite will not attempt to modify it. You will then get a syntax error message from thinBasic that the name </span><span class="rvts18">"=abc\myfile.inc"</span><span class="rvts11"> could not be found.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This modification of </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements to substitute SET name values is done only in the main macro file, </span><span class="rvts13">not</span><span class="rvts11"> in nested files included by the main macro file. That is because these are read by </span><span class="rvts13">thinBasic</span><span class="rvts11"> directly, and SPFlite does not "see" them.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Using relative paths for included files"></a>
+<span class="rvts13">Using relative paths for included files</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you want to organize a group of included files into its own folder, but you'd like to keep the process simple, you can use </span><span class="rvts13">relative paths</span><span class="rvts11"> to accomplish this.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Suppose you wanted a set of included files to be stored under a folder called </span><span class="rvts18">"xyz"</span><span class="rvts11">. To do this, create a folder with the name </span><span class="rvts18">"xyz"</span><span class="rvts11"> under the SPFLite\Macros directory. Then, you would write your </span><span class="rvts13">#INCLUDE</span><span class="rvts11"> statements like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "xyz\myfile.inc"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The name </span><span class="rvts18">"xyz\myfile.inc"</span><span class="rvts11"> does not itself begin with </span><span class="rvts18">/</span><span class="rvts11"> or </span><span class="rvts18">\</span><span class="rvts11"> or </span><span class="rvts18">.</span><span class="rvts11"> or a drive letter, even though there is a backslash after the </span><span class="rvts18">"xyz"</span><span class="rvts11"> part. SPFLite will see that there is no path qualifier on the file name, and will internally change the statement to something like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">#INCLUDE "C:\Users\username\My Documents\SPFLite\MACROS\xyz\myfile.inc"</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2013 by G. D. Deluca  / R. L. Hodge   All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

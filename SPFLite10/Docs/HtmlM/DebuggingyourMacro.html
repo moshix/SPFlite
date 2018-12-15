@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Debugging your Macro</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Debugging your Macro">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Debugging your Macro" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="DebuggingyourMacro"
+		  data-hnd-context="21"
+		  data-hnd-title="Debugging your Macro"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Debugging your Macro</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#Introduction">Introduction</a></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#Tracking%20your%20macro's%20flow%20of%20control">Tracking your macro's flow of control</a></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#Functions%20and%20Return%20Codes">Functions and Return Codes</a></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#SPFLite%20Function%20Trace">SPFLite Function Trace</a></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#thinBasic%20Output%20Statements">thinBasic Output Statements</a></p>
+<p class="rvps4"><a class="rvts12" href="DebuggingyourMacro.html#The%20thinBasic%20Trace%20Module">The thinBasic Trace Module</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts13">Introduction</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Just as with any programming exercise, your macro may not to do just what you want on the first attempt. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">So, what types of errors are you likely to see? &nbsp;</span><span class="rvts13">Simple syntax errors </span><span class="rvts11">are usually the simplest to correct. </span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts13">thinBasic</span><span class="rvts11"> provides you with a detailed error display like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><img alt="" style="padding : 1px;" src="lib/thinBasicSyntaxError.jpg"></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This message tells you what </span><span class="rvts13">thinBasic</span><span class="rvts11"> expected to find - a closing parenthesis - and what it found instead - an End of line.</span></p>
+<p class="rvps4"><span class="rvts11">Once you add a closing ) to line 3 this problem is fixed. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">However, there are some errors that thinBasic detects that result in misleading and confusing messages:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Duplicating reserved words as variable names can trigger strange errors. If the error is reported immediately following a DIM statement that declared variables, review the variable names you have used.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Delimiter parsing errors (expecting a closing parenthesis and not finding it) will sometimes describe the 'found' tag as some value from the previous valid statement.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Other missing syntax, like a missing close-quote, will cause similar confusing messages</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">These can be frustrating, but the line number flagged as in error is usually where the problem line is, or is close to it.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The other error most commonly made is misspelling of function names, and a quick browse of the Help file should provide the correct spelling. An easy mistake to make is failing to put a </span><span class="rvts13">$</span><span class="rvts11"> for a string-based function like </span><span class="rvts13">Mid$</span><span class="rvts11">. If you do that, you'll get an error message about code that "seems" to be correct but isn't. Similar to misspelled names is failing to define a variable before you used it.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Tracking your macro's flow of control"></a>
+<span class="rvts13">Tracking your macro's flow of control</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A common debugging problem is code that does not follow the path you think it should. The macro may just end prematurely, or seems to be in an area of code that it should not be, and you have to figure out: How did the macro end up </span><span class="rvts13">there?</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The function </span><span class="rvts14">SPF_Debug</span><span class="rvts11"> is useful in a variety of ways in solving such problems. It allows you to write messages to a debug log . These messages can be anything from simple 'breadcrumb' messages, like:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts14">SPF_Debug("Starting line loop")</span></p>
+<p class="rvps5"><span class="rvts14">SPF_Debug("Parameters validated")</span></p>
+<p class="rvps5"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts11">to displays of macro variables, which can be done like this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts14">SPF_Debug("Operand1=" + Operand1)</span><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><a name="Functions and Return Codes"></a>
+<span class="rvts13">Functions and Return Codes</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">All of the SPFLite support functions will (in addition to the defined values returned by the functions) set a Return Code value and a Return Message value. You can get these values using the functions Get_RC and Get_Msg$.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Good programming practice suggests that after calling any function that indicates success or failure with a return code, the return code should be tested and acted on. In a perfect world that's a good idea, but in practice we usually only check a few of the results of function calls when it seems important. And, many of the SPFLite interface calls are simple information retrieval calls where the functions never (or hardly ever) fail, and checking a return code would be unnecessary.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">In addition, using nested function calls, like </span><span class="rvts14">Get_LPtr(Get_Arg$(1))</span><span class="rvts11"> would be very burdensome if we had to break down each function call into single steps and add RC tests. But, when something is not working, and you suspect a failing function call, what option do we have, other than breaking things down into single-step code?</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="SPFLite Function Trace"></a>
+<span class="rvts13">SPFLite Function Trace</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The answer is to activate function tracing using </span><span class="rvts14">SPF_Trace</span><span class="rvts11">, which is called as follows:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">SPF_Trace( [ ON | OFF | ERROR ] )</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you insert an </span><span class="rvts14">SPF_Trace(ON)</span><span class="rvts11">call at the beginning of your macro code (after the macro prototype line) the macro processor will create a debug log window, and write a trace line for every SPFLite interface function call. It will show the function call and its calling parameters, along with the resultant Return code and Error message text generated. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Lets look at an example. Given the following macro:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' Try.MACRO aaa bbb ccc ddd eee fff ggg hhh</span></p>
+<p class="rvps7"><span class="rvts14">SPF_Debug("Args: " + Get_Arg$(4, 2))</span></p>
+<p class="rvps7"><span class="rvts14">halt</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The macro writer tried to display some of the calling arguments using an </span><span class="rvts14">SPF_Debug</span><span class="rvts11"> display function. But when it was run, all that displays is "</span><span class="rvts14">Args:</span><span class="rvts11">" and nothing else. Obviously, it seems like </span><span class="rvts14">Get_Arg$</span><span class="rvts11"> is not working, but why? &nbsp;And how can we be be sure?</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">We could track this down the down the "hard way" with a brute-force approach, and break the macro down to individual statements, adding code to fetch and display error messages and return codes at every point - but that would be a lot of work. Instead, let's try using </span><span class="rvts14">SPF_Trace</span><span class="rvts11"> &nbsp;and see how it can help. We add the </span><span class="rvts14">SPF_Trace</span><span class="rvts11"> activation call, and the macro now looks like this:</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' Try.MACRO aaa bbb ccc ddd eee fff ggg hhh</span></p>
+<p class="rvps7"><span class="rvts14">SPF_Trace(ON)</span></p>
+<p class="rvps7"><span class="rvts14">SPF_Debug("Args: " + Get_Arg$(4, 2))</span></p>
+<p class="rvps7"><span class="rvts14">halt</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When run, the trace output looks like:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts76">Get_Arg$(4, 2) RC=8 Invalid ARG indexes</span></p>
+<p class="rvps7"><span class="rvts14">Args:</span></p>
+<p class="rvps7"><span class="rvts14">SPF_Debug(Args: ) RC=0</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There in the first line is our problem. The Get_Arg$ is failing. Now we need to determine why. (By the way, the actual log won't highlight the display in yellow like this. We just added the color in the documentation here to make it stand out.) &nbsp;Reviewing the documentation for the </span><a class="rvts12" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$</a><span class="rvts11"> &nbsp;function reveals the problem. The two arguments are reversed; we needed to say (2, 4) and not the other way around.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Moral of the story: &nbsp;You have to read the manual.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">What are the other two lines? &nbsp; </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">The </span><span class="rvts14">Args:</span><span class="rvts11"> line is the output from the </span><span class="rvts14">SPF_Debug()</span><span class="rvts11"> function, &nbsp; Debug and Trace share the same debugging window.</span></p>
+<p class="rvps5"><span class="rvts11">The last line is the trace output for the </span><span class="rvts13">execution</span><span class="rvts11"> of the </span><span class="rvts14">SPF_Debug()</span><span class="rvts11">showing that </span><span class="rvts13">it</span><span class="rvts11"> worked correctly &nbsp;(RC=0).</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The Trace function can be turned ON and OFF selectively throughout your macro, which is handy when you can isolate the problem area to one section. If you don't need to trace an entire macro's execution, it will make the debugging output smaller, which makes it easier to follow.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The ERROR option requests that trace records need only be displayed when a function's return code is non-zero. This can reduce the volume of output down considerably, by turning the debugging output into "exception reporting", since it's usually more important to know when functions failed than when they succeeded.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Between </span><span class="rvts14">SPF_Trace</span><span class="rvts11"> and </span><span class="rvts14">SPF_Debug</span><span class="rvts11">, it usually becomes simple to nail down the cause of most bugs.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="thinBasic Output Statements"></a>
+<span class="rvts13">thinBasic Output Statements</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you wish, you can use </span><span class="rvts13">thinBasic</span><span class="rvts11">'s output facilities to write debugging logs or any other information you wish. To do this, you must have the CONSOLE </span><span class="rvts13">thinBasic</span><span class="rvts11"> module available at runtime.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You should place a statement of the form,</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">USES "CONSOLE"</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">prior to writing to the </span><span class="rvts13">thinBasic</span><span class="rvts11"> console screen.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The "print" statements are slightly different than other versions of Basic you may know. They do not use semi-colons to influence the formatting of the output.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The </span><span class="rvts18">PRINT</span><span class="rvts11"> statement will output one or more (comma-separated) items, but will </span><span class="rvts13">not</span><span class="rvts11"> write an end-of-line termination (no Carriage Return and Line Feed).</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The </span><span class="rvts18">PRINTL</span><span class="rvts11"> statement ("print line") will output one or more (comma-separated) items, and </span><span class="rvts13">will</span><span class="rvts11"> write an end-of-line termination.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You may also issue a </span><span class="rvts18">CLS</span><span class="rvts11"> statement to clear the screen.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are additional Console capabilities which you may find useful. See the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation under </span><span class="rvts13">thinBasic Modules - Console</span><span class="rvts11"> for more information.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="The thinBasic Trace Module"></a>
+<span class="rvts13">The thinBasic Trace Module</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you read the </span><span class="rvts13">thinBasic</span><span class="rvts11"> documentation, you will notice in the Modules section they mention a Trace module, which for stand-alone </span><span class="rvts13">thinBasic</span><span class="rvts11"> use provides a single-step debugging mode.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Unfortunately, the Trace module cannot be used presently in SPFLite Macro mode. If you attempt to use this, crashes will occur. When this problem is resolved and </span><span class="rvts13">thinBasic </span><span class="rvts11">Trace functions correctly, we will announce its availability.</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

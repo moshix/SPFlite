@@ -1,0 +1,32 @@
+' FlipFlop.MACRO
+' Vertically reverse a line range 
+'Syntax: FLIPFLOP                                Mark the line range with CC/CC commands
+
+' SPFLite version by George Deluca 
+' Original script Contributed: 1990/12/27 David McRitchie   
+'
+dim i, j, k, l as number value 0 
+
+'--Ensure a marked line range                    ' Ensure we have a marked range
+   i = Get_Src1_LPtr: j = Get_Src2_LPtr          ' Get start/end of line range 
+   if i = 0 or j = 0 then halt(fail, "No line range marked") ' Start or End missing
+
+dim slines(j - i + 1) as string                  ' Dim a table big enough to hold lines 
+
+'----- Load the lines to be reversed 
+   for k = i to j                                ' 
+      if is_Data(k) then                         ' Data line? 
+         incr l                                  ' Bump table index 
+         slines(l) = Get_Line$(k)                ' Save the line 
+      end if                                     ' 
+   next k                                        ' 
+
+'----- Store them back in reverse order
+   for k = i to j                                ' 
+      if is_Data(k) then                         ' Data line? 
+         Set_Line(k, slines(l))                  ' Replace it from table 
+         decr l                                  ' Backup one in table 
+      end if                                     ' 
+   next k                                        ' 
+
+   halt(ok, "Line re-order complete") 

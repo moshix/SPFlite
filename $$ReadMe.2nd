@@ -1,0 +1,372 @@
+Development
+===========
+
+Try a first compile
+===================
+
+This will tell you if you have PowerBasic installed ok, and if Preferences etc
+have been done properly.
+
+OK, first, edit the SPFLite.PBPrj file and change all the relative paths for the
+source files to where YOU have restored the SPFLite folder.
+
+THEN, simply double click the SPFlite.PBprj file, and all the needed source will be
+loaded into the PB IDE.   You can then:
+ * Select Run => Compile and Execute
+ * OR Type Ctrl-E
+ * OR left click the Double Gear Wheel Icon on the ToolBar
+
+
+Program Structure
+=================
+
+This is going to be tough.
+
+First, the data.
+
+Since SPFLite is a multi-tab editor, all the data for individual tabs has to
+be kept separate.  This is done by creating a single OBJECT for each Tab.
+As tabs are created, the address of their respective OBJECTS are kept in a
+GLOBAL array defined as: GLOBAL Tabs() AS iTabData.
+
+Since only one tab can be active at a time, there is a single master Tab pointer.
+The variable TP, defined as: GLOBAL TP as iTabData is the key.
+
+Whenever ANY SUB/FUNCTION in the global area needs to access any data or routine
+of a specific Tab, it must reference it via the TP pointer.
+
+Whenever any code WITHIN the Tab's OBJECT references tab related data it will
+not use the TP pointer, as the Tab's data is all defined as INSTANCE data and
+needs no qualifier.
+
+Since so much of the editing logic obviously uses data within the tabs, the
+vast majority of the program code resides as methods within the iTabData OBJECT.
+
+_SPFLite.BAS
+
+   The main module contains a large number of GLOBAL data variables as well as
+   the the many SUBS/Functions that have to be Globally accessable.
+
+   It also includes 99% of the data area for File Manager, since most tab related
+   data is Edit oriented and there is only ever one File Manager.
+
+
+So for the data it is:
+
+ +------------------------------------------------------+
+ |SPFLite.BAS                                           |
+ | .                                                    |
+ | .                                                    |
+ | Global Data                                          |
+ | .                                                    |
+ | .                                                    |
+ | Tabs() +--------+                                    |
+ |        |Tab1 Ptr|                                    |
+ |        |Tab2 Ptr|                                    |
+ |        |Tab3 Ptr|                                    |
+ |        |    .   |                                    |
+ |        |    .   |                                    |
+ |        |Tabn Ptr|                                    |
+ |        +--------+                                    |
+ |                                                      |
+ | TP     +--------+      _TabData.INC                  |
+ |        |Curr Ptr|---> +----------------------------+ |
+ |        +--------+     | INSTANCE Data              | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       | PROPERTY Get/Set stuff     | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       | METHODS                    | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       |    .                       | |
+ |                       +----------------------------+ |
+ |                                                      |
+ | File Manager Data                                    |
+ |                                                      |
+ +------------------------------------------------------+
+
+Module Include Structure
+========================
+
+The source is maintained in (hopefully) logical INCLUDE file chunks.
+
+_SPFLite.bas
+
+   Includes:
+     #INCLUDE "ComDlg32.inc"            Common Dialog stuff
+     #INCLUDE "commCtrl.inc"            Common Controls stuff
+     #INCLUDE "HtmlHelp.inc"            HTML Help stuff
+     #INCLUDE "RICHEDIT.INC"            RichEdit stuff
+     #INCLUDE "ShlWAPI.inc"             Utility API's
+     #INCLUDE "Win32Api.inc"            Windows standard stuff
+     #INCLUDE "WinINET.inc"             Internet stuff
+     #INCLUDE "WinIOCtl.inc"            Windows IOCtl stuff
+
+     #INCLUDE "_AsmData.inc"            ASM Data tables
+     #INCLUDE "_BMacro.inc"             thinBasic Macro Support
+     #INCLUDE "_DialogEquates.inc"      Dialogue equates (Control ID's etc.)
+     #INCLUDE "_DialogStuff.inc"        Dialog Build and Callbacks
+     #INCLUDE "_HnD.inc"                Help Topic Equates
+     #INCLUDE "_InitRoutines.inc"       Initialization routines
+     #INCLUDE "_Mainline.inc"           Mainline routine
+     #INCLUDE "_mapping.inc"            CHANGE M' literal support
+     #INCLUDE "_mapping_calc.inc"       Calc support for M' literals
+     #INCLUDE "_ObjENV.inc"             Environment stuff
+     #INCLUDE "_ObjIO.inc"              I/O handler
+     #INCLUDE "_ObjKbdT.inc"            Keyboard tables
+     #INCLUDE "_ObjKwdT.inc"            Keyword tables
+     #INCLUDE "_ObjLCmdT.inc"           Line Command Table Object
+     #INCLUDE "_ObjPCmdT.inc"           Primary Command Table Object
+     #INCLUDE "_ObjPrimT.inc"           Primitive table
+     #INCLUDE "_ObjProf.inc"            Profile Data
+     #INCLUDE "_PCRE.inc"               PCRE RegEx stuff
+     #INCLUDE "_Resource.inc"           Icons, KBMaster etc. tables
+     #INCLUDE "_TabData.inc"            CLASS for Tab Data
+     #INCLUDE "_thinCore.INC"           thinBasic interface definitions
+     #INCLUDE "_Types.inc"              Application TYPE definitions & Constant Equates
+     #INCLUDE "_Version.inc"            Version, Build number
+
+_TabData.INC                            Itself includes
+
+   Includes:
+     #INCLUDE "_FMLCmd.inc"             FM Line commands
+     #INCLUDE "_FMPCmd.inc"             FM Primary commands
+     #INCLUDE "_KB.inc"                 Keyboard Primitive routines
+     #INCLUDE "_LCmd.inc"               Edit Line command routines
+     #INCLUDE "_PCmd.inc"               Edit Primary command routines
+
+
+Logic Flow
+==========
+
+  Initialization
+  ==============
+
+  Flows through a series of INITxxxx SUBS/FUNCTIONS, and the order is critical
+  as it is somewhat a bootstrap type process.
+
+    * DIM all the GLOBAL arrays
+    * Adjust font sizes based on users default Windows Zoom factor
+    * Instantiate the various Global Objects and let then do initialization.
+    * Setup Critical Section and Crash handler
+    * Set process DPI aware.
+    * Ensure PCRE.dll is available and load it
+    * INITLocalTables - builds more line command tables, the RETRIEVE table,
+      and the SET table
+    * INIT the Line number text tables.
+    * INITASynchStuff - fires up thread to to background stuff like ensure
+      folders exist, clean up old SUBMIT files, UNDO files, Display Splash etc.
+    * Create the 1st Tab and initialize it.
+    * If very 1st execution, Display Options for the user to set.
+    * If requested, Display KEYMAP for possible recovery of messed up settings.
+    * INITSeeUnique - See if we should yield to another SPFLite session.
+    * Verify that the DEFAULT.INI file exists.
+    * Get the previous Open file list.
+    * Init the 1st Tab as a File Manager tab.
+    * Create a hidden dummy window
+    * Resize and re-build our window based on INI font and screen size values.
+    * Add the File Manager tab to the Window.
+    * Re-open previous files in tabs if appropriate.
+    * Start the loop watching thread if appropriate.
+    * Finally, display the Dialogue MODAL and the mainline waits at this point
+      until the whole session is terminated by EXIT processing.
+
+  Normal Processing
+  =================
+
+  ALL other processing in SPFLite is driven by messages sent by Windows to the
+  various dialog CALLBACK routines.
+
+  One of the calls is not directly from Windows, but is from our own Keyboard
+  hook routine.  This sees all KB activity, processes it and if it is something
+  we care about, it builds and sends a WM_User message to our normal CALLBACK
+  routine, to be processed along with all the other Windows messages.
+
+  So the CALLBACK routines receive messages for:
+
+  Keyboard activity - These are processed via MainBUserMsg, MainCDoKeyString,
+                      and MainDKeyProcess.
+
+  Mouse Activity    - Movements, clicks etc.
+
+  Tab Switching     - Notifications of user initiated tab switching
+
+  Screen sizing     - Need to resize the dialog.
+
+  Focus change      - Gaining / losing focus
+
+  DropFile          - Files being dropped on the window
+
+  CopyData Msgs     - Another SPFLite yielding an Edit to us to process.
+
+  FileWatch Msgs    - An edit file has been altered
+
+
+  Keyboard Processing
+  ===================
+
+  Since most things, even mouse activity, is fudged into the KB processing path
+  it needs some explanation.
+
+  Keyboard messages all enter at:
+
+    MainBUserMsg, MainCDoKeyString and MainDKeyProcess
+      These routines parse out and pass the messages to the proper routines for
+      processing. e.g. simple keyboard character, KB primitives.  Keyboard recording is
+      also handled here.
+
+      On return from the above processing, it calls PostKeyboard routine.  This
+      checks to see if any of the above has set the Attention flag, which indicates
+      full command processing may now be needed.
+
+      If no Attention, it does a bit of housekeeping, and returns back through
+      all the various levels and exits the CALLBACK routine.   SPFLite goes
+      to sleep at this point till the next activity occurs.
+
+      If an Attention then PostKeyboard will:
+
+            Does some housekeeping, sets up the ~w and ~l variables,  checks
+            the scroll amount field for validity, checks if any of the DLMS,
+            MARK, MASK, TABS or BNDS lines have been altered and if so makes
+            sure they're validated and saved.
+
+            Processes the main command line, separates into multiple commands
+            if needed.
+
+            Triggers line command validation by LCtlProcess.
+
+            If no error from LCtlProcess, it calls LCtlCommands to process
+            the validated line commands.
+
+            If no serious errors in LCtlCommand processing, it next does a loop
+            through all he waiting Primary commands.   For each command it:
+
+              Does SET substitution.
+              Dispatches the command using pCmdAssign
+              Any errors, exit the command loop.
+
+            After all commands:
+              Do unused '''''' line cleanup
+              Redisplay the screen via
+                DispScreen
+                  Check if posted for a FileWatch notify
+                  If X/NX line activity, call:
+                    gfxRebuild
+                  Check if screen positioning needed to accomodate new CSR location
+                  Build the screen
+            Call for an UNDO save if needed
+            Return all the way back to the CALLBACK exit
+
+
+Command Processors
+==================
+All the Primitive, Line and Primary commands are invoked somewhere in all the
+above descriptions.  They are, to a great degree, all self contained.
+
+Edit Data Storage.
+==================
+The biggest problem in storing the data is that each text line has numerous
+other data items associated with it beyond the actual text, and thus we have to
+define a UDT data TYPE to hold all this.
+
+But a major restriction of TYPE is that you cannot have a variable within it
+of type STRING, all type variables must be fixed length.
+
+So the text data for a line can not be stored in the TYPE entry describing the
+line.   So what exists is the following.
+
+The TYPE entry looks like
+
+TYPE DataLine
+   LLbl    AS STRING * 8          ' Label
+   LLNum   AS STRING * 8          ' Original line number at last AttnFlag refresh
+   LLCtl   AS STRING * 8          ' Line control after KB interaction
+   LTag    AS STRING * 8          ' Tag
+   LFlag   AS LONG                ' Type of entry
+   LWrk1   AS LONG                ' Misc. work value (e.g. XX count)
+   LWrk2   AS LONG                ' Work value =PAGE> ctr; Note Type
+   LCol    AS LONG                ' Column number if %Cursor line
+   LFix    AS LONG                ' FIND index counter
+   LMix    AS LONG                ' MultiEdit File Index
+   LPCmd   AS LONG                ' ID of last PCommand to access the line
+   LTxtIX  AS LONG                ' Index of allocated T() dynamic string for Txt
+   LTxt    AS STRING POINTER      ' Ptr to real text string
+   LAttrIX AS LONG                ' Index of allocated TW() dynamic string for Attributes
+   LAttr   AS STRING POINTER      ' Ptr to Attribute string
+END TYPE
+
+Most of these are self explanatory, some aren't.
+
+LFlag     is just that, a bunch of bit flags for a variety of reasons, from the
+          type of line (Data, BNDS, TOP, etc.) to status ==CHG> state, etc.
+
+LWorkx    for exclude marker lines, this is the number of lines in the block. For
+          the lines IN the block, it is the # of lines backward to reach the
+          excluded line marker itself.
+
+LCol      needed during gfXRebuild processing to track cursor location for the
+          next re-display.
+
+LFix      a running counter from FIND to enable locating the latest found line.
+
+LMIX      in MEdit mode, it indicates which FILE the line belongs to.
+
+LTxt      pointer to a STRING containing the line's text
+
+LAttr     pointer to a WSTRING containing the line's attributes
+
+LTxtIX    index to the Txt/Clr STRING item in the string pool.
+LAttrIX   index to the Attribute WSTRING item in the string pool.
+
+
+So in the Tab data for a single edit, there are 3 structures for holding the
+user's data.
+
+L() AS DataLine     an array of the above format.
+
+T() AS STRING       an array of STRINGs.  A pool of available storage slots
+
+TW() AS WSTRING     an array of WSTRINGs. A pool of available wide storage slots
+
+TIDX AS STRING      a single string of character 0 (zero) and 1 (ones) to
+                    represent available, unused entries in the T() and TW() arrays.
+
+So when a L() array item is initialized to hold a text line, part of the
+process must assign it an available T() and TW() entry to hold the actual text data. The
+logic is basically:
+
+   i = INSTR(TIDX, "1")         ' Scan for next available entry
+   MID$(TIDX, i, 1) = "0"       ' Mark it no longer available
+   DECR TTCtr                   ' Reduce T() count remaining
+   T(i) = ""                    ' Null the string
+   L(p).LTxtIX = i              ' Remember the index in the L() entry
+   L(p).LTxt = VARPTR(T(i))     ' Point L.LTxt to the dynamic String
+
+   TW(i) = CHR$$(0)             ' Null the string
+   L(p).LAttrIX = i             ' Remember the index in the L() entry
+   L(p).LAttr = VARPTR(TW(i))   ' Point L.LAttr to the dynamic String
+
+Deleting lines of course has to reverse all this and free the T and TW items back to
+the available pool controlled by the TIDX string.
+
+So after all that, how is text actually accessed?   Well, since it all resides
+within the Tab Object, and the data is not just a simple INSTANCE variable, it
+is done via a variety of METHODS.
+
+Access a text string for line n ->  txt = TP.LTxtGet(n)
+
+Replace a text string for line n -> TP.LTxtSet(n, newstring)
+
+Delete a char from a line -> TP.LTxtCharDel(n, col)
+
+Insert a char into a line -> TP.LTxtCharIns(n, col, char)
+
+
+Well, that's a start, with 50-60K source lines I'm sure you'll have fun.
+
+George
+

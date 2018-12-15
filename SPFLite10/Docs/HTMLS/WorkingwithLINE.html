@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with the LINE Primary Command</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with the LINE Primary Command">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with the LINE Primary Command" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithLINE"
+		  data-hnd-context="223"
+		  data-hnd-title="Working with the LINE Primary Command"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with the LINE Primary Command</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#Dual-useandcomparablecommands">Dual-use and comparable commands</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#FundamentalsoftheLINEprimarycommand">Fundamentals of the LINE primary command</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#ApplicationsoftheLINEprimarycommand">Applications of the LINE primary command</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#Specifyingtheline-commandoperand">Specifying the line-command operand</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#Specifyingablock-modeline-commandoperand">Specifying a block-mode line-command operand</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#LINEprovidesaccesstoexcludedlines">LINE provides access to excluded lines</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#UsingLabelsandTagswiththeLINECommand">Using Labels and Tags with the LINE Command</a></p>
+<p class="rvps5"><a class="rvts121" href="WorkingwithLINE.html#LimitationsofT/TTlinecommandandLINEprimarycommand">Limitations of T/TT line command and LINE primary command</a></p>
+<p class="rvps5"><a class="rvts84" href="WorkingwithLINE.html#LINECommandExamples">LINE primary command examples</a></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">LINE</span><span class="rvts6"> primary command allows you to apply a line command to one or more lines, based on a standard line-range operand. The command syntax is described in </span><a class="rvts41" href="LINE.html">LINE - Apply Line Command</a><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This is a somewhat unusual concept, not present in ISPF or in SPFLite until now, and is best explained by example - so we provide several to help you to understand it and get most out of this new feature. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can go directly to the examples </span><a class="rvts41" href="WorkingwithLINE.html#LINE%20Command%20Examples">here</a><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">Note</span><span class="rvts6">: Every effort was made to carefully design and implement it, but because this a novel editing concept (even for </span><span class="rvts40">us</span><span class="rvts6">, it must be admitted), the way in which this works may be subject to change if it turns out any of our basic assumptions need to be adjusted. We invite all SPFLite users to try this and give us your suggestions and feedback on how well you do or don't like it. This a very cool and promising feature, but it's also a work in progress, so stay with us as we go through the learning curve together.</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">For you mathematicians out there, note that the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command is a function that applies other functions (line-commands) to your data, which could be termed a </span><span class="rvts94">lambda function</span><span class="rvts6">. For everyone else, it's just a cool feature, so keep reading ...</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">By the way, since </span><span class="rvts40">LINE</span><span class="rvts6"> is a primary command, and commands that go into the sequence area of lines are "line commands", the terminology could get a little confusing if we're not careful. To avoid that, we will always refer to LINE as "</span><span class="rvts40">the LINE </span><span class="rvts173">primary</span><span class="rvts40"> command</span><span class="rvts6">" or "</span><span class="rvts40">the LINE </span><span class="rvts173">facility</span><span class="rvts6">" and continue to call commands in the sequence area simply as "</span><span class="rvts40">line commands</span><span class="rvts6">". What we </span><span class="rvts40">won't</span><span class="rvts6"> do is refer to "</span><span class="rvts40">the LINE command</span><span class="rvts6">".</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Dual-useandcomparablecommands"></a>
+<span class="rvts40">Dual-use and comparable commands</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Even though the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command is new, if you are a long-time SPFLite user, you may already have taken advantage of a similar capability. Consider the </span><span class="rvts40">LC</span><span class="rvts6"> command, to convert data to lower case. This command exists in two forms, as a line-mode </span><span class="rvts40">LC</span><span class="rvts6">[</span><span class="rvts173">n</span><span class="rvts6">] or block-mode </span><span class="rvts40">LCC</span><span class="rvts6"> </span><span class="rvts94">line command</span><span class="rvts6">, and as a </span><span class="rvts94">primary command</span><span class="rvts6"> having a syntax of:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">LC</span><span class="rvts6"> [ </span><span class="rvts173">line-control-range</span><span class="rvts6"> ] &nbsp;[ </span><span class="rvts40">X</span><span class="rvts6"> | </span><span class="rvts40">NX</span><span class="rvts6"> | </span><span class="rvts40">ALL</span><span class="rvts6"> ] &nbsp;[ </span><span class="rvts40">MX</span><span class="rvts6"> | </span><span class="rvts40">DX</span><span class="rvts6"> ]</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Because you have the ability to use </span><span class="rvts40">LC</span><span class="rvts6"> in both line-command form and primary-command form, </span><span class="rvts40">LC</span><span class="rvts6"> could be thought of as a "dual-use" command. It is </span><span class="rvts40">as if</span><span class="rvts6"> you had a "primary-command version of a line-command", or vice-versa.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">There are only a limited number of commands that are dual-use. (A few of these might be termed "comparable" dual-use commands, like the line command </span><span class="rvts40">D</span><span class="rvts6"> and the primary command </span><span class="rvts40">DELETE</span><span class="rvts6">. Both have the </span><span class="rvts94">comparable function</span><span class="rvts6"> of deleting lines, but they are spelled differently.) &nbsp;</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">These dual-use commands are:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<div class="rvps5"><table width="50%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Line command</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Primary command</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Note</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">D / DD</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">DELETE</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Comparable</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">LC / LCC</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">LC</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">S / SS</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">SHOW</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Comparable</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">SC / SCC</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">SC</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">TC / TCC</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">TC</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">UC / UCC</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">UC</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">X</span></p>
+</td>
+<td width="144" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts40">EXCLUDE</span></p>
+</td>
+<td width="142" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps4"><span class="rvts6">Comparable. EXCLUDE can also be abbreviated as X, the same name as the line-command form</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Even though it might </span><span class="rvts40">seem</span><span class="rvts6"> like the </span><span class="rvts40">LC</span><span class="rvts6"> line command and the </span><span class="rvts40">LC</span><span class="rvts6"> primary command are "the same" (because both perform lower-case conversion), they are in fact completely different commands in different parts of SPFLite and were implemented independently. They just happen to be spelled the same.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="FundamentalsoftheLINEprimarycommand"></a>
+<span class="rvts40">Fundamentals of the LINE primary command</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">LINE</span><span class="rvts6"> facility is different. In effect, the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command is used to "deposit" line commands into the sequence areas of one or more data lines, at which point those line commands are </span><span class="rvts40">applied</span><span class="rvts6">, as if you had typed them in yourself and pressed Enter. When that line command is executed, it's </span><span class="rvts40">not</span><span class="rvts6"> a "primary-command version of a line-command". It's a </span><span class="rvts40">real</span><span class="rvts6"> line command, and it works like the real thing.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">That is, suppose you have a line labeled </span><span class="rvts40">.ABC</span><span class="rvts6"> and you want to convert that line to lower case. You have three choices:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">Type an </span><span class="rvts40">LC</span><span class="rvts6"> line command on the line labeled </span><span class="rvts40">.ABC</span><span class="rvts6"> and press Enter.</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">On the primary command line, type the command </span><span class="rvts40">LC .ABC</span><span class="rvts6"> and press Enter.</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">Use the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command to apply an </span><span class="rvts40">LC</span><span class="rvts6"> line command to the line. Referring to the example above, this would this be done with the primary command </span><span class="rvts40">LINE LC .ABC</span><span class="rvts6">. </span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The difference between </span><span class="rvts40">LC .ABC</span><span class="rvts6"> and </span><span class="rvts40">LINE LC .ABC</span><span class="rvts6"> is:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts40">LC .ABC</span><span class="rvts6"> directs all of its activity from the primary command line, whereas,</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts40">LINE LC .ABC</span><span class="rvts6"> is a request to apply the </span><span class="rvts40">LC</span><span class="rvts6"> line command on line .</span><span class="rvts40">ABC</span><span class="rvts6">. When </span><span class="rvts40">LINE LC .ABC</span><span class="rvts6"> is executed, a real </span><span class="rvts40">LC</span><span class="rvts6"> </span><span class="rvts94">line</span><span class="rvts6"> command is executed.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">Note</span><span class="rvts6">: Just to be clear, this discussion about </span><span class="rvts40">LC</span><span class="rvts6"> is simply to help you understand the process. Even though you could do it, you wouldn't normally need to say </span><span class="rvts40">LINE LC</span><span class="rvts6">, since you already have an </span><span class="rvts40">LC</span><span class="rvts6"> primary command available.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">However, if you were to use any of the extra operands of </span><span class="rvts40">LINE</span><span class="rvts6">, like </span><span class="rvts40">FIRST</span><span class="rvts6">, </span><span class="rvts40">LAST</span><span class="rvts6">, </span><span class="rvts40">X</span><span class="rvts6">|</span><span class="rvts40">NX, </span><span class="rvts6">and/or a multi-line line range using labels or tags, there are some reasons to consider using a command like </span><span class="rvts40">LINE LC</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="ApplicationsoftheLINEprimarycommand"></a>
+<span class="rvts40">Applications of the LINE primary command</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you read no further, you might conclude that the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command wasn't all that useful. After all, if it acts just like typing a regular line command, why not just type a </span><span class="rvts40">real</span><span class="rvts6"> one and be done with it? &nbsp;What is the advantage to using the </span><span class="rvts40">LINE </span><span class="rvts6">facility? &nbsp;It was created to address the following situations:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">As a way to apply a given line command to a range of lines, including multiple, non-contiguous lines specified by line label ranges, line tags and/or by their </span><span class="rvts40">X</span><span class="rvts6">|</span><span class="rvts40">NX</span><span class="rvts6"> exclusion status. Applying the </span><span class="rvts40">LINE</span><span class="rvts6"> facility to multiple data lines is its most powerful feature, and is likely to be the most important use for the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">As a means to apply line-commands to a file from a command macro, which otherwise would have no way to do this.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">To provide additional capability to keyboard macros.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">And, to provide a critical feature needed for the SPFLite programmable macro facility.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Specifyingtheline-commandoperand"></a>
+<span class="rvts40">Specifying the line-command operand</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The</span><span class="rvts40"> line-command</span><span class="rvts6"> operand may be a quoted or unquoted string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">The operands of the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command may be specified in any order. We show the </span><span class="rvts40">line-command</span><span class="rvts6"> operand in the examples as immediately following the </span><span class="rvts40">LINE</span><span class="rvts6"> &nbsp;primary command keyword just as a matter of style and convention.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When the </span><span class="rvts40">line-command</span><span class="rvts6"> operand is a simple alphabetic or alphanumeric string, like </span><span class="rvts40">R</span><span class="rvts6"> or </span><span class="rvts40">R2</span><span class="rvts6">, it is not necessary to quote it. Either of these will work:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE R .123</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE 'R' .123</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can (surprisingly) even use the "graphic" shift commands without quoting them. Either of these will work:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE )4 .123</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE ')4' .123</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">However, if you try to use a line-command operand that overlaps the remaining syntax of the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command, you will run into problems. The problem areas are as follows:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">A line-command operand of </span><span class="rvts40">X</span><span class="rvts6"> will be confused with the </span><span class="rvts40">X</span><span class="rvts6">|</span><span class="rvts40">NX</span><span class="rvts6"> option of the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command. If you try something like </span><span class="rvts40">LINE X .123</span><span class="rvts6"> because you wanted to put an </span><span class="rvts40">X</span><span class="rvts6"> on line </span><span class="rvts40">123</span><span class="rvts6">, you will get an error message, "</span><span class="rvts40">Missing/invalid line command</span><span class="rvts6">". To get around this, you will have to quote the line-command operand as </span><span class="rvts40">LINE 'X' .123</span><span class="rvts6">.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">If you attempt to use the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command to place a </span><span class="rvts40">label</span><span class="rvts6"> into a line, it will be confused with a label that is part of the line-range operand. If you try something like </span><span class="rvts40">LINE .ABC .123</span><span class="rvts6"> because you wanted to put a label </span><span class="rvts40">.ABC</span><span class="rvts6"> on line </span><span class="rvts40">123</span><span class="rvts6">, you will again get an error message, "</span><span class="rvts40">Missing/invalid line command</span><span class="rvts6">". To get around this, you will have to quote the line-command operand as </span><span class="rvts40">LINE '.ABC' .123</span><span class="rvts6">.</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">If you attempt to use the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command to place a </span><span class="rvts40">tag</span><span class="rvts6"> into a line, it will be confused with a tag that is part of the line-range operand. If you try something like </span><span class="rvts40">LINE :T .123</span><span class="rvts6"> because you wanted to put a tag </span><span class="rvts40">:T</span><span class="rvts6"> on line </span><span class="rvts40">123</span><span class="rvts6">, you will get an error message, "</span><span class="rvts40">Invalid tag operand</span><span class="rvts6">". To get around this, you will have to quote the line-command operand as </span><span class="rvts40">LINE ':T' .123</span><span class="rvts6">.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you don't want to think about it, you can just quote all </span><span class="rvts40">line-commands</span><span class="rvts6">. But, remember to at least quote the </span><span class="rvts40">X</span><span class="rvts6"> if it's a</span><span class="rvts40"> line-command</span><span class="rvts6"> </span><span class="rvts40">operand</span><span class="rvts6">. If you are using and </span><span class="rvts40">X</span><span class="rvts6"> to select just excluded lines as part of the line-range, then </span><span class="rvts40">don't</span><span class="rvts6"> quote it.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">Note</span><span class="rvts6">: The </span><span class="rvts40">LINE</span><span class="rvts6"> primary command operands </span><span class="rvts40">FIRST</span><span class="rvts6">, </span><span class="rvts40">LAST</span><span class="rvts6">, </span><span class="rvts40">ALL</span><span class="rvts6"> and </span><span class="rvts40">NX</span><span class="rvts6"> should </span><span class="rvts40">never</span><span class="rvts6"> be quoted, because these cannot be </span><span class="rvts40">line-commands</span><span class="rvts6">.</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts40">Note</span><span class="rvts6">: Would you ever have an </span><span class="rvts40">'X'</span><span class="rvts6"> in quotes </span><span class="rvts40">and</span><span class="rvts6"> an unquoted </span><span class="rvts40">X</span><span class="rvts6"> in the same </span><span class="rvts40">LINE</span><span class="rvts6"> primary command? &nbsp;You could, but, there's no need for it, because you would be putting </span><span class="rvts40">X</span><span class="rvts6"> line-commands on lines that were already excluded. While a command like </span><span class="rvts40">LINE 'X' X .123 .456</span><span class="rvts6"> is not useful, you </span><span class="rvts40">could</span><span class="rvts6"> use </span><span class="rvts40">X</span><span class="rvts6"> with a line count, like </span><span class="rvts40">LINE 'X3' X .123 .456</span><span class="rvts6">. </span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">You can also use the block mode </span><span class="rvts40">XX</span><span class="rvts6"> line command with </span><span class="rvts40">LINE</span><span class="rvts6"> primary command. The main thing is, if it makes sense to do it manually, it should make sense to do it with the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If the </span><span class="rvts40">line-command</span><span class="rvts6"> operand is a quoted string of a blank, it will erase a label or tag that exists on that line. (You can't use a</span><span class="rvts139"> '' </span><span class="rvts6">zero-length string to do this; there must be at least one blank character in the string.) For example,</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE '.ABC' .123</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">will place label </span><span class="rvts40">.ABC</span><span class="rvts6"> on line 123, and</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE ' ' .123</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">will remove that label. You may use the forms</span></p>
+<p class="rvps5"><span class="rvts139"> </span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE '..ABC' .123</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE '::DEF' .123</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts6">to 'toggle' a line label or line tag on a line, and you may use the forms</span></p>
+<p class="rvps5"><span class="rvts139"> </span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE '.' .123</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE ':' .123</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts6">to specifically remove either a line label or line tag on a line, in cases where both coexist on the same line. In other words, it works just like you could do with a keyboard macro.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When you apply the </span><span class="rvts40">LINE</span><span class="rvts6"> facility to a line that already has a label or tag, the label or tag will not be disturbed. But if you have a pending command, the label or tag will be 'concealed' until the operation is completed, and then it will be redisplayed. This is the same as what happens manually.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Specifyingablock-modeline-commandoperand"></a>
+<span class="rvts40">Specifying a block-mode line-command operand</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You are allowed to use the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command to place a block-mode </span><span class="rvts40">line-command</span><span class="rvts6"> into a line. For example, the following is valid:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE CC .123</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">What happens when you do this? &nbsp;Basically, the same thing that would happen if you did this manually. You will see the </span><span class="rvts40">CC</span><span class="rvts6"> line command sitting in the sequence area of line 123 when this is performed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Depending on whether there is another </span><span class="rvts40">CC</span><span class="rvts6"> and/or </span><span class="rvts40">A</span><span class="rvts6">/</span><span class="rvts40">B</span><span class="rvts6"> command somewhere in the file, SPFLite will report the situation with a message like </span><span class="rvts40">Pending command(s)</span><span class="rvts6">, or it will perform the command and then clear any messages if "all the pieces are in place". If you tried to put too many block-mode </span><span class="rvts40">line-commands</span><span class="rvts6"> into the file, such as with a command like,</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">LINE CC .1 .10 ALL</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">you will get a message, </span><span class="rvts40">Illogical line command grouping</span><span class="rvts6">, because it wouldn't make sense to have ten pending </span><span class="rvts40">CC</span><span class="rvts6"> commands at the same time. The point is, SPFLite will do the same thing it would if you were typing everything in manually.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="LINEprovidesaccesstoexcludedlines"></a>
+<span class="rvts40">LINE provides access to excluded lines</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Normally, when a block of lines are excluded, you are limited as to what you can do to those lines using line commands. You can do things like delete, repeat, shift, and copy, using a line-mode command on the excluded-line placeholder, but these actions are applied to </span><span class="rvts40">every</span><span class="rvts6"> line in the excluded region. You can't pick and choose which lines </span><span class="rvts40">within</span><span class="rvts6"> that region are affected.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">With the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command, this changes. Suppose you have lines 1 to 100 excluded, and you want to delete line 40, then repeat line 20, but you </span><span class="rvts40">also</span><span class="rvts6"> want the rest of the lines to remain excluded. How would you do it? &nbsp;The </span><span class="rvts40">LINE</span><span class="rvts6"> primary command provides you </span><span class="rvts94">line-command access</span><span class="rvts6"> to those excluded lines. Here's an example of how you could do it.</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">EXCLUDE .1 .100 ALL</span></p>
+<p class="rvps6"><span class="rvts139">LINE D .40</span></p>
+<p class="rvps6"><span class="rvts139">LINE R .20</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">At this point, you will still have 100 excluded lines, and you have modified some of the data within the excluded region without anything 'popping out'. Try this test yourself - then, unexclude the file with a </span><span class="rvts40">RESET</span><span class="rvts6"> primary command and see what you have. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This kind of capability never existing in SPFLite before, and it opens up many intriguing possibilities. Feel free to experiment. If you happen upon some novel application of the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command, we invite your feedback on the SPFLite web site. If you have a good idea, we could include it in upcoming revisions to the Help document.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="UsingLabelsandTagswiththeLINECommand"></a>
+<span class="rvts40">Using Labels and Tags with the LINE Command</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can manage line labels and line tags using the LINE primary command. For example, to put a label of .ABC on line 10, you can issue the command:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">LINE '.ABC' .10 </span></p>
+<p class="rvps6"><span class="rvts139"> </span></p>
+<p class="rvps5"><span class="rvts6">Remember to quote the label, because in this example, the first operand</span><span class="rvts139"> '.ABC' </span><span class="rvts6">is what goes into the sequence area, and the second operand</span><span class="rvts139"> .10 </span><span class="rvts6">is where the first operand is placed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When doing a normal edit, there is usually no need to do such a thing; you would just put the label on the line directly. However, when run a programmable macro the LINE primary command is the only way to do this. You would need to 'wrap' the LINE primary command in an SPF_CMD function call in your </span><span class="rvts40">.MACRO</span><span class="rvts6"> file, like this:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">SPF_CMD ("LINE '.ABC' .10") </span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">It is possible to set, clear and toggle both line labels and line tags from the LINE primary command. The possible options are as follows:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter label into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle label; enter label if no label present, </span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any label that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any label that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any label that may be present; same as</span><span class="rvts139"> LINE '.'</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter tag into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle tag; enter tag if no tag present,</span><span class="rvts139"> &nbsp;</span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any tag that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any tag that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any tag that may be present; same as</span><span class="rvts139"> LINE ':'</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="KeyMapDialog.html#Special%20Line%20Commands">Special Line Commands</a><span class="rvts6"> in </span><a class="rvts41" href="KeyMapDialog.html">Using the KEYMAP Dialog</a><span class="rvts6"> for more information on performing these same actions within a KEYMAP definition.</span></p>
+<p class="rvps4"><span class="rvts12"> </span></p>
+<p class="rvps4"><a name="LimitationsofT/TTlinecommandandLINEprimarycommand"></a>
+<span class="rvts11">Limitations of T/TT line command and LINE primary command</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">T</span><span class="rvts12">/</span><span class="rvts11">TT</span><span class="rvts12"> line command can be used by the </span><span class="rvts11">LINE</span><span class="rvts12"> primary command, to apply </span><span class="rvts11">T</span><span class="rvts12">/</span><span class="rvts11">TT</span><span class="rvts12"> to one or more lines. However, when </span><span class="rvts11">T</span><span class="rvts12"> is applied to more than one line, each individual </span><span class="rvts11">T</span><span class="rvts12"> is applied to each line one at a time. The way that </span><span class="rvts11">T</span><span class="rvts12">/</span><span class="rvts11">TT</span><span class="rvts12"> operates, only a single, contiguous block of highlighted data may exist as any given time, &nbsp;So, if you attempted to issue a command like </span><span class="rvts11">LINE T .11 .13 ALL</span><span class="rvts12">, only line 13 will be highlighted. If you try to manually highlight line 11 with a </span><span class="rvts11">T</span><span class="rvts12">, then line 12, then line 13, you will see how and why it works this way.</span></p>
+<p class="rvps4"><span class="rvts12"> </span></p>
+<p class="rvps4"><a name="LINECommandExamples"></a>
+<span class="rvts40">LINE Command Examples</span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps4"><span class="rvts40">LINE Example 1: Insert blanks lines</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">LINE N .1 .3 </span><span class="rvts6">is used to insert a blank line after the first 3 lines of the file.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 01.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 02.jpg"></p>
+<p class="rvps4"><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps4"><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps4"><span class="rvts40">LINE Example 2: Repeating lines</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">LINE R .4 .6&nbsp;</span><span class="rvts6"> is used to individually repeat 3 lines of the file. Note that this could </span><span class="rvts40">not</span><span class="rvts6"> be done with a conventional </span><span class="rvts40">RR</span><span class="rvts6"> block-mode line command.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 03.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 04.jpg"></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps4"><span class="rvts40">LINE Example 3: Shifting tagged lines</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">LINE ] :M ALL</span><span class="rvts6"> is used to shift all lines with line tag </span><span class="rvts40">:M</span><span class="rvts6"> on them.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 05.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/LINE Cmd 06.jpg"><span class="rvts6"> </span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

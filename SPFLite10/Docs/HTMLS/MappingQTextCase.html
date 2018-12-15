@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Text Case Handling</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Text Case Handling">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Text Case Handling" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingQTextCase"
+		  data-hnd-context="292"
+		  data-hnd-title="Text Case Handling"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Text Case Handling</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<h2 class="rvps84"><span class="rvts0"><span class="rvts143">Case Modification</span></span></h2>
+<p class="rvps9"><span class="rvts156"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Characters are copied from the </span><span class="rvts140">source string</span><span class="rvts6"> to the </span><span class="rvts140">result string</span><span class="rvts6"> as-is, unless you provide codes to modify the case of the data:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts168">&gt;</span><span class="rvts6"> &nbsp; Case modification code causes all data placed in the </span><span class="rvts140">result string</span><span class="rvts6"> from that point forward to be converted to upper case</span></li>
+</ul></ul>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts168">&lt;</span><span class="rvts6"> &nbsp; Case modification code causes all data placed in the </span><span class="rvts140">result string</span><span class="rvts6"> from that point forward to be converted to lower case</span></li>
+</ul></ul>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts168">&gt;&lt;</span><span class="rvts6"> &nbsp; Case modification code causes all data placed in the </span><span class="rvts140">result string</span><span class="rvts6"> from that point forward have its case </span><span class="rvts140">inverted</span><span class="rvts6"> such that </span><span class="rvts6">ABCDwxyz</span><span class="rvts6"> will become </span><span class="rvts6">abcdWXYZ. There can be no spaces between the </span><span class="rvts6">&gt;</span><span class="rvts6"> and </span><span class="rvts6">&lt;</span><span class="rvts6"> symbols.</span></li>
+</ul></ul>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts168">&lt;&gt;</span><span class="rvts6"> &nbsp; Case modification code causes all data placed in the </span><span class="rvts140">result string</span><span class="rvts6"> from that point forward to resume being copied as-is without case modification. There can be no spaces between the </span><span class="rvts168">&lt;</span><span class="rvts6"> and </span><span class="rvts168">&gt;</span><span class="rvts6"> symbols.</span></li>
+</ul></ul>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">When mapping commands are specified while a</span><span class="rvts168"> &gt; </span><span class="rvts6">,</span><span class="rvts168"> &lt; </span><span class="rvts6">or</span><span class="rvts168"> &gt;&lt; </span><span class="rvts6">case modification code is in effect, certain commands may handle these codes differently or may disregard them. Consult specific commands for more information.</span></li>
+</ul></ul>
+<p class="rvps96"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts40">UC</span><span class="rvts6">, </span><span class="rvts40">LC</span><span class="rvts6">, </span><span class="rvts40">SC</span><span class="rvts6">, </span><span class="rvts40">TC</span><span class="rvts6"> and </span><span class="rvts40">IC</span><span class="rvts6"> &nbsp;case alteration command codes alter the current contents of the </span><span class="rvts140">result string</span><span class="rvts6"> at the point the command is encountered, performing Upper Case, Lower Case, Sentence Case, Title Case and Invert Case operations, respectively, on the </span><span class="rvts140">result string</span><span class="rvts6">. Refer to the main Help guide for the Primary and Line commands of </span><span class="rvts6">SC</span><span class="rvts6"> and </span><span class="rvts6">TC</span><span class="rvts6"> to understand the capitalizations these perform.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h2 class="rvps84"><span class="rvts0"><span class="rvts219">Case Sensitivity and Case Conformance</span></span></h2>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a string operand appears on a command code, and that command involves searching for or changing data, the command will apply comparison and change rules that are similar to how SPFLite in general handles this when it executes a </span><span class="rvts40">FIND</span><span class="rvts6"> or </span><span class="rvts40">CHANGE</span><span class="rvts6"> primary command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Mapping commands handle case sensitivity as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">If you have provided no other indications on your mapping string as to how you want string searches to be handled, the mapping-string facility will use the current </span><span class="rvts40">CASE</span><span class="rvts6"> setting from the </span><span class="rvts40">PROFILE</span><span class="rvts6"> setting of the file you were editing when you issued the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command that contained a mapping string. If your </span><span class="rvts40">PROFILE</span><span class="rvts6"> setting is </span><span class="rvts40">CASE&nbsp;C</span><span class="rvts6">, string comparisons will be done as case-sensitive; if your </span><span class="rvts40">PROFILE</span><span class="rvts6"> setting is </span><span class="rvts40">CASE&nbsp;T</span><span class="rvts6">, string comparisons will be done as case-insensitive.</span></li>
+</ul></ul>
+<p class="rvps90"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">If you specify a mapping command code of </span><span class="rvts40">CC</span><span class="rvts6"> or </span><span class="rvts40">CT</span><span class="rvts6">, it overrides the </span><span class="rvts40">PROFILE</span><span class="rvts6"> </span><span class="rvts40">CASE</span><span class="rvts6"> setting. If you specify a mapping command code of </span><span class="rvts40">CC</span><span class="rvts6">, string comparisons from that point forward will be done as case-sensitive, unless that is changed by a subsequent </span><span class="rvts40">CT</span><span class="rvts6"> command. If you specify a mapping command code of </span><span class="rvts40">CT</span><span class="rvts6">, string comparisons from that point forward will be done as case-insensitive, unless that is changed by a subsequent </span><span class="rvts40">CC</span><span class="rvts6"> command.</span></li>
+</ul></ul>
+<p class="rvps90"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">If you specify a string operand on a command code, and that string contains a trailing type code of </span><span class="rvts40">C</span><span class="rvts6">&nbsp;or&nbsp;</span><span class="rvts40">X</span><span class="rvts6">, it implies a case-sensitive comparison, which overrides any </span><span class="rvts40">CT</span><span class="rvts6"> mapping command or </span><span class="rvts40">PROFILE&nbsp;CASE&nbsp;T</span><span class="rvts6"> setting which may be in effect. If you specify a string operand on a command code, and that string contains a trailing type code of </span><span class="rvts40">T</span><span class="rvts6">, it implies a case-insensitive comparison, which overrides any </span><span class="rvts40">CC</span><span class="rvts6"> mapping command or </span><span class="rvts40">PROFILE&nbsp;CASE&nbsp;C</span><span class="rvts6"> setting which may be in effect. </span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Some commands, such as </span><span class="rvts40">RA</span><span class="rvts6"> (Replace All) accept a two-part string operand syntax, consisting of a </span><span class="rvts140">first</span><span class="rvts6"> and a </span><span class="rvts140">second</span><span class="rvts6"> string value. Such commands involve both </span><span class="rvts140">finding</span><span class="rvts6"> and </span><span class="rvts140">changing</span><span class="rvts6"> data. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When data is changed with such commands, it is possible to cause such changes to occur in a </span><span class="rvts140">case conformant</span><span class="rvts6"> manner, the same as is done when a </span><span class="rvts40">CHANGE</span><span class="rvts6"> primary command has string operands with string type codes of </span><span class="rvts40">T</span><span class="rvts6"> for both string‑1 and string‑2. See </span><span class="rvts165">Case-Conformant Change Strings</span><span class="rvts6"> under </span><span class="rvts165">Finding and Changing Data</span><span class="rvts6"> in the Help topic </span><span class="rvts165">Working with SPFLite</span><span class="rvts6"> for more information on how the </span><span class="rvts140">case conformant</span><span class="rvts6"> change process operates.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For mapping commands that use </span><span class="rvts40">pairs</span><span class="rvts6"> of strings, these special operands work as shown below, using the RA command as an example, which use a pair of </span><span class="rvts140">first</span><span class="rvts6"> and </span><span class="rvts140">second</span><span class="rvts6"> string values. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You will see that there are a large number of cases. Instead of trying to memorize these cases, it is best to observe that, with few exceptions, mapping commands handle strings the same way as FIND and CHANGE primary commands do when their </span><span class="rvts140">string-1</span><span class="rvts6"> and </span><span class="rvts140">string-2</span><span class="rvts6"> operands use the same type codes. Where there are </span><span class="rvts177">differences</span><span class="rvts6"> from the way primary commands handle this, those differences are </span><span class="rvts177">highlighted in red</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that after an X value is converted to its character equivalent, it is treated like type C; that is, as case-sensitive for comparisons, and an X value is used as-is when specified as </span><span class="rvts140">string-2.</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<div class="rvps9"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">#</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Sample Command</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">String-1</span><span class="rvts6"> type</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">String-2</span><span class="rvts6"> type</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">How </span><span class="rvts140">string-1</span><span class="rvts6"> compared</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">How </span><span class="rvts140">string-2</span><span class="rvts6"> changed</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">1</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">=</span><span class="rvts140">second</span><span class="rvts6">'</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Based on CC/CT command in effect, or on current PROFILE CASE setting</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified, as if</span><span class="rvts140"> string-2</span><span class="rvts6"> had a type code of C</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">2</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">=</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">=</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C</span><span class="rvts177"> </span><span class="rvts195">implied</span></p>
+<p class="rvps9"><span class="rvts6">X</span><span class="rvts177"> </span><span class="rvts195">implied</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts62">C</span></p>
+<p class="rvps9"><span class="rvts62">X</span><span class="rvts6">&nbsp;</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">Case sensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">3</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">=</span><span class="rvts140">second</span><span class="rvts6">'T</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts177"> </span><span class="rvts195">implied</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">Case insensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case conformant</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">4</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C&nbsp;&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">X</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Based on CC/CT command in effect, or on current PROFILE CASE setting</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">5</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'T</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts177"> </span><span class="rvts195">implied</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">Case insensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case conformant.&nbsp;</span><span class="rvts204"> </span><span class="rvts177">Type </span><span class="rvts6">T</span><span class="rvts177"> is implied for </span><span class="rvts195">string-1</span><span class="rvts177"> because without it, the case conformance of </span><span class="rvts195">string-2</span><span class="rvts177"> would serve no purpose.</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">6</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'T</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts40">&nbsp;</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case insensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified, as if </span><span class="rvts140">string-2</span><span class="rvts6"> had a type code of C. Note that type T on </span><span class="rvts140">string-1</span><span class="rvts6"> is </span><span class="rvts40">not</span><span class="rvts6"> assumed for </span><span class="rvts140">string-2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">7</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'T</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'T</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">T</span><span class="rvts40">&nbsp;</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C</span></p>
+<p class="rvps9"><span class="rvts6">X</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case insensitive</span></p>
+<p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">8</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">' </span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'X</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">' </span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'X</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'X</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C</span></p>
+<p class="rvps9"><span class="rvts6">C</span></p>
+<p class="rvps9"><span class="rvts6">C</span></p>
+<p class="rvps9"><span class="rvts6">X</span></p>
+<p class="rvps9"><span class="rvts6">X</span></p>
+<p class="rvps9"><span class="rvts6">X</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span><span class="rvts40">&nbsp;&nbsp;</span></p>
+<p class="rvps9"><span class="rvts168">C</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts168">X</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts140">omitted</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts168">C</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts168">X</span><span class="rvts40">&nbsp;</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case sensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">9</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">' </span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span><span class="rvts40">&nbsp;</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span><span class="rvts40">&nbsp;&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">C</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">X</span><span class="rvts40">&nbsp;</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Based on CC/CT command in effect, or on current PROFILE CASE setting</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">As specified</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">10</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'C</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'T</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'X</span><span class="rvts204">=</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'T</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C</span><span class="rvts40">&nbsp;&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">X</span><span class="rvts40">&nbsp;&nbsp;</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span></p>
+<p class="rvps9"><span class="rvts6">T</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Case sensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts7">Case conformance is required for SPFLite compliance. In ISPF, the type </span><span class="rvts6">T</span><span class="rvts7"> would be ignored.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">11</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts6">'</span><span class="rvts204">:</span><span class="rvts6">'</span><span class="rvts140">second</span><span class="rvts6">'</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts177"> </span><span class="rvts195">implied.</span></p>
+<p class="rvps9"><span class="rvts177">Type </span><span class="rvts6">T</span><span class="rvts177"> is always assumed.</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">T</span><span class="rvts177"> </span><span class="rvts195">implied.</span></p>
+<p class="rvps9"><span class="rvts177">Type </span><span class="rvts194">T</span><span class="rvts177"> is always assumed.</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">Case insensitive</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">Case conformant. When </span><span class="rvts196">colon notation</span><span class="rvts177"> is used, type </span><span class="rvts6">T</span><span class="rvts177"> is implied for both strings. If you combine this colon notation with non-type-</span><span class="rvts6">T</span><span class="rvts177"> codes, their values are accepted as written (including </span><span class="rvts6">X</span><span class="rvts177">), but strings are still treated as case-insensitive and case-conformant.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="36" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">12</span></p>
+</td>
+<td width="204" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">:</span><span class="rvts140">second</span><span class="rvts6">'</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">:</span><span class="rvts140">second</span><span class="rvts6">'C</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">:</span><span class="rvts140">second</span><span class="rvts6">'T</span></p>
+<p class="rvps9"><span class="rvts6">RA'</span><span class="rvts140">first</span><span class="rvts204">:</span><span class="rvts140">second</span><span class="rvts6">'X</span></p>
+<p class="rvps2"><span class="rvts204">This is probably an invalid string specification. The colon does </span><span class="rvts242">not</span><span class="rvts204"> delimit two strings, but is part of the data in the</span><span class="rvts242"> one and only </span><span class="rvts204">string that is defined.</span></p>
+<p class="rvps2"><span class="rvts204"><br/></span></p>
+<p class="rvps2"><span class="rvts204">If used with type X, the hex data will be invalid.</span></p>
+</td>
+<td width="120" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts140">omitted</span><span class="rvts40">&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">C&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">T&nbsp;</span></p>
+<p class="rvps9"><span class="rvts6">X&nbsp;</span></p>
+</td>
+<td width="113" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts195">omitted</span></p>
+</td>
+<td width="232" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">Based on CC/CT command in effect, or on current PROFILE CASE setting</span></p>
+</td>
+<td width="243" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts177">The command does not define </span><span class="rvts173">string-2,</span><span class="rvts177"> but only </span><span class="rvts173">string-1</span><span class="rvts177">. The </span><span class="rvts6">:</span><span class="rvts177">&nbsp;colon in </span><span class="rvts173">string‑1</span><span class="rvts177"> is not a delimiter but is </span><span class="rvts196">ordinary data</span><span class="rvts177">, and has no special meaning. For the </span><span class="rvts6">RA</span><span class="rvts177"> command, this would be a string-delete request. In other commands, it may be a syntax error.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts222"><br/></span></p>
+<p class="rvps69"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

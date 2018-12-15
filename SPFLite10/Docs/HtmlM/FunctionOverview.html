@@ -1,0 +1,1088 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Function Overview</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Function Overview">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Function Overview" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="FunctionOverview"
+		  data-hnd-context="13"
+		  data-hnd-title="Function Overview"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Function Overview</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">This section provides an overview of the various interface functions and their usage. For full details of syntax, allowed parameters, return values etc. click on the &nbsp;Function Name on the left to switch to the detailed description for the function.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Understanding SPFLite status values</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A macro you run from your edit session, by placing a macro name on the primary command line, or on the sequence area of a data line, will return a </span><span class="rvts13">status</span><span class="rvts11"> when it completes. A </span><span class="rvts13">status</span><span class="rvts11"> consists of two values: a numeric </span><span class="rvts13">Return Code</span><span class="rvts11"> value (often referred to as </span><span class="rvts13">RC</span><span class="rvts11">), and a </span><span class="rvts13">Message</span><span class="rvts11"> string. This status is displayed on the upper-right portion of the edit screen, in the form of the Message string, and an optional Warning or Error message prefix in case a non-zero Return Code has been set.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When you call an SPFLite-supplied interface function (such as </span><span class="rvts13">Get_Line$</span><span class="rvts11">), that function will </span><span class="rvts13">also</span><span class="rvts11"> return a status. You may retrieve this status using the functions </span><span class="rvts13">Get_RC</span><span class="rvts11"> and </span><span class="rvts13">Get_Msg$</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There are thus </span><span class="rvts13">two</span><span class="rvts11"> sets of status information. The status returned to </span><span class="rvts13">you</span><span class="rvts11"> (as an edit user that executed a macro command) that is visible on the edit screen as a message is called the </span><span class="rvts13">top-level status.</span><span class="rvts11"> &nbsp;The status returned to a user-defined macro by a call to an SPFLite interface function is called the </span><span class="rvts13">function-level status.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">It it important to understand that the top-level status and the function-level status are </span><span class="rvts13">completely different and separate values.</span><span class="rvts11"> &nbsp;</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This means that if you issue a call to </span><span class="rvts13">Set_Msg(my_RC, my_Message)</span><span class="rvts11"> it will change the top-level status values for the RC and Message, but will </span><span class="rvts13">not</span><span class="rvts11"> change the function-level values that are returned by </span><span class="rvts13">Get_RC</span><span class="rvts11"> and </span><span class="rvts13">Get_Msg$</span><span class="rvts11">. Another way to look at this is that the function-level status is "lower" than the top-level status, and that status values can go "up" (via Set_Msg) but cannot go "down".</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Example:</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts18">DIM rc as NUMBER</span></p>
+<p class="rvps5"><span class="rvts18">DIM msg as STRING</span></p>
+<p class="rvps5"><span class="rvts18">' ... some macro code</span></p>
+<p class="rvps5"><span class="rvts18">Set_Msg (8, "user defined error occurred")</span></p>
+<p class="rvps5"><span class="rvts18">rc = Get_RC</span></p>
+<p class="rvps5"><span class="rvts18">msg = Get_Msg$</span></p>
+<p class="rvps5"><span class="rvts18">' at this point, rc = 0, and msg = "", </span><span class="rvts44">not</span><span class="rvts18"> the values set by Set_Msg</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The other key point to keep in mind is that SPFLite interface functions do not "communicate" the function-level RC and Message values between themselves. So, if one SPFLite function set an RC value of 8, the next SPFLite function you call will know nothing about that; it won't "look" at the RC=8 value set by the prior function call. Each function "starts over from scratch" in terms of setting the function-level status values, by assuming each time that the RC will be 0 and the Message will be an empty (null) string, unless conditions require them to be changed.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Return codes and returned messages from SPF-supplied functions </span></p>
+<p class="rvps2"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11">All SPF-supplied functions set the function-level Return Code (RC) variable and the standard Message text appropriately based on the success of the function. </span><span class="rvts13">This is done in addition to providing the return value from the function directly.</span><span class="rvts11"> &nbsp; In a few cases, the value returned by the function will be the RC value itself, but most functions will return values other than the RC.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">Functions built into </span><span class="rvts13">thinBasic</span><span class="rvts11"> do </span><span class="rvts13">not </span><span class="rvts11">set the RC and message values. That only applies to functions we provide as part of the SPFLite macro interface. So, if you call a </span><span class="rvts13">thinBasic </span><span class="rvts11">function like </span><span class="rvts13">MID$</span><span class="rvts11"> to get a substring of a value, that does </span><span class="rvts13">not</span><span class="rvts11"> change the RC or message.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The function-level status values can be obtained with the </span><span class="rvts18">Get_RC</span><span class="rvts11"> and </span><span class="rvts18">Get_Msg$</span><span class="rvts11"> functions. A &nbsp;successful return will usually result in </span><span class="rvts14">RC=0</span><span class="rvts11"> and a message text of</span><span class="rvts14"> "" </span><span class="rvts11">(null). However, some successful functions may result in a RC=0 but with a completed message text string. For example, invoking an </span><span class="rvts18">SPF_Cmd("QUERY EOL")</span><span class="rvts13"> </span><span class="rvts11">function may result in a </span><span class="rvts14">RC=0</span><span class="rvts11">, but a </span><span class="rvts18">Get_Msg$</span><span class="rvts11"> return string of</span><span class="rvts14"> "</span><span class="rvts18">EOL set to CRLF</span><span class="rvts14">"</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When a function returns a value which is not important to you, you can call it directly without assigning its returned value to a variable. For example, you can call</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">RC = SPF_Exec("MyProgram")</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">but if the return code isn't important, you can shorten this to:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_Exec("MyProgram")</span></p>
+<p class="rvps2"><span class="rvts11"> </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Return codes and returned messages from Set_Msg to the edit user </span></p>
+<p class="rvps2"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts11">The function </span><span class="rvts18">Set_Msg</span><span class="rvts11"> is used to pass back a top-level return code and message to the edit user (you) that is displayed in the upper-right corner of the edit screen. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">It is important to understand that function-level RC and message values passed back by other functions (like </span><span class="rvts13">Get_Line$</span><span class="rvts11">, for instance) are </span><span class="rvts13">not</span><span class="rvts11"> automatically passed through to the edit user, even when the RC value is non-zero, signifying a warning or error condition was detected. You must explicitly call </span><span class="rvts18">Set_Msg</span><span class="rvts11"> yourself if you wish a top-level status message to be displayed back to the user once the macro completes execution.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The values set by </span><span class="rvts18">Set_Msg</span><span class="rvts11"> will be overridden by any other subsequent call to </span><span class="rvts18">Set_Msg</span><span class="rvts11">. If you call this function more than once, only the RC and Message of the last call will be used as the top-level status, and displayed on the edit screen when the macro completes.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you execute a macro that never calls </span><span class="rvts18">Set_Msg</span><span class="rvts11">, it is treated the same as if </span><span class="rvts18">Set_Msg(0,"")</span><span class="rvts11"> were called; that is, no message will appear on the edit screen when the macro completes.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Supposing you wanted to "pass along" the function-level status values up to the top-level status after an SPFLite function call, it would require you to call the </span><span class="rvts13">Set_Msg</span><span class="rvts11"> function. If you did this, the call would take the form </span><span class="rvts18">Set_Msg(Get_RC, Get_Msg$)</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Example:</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts18">SPF_Cmd ("LINE 'R5' .1234")</span></p>
+<p class="rvps5"><span class="rvts18">Set_Msg (</span><span class="rvts18">Get_RC, Get_Msg$</span><span class="rvts18">)</span></p>
+<p class="rvps5"><span class="rvts18">' at this point, the visible top-level RC and Message are </span></p>
+<p class="rvps5"><span class="rvts18">' set to the status returned by the </span><span class="rvts34">SPF_Cmd</span><span class="rvts18"> function call</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">List of available macro functions</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The functions here are divided by categories of interest, for ease of lookup.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage macro invocation and arguments</span></p>
+<p class="rvps17"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="46%" height="51" style="padding: 1px;"><p class="rvps21"><a class="rvts45" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$(n)</a></p>
+<p class="rvps21"><a class="rvts45" href="FunctionDetails.html#FN.Get_Arg$">Get_Arg$(f,n)</a></p>
+</td>
+<td width="61%" height="51" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns a specified macro operand number </span><span class="rvts13">n, &nbsp;</span><span class="rvts11"> or a range of operand numbers</span></p>
+<p class="rvps2"><span class="rvts11">separated by single blanks.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts45" href="FunctionDetails.html#FN.Get_Arg_Count">Get_Arg_Count</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the number of supplied macro arguments. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts45" href="FunctionDetails.html#FN.Get_MacName$">Get_MacName$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the name of the current macro</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:SPF_PARSE">SPF_Parse</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Performs full operand parsing of command operands</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_KW">Get_Arg_KW</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns True/False based on a Keywords presence in the macro command line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" height="20" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_KWGroup$">Get_Arg_KWGroup$</a></p>
+</td>
+<td width="1%" height="20" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the entered keyword fro a list of mutually exclusive items</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_LRef$">Get_Arg_LRef$(n)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the requested relative Line Reference from the macro command line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_Tag$">Get_Arg_Tag$(n)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the requested relative Tag Operand from the macro command line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_TextLit$">Get_Arg_TextLit$(n)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the requested relative Text Literal from the macro command line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_Arg_NumLit$">Get_Arg_NumLit$(n)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the requested relative Numeric Literal from the macro command line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Quote$">SPF_Quote$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns a string value properly enclosed in quotes</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN.SPF_UnQuote$">SPF_UnQuote$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns a string value with any existing paired outer quotes removed.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts50" href="FunctionDetails.html#FN:Get_FullPath">Get_FullPath$(file-name)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns a fully qualified path for a filename.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts45" href="FunctionDetails.html#FN.Is_Line_Cmd">Is_Line_Cmd</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns TRUE if macro launched as a line-command macro, otherwise FALSE</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps22"><a class="rvts45" href="FunctionDetails.html#FN.Is_Primary_Cmd">Is_Primary_Cmd</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns TRUE if macro launched as a primary-command macro, otherwise FALSE</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps25"><a class="rvts45" href="FunctionDetails.html#FN.Set_Msg">Set_Msg([</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Msg">rc-num,</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Msg">]</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Msg"> msg-str</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Msg">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Sets the visible (top-level) return code and message that is returned to the user</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="46%" style="padding: 1px;"><p class="rvps25"><a class="rvts50" href="FunctionDetails.html#FN:Halt">Halt([rc-num,] msg-str)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Sets the visible (top-level) return code and message that is returned to the user and then immediately terminates the macro</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts42"><br/></span></p>
+<p class="rvps19"><span class="rvts11"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage environment and SET variables</span></p>
+<p class="rvps17"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_EnvVar$">Get_EnvVar$(</a><a class="rvts46" href="FunctionDetails.html#FN.Get_EnvVar$">env-var-str</a><a class="rvts45" href="FunctionDetails.html#FN.Get_EnvVar$">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the specified Windows Environment Variable data.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_SETVar$">Get_SETVar$(</a><span class="rvts46">set-var-str</span><a class="rvts45" href="FunctionDetails.html#FN.Get_SETVar$">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the specified variable value from the SPFLite SET variable pool. </span></p>
+<p class="rvps2"><span class="rvts11"> </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps23"><a class="rvts45" href="FunctionDetails.html#FN.Set_SETVar">Set_SETVar(</a><a class="rvts46" href="FunctionDetails.html#FN.Set_SETVar">set-var-str, value-str</a><a class="rvts45" href="FunctionDetails.html#FN.Set_SETVar">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Sets the specified variable value in the SPFLite SET variable pool.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts42"><br/></span></p>
+<p class="rvps20"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp;</span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage the Edit file</span></p>
+<p class="rvps4"><span class="rvts42"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FilePath$">Get_FilePath$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the current file path for the current file.</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FileBase$">Get_FileBase$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the base filename of the current edit file. </span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FileName$">Get_FileName$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the filename of the current edit file.</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FileExt$">Get_FileExt$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the current file extension.</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FileDate$">Get_FileDate$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the last modified date of the current file.</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_FileTime$">Get_FileTime$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the last modified time of the current file.</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_First_LPtr">Get_First_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a Line Pointer to the first line of the Edit session</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_Last_LPtr">Get_Last_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a Line Pointer to the last line of the Edit session</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts50" href="FunctionDetails.html#FN.Get_HiLite_First_LPtr">Get_Select_First_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a Line Pointer to the first line of a selected text block</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts50" href="FunctionDetails.html#FN.Get_HiLite_Last_LPtr">Get_Select_Last_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a Line Pointer to the last line of a selected text block</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts50" href="FunctionDetails.html#FN.Get_HiLite_Col">Get_Select_Col</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a number indicating the leftmost selected column</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts50" href="FunctionDetails.html#FN.Get_HiLite_Len">Get_Select_Len</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a number indicating the length of the selected data</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps24"><a class="rvts45" href="FunctionDetails.html#FN.Get_Profile$">Get_Profile$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Return a PROFILE setting as a string.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps19"><span class="rvts11"><br/></span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage the Edit session</span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_RC">Get_RC</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Contains the Return Code from the last executed SPFLite function call.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" height="15" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_MSG$">Get_Msg$</a></p>
+</td>
+<td width="1%" height="15" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Contains the text of the message issued by the last executed SPFLite function call</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Set_Csr">Set_Csr(</a><a class="rvts48" href="FunctionDetails.html#FN.Set_Csr">line-ptr,col-num</a></p>
+<p class="rvps18"><a class="rvts48" href="FunctionDetails.html#FN.Set_Csr"> &nbsp; &nbsp;[, len-num]</a><a class="rvts47" href="FunctionDetails.html#FN.Set_Csr">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Set the desired location for the cursor following macro execution.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Csr_Col">Get_Csr_Col</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the column number of the current cursor line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Csr_LPtr">Get_Csr_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the line pointer of the line containing the cursor</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_TopScrn_LPtr">Get_TopScrn_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the line pointer of the line which is currently at the top of screen.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN:%20Set_TopScrn_LPtr">Set_TopScrn_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Sets the line pointer which is to appear at the top of screen on macro exit.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#Fn.Get_Curr_Line$">Get_Curr_Line$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the contents of the data line where the cursor was located </span><span class="rvts13">at the start</span><span class="rvts11"> of macro processing</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts49" href="FunctionDetails.html#FN.Get_Curr_Word$">Get_Curr_Word$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the contents of the current 'word' where the cursor was located </span><span class="rvts13">at the start</span><span class="rvts11"> of macro processing</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps26"><a class="rvts45" href="FunctionDetails.html#FN.Get_Curr_Path$">Get_Curr_Path$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the full path of the Windows current working directory</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_EXE_Path$">Get_EXE_Path$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the full path of the folder where SPFLite.EXE resides.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_INI_Path$">Get_INI_Path$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the full path of the SPFLite data storage folder. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_LBound">Get_LBound</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the current Left bounds value.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_RBound">Get_RBound</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the current Right bounds value</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Modified">Get_Modified</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the current file modified status as </span><span class="rvts35">TRUE</span><span class="rvts11"> or </span><span class="rvts35">FALSE</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts53" href="FunctionDetails.html#GetModifiedFilename">Get_Modified_Filename</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the modified status for an individual file within an MEdit session</span></p>
+<p class="rvps29"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps26"><a class="rvts45" href="FunctionDetails.html#FN.Get_Session_Type$">Get_Session_Type$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns a string containing the 'type' of the current edit tab. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps26"><a class="rvts50" href="FunctionDetails.html#FN:%20Get_Uniq_ID">Get_Uniq_ID</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns a unique ID number that identifies this particular edit session. </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps17"><span class="rvts11"><br/></span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage Edit text data</span></p>
+<p class="rvps17"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Line$">Get_Line$(</a><a class="rvts46" href="FunctionDetails.html#FN.Get_Line$">line-ptr</a><a class="rvts45" href="FunctionDetails.html#FN.Get_Line$">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the current Edit text data for the specified line-ptr</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN.Get_Clr_Line$">Get_Clr_Line$(line-ptr)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the current color control line for the specified line-ptr</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts53" href="FunctionDetails.html#FN.Get_Line_Len">Get_Line_Len(line-ptr)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the length of the current Edit text data for the specified line-ptr</span></p>
+<p class="rvps28"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Line_Type$">Get_Line_Type$(</a><a class="rvts48" href="FunctionDetails.html#FN.Get_Line_Type$">line-ptr</a><a class="rvts47" href="FunctionDetails.html#FN.Get_Line_Type$">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a text string indicating the particular line type</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN:Get_XLINES(line-ptr)">Get_XLines(</a><a class="rvts51" href="FunctionDetails.html#FN:Get_XLINES(line-ptr)">line-ptr</a><a class="rvts50" href="FunctionDetails.html#FN:Get_XLINES(line-ptr)">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the number of Excluded lines in an Exclude block</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN:Get_XSTATUS$">Get_XStatus$(</a><a class="rvts51" href="FunctionDetails.html#FN:Get_XSTATUS$">line-ptr</a><a class="rvts50" href="FunctionDetails.html#FN:Get_XSTATUS$">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns an X/NX string value indicating the Exclude status of a data line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.IS_xxxx">IS_xxxx(</a><a class="rvts46" href="FunctionDetails.html#FN.IS_xxxx">line-ptr</a><a class="rvts45" href="FunctionDetails.html#FN.IS_xxxx">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Tests if a specific line (line-ptr) is a particular line type</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Set_Line">Set_Line(</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Line">line-ptr, data-str</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Line">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will replace the current Edit text data for the specified line-ptr with the new string specified by data-str</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Set_Clr_Line">Set_Clr_Line(</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Clr_Line">line-ptr, clr-str</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Clr_Line">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will replace the current color control string for the specified line-ptr with the new string specified by clr-str</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.SPF_INS">SPF_INS(</a><a class="rvts48" href="FunctionDetails.html#FN.SPF_INS">line-ptr,col-num,data-str</a><a class="rvts47" href="FunctionDetails.html#FN.SPF_INS">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will insert </span><span class="rvts33">StrVar</span><span class="rvts11"> into the text of </span><span class="rvts33">line-ptr</span><span class="rvts11"> at the indicated column </span><span class="rvts33">col-num</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" height="19" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.SPF_REP">SPF_REP(</a><a class="rvts48" href="FunctionDetails.html#FN.SPF_REP">line-ptr,col-num,data-str</a><a class="rvts47" href="FunctionDetails.html#FN.SPF_REP">)</a></p>
+</td>
+<td width="1%" height="19" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will replace text in </span><span class="rvts33">line-ptr</span><span class="rvts11"> with </span><span class="rvts33">StrVar</span><span class="rvts11"> starting at the indicated column </span><span class="rvts33">col-num</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.SPF_OVR">SPF_OVR(line-ptr,col-num,StrVar)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will overlay text in </span><span class="rvts33">line-ptr</span><span class="rvts11"> with </span><span class="rvts33">StrVar</span><span class="rvts11"> starting at the indicated column </span><span class="rvts33">col-num</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.SPF_OVR_REP">SPF_OVR_REP(</a><a class="rvts48" href="FunctionDetails.html#FN.SPF_OVR_REP">line-ptr,col-num,data-str</a><a class="rvts47" href="FunctionDetails.html#FN.SPF_OVR_REP">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will overlay replace text in </span><span class="rvts33">line-ptr</span><span class="rvts11"> with </span><span class="rvts33">StrVar</span><span class="rvts11"> starting at the indicated column </span><span class="rvts33">col-num</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps27"><a class="rvts50" href="FunctionDetails.html#FN.Get_Next_LPtr">Get_Next_LPtr(line-ptr, adjust-amount, line-type)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Will adjust a line-pointer by moving it either forward or backward a specified number of lines of a specified line type.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#Fn.Get_LPtr">Get_LPtr(</a><a class="rvts48" href="FunctionDetails.html#Fn.Get_LPtr">line-ref</a><a class="rvts47" href="FunctionDetails.html#Fn.Get_LPtr">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Convert an external line reference to a line pointer</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_LNum">Get_LNum(</a><a class="rvts48" href="FunctionDetails.html#FN.Get_LNum">line-ptr</a><a class="rvts47" href="FunctionDetails.html#FN.Get_LNum">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Convert a line pointer to an external line number</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN:Get_Uniq_ID">Get_Uniq_ID</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Return a unique ID for this particular edit session.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps27"><a class="rvts53" href="FunctionDetails.html#SPF_Exempt_File">SPF_Exempt_File(file-ext)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Test if a file extension is in the Text-Exempt list</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage FIND and LOCATE commands</span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_LOC_LPtr">Get_LOC_LPtr</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the line pointer of the last line found by the </span><span class="rvts35">LOCATE</span><span class="rvts11"> command</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_FIND_LPtr">Get_FIND_LPtr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the line pointer of the last line found by a </span><span class="rvts14">FIND</span><span class="rvts6"> / </span><span class="rvts14">CHANGE</span><span class="rvts11"> command</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_FIND_Col">Get_FIND_Col</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the column number where the last </span><span class="rvts14">FIND</span><span class="rvts6"> / </span><span class="rvts14">CHANGE</span><span class="rvts11"> was located</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_FIND_Len">Get_FIND_Len</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the length of the last</span><span class="rvts6"> </span><span class="rvts14">FIND</span><span class="rvts6"> / </span><span class="rvts14">CHANGE</span><span class="rvts6"> </span><span class="rvts11">search argument</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps17"><span class="rvts11"><br/></span></p>
+<p class="rvps17"><span class="rvts18"><br/></span></p>
+<p class="rvps19"><span class="rvts14"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage line command operands</span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps19"><span class="rvts11">Label and Tag functions:</span></p>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts49" href="FunctionDetails.html#FN.Get_Label$">Get_Label$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the .LABEL for a given data line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN.Get_Tag$">Get_Tag$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the :TAG for a given data line</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#Release_Label$">Release_Label$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Releases a label obtained via the Request_Label$ function</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#Request_Label$">Request_Label$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a label for a data line, creating a temporary one if needed</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Source line-range functions:</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Src_LCmd$">Get_Src_LCmd$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns a string containing the name of the source line command.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" height="24" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Src1_LPtr">Get_Src1_Lptr</a></p>
+</td>
+<td width="1%" height="24" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the line pointer of the last line in the source line range, or 0 if not applicable.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Src2_LPtr">Get_Src2_Lptr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the line pointer of the last line in the source line range, or 0 if not applicable.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN.Get_Src_Op">Get_Src_Op</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the optional </span><span class="rvts13">n</span><span class="rvts11"> value on the source line range.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43%" style="padding: 1px;"><p class="rvps18"><a class="rvts50" href="FunctionDetails.html#FN.Get_Src_LMOD$">Get_Src_LMOD$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps28"><span class="rvts11">Returns the source line command modifiers. </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Destination line-range functions:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Dest_LCmd$">Get_Dest_LCmd$</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns a string containing the name of the source line command.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" height="22" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Dest1_LPtr">Get_Dest1_Lptr</a></p>
+</td>
+<td width="1%" height="22" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the line pointer of the first line in the </span><span class="rvts11">destination</span><span class="rvts11"> line range, or 0 if not applicable.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Dest2_LPtr">Get_Dest2_Lptr</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the line pointer of the last line in the </span><span class="rvts11">destination</span><span class="rvts11"> line range, or 0 if not applicable.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Dest_Op">Get_</a><a class="rvts45" href="FunctionDetails.html#FN.Get_Dest_Op">Dest</a><a class="rvts47" href="FunctionDetails.html#FN.Get_Dest_Op">_Op</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the optional </span><span class="rvts13">n</span><span class="rvts11"> value on the destination line range command. </span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Dest_LMOD$">Get_</a><a class="rvts45" href="FunctionDetails.html#FN.Get_Dest_LMOD$">Dest</a><a class="rvts47" href="FunctionDetails.html#FN.Get_Dest_LMOD$">_LMOD$</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the destination line command modifiers. </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps19"><span class="rvts6"><br/></span></p>
+<p class="rvps17"><span class="rvts6"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage </span><span class="rvts23">globally-stored values</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">Set_Gbl_Num([TblNum,]</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Num">key-str, value-num</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Stores the numeric </span><span class="rvts33">value</span><span class="rvts11"> under the associated string </span><span class="rvts33">key</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Str">Set_Gbl_Str(</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">[TblNum,]</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Str">key</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Num">-str</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Str">, value-str</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Str">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Stores the string </span><span class="rvts33">value</span><span class="rvts11"> under the associated string </span><span class="rvts33">key</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num">Get_Gbl_Num(</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">[TblNum,]</a><a class="rvts48" href="FunctionDetails.html#FN.Get_Gbl_Num">key</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Num">-str</a><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Retrieves the numeric value associated with </span><span class="rvts33">key.</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" height="19" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str$">Get_Gbl_Str$(</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">[TblNum,]</a><a class="rvts48" href="FunctionDetails.html#FN.Get_Gbl_Str$">key</a><a class="rvts46" href="FunctionDetails.html#FN.Set_Gbl_Num">-str</a><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str$">)</a></p>
+</td>
+<td width="1%" height="19" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Retrieves the string value associated with </span><span class="rvts33">key.</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num_Count">Get_Gbl_Num_Count</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the current number of variables stored in the Numeric pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str_Count">Get_Gbl_Str_Count</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the current number of variables stored in the String pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Gbl_Num_Name$">Get_Gbl_Num_Name$(</a><span class="rvts46">index-num</span><a class="rvts45" href="FunctionDetails.html#FN.Get_Gbl_Num_Name$">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the key name of the specified item in the Numeric pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts54" href="FunctionDetails.html#GetGblNumTableName">Get_Gbl_Num_TableName$(</a><a class="rvts55" href="FunctionDetails.html#GetGblNumTableName">index-num</a><a class="rvts54" href="FunctionDetails.html#GetGblNumTableName">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the Table-number and key name of the specified item in the Numeric pool.</span></p>
+<p class="rvps29"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.Get_Gbl_Str_Name$">Get_Gbl_Str_Name$(</a><span class="rvts46">index-num</span><a class="rvts45" href="FunctionDetails.html#FN.Get_Gbl_Str_Name$">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the key name of the specified item in the String pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts54" href="FunctionDetails.html#GetGblStrTableName">Get_Gbl_Str_TableName$(</a><a class="rvts55" href="FunctionDetails.html#GetGblStrTableName">index-num</a><a class="rvts54" href="FunctionDetails.html#GetGblStrTableName">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Returns the Table-number and key name of the specified item in the String pool.</span></p>
+<p class="rvps29"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts52" href="FunctionDetails.html#Reset_Gbl_Num">Reset_Gbl_Num(</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">[TblNum]</a><a class="rvts52" href="FunctionDetails.html#Reset_Gbl_Num">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Deletes the entire contents of the Gbl_Num storage area; &nbsp;all Keys and Values are deleted</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts52" href="FunctionDetails.html#Reset_Gbl_Str">Reset_Gbl_Str(</a><a class="rvts45" href="FunctionDetails.html#FN.Set_Gbl_Num">[TblNum]</a><a class="rvts52" href="FunctionDetails.html#Reset_Gbl_Str">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Deletes the entire contents of the Gbl_Str storage area; &nbsp;all Keys and Values are deleted</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps7"><span class="rvts43"><br/></span></p>
+<p class="rvps7"><span class="rvts43"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage external </span><span class="rvts23">command execution</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Cmd">SPF_Cmd(</a><a class="rvts46" href="FunctionDetails.html#FN.SPF_Cmd">cmd-str</a><a class="rvts45" href="FunctionDetails.html#FN.SPF_Cmd">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Execute the provided SPFLite primary command.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Shell">SPF_Shell(</a><a class="rvts46" href="FunctionDetails.html#FN.SPF_Shell">cmd-str</a><a class="rvts45" href="FunctionDetails.html#FN.SPF_Shell">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Execute the provided command under the System's CMD.EXE command processor.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts47" href="FunctionDetails.html#FN.SPF_Exec">SPF_Exec(</a><a class="rvts48" href="FunctionDetails.html#FN.SPF_Exec">cmd-str</a><a class="rvts47" href="FunctionDetails.html#FN.SPF_Exec">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Execute the provided command directly, not under the CMD.EXE command shell.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps17"><span class="rvts23"><br/></span></p>
+<p class="rvps17"><span class="rvts23"><br/></span></p>
+<p class="rvps17"><span class="rvts23">Functions that manage </span><span class="rvts23">macro debugging</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<div class="rvps17"><table width="95%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Debug">SPF_Debug(</a><a class="rvts46" href="FunctionDetails.html#FN.SPF_Debug">msg-str</a><a class="rvts45" href="FunctionDetails.html#FN.SPF_Debug">)</a></p>
+</td>
+<td width="61%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Display a message on the debugging console</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Loop_Check">SPF_Loop_Check(</a><a class="rvts46" href="FunctionDetails.html#FN.SPF_Loop_Check">option-num</a><a class="rvts45" href="FunctionDetails.html#FN.SPF_Loop_Check">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Fetch and Set the SPFLite Macro loop monitoring function ON or OFF.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="42%" style="padding: 1px;"><p class="rvps18"><a class="rvts45" href="FunctionDetails.html#FN.SPF_Trace">SPF_Trace(</a><a class="rvts46" href="FunctionDetails.html#FN.SPF_Trace">mode-num</a><a class="rvts45" href="FunctionDetails.html#FN.SPF_Trace">)</a></p>
+</td>
+<td width="1%" style="padding: 1px;"><p class="rvps29"><span class="rvts11">Set SPFLite trace mode to ON, OFF or ERROR</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps17" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

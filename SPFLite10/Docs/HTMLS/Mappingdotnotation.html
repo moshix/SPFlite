@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Understanding dot notation</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Understanding dot notation">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Understanding dot notation" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Mappingdotnotation"
+		  data-hnd-context="282"
+		  data-hnd-title="Understanding dot notation"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Understanding dot notation</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts167">Understanding dot notation</span></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts6">All command and features in mapping strings revolve around a basic concept, which is providing the ability to inspect and modify character data. The data that is being operated on at any given point may originate either from the </span><span class="rvts140">source string</span><span class="rvts6"> or the </span><span class="rvts140">result string.</span><span class="rvts6"> &nbsp;When a command can reference and copy data directly from the </span><span class="rvts140">source string</span><span class="rvts6">, it is a </span><span class="rvts40">copying command</span><span class="rvts6">. When it can only refer to data already in the </span><span class="rvts140">result string</span><span class="rvts6">, it is a </span><span class="rvts40">modifying command</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To keep the various command codes as simple as possible, the design has considered which </span><span class="rvts40">data origin</span><span class="rvts6"> a given command is likely to need to reference the most often, and that data origin is the </span><span class="rvts140">mapping command’s default origin.</span><span class="rvts6"> &nbsp;For example the case alteration command </span><span class="rvts40">UC</span><span class="rvts6"> is applied by default to the </span><span class="rvts140">result string</span><span class="rvts6">, and so the </span><span class="rvts40">UC</span><span class="rvts6"> command has the </span><span class="rvts140">result string</span><span class="rvts6"> as its </span><span class="rvts140">default data origin.</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In addition to commands which operate on the </span><span class="rvts140">result string</span><span class="rvts6"> by default, mapping commands that take a column-range operand can use the </span><span class="rvts168">.</span><span class="rvts40"> </span><span class="rvts6">dot symbol to indicate that a reference to the current contents of the </span><span class="rvts140">result string</span><span class="rvts6"> is being made. This is known as </span><span class="rvts40">dot notation.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If a </span><span class="rvts40">.&nbsp;</span><span class="rvts6">dot symbol precedes a column reference, like </span><span class="rvts139">.1-4</span><span class="rvts6">, that column reference is used to select a substring from the current contents of the </span><span class="rvts140">result string</span><span class="rvts6">. You can use</span><span class="rvts173"> </span><span class="rvts140">dot notation</span><span class="rvts6"> anywhere a regular column reference is allowed, either by itself, or as part of a column-range operand on a particular command code. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Visually, think of </span><span class="rvts140">dot notation</span><span class="rvts6"> like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">“result string” &nbsp;</span><span class="rvts172">→</span><span class="rvts140"> &nbsp;{ copying commands with dot notation &nbsp;… } </span></p>
+<p class="rvps91"><span class="rvts140"> </span><span class="rvts172">→</span><span class="rvts140"> &nbsp;“revised result string”</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may not often need to use this technique, but it is available if you do. The main reason for dot notation is to allow a </span><span class="rvts40">copying command </span><span class="rvts6">to be used as a </span><span class="rvts40">modifying command</span><span class="rvts6"> instead. For example, the command </span><span class="rvts139">AX</span><span class="rvts6"> is a </span><span class="rvts40">copying command</span><span class="rvts6">. Thus:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">A mapping item of</span><span class="rvts40"> </span><span class="rvts139">AX1-4</span><span class="rvts40"> </span><span class="rvts6">would convert the first 4 characters of the </span><span class="rvts140">source string</span><span class="rvts6"> into 8 hex-digit characters and place them in the </span><span class="rvts140">result string</span></li>
+</ol></ol>
+<p class="rvps92"><span class="rvts140"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="2" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">A mapping item of</span><span class="rvts40"> </span><span class="rvts139">AX1+</span><span class="rvts40"> </span><span class="rvts6">would convert the entire </span><span class="rvts140">source string</span><span class="rvts6"> into hex-digit characters, producing a string twice as long and place them in the </span><span class="rvts140">result string</span><span class="rvts6">.</span></li>
+</ol></ol>
+<p class="rvps92"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="3" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">Because of the</span><span class="rvts40"> auto-reference</span><span class="rvts6"> feature, if a simple </span><span class="rvts139">AX</span><span class="rvts6"> command is issued with no column numbers after it, &nbsp;it implies that the complete </span><span class="rvts140">source string</span><span class="rvts6"> is referenced by the </span><span class="rvts139">AX</span><span class="rvts6"> command, and the value it produces is placed into the </span><span class="rvts140">result string</span><span class="rvts6">. So, if the </span><span class="rvts140">source string</span><span class="rvts6"> contained “</span><span class="rvts139">abcd</span><span class="rvts6">” and you issued this </span><span class="rvts139">AX</span><span class="rvts6"> command as the first thing in the mapping string, it would convert those 4 characters, then place the converted into the </span><span class="rvts140">result string</span><span class="rvts6">, producing “</span><span class="rvts139">61626364</span><span class="rvts6">”.</span></li>
+</ol></ol>
+<p class="rvps92"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="4" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">A mapping item of</span><span class="rvts40"> </span><span class="rvts139">AX.1-4</span><span class="rvts40"> </span><span class="rvts6">would convert the first 4 characters of the </span><span class="rvts140">result string</span><span class="rvts6"> into 8 hex-digit characters. Those 8 characters would be appended to the end of the </span><span class="rvts140">result string</span><span class="rvts6">. So, if the </span><span class="rvts140">result string</span><span class="rvts6"> already contained “</span><span class="rvts139">abcd</span><span class="rvts6">” and you issued this command, it would convert those 4 characters, then place the converted result after those 4 characters that were already there, producing “</span><span class="rvts139">abcd61626364</span><span class="rvts6">”.</span></li>
+</ol></ol>
+<p class="rvps92"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="5" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">A mapping item of</span><span class="rvts40"> </span><span class="rvts139">AX.</span><span class="rvts40"> </span><span class="rvts6">would convert the entire </span><span class="rvts140">result string</span><span class="rvts6"> into hex-digit characters, producing a string three times as long (the original data put 2 hex digits for each original character); those characters would be appended to the end of the </span><span class="rvts140">result string</span><span class="rvts6">. Note that </span><span class="rvts139">AX.1+</span><span class="rvts6"> and </span><span class="rvts139">AX.</span><span class="rvts6"> so happen to produce the same result, since a lone .&nbsp;dot references the entire </span><span class="rvts140">result string</span><span class="rvts6">, and it implies </span><span class="rvts139">AX.1+</span><span class="rvts40"> </span></li>
+</ol></ol>
+<p class="rvps92"><span class="rvts40"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="6" style="margin-left: 0px; text-indent: 0px" class="rvps92"><span class="rvts6">If you specify </span><span class="rvts140">dot notation</span><span class="rvts6"> to force a </span><span class="rvts40">copying command</span><span class="rvts6"> to modify </span><span class="rvts140">result string</span><span class="rvts6"> data, the dot notation will cause the </span><span class="rvts140">auto copy</span><span class="rvts6"> feature normally associated with </span><span class="rvts40">modifying commands</span><span class="rvts6"> to take place.</span></li>
+</ol></ol>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, if your </span><span class="rvts140">source string</span><span class="rvts6"> contains "</span><span class="rvts139">abcd</span><span class="rvts6">" and you issue a mapping command of </span><span class="rvts139">AX.1-4</span><span class="rvts6">, and if this were your only mapping command, the dot notation would cause the </span><span class="rvts140">source string</span><span class="rvts6"> to be initially copied to the </span><span class="rvts140">result string</span><span class="rvts6"> as "</span><span class="rvts139">abcd</span><span class="rvts6">" and then columns </span><span class="rvts139">1-4</span><span class="rvts6"> of the </span><span class="rvts140">result string</span><span class="rvts6"> (in this case, the entire value) would have the </span><span class="rvts139">AX</span><span class="rvts6"> command applied to it, and the value it produces is placed at the end of the "</span><span class="rvts139">abcd</span><span class="rvts6">" in the </span><span class="rvts140">result string</span><span class="rvts6">, giving a </span><span class="rvts165">revised</span><span class="rvts6"> </span><span class="rvts140">result string </span><span class="rvts6">value of “</span><span class="rvts139">abcd61626364</span><span class="rvts6">”.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Usually, you wouldn't want both the original value of “</span><span class="rvts139">abcd</span><span class="rvts6">” and the results of the </span><span class="rvts139">AX</span><span class="rvts6"> command joined together like this. In this example, the correct way to do this would be to note that, because </span><span class="rvts139">AX</span><span class="rvts6"> is already a </span><span class="rvts40">copying command</span><span class="rvts6">, you can convert the </span><span class="rvts140">source string </span><span class="rvts165">directly</span><span class="rvts6"> simply by using </span><span class="rvts139">AX</span><span class="rvts6"> alone without the </span><span class="rvts139">.1-4</span><span class="rvts6"> part, giving a final value of “</span><span class="rvts139">61626364</span><span class="rvts6">”. The best way to understand this is to experiment using various commands on some test data, and observe how they operate. You can also use the </span><span class="rvts165">Mapping Test Program</span><span class="rvts6"> for learning and experimentation. The Mapping Test Program is discussed at the end of this article.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you read the descriptions below, pay close attention as to whether the mapping item involves the </span><span class="rvts140">source string,</span><span class="rvts6"> the </span><span class="rvts140">result string,</span><span class="rvts6"> or both. Look for the syntax description of the </span><span class="rvts140">column-reference</span><span class="rvts6"> operand under each command's documentation in the </span><span class="rvts165">Quick Reference</span><span class="rvts6">. You will find under each command a note as to whether the command is a </span><span class="rvts40">copying command </span><span class="rvts6">or a </span><span class="rvts40">modifying command</span><span class="rvts6">. A few specialized commands are neither copying nor modifying commands.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

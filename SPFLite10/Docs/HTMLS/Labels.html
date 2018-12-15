@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Line Labels</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,,,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Line Labels">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Line Labels" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Labels"
+		  data-hnd-context="25"
+		  data-hnd-title="Working with Line Labels"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Line Labels</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="Labels.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="Labels.html#Relativelinelabelnotation">Relative line label notation</a></p>
+<p class="rvps152"><a class="rvts45" href="Labels.html#RelativelabelrangeswithANDandOR">Relative label ranges with AND and OR</a></p>
+<p class="rvps9"><a class="rvts45" href="Labels.html#Temporarylinelabels,alsoknownasline-numberpseudolabels">Temporary line labels, also known as line-number pseudo labels</a></p>
+<p class="rvps9"><a class="rvts45" href="Labels.html#Usingthesinglecharacterlinerangearguments.">Using the single character line range arguments</a></p>
+<p class="rvps5"><a class="rvts42" href="Labels.html#UsingLabelsandTagswiththeLINECommand">Using Labels and Tags with the LINE Command</a></p>
+<p class="rvps5"><a class="rvts42" href="Labels.html#Ahandykeymappingusingalabelforaplaceholder">A handy key mapping using a label for a placeholder</a></p>
+<p class="rvps153"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Users of SPFLite and/or ISPF are familiar with line labels. A </span><span class="rvts85">line label</span><span class="rvts35"> is a </span><span class="rvts89">.</span><span class="rvts35"> dot followed by one or more letters, and appears in the sequence area. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note: &nbsp;</span><span class="rvts35">The line number sequence area size on the edit screen is adjustable from 5 to 8 positions. This means the maximum size of a label or tag that you can type into a sequence area is from 4 to 7 letters, after the leading dot or colon. Internally, SPFLite maintains an 8-position sequence area, and only displays as much as will fit. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">This means that labels and tags on the primary command line can actually use the maximum internal size (a dot or colon plus up to 7 letters). When you do this, only part of the label or tag is displayed, but the entire value is present. That should not pose a problem if the labels are being managed by macros, but if you enter such labels manually, be careful you don't confuse yourself, since you won't see the entire label displayed on the edit screen.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Labels are associated with the data line itself, not the particular line number they are on at the moment. So, if lines are inserted or deleted prior to the labeled line, or if the labeled line itself is moved, the label stays with the line. If there are two lines, one with label .AA and one with label .BB, ISPF allows you to issue primary commands like this:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">CHANGE ABC DEF ALL .AA .BB</span></p>
+<p class="rvps9"><span class="rvts311"><br/></span></p>
+<p class="rvps9"><span class="rvts35">and all lines from .AA to line .BB, inclusive, will be changed. It doesn't matter if .AA comes before .BB or vice versa; the </span><span class="rvts36">CHANGE</span><span class="rvts35"> will work the same way.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you only want to change a single labeled line by itself in ISPF, you have to repeat the label, like this:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">CHANGE ABC DEF ALL .AA .AA</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">but SPFLite allows the second label to be omitted if it's the same as the first. So the same thing can be done with just:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">CHANGE ABC DEF ALL .AA</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There are several "special" line labels that are available:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">.ZFIRST</span><span class="rvts12"> (or </span><span class="rvts11">.ZF)</span><span class="rvts12"> </span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">to indicate the first data line of the file</span></p>
+<p class="rvps5"><span class="rvts11">.ZLAST</span><span class="rvts12"> (or </span><span class="rvts11">.ZL</span><span class="rvts12">) </span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">to indicate the last data line of the file</span></p>
+<p class="rvps5"><span class="rvts11">.ZCSR</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">to indicate the line in the data area where the cursor is located</span></p>
+<p class="rvps5"><span class="rvts11">.ZFIND</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">to indicate the last (most recent) line found by a FIND command</span></p>
+<p class="rvps5"><span class="rvts11">.ZLOC</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">to indicate the last (most recent) line found by a LOCATE command</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For </span><span class="rvts11">.ZCSR</span><span class="rvts12">, the cursor must be on a data line (or the sequence area of a data line) in the edit screen.</span></p>
+<p class="rvps5"><span class="rvts12">For </span><span class="rvts11">.ZFIND</span><span class="rvts12"> and</span><span class="rvts11"> .ZLOC</span><span class="rvts12">, you must have issued at least one prior </span><span class="rvts11">FIND</span><span class="rvts12">, </span><span class="rvts11">CHANGE</span><span class="rvts12"> or </span><span class="rvts11">LOCATE</span><span class="rvts12"> command for the current file.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Otherwise, it is illegal to use these three special line labels, and you will get an "undefined label" error message if you try. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">The handling of the </span><span class="rvts11">.ZCSR</span><span class="rvts12"> special label is mostly compatible with ISPF. If you use </span><span class="rvts11">.ZCSR</span><span class="rvts12"> in ISPF when the cursor is not in the data area, the line is simply not found (the ISPF </span><span class="rvts11">FIND</span><span class="rvts12"> and </span><span class="rvts11">CHANGE</span><span class="rvts12"> commands will simply report Bottom of Data) rather than reporting an error. This minor difference should not pose any difficulties for you.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="Relativelinelabelnotation"></a>
+<span class="rvts36">Relative line label notation</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A </span><span class="rvts85">relative label</span><span class="rvts35"> defines a region of lines in the edit file with respect to a label. You could say that a simple label itself defines a </span><span class="rvts85">basic</span><span class="rvts35"> region consisting of the very line that the label is on. There are now additional regions available, using the following syntax:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">.ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">the line </span><span class="rvts89">.ABC</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; </span></p>
+<p class="rvps9"><span class="rvts89">.\ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">.&lt;&gt;ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">.¬ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines other than line </span><span class="rvts89">.ABC</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; </span></p>
+<p class="rvps9"><span class="rvts89">.&gt;ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines after line </span><span class="rvts89">.ABC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">.&gt;=ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">the line </span><span class="rvts89">.ABC</span><span class="rvts35"> and all lines after it</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">.&lt;ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">all lines before line </span><span class="rvts89">.ABC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts89">.&lt;=ABC</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">the line </span><span class="rvts89">.ABC</span><span class="rvts35"> and all lines before it</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Because of these definitions, it turns out that, individually, </span><span class="rvts89">.&gt;=ZF</span><span class="rvts35"> and </span><span class="rvts89">.&lt;=ZL</span><span class="rvts35"> both mean the same as </span><span class="rvts89">.ZF</span><span class="rvts35"> &nbsp;</span><span class="rvts89">.ZL</span><span class="rvts35">, which is the entire file.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You may have noticed that when you issue a command like </span><span class="rvts89">CHANGE ABC DEF ALL .AA .BB</span><span class="rvts35">, the line range you are implying is the same as </span><span class="rvts89">.&gt;=AA</span><span class="rvts35"> </span><span class="rvts89">.&lt;=BB</span><span class="rvts35"> if you were to use the notation above. When you use </span><span class="rvts36">two</span><span class="rvts35"> relative labels in a command, there are some order-dependency considerations to keep in mind for them to work correctly:</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">When two labels are present and a label of the form </span><span class="rvts89">.&gt;ABC</span><span class="rvts35"> or </span><span class="rvts89">.&gt;=ABC</span><span class="rvts35"> is present, it must be the first label.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">When two labels are present and a label of the form </span><span class="rvts89">.&lt;ABC</span><span class="rvts35"> or </span><span class="rvts89">.&lt;=ABC</span><span class="rvts35"> is present, it must be the second label.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps150"><span class="rvts35">When a label of the form </span><span class="rvts89">.\ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">.&lt;&gt;ABC</span><span class="rvts35"> &nbsp;or &nbsp;</span><span class="rvts89">.¬ABC</span><span class="rvts35"> is present, it must stand alone; there cannot be a second label on the command.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps152"><span class="rvts35">When two labels </span><span class="rvts89">.ABC</span><span class="rvts35"> and </span><span class="rvts89">.DEF</span><span class="rvts35"> are defined, and you want to use them on a command such that one is a regular label and one is a relative label, one of the following forms must be used (in this order):</span></p>
+<p class="rvps152"><span class="rvts35"><br/></span></p>
+<p class="rvps151"><span class="rvts89">.ABC .&lt;DEF</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">same as&nbsp;</span><span class="rvts89"> .&gt;=ABC .&lt;DEF</span></p>
+<p class="rvps151"><span class="rvts89">.ABC .&lt;=DEF</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">same as&nbsp;</span><span class="rvts89"> .&gt;=ABC .&lt;=DEF</span></p>
+<p class="rvps151"><span class="rvts89">.&gt;ABC .DEF</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">same as&nbsp;</span><span class="rvts89"> .&gt;ABC &nbsp;.&lt;=DEF</span></p>
+<p class="rvps151"><span class="rvts89">.&gt;=ABC .DEF</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">same as&nbsp;</span><span class="rvts89"> .&gt;=ABC .&lt;=DEF</span></p>
+<p class="rvps151"><span class="rvts36"><br/></span></p>
+<p class="rvps153"><a name="RelativelabelrangeswithANDandOR"></a>
+<span class="rvts36">Relative label ranges with AND and OR</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There may be times when you don't wish to be limited by the order dependency issue discussed above. Assume that .AA precedes .BB in the file. Then, the range .&gt;AA .&lt;BB actually defines an </span><span class="rvts85">intersection</span><span class="rvts35"> of lines, in which all lines that are both </span><span class="rvts85">after</span><span class="rvts35"> line .AA </span><span class="rvts36">and</span><span class="rvts35"> </span><span class="rvts85">before</span><span class="rvts35"> line .BB are intended. You can explicitly show this in SPFLite with the command:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">CHANGE ABC DEF ALL .&gt;AA </span><span class="rvts36">AND</span><span class="rvts35"> .&lt;BB</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps108"><span class="rvts35">The AND keyword is actually </span><span class="rvts83">allowed</span><span class="rvts35"> in SPFLite, but it's always assumed if you don't say it.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, if you had a 300-line file, with .AA on line 100 and .BB on line 200, then .&gt;AA .&lt;BB represents the “interior” of the file from lines 101 to 199. Suppose you wanted to reference the “outer edges” of the file; that is, all lines </span><span class="rvts85">other</span><span class="rvts35"> than these lines? &nbsp;It would be as if you were to say,</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">CHANGE ABC DEF ALL</span><span class="rvts318"> </span><span class="rvts20">NOT ( </span><span class="rvts35">.&gt;AA .</span><span class="rvts20">AND</span><span class="rvts35"> &lt;BB</span><span class="rvts318"> </span><span class="rvts20">)</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts319">-- illegal syntax</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">However, SPFLite doesn't </span><span class="rvts85">support</span><span class="rvts35"> a </span><span class="rvts20">NOT</span><span class="rvts35"> operator, or line ranges in expressions. Suppose you tried to use the ranges without any options, like this:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">CHANGE ABC DEF ALL .&lt;=AA .&gt;=BB</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Since the </span><span class="rvts36">AND</span><span class="rvts35"> option is assumed, and since .AA is before .BB in the file, there isn't a single line in the file that would meet </span><span class="rvts85">both</span><span class="rvts35"> of these requirements </span><span class="rvts85">at the same time</span><span class="rvts35">, and so no lines would be changed.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">If .AA is on line 10, and .BB is on line 20, then the line range .&lt;=AA &nbsp;.&gt;=BB is asking for all lines where the same line number is </span><span class="rvts36">both</span><span class="rvts35"> &lt;= 10 </span><span class="rvts36">and</span><span class="rvts35"> &gt;= 20, at the same time. That would be a neat trick if you could do it. SPFLite isn't that tricky, and so it will report </span><span class="rvts36">Line range illogical, represents 0 lines</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What SPFLite </span><span class="rvts85">does</span><span class="rvts35"> have is an </span><span class="rvts36">OR</span><span class="rvts35"> facility, which defines a </span><span class="rvts85">union</span><span class="rvts35"> of lines that meet either one of two conditions. Let's rewrite the command above:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">CHANGE ABC DEF ALL .&lt;=AA </span><span class="rvts36">OR</span><span class="rvts35"> .&gt;=BB</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Like all keywords in SPFLite, the </span><span class="rvts36">AND</span><span class="rvts35"> and </span><span class="rvts36">OR</span><span class="rvts35"> are case-insensitive.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, we have a line range consisting of two independent ranges. This command will change any lines found </span><span class="rvts36">either</span><span class="rvts35"> in the range of 1 to 100, </span><span class="rvts36">or</span><span class="rvts35"> in the range of 200 to 300, in our example.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note that when </span><span class="rvts36">AND</span><span class="rvts35"> is either </span><span class="rvts85">used</span><span class="rvts35"> or </span><span class="rvts85">implied,</span><span class="rvts35"> the order of your labels doesn't matter (it has to be that way to be ISPF compatible). That means the regular labels you are used to, like </span><span class="rvts36">.A .B</span><span class="rvts35"> mean the same as </span><span class="rvts36">.B .A</span><span class="rvts35"> just like always.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">This lack of order dependency only applies when both labels are </span><span class="rvts36">regular</span><span class="rvts35"> labels like </span><span class="rvts36">.A</span><span class="rvts35"> and </span><span class="rvts36">.B</span><span class="rvts35">. When one or both of these labels are </span><span class="rvts36">relative</span><span class="rvts35"> labels like </span><span class="rvts36">.&lt;A</span><span class="rvts35">, </span><span class="rvts36">.&lt;=B</span><span class="rvts35">, </span><span class="rvts36">.&gt;C</span><span class="rvts35"> or </span><span class="rvts36">.&gt;=D</span><span class="rvts35">, the ordering rules described above apply.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When </span><span class="rvts36">OR</span><span class="rvts35"> is used, the line number associated with the first label must be </span><span class="rvts36">before</span><span class="rvts35"> the line associated with the second label. This is a safeguard to make sure the line range you specify makes sense.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Temporarylinelabels,alsoknownasline-numberpseudolabels"></a>
+<span class="rvts36">Temporary line labels, also known as line-number pseudo labels</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Sometimes you may need to use a command like </span><span class="rvts36">CHANGE</span><span class="rvts35"> on a known range of line numbers, but the </span><span class="rvts36">CHANGE</span><span class="rvts35"> command doesn't accept actual line numbers as operands to indicate line ranges. There </span><span class="rvts85">are</span><span class="rvts35"> other ways to do it, but often what happens is that you end up doing this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">Temporarily place one-time labels like .A and .B on the ends of the desired range</span></li>
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">Issue the </span><span class="rvts36">CHANGE</span><span class="rvts35"> or other command, referencing .A and .B</span></li>
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">Go back and get rid of the temporary labels .A and .B</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose you</span><span class="rvts85"> knew</span><span class="rvts35"> ahead of time that the .A label will go on line 100, and the .B label will go on line 200. With SPFLite you no longer have to “invent” these .A and .B labels. You can use </span><span class="rvts85">temporary line labels,</span><span class="rvts35"> also known as </span><span class="rvts85">line-number pseudo labels.</span><span class="rvts35"> &nbsp;Such a pseudo label is a </span><span class="rvts89">.</span><span class="rvts35"> dot followed by a line number. The line number is handled numerically, not as a string. So, for example, a pseudo label of </span><span class="rvts89">.100</span><span class="rvts35"> &nbsp;or </span><span class="rvts89">.00100</span><span class="rvts35"> both refer to the same line.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You can use a pseudo label in commands just like a real one, including relative labels such as </span><span class="rvts89">.\100</span><span class="rvts35"> and </span><span class="rvts89">.&lt;100</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The only restriction is that if you attempt to </span><span class="rvts89">RESET LABEL</span><span class="rvts35"> using a pseudo label, you can't really reset the label </span><span class="rvts85">itself</span><span class="rvts35">, since there is no actual label called </span><span class="rvts89">.100</span><span class="rvts35">. What happens is that if you issue the command &nbsp;</span><span class="rvts89">RESET LABEL .100</span><span class="rvts35"> &nbsp;it will remove any </span><span class="rvts85">ordinary</span><span class="rvts35"> label that might happen to exist on line 100.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A pseudo-label like </span><span class="rvts89">.100</span><span class="rvts35"> is not a real label, and never exists in the sequence area of a data line, so there is no need to issue a </span><span class="rvts36">RESET</span><span class="rvts35"> command to get rid of it. There is no label needing to be blanked out.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Usingthesinglecharacterlinerangearguments."></a>
+<span class="rvts36">Using the single character line range arguments.</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When text is selected using mouse drag or via the keyboard Shift-Arrow keys, &nbsp;a block of text is defined and highlighted on the screen. The line and column range of this selected area is remembered and can be used to quickly re-select the area for further processing if desired.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When an area is selected, the line and column references of the area are displayed in a Status Bar box for reference. That portion of the Status Bar would appear as</span></p>
+<p class="rvps10"><img alt="" style="padding : 1px;" src="lib/TextSelBox.jpg"></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">where the @ and the two numbers following represent the </span><span class="rvts36">column</span><span class="rvts35"> range of the selected area, and the # and the two operands following represent the </span><span class="rvts36">line</span><span class="rvts35"> range of the selected text.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The significance of the </span><span class="rvts36">@</span><span class="rvts35"> and </span><span class="rvts36">#</span><span class="rvts35"> characters is both to identify which pair of numbers is which, but also to remind you that these single character values can now be used on the Primary command line for commands that accept line/column range operands. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For example, using the above displayed sample, a command line of </span><span class="rvts62">PRINT # </span><span class="rvts6">would &nbsp;be treated as if it were entered as </span><span class="rvts62">PRINT .89 .91</span><span class="rvts6"> to print the selected line range. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A change command </span><span class="rvts62">CHANGE AAA BBB @ #</span><span class="rvts6"> &nbsp;would be treated as </span><span class="rvts62">CHANGE AAA BBB 12 21 .89 .91</span><span class="rvts6">. i.e. Change AAA to BBB on lines 89 to 91 between columns 12 and 21.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The values displayed are persistent and will remain available for repeated use on commands until a new, replacement text selection is made or a RESET command is issued..</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Suspending the Range</span></p>
+<p class="rvps10"><span class="rvts6">You may temporarily suspend the </span><span class="rvts40">@</span><span class="rvts6"> and </span><span class="rvts40">#</span><span class="rvts6"> processing on the command line by simply left-clicking on the Status Bar box displaying these values. When you do the box will switch to</span></p>
+<p class="rvps10"><img alt="" style="padding : 1px;" src="lib/TextSelBox2.jpg"></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">This display indicates that an area has been selected and is currently inactive. At this point use of @ and # on the command line will </span><span class="rvts40">not</span><span class="rvts6"> trigger substitution of line/column values.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">A left-click on this box at this point will switch back to the normal select display, and will also re-select the text area on the screen for confirmation.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="UsingLabelsandTagswiththeLINECommand"></a>
+<span class="rvts40">Using Labels and Tags with the LINE Command</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can manage line labels and line tags using the LINE primary command. For example, to put a label of .ABC on line 10, you can issue the command:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">LINE '.ABC' .10 </span></p>
+<p class="rvps6"><span class="rvts139"> </span></p>
+<p class="rvps5"><span class="rvts6">Remember to quote the label, because in this example, the first operand</span><span class="rvts139"> '.ABC' </span><span class="rvts6">is </span><span class="rvts40">what</span><span class="rvts6"> goes into the sequence area, and the second operand</span><span class="rvts139"> .10 </span><span class="rvts6">is </span><span class="rvts40">where</span><span class="rvts6"> the first operand is placed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When doing a normal edit, there is usually no need to do such a thing; you would just put the label on the line directly. However, when running a programmable macro the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command is the only way to do this. You would need to 'wrap' the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command in an </span><span class="rvts40">SPF_CMD</span><span class="rvts6"> function call in your </span><span class="rvts40">.MACRO</span><span class="rvts6"> file, like this:</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps6"><span class="rvts139">SPF_CMD ("LINE '.ABC' .10") </span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">It is possible to set, clear and toggle both line labels and line tags from the </span><span class="rvts40">LINE</span><span class="rvts6"> primary command. The possible options are as follows:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter label into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..label' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle label; enter label if no label present, </span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any label that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '.' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any label that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '..' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any label that may be present; same as</span><span class="rvts139"> LINE '.'</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Enter tag into sequence area</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::tag' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Toggle tag; enter tag if no tag present,</span><span class="rvts139"> &nbsp;</span></p>
+<p class="rvps6"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- else clear any tag that is present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE ':' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">-- Clear any tag that may be present</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">LINE '::' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts140">-- Clear any tag that may be present; same as</span><span class="rvts139"> LINE ':'</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="LINE.html">LINE - Apply Line Command</a><span class="rvts6"> and </span><a class="rvts41" href="WorkingwithLINE.html">Working with the LINE Primary Command</a><span class="rvts6"> for more information on the LINE command.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">See </span><a class="rvts41" href="KeyMapDialog.html#Special%20Line%20Commands">Special Line Commands</a><span class="rvts6"> in </span><a class="rvts41" href="KeyMapDialog.html">Using the KEYMAP Dialog</a><span class="rvts6"> for more information on performing these same actions within a KEYMAP definition.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Ahandykeymappingusingalabelforaplaceholder"></a>
+<span class="rvts40">A handy key mapping using a label for a placeholder</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Here is a simple technique using line labels you might find useful. Often you may need to remember where you were in some particular location in a file, then do something which changes the location or appearance of the screen, such as a </span><span class="rvts40">FIND</span><span class="rvts6">, </span><span class="rvts40">LOCATE</span><span class="rvts6"> or perhaps a </span><span class="rvts40">RESET</span><span class="rvts6"> after an </span><span class="rvts40">EXCLUDE</span><span class="rvts6"> command has hidden data in several locations. You would then like to get back to where you were.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The technique works like this. You map the </span><span class="rvts40">Alt 3</span><span class="rvts6"> key to "make a note" of where you had been in the file, and you map</span><span class="rvts40"> Alt 2 </span><span class="rvts6">to go back to where you were at previously. Since the '3' key has the</span><span class="rvts40"> #</span><span class="rvts6"> pound sign (also called the 'note sign') and the '2' key has the </span><span class="rvts40">@</span><span class="rvts6"> At sign, you can use these two keys to help you remember what each of these keys are for. (It is kind of a </span><span class="rvts40">pun</span><span class="rvts6"> - but it's also an effective way to remember them.)</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The mappings are as follows. The technique uses Alt 3 to set (or clear) a label of</span><span class="rvts40"> .NOTE</span><span class="rvts6">, and Alt locates that</span><span class="rvts40"> .NOTE</span><span class="rvts6"> and aligns the screen so the label is at the top of the display.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Alt 2 =</span><span class="rvts139"> LOCATE .NOTE TOP</span></p>
+<p class="rvps5"><span class="rvts6">Alt 3 =</span><span class="rvts139"> (CondLineNo){..NOTE}</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For Alt 3, the </span><span class="rvts139">(CondLineNo)</span><span class="rvts6"> function allows the setting of the </span><span class="rvts40">.NOTE</span><span class="rvts6"> label even when the cursor is on the primary command line; if so, the label is set on the first data line of the display. The </span><span class="rvts139">{..NOTE}</span><span class="rvts6"> will store a label of </span><span class="rvts40">.NOTE</span><span class="rvts6"> if no label is present on the cursor line, or will clear it if one is already there.</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts123"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

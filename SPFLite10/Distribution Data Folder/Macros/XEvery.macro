@@ -1,0 +1,53 @@
+' XEvery.MACRO
+' Exclude all words in list 
+' Syntax:   XEVERY [WORD | CHARS | PREFIX | SUFFIX] string1 string2 ... [ .L1 .L2 ] 
+'                   ---- 
+' 
+' SPFLite version - George Deluca
+' Original REXX Author:  F. DAVID MCRITCHIE, "THE REXX MACROS TOOLBOX" 1989/05/12
+'
+dim wtype, ptype, str, ccmd, l1, l2 as string
+dim i, AllRC, argctr as number value 0 
+dim args(50) as string 
+wtype = "WORD"                                        ' Set default WORD operand
+ptype = ""                                            ' Set default Prefix/Suffix operand
+l1 = ""                                               ' First line range value
+l2 = ""                                               ' Second line range value
+i = 1                                                 ' Starting operand number
+AllRC = 0                                             ' Global RC
+
+if Get_Arg_Count = 0 then halt(fail, "No operands detected") 
+
+for i = 1 to Get_Arg_Count                            ' See if line range operands
+   if left$(Get_Arg$(i), 1) = "." then                ' A range operand? 
+      if L1 = "" then                                 ' Save 
+         l1 = Get_Arg$(i)                             ' 
+      elseif l2 = "" then                             ' 
+         l2 = Get_Arg$(i)                             ' 
+      else                                            ' Too many 
+         halt(fail, "More than 2 line range operands detected")
+      end if                                          ' 
+   else                                               ' Else not a line range operand 
+      incr argctr                                     ' 
+      args(argctr) = Get_Arg$(i)                      ' Save the operand 
+   end if 
+next i
+
+
+for i = 1 to argctr                                   ' Loop through the operands 
+   str = ucase$(args(i))                              ' Get the next operand word
+   if str = "CHAR" or str = "CHARS" then              ' Watch for CHAR(S) / WORD
+      wtype = ""                                      '
+   elseif str = "WORD" then                           '
+      wtype = "WORD"                                  '
+      ptype = ""                                      '
+   elseif str = "PREFIX" or str = "SUFFIX" then       ' Watch for Prefix / Suffix
+      wtype = ""                                      '
+      ptype = str                                     '
+   else                                               ' Not a keyword, do a CHANGE command then
+      SPF_Cmd("X ALL " + L1 + " " + L2 + " " + wtype + " " + ptype + " " + SPF_Quote$(str)) 
+      if Get_RC = 0 then AllRC = 1                    ' Remember if we were successful
+   end if                                             '
+next                                                  '
+if AllRC = 0 then halt(fail, "None of the strings were found")
+halt                                                  ' Done

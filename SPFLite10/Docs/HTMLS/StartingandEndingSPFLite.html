@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Starting and Ending SPFLite</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,,,,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Starting and Ending SPFLite">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Starting and Ending SPFLite" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="StartingandEndingSPFLite"
+		  data-hnd-context="19"
+		  data-hnd-title="Starting and Ending SPFLite"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Starting and Ending SPFLite</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#Introduction:StandardSPFLiteStartup">Introduction: Standard SPFLite Startup</a></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#EditingFilesusingDrag-and-DropSupport">Editing Files using Drag-and-Drop Support</a></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#SPFLiteCommandLineOptions">SPFLite Command Line Options</a></p>
+<p class="rvps5"><a class="rvts109" href="StartingandEndingSPFLite.html#SpecifyinganOveriddingProfiletouse">Specifying an Overidding Profile to use</a></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#TerminatingSPFLite">Terminating SPFLite</a></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#TerminatingaSingleFileTab">Terminating a Single File Tab</a></p>
+<p class="rvps5"><a class="rvts45" href="StartingandEndingSPFLite.html#TerminatingAllTabs">Terminating All Tabs</a></p>
+<p class="rvps4"><span class="rvts108"><br/></span></p>
+<p class="rvps4"><a name="Introduction:StandardSPFLiteStartup"></a>
+<span class="rvts11">Introduction: Standard SPFLite Startup</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Based on a General Options setting, you can choose to reopen any files that had been open the last time SPFLite was shut down.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you enable "</span><a class="rvts33" href="OptionsGeneral.html#ReOpen%20last%20files%20at%20Start">Re-Open last file(s) at Start</a><span class="rvts12">", &nbsp;then when you double-click the SPFLite icon which was created during the install, you will be presented with the same file tabs that were open the last time you used SPFLite. The File Manager will be present as the leftmost tab. The tab that was active when you shut down will be presented as the active tab when you resume.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you have not enabled "Re-Open last file(s) at Start", you will be presented with the File Manager screen containing a directory list based on your last-used File Manager display selection.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="EditingFilesusingDrag-and-DropSupport"></a>
+<span class="rvts11">Editing Files using Drag-and-Drop Support</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can do the following with SPFLite's Drag-and-Drop support:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li class="rvps2"><span class="rvts12">Drag-and-Drop a file from Explorer or from the desktop onto the SPFLite icon to have it start editing with that file. The File Manager will be present as the first tab, and the edit file tab as the second one.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li class="rvps4"><span class="rvts12">Drag-and-Drop a file onto an existing SPFLite window. If the current tab is (Empty) the file will be opened on that tab. If the current tab contains data, or is the File Manager tab, the dropped file will be opened in a new file tab.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li class="rvps4"><span class="rvts12">A shortcut to a data file (rather than the file itself) may also be Dragged-and-Dropped onto SPFLite.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="SPFLiteCommandLineOptions"></a>
+<span class="rvts11">SPFLite Command Line Options</span></p>
+<p class="rvps4"><span class="rvts104"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When started from the command line, operands for SPFLite normally include the initial filename to be edited. If SPFLite is started without a file name, the SPFLite startup will proceed as described above.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The following command-line options are supported. Note that all options can be specified in any abbreviated form down to a single letter. e.g. -CLIP can be specified as -CLIP, -CLI, -CL or -C.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">-CLIP</span><span class="rvts12"> option</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If &nbsp;'-</span><span class="rvts11">CLIP</span><span class="rvts12">' &nbsp;appears in the command line, SPFLite will operate in clipboard edit mode, which does the following:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">The contents of the Windows clipboard are opened up into a Clipboard edit session when SPFLIte starts. This will directly edit the contents of the Windows clipboard, without any intermediate or temporary file involved.</span></li>
+</ul></ul>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">When the primary Command </span><span class="rvts11">END</span><span class="rvts12"> is entered, the current edit data is returned to the Windows clipboard. </span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Clipboard mode is designed to provide a quick, convenient means for editing clipboard data with the SPFLite command set. From outside SPFLite, it works most effectively if a separate icon is created for SPFLite that has a command-line operand of </span><span class="rvts11">-CLIP</span><span class="rvts12">. To create a </span><span class="rvts11">CLIP icon</span><span class="rvts12"> on the desktop, copy the normal icon and add </span><span class="rvts11">-CLIP</span><span class="rvts12"> as an operand, in the icon's Properties window. You can now click on the icon to directly edit the clipboard contents.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If SPFLite is already running, you can use the </span><span class="rvts11">CLIP</span><span class="rvts12"> primary command to open a new tab containing the current clipboard contents.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">-WINE</span><span class="rvts12"> option</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If '</span><span class="rvts11">-WINE</span><span class="rvts12">' appears as the command line, SPFLite will modify certain operations to assist running under WINE on *NIX systems. SPFLite </span><span class="rvts11">will</span><span class="rvts12"> operate correctly under WINE but certain screen features (like TootTip Help) are problematic. -WINE tells SPFLite to suppress certain features which cause difficulty under WINE.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">-NOLOOP</span><span class="rvts12"> option</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If '</span><span class="rvts11">-NOLOOP</span><span class="rvts12">' appears as the command line, SPFLite will </span><span class="rvts11">NOT</span><span class="rvts12"> activate it's normal loop detection logic. This detection logic is design to monitor for SPFLite activities which are taking far longer than expected to complete. It provides a Pop-Up message which allows the user to cancel the session, or to allow execution to continue.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">However some activities can be delayed by external factors (LAN network slowdowns etc.) and the Pop-Ups can become a nuisance since there is no real underlying problem which can be corrected. </span><span class="rvts11">-NOLOOP </span><span class="rvts12">simply requests SPFLite to forgo monitoring for such loop conditions.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">-BROWSE</span><span class="rvts12"> option</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">BROWSE mode allows you to use SPFLite to view data files in read-only mode without risk of changing the data. This is particularly important if you normally open files with with the Profile set to </span><span class="rvts11">AUTOSAVE ON</span><span class="rvts12">, or if you have opened an important file and want to be sure it does not get modified. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">In BROWSE mode, you are prevented from using any action (Primary Command, Line Command or simple typing) which would modify the file's data. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">-BROWSE</span><span class="rvts12"> &nbsp;may be coded alone as an operand, in which case a </span><a class="rvts33" href="BROWSEOpenaFileforReadOnly.html">BROWSE</a><span class="rvts12"> dialog will be presented where you select a file to browse. Or, it can be coded as </span><span class="rvts11">-BROWSE filename</span><span class="rvts12">, to start SPFLite with the specified filename opened for browsing.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">To create a </span><span class="rvts11">BROWSE icon</span><span class="rvts12">, copy the normal icon and add </span><span class="rvts11">-BROWSE</span><span class="rvts12"> as an operand, in the icon's Properties window. You can now &nbsp;Drag-and-Drop files onto the icon to quickly Browse them.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">-VIEW</span><span class="rvts12"> option</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">VIEW mode allows you to use SPFLite to view data files in read-only mode without risk of changing the data. This is particularly important if you normally open files with with the Profile set to </span><span class="rvts11">AUTOSAVE ON</span><span class="rvts12">, or if you have opened an important file and want to be sure it does not get modified. Unlike BROWSE, VIEW allows you to make changes to the file, they will simply not be saved. If you make changes to a Viewed file, the word View in the left-hand Status Bar box will be displayed as </span><span class="rvts57">View</span><span class="rvts12"> to remind you.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">In VIEW mode, the </span><span class="rvts11">SAVE</span><span class="rvts12"> and </span><span class="rvts11">REPLACE</span><span class="rvts12"> commands are disabled, as is the </span><span class="rvts11">AUTOSAVE</span><span class="rvts12"> function of the </span><span class="rvts11">END</span><span class="rvts12"> command. The </span><span class="rvts11">CREATE</span><span class="rvts12"> command is allowed in VIEW, so you can create </span><span class="rvts50">other</span><span class="rvts12"> files without changing the one you are browsing. You may also save the entire file you are browsing under a new name by using </span><span class="rvts11">SAVEAS</span><span class="rvts12">. (If you happen to use the </span><span class="rvts11">SAVEALL</span><span class="rvts12"> command from any open file, it will only save files opened for edit, while files opened for browse are ignored.)</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts11">-VIEW</span><span class="rvts12"> &nbsp;may be coded alone as an operand, in which case a </span><a class="rvts29" href="VIEWViewaFileinBrowseMode.html">VIEW</a><span class="rvts12"> dialog will be presented where you select a file to View. Or, it can be coded as </span><span class="rvts11">-VIEW filename</span><span class="rvts12">, to start SPFLite with the specified filename opened for viewing.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">To create a </span><span class="rvts11">VIEW icon</span><span class="rvts12">, copy the normal icon and add </span><span class="rvts11">-VIEW</span><span class="rvts12"> as an operand, in the icon's Properties window. You can now &nbsp;Drag-and-Drop files onto the icon to quickly View them.</span></p>
+<p class="rvps6"><span class="rvts12"> </span></p>
+<p class="rvps5"><span class="rvts12"> </span></p>
+<p class="rvps5"><span class="rvts11">-INIT</span><span class="rvts12"> option</span></p>
+<p class="rvps5"><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">The </span><span class="rvts11">-INIT</span><span class="rvts12"> option causes SPFLite use a different </span><span class="rvts11">INI</span><span class="rvts12"> file for customization, instead of </span><span class="rvts11">SPFLite.INI</span><span class="rvts12">. This allows you to have INI files with different global options such as handling of file deletions, fonts and screen colors, mouse and keyboard options, etc. (Note that keyboard </span><span class="rvts50">mappings </span><span class="rvts12">are</span><span class="rvts50"> held </span><span class="rvts12">in the SPFLite.KBD file, which cannot be overridden like the INI file can.)</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">To use, add &nbsp;</span><span class="rvts11">-INIT</span><span class="rvts12"> </span><span class="rvts16">initname</span><span class="rvts12"> to the command line, where </span><span class="rvts16">initname</span><span class="rvts12"> is either: </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">the </span><span class="rvts11">base name</span><span class="rvts12"> of the alternate INI file. For example, to start SPFLite using an INI file named </span><span class="rvts11">CUSTOM.INI</span><span class="rvts12"> the command line would be </span><span class="rvts11">-INIT CUSTOM.</span><span class="rvts12"> The INI file will be searched for in the normal SPFLite data path (Documents\SPFLite).</span></li>
+</ul></ul>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">A </span><span class="rvts11">fully qualified path</span><span class="rvts12"> to the INI file. </span></li>
+</ul></ul>
+<p class="rvps12"><span class="rvts12">Example: &nbsp;</span><span class="rvts11">-INIT "D:\Data\Editors\SPFLite\CUSTOM.INI"</span><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12"> </span></p>
+<p class="rvps5"><span class="rvts11">-KEYMAP</span><span class="rvts12"> option</span></p>
+<p class="rvps5"><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">The </span><span class="rvts11">-KEYMAP</span><span class="rvts12"> option causes SPFLite to launch the KEYMAP dialog immediately after startup, and prior to beginning normal editing operations. You might wish to use the </span><span class="rvts11">-KEYMAP</span><span class="rvts12"> option in case you had a serious KEYMAP configuration issue that was preventing you from operating SPFLite properly, such as the absence of a properly defined ENTER key. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps68"><span class="rvts12">Because use of the </span><span class="rvts11">-KEYMAP</span><span class="rvts12"> option is a type of "emergency startup" contingency, SPFLite will not have completely finished all of its initialization steps when you get the KEYMAP dialog. As a result, the dialog will be displayed with a default font rather than your customary editing font. After you finish, and then SPFLite begins normal operation, the customary editing font will appear when you issue a KEYMAP command again.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Example: </span><span class="rvts12">The command line:</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps11"><span class="rvts54">SPFLITE.EXE&nbsp;-B&nbsp;-I&nbsp;CUSTOM&nbsp;MyTestFile.txt</span></p>
+<p class="rvps11"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts12">Requests SPFLite to start in Browse using the CUSTOM.INI file for customization, and to Open MyTestFile.txt as the initial working file.</span></p>
+<p class="rvps11"><span class="rvts54">&nbsp;</span></p>
+<p class="rvps4"><a name="SpecifyinganOveriddingProfiletouse"></a>
+<span class="rvts11">Specifying an Over-riding Profile to use</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When you specify a filename on the command-line to be opened (including the -BROWSE and -VIEW variations) it is possible to specify a different Profile name to be used to process the file. This is the same ability that is provided by the Primary EDIT, BROWSE and VIEW commands.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Simply provide the overriding Profile name, preceded by a . (period) on the command line following the filename. If the filename was enclosed in quotes, the Profile name follows this trailing quote, and is not itself quoted.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">e.g.&nbsp;</span><span class="rvts12"> &nbsp; &nbsp;</span><span class="rvts54">SPFLite -B "My File To Browse.txt" .NewProfile</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The above shows a request to browse a file using the special profile called 'NewProfile'.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="TerminatingSPFLite"></a>
+<span class="rvts11">Terminating SPFLite</span></p>
+<p class="rvps4"><span class="rvts104"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When SPFLite is terminated, it will 'remember' the current screen position and size and will use these values the next time it is started. If SPFLite was Maximized at termination time, it will be restarted in Maximized mode.</span></p>
+<p class="rvps5"><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts12">As with startup, the other actions performed at termination are affected by your Option choices. There are two levels of termination, the first is the termination of a single file tab, the second is termination of all file tabs and SPFLite shutdown.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="TerminatingaSingleFileTab"></a>
+<span class="rvts11">Terminating a Single File Tab</span></p>
+<p class="rvps4"><span class="rvts108"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A single file tab is terminated with the </span><a class="rvts33" href="END.html">END</a><span class="rvts12"> command. This can also be accomplished by right-clicking on the desired tab. When you use a right-click in this way, SPFLite treats it as identical to the </span><span class="rvts11">END</span><span class="rvts12"> command, or to a key mapped to the </span><span class="rvts11">END</span><span class="rvts12"> command. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">If the tab is in View mode, and the file has not been modified, it is simply closed. If you have modified the file during View, then the action depends on your choice for the Options -&gt; General selection of </span><a class="rvts33" href="OptionsGeneral.html#Warn%20on%20modified%20Browse%20file">Warn on modified View file</a><span class="rvts12"> &nbsp; If you chose to be warned, then you will be given an option to return to View or just exit; &nbsp;If you chose </span><span class="rvts50">not</span><span class="rvts12"> to be warned, the file is closed without saving.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">If the tab is in CLIP mode, the current text contents are returned to the Windows clipboard and the tab is closed.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">If the tab is in EDIT mode, the contents will be either saved or not saved, based on the Profile </span><span class="rvts11">AUTOSAVE</span><span class="rvts12"> option for the file's file type; and then the tab will be closed.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For all above cases, if there are still remaining active tabs, control will be passed to the adjacent tab. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If there are no further active tabs, what happens next is based on whether you enabled "</span><a class="rvts33" href="OptionsFManager.html#Close%20File%20Mgr%20with%20last%20tab">Close File Mgr with last tab</a><span class="rvts12">" in the File Manager Options. If you enabled this, SPFLite will terminate. Otherwise, control is passed to File Manager. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When the </span><span class="rvts11">END</span><span class="rvts12"> command is issued in the File Manager, it does not 'close' it, but causes the file display to move up to the next higher directory level, or back from a File List display to a directory display. Repeated use of the </span><span class="rvts11">END</span><span class="rvts12"> command will eventually leave the File Manager displaying the root directory of the selected drive, which for most users will be the</span><span class="rvts54"> C:\ </span><span class="rvts12">directory, and at that point </span><span class="rvts11">END</span><span class="rvts12"> will have no further effect.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="TerminatingAllTabs"></a>
+<span class="rvts11">Terminating All Tabs</span></p>
+<p class="rvps4"><span class="rvts108"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If the Windows standard close button [</span><span class="rvts11">X</span><span class="rvts12">] in the title bar is clicked, or the </span><span class="rvts11">EXIT</span><span class="rvts12"> command or the </span><span class="rvts11">=X</span><span class="rvts12"> command is issued, all file tabs will be processed as if an </span><span class="rvts11">END</span><span class="rvts12"> command had been entered and SPFLite itself will terminate. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">There are some differences between using the close button </span><span class="rvts11">[X</span><span class="rvts12">] to close SPFLite, and using </span><span class="rvts11">END</span><span class="rvts12"> on each tab first.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Just so we're clear here, don't confuse "</span><span class="rvts11">the [X] </span><span class="rvts16">button</span><span class="rvts12">" with the "</span><span class="rvts11">=X </span><span class="rvts16">command</span><span class="rvts12">". The </span><span class="rvts11">[X]</span><span class="rvts12"> </span><span class="rvts16">button</span><span class="rvts12"> is a Windows icon that looks like an </span><span class="rvts11">X</span><span class="rvts12"> on the right side of the Title Bar of the SPFLite window that you click on with the mouse, whereas the </span><span class="rvts11">=X</span><span class="rvts12"> </span><span class="rvts16">command</span><span class="rvts12"> is an SPFLite command that is identical to the </span><span class="rvts11">EXIT</span><span class="rvts12"> command and is typed on the primary command line by you as the characters </span><span class="rvts11">=X</span><span class="rvts12"> followed by the ENTER key.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When you use the close button</span><span class="rvts11"> [X]</span><span class="rvts12">, SPFLite first remembers all currently active files, so that when you restart SPFLite later, all these files will be reopened, and then all tabs, including File Manager, are closed. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you use </span><span class="rvts11">END</span><span class="rvts12"> individually for every file, they are all now "closed" and so when you restart, there are no previously open sessions to be resumed, and so none of them will be automatically reopened. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">EXIT</span><span class="rvts12"> command can also take an optional </span><span class="rvts11">NOREOPEN</span><span class="rvts12"> operand. If </span><span class="rvts11">NOREOPEN</span><span class="rvts12"> is specified, SPFLite will not save the list of currently open Edit tabs for use at the next normal SPFLite start. This means the next SPFLite startup will begin in the File Manager tab, with no other tabs being automatically loaded. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Whether SPFLite re-opens files at start-up is controlled by a preferences selection on the </span><a class="rvts33" href="OptionsGeneral.html#ReOpen%20last%20files%20at%20Start">Options -&gt; General</a><span class="rvts12"> screen. The </span><span class="rvts11">NOREOPEN</span><span class="rvts12"> option will cause the list of currently-open files to be discarded, even if the Re-open checkbox is enabled. (The files themselves are not discarded - only the list that refers to them is discarded.)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When your options are set to re-open the previous set of files at startup, these files will only be opened by the </span><span class="rvts11">first</span><span class="rvts12"> instance of SPFLite that starts. If your settings allow multiple instances of SPFLite, then 2nd and subsequent instances will </span><span class="rvts11">not</span><span class="rvts12"> attempt to re-open the set of files again.</span></p>
+<p class="rvps6" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create EPub books</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with The Interface</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with The Interface">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with The Interface" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithTheInterface"
+		  data-hnd-context="17"
+		  data-hnd-title="Working with The Interface"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with The Interface</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts11">There are many common coding requirements which will be needed by many macros. Below are small common coding techniques showing how these various requirements can be handled. These are </span><span class="rvts13">not</span><span class="rvts11"> full, complete macros but only small code blocks showing one particular aspect.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Fragments include:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Accessing%20macro%20operands%20as%20Line%20Range%20operands">Accessing macro operands as Line Range operands</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Accessing%20all%20macro%20operands%20as%20a%20list">Accessing all macro operands as a list</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Modifying%20data%20in%20a%20text%20line">Modifying data in a text line</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Setting%20a%20final%20Return%20Code%20and%20Message%20from%20a%20Macro">Setting a final Return Code and Message from a Macro</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Setting%20a%20new%20cursor%20location%20to%20be%20used%20when%20the%20macro%20ends">Setting a new cursor location to be used when the macro ends</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Perform%20a%20simple%20action%20on%20all%20lines%20in%20a%20file">Perform a simple action on all lines in a file</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Use%20the%20FIND%20command%20to%20locate%20text%20lines%20to%20process">Use the FIND command to locate text lines to process</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Locate%20text%20lines%20to%20process%20using%20non-FIND%20criteria">Locate text lines to process using non-FIND criteria</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Insert%20a%20New%20Text%20line%20into%20the%20File">Insert a New Text line into the File</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Search%20for%20and%20process%20all%20lines%20with%20a%20specific%20Tag%20ID">Search for and process all lines with a specific Tag ID</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Locate%20'Problem'%20lines%20and%20add%20a%20NOTE%20line%20to%20mark%20them">Locate 'Problem' lines and add a NOTE line to mark them</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Using%20Global%20storage%20to%20communicate%20between%20Macros">Using Global storage to communicate between Macros</a></p>
+<p class="rvps4"><a class="rvts12" href="WorkingwithTheInterface.html#Create%20a%20new%20Line%20Command">Create a new Line Command</a></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><a name="Accessing macro operands as Line Range operands"></a>
+<span class="rvts13">Accessing macro operands as Line Range operands</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Assume a macro which accepts two operands, a starting and an ending line range. </span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">dim fromlptr, tolptr as number</span></p>
+<p class="rvps7"><span class="rvts14">fromlptr = Get_LPtr(Get_Arg$(1)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Fetch </span><span class="rvts18">from</span><span class="rvts14"> operand</span></p>
+<p class="rvps7"><span class="rvts14">tolptr = Get_LPtr(Get_Arg$(2)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Fetch </span><span class="rvts18">to</span><span class="rvts14"> operand</span></p>
+<p class="rvps7"><span class="rvts14">if fromlptr = 0 or _ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Validate what we got </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; tolptr &nbsp; = 0 or _ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; fromlptr &gt; tolptr then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; Halt(FAIL, "From / To line pointers missing or invalid")</span></p>
+<p class="rvps7"><span class="rvts14">end if</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">The use of </span><span class="rvts14">Get_LPtr</span><span class="rvts11">&nbsp;</span><span class="rvts13"> </span><span class="rvts11">to convert the arguments to internal line pointer format. After this code the </span><span class="rvts14">fromlptr</span><span class="rvts11"> and </span><span class="rvts14">tolptr </span><span class="rvts11">variables are all ready to be used in further processing code. The </span><span class="rvts13">if</span><span class="rvts11"> statement uses line continuation characters &nbsp;</span><span class="rvts13">_</span><span class="rvts11"> to format the statement as one test per line. (Without the underscore, each </span><span class="rvts13">thinBasic</span><span class="rvts11"> statement ends on the line it starts on. This is a standard BASIC coding convention.)</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">Macro support also allows a more structured form which automatically fetches command operands. Here's the above sample done in that structured format:</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' MyMacro.MACRO</span></p>
+<p class="rvps7"><span class="rvts14">SUB MainLine(FromArg as string, ToArg as string)</span></p>
+<p class="rvps7"><span class="rvts14">dim fromlptr, tolptr as number</span></p>
+<p class="rvps7"><span class="rvts14">fromlptr = Get_LPtr(FromArg) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Convert the </span><span class="rvts18">from</span><span class="rvts14"> operand</span></p>
+<p class="rvps7"><span class="rvts14">tolptr = Get_LPtr(ToArg) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Convert the </span><span class="rvts18">to</span><span class="rvts14"> operand</span></p>
+<p class="rvps7"><span class="rvts14">if fromlptr = 0 or _ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Validate what we got </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; tolptr &nbsp; = 0 or _ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; fromlptr &gt; tolptr then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; Halt(FAIL, "From / To line pointers missing or invalid")</span></p>
+<p class="rvps7"><span class="rvts14">end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps7"><span class="rvts14">END SUB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' End of MainLine SUB </span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps7"><span class="rvts11">And a third method is also available, particularly useful with macros that may have many operands available. See </span><a class="rvts12" href="AccessingCommandLineOperands.html#Full%20Parse%20Access">Full Parse Access</a><span class="rvts11"> for details.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Accessing all macro operands as a list"></a>
+<span class="rvts13">Accessing all macro operands as a list</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Assume a macro which accepts any number of operands, and processes each one at a time.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">dim OpIndex as number</span></p>
+<p class="rvps7"><span class="rvts14">dim Operand as string</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">if Get_Arg_Count = 0 then halt(FAIL, "No operands are present")</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14">for OpIndex = 1 to Get_Arg_Count &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Loop through operands</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; Operand = Get_Arg$(OpIndex) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Fetch the operand</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; ... process each Operand value ... ' Process it</span></p>
+<p class="rvps7"><span class="rvts14">next </span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">This uses a simple FOR / NEXT loop to fetch and process each operand.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Modifying data in a text line"></a>
+<span class="rvts13">Modifying data in a text line</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Assuming the macro has a valid line pointer to a specific data line, there are a variety of methods to change the text.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts22">Replace the entire line</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This is done </span><span class="rvts11">with the </span><span class="rvts18">Set_Line</span><span class="rvts11"> function. </span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;</span><span class="rvts18">Set_Line</span><span class="rvts14">(</span><span class="rvts67">line-ptr, replacement-text</span><span class="rvts14">)</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Which will completely replace any existing text in the line with the </span><span class="rvts67">replacement-text</span><span class="rvts11"> value</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps7"><span class="rvts22">Replace a substring of the text</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This is done with the &nbsp;</span><span class="rvts18">SPF_REP</span><span class="rvts11"> function</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_REP</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column, replacement-text</span><span class="rvts14">)</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Which will completely replace a portion of the existing text, starting at </span><span class="rvts67">column</span><span class="rvts11"> with the </span><span class="rvts67">replacement-text</span><span class="rvts11">. If the existing text is less than </span><span class="rvts67">column</span><span class="rvts11"> characters long, it will be first extended with spaces.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts22">Insert a text string into the existing text</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This is done with the &nbsp;</span><span class="rvts18">SPF_INS</span><span class="rvts11"> function</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_INS</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column, insert-text</span><span class="rvts14">)</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Which will insert a string (</span><span class="rvts67">insert-text</span><span class="rvts11">) into existing text, following the &nbsp;</span><span class="rvts67">column</span><span class="rvts11"> position. If the existing text is less than </span><span class="rvts67">column</span><span class="rvts11"> characters long, it will be first extended with spaces.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts22">Overlay a text string into the existing text</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This is done with the &nbsp;</span><span class="rvts18">SPF_OVR</span><span class="rvts11"> function</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_OVR</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column, overlay-text</span><span class="rvts14">)</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps40"><span class="rvts11">The SPF_OVR function will overlay a character string within a data line starting at a specified column. Overlay is done by comparing relative characters within the overlay area and then copying characters from the provided string to the data line only if the same relative character in the data line is a blank. This is identical in function to the SPFLite line commands </span><span class="rvts13">CC</span><span class="rvts11"> / </span><span class="rvts13">OO</span><span class="rvts11">.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts22">Overlay Replace a text string into the existing text</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps5"><span class="rvts11">This is done with the &nbsp;</span><span class="rvts18">SPF_OVR_REP</span><span class="rvts11"> function</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SPF_OVR_REP</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column, overlay-text</span><span class="rvts14">)</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps40"><span class="rvts11">The SPF_OVR_REP function will overlay a character string within a data line starting at a specified column. Overlay replace is similar to Overlay (above) except that Overlay Replace gives priority to the </span><span class="rvts13">new</span><span class="rvts11"> character string. The Overlay is done by comparing relative characters within the overlay area and then copying characters from the provided new string </span><span class="rvts13">which are non-blank </span><span class="rvts11">to the data line regardless of the contents of the data line. Blanks in the new character string are not copied, thus leaving the original data line characters untouched. This is identical in function to the SPFLite line commands </span><span class="rvts13">CC</span><span class="rvts11"> / </span><span class="rvts13">ORR</span><span class="rvts11">.</span></p>
+<p class="rvps40"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Setting a final Return Code and Message from a Macro"></a>
+<span class="rvts13">Setting a final Return Code and Message from a Macro</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">When a macro completes, it is often useful to have SPFLite issue a status message to indicate the relative success or failure of the macro processing. For some macros, this message might be the only desired output (for example, from a word-counting macro). This can be done by either of two very similar functions. </span><span class="rvts14">Set_Msg</span><span class="rvts11"> and </span><span class="rvts14">Halt</span><span class="rvts11">.&nbsp;</span><span class="rvts11"> The difference is that </span><span class="rvts14">Set_Msg</span><span class="rvts11"> establishes the RC and message values and macro processing continues. </span><span class="rvts14">Halt</span><span class="rvts11"> establishes the values and terminates the macro immediately.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Msg("This macro ran successfully")</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Msg(0, "The number of words in the file is: " + TSTR$(wordctr))</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Halt(4, "There were no strings found")</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Halt(FAIL, "A required operand is missing")</span></p>
+<p class="rvps7"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The first operand of </span><span class="rvts14">Set_Msg/Halt</span><span class="rvts11"> &nbsp;is optional, but if provided, and the value is numeric, it is assumed to be the desired return code for the macro, and the second is the message string.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the first operand is a string operand, it is assumed to be the message text, and a default Return Code value of 0 (zero) is assumed.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Note the first example above uses the default RC format, the other three examples provide specific RC values.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">A return code of </span><span class="rvts13">0</span><span class="rvts11"> means the macro was successful; </span><span class="rvts13">4</span><span class="rvts11"> means you wish to issue a warning, and </span><span class="rvts13">8</span><span class="rvts11"> means that the macro has "failed", based on your definition of what you mean for the macro to fail.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Rather than hard-coding these values, you can specify them symbolically, using </span><span class="rvts13">OK</span><span class="rvts11"> for 0, </span><span class="rvts13">WARN</span><span class="rvts11"> for 4 and </span><span class="rvts13">FAIL</span><span class="rvts11"> for 8.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For non-Zero RC values, SPFLite will format the value and&nbsp;</span><span class="rvts13"> </span><span class="rvts11">prefix the message text with </span><span class="rvts13">RC=nn: &nbsp; &nbsp;</span><span class="rvts11">e.g</span><span class="rvts14">. RC=8: Missing search string</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">For compatibility with future releases of SPFLite, the return code operands you use should only contain 0, 4 or 8, or the symbolic names for them.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Setting a new cursor location to be used when the macro ends"></a>
+<span class="rvts13">Setting a new cursor location to be used when the macro ends</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You may optionally set a new cursor location to be used on macro exit. If you do not, the cursor will remain where it was when the macro started </span><span class="rvts13">or</span><span class="rvts11"> where some other SPFLite command positioned it, if SPFLite command(s) were invoked by the macro.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The Set_Csr function provides the line pointer, the column number, and an optional length value.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the column number provided is zero, the cursor will be placed in the line number area of the line.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the optional length parameter is zero, no text will be highlighted.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the optional length parameter </span><span class="rvts13">is</span><span class="rvts11"> provided, then the text at the cursor location, for the specified length, will be highlighted.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Csr</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column</span><span class="rvts14">, 0) &nbsp; &nbsp;' Cursor to line-ptr, column, with no highlighting</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Csr</span><span class="rvts14">(</span><span class="rvts67">line-ptr</span><span class="rvts14">, 0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Cursor to the line number area of line-ptr</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Csr</span><span class="rvts14">(</span><span class="rvts67">line-ptr, column</span><span class="rvts14">, 5) &nbsp; &nbsp;' Cursor to line-ptr, column, with a 5 chars highlighted</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Perform a simple action on all lines in a file"></a>
+<span class="rvts13">Perform a simple action on all lines in a file</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Assume a portion of macro which wants to perform an action on all lines in the file.</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim i as number</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">for i = Get_First_Lptr to Get_Last_Lptr &nbsp; &nbsp; &nbsp; ' Loop through the file </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; if Is_Data(i) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Doing only data lines </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;Set_Line(i, ucase$(Get_Line$(i))) &nbsp; &nbsp; &nbsp; ' SAMPLE ACTION: uppercase the text</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps7"><span class="rvts18">next &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">This uses a simple FOR / NEXT loop to process each line. An </span><span class="rvts14">Is_Data</span><span class="rvts11"> test ensures we only process text data lines rather than on special lines. The action performed here is just a simple uppercase function on each line's data.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">An alternate method using the </span><span class="rvts14">Get_Next_LPtr</span><span class="rvts11"> function could be:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim i as number value 1</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">i = Get_Next_LPtr(i, 1, "DATA") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Adjust i to the next DATA line</span></p>
+<p class="rvps7"><span class="rvts18">do while istrue i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' If not end of file </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; Set_Line(i, ucase$(Get_Line$(i))) &nbsp; &nbsp; &nbsp; ' SAMPLE ACTION: uppercase the text</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; i = Get_Next_LPtr(i, 1, "DATA") &nbsp; &nbsp; &nbsp; &nbsp; ' Adjust i to the next DATA line</span></p>
+<p class="rvps7"><span class="rvts18">loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' loop-de-loop</span></p>
+<p class="rvps4"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Starting in SPFLite version 8.4, you can write code to access all lines in a file using a simplified syntax. The </span><span class="rvts13">WHEN</span><span class="rvts11"> option allows the check for the correct type of line, right on the </span><span class="rvts13">FOR</span><span class="rvts11"> statement. It operates just like the code above, without requiring to have an </span><span class="rvts13">IF</span><span class="rvts11"> statement nested inside the </span><span class="rvts13">FOR</span><span class="rvts11">:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim i as number</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">for i = Get_First_Lptr to Get_Last_Lptr WHEN Is_Data(i) &nbsp;</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; Set_Line(i, ucase$(Get_Line$(i))) &nbsp; &nbsp; &nbsp; ' SAMPLE ACTION: uppercase the text</span></p>
+<p class="rvps7"><span class="rvts18">next</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts13">Note</span><span class="rvts11">: &nbsp;Thanks to Eros Olmi of </span><span class="rvts77">thinBasic</span><span class="rvts11"> for adding this support to his Basic engine for us.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Use the FIND command to locate text lines to process"></a>
+<span class="rvts13">Use the FIND command to locate text lines to process</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To locate specific lines to process using the FIND command use the following code. Assume the string to search for is already set up in the variable </span><span class="rvts14">lookfor</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts18">SPF_Cmd("FIND FIRST " &amp; lookfor) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Issue 1st FIND cmd </span></p>
+<p class="rvps7"><span class="rvts18">do while Get_RC = 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' while found </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; IF </span><span class="rvts34">other tests needed to 'qualify' this record for processing</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; ... process the found record - - - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Process it</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; ... The line's text can be obtained with</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; ... Get_Line$(Get_Find_LPtr))</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; ... The found string will be at the column provided by</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; ... Get_Find_Col</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; SPF_Cmd("RFIND") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Look some more </span></p>
+<p class="rvps7"><span class="rvts18">loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">The ...process the found record ... code can use the data from </span><span class="rvts14">Get_Find_LPtr</span><span class="rvts11">, &nbsp;</span><span class="rvts14">Get_Find_Col</span><span class="rvts11"> and </span><span class="rvts14">Get_Find_Len</span><span class="rvts11"> functions since the code is only executed following a successful FIND command ( Get_RC = 0 ). </span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Locate text lines to process using non-FIND criteria"></a>
+<span class="rvts13">Locate text lines to process using non-FIND criteria</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To locate specific lines to process using some other criteria than what the FIND command can provide, use the following code. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim i as number </span></p>
+<p class="rvps7"><span class="rvts18">for i = 1 to Get_Last_LPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Let's search </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; if is_Data(i) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Only data lines </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;if ... special criteria test ... then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Examine the line</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; ... process the line - - - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts18">next i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">The ...process the found record ... code can use the data from </span><span class="rvts14">Get_Find_LPtr</span><span class="rvts11">, &nbsp;</span><span class="rvts14">Get_Find_Col</span><span class="rvts11"> and </span><span class="rvts14">Get_Find_Len</span><span class="rvts11"> functions since the code is only executed following a successful FIND command ( Get_RC = 0 ). </span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Insert a New Text line into the File"></a>
+<span class="rvts13">Insert a New Text line into the File</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This sample assumes the macro has already determined the line-pointer after which a line is to be inserted. We will assume this is in the variable </span><span class="rvts14">curr_Lptr</span><span class="rvts11">. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;SPF_CMD("LINE N1 !" &amp; TSTR$(curr_Lptr)) ' Insert a line after curr one </span></p>
+<p class="rvps41"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;Set_Line(curr_Lptr + 1, "New text for the new line")</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;INCR curr_Lptr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Adjust curr_Lptr for the inserted line </span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Note: &nbsp;</span><span class="rvts11">The new text line is inserted using the primary command </span><span class="rvts13">LINE</span><span class="rvts11">. The Set_Line function adds the new text, and uses </span><span class="rvts13">Curr_Lptr + 1</span><span class="rvts11"> for the line number, since that will be the new line pointer for the inserted line. The third line, which increments the </span><span class="rvts13">Curr_Lptr</span><span class="rvts11"> value, is what would probably be needed in most macros to adjust the line pointer value for the inserted line. That's because </span><span class="rvts13">Curr_Lptr</span><span class="rvts11"> points to the "current" line, and the line inserted </span><span class="rvts33">after</span><span class="rvts11"> the current line would have a line pointer one greater than the current one. Whether this would actually be needed is of course dependent on the design of the logic flow in the specific macro.</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts11">If you wish to use the Line </span><span class="rvts13">Number</span><span class="rvts11"> value directly (rather than a </span><span class="rvts13">pointer</span><span class="rvts11">), the first line of this example can be specified using the . (period) notation like this:</span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;SPF_CMD("LINE N1 ." &amp; TSTR$(Get_LNUM(curr_Lptr))) &nbsp;</span></p>
+<p class="rvps42"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Search for and process all lines with a specific Tag ID"></a>
+<span class="rvts13">Search for and process all lines with a specific Tag ID</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This sample locates all lines with a Tag of </span><span class="rvts13">:ABC</span><span class="rvts11"> and processes them.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim i as number value 1</span></p>
+<p class="rvps7"><span class="rvts18">dim tagname as string value ":ABC"</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">i = Get_Next_LPtr(i, 1, tagname) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Adjust i to the next :ABC tagged line</span></p>
+<p class="rvps7"><span class="rvts18">do while istrue i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' If not end of file </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; Set_Line(i, ucase$(Get_Line$(i)) &nbsp; &nbsp; &nbsp; &nbsp;' SAMPLE ACTION: uppercase the text</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; i = Get_Next_LPtr(i, 1, tagname) &nbsp; &nbsp; &nbsp; &nbsp;' Adjust i to the next DATA line</span></p>
+<p class="rvps7"><span class="rvts18">loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' loop-de-loop</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><a name="Locate 'Problem' lines and add a NOTE line to mark them"></a>
+<span class="rvts13">Locate 'Problem' lines and add a NOTE line to mark them</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This sample will locate lines which match some unique criteria, and insert a NOTE line following the line to flag the problems.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">dim cLPtr as number value 1</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps7"><span class="rvts18">while cLPtr &lt; Get_Last_LPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Loop through all lines</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; if Is_Data(cLPtr) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Only do data lines</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;if ...special criteria one ... then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' A problem line?</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_CMD("LINE NOTE !" + TSTR$(cLPtr)) &nbsp; &nbsp; &nbsp; &nbsp;' Insert a NOTE line after this one </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; Set_Line(cLPtr + 1, "Check this line - special criteria one") </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; incr cLPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Adjust cLPtr for the inserted line </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;elseif ...special criteria two ... then &nbsp; &nbsp; &nbsp; &nbsp; ' A different problem line?</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_CMD("LINE NOTE !" + TSTR$(cLPtr)) &nbsp; &nbsp; &nbsp; &nbsp;' Insert a NOTE line after this one </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; Set_Line(cLPtr + 1, "Check this line - special criteria two") </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; incr cLPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Adjust cLPtr for the inserted line </span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' End of special tests</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' End of Is_Data tests</span></p>
+<p class="rvps7"><span class="rvts18"> &nbsp; incr cLPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Bump to next line </span></p>
+<p class="rvps7"><span class="rvts18">wend </span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Using Global storage to communicate between Macros"></a>
+<span class="rvts13">Using Global storage to communicate between Macros</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">In this sample, Macro A saves the location of the cursor when it is invoked in Global storage. Later, another macro Macro B wishes to return the cursor to the original location stored by Macro A.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Macro A</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">'--- Save where we are for Macro B, use key names MacALine and MacACol for global storage pool </span></p>
+<p class="rvps5"><span class="rvts14">Set_Gbl_Num("MacALine", Get_LNum(Get_Csr_LPtr)) &nbsp; &nbsp; &nbsp;' Save where the cursor is</span></p>
+<p class="rvps5"><span class="rvts14">Set_Gbl_Num("MacACol", Get_Csr_Col) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts13">Macro B</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps5"><span class="rvts14">dim i, j as number &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">i = Get_Gbl_Num("MacALine") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get saved line number</span></p>
+<p class="rvps5"><span class="rvts14">j = Get_Gbl_Num("MacACol") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Get saved column</span></p>
+<p class="rvps5"><span class="rvts14">if i = 0 then halt(FAIL, "No location saved by Macro A")</span></p>
+<p class="rvps5"><span class="rvts14">Set_Csr(Get_LPtr(i), j, 0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Put cursor back where it was</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Create a new Line Command"></a>
+<span class="rvts13">Create a new Line Command</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">To create a new line command, do the following:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Choose your command name. It must be short and cannot conflict with any existing line or primary commands. </span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Line-command macro names by nature must be short; otherwise they cannot be entered in the sequence area of the edit screen.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Line-command macros cannot contain digits in the name.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">It is possible to have a line-command macro with a single-letter name. Bear in mind that most of the single letter commands are already taken by SPFLite. The letters remaining available for use as single-letter macro names are &nbsp;</span><span class="rvts13">E &nbsp;K &nbsp;P &nbsp;Q &nbsp;U &nbsp;V &nbsp; Y&nbsp;</span><span class="rvts11"> and &nbsp;</span><span class="rvts13">Z</span><span class="rvts11">. The macro files such macros are stored in would use the normal naming conventions. So, an </span><span class="rvts13">E</span><span class="rvts11"> line-command macro would be stored in the file </span><span class="rvts13">E.MACRO</span><span class="rvts11">.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">For our example, we'll use </span><span class="rvts13">CT </span><span class="rvts11">(for Center Text). SPFLite will also automatically recognize </span><span class="rvts13">CTT</span><span class="rvts11"> as the block form of this command, and will process any modifiers that imply a block, such as </span><span class="rvts13">n</span><span class="rvts11"> or a </span><span class="rvts13">/</span><span class="rvts11"> or </span><span class="rvts13">\</span><span class="rvts11"> modifier.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">You can also force a line macro of any format to be a Block or single line macro; see "</span><a class="rvts15" href="Macroformatandstructure.html">Macro Format and Structure</a><span class="rvts11">" for details.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">Create the macro name as the "singular form" of </span><span class="rvts13">CT.MACRO</span><span class="rvts11"> (not </span><span class="rvts13">CTT.MACRO</span><span class="rvts11">)</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts11">There is </span><span class="rvts13">no other</span><span class="rvts11"> setup required to activate this as a line command. The presence of</span><span class="rvts13"> CT.MACRO</span><span class="rvts11"> in the \MACROS folder is sufficient.</span></li>
+</ul></ul>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Example:</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts14">' CT.MACRO</span></p>
+<p class="rvps7"><span class="rvts14">dim tt, tt2 as string &nbsp;</span></p>
+<p class="rvps7"><span class="rvts14">dim lno1, lno2, width, i as number</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; ' Ensure we're called correctly</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; if Is_Line_Cmd = FALSE then Halt(fail, "CT/CTT macro was not issued as a line command")</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; '----- Get the line number range &nbsp;</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; lno1 = Get_Src1_Lptr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' From line</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; lno2 = Get_Src2_Lptr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' To line</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; width = Get_Line_Op &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Get the centering width</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; if width = 0 then width = Get_RBound &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; for i = lno1 to lno2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Loop through the line range</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;if Is_Data(i) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Just Data lines</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; tt = trim$(Get_Line$(i)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get the trimmed text</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; if width = 0 then width = Get_Line_Len(i) &nbsp; &nbsp;' Use line length if no other. </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; if len(tt) &gt; width then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Center possible?</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Halt(warn, "One or more lines exceed Center length")</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tt2 = &nbsp;repeat$((width - len(tt)) / 2, " ") + tt ' Center it</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Set_Line(i, tt2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Stuff it back </span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; next &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; halt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Done</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts11">Note:</span><span class="rvts13"> &nbsp;</span><span class="rvts11">The check of </span><span class="rvts13">Is_Line_Cmd </span><span class="rvts11">to ensure the macro is invoked as a line command. The line range to be processed is obtained from </span><span class="rvts13">Get_Src1_LPtr</span><span class="rvts11"> and </span><span class="rvts13">Get_Src2_LPtr</span><span class="rvts11">. For a single line selection, these two values would be identical. A </span><span class="rvts13">FOR</span><span class="rvts11"> / </span><span class="rvts13">NEXT</span><span class="rvts11"> loop is used to process each line. An </span><span class="rvts13">Is_Data</span><span class="rvts11"> test ensures we only process text data lines and not special lines.</span></p>
+<p class="rvps7" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

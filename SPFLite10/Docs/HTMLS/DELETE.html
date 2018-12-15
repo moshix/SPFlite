@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>DELETE - Delete Selected Lines</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DELETE - Delete Selected Lines">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="DELETE - Delete Selected Lines" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="DELETE"
+		  data-hnd-context="97"
+		  data-hnd-title="DELETE - Delete Selected Lines"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>DELETE - Delete Selected Lines</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts36">Syntax</span></p>
+<p class="rvps4"><span class="rvts130"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="209" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps225"><span class="rvts89">DELETE</span></p>
+<p class="rvps225"><span class="rvts89"><br/></span></p>
+</td>
+<td width="758" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps2"><span class="rvts89">DUP</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps225"><span class="rvts89">DELETE</span></p>
+</td>
+<td width="758" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps2"><span class="rvts89">{ NOTE | xNOTE | ZNOTE }</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts89">DELETE</span></p>
+</td>
+<td width="758" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">[ string [ PREFIX | SUFFIX | WORD | </span><span class="rvts131">CHAR</span><span class="rvts89"> ] ] </span></p>
+<p class="rvps2"><span class="rvts89">[ start-column [ end-column ] ]</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria ]</span></p>
+<p class="rvps2"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89">[ ALL | FIRST | LAST | NEXT | PREV ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts130"><br/></span></p>
+<p class="rvps4"><span class="rvts36">Operands</span></p>
+<p class="rvps5"><span class="rvts130"><br/></span></p>
+<p class="rvps5"><span class="rvts35">There are three basic modes of </span><span class="rvts36">DELETE</span><span class="rvts35"> operation. </span><span class="rvts36">DEL DUP</span><span class="rvts35"> is single purposed to delete adjacent duplicate lines. </span><span class="rvts36">DEL NOTE</span><span class="rvts35"> is used to delete NOTE lines within a specified range while the third provides a more general use delete function that can delete data lines that match a wide range of matching capabilities.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Note that </span><span class="rvts36">DELETE DUP</span><span class="rvts35"> and </span><span class="rvts36">DELETE NOTE</span><span class="rvts35"> do not permit other </span><span class="rvts36">DELETE</span><span class="rvts35"> keywords to be used. In particular, you </span><span class="rvts36">cannot</span><span class="rvts35"> issue a command like </span><span class="rvts36">DELETE DUP ALL</span><span class="rvts35"> or </span><span class="rvts36">DELETE NOTE ALL</span><span class="rvts35">. Within the specified line-control range, or within the entire edit file, </span><span class="rvts36">all</span><span class="rvts35"> duplicates or </span><span class="rvts36">all</span><span class="rvts35"> notes are deleted;</span><span class="rvts20"> the "ALL" is implied but cannot be used on these commands.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Note that to distinguish these special command modes, if the words </span><span class="rvts36">DUP</span><span class="rvts35"> or </span><span class="rvts36">NOTE</span><span class="rvts35"> are to be used as </span><span class="rvts36">strings </span><span class="rvts35">in the general purpose delete function, they must be enclosed in quotes to prevent them being treated as keywords.</span></p>
+<p class="rvps4"><span class="rvts130"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps9"><span class="rvts89">DUP</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Specifies this command is to delete adjacent duplicate lines from the line range. The keyword </span><span class="rvts36">DUP</span><span class="rvts35"> is reserved, and may </span><span class="rvts36">not</span><span class="rvts35"> be specified as </span><span class="rvts36">DUPS</span><span class="rvts35">, </span><span class="rvts36">DUPLICATE</span><span class="rvts35"> or </span><span class="rvts36">DUPLICATES</span><span class="rvts35">. When determining if two lines are duplicates of each other, SPFLite checks that they are of identical length and are byte-for-byte identical for the entire length of the lines, including any leading and trailing blanks that may exist. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Note that the duplicate-removal processing of </span><span class="rvts36">SORT UNIQ</span><span class="rvts35"> is </span><span class="rvts36">not the same</span><span class="rvts35"> as </span><span class="rvts36">DELETE DUP</span><span class="rvts35">. Refer to the </span><a class="rvts33" href="SORTSorttheEditData.html">SORT</a><span class="rvts35"> command for more information.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps9"><span class="rvts89">NOTE</span></p>
+<p class="rvps9"><span class="rvts89">xNOTE</span></p>
+<p class="rvps9"><span class="rvts89">ZNOTE</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts36">NOTE</span><span class="rvts35"> specifies this command is to delete </span><span class="rvts83">all</span><span class="rvts35"> </span><span class="rvts36">=NOTE&gt;</span><span class="rvts35"> &nbsp;lines from the line range. </span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps2"><span class="rvts36">xNOTE</span><span class="rvts35"> specifies this command is to delete </span><span class="rvts83">all</span><span class="rvts35"> extended </span><span class="rvts36">xNOTE&gt;</span><span class="rvts35"> &nbsp;lines from the line range, where '</span><span class="rvts36">x</span><span class="rvts35">' is any letter from </span><span class="rvts36">A</span><span class="rvts35"> to </span><span class="rvts36">Y</span><span class="rvts35">. To delete all extended notes of type </span><span class="rvts36">A</span><span class="rvts35">, issue </span><span class="rvts36">DELETE ANOTE</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">ZNOTE</span><span class="rvts35"> specifies this command is to delete </span><span class="rvts83">all</span><span class="rvts35"> extended </span><span class="rvts36">xNOTE&gt;</span><span class="rvts35"> &nbsp;lines </span><span class="rvts287">of all types</span><span class="rvts35"> from the line range, where '</span><span class="rvts36">x</span><span class="rvts35">' is any letter from </span><span class="rvts36">A</span><span class="rvts35"> to </span><span class="rvts36">Y</span><span class="rvts35">. </span><span class="rvts36">DELETE ZNOTE</span><span class="rvts35"> will </span><span class="rvts83">not</span><span class="rvts35"> delete "plain" </span><span class="rvts36">=NOTE&gt;</span><span class="rvts35"> lines. As a reminder, you cannot create extended </span><span class="rvts36">xNOTE</span><span class="rvts35"> lines of type </span><span class="rvts36">Z</span><span class="rvts35">; that is, </span><span class="rvts36">ZNOTE</span><span class="rvts35"> is not allowed as a line command.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The keyword </span><span class="rvts36">NOTE</span><span class="rvts35"> and the forms </span><span class="rvts36">ANOTE</span><span class="rvts35"> through </span><span class="rvts36">ZNOTE</span><span class="rvts35"> are reserved. </span><span class="rvts36">NOTE</span><span class="rvts35"> may </span><span class="rvts36">not</span><span class="rvts35"> be specified as </span><span class="rvts36">NOTES</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">string</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts35">If </span><span class="rvts36">string</span><span class="rvts35"> is present, a string-based delete is requested; only lines containing </span><span class="rvts36">string</span><span class="rvts35"> are eligible for deletion within the selected line range. If neither </span><span class="rvts36">ALL</span><span class="rvts35">, </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> is specified on a string-based </span><span class="rvts36">DELETE</span><span class="rvts35">, </span><span class="rvts36">NEXT</span><span class="rvts35"> is assumed. Note that a “string-based delete” means the entire line having the string is deleted; it does not mean to delete the string alone from the line. The string may be unquoted, or simply quoted, or may be any of the standard string types </span><span class="rvts36">C</span><span class="rvts35">,</span><span class="rvts36"> T</span><span class="rvts35">, </span><span class="rvts36">X</span><span class="rvts35">, </span><span class="rvts36">P</span><span class="rvts35"> or </span><span class="rvts36">R</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If </span><span class="rvts36">string</span><span class="rvts35"> is omitted, a line-based delete is requested; lines within the selected line range are deleted. If neither </span><span class="rvts36">ALL</span><span class="rvts35">, </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> is specified on a </span><span class="rvts36">non</span><span class="rvts35">-string-based </span><span class="rvts36">DELETE</span><span class="rvts35">, </span><span class="rvts36">ALL</span><span class="rvts35"> is assumed.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps9"><span class="rvts89">CHARS | </span></p>
+<p class="rvps9"><span class="rvts89">WORD | </span></p>
+<p class="rvps9"><span class="rvts89">PREFIX | </span></p>
+<p class="rvps9"><span class="rvts89">SUFFIX</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts35">These options are allowed only for string-based deletes; they describe the “string context” in the same way that a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> command does. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If omitted for a string-based delete, the string will be searched for in </span><span class="rvts36">WORD</span><span class="rvts35"> mode if </span><span class="rvts36">C W</span><span class="rvts35"> or </span><span class="rvts36">T W</span><span class="rvts35"> appears in the middle of the status line, and in </span><span class="rvts36">CHARS</span><span class="rvts35"> mode if </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">W</span><span class="rvts35"> appears in the middle of the status line. </span><span class="rvts36">WORD</span><span class="rvts35"> mode or </span><span class="rvts36">CHARS</span><span class="rvts35"> mode can be set by </span><span class="rvts36">FIND WORD</span><span class="rvts35"> or </span><span class="rvts36">FIND CHARS</span><span class="rvts35">, respectively.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">ALL</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts35">For line-based deletes, </span><span class="rvts36">ALL</span><span class="rvts35"> is allowed mainly for compatibility with prior releases. </span><span class="rvts36">ALL</span><span class="rvts35"> is assumed if not specified, except for string-based deletes which assume NEXT. Note that to delete the entire file, </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> is permitted. When deleting the entire file, the command </span><span class="rvts36">DELETE</span><span class="rvts35"> must be fully spelled out and cannot be abbreviated as </span><span class="rvts36">DEL</span><span class="rvts35">, and the </span><span class="rvts36">ALL</span><span class="rvts35"> keyword is not assumed but must be explicitly specified. These rules help prevent accidental deletion of the file. A lone </span><span class="rvts36">DELETE</span><span class="rvts35"> with no other options is illegal.</span></p>
+<p class="rvps2"><span class="rvts284"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">line-control-range</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" height="43" style="padding: 1px;"><div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="1132" height="46" style="padding: 1px;"><p class="rvps225"><span class="rvts139">start-column</span></p>
+<p class="rvps225"><span class="rvts139"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td width="602" height="43" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Left column of a range (with end-column) within which the search-string value must be found. If no end-column operand, then the search-string operand must be found starting in start-col.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">end-column</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Right column of a range (with start-column) within which the search-string value must be found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-selection-criteria</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the search-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">X | NX</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be deleted, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be deleted. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be eligible to be deleted.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">U | NU</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" style="padding: 1px;"><p class="rvps225"><span class="rvts139">FIRST or NEXT</span></p>
+</td>
+<td width="602" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the specified range and searches ahead to find the first occurrence in the specified line-control-range and delete that line. </span><span class="rvts11">NEXT</span><span class="rvts12"> is assumed for string based deletes.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" height="54" style="padding: 1px;"><p class="rvps225"><span class="rvts139">LAST or PREV</span></p>
+</td>
+<td width="602" height="54" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the bottom of the specified range and searches backward to find the last occurrence in the specified line-control-range and delete that line.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="209" height="54" style="padding: 1px;"><p class="rvps225"><span class="rvts139">TOP</span></p>
+</td>
+<td width="602" height="54" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the 2nd screen line (as ISPF does) if the line is not on the current screen. If TOP is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">DELETE</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">DEL</span></p>
+<p class="rvps5"><span class="rvts14">PREFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">PRE </span><span class="rvts13">or</span><span class="rvts14"> PFX</span></p>
+<p class="rvps5"><span class="rvts14">SUFFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUF </span><span class="rvts13">or</span><span class="rvts14"> SFX</span></p>
+<p class="rvps5"><span class="rvts14">WORDS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">WORD</span></p>
+<p class="rvps5"><span class="rvts14">CHARS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CHAR</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts36">Description</span></p>
+<p class="rvps4"><span class="rvts130"><br/></span></p>
+<p class="rvps5"><span class="rvts11">DELETE</span><span class="rvts12"> removes lines from an edit session.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Specifying the Data to Delete</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Two methods of specifying the data are possible.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">The first is the classic ISPF method of specifying line numbers as operands to the </span><span class="rvts36">DELETE</span><span class="rvts35"> command. You have the full range of options allowed by SPFLite's extended line-control-range operands. </span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">Or, the lines may be marked by </span><span class="rvts36">C</span><span class="rvts35">/</span><span class="rvts36">CC</span><span class="rvts35"> line commands. </span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note carefully: </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">With SPFLite, </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> is a legal command, and it will delete the entire file. There are </span><span class="rvts36">NO</span><span class="rvts35"> “are you sure” safeguards. If you delete your entire file by mistake, immediately issue the command </span><span class="rvts36">UNDO</span><span class="rvts35"> to recover your file. Or, you may issue the </span><span class="rvts36">CANCEL</span><span class="rvts35"> command to prevent loss of data, but you will also lose any pending unsaved changes as well.</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">When issuing a </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> command, you must </span><span class="rvts36">fully spell out</span><span class="rvts35"> the command name </span><span class="rvts36">DELETE</span><span class="rvts35">. If you try to specify</span><span class="rvts36"> DEL ALL</span><span class="rvts35">, the command will be rejected. Since most users, by habit, type the shortest command they can, this provides a degree of protection against typing this command by mistake.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Depending on whether the </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> operands are specified, the data deleted will be the entire contents of the specified line range if these operands are omitted, or the specified subset (</span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35">) if the operands are specified. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When performing a string-based delete, the options </span><span class="rvts36">ALL</span><span class="rvts35">, </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> and </span><span class="rvts36">NEXT</span><span class="rvts35"> are all available. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When performing a line-based delete, the </span><span class="rvts36">ALL</span><span class="rvts35"> option is assumed if none of </span><span class="rvts36">ALL</span><span class="rvts35">, </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> are specified. However, to perform a list-based delete using </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35">, some type of ‘line qualification' must also be used. For example, you cannot just say </span><span class="rvts36">DELETE FIRST</span><span class="rvts35">, otherwise you will get the message, “No search string, but no ALL specified”. What you need for a valid line qualification to do a line-based delete using </span><span class="rvts36">FIRST</span><span class="rvts35">, </span><span class="rvts36">LAST</span><span class="rvts35">, </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">NEXT</span><span class="rvts35"> is one of the following:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">A defined </span><span class="rvts36">C</span><span class="rvts35">/</span><span class="rvts36">CC</span><span class="rvts35"> block</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">A pair of defined line labels on the </span><span class="rvts36">DELETE</span><span class="rvts35"> command</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">A defined line tag on the </span><span class="rvts36">DELETE</span><span class="rvts35"> command</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">An X or NX option on the </span><span class="rvts36">DELETE</span><span class="rvts35"> command</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<p class="rvps158"><span class="rvts36">Repeatable DELETE</span></p>
+<p class="rvps129"><span class="rvts35"><br/></span></p>
+<p class="rvps129"><span class="rvts35">Just as </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> can be selectively repeated using </span><span class="rvts36">RFIND</span><span class="rvts35"> (or </span><span class="rvts36">RLOCFIND</span><span class="rvts35">) and </span><span class="rvts36">RCHANGE</span><span class="rvts35">, so can the string-based version of </span><span class="rvts36">DELETE</span><span class="rvts35">. You can issue a command like </span><span class="rvts36">DELETE 'ABC'</span><span class="rvts35"> &nbsp;and use </span><span class="rvts36">RFIND</span><span class="rvts35">/</span><span class="rvts36">RCHANGE</span><span class="rvts35"> to selectively find and delete lines.</span></p>
+<p class="rvps129"><span class="rvts35"><br/></span></p>
+<p class="rvps129"><span class="rvts36">RFIND</span><span class="rvts35">, </span><span class="rvts36">RLOCFIND</span><span class="rvts35"> and </span><span class="rvts36">RCHANGE</span><span class="rvts35"> now have support to allow this action to be performed following an initial </span><span class="rvts36">DELETE</span><span class="rvts35"> command, when the </span><span class="rvts36">DELETE</span><span class="rvts35"> has a find-string operand. As a reminder, </span><span class="rvts36">RFIND</span><span class="rvts35"> (or </span><span class="rvts36">RLOCFIND</span><span class="rvts35">) is typically mapped to the F5 key, and </span><span class="rvts36">RCHANGE</span><span class="rvts35"> to the F6 key.</span></p>
+<p class="rvps129"><span class="rvts35"><br/></span></p>
+<p class="rvps129"><span class="rvts35">For example, if you place &nbsp;</span><span class="rvts36">DELETE 'ABC'</span><span class="rvts35"> on the command line, then press </span><span class="rvts36">F5</span><span class="rvts35"> instead of </span><span class="rvts36">Enter</span><span class="rvts35">, </span><span class="rvts36">DELETE</span><span class="rvts35"> will locate the next line containing </span><span class="rvts36">ABC</span><span class="rvts35">, </span><span class="rvts287">but will not delete it</span><span class="rvts35">. To actually "follow through" and delete that line, press </span><span class="rvts36">F6</span><span class="rvts35">. If you </span><span class="rvts36">don't</span><span class="rvts35"> want to delete that line, you can press </span><span class="rvts36">F5</span><span class="rvts35"> to find the </span><span class="rvts83">next</span><span class="rvts35"> line with </span><span class="rvts36">ABC</span><span class="rvts35">, or simply do something else.</span></p>
+<p class="rvps129"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Other examples of the DELETE command</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete all excluded lines:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE X</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL X</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete all non-excluded lines:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE NX</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL NX</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts344">To delete a range of lines using line numbers:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE 20 30</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL 20 30</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts344">To delete a range of lines using line labels:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE .HERE .THERE</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL .HERE .THERE</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete only excluded lines within a range of lines using line numbers:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE X 25 35</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL X 25 35</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete lines tagged with an :AB line tag:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE :AB</span></p>
+<p class="rvps75"><span class="rvts98">or</span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL :AB</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete all lines containing the “ABC”:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL ABC</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete all lines containing the “DEF” highlighted in RED:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL "DEF" RED</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To delete all unexcluded lines containing the text “abc” as a prefix:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">DELETE ALL T'abc' PREFIX NX</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts36">Note:</span><span class="rvts35"> &nbsp;</span><span class="rvts36">DELETE</span><span class="rvts35"> cannot be used to delete zero-length blank lines based on a string. See &nbsp;</span><a class="rvts33" href="NDELETE.html">NDELETE</a><span class="rvts35"> &nbsp;for an example of how to do this.</span></p>
+<p class="rvps228" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

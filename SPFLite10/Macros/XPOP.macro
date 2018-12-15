@@ -1,0 +1,16 @@
+' POP.MACRO
+' Pop back to the starting XF location, reset all related tags 
+' Refer to XF.macro for details
+'
+' Author: George Deluca 
+'
+dim i, j as number            
+dim ltag, lword as string            
+
+i = Get_Gbl_Num("XFLine")                             ' Get saved line number
+j = Get_Gbl_Num("XFCol")                              ' Get saved column
+if i = 0 then halt(FAIL, "No saved XF location")      ' 
+ltag = Get_Gbl_Str$("XFTag")                          ' Get the tag we used
+SPF_Cmd("TAG " + ltag + " OFF")                       ' Clear current ltag names 
+Set_Csr(Get_LPtr(i), j, 0)                            ' Put cursor on line 
+halt                                                  ' Done

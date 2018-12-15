@@ -1,0 +1,931 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>String Handling</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="String Handling">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="String Handling" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="StringHandling"
+		  data-hnd-context="8"
+		  data-hnd-title="String Handling"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>String Handling</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps46"><span class="rvts13">Note</span><span class="rvts11">: The following functions should not be considered a complete list of all available </span><span class="rvts13">thinBasic</span><span class="rvts11"> string functions, but this set will probably do for 99% of your requirements. If time permits, explore the full </span><span class="rvts13">thinBasic</span><span class="rvts11"> Help document to review the complete set. Enter </span><span class="rvts14">HELP thinBasic</span><span class="rvts11"> at the SPFLite command prompt to open the </span><span class="rvts13">thinBasic</span><span class="rvts11"> help file.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">ASC</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Number = ASC(string-expression [,position])</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts14">ASC</span><span class="rvts11"> returns the character code of a particular character in the </span><a class="rvts101" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11">. The returned value will be in the range of 0 to 255. </span></p>
+<p class="rvps45"><span class="rvts11">The optional </span><span class="rvts99">position</span><span class="rvts11"> parameter determines which character is to be checked. The first character is one, the second two, etc. If the </span><span class="rvts99">position</span><span class="rvts11"> parameter is missing, the first character is presumed. If </span><span class="rvts99">position</span><span class="rvts11"> is negative, </span><span class="rvts14">ASC</span><span class="rvts11"> counts from the end of the string in reverse. That is, -1 specifies the last character, -2 specifies the second to last character, etc.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">CHOOSE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">String = CHOOSE$(index, string-expression [,string-expression] ... )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Return one of several values, based upon the value of an index. It returns one of the parameters based upon the value of </span><span class="rvts33">index</span><span class="rvts11">. That is, if </span><span class="rvts33">index</span><span class="rvts11"> is one, choice1 is returned. If two, choice2 is returned, etc. If </span><span class="rvts33">index</span><span class="rvts11"> is not equal to one of the choice values, "" ( zero-length string) is returned.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">CHR$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">String = CHR$(expression [,expression] [,...] )</span></p>
+<p class="rvps2"><span class="rvts90"> String = CHR$(numvar1 to numvar2 [,...] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This function creates a string of characters. Arguments must be normal characters, or codes in the range of 0 to 255. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18">CHR$</span><span class="rvts11"> creates and returns a string. There are two forms of arguments available, and they may be intermixed in a single </span><span class="rvts18">CHR$</span><span class="rvts11"> function. The created string may contain no characters, one character, or multiple characters, depending upon the arguments you use. You may specify any number of arguments for this function.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If the argument is a numeric expression, it is translated into the character defined by that number. A character code of -1 is treated </span><span class="rvts59">as a special case. If you use it as an argument, </span><span class="rvts18">CHR$</span><span class="rvts59"> returns an empty (zero length) string for that character. For example,</span><span class="rvts105"> </span><span class="rvts18">CHR$(65, -1, 66)</span><span class="rvts11"> returns </span><span class="rvts18">"AB"</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18">CHR$(numvar1 TO numvar2)</span><span class="rvts11"> returns a sequence of all characters from </span><span class="rvts18">CHR$(numvar1)</span><span class="rvts11"> through </span><span class="rvts18">CHR$(numvar2)</span><span class="rvts11"> inclusive. The characters may be ascending or descending in sequence. For example,</span><span class="rvts91"> </span><span class="rvts18">CHR$(65 TO 70)</span><span class="rvts11"> returns the string </span><span class="rvts18">"ABCDEF"</span><span class="rvts11">. </span><span class="rvts18">CHR$(52 T0 50</span><span class="rvts42">)</span><span class="rvts11"> returns the string </span><span class="rvts18">"432"</span><span class="rvts11">, and </span><span class="rvts18">CHR$(65 TO 65)</span><span class="rvts11"> returns the string </span><span class="rvts18">"A"</span><span class="rvts91">.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts67">CHR$</span><span class="rvts11"> complements the </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CASC_statement.htm">ASC</a><span class="rvts11"> function, which returns the numeric character code of a nominated character in a string.</span></p>
+<p class="rvps4"><span class="rvts89"><br/></span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">$CRLF</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> $CRLF</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">This function returns a Carriage Return / Line Feed pair. Equivalent to </span><span class="rvts14">CHR$(13, 10)</span></p>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">$DQ</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> $DQ</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">This function returns a Double-Quote character &nbsp;Equivalent to </span><span class="rvts14">CHR$(34)</span></p>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">CSET$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-String = CSET$(string-expression, str-len [ USING string-exression2] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts11">Return a string containing a centered (padded) string. </span><span class="rvts18">CSET$</span><span class="rvts11"> centers the string </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> into a string of </span><span class="rvts33">str-len</span><span class="rvts11"> characters.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">string-expression2</span><span class="rvts11"> is </span><span class="rvts11">"" ( zero-length string)</span><span class="rvts11"> or is not specified, </span><span class="rvts18">CSET$</span><span class="rvts11"> pads string-expression with space characters. Otherwise, </span><span class="rvts18">CSET$</span><span class="rvts11"> pads the string with the first character of string-expression2.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">string-expression</span><span class="rvts11"> is shorter then </span><span class="rvts33">str-len</span><span class="rvts11">, </span><span class="rvts65">CSET$</span><span class="rvts11"> centers </span><span class="rvts33">string-expression</span><span class="rvts11"> within </span><span class="rvts33">Result-String</span><span class="rvts11">, padding both sides as described above; otherwise, </span><span class="rvts65">CSET$</span><span class="rvts11"> returns the left-most </span><span class="rvts33">str-len</span><span class="rvts11"> bytes of </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">DATE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-String = DATE$</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts6">Returns the system date. You can assign </span><span class="rvts14">DATE$</span><span class="rvts6"> to a string variable, which stores 10 characters in the form "mm-dd-yyyy", where </span><span class="rvts6">mm</span><span class="rvts6"> represents the month, </span><span class="rvts6">dd</span><span class="rvts6"> the day, and </span><span class="rvts6">yyyy</span><span class="rvts6"> the year.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">EXTRACT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-String = EXTARCT$([start,] string-expression, [ANY] Match-Str</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">EXTRACT$</span><span class="rvts11"> returns a sub-string of </span><span class="rvts33">String-Expression</span><span class="rvts11">, starting with its first character (or the character specified by </span><span class="rvts33">start</span><span class="rvts11">) and up to (but not including) the first occurrence of </span><span class="rvts33">Match-Str</span><span class="rvts11">. If </span><span class="rvts33">Match-Str</span><span class="rvts11"> is not present in </span><span class="rvts33">String-Expression</span><span class="rvts11">, or either string parameter is nul, all of String-Expression is returned.</span></p>
+<p class="rvps45"><span class="rvts33">start</span><span class="rvts11"> is the optional starting position to begin extracting. If </span><span class="rvts33">start</span><span class="rvts11"> is not specified, it will start at position 1. If </span><span class="rvts33">start</span><span class="rvts11"> is zero, or beyond the length of </span><span class="rvts33">String-Expression</span><span class="rvts11">, a nul string is returned. If </span><span class="rvts33">start</span><span class="rvts11"> is negative, the starting position is counted from right to left: if -1, the search begins at the last character; if -2, the second to last, and so forth. </span></p>
+<p class="rvps45"><span class="rvts33">String-Expression</span><span class="rvts11"> is the string from which to extract. </span><span class="rvts33">Match-Str</span><span class="rvts11"> is the string expression to extract up to. </span><span class="rvts18">EXTRACT$</span><span class="rvts11"> is case-sensitive.</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts91">ANY</span><span class="rvts11"> keyword is included, </span><span class="rvts33">Match-Str</span><span class="rvts11"> specifies a list of single characters to be searched for individually, a match on any one of which will cause the extract operation to be performed up to that character.</span></p>
+<p class="rvps45"><span class="rvts11">A similar function to </span><span class="rvts18">EXTRACT$</span><span class="rvts11"> is </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CPARSE_function.htm">PARSE$</a><span class="rvts11">, which extracts delimited substrings from a string.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">FORMAT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-String = FORMAT$(numeric-expression [, Format-Mask] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts11">Returns a string version of </span><span class="rvts33">numeric expression</span><span class="rvts11">, formatted according to the </span><span class="rvts33">Format-Mask</span><span class="rvts11"> operand.</span></p>
+<p class="rvps45"><span class="rvts11">If no </span><span class="rvts33">Format-Mask</span><span class="rvts11"> operand is present, the number will be returned as a maximum of 16 significant digits.</span></p>
+<p class="rvps43"><span class="rvts11">Note: If you wish to just concatenate a string and a numeric value without formatting, this can be done with a simple expression of the form </span><span class="rvts33">string-constant + numeric-expression</span><span class="rvts11"> or </span><span class="rvts33">string-constant &amp; numeric-expression.</span></p>
+<p class="rvps45"><span class="rvts13">Format-Mask</span></p>
+<p class="rvps45"><span class="rvts11">Format characters that will determine how </span><span class="rvts33">numeric-expression</span><span class="rvts11"> should be formatted. This expression is termed the mask. There may be up to 18 digit-formatting digits on either side of the decimal point. The mask may not contain literal characters unless each character is preceded with a backslash (\) escape character, or the literal characters are enclosed in quotes.</span></p>
+<p class="rvps45"><span class="rvts33">Format-Mask</span><span class="rvts11"> may contain one, two or three formatting masks, separated by semicolon (;) characters:</span></p>
+<div class="rvps4"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">One mask</span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">If </span><span class="rvts33">Format-Mask</span><span class="rvts11"> contains just one format mask, the mask is used to format all possible values of </span><span class="rvts33">numeric-expression</span><span class="rvts11">. For example:</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11"><br/></span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts91">x$ = FORMAT$(z, "000.00")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Two masks</span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">If </span><span class="rvts33">Format-Mask</span><span class="rvts11"> contains two format masks, the first mask is used for positive values (=&gt; 0), and the second mask is used for negative values (&lt; 0). For example:</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11"><br/></span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts91">x$ = FORMAT$(-100, "+00000.00;-000")</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Three masks</span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">If </span><span class="rvts33">Format-Mask</span><span class="rvts11"> contains three masks, the first mask is used for positive values (&gt; 0), the second mask for negative values (&lt; 0), and the third mask is used if </span><span class="rvts33">numeric-expression</span><span class="rvts11"> is zero (0). For example:</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="72" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11"><br/></span></p>
+</td>
+<td width="552" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts91">FOR y = -0.5 TO 0.5 STEP 0.5</span></p>
+<p class="rvps45"><span class="rvts91">x$ = FORMAT$(y, "+.0;-.0; .0")</span></p>
+<p class="rvps45"><span class="rvts91">NEXT y</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Digit placeholders in a mask do not have to be contiguous. This allows you to format a single number into multiple displayed parts. For example:</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(123456, "00\:00\:00") ' 12:34:56</span></p>
+<p class="rvps45"><span class="rvts11">The following table shows the characters you can use to create the user-defined format strings (masks) and the definition of each formatting character:</span></p>
+<div class="rvps4"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Character</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Definition</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Empty string</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[</span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11">] No formatting takes place. The number is formatted similarly to </span><span class="rvts91">STR$</span><span class="rvts11">, but without the leading space that </span><span class="rvts91">STR$</span><span class="rvts11"> applies to non-negative numbers.</span></p>
+<p class="rvps45"><span class="rvts91">A$=FORMAT$(0.2) &nbsp; &nbsp; &nbsp; ' .200000002980232</span></p>
+<p class="rvps45"><span class="rvts91">A$=FORMAT$(0.2!, "") &nbsp;' .200000002980232</span></p>
+<p class="rvps45"><span class="rvts91">A$=FORMAT$(123) &nbsp; &nbsp; &nbsp; ' 123</span></p>
+<p class="rvps45"><span class="rvts91">A$=FORMAT$(123456) &nbsp; &nbsp;' 123456</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">0</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[zero] Digit placeholder. A digit or 0 will be inserted in that position.</span></p>
+<p class="rvps45"><span class="rvts11">If there is a digit in numeric-expression in the position where the 0 appears in the format string, return that digit. Otherwise, return "0". If the number being formatted has fewer digits than there are zeros (on either side of the decimal point) in the format expression, leading or trailing zeros are added. If the number has more digits to the right of the decimal point than there are zeros to the right of the decimal point in the format expression, the number is rounded to as many decimal places as there are zeros in the mask.</span></p>
+<p class="rvps45"><span class="rvts11">If the number has more digits to the left of the decimal point than there are zeros to the left of the decimal point in the format expression, the extra digits are displayed without truncation. If the numeric value is negative, the negation symbol will be treated as a decimal digit. Therefore, care should be exercised when displaying negative values with this placeholder style. In such cases, it is recommended that multiple masks be used.</span></p>
+<p class="rvps45"><span class="rvts11">' Numeric padded with leading zero characters</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(999, "00000000") &nbsp; &nbsp; ' 00000999</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">#</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[Number symbol] Digit placeholder. If there is a digit for this position, it is replaced with a digit, nothing, or a user-specified character.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11"><br/></span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">Unlike the 0 digit placeholder, if the numeric value has the fewer digits than there are # characters on either side of the decimal placeholder, then it will either:</span></p>
+<p class="rvps45"><span class="rvts11">a) Omit this character position from the final formatted string; or</span></p>
+<p class="rvps45"><span class="rvts11">Substitute a user-specified replacement character if one has been defined (see the asterisk (*) character for more information). To specify leading spaces, prefix the mask with "* " (asterisk and a space character).</span></p>
+<p class="rvps45"><span class="rvts11">For example:</span></p>
+<p class="rvps45"><span class="rvts11">' No leading spaces and trailing spaces</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0.75, "####.###") &nbsp; &nbsp; ' 0.75</span></p>
+<p class="rvps45"><span class="rvts11">' Up to 3 Leading spaces before decimal</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0.75, "* ##.###") &nbsp; &nbsp; ' 0.75</span></p>
+<p class="rvps45"><span class="rvts11">' Using asterisks for padding characters</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0.75, "*=##.###") &nbsp; &nbsp; ' ===0.75=</span></p>
+<p class="rvps45"><span class="rvts11">FORMAT$ may also return a string that is larger than the number of characters in the mask:</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(999999.9, "#.#") &nbsp; &nbsp; &nbsp;' 999999.9</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">.</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[period] Decimal placeholder. Determines the position of the decimal point in the resultant formatted string.</span></p>
+<p class="rvps45"><span class="rvts11">If any numeric field is specified to the left of the decimal point, at least one digit will always result, even if only a zero. The zero is not considered to be a "leading" zero if it is the only digit to the left of the decimal. Placing more than one period character in the </span><span class="rvts33">Format-Mask</span><span class="rvts11"> string will produce undefined results.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">%</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[percent] Percentage placeholder. </span><span class="rvts33">numeric-expression</span><span class="rvts11"> will be multiplied by 100, and adds a trailing percent symbol. For example:</span></p>
+<p class="rvps45"><span class="rvts91">x$ = FORMAT$(1 / 5, "0.0%") &nbsp; &nbsp; &nbsp; &nbsp; ' 20.0%</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">,</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[comma] Thousand separator. Used to separate thousands from hundreds within a number that has four or more digits to the left of the decimal point. In order to be recognized as a format character, the comma must be placed immediately after a digit placeholder character (also see Restrictions below).</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(1234567, "#,") &nbsp; &nbsp; &nbsp; &nbsp; ' 1,234,567</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(12345, "#,.00") &nbsp; &nbsp; &nbsp; &nbsp;' 12,345.00</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(12345, "#.00,") &nbsp; &nbsp; &nbsp; &nbsp;' 12,345.00</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(1212.46, "$00,000.00") ' $01,212.46</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(1000, """#""#,") &nbsp; &nbsp; &nbsp; ' #1,000</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(1234567, "0,") &nbsp; &nbsp; &nbsp; &nbsp; ' 1,234,567</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">*x</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[asterisk] Digit placeholder and fill-character. Instructs FORMAT$ to insert a digit or character "x" in that position. If there is a digit in </span><span class="rvts33">numeric-expression</span><span class="rvts11"> at the position where the * appears in the format string, that digit is used; otherwise, the "x" character is used (where "x" represents your own choice of character). The *x specifier acts as two digit (#) fields.</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(9999.9,"$**####,.00") &nbsp;' $**9,999.90</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0,"$*=###0,.00#") &nbsp; &nbsp; &nbsp;' $=====0.00=</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0,"$* ####0,.00") &nbsp; &nbsp; &nbsp;' $ 0.00</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">E- e- E+ e+</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[e] Scientific format. FORMAT$ will use scientific notation in the formatted output. Use E- or e- to place a minus sign in front of negative exponents. Use E+ or e+ to place a minus sign in front of negative exponents and a plus sign in front of non-negative exponents.</span></p>
+<p class="rvps45"><span class="rvts11">In order to be recognized as a format sequence, the E-, e-, E+, or e+ must be placed between two digit placeholder characters. For example:</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$( 99.999, "0.0E-##") &nbsp; &nbsp;' 1.0E2</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(-99.999, "0.0E-##") &nbsp; &nbsp;' -1.0E2</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$( 99.999, "0.0E+##") &nbsp; &nbsp;' 1.0E+2</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(-99.999, "0.0E+##") &nbsp; &nbsp;' -1.0E+2</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(0.1, "0.0e+##") &nbsp; &nbsp; &nbsp; &nbsp;' 1.0e-1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">"</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[double-quote] Quoted string. FORMAT$ treats all characters up to the next quotation mark as-is, without interpreting them as digit placeholders or format characters. Also see backslash. For example:</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(5.55, """XYZ=""#.##\#") ' XYZ=5.55#</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(25, """x=""#") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' x=25</span></p>
+<p class="rvps45"><span class="rvts91">A$ = FORMAT$(999, """Total ""#") &nbsp; &nbsp; ' Total 999</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="92" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">\x</span></p>
+</td>
+<td width="531" valign="top" style="padding: 0px;"><p class="rvps45"><span class="rvts11">[backslash] Escaped character prefix. FORMAT$C treats the character "x" immediately following the backslash (\) as a literal character rather than a digit placeholder or a formatting character. Many characters in a mask have a special meaning and cannot be used as literal characters unless they are preceded by a backslash.</span></p>
+<p class="rvps45"><span class="rvts11">The backslash itself is not copied. To display a backslash, use two backslashes (\\). To display a literal double-quote, use two double-quote characters.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">IIF$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-String = IIF$(numeric-expression, true-string, false-string )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">IIF$</span><span class="rvts11"> &nbsp;returns one of two values based on </span><span class="rvts33">numeric-expression.</span><span class="rvts11"> &nbsp;If </span><span class="rvts33">numeric-expression</span><span class="rvts11"> evaluates to TRUE (non-zero), the </span><span class="rvts33">true-string</span><span class="rvts11"> is returned, else the </span><span class="rvts33">false-string</span><span class="rvts11"> is returned. Compare to the </span><span class="rvts18">IIF</span><span class="rvts11"> function.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">INSTR</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-var = INSTR(([Position,] Main-Str, [ANY] Match-Str)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">INSTR</span><span class="rvts11"> returns the position of </span><span class="rvts33">Match-Str</span><span class="rvts11"> within </span><span class="rvts33">Main-Str</span><span class="rvts11">. The return value is indexed to one, while zero means "not found".</span></p>
+<p class="rvps45"><span class="rvts33">Position</span><span class="rvts11"> specifies the character position to begin the search. If </span><span class="rvts33">Position</span><span class="rvts11"> is one or greater, </span><span class="rvts33">Main-Str</span><span class="rvts11"> is searched left to right. The value one starts at the first character, two the second, etc. If </span><span class="rvts33">Position</span><span class="rvts11"> is -1 or less, </span><span class="rvts33">Main-Str</span><span class="rvts11"> is searched from right to left. The value -1 starts at the last character, -2 the second to last, etc. If </span><span class="rvts33">Position</span><span class="rvts11"> is not given, the default value of +1 is assumed.</span></p>
+<p class="rvps45"><span class="rvts18">x&amp; = INSTR("xyz", "y") &nbsp; &nbsp; ' returns 2</span></p>
+<p class="rvps45"><span class="rvts18">x&amp; = INSTR("xyz", "a") &nbsp; &nbsp; ' returns 0</span></p>
+<p class="rvps45"><span class="rvts18">a$ = "My Dog" : b$ = " "</span></p>
+<p class="rvps45"><span class="rvts18">x&amp; = INSTR(a$, b$) &nbsp; &nbsp; &nbsp; &nbsp; ' returns 3</span></p>
+<p class="rvps45"><span class="rvts11">It is important to note that in all cases, even when </span><span class="rvts33">Position</span><span class="rvts11"> is negative, the return value of </span><span class="rvts18">INSTR</span><span class="rvts42">()</span><span class="rvts11"> is the absolute position of the match, from left to right, starting with the first character.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts18">ANY</span><span class="rvts11"> keyword is included, </span><span class="rvts33">Match-Str</span><span class="rvts11"> specifies a list of single characters. </span><span class="rvts91">INSTR</span><span class="rvts11"> searches for each of these characters individually. As soon as any one of these characters is found, </span><span class="rvts91">INSTR</span><span class="rvts11"> returns the position of the match.</span></p>
+<p class="rvps45"><span class="rvts18">x&amp; = INSTR(-2, "efcdef", ANY "ef") &nbsp; &nbsp; returns a result of 5</span></p>
+<p class="rvps45"><span class="rvts18">INSTR</span><span class="rvts11"> is case-sensitive, meaning that upper-case and lower-case letters must match exactly in </span><span class="rvts33">Match-Str</span><span class="rvts11"> and </span><span class="rvts33">Main-Str</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">LCASE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = LCASE$(string-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Returns a lowercase version of the specified </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">LEFT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = LEFT$(string-expression, Num-chars)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts33">Num-chars</span><span class="rvts11"> specifies the number of characters in </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> to be returned.</span></p>
+<p class="rvps45"><span class="rvts18">LEFT$</span><span class="rvts11"> returns a string consisting of the left most </span><span class="rvts33">Num-chars</span><span class="rvts11"> characters of its string argument. If </span><span class="rvts33">Num-chars</span><span class="rvts11"> is greater than or equal to the length of </span><span class="rvts33">string-expression</span><span class="rvts11">, all of </span><span class="rvts33">string-expression</span><span class="rvts11"> is returned. If </span><span class="rvts33">Num-chars</span><span class="rvts11"> is zero, </span><span class="rvts18">LEFT$</span><span class="rvts11"> returns an empty string. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">LEN</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-var = LEN(string-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">LEN</span><span class="rvts33"> will return the current length of </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression.</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">LSET$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = LSET$(string-expression, str-len [ USING pad-string ] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">LSET$</span><span class="rvts11"> left-aligns the string </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> into a string of </span><span class="rvts33">str-len</span><span class="rvts11"> characters.</span></p>
+<p class="rvps45"><span class="rvts18">USING</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">pad-string</span><span class="rvts11"> is </span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11"> or is not specified, </span><span class="rvts91">LSET$</span><span class="rvts11"> pads </span><span class="rvts33">string-expression</span><span class="rvts11"> with space characters. Otherwise, </span><span class="rvts18">LSET$</span><span class="rvts11"> pads the string with the first character of </span><span class="rvts33">pad-string</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">string-expression</span><span class="rvts11"> is shorter then </span><span class="rvts33">str-len</span><span class="rvts11">, LSET$ left-justifies </span><span class="rvts33">string-expression</span><span class="rvts11"> within </span><span class="rvts33">result-str</span><span class="rvts11">, padding the right side as described above; otherwise, </span><span class="rvts18">LSET$</span><span class="rvts11"> returns the left-most </span><span class="rvts33">str-len</span><span class="rvts11"> bytes of </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">LTRIM$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = LTRIM$(string-to-trim [, [ ANY ] Chars-to-trim ] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts33">String-to-trim</span><span class="rvts11"> is the </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> from which to remove characters, and </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> is the string-expression containing the characters to remove.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> is not specified, </span><span class="rvts18">LTRIM$</span><span class="rvts11"> removes leading spaces. </span><span class="rvts91">LTRIM$</span><span class="rvts11"> returns a sub-string of </span><span class="rvts33">String-to-trim</span><span class="rvts11">, from the first non-</span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> (or non-space) to the end of the string. If </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> (or a space) is not present at the beginning of </span><span class="rvts33">String-to-trim</span><span class="rvts11">, all of </span><span class="rvts33">String-to-trim</span><span class="rvts11"> is returned.</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts18">ANY</span><span class="rvts11"> keyword is included, </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> specifies a list of single characters to be searched for individually. A match on any one of these as a leading character will cause the character to be removed from the result.</span></p>
+<p class="rvps45"><span class="rvts18">LTRIM$</span><span class="rvts11"> is case sensitive</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">MCASE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = MCASE$(string-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts65">MCASE$</span><span class="rvts6"> </span><span class="rvts11">returns a string equivalent to </span><span class="rvts33">string-expression</span><span class="rvts11">, except that the first letter of each word is capitalized, while the remaining characters are forced to lowercase. A word is considered to be a consecutive series of letters. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">MID$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = MID$(string-expression, start-loc [, length] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts11">The </span><span class="rvts18">MID$</span><span class="rvts11"> function returns a part of a </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11">. The </span><span class="rvts33">start-loc </span><span class="rvts11">specifies the location of the first character of the extracted string. The </span><span class="rvts33">length</span><span class="rvts11"> specifies how many characters, starting at </span><span class="rvts33">start-loc </span><span class="rvts11">are to be returned.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">length</span><span class="rvts11"> is omitted, or there aren't enough characters in </span><span class="rvts33">String-expression</span><span class="rvts11">, all remaining characters are returned. If there are no characters at the </span><span class="rvts33">Start-loc</span><span class="rvts11"> position, an empty string is returned.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">PARSE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = PARSE$(string-expression, [ ANY ] str-delimiter, index )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts11">Returns a delimited field from </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts33">. string-expression </span><span class="rvts11">is the string to parse. If </span><span class="rvts33">string-expression</span><span class="rvts11"> is </span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11"> or contains no delimiter character(s), the string is considered to contain exactly one field. In this case, </span><span class="rvts14">PARSE$</span><span class="rvts11"> will return </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">The </span><span class="rvts33">str-delimiter </span><span class="rvts11">contains delimiter character(s). A delimiter is a character, list of characters, or string, that is used to mark the end of a field in string-expression. For example, if you consider a sentence to be a list of words, the delimiter between the works is a space (or punctuation). A delimiter is not considered part of a field, but as the divider between fields, so the delimiter is never returned by </span><span class="rvts35">PARSE$</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">str-delim</span><span class="rvts11"> is not specified or is </span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11">, standard comma-delimited (optionally quoted) fields are presumed. In this case only, the following parsing rules apply. If a standard field is enclosed in optional quotes, they are removed. If any characters appear between a quoted field and the next comma delimiter, they are discarded. If no leading quote is found, any leading or trailing blank spaces are trimmed before the field is returned.</span></p>
+<p class="rvps45"><span class="rvts11">Delimiters are case-sensitive, so capitalization may be a consideration.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts18">ANY</span><span class="rvts11"> keyword is used, </span><span class="rvts33">str-delimiter</span><span class="rvts11"> contains a set of characters, any of which may act as a delimiter character. If the </span><span class="rvts67">ANY</span><span class="rvts11"> keyword is omitted, the entire </span><span class="rvts33">str-delimiter</span><span class="rvts11"> string acts as a single delimiter.</span></p>
+<p class="rvps45"><span class="rvts33">index</span></p>
+<p class="rvps45"><span class="rvts11">A variable or expression that specifies the delimited field number to return. The first field is 1, and so on up to the maximum number of fields contained in string-expression, which may be determined with the PARSECOUNT function. If </span><span class="rvts33">index</span><span class="rvts11"> is negative, string-expression is parsed from right to left. In this case, </span><span class="rvts33">index</span><span class="rvts11"> &nbsp;= &nbsp;-1 &nbsp;returns the last field in string-expression, -2 returns the second to last, etc. If </span><span class="rvts33">index</span><span class="rvts11"> evaluates to zero, or is outside of the actual field count, an empty string is returned.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">PARSECOUNT</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = PARSE$(string-expression, [ ANY ] str-delimiter )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Return the count of delimited strings in a </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts14">. PARSECOUNT</span><span class="rvts11"> uses the same rules as </span><a class="rvts100" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CPARSE_function.htm">PARSE$</a><span class="rvts11"> in the determination of fields within string-expression. Individual fields within string-expression are evaluated, and the tally of the fields forms the result value.</span></p>
+<p class="rvps45"><span class="rvts11">It is important to note that </span><span class="rvts14">PARSECOUNT</span><span class="rvts11"> may only be used with string data which contains variable length sub-fields, each of which is separated by a delimiter. To determine the count of fixed length data, divide the String-Expression length by the sub-field length. If this function is used with fixed length data, the results are undefined.</span></p>
+<p class="rvps45"><span class="rvts11">string-expression</span></p>
+<p class="rvps45"><span class="rvts11">This is the string to examine and parse. If String-Expression is </span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11"> or contains no delimiter character(s), the string is considered to contain exactly one sub-field. In this case, </span><span class="rvts14">PARSECOUNT</span><span class="rvts11"> returns the value 1.</span></p>
+<p class="rvps45"><span class="rvts11">str-delimiter</span></p>
+<p class="rvps45"><span class="rvts11">This defines one or more characters to use as a delimiter. To be valid, the entire delimiter must match exactly, but the delimiter itself is never returned as part of the field.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">str-delimiter</span><span class="rvts11"> is not specified, or contains an empty string, special rules apply. The delimiter is assumed to be a comma. Fields may optionally be enclosed in quotes, and are ignored before the result string is returned. Any characters that appear between a quote mark and the next comma delimiter character are discarded. If no leading quote is found, any leading or trailing quotes are trimmed before the result string is returned.</span></p>
+<p class="rvps45"><span class="rvts35">ANY</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts35">ANY</span><span class="rvts11"> keyword is used, </span><span class="rvts33">str-delimiter</span><span class="rvts11"> contains a set of characters, any of which may act as a delimiter character. If the </span><span class="rvts14">ANY</span><span class="rvts11"> keyword is omitted, the entire </span><span class="rvts33">str-delimiter</span><span class="rvts11"> string acts as a single delimiter.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">REMOVE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Result-str = REMOVE$(string-expression, [ ANY ] chars-to-remove )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Return a copy of a string with characters or strings removed.</span></p>
+<p class="rvps45"><span class="rvts33">string-expression </span><span class="rvts11">is the string from which to remove characters. </span><span class="rvts33">chars-to-remove</span><span class="rvts11"> is the string expression to remove all occurrences of. If </span><span class="rvts33">chars-to-remove</span><span class="rvts11"> is not present in </span><span class="rvts33">string-expression</span><span class="rvts11">, all of </span><span class="rvts33">string-expression</span><span class="rvts11"> is returned intact.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts18">ANY</span><span class="rvts11"> keyword is included, </span><span class="rvts33">chars-to-remove</span><span class="rvts11"> specifies a list of single characters to be searched for individually, a match on any one of which will cause that character to be removed from the result.</span></p>
+<p class="rvps45"><span class="rvts18">REMOVE$</span><span class="rvts11"> is case-sensitive.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">REPEAT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = REPEAT$(number-of-times, string-expression )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Returns a string consisting of multiple copies of the specified string. </span><span class="rvts33">number-of-times</span><span class="rvts11"> is an expression, </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CConstants_and_Literals.htm">constant</a><span class="rvts11"> or </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVariables.htm">variable</a><span class="rvts11">, specifying the number of copies of </span><span class="rvts33">string-expression</span><span class="rvts11"> to be included in the result. </span></p>
+<p class="rvps45"><span class="rvts33">string-expression&nbsp;</span><span class="rvts11"> is the string to be duplicated.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">REPLACE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-str = REPLACE$(string-expression, [ ANY ] match-string, new-string )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Within a specified string , replace all occurrences of one string with another string. The </span><span class="rvts18">REPLACE$</span><span class="rvts11"> statement replaces all occurrences of </span><span class="rvts33">Match-String</span><span class="rvts11"> in </span><span class="rvts33">string-expression</span><span class="rvts11"> with </span><span class="rvts33">New-String</span><span class="rvts11">. The replacement can cause string-expression to grow or condense in size. </span><span class="rvts33">string-expression</span><span class="rvts11"> must be a string variable; </span><span class="rvts33">Match-String</span><span class="rvts11"> and </span><span class="rvts33">New-String</span><span class="rvts11"> may be </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string expressions</a><span class="rvts11">.</span><span class="rvts6"> </span><span class="rvts18">REPLACE$</span><span class="rvts11"> is case-sensitive. When a match is found, the scan for the next match begins at the position immediately following the prior match.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts11">If you use the</span><span class="rvts6"> </span><span class="rvts18">ANY</span><span class="rvts6"> </span><span class="rvts11">option, within </span><span class="rvts33">String-expression</span><span class="rvts11">, each occurrence of each character in </span><span class="rvts33">Match-String</span><span class="rvts11"> will be replaced with the corresponding character in </span><span class="rvts33">New-String</span><span class="rvts11">. In this case, </span><span class="rvts33">Match-string</span><span class="rvts11"> and </span><span class="rvts33">New-String</span><span class="rvts11"> must be the same length, because there is a one-to-one correspondence between their characters.</span></p>
+<p class="rvps45"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">RIGHT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = RIGHT$(string-expression, Num-chars)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts33">Num-chars</span><span class="rvts11"> specifies the number of characters in </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> to be returned.</span></p>
+<p class="rvps45"><span class="rvts18">RIGHT$</span><span class="rvts11"> returns a string consisting of the right most </span><span class="rvts33">Num-chars</span><span class="rvts11"> characters of its string argument. If </span><span class="rvts33">Num-chars</span><span class="rvts11"> is greater than or equal to the length of </span><span class="rvts33">string-expression</span><span class="rvts11">, all of </span><span class="rvts33">string-expression</span><span class="rvts11"> is returned. If </span><span class="rvts33">Num-chars</span><span class="rvts11"> is zero, </span><span class="rvts18">RIGHT$</span><span class="rvts11"> returns an empty string. </span></p>
+<p class="rvps2"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">RSET$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = RSET$(string-expression, str-len [ USING pad-string ] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps45"><span class="rvts18">RSET$</span><span class="rvts11"> left-aligns the string </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> into a string of </span><span class="rvts33">str-len</span><span class="rvts11"> characters.</span></p>
+<p class="rvps45"><span class="rvts18">USING</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">pad-string</span><span class="rvts11"> is </span><span class="rvts11">"" (a zero-length string)</span><span class="rvts11"> or is not specified, </span><span class="rvts18">RSET$</span><span class="rvts11"> pads </span><span class="rvts33">string-expression</span><span class="rvts11"> with space characters. Otherwise, </span><span class="rvts18">RSET$</span><span class="rvts11"> pads the string with the first character of </span><span class="rvts33">pad-string</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">string-expression</span><span class="rvts11"> is shorter then </span><span class="rvts33">str-len</span><span class="rvts11">, </span><span class="rvts18">RSET$</span><span class="rvts11"> right-justifies </span><span class="rvts33">string-expression</span><span class="rvts11"> within </span><span class="rvts33">result-str</span><span class="rvts11">, padding the left side as described above; otherwise, </span><span class="rvts18">RSET$</span><span class="rvts11"> returns the right-most </span><span class="rvts33">str-len</span><span class="rvts11"> bytes of </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">RTRIM$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = RTRIM$(string-to-trim [, [ ANY ] Chars-to-trim ] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts33">String-to-trim</span><span class="rvts11"> is the </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> from which to remove characters, and </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> is the string-expression containing the characters to remove.</span></p>
+<p class="rvps45"><span class="rvts33">String-to-trim</span><span class="rvts11"> is the </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string-expression</a><span class="rvts11"> from which to remove characters, and </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> is the string expression specifying the characters that should be removed from the right hand side of </span><span class="rvts33">String-to-trim</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">If </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> is not specified, </span><span class="rvts18">RTRIM$</span><span class="rvts11"> removes trailing spaces. </span><span class="rvts18">RTRIM$</span><span class="rvts11"> returns a sub-string of </span><span class="rvts33">String-to-trim</span><span class="rvts11">, from the beginning of the string to the character preceding the consecutive occurrences of </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> (or space), which continues to the end of the original string . If </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> (or a space) is not present at the end of </span><span class="rvts33">String-to-trim</span><span class="rvts11">, all of </span><span class="rvts33">String-to-trim</span><span class="rvts11"> is returned.</span></p>
+<p class="rvps45"><span class="rvts11">If the </span><span class="rvts18">ANY</span><span class="rvts11"> keyword is included, </span><span class="rvts33">Chars-to-trim</span><span class="rvts11"> specifies a list of single characters to be searched for individually - a match on any one of which as a trailing character will cause the character to be removed from the result.</span></p>
+<p class="rvps4"><span class="rvts18">RTRIM$</span><span class="rvts11"> is case-sensitive.</span></p>
+<p class="rvps2"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">STR$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-str = STR$(num-expression [, digits] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Return the representation of a number in printable string form.</span></p>
+<p class="rvps45"><span class="rvts18">STR$</span><span class="rvts11"> returns the string form of a variable or expression in printable text form. </span><span class="rvts33">digits</span><span class="rvts11"> is an optional expression specifying the maximum total number of digits to appear in the result. If </span><span class="rvts33">num-expression</span><span class="rvts11"> is greater than or equal to zero, </span><span class="rvts18">STR$</span><span class="rvts11"> adds a leading space character; if </span><span class="rvts33">num-expression</span><span class="rvts11"> is less than zero, </span><span class="rvts18">STR$</span><span class="rvts11"> adds a leading negation (minus) character.</span></p>
+<p class="rvps45"><span class="rvts11">For example, </span><span class="rvts18">STR$(14)</span><span class="rvts11"> returns a three-character string, of which the first character is a space, and the second and third are "1" and "4". </span></p>
+<p class="rvps45"><span class="rvts33">digits</span><span class="rvts11"> specifies the maximum number of significant digits (1 to 18) desired in the result.</span></p>
+<p class="rvps45"><span class="rvts11">The complementary function is </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVAL_function.htm">VAL</a><span class="rvts11">, which takes a string argument and returns the numeric equivalent. </span></p>
+<p class="rvps45"><span class="rvts11">Thus,</span><span class="rvts42"> &nbsp;</span><span class="rvts18">number = VAL(STR$(number))</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">A numeric value may also be converted to a string with the </span><span class="rvts18">TSTR$</span><span class="rvts11"> function which returns the string without the leading blank or - character, or the </span><a class="rvts108" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CFORMAT_function.htm">FORMAT$</a><span class="rvts11"> function. </span><span class="rvts18">FORMAT$</span><span class="rvts11"> is capable of many additional formatting options.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">STRCONST$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = STRCONST$(str-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps4"><span class="rvts89">Return a string representing the mnemonic string passed as </span><span class="rvts66">str-expression</span><span class="rvts89">. </span><span class="rvts66">str-expression</span><span class="rvts89"> may be any of &nbsp;"CRLF", "TAB", "CR", "LF", "FF", "VT", "SPC", "DQ", "NUL", "ESC"</span></p>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">STRDELETE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-str = STRDELETE$(str-expression, start, count)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Delete a specified number of characters from </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">str-expression</a><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">Returns a string based on copying </span><span class="rvts33">str-expression</span><span class="rvts11">, but with </span><span class="rvts33">count</span><span class="rvts11"> characters deleted starting at position </span><span class="rvts33">start</span><span class="rvts11">. The first character in the string is position 1, etc.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">STRINSERT$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = STRINSERT$(str-expression, ins-expression, position)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Insert </span><span class="rvts33">ins-expression</span><span class="rvts11"> string at a specified position within </span><a class="rvts104" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">str-expression</a><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">Returns a string consisting of the string expression </span><span class="rvts33">str-expression</span><span class="rvts11">, with the string expression ins-expression inserted at </span><span class="rvts33">position</span><span class="rvts11">. If </span><span class="rvts33">position</span><span class="rvts11"> is greater than the length of str-expression, ins-expression is appended to str-expression. The first character in the string is position 1, etc.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">STRREVERSE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-str = STRREVERSE$(str-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Reverse the contents of str-expression.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">TALLY</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Num-var = TALLY(str-expression, [ ANY ] Match-string )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Count the number of occurrences of specified characters or strings within </span><span class="rvts110">str-expression</span><span class="rvts109"> .</span></p>
+<p class="rvps45"><span class="rvts110">str-expression</span><span class="rvts109"> is the </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string</a><span class="rvts109"> in which to count characters. </span><span class="rvts110">Match-String</span><span class="rvts109"> is the string expression to count all occurrences of. If </span><span class="rvts110">Match-String</span><span class="rvts109"> is not present in </span><span class="rvts110">str-expression</span><span class="rvts109">, zero is returned. When a match is found, the scan for the next match begins at the position immediately following the prior match.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts109">If the </span><span class="rvts18">ANY</span><span class="rvts109"> keyword is included, </span><span class="rvts110">Match-String</span><span class="rvts109"> specifies a list of single characters to be searched for individually: a match on any one of which will cause the count to be incremented for each occurrence of that character. Note that repeated characters in </span><span class="rvts110">Match-String</span><span class="rvts109"> will not increase the tally. For example:</span></p>
+<p class="rvps45"><span class="rvts18">X = TALLY("ABCD", ANY "BDB") &nbsp;</span><span class="rvts91">&nbsp;</span><span class="rvts109"> ' returns 2, not 3</span></p>
+<p class="rvps45"><span class="rvts18">TALLY</span><span class="rvts109"> is case-sensitive, so be wary of capitalization.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">TIME$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Result-str = TIME$</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps4"><span class="rvts89">Return a string with system time in the format &nbsp;of HH:MM:SS using 24-hour time.</span></p>
+<p class="rvps2"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">TRIM</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = TRIM$(str-expression [, [ ANY ] Chars-To-Trim)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Removes leading and trailing characters or substrings from </span><span class="rvts110">str-expression</span><span class="rvts109">.</span></p>
+<p class="rvps45"><span class="rvts18">TRIM$</span><span class="rvts109"> combines the functionality of </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CLTRIM_function.htm">LTRIM$</a><span class="rvts109"> and </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CRTRIM_function.htm">RTRIM$</a><span class="rvts109"> into a single </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CFUNCTION_END_FUNCTION_statements.htm">function</a><span class="rvts109">. </span><span class="rvts110">str-expression</span><span class="rvts109"> is the </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CString_expressions.htm">string expression</a><span class="rvts109"> from which to remove characters, and </span><span class="rvts110">Chars-To-Trim</span><span class="rvts109"> is the string expression to remove leading and trailing occurrences. If </span><span class="rvts110">Chars-To-Trim</span><span class="rvts109"> is not specified, </span><span class="rvts18">TRIM$</span><span class="rvts109"> removes leading and trailing spaces.</span></p>
+<p class="rvps45"><span class="rvts18">ANY</span></p>
+<p class="rvps45"><span class="rvts109">If the </span><span class="rvts18">ANY</span><span class="rvts109"> keyword is included, </span><span class="rvts110">Chars-To-Trim</span><span class="rvts109"> specifies a list of single characters to be searched for individually, a match on any one of which as a leading or trailing character will cause the character to be removed from the result.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">TSTR$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Result-str = TSTR$(num-expression [, digits] )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts11">Return the representation of a number in printable string form.</span></p>
+<p class="rvps45"><span class="rvts18">TSTR$</span><span class="rvts11"> returns the string form of a variable or expression in printable text form. </span><span class="rvts33">digits</span><span class="rvts11"> is an optional expression specifying the maximum total number of digits to appear in the result. </span></p>
+<p class="rvps45"><span class="rvts11">For example, </span><span class="rvts18">TSTR$(14)</span><span class="rvts11"> returns a two-character string, "14".</span></p>
+<p class="rvps45"><span class="rvts33">digits</span><span class="rvts11"> specifies the maximum number of significant digits (1 to 18) desired in the result.</span></p>
+<p class="rvps45"><span class="rvts11">The complementary function is </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVAL_function.htm">VAL</a><span class="rvts11">, which takes a string argument and returns the numeric equivalent. </span></p>
+<p class="rvps45"><span class="rvts11">Thus,</span><span class="rvts42"> &nbsp;</span><span class="rvts18">number = VAL(TSTR$(number))</span><span class="rvts11">.</span></p>
+<p class="rvps45"><span class="rvts11">A numeric value may also be converted to a string with the </span><a class="rvts108" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CFORMAT_function.htm">FORMAT$</a><span class="rvts11"> function. </span><span class="rvts18">FORMAT$</span><span class="rvts11"> can optionally perform many additional formatting functions.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">UCASE$</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Result-str = UCASE$(string-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Returns an uppercase version of the specified </span><span class="rvts33">string-expression</span><span class="rvts11">.</span></p>
+<p class="rvps4"><span class="rvts85"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">VAL</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = VAL(string-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Convert a text string to a numeric value.</span></p>
+<p class="rvps45"><span class="rvts109">The </span><span class="rvts18">VAL</span><span class="rvts109"> function converts a string argument to a number. Leading white-space characters (spaces, tabs, carriage-returns, and linefeeds) are skipped and ignored. Evaluation of the number continues until a non-numeric character is found, or the end of the string is reached. If no number is found, the </span><span class="rvts35">VAL</span><span class="rvts109">() function returns zero (0). Format characters (like commas) are not allowed, and will cause early termination of the evaluation.</span></p>
+<p class="rvps45"><span class="rvts18">VAL</span><span class="rvts109"> interprets the letters "e" and "d" (and "E" and "D") as the symbols for exponentiation and scientific notation:</span></p>
+<p class="rvps45"><span class="rvts14">i&amp; = VAL("10.101e3") &nbsp; &nbsp;</span><span class="rvts102"> ' 10101 ~ 10.101*(10^3)</span></p>
+<p class="rvps45"><span class="rvts14">j&amp; = VAL("2D4") &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts102"> ' 20000 ~ 2 * (10 ^ 4)</span></p>
+<p class="rvps45"><span class="rvts103">Hexadecimal, Binary and Octal conversions</span></p>
+<p class="rvps45"><span class="rvts14">VAL</span><span class="rvts102"> can also be used to convert string arguments that are in the form of Hexadecimal, Binary and Octal numbers. Hexadecimal values should be prefixed with "&amp;H" and Binary with "&amp;B". Octal values may be prefixed "&amp;O", "&amp;Q" or just "&amp;". If the string-expression contains a leading zero, the result is returned as an unsigned value; otherwise, a signed value is returned. For example:</span></p>
+<p class="rvps45"><span class="rvts18">i&amp; = VAL("&amp;HF5F3")</span><span class="rvts14"> &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts109"> ' Hex, returns -2573 (signed)</span></p>
+<p class="rvps45"><span class="rvts18">j&amp; = VAL("&amp;H0F5F3")</span><span class="rvts102"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109"> &nbsp; &nbsp;' Hex, returns 62963 (unsigned)</span></p>
+<p class="rvps45"><span class="rvts18">x&amp; = VAL("&amp;B0100101101")</span><span class="rvts111">&nbsp;</span><span class="rvts112"> &nbsp; </span><span class="rvts109">' Binary, returns 301 (unsigned)</span></p>
+<p class="rvps45"><span class="rvts18">y&amp; = VAL("&amp;O4574514")</span><span class="rvts111"> &nbsp;</span><span class="rvts102"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts109"> ' Octal, returns 1243468 (signed)</span></p>
+<p class="rvps45"><span class="rvts109">Valid hex characters include 0 to 9, A to F (and a to f). Valid Octal characters include 0 to 7, and binary 0 to 1.</span></p>
+<p class="rvps45"><span class="rvts18">VAL</span><span class="rvts109"> stops analyzing </span><span class="rvts110">string-expression</span><span class="rvts109"> when non-numeric characters are encountered. When dealing with Hexadecimal, Binary, and Octal number systems, the period character is classified as non-numeric. </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">VERIFY</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Num-var = VERIFY([start,] string-expression, Match-String)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Determine whether each character of a string is present in another string.</span></p>
+<p class="rvps45"><span class="rvts18">VERIFY</span><span class="rvts109"> returns zero if each character in </span><span class="rvts110">string-expression</span><span class="rvts109"> is present in </span><span class="rvts110">Match-String</span><span class="rvts109">. If not, it returns the position of the first non-matching character in </span><span class="rvts110">string-expression</span><span class="rvts109">.</span></p>
+<p class="rvps45"><span class="rvts109">This function is useful for determining if a string contains only digits. For example, VERIFY(NUM, "0123456789") = 0 if NUM is a numeric string.</span></p>
+<p class="rvps45"><span class="rvts18">VERIFY</span><span class="rvts109"> is case-sensitive, so capitalization matters.</span></p>
+<p class="rvps45"><span class="rvts109">If </span><span class="rvts110">start</span><span class="rvts109"> evaluates to a position outside of the string on either side, or if </span><span class="rvts110">start</span><span class="rvts109"> is zero, </span><span class="rvts18">VERIFY</span><span class="rvts109"> returns zero.</span></p>
+<p class="rvps45" style="page-break-before: always;"><span class="rvts83"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

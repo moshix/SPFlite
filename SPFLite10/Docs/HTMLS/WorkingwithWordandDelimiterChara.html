@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Word and Delimiter Characters</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Word and Delimiter Characters">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Word and Delimiter Characters" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithWordandDelimiterChara"
+		  data-hnd-context="227"
+		  data-hnd-title="Working with Word and Delimiter Characters"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Word and Delimiter Characters</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><a class="rvts25" href="TabPages.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts25" href="WorkingwithWordandDelimiterChara.html#SettingtheWORDcharacters">Setting the WORD characters</a></p>
+<p class="rvps9"><a class="rvts25" href="WorkingwithWordandDelimiterChara.html#WordSyntax">Word Syntax</a></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">Many SPFLite functions are required to make decisions based on whether a character is considered to be a Word character or a non-Word (delimiter) character. This support is provided by the </span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> string as part of a file's Profile. This enables the characters that make up a Word to be different for different file types. Example, different programming languages support different character as valid variable names (such as </span><span class="rvts54">.</span><span class="rvts12">dot, &nbsp;</span><span class="rvts54">_</span><span class="rvts12"> underscore, etc.) &nbsp;IBM mainframe languages often use </span><span class="rvts54">$</span><span class="rvts12"> </span><span class="rvts54">#</span><span class="rvts12"> and </span><span class="rvts54">@</span><span class="rvts12"> as letter characters in names.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">In addition, handling international characters which are part of the extended ANSI character set can be a problem. A decision is needed as to whether these should be considered Word characters (as would be normal for western European languages), or should they be non-Word (delimiter) characters, which would typically done for English-based data. This issue is important, because in files containing English data, the presence of international characters is often a symptom of a corrupted file, whereas in a file containing data in French, German or Spanish such characters are normal and expected.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="SettingtheWORDcharacters"></a>
+<span class="rvts11">Setting the WORD characters</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">To set the WORD characters, perform the following:</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Edit a file of the Profile type for which you are setting the WORD values. If needed, go to File Manager and enter </span><span class="rvts11">.profile-name</span><span class="rvts12"> next to the New file option to obtain a dummy edit session.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Enter OPTIONS as a Primary command. On the General Tab, you will see a setting labeled as "Include international characters for Word/Alphabetic pictures?" &nbsp;Select this if you wish the normal ANSI international word characters to be automatically added to your WORD string. Click DONE when you have made your selection.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Enter WORD as a line command. The current (default) WORD setting will be displayed as a </span><span class="rvts11">=WORD&gt; </span><span class="rvts12">line type.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Enter PROF UNLOCK as a primary command to allow modification of this Profile.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Edit the =WORD&gt; line as needed to suit your Word requirements. See Word Syntax below.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts12">Your WORD setting is complete</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="WordSyntax"></a>
+<span class="rvts11">Word Syntax</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The WORD string consists of a series of either 1 or 2 byte character strings separated by spaces, or by a character range string separated by spaces. A character range string is simply two characters separated by a - (dash). Two byte character strings are assumed to be Hex character requests and must consist of only valid hex characters &nbsp;0-9 and A-F, case is unimportant for Hex values. Note that a range can be a character range, or a hex range, but you cannot mix hex and character notation in the same range; so 0-39 and 30-9 are illegal ranges.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The following would be valid operand strings for WORD:</span></p>
+<p class="rvps155"><span class="rvts12"><br/></span></p>
+<p class="rvps155"><span class="rvts62">A</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">the uppercase letter </span><span class="rvts62">A</span></p>
+<p class="rvps155"><span class="rvts62">FF</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">the hex value </span><span class="rvts62">FF</span><span class="rvts12"> ( the </span><span class="rvts62">ÿ</span><span class="rvts12"> character)</span></p>
+<p class="rvps155"><span class="rvts62">a-z</span><span class="rvts12"> </span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">the whole range of characters from lowercase '</span><span class="rvts62">a</span><span class="rvts12">' through lowercase '</span><span class="rvts62">z</span><span class="rvts12">'</span></p>
+<p class="rvps155"><span class="rvts62">0-9</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">the numbers '</span><span class="rvts62">0</span><span class="rvts12">' through '</span><span class="rvts62">9</span><span class="rvts12">'</span></p>
+<p class="rvps155"><span class="rvts62">30-39</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">the numbers '</span><span class="rvts62">0</span><span class="rvts12">' through '</span><span class="rvts62">9</span><span class="rvts12">' (expressed in hex)</span></p>
+<p class="rvps155"><span class="rvts12"><br/></span></p>
+<p class="rvps156"><span class="rvts12">Range strings must be expressed in ascending sequence. e.g. a range of </span><span class="rvts62">Z-A</span><span class="rvts12"> is invalid.</span></p>
+<p class="rvps156"><span class="rvts12"><br/></span></p>
+<p class="rvps156"><span class="rvts12">The operands of WORD do not have to themselves be in sequence; it is perfectly valid to have a string of:</span></p>
+<p class="rvps155"><span class="rvts62">A-Z FF FE FD a-z _ - 0-9</span></p>
+<p class="rvps155"><span class="rvts62"><br/></span></p>
+<p class="rvps156"><span class="rvts6">It is not an error to repeat a character in a WORD specification, the following is valid:</span></p>
+<p class="rvps155"><span class="rvts62">A-Z a-z 0-9 a-c D X z 32-35 a-z</span></p>
+<p class="rvps155"><span class="rvts62"><br/></span></p>
+<p class="rvps157"><span class="rvts6">If you have chosen to include the International characters under Options =&gt; General as described above, they will be handled as follows. The uppercase International characters will be added if</span><span class="rvts40"> </span><span class="rvts139">A-Z</span><span class="rvts6"> is included in the WORD string; and the lowercase International characters will be added if </span><span class="rvts139">a-z</span><span class="rvts6"> is included in the WORD string. </span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">By automatically adding international characters this way, you don't have to manually list them all yourself (which is a good thing, because there are a lot of them, and they are not in contiguous character ranges either). This "adding" of characters is done internally; you won't visibly see the WORD string modified with the added characters, but SPFLite's processing logic for WORD will take them into account. </span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">Note that the default WORD string used by SPFLite is: &nbsp;</span><span class="rvts40"> </span><span class="rvts139">A-Z a-z 0-9</span></p>
+<p class="rvps157"><span class="rvts62"><br/></span></p>
+<p class="rvps158"><span class="rvts40">Use of specific non-English language characters</span><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps157"><span class="rvts62"><br/></span></p>
+<p class="rvps157"><span class="rvts6">If you wanted to define only the letters for a specific non-English language (like Spanish) but </span><span class="rvts40">not</span><span class="rvts6"> for other non-English languages, leave the International Characters checkbox disabled, and then manually enter each desired non-English letter you want to include in the list of defined "word letters" on the WORD command. </span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps159"><span class="rvts6">Why would you want to set up WORD characters that way? &nbsp;Wouldn't it be simpler just to include all international letters and be done with it? &nbsp;Simpler, yes, but not necessarily better. Just as non-English letters in an English-based file could indicate file corruption, non-Spanish letters like </span><span class="rvts321">Ð</span><span class="rvts6"> or </span><span class="rvts321">ß</span><span class="rvts6"> could indicate file corruption in a Spanish-based file. For most user, allowing </span><span class="rvts40">all</span><span class="rvts6"> international letters is far too lenient of a test.</span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">The following describes an approach for doing this.</span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">SPFLite will repopulate the Normal Characters string in the General Options setup dialog when it is deleted. If you enable the International Characters checkbox, clear this field, close the dialog, then reopen it, the Normal Characters field will have every possible displayable character. You could then highlight that string and copy it with Ctrl-C to place the string in the clipboard. Then, paste that string somewhere in an SPFLite edit screen and delete the international characters you didn't want, and reformat that string as a WORD operand. Finally, go back and disable the International Characters checkbox and define your WORD setting as needed.</span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps158"><span class="rvts40">Use of WORD hex ranges in EBCDIC files</span><span class="rvts6"> &nbsp;</span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">Users of EBCDIC files should be mindful that SPFLite does all of its internal editing in ANSI. EBCDIC files are translated to and from ANSI as needed to make the process appear transparent. What this means for the WORD command is that if you specify a hex range for characters, you must presently use ANSI encoding, not EBCDIC encoding. So, a hex range of digits must be defined as 30-39, even though the data values appear in HEX mode edit displays as F0-F9. As this process could be confusing and non-intuitive, it may be best to avoid hex word ranges for EBCDIC files. Otherwise, choose these values carefully.</span></p>
+<p class="rvps157"><span class="rvts6"><br/></span></p>
+<p class="rvps157"><span class="rvts6">This is a limitation in the implementation of the WORD command, which may or may not be addressed in a future release.</span></p>
+<p class="rvps157" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps155"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

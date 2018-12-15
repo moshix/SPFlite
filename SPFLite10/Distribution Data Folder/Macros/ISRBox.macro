@@ -1,0 +1,28 @@
+' ISRBox.MACRO
+' ISRBOX - Draw box with its U/L corner at the cursor 
+' Syntax:  ISRBOX                                     With cursor sitting on the 
+'                                                     desired location.  Normally the
+'                                                     command would be assigned to a
+'                                                     command key for convenience.
+' Author: George Deluca
+' Original in Rexx in the IBM macros documentation
+'
+dim i, j as number
+if Get_Csr_LPtr = 0 then halt(FAIL, "Cursor is not within the text area")' 
+
+j = Get_Csr_LPtr                                      ' Point at 1st line 
+for i = 1 to 5                                        ' Set # lines to do 
+   if j = Get_Last_LPtr then exit for                 ' Just in case we hit bottom 
+   if Is_Data(j) then                                 ' Only data lines 
+      if i = 1 or i = 5 then                          ' If Top or bottom of box 
+         SPF_Ovr(j, Get_Csr_Col, "+--------------------+")  ' Overlay the box chars
+      else                                            ' Else middle lines 
+         SPF_Ovr(j, Get_Csr_Col, "|                    |")  ' Overlay the box chars
+      end if                                          ' 
+      if i = 3 then Set_Csr(j, Get_Csr_Col + 2, 0)    ' Put cursor on middle line
+   else                                               ' 
+      Decr i                                          ' Don't move box row number
+   end if                                             ' 
+   Incr j                                             ' On to next edit line 
+next                                                  ' 
+halt                                                  ' Done

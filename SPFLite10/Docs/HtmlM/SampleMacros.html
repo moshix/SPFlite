@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Sample Macros</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sample Macros">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Sample Macros" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="SampleMacros"
+		  data-hnd-context="15"
+		  data-hnd-title="Sample Macros"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Sample Macros</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' CT.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">' Center text on a line. Uses RBound (if active) or specified length</span></p>
+<p class="rvps2"><span class="rvts78">' Syntax: &nbsp;CTnn or CTTnn / CTTnn as line commands &nbsp; &nbsp; nn is the width to center on</span></p>
+<p class="rvps2"><span class="rvts78">' </span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca</span></p>
+<p class="rvps2"><span class="rvts78">' </span></p>
+<p class="rvps2"><span class="rvts78">dim tt, tt2 as string &nbsp;</span></p>
+<p class="rvps2"><span class="rvts78">dim lno1, lno2, width, i as number</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if is_primary_Cmd then halt(fail, "CT macro was not invoked as a line command")</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Get the line numbers</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; lno1 = Get_Src1_Lptr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' From line</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; lno2 = Get_Src2_Lptr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' To line</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; width = Get_Src_Op &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get the centering width</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if width = 0 then width = Get_RBound &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; for i = lno1 to lno2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Loop through the line range</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;if Is_Data(i) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Just Data lines</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; tt = trim$(Get_Line$(i)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get the trimmed text</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; if width = 0 then width = Get_Line_Len(i) &nbsp; &nbsp;' Use line length if no other</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; if len(tt) &gt; width then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Center possible?</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Set_Msg(8, "One or more lines exceed Center length")</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tt2 = &nbsp;repeat$((width - len(tt)) / 2, " ") + tt ' Center it</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Set_Line(i, tt2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Stuff it back </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; next &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; halt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Done</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' ISRBox.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">' ISRBOX - Draw box with its U/L corner at the cursor </span></p>
+<p class="rvps2"><span class="rvts78">' Syntax: &nbsp;ISRBOX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; With cursor sitting on the </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; desired location. Normally the</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; command would be assigned to a</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; command key for convenience.</span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca</span></p>
+<p class="rvps2"><span class="rvts78">' Original in Rexx in the IBM macros documentation</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">dim i, j as number</span></p>
+<p class="rvps2"><span class="rvts78">if Get_Csr_LPtr = 0 then halt(FAIL, "Cursor is not within the text area")' </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">j = Get_Csr_LPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Point at 1st line </span></p>
+<p class="rvps2"><span class="rvts78">for i = 1 to 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Set # lines to do </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if j = Get_Last_LPtr then exit for &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Just in case we hit bottom </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if Is_Data(j) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Only data lines </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;if i = 1 or i = 5 then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' If Top or bottom of box </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_Ovr(j, Get_Csr_Col, "+--------------------+") &nbsp;' Overlay the box chars</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Else middle lines </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_Ovr(j, Get_Csr_Col, "| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|") &nbsp;' Overlay the box chars</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;if i = 3 then Set_Csr(j, Get_Csr_Col + 2, 0) &nbsp; &nbsp;' Put cursor on middle line</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;Decr i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Don't move box row number</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; Incr j &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' On to next edit line </span></p>
+<p class="rvps2"><span class="rvts78">next &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78">halt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Done</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' ISRCount.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp;ISRCOUNT counts the number of occurrences of a string, and &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; issues a message.</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' Syntax: ISRCOUNT string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' Original by IBM in the Macros documentation</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">dim msg as string </span></p>
+<p class="rvps2"><span class="rvts78">if Get_Arg$(0) = "" then halt(fail, "Missing search argument") ' Better have an operand</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">SPF_Cmd("FIND ALL " + SPF_Quote$(Get_Arg$(0))) &nbsp; &nbsp; &nbsp; &nbsp;' Issue a FIND ALL command</span></p>
+<p class="rvps2"><span class="rvts78">if Get_RC &lt;&gt; 0 then &nbsp;halt(fail, "No occurrences of: " + Get_Arg$(1)) ' Tell of error </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">msg = Get_Msg$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Get the SPFLite message text </span></p>
+<p class="rvps2"><span class="rvts78">' Issue our own format message</span></p>
+<p class="rvps2"><span class="rvts78">halt("ISRCount found", Get_Arg$(0), parse$(msg, " ", 4), "times") </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' ISRMask.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp;ISRMASK - Overlay a line with data from the mask line.</span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp;Use either line command O/OO or OR/ORR to specify &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp;which lines to overlay. O/OO causes nondestructive &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts78">' &nbsp;overlay, and OR/ORR causes a destructive overlay. </span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca </span></p>
+<p class="rvps2"><span class="rvts78">' Original by IBM in the Macros Documentation </span></p>
+<p class="rvps2"><span class="rvts78">' </span></p>
+<p class="rvps2"><span class="rvts78">dim mask as string</span></p>
+<p class="rvps2"><span class="rvts78">dim i as number</span></p>
+<p class="rvps2"><span class="rvts78">spf_debug(Get_Dest_LCmd$)</span></p>
+<p class="rvps2"><span class="rvts78">if left$(Get_Dest_LCmd$, 1) &lt;&gt; "O" then halt(fail, "No overlay range has been selected") </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">mask = Get_Profile$("MASK") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Fetch the MASK data</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">for i = Get_Dest1_LPtr to Get_Dest2_LPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Loop through line range</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if Is_Data(i) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Only Data lines </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;if Get_Dest_LCmd$ = "O" or Get_Dest_LCmd$ = "OO" then &nbsp;' Normal O/OO type overlay? </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_Ovr(i, 1, mask) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Overlay the mask</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Must be OR/ORR type </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp; &nbsp; SPF_Ovr_Rep(i, 1, mask) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Force Overlay the mask</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' End IsData </span></p>
+<p class="rvps2"><span class="rvts78">next &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'</span></p>
+<p class="rvps2"><span class="rvts78">halt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Done</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' PB.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">' Run a batch compile of the current program. If the compiler reports an error,</span></p>
+<p class="rvps2"><span class="rvts78">' read the LOG file to locate the error, and move the cursor to the line in error</span></p>
+<p class="rvps2"><span class="rvts78">' and display the compiler's error message. This demonstrates how to read and</span></p>
+<p class="rvps2"><span class="rvts78">' process an external file using the thinBasic FILE module.</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">' Syntax: PB</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca</span></p>
+<p class="rvps2"><span class="rvts78">' </span></p>
+<p class="rvps2"><span class="rvts78">dim cmd, errmsg, tt as string &nbsp;</span></p>
+<p class="rvps2"><span class="rvts78">dim errlin, errcol, i as number</span></p>
+<p class="rvps2"><span class="rvts78">dim fHandle as DWORD</span></p>
+<p class="rvps2"><span class="rvts78">uses "FILE" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Attach the FILE module</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Save unmodified files </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; SPF_Cmd("SAVEALL COND") </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Build command line to run the compiler </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; cmd = $DQ + "D:\Google Drive\Misc Data\PBWin10.bat" &nbsp;+ $DQ + " "</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; cmd += $DQ + mid$(Get_FilePath$, 3) + $DQ + " "</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; cmd += $DQ + Get_FileName$ + $DQ</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Do the compile and get the RC result </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; SPF_EXEC(cmd) </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if Get_RC = 0 then halt("PB10 compile successful")</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Handle the compiler error, get the LOG file </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; fHandle = FILE_OPEN(Get_FilePath$ + "\" + Get_FileBase$ + &nbsp;".LOG" , "INPUT") </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if fHandle = 0 then halt(fail, "PB10 compile failed, can't open LOG file")</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; for i = 1 to 6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Read line 6 of the LOG </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;errmsg = FILE_LineInput(fHandle) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; next i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; i = FILE_Close(fHandle) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Extract error line number, column and error message text </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Sample error line: &nbsp;Error 442 in C:\Documents\Source\try.bas(12:016): &nbsp;THEN expected</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; tt = parse$(errmsg, any "()", 2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get the (nnn:nnn) value </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; errlin = val(tt) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Line number preceeds the : </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; tt = mid$(tt, instr(tt, ":") + 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; errcol = val(tt) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Col number follows the : &nbsp;</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; errmsg = parse$(errmsg, "):", 2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Message follows the ): </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; '----- Issue an error message and set the cursor to the error line </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; Set_Msg(fail,"Line: " + format$(errlin) + " Col: " + format$(errcol) + " " + errmsg) </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; tt = Get_Line$(errlin + 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Get the error line</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if errcol &gt; len(tt) then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Long enough to hi-lite? </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;tt = lset$(tt, errcol) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Lengthen it </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;Set_Line(errlin + 1, tt) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Stuff it back </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' &nbsp;</span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; Set_Csr(errlin + 1, errcol, 1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Hi-light the compiler's error location </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; halt &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Done</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">' RM.MACRO</span></p>
+<p class="rvps2"><span class="rvts78">' Find rightmost occurrence of a string </span></p>
+<p class="rvps2"><span class="rvts78">' Syntax: RM string</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">' Author: George Deluca</span></p>
+<p class="rvps2"><span class="rvts78">'</span></p>
+<p class="rvps2"><span class="rvts78">dim hicol, hiline as number value 0 </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">if Get_Arg$(0) = "" then halt(fail, "Missing search argument")</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">SPF_Cmd("FIND FIRST " &amp; Get_Arg$(0)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Issue 1st FIND cmd </span></p>
+<p class="rvps2"><span class="rvts78">do while Get_RC = 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' while found </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; if Get_Find_Col &gt; hicol then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Save hi-water mark </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;hicol = Get_Find_Col &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; &nbsp; &nbsp;hiline = Get_Find_LPtr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; SPF_Cmd("RFIND") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Look some more </span></p>
+<p class="rvps2"><span class="rvts78">loop &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">if hiline = 0 then &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Find anything? </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; halt(fail, "String not found") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' No, tell of error </span></p>
+<p class="rvps2"><span class="rvts78">else &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' Yes </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; Set_Csr(hiline, hicol, Get_Find_Len) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' Set cursor to it </span></p>
+<p class="rvps2"><span class="rvts78"> &nbsp; halt("Found", Get_Arg$(0), "rightmost in col:", format$(hicol)) ' Issue good message </span></p>
+<p class="rvps2"><span class="rvts78">end if &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;' </span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78">------------------------------------------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p class="rvps2"><span class="rvts78"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com">Free CHM Help documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

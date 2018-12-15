@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Globally Stored Data</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Globally Stored Data">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Globally Stored Data" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="GloballyStoredData"
+		  data-hnd-context="11"
+		  data-hnd-title="Globally Stored Data"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Globally Stored Data</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts13">Introduction to globally-stored data</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The SPFLite macro facility provides functions which allow you to save numeric and/or string data from your macro. This saved data can be retrieved later in the same macro, in a subsequent new execution of the same macro, or by any other macro executing later.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">See </span><a class="rvts12" href="FunctionDetails.html">Function Details</a><span class="rvts11"> for information on calling these functions.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Globally-stored data can enable the creation of a set of related macros and provide a means for them to communicate with each other. It could also be used to store "state-like" information for a single macro that is executed repeatedly over the course of an edit session.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The stored values are maintained </span><span class="rvts13">only</span><span class="rvts11"> for the duration of the current SPFLite session. You may do multiple Edit/Save functions on different files, and the global data will be maintained. Globally-stored data will be discarded when SPFLite is terminated.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Globally-stored data is not "persistent" in the way that certain Profile and edit settings are when you have </span><span class="rvts13">STATE ON</span><span class="rvts11"> in effect. Globally-stored data, and </span><span class="rvts13">STATE</span><span class="rvts11"> information, are two completely different concepts.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">If you really needed globally-stored data to persist across SPFLite executions, it is possible you could write out the data to a file and then read it back in later, using file-management services provided by thinBasic. We haven't experimented with this ourselves, but you're welcome to try. (If you do, let us know how it works out for you.)</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Or you could use the SPFLite SET variable support to retain data using the </span><a class="rvts12" href="FunctionDetails.html#FN.Get_SETVar$">Get_SetVar$</a><span class="rvts11"> and </span><a class="rvts12" href="FunctionDetails.html#FN.Set_SETVar">Set_SetVar</a><span class="rvts11"> functions.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Also be aware that globally-stored data is only "global" within a given SPFLite execution. If you have multiple instances of SPFLite running in Windows, each one has its </span><span class="rvts13">own </span><span class="rvts11">copy of globally-stored data for its own execution instance. The global data is </span><span class="rvts13">not</span><span class="rvts11"> shared across multiple SPFLite instances.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">The data is held in "storage pools" as a series of key/data pairs. (Some people refer to that as a "map" or "associative storage", if that helps.) &nbsp;The keys may be any strings of your choosing. There are two global storage pools. One is for storing string data, and the other is for storing numeric data.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Like global variables in any other language, globally-stored values can be a good thing </span><span class="rvts13">if</span><span class="rvts11"> handled carefully, but could cause problems if misused in a poorly designed macro, for reasons well-known to experienced software developers. Persistent data sometimes causes unexpected side effects, which you need to be aware of, and plan for. Generally, you should only use globally-stored data if conventional local variables are not enough. They should be used sparingly, and only as a last resort. (As they say, be careful what you wish for.)</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13">Sub-Tables</span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Since there are just two Global pools (String and Numeric), you may have multiple requirements for storage of a single type. This is handled by using an Optional sub-table number to create unique groupings. You may use any number you like to identify a table, and the same key-names may occur in different subtables. The Table-number is entered as an optional first parameter to the Set_Gbl, Get_Gbl and Reset_Gbl functions. If the operand is omitted, a value of zero is assumed.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Examples:</span></p>
+<p class="rvps7"><span class="rvts18">SET_GBL_NUM("KEY1", 12) &nbsp; &nbsp; &nbsp;</span><span class="rvts59">will store 12 as a value for the key KEY1 in the default Table zero</span></p>
+<p class="rvps7"><span class="rvts59"><br/></span></p>
+<p class="rvps7"><span class="rvts18">SET_GBL_NUM(4, "KEY1", 15) &nbsp; </span><span class="rvts59">will store 15 as a value for the key KEY1 in Table 4</span></p>
+<p class="rvps7"><span class="rvts59"><br/></span></p>
+<p class="rvps7"><span class="rvts18">GET_GBL_NUM("KEY1") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts59">will return 12 as a value for the key KEY1 from the default Table zero</span></p>
+<p class="rvps7"><span class="rvts59"><br/></span></p>
+<p class="rvps7"><span class="rvts18">GET_GBL_NUM(2, "KEY1") &nbsp; &nbsp; &nbsp; </span><span class="rvts59">will return 0 as a value since it asked for a value from Table 2 which was never used.</span></p>
+<p class="rvps7"><span class="rvts59"><br/></span></p>
+<p class="rvps7"><span class="rvts18">GET_GBL_NUM(4, "KEY1") &nbsp; &nbsp; &nbsp; </span><span class="rvts59">will return 15 as a value for the key KEY1 from Table 4</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Undefined keys and deletion of global storage</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you request the value of an undefined key, the functions will return default values of </span><span class="rvts13">0</span><span class="rvts11"> (for Get_Gbl_Num) and a null string (for Get_Gbl_Str$). Thus, it is not necessary to "initialize" global storage if these default values are sufficient. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">You can also use the fact that an undefined global number returns a zero value as a "flag" showing that some (other) global value needed to be initialized. Recalling that FALSE is the same thing as zero, here is an example of how to do that:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">IF GET_GBL_NUM("INITIALIZED") = FALSE THEN</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SET_GBL_STR ("MY-STR-VAR", "some string value")</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SET_GBL_NUM ("MY-NUM-VAR", some-numeric-value)</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">SET_GBL_NUM ("INITIALIZED", TRUE)</span></p>
+<p class="rvps4"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">END IF</span></p>
+<p class="rvps4"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">At present, there is no way to delete an individual key/value pair from a storage pool, once it's defined. To achieve the effect of a deletion, you can store a zero or null value. If it's necessary to determine whether a zero or null is an actually-stored value or just the default value returned when querying for an undefined key, you can check the return code. Querying for a defined key will produce a return code of </span><span class="rvts13">0</span><span class="rvts11">, and querying for an undefined key will produce a return code of </span><span class="rvts13">8</span><span class="rvts11">. You can delete </span><span class="rvts23">every</span><span class="rvts11"> global number or string using the functions using </span><a class="rvts21" href="FunctionDetails.html#Reset_Gbl_Num">Reset_Gbl_Num</a><span class="rvts11"> and </span><a class="rvts21" href="FunctionDetails.html#Reset_Gbl_Str">Reset_Gbl_Str</a><span class="rvts11">. These two functions also enable you to delete only a specific sub-table. See the Function details for further assistance.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Example</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If you wanted to store the last modified date for the current edit file, you could do so by issuing:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Set_Gbl_Str(Get_FileName$, Get_FileDate$)</span></p>
+<p class="rvps7"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">This would create a global variable with a key equal to the filename, and a value equal to the file's modification date. At some future time this macro, or some other macro, could retrieve this particular date for the file by issuing:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Date-var = Get_Gbl_Str$("the file name")</span></p>
+<p class="rvps5"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">If still had the same data file actively being edited, you could do this:</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps7"><span class="rvts18">Date-var = Get_Gbl_Str$(</span><span class="rvts18">Get_FileName$</span><span class="rvts18">)</span></p>
+<p class="rvps5"><span class="rvts18"><br/></span></p>
+<p class="rvps4"><span class="rvts11">There is no limit to the number of global variables, or the size of the saved strings, other than available system memory.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts13">Available global functions</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">See the relevant section in </span><a class="rvts12" href="FunctionDetails.html">Function Details</a><span class="rvts11"> for additional information on these functions.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><a class="rvts49" href="FunctionDetails.html#FN.Set_Gbl_Num">Set_Gbl_Num</a><span class="rvts20">([TblNum,]</span><span class="rvts56">key-str, value-num</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Stores the </span><span class="rvts37">value-num</span><span class="rvts11"> under the key specified by </span><span class="rvts37">key-str</span><span class="rvts11">. If a key matching the contents of </span><span class="rvts37">key-str</span><span class="rvts11"> already exists, the numeric </span><span class="rvts11">value</span><span class="rvts11"> it was previously associated with is replaced with the new </span><span class="rvts37">value-num</span><span class="rvts11">. If a key matching the contents of the </span><span class="rvts37">key-str</span><span class="rvts11"> does not already exist, it is created.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><a class="rvts49" href="FunctionDetails.html#FN.Set_Gbl_Str">Set_Gbl_Str</a><span class="rvts20">([TblNum,]</span><span class="rvts56">key-str, value-str</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Stores the </span><span class="rvts37">value-str</span><span class="rvts11"> under the key specified by </span><span class="rvts37">key-str</span><span class="rvts11">. If a key matching the contents of </span><span class="rvts37">key-str</span><span class="rvts11"> already exists, the string </span><span class="rvts11">value</span><span class="rvts11"> it was previously associated with is replaced with the new </span><span class="rvts37">value-str</span><span class="rvts11">. If a key matching the contents of the </span><span class="rvts37">key-str</span><span class="rvts11"> does not already exist, it is created.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">num-var</span><span class="rvts20"> = </span><a class="rvts49" href="FunctionDetails.html#FN.Get_Gbl_Num">Get_Gbl_Num</a><span class="rvts20">([TblNum,]</span><span class="rvts56">key-str</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the numeric value associated with </span><span class="rvts37">key-str</span><span class="rvts11">. If the key does not exist, zero is returned, and an error is stored in the RC and Msg$ variables.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">str-var</span><span class="rvts20"> = </span><a class="rvts49" href="FunctionDetails.html#FN.Get_Gbl_Str$">Get_Gbl_Str$</a><span class="rvts20">([TblNum,]</span><span class="rvts56">key-str</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the string value associated with </span><span class="rvts37">key-str</span><span class="rvts11">. If the key does not exist, a null (empty) string is returned, and an error is stored in the RC and Msg$ variables.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">num-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str_Count">Get_Gbl_Str_Count</a></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the current number of variables stored in the String pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">num-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num_Count">Get_Gbl_Num_Count</a></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the current number of variables stored in the Numeric pool.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">str-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str_Name$">Get_Gbl_Str_Name$</a><span class="rvts20">(</span><span class="rvts56">index-num</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the key name of the specified item in the String pool.</span></p>
+<p class="rvps2"><span class="rvts37">index-num</span><span class="rvts11"> must be a number in the range of 1 through the the value of </span><a class="rvts38" href="FunctionDetails.html#FN.Get_Gbl_Str_Count">Get_Gbl_Str_Count</a><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The keys stored in the String pool are not stored in any predicable order. To find the location of a given key in the pool, you must do a linear search from beginning to end until it is found. Pool management is done using software outside the control of SPFLite. Adding new entries to a pool may change the index of previously stored entries. If this happens, you may need to perform a new search to redetermine the location of a previously-located key.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">str-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Str_Name$">Get_Gbl_Str_TableName$</a><span class="rvts20">(</span><span class="rvts56">index-num</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the Table-number and key name of the specified item in the String pool.</span></p>
+<p class="rvps2"><span class="rvts37">index-num</span><span class="rvts11"> must be a number in the range of 1 through the the value of </span><a class="rvts38" href="FunctionDetails.html#FN.Get_Gbl_Str_Count">Get_Gbl_Str_Count</a><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The str-var returned contains the table-number preceding the key name, separated by a comma. e.g. a value like </span><span class="rvts18">4,KEYWORD.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts60">The table number is easily accessed via </span><span class="rvts18">VAL(str-var)</span></p>
+<p class="rvps2"><span class="rvts11">The keyname can be accessed via &nbsp;</span><span class="rvts18">REMAIN$(str-var, ",")</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">See also the note above re: order of entries.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">str-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num_Name$">Get_Gbl_Num_Name$</a><span class="rvts20">(</span><span class="rvts56">index-num</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the key name of the specified item in the Numeric pool.</span></p>
+<p class="rvps2"><span class="rvts37">index-num</span><span class="rvts11"> must be a number in the range of 1 through the the value of </span><a class="rvts38" href="FunctionDetails.html#FN.Get_Gbl_Num_Count">Get_Gbl_Num_Count</a><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The keys stored in the Numeric pool are not stored in any predicable order. To find the location of a given key in the pool, you must do a linear search from beginning to end until it is found. Pool management is done using software outside the control of SPFLite. Adding new entries to a pool may change the index of previously stored entries. If this happens, you may need to perform a new search to redetermine the location of a &nbsp;previously-located key.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">str-var</span><span class="rvts20"> = </span><a class="rvts47" href="FunctionDetails.html#FN.Get_Gbl_Num_Name$">Get_Gbl_Num_TableName$</a><span class="rvts20">(</span><span class="rvts56">index-num</span><span class="rvts20">)</span></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Returns the Table-number and key name of the specified item in the String pool.</span></p>
+<p class="rvps2"><span class="rvts37">index-num</span><span class="rvts11"> must be a number in the range of 1 through the the value of </span><a class="rvts38" href="FunctionDetails.html#FN.Get_Gbl_Str_Count">Get_Gbl_Str_Count</a><span class="rvts11">.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">The str-var returned contains the table-number preceding the key name, separated by a comma. e.g. a value like </span><span class="rvts18">4,KEYWORD.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts60">The table number is easily accessed via </span><span class="rvts18">VAL(str-var)</span></p>
+<p class="rvps2"><span class="rvts11">The keyname can be accessed via &nbsp;</span><span class="rvts18">REMAIN$(str-var, ",")</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">See also the note above re: order of entries.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">num-var</span><span class="rvts20"> = </span><a class="rvts58" href="FunctionDetails.html#Reset_Gbl_Num">Reset_</a><a class="rvts57" href="FunctionDetails.html#Reset_Gbl_Num">Gbl_Num</a></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Clears the entire Gbl_Num storage area. Returns True is successful, or False if the Clear fails.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="320" style="padding: 1px;"><p class="rvps2"><span class="rvts56">num-var</span><span class="rvts20"> = </span><a class="rvts58" href="FunctionDetails.html#Reset_Gbl_Str">Reset_</a><a class="rvts57" href="FunctionDetails.html#Reset_Gbl_Str">Gbl_Str</a></p>
+</td>
+<td width="629" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Clears the entire Gbl_Str storage area. Returns True is successful, or False if the Clear fails.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

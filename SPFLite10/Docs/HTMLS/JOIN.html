@@ -1,0 +1,550 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>JOIN - Join lines Using Find/Change Strings</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JOIN - Join lines Using Find/Change Strings">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="JOIN - Join lines Using Find/Change Strings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="JOIN"
+		  data-hnd-context="207"
+		  data-hnd-title="JOIN - Join lines Using Find/Change Strings"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>JOIN - Join lines Using Find/Change Strings</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts107">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts107"><br/></span></p>
+<p class="rvps5"><a class="rvts25" href="JOIN.html#Syntax">Syntax</a></p>
+<p class="rvps5"><a class="rvts25" href="JOIN.html#Operands">Operands</a></p>
+<p class="rvps5"><a class="rvts25" href="JOIN.html#Description">Description</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#PerformingjoinswhenasearchPictureofP'['orP']'isdesired">Performing joins when a search Picture of </a><a class="rvts423" href="JOIN.html#PerformingjoinswhenasearchPictureofP'['orP']'isdesired">P'['</a><a class="rvts42" href="JOIN.html#PerformingjoinswhenasearchPictureofP'['orP']'isdesired"> or </a><a class="rvts423" href="JOIN.html#PerformingjoinswhenasearchPictureofP'['orP']'isdesired">P']'</a><a class="rvts42" href="JOIN.html#PerformingjoinswhenasearchPictureofP'['orP']'isdesired"> is desired</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#SimulatingaJOINwithasearchstringofP'['orP']'">Simulating a JOIN with a search string of </a><a class="rvts423" href="JOIN.html#SimulatingaJOINwithasearchstringofP'['orP']'">P'['</a><a class="rvts42" href="JOIN.html#SimulatingaJOINwithasearchstringofP'['orP']'"> or </a><a class="rvts423" href="JOIN.html#SimulatingaJOINwithasearchstringofP'['orP']'">P']'</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#SimulatingaJOINwithasearchstringofP'[]'">Simulating a JOIN with a search string of </a><a class="rvts423" href="JOIN.html#SimulatingaJOINwithasearchstringofP'[]'">P'[]'</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#SupposeyoureallywanttoJOINandnotjustsimulateit?">Suppose you really want to JOIN and not just simulate it ?</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#PerformingjoinsmorecomplexthanJOINcansupport">Performing joins more complex than JOIN can support</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#Linejoiningandlineexclusion">Line joining and line exclusion</a></p>
+<p class="rvps5"><a class="rvts42" href="JOIN.html#SimulatingCHANGEoperandsthatarenotavailableonJOIN">Simulating CHANGE operands that are not available on JOIN</a></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Syntax"></a>
+<span class="rvts107">Syntax</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="212" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps217"><span class="rvts89">JOIN</span></p>
+</td>
+<td width="755" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">P'from-string' &nbsp;| &nbsp;R'from-string' &nbsp; </span></p>
+<p class="rvps2"><span class="rvts89">[ to-string ]</span></p>
+<p class="rvps2"><span class="rvts89">[ FIRST | LAST | </span><span class="rvts395">NEXT</span><span class="rvts89"> | PREV | ALL ]</span></p>
+<p class="rvps2"><span class="rvts89">[ PREFIX | SUFFIX | WORD | </span><span class="rvts131">CHAR</span><span class="rvts89"> ]</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria ]</span></p>
+<p class="rvps2"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<p class="rvps4"><a name="Operands"></a>
+<span class="rvts107">Operands</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps233"><span class="rvts353">from-string</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The search string you want to look for. The from-string must be defined as either a P-type Picture string or an R-type RegEx string, with a very restricted format that is discussed below.</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts353">to-string</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The string you want to replace from-string. This may be any standard </span><span class="rvts405">change string</span><span class="rvts105"> including P-type Picture strings and F-type Format strings. The to-string is optional, and if omitted, it is treated the same as </span><span class="rvts353">P'!'</span><span class="rvts105">. That is, when to-string is omitted, the replacement string is the same as the value found by the from-string. Note that the alignment Picture codes of </span><span class="rvts107">[</span><span class="rvts105"> and </span><span class="rvts107">]</span><span class="rvts105"> do not correspond to data values, and so these are not part of the value represented by &nbsp;</span><span class="rvts353">P'!'</span><span class="rvts105">.</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">FIRST</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find the first occurrence of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">LAST</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the bottom of the data and searches backward to find the last occurrence of from-string.</span><span class="rvts11"> &nbsp;</span><span class="rvts71">See Release Note below.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts363">NEXT</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the first position after the current cursor location and searches ahead to find the next occurrence of from-string. </span><span class="rvts11">NEXT</span><span class="rvts12"> is the default.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">PREV</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the current cursor location and searches backward to find the previous occurrence of from-string.</span><span class="rvts11"> &nbsp;</span><span class="rvts71">See Release Note below.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">ALL</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find all occurrences of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts419">PREFIX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts22">Locates from-string at the beginning of a word.</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts419">WORD</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts22">Locates from-string when it is delimited on both sides by blanks or other non-alphanumeric characters.</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts420">CHAR</span></p>
+<p class="rvps217"><span class="rvts420"><br/></span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates from-string regardless of what precedes or follows it.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts419">SUFFIX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts22">Locates from-string at the end of a word.</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">line-control-range</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-selection-criteria</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the from-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">X | NX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be examined, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be examined. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">U | NU</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">TOP</span></p>
+</td>
+<td width="756" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the 2nd screen line (as ISPF does) if the line is not on the current screen. If TOP is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts418">Release Note for LAST and PREV keywords</span><span class="rvts107"> </span></p>
+<p class="rvps4"><span class="rvts105"><br/></span></p>
+<p class="rvps5"><span class="rvts105">The </span><span class="rvts107">SPLIT</span><span class="rvts105"> and </span><span class="rvts107">JOIN</span><span class="rvts105"> commands are a new technology feature; their development is quite involved, and is ongoing. As of the writing of this Help documentation, the </span><span class="rvts107">LAST</span><span class="rvts105"> and </span><span class="rvts107">PREV</span><span class="rvts105"> keywords on </span><span class="rvts107">JOIN</span><span class="rvts105"> may not work correctly or may not be supported at all, initially. As this situation changes, we will keep you updated via the SPFLite web site for any new capabilities that are made available.</span></p>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">PREFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">PRE </span><span class="rvts13">or</span><span class="rvts14"> PFX</span></p>
+<p class="rvps5"><span class="rvts14">SUFFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUF </span><span class="rvts13">or</span><span class="rvts14"> SFX</span></p>
+<p class="rvps5"><span class="rvts14">WORDS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">WORD</span></p>
+<p class="rvps5"><span class="rvts14">CHARS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CHAR</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><a name="Description"></a>
+<span class="rvts107">Description</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">JOIN</span><span class="rvts6"> edit primary command is used to selectively combine lines of text based on a search string. After a join occurs, a line on which the </span><span class="rvts40">from-string</span><span class="rvts6"> is found will be combined either with the line before it, or with the line after it. So, each time a join takes place, two lines of text will become one line of text.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Notes</span><span class="rvts6">:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">The </span><span class="rvts40">SPLIT</span><span class="rvts6"> command performs the opposite function, breaking one line into two. See </span><a class="rvts34" href="SPLIT.html">SPLIT - Split Lines Using Find/Change Strings</a><span class="rvts6"> for more information.</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">The "joining" action could be termed a "physical" join, without trimming of leading or trailing blanks from any of the lines involved in the </span><span class="rvts40">JOIN</span><span class="rvts6"> process. In that sense, the action is comparable to what is done by the </span><span class="rvts40">G</span><span class="rvts6"> and </span><span class="rvts40">GG</span><span class="rvts6"> "glue" line commands, rather than by the</span><span class="rvts40"> J</span><span class="rvts6">/</span><span class="rvts40">JJ</span><span class="rvts6"> "join" line commands or the by text-mode line commands </span><span class="rvts40">TG</span><span class="rvts6">/</span><span class="rvts40">TGG</span><span class="rvts6"> and </span><span class="rvts40">TJ</span><span class="rvts6">/</span><span class="rvts40">TJJ</span><span class="rvts6">. </span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">The effect of inserting text between lines that takes place with </span><span class="rvts40">J</span><span class="rvts6">/</span><span class="rvts40">JJ</span><span class="rvts6"> and </span><span class="rvts40">TJ</span><span class="rvts6">/</span><span class="rvts40">TJJ</span><span class="rvts6"> commands, or with the </span><span class="rvts40">GLUEWITH</span><span class="rvts6"> command, can be achieved by how the </span><span class="rvts40">to-string</span><span class="rvts6"> is defined. In that sense, the capabilities of the </span><span class="rvts40">JOIN</span><span class="rvts6"> primary command are more powerful and flexible.</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts40">SPLIT</span><span class="rvts6"> and </span><span class="rvts40">JOIN</span><span class="rvts6">, as new SPFLite technologies, have been extensively tested, but it is possible you may run into issues using them. If you have any questions about how these commands operate, feel free to leave us your feedback on the SPFLite web site.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">from-string</span><span class="rvts12"> describes the </span><span class="rvts50">join point</span><span class="rvts12"> where the joining operation takes place. Because a join operation joins a given line to the line that precedes it or to the line that follows it, a join can take place at only one of two join points: at the beginning or a line, or at the end of a line.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">from-string</span><span class="rvts12"> may be specified as a Regular Expression, in addition to a Picture string.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">from-string</span><span class="rvts12"> must be either:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts12">a Picture string in one of the following formats:</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">P'[string'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">left-join operation.</span><span class="rvts12"> &nbsp;The value of </span><span class="rvts11">string</span><span class="rvts12"> must appear on the left side of lines within the line range in order to be joined; otherwise any lines not beginning with </span><span class="rvts11">string</span><span class="rvts12"> will be ignored for </span><span class="rvts11">JOIN</span><span class="rvts12"> purposes. When a </span><span class="rvts11">[</span><span class="rvts12"> Picture code appears in the </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command, it must appear in the left-most position of the Picture string, and nowhere else.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">P'string]'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">right-join operation.</span><span class="rvts12"> &nbsp;The value of </span><span class="rvts11">string</span><span class="rvts12"> must appear on the right side of lines within the line range in order to be joined; otherwise any lines not ending with </span><span class="rvts11">string</span><span class="rvts12"> will be ignored for </span><span class="rvts11">JOIN</span><span class="rvts12"> purposes. When a </span><span class="rvts11">]</span><span class="rvts12"> Picture code appears in the </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command, it must appear in the right-most position of the Picture string, and nowhere else.</span></p>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts12">a Regular Expression string in one of the following formats:</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">R'^expression'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">left-join operation.</span><span class="rvts12"> &nbsp;The regular expression </span><span class="rvts11">must</span><span class="rvts12"> start with the </span><span class="rvts11">^</span><span class="rvts12"> directive to indicate the left-hand edge of the line. The remaining expression may be any valid RegEx expression. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">R'expression$'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">right-join operation.</span><span class="rvts12"> &nbsp;The regular expression </span><span class="rvts11">must</span><span class="rvts12"> end with the </span><span class="rvts11">$</span><span class="rvts12"> directive to indicate the right-hand edge of the line. The remaining expression may be any valid RegEx expression. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">It is not possible to directly join one line to </span><span class="rvts11">both</span><span class="rvts12"> the line that precedes it </span><span class="rvts11">and</span><span class="rvts12"> the line that follows it, at the same time. That is to say, a </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command cannot be specified in the form of </span><span class="rvts54">P'[string]'</span><span class="rvts12"> or </span><span class="rvts54">R'^expression$'</span><span class="rvts12">. For any given line, only one </span><span class="rvts11">JOIN</span><span class="rvts12">, on one side of a line, is allowed. </span><span class="rvts11">JOIN</span><span class="rvts12"> cannot perform a left-join and a right-join at the same time, since this would imply converting three lines of data into one line in a single join operation, an action that SPFLite does not support. See the discussion below for ways to simulate such complex joins.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: Because the </span><span class="rvts11">from-string</span><span class="rvts12"> must be a Picture or RegEx, there could be cases where you are trying to find data containing characters that are already defined as special-purpose Picture or RegEx codes. If you need such characters treated as ordinary data rather than as Picture codes, you can escape those characters by preceding them with a </span><span class="rvts54">\ </span><span class="rvts12">backslash. See </span><a class="rvts33" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts12"> for more information. See </span><a class="rvts33" href="SpecifyingaRegularExpression.html">Specifying a Regular Expression </a><a class="rvts421" href="SpecifyingaRegularExpression.html">for escaping within a Regular Expression. </a></p>
+<p class="rvps6"><a class="rvts421" href="SpecifyingaRegularExpression.html"><br/></a></p>
+<p class="rvps6"><a class="rvts422" href="SpecifyingaRegularExpression.html">Note</a><a class="rvts421" href="SpecifyingaRegularExpression.html">: In a Picture string, any character can be escaped with a backslash, whereas in a Regular Expression, only a limited number of "special" codes can be escaped. If you try to escape a Regular Expression character that is not eligible for being escaped, your Regular Expression will not properly match strings in the way you expected. This behavior is caused by the design of the Regular Expression "engine" and is outside the control of SPFLite. Read the Regular Expression documentation carefully on this point.</a></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">from-string</span><span class="rvts12"> must be in exactly one of these two formats. The </span><span class="rvts11">string</span><span class="rvts12"> value cannot be omitted. That is, you cannot have a JOIN </span><span class="rvts11">from-string</span><span class="rvts12"> appearing literally as </span><span class="rvts54">P'['</span><span class="rvts12"> or </span><span class="rvts54">P']'</span><span class="rvts12">. The main reason for this is that the </span><span class="rvts11">[</span><span class="rvts12"> and </span><span class="rvts11">]</span><span class="rvts12"> codes represent </span><span class="rvts50">edges</span><span class="rvts12"> of a line, but do not represent actual data values. So, a picture of </span><span class="rvts54">P'['</span><span class="rvts12"> or </span><span class="rvts54">P']'</span><span class="rvts12"> would actually represent a zero-length string, and the string-search engine in SPFLite will not "find" strings of zero length, because there is literally nothing to find. For the same reason, a picture of </span><span class="rvts54">P'[]'</span><span class="rvts12"> is not allowed either. See the discussion below for ways to simulate such joins.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">to-string</span><span class="rvts12"> is optional. If you omit it, the found-string is copied as is (ignoring the </span><span class="rvts11">[</span><span class="rvts12"> or </span><span class="rvts11">]</span><span class="rvts12"> Picture code), the same as if a </span><span class="rvts11">to-string</span><span class="rvts12"> of </span><span class="rvts54">P'!'</span><span class="rvts12"> was specified. That means the following JOIN commands all work the same way:</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">JOIN P'[ABC' 'ABC'</span><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">JOIN P'[ABC' P'!'</span></p>
+<p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">JOIN P'[ABC'</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">It is not illegal to ask </span><span class="rvts11">JOIN</span><span class="rvts12"> to left-join line 1 of a file, or to right-join the last line of a file. Since there is no data to join such lines to, the </span><span class="rvts11">JOIN</span><span class="rvts12"> request is simply ignored for those lines.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;While the</span><span class="rvts11"> to-string</span><span class="rvts12"> can be a Format string, you will find that using a Picture change string here should address most of your </span><span class="rvts11">JOIN</span><span class="rvts12"> requirements when the </span><span class="rvts11">to-string</span><span class="rvts12"> isn't a "simple" change string. Where a Format change string comes in handy is when the </span><span class="rvts11">from-string</span><span class="rvts12"> is a Picture (as is always true for </span><span class="rvts11">JOIN</span><span class="rvts12">), </span><span class="rvts11">and</span><span class="rvts12"> you need one or more codes of </span><span class="rvts11">=</span><span class="rvts12"> in the </span><span class="rvts11">to-string</span><span class="rvts12"> that don't match the corresponding character positions in the </span><span class="rvts11">from-string.</span><span class="rvts12"> &nbsp;See </span><a class="rvts33" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts12"> for more information. When you have an editing requirement of this kind, you will get an error message if an </span><span class="rvts11">=</span><span class="rvts12"> code is misplaced in a Picture change string; that is your 'clue' that you need a Format string instead. (These comments about the use of the </span><span class="rvts11">=</span><span class="rvts12"> codes in Pictures also apply to the related </span><span class="rvts11">&lt; &gt;</span><span class="rvts12"> and </span><span class="rvts11">~</span><span class="rvts12"> codes, which operate in a similar way and have similar rules.)</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">See </span><a class="rvts33" href="WorkingwithSPLITandJOINCommands.html">Working with SPLIT and JOIN Commands</a><span class="rvts12"> for example usage of the </span><span class="rvts11">JOIN</span><span class="rvts12"> command.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts40">Performing joins when a search Picture of </span><span class="rvts139">P'['</span><span class="rvts6"> or </span><span class="rvts139">P']'</span><a name="PerformingjoinswhenasearchPictureofP'['orP']'isdesired"></a>
+<span class="rvts40"> is desired</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">As noted above, </span><span class="rvts40">JOIN</span><span class="rvts6"> will not accept a search Picture of </span><span class="rvts139">P'['</span><span class="rvts6"> or </span><span class="rvts139">P']'</span><span class="rvts6"> or </span><span class="rvts139">P'[]'</span><span class="rvts6">. These strings are illegal in </span><span class="rvts40">JOIN</span><span class="rvts6">, because they all represent zero-length strings, and </span><span class="rvts139">P'[]'</span><span class="rvts6"> (if legal) would represent a zero-length line; the string search-engine in SPFLite will not find such zero-length strings or lines, because there is literally nothing to find. Suppose, though, you had some reason doing such joins anyway. How could you go about it?</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts40">Simulating a JOIN with a search string of </span><span class="rvts139">P'['</span><span class="rvts40"> or </span><a name="SimulatingaJOINwithasearchstringofP'['orP']'"></a>
+<span class="rvts139">P']'</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">A join of this type implies that you want to join a line to another line, such that the contents of the line itself are not the deciding factor. You probably are not (intentionally) trying to find zero-length lines, but (a) you don't care about the exact contents of the line, (b) your are almost certainly using F5 and F6 (or other keys mapped to </span><span class="rvts40">RFIND</span><span class="rvts6">/</span><span class="rvts40">RLOCFIND</span><span class="rvts6"> and </span><span class="rvts40">RCHANGE</span><span class="rvts6">) to selectively join lines because you have to manually inspect each one to decide whether to JOIN it or not, and (c) </span><span class="rvts40">in case</span><span class="rvts6"> you do run into a zero-length line while doing this, you don't want to be stopped from what you are planning on doing.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Suppose you wanted to selectively find lines, perhaps with the </span><span class="rvts40">FIND</span><span class="rvts6"> command or by some other means, and when you find such lines (even zero-length lines), you want to join them to the line before or after.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Because the line command </span><span class="rvts40">G</span><span class="rvts6"> will perform a "physical join" of the line it is on to the line that follows it, it basically performs a function similar to what a right-joining command of</span><span class="rvts62"> JOIN P']' '' </span><span class="rvts6">would do, if such a command were legal. Let's say you issued some kind of </span><span class="rvts40">FIND</span><span class="rvts6"> command, and you keep pressing F5 to </span><span class="rvts40">RFIND</span><span class="rvts6"> the desired line(s). You now want to right join the line - </span><span class="rvts40">whatever</span><span class="rvts6"> it contains, </span><span class="rvts40">even</span><span class="rvts6"> a zero-length line - to the line after it. For convenience, let's map the line command </span><span class="rvts40">G</span><span class="rvts6"> to the </span><span class="rvts40">Ctrl Shift F5</span><span class="rvts6"> key. The KEYMAP string would appear as </span><span class="rvts139">{G}</span><span class="rvts6">. Then, when you find a desired line, you would right-join it by pressing </span><span class="rvts40">Ctrl Shift F5</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Performing a function similar to what a left-joining command of</span><span class="rvts62"> </span><span class="rvts139">JOIN P'[' ''</span><span class="rvts62"> </span><span class="rvts6">would work basically the same way. However, since the join/glue line commands always perform operations that amount to joining on the </span><span class="rvts40">right</span><span class="rvts6">, you would have to turn a right join into a </span><span class="rvts40">left</span><span class="rvts6"> join by moving the cursor up one line and then issuing a the </span><span class="rvts40">G</span><span class="rvts6"> line command. Let's map the cursor movement and the line command </span><span class="rvts40">G</span><span class="rvts6"> to the </span><span class="rvts40">Ctrl Alt F5</span><span class="rvts6"> key. The KEYMAP string would appear as </span><span class="rvts139">(Up){G}</span><span class="rvts6">. Then, when you find a desired line, you would right-join it by pressing </span><span class="rvts40">Ctrl Alt F5</span><span class="rvts6">. So, instead of joining the "current" line to the "previous" line, we move the cursor up one line, and then join the "previous" line to the "current" one - but the result is the correct one.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This technique will also work when one of the lines being joined is a zero-length line. In such cases, the zero-length line is effectively deleted.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts40">Simulating a JOIN with a search string of </span><a name="SimulatingaJOINwithasearchstringofP'[]'"></a>
+<span class="rvts139">P'[]'</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">A join of this type implies that you want to find lines of zero length and "join" them to an adjacent line. However, by definition, since the line is of zero-length, "joining" such a line - whether to a preceding line or to a subsequent line - is the same thing as deleting it. So, you are actually trying to delete zero-length lines by using a </span><span class="rvts40">JOIN</span><span class="rvts6"> to do it.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You cannot directly "find" strings of zero-length, because as noted above, SPFLite's string search engine will not find zero-length strings, as there is literally nothing to find. However, you </span><span class="rvts40">can</span><span class="rvts6"> find </span><span class="rvts40">lines</span><span class="rvts6"> in which no characters are present. This relies on the </span><span class="rvts40">NFIND</span><span class="rvts6"> command. If you issue a command of the form:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">NFIND P'='</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">you are asking SPFLite to find lines in which not even a single character (of length </span><span class="rvts40">one</span><span class="rvts6">) matching a Picture of </span><span class="rvts139">P'='</span><span class="rvts6"> is found. Since a Picture of </span><span class="rvts139">P'='</span><span class="rvts6"> represents </span><span class="rvts40">any</span><span class="rvts6"> character, the </span><span class="rvts40">NFIND</span><span class="rvts6"> command finds any lines where there are no characters found at all, because the test for finding characters that match the pattern of </span><span class="rvts139">P'='</span><span class="rvts6">has failed. The only lines that can possibly meet this condition are lines of zero length. This command is repeatable by using the </span><span class="rvts40">RFIND</span><span class="rvts6"> or </span><span class="rvts40">RLOCFIND</span><span class="rvts6"> command (traditionally mapped to F5).</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Once you find the desired zero-length lines, just delete them. You could map a key to the </span><span class="rvts40">{D}</span><span class="rvts6"> delete line command for this purpose, or perhaps you might wish to "mark" such zero-length lines with a special character (like the </span><span class="rvts6">?</span><span class="rvts6"> character described below) and then go back and delete all of them with a primary command such as:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">DELETE '</span><span class="rvts6">?</span><span class="rvts139">' ALL</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If your goal was simply to delete all zero-length lines from a file, the easiest way to do this is as follows, which relies on the </span><span class="rvts40">NEXCLUDE</span><span class="rvts6"> command, abbreviated as </span><span class="rvts40">NX</span><span class="rvts6">. (This is not the only to do it, but it's a good general example.)</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">RESET</span></p>
+<p class="rvps6"><span class="rvts139">NX P'=' ALL</span></p>
+<p class="rvps6"><span class="rvts139">DELETE ALL X</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="SupposeyoureallywanttoJOINandnotjustsimulateit?"></a>
+<span class="rvts40">Suppose you really want to JOIN and not just simulate it ?</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The main problem to doing this is dealing with zero-length lines. The easiest way to overcome this is to put some data on those lines so they aren't zero-length any more. One method of doing this is to </span><span class="rvts40">APPEND</span><span class="rvts6"> a blank to such lines. Appending a blank to a zero-length line will make it a line of length 1. For most </span><span class="rvts40">JOIN</span><span class="rvts6"> purposes, that should be good enough. Here is a sequence that will 'fix' all the zero-length lines in a file:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">RESET</span></p>
+<p class="rvps6"><span class="rvts139">NX P'=' ALL</span></p>
+<p class="rvps6"><span class="rvts139">APPEND ' ' ALL X</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The</span><a class="rvts34" href="PL.html"> Pad to Length command PL</a><span class="rvts6"> can take a </span><span class="rvts40">/</span><span class="rvts6"> or </span><span class="rvts40">\</span><span class="rvts6"> modifier. Putting </span><span class="rvts139">PL/</span><span class="rvts6"> on line 1 of a file will ensure that every line of the file is at least one character long.</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="PerformingjoinsmorecomplexthanJOINcansupport"></a>
+<span class="rvts40">Performing joins more complex than JOIN can support</span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts6">You may encounter cases where the </span><span class="rvts40">JOIN</span><span class="rvts6"> command won't do everything you want. You might want to join a line to the line before it </span><span class="rvts40">and</span><span class="rvts6"> to the line after it, at the same time. You may have text already colored by highlighting pens and you need precise control over how the text colors are affected by joining. You may need special features supported by </span><span class="rvts40">CHANGE</span><span class="rvts6">, such as </span><span class="rvts40">TRUNC</span><span class="rvts6">, </span><span class="rvts40">MX</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, etc. These and other cases may require a different approach.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Keeping in might that a </span><span class="rvts40">JOIN</span><span class="rvts6"> is a type of "change" to a line, you can perform more-complex joining by doing this in two stages. First, use a </span><span class="rvts40">CHANGE</span><span class="rvts6"> command to insert "user-defined join points" into your data, and then go back and use one or more </span><span class="rvts40">JOIN</span><span class="rvts6"> commands to actually combine them. This technique has the nice feature that after the first part, you can go and manually inspect all of the user-defined join points you just put in, and verify they are all where you want them, possibly adding and removing a few before the second part, if you have certain special cases where some join points have to be taken out and others added. Because the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command, and any manual editing of your own, will have placed these user-defined join points exactly where you need them, only a simple form of </span><span class="rvts40">JOIN</span><span class="rvts6"> will be required to combine the lines.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">To do this, you might want to map some special ANSI character that you rarely use in your own data, and use that to represent your user-defined join points. If necessary, you can use the </span><a class="rvts34" href="ListofKeyboardPrimitives.html#kb.ansi">(Ansi)</a><span class="rvts6"> function to get any ANSI character into the clipboard, and then use it as a value for KEYMAP.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Suppose you had a string "AB-CD-EF" &nbsp;appearing between lines .ONE and .TWO. In some cases, AB-CD-EF is the only thing on a line, neither preceded nor followed by any characters (even spaces), and in other cases it may appear on some lines next to other data. You want to take the lines where AB-CD-EF is the only thing on a line, and join that line </span><span class="rvts40">both</span><span class="rvts6"> to the line before it </span><span class="rvts40">and</span><span class="rvts6"> to the line after it, at the same time. You can't do that directly with </span><span class="rvts40">JOIN</span><span class="rvts6">, but (assuming that </span><span class="rvts6">?</span><span class="rvts6"> does not appear in your data) you could do the following instead. The idea here is that you would use the ?</span><span class="rvts6"> character to temporarily mark a user-defined join point, which you go back and process with subsequent JOIN commands, which also remove the temporary join marks. The same mark is used on both sides, so that when you do the </span><span class="rvts40">JOIN</span><span class="rvts6"> commands, you will be sure that you just change lines in which AB-CD-EF is the only thing on a line, rather than in places where it happens to just begin or end a line. That is, you want to make sure you join the correct lines, and nothing else.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Note here that </span><span class="rvts40">CHANGE</span><span class="rvts6"> can have a find-picture containing both </span><span class="rvts40">[</span><span class="rvts6"> and </span><span class="rvts40">]</span><span class="rvts6">, whereas JOIN allows only one of these codes (but not both). We use a change Picture of </span><span class="rvts139">P'</span><span class="rvts6">?</span><span class="rvts139">!</span><span class="rvts6">?</span><span class="rvts139">'</span><span class="rvts6"> in the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command for conciseness. You could have also used a simple string of </span><span class="rvts139">'</span><span class="rvts6">?</span><span class="rvts139">AB-CD-EF</span><span class="rvts6">?</span><span class="rvts139">'</span><span class="rvts6"> instead. Note how the </span><span class="rvts40">JOIN</span><span class="rvts6"> command change-strings effectively delete the </span><span class="rvts6">?</span><span class="rvts6"> character by not including it in the characters appearing in the change-string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">As you can see, the to-string of the </span><span class="rvts40">JOIN</span><span class="rvts6"> command can be a zero-length (null) string. The net effect is that the ?</span><span class="rvts6"> character defines where the join takes place, and then that </span><span class="rvts6">?</span><span class="rvts6"> character is removed by being replaced with </span><span class="rvts139">''</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts6">If you want to do this, you have to explicitly specify an empty </span><span class="rvts40">to-string</span><span class="rvts6"> of </span><span class="rvts139">''</span><span class="rvts6">, because if you just omit the second string operand, it's assumed to be </span><span class="rvts139">P'!'</span><span class="rvts6">, which </span><span class="rvts140">copies</span><span class="rvts6"> the original found-string rather than </span><span class="rvts140">deleting</span><span class="rvts6"> it, and that is not what you wanted in this example here.</span></p>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The first </span><span class="rvts40">JOIN</span><span class="rvts6"> joins lines on the left side, and the second joins on the right side; the user-defined join-point character then disappears.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">CHANGE P'[AB-CD-EF]' P'</span><span class="rvts6">?</span><span class="rvts139">!</span><span class="rvts6">?</span><span class="rvts139">' ALL .ONE .ONE</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">JOIN P'[</span><span class="rvts6">?</span><span class="rvts139">' '' ALL .ONE .TWO</span></p>
+<p class="rvps4"><span class="rvts40"> </span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">JOIN P'</span><span class="rvts6">?</span><span class="rvts139">]' '' ALL .ONE .TWO</span></p>
+<p class="rvps4"><span class="rvts40"> </span></p>
+<p class="rvps5"><span class="rvts6">By the way, if you don't feel like using the </span><span class="rvts6">?</span><span class="rvts6"> character, pick anything you like that's convenient and not already in your data.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Linejoiningandlineexclusion"></a>
+<span class="rvts40">Line joining and line exclusion</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">JOIN</span><span class="rvts6"> command supports the </span><span class="rvts40">X</span><span class="rvts6"> and </span><span class="rvts40">NX</span><span class="rvts6"> keywords, to allow you to limit your line-range selection to only excluded (</span><span class="rvts40">X</span><span class="rvts6">), or only not-excluded lines (</span><span class="rvts40">NX</span><span class="rvts6">), if you wish. Regardless of the use of </span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">NX</span><span class="rvts6"> keywords, when a line is joined-to, it is considered a "change" to the that line. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">When a left-join is done, a given line is joined to a prior line; that prior line is the "joined-to" line. </span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">When a right-join is done, a given line is joined to a subsequent line; that subsequent line is the "joined-to" line. </span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Any joined-to line that was excluded at the time the join is done will be </span><span class="rvts40">unexcluded</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">JOIN</span><span class="rvts6"> command does </span><span class="rvts40">not</span><span class="rvts6"> support the </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX</span><span class="rvts6"> keywords at this time.</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="SimulatingCHANGEoperandsthatarenotavailableonJOIN"></a>
+<span class="rvts40">Simulating CHANGE operands that are not available on JOIN</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">As noted above, </span><span class="rvts40">JOIN</span><span class="rvts6"> does not allow </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX. JOIN</span><span class="rvts6"> also does not presently support a column range. Suppose you wanted such features for your JOIN processing; how could you accomplish it?</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The main way is to use other commands in a "pre-join preparatory step" and then do your </span><span class="rvts40">JOIN</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">To achieve the effect of </span><span class="rvts40">MX</span><span class="rvts6"> or </span><span class="rvts40">DX</span><span class="rvts6">, it may be possible to use a </span><span class="rvts40">FIND</span><span class="rvts6"> or </span><span class="rvts40">CHANGE</span><span class="rvts6"> with </span><span class="rvts40">MX</span><span class="rvts6"> or </span><span class="rvts40">DX</span><span class="rvts6"> first.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Another approach is to use the </span><span class="rvts40">TAG</span><span class="rvts6"> command, tagging lines where you want the </span><span class="rvts40">JOIN</span><span class="rvts6"> to take place, then going back and using </span><span class="rvts40">JOIN</span><span class="rvts6"> with the tag name you set. See </span><a class="rvts34" href="TAG.html">TAG - Alter Tag Status of a Range of Lines</a><span class="rvts6"> for more information on using this command.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For example, suppose you want to do a "left join" on all lines where the string ABC appears in columns 21 to 29. But, ABC might be anywhere in those columns, and it might be preceded by any arbitrary text, so there is no easy way to do this. Here is an example of how you could do this:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">First, tag all the lines that meet your criteria. Let's use a tag of </span><span class="rvts40">:J</span><span class="rvts6"> for "join", and we will use the </span><span class="rvts40">SET</span><span class="rvts6"> option of </span><span class="rvts40">TAG</span><span class="rvts6"> so any prior </span><span class="rvts40">:J </span><span class="rvts6">tags will be cleared.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Then, we can do the join on the tagged lines. Because the prior TAG command only tagged lines having the ABC string, none of those lines would ever be of zero length, so the </span><span class="rvts40">JOIN</span><span class="rvts6"> command with the arguments of &nbsp;</span><span class="rvts40">P'[=' &nbsp;P'='&nbsp;</span><span class="rvts6"> will always 'find' every line that we just tagged with </span><span class="rvts40">:J</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Finally, if you wish, we can clear out the </span><span class="rvts40">:J</span><span class="rvts6"> tags since they are no longer needed.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Here are the commands you would use:</span></p>
+<p class="rvps6"><span class="rvts139"><br/></span></p>
+<p class="rvps6"><span class="rvts139">TAG :J SET 'ABC' 21 29 ALL</span></p>
+<p class="rvps6"><span class="rvts139">JOIN P'[=' P'=' ALL :J</span></p>
+<p class="rvps6"><span class="rvts139">RESET TAG :J</span></p>
+<p class="rvps6" style="page-break-before: always;"><span class="rvts139"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

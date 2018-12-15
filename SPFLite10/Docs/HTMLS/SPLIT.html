@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>SPLIT - Split Lines Using Find/Change Strings</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SPLIT - Split Lines Using Find/Change Strings">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="SPLIT - Split Lines Using Find/Change Strings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="SPLIT"
+		  data-hnd-context="208"
+		  data-hnd-title="SPLIT - Split Lines Using Find/Change Strings"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>SPLIT - Split Lines Using Find/Change Strings</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts107">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts107"><br/></span></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#Syntax">Syntax</a></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#Operands">Operands</a></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#Description">Description</a></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#SPLITandvirtualhighlightingpens">SPLIT and virtual highlighting pens</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#Splittinglineswithlabelsandtags">Splitting lines with labels and tags</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#Splittingstringsvs.splittinglines">Splitting strings vs. splitting lines</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#PerformingsplitsmorecomplexthanSPLITcansupport">Performing splits more complex than SPLIT can support</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#Splittingzero-lengthlines">Splitting zero-length lines</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#Linesplittingandlineexclusion">Line splitting and line exclusion</a></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#UsingALLFIRSTandALLLASTonSPLIT">Using ALL FIRST and ALL LAST on SPLIT</a></p>
+<p class="rvps5"><a class="rvts25" href="SPLIT.html#UsingALLFIRSTandALLLASTelsewhere">Using ALL FIRST and ALL LAST elsewhere</a></p>
+<p class="rvps5"><a class="rvts42" href="SPLIT.html#AnoteabouttheIBMISPFlegacySPLITcommand">A note about the IBM ISPF legacy SPLIT command</a></p>
+<p class="rvps4"><span class="rvts107"><br/></span></p>
+<p class="rvps4"><a name="Syntax"></a>
+<span class="rvts107">Syntax</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="215" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps217"><span class="rvts89">SPLIT</span></p>
+</td>
+<td width="752" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts89">from-string &nbsp; </span></p>
+<p class="rvps2"><span class="rvts89">{ P'to-string' | F'to-string' }</span></p>
+<p class="rvps2"><span class="rvts89">[ start-column [ end-column ] ] </span></p>
+<p class="rvps2"><span class="rvts89">[ FIRST | LAST | </span><span class="rvts395">NEXT</span><span class="rvts89"> | PREV | ALL ]</span></p>
+<p class="rvps2"><span class="rvts89">[ PREFIX | SUFFIX | WORD | </span><span class="rvts131">CHAR</span><span class="rvts89"> ] </span></p>
+<p class="rvps2"><span class="rvts89">[ LEFT | RIGHT ]</span></p>
+<p class="rvps2"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria ]</span></p>
+<p class="rvps2"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps2"><span class="rvts89">[ U | NU ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<p class="rvps4"><a name="Operands"></a>
+<span class="rvts107">Operands</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps233"><span class="rvts353">from-string</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The search string you you use to describe the text to be split. This text, when found, is discarded and replaced with the to-string, described next.</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts353">P'to-string' |</span></p>
+<p class="rvps217"><span class="rvts353">F'to-string'</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts105">The string you want to replace from-string, which </span><span class="rvts107">must</span><span class="rvts105"> be defined as a P-type Picture string or an F-type Format string, which contains one, and only one, vertical bar </span><span class="rvts107">|</span><span class="rvts105"> character to define the </span><span class="rvts405">split-point.</span></p>
+<p class="rvps2"><span class="rvts105"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts89">start-column</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Left column of a range (with end-column) within which the from-string value must be found. If no end-column operand, then the from-string operand must be found starting in start-col.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts419">end-column</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Right column of a range (with start-column) within which the from-string value must be found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">FIRST</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find the first occurrence of from-string. See the discussion below about using </span><span class="rvts11">ALL FIRST</span><span class="rvts12"> and </span><span class="rvts11">ALL LAST</span><span class="rvts12"> on </span><span class="rvts11">SPLIT</span><span class="rvts12">.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">LAST</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the bottom of the data and searches backward to find the last occurrence of from-string. See the discussion below about using</span><span class="rvts11"> ALL FIRST</span><span class="rvts12"> and </span><span class="rvts11">ALL LAST</span><span class="rvts12"> on </span><span class="rvts11">SPLIT</span><span class="rvts12">.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts363">NEXT</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the first position after the current cursor location and searches ahead to find the next occurrence of from-string. </span><span class="rvts11">NEXT</span><span class="rvts12"> is the default.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">PREV</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the current cursor location and searches backward to find the previous occurrence of from-string.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">ALL</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Starts at the top of the data and searches ahead to find all occurrences of from-string. See the discussion below about using </span><span class="rvts11">ALL FIRST</span><span class="rvts12"> and </span><span class="rvts11">ALL LAST</span><span class="rvts12"> on </span><span class="rvts11">SPLIT</span><span class="rvts12">.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts89">LEFT</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts11">LEFT</span><span class="rvts12"> causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the left-most occurrence of search-string is changed, and any other instances on that same line are unchanged.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts419">RIGHT</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts21">RIGHT</span><span class="rvts22"> causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the right-most occurrence of search-string is changed, and any other instances on that same line are unchanged.</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts89">PREFIX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Locates from-string at the beginning of a word.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts89">WORD</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Locates from-string when it is delimited on both sides by blanks or other non-alphanumeric characters.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts131">CHAR</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locates search-string regardless of what precedes or follows it.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts89">SUFFIX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Locates from-string at the end of a word.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">line-control-range</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-selection-criteria</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the from-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">X | NX</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">X</span><span class="rvts12"> requests only excluded lines are to be examined, </span><span class="rvts11">NX </span><span class="rvts12">requests only non-excluded lines are to be examined. If neither </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">U | NU</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be processed, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be processed. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be processed.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="217" style="padding: 1px;"><p class="rvps217"><span class="rvts54">TOP</span></p>
+</td>
+<td width="756" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the 2nd screen line (as ISPF does) if the line is not on the current screen. If TOP is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps5"><span class="rvts14">PREFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">PRE </span><span class="rvts13">or</span><span class="rvts14"> PFX</span></p>
+<p class="rvps5"><span class="rvts14">SUFFIX</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">SUF </span><span class="rvts13">or</span><span class="rvts14"> SFX</span></p>
+<p class="rvps5"><span class="rvts14">WORDS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">WORD</span></p>
+<p class="rvps5"><span class="rvts14">CHARS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CHAR</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><a name="Description"></a>
+<span class="rvts107">Description</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The SPLIT edit primary command is used to selectively split apart lines of text based on a search string. After a split occurs, a line on which the </span><span class="rvts40">from-string</span><span class="rvts6"> is found will become two lines. Everything before the "split point" will be on the first line, while everything after the split point will be on the second line.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts40">Notes</span><span class="rvts6">: &nbsp;</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts6">The </span><span class="rvts40">JOIN</span><span class="rvts6"> command performs the opposite function, combining two lines into one. See </span><a class="rvts34" href="JOIN.html">JOIN - Join lines Using Find/Change Strings</a><span class="rvts6"> for more information.</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts40">SPLIT</span><span class="rvts6"> and </span><span class="rvts40">JOIN</span><span class="rvts6">, as new SPFLite technologies, have been extensively tested, but it is possible you may run into issues using them. If you have any questions about how these commands operate, feel free to leave us your feedback on the SPFLite web site.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">to-string</span><span class="rvts12"> must be a P-type Picture string or F-type Format string, which must contain one and only one vertical bar </span><span class="rvts11">|</span><span class="rvts12"> character, and which may optionally contain other characters. The vertical bar is </span><span class="rvts11">not</span><span class="rvts12"> a literal </span><span class="rvts11">|</span><span class="rvts12"> character nor any other data value, but represents a line-break to be inserted into your data. Any characters in the </span><span class="rvts11">to-picture</span><span class="rvts12"> that appear </span><span class="rvts11">before</span><span class="rvts12"> the vertical bar will appear at the end of the first line, and any characters in the </span><span class="rvts11">to-picture</span><span class="rvts12"> that appear </span><span class="rvts11">after</span><span class="rvts12"> the vertical bar will appear at the beginning of the second line, after the split takes place.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;While you might be tempted to think of a line-break being "inserted into your data" as being equivalent to inserting a raw </span><span class="rvts11">EOL</span><span class="rvts12"> string (such as a Carriage Return / Line Feed pair) into your data line, that is not always the case. You can also split lines on fixed-length files which are defined as </span><span class="rvts11">EOL NONE</span><span class="rvts12">. The "insertion" of a line-break should be thought of in </span><span class="rvts11">logical</span><span class="rvts12"> terms, not with reference to any line delimiter characters. When your file gets saved to disk, SPFLite will handle the </span><span class="rvts11">EOL</span><span class="rvts12"> delimiters as needed; you don't need to be concerned about this.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;While the</span><span class="rvts11"> to-string</span><span class="rvts12"> </span><span class="rvts51">can</span><span class="rvts12"> be a Format string, you will find that using a Picture string here should address most of your </span><span class="rvts11">SPLIT</span><span class="rvts12"> requirements. Where a Format string comes in handy is when the </span><span class="rvts11">from-string</span><span class="rvts12"> is a Picture, </span><span class="rvts11">and</span><span class="rvts12"> you need a code of </span><span class="rvts11">=</span><span class="rvts12"> in the </span><span class="rvts11">to-string</span><span class="rvts12"> that doesn't match the corresponding position in the </span><span class="rvts11">from-string.</span><span class="rvts12"> &nbsp;</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note</span><span class="rvts12">: &nbsp;Because the </span><span class="rvts11">to-string</span><span class="rvts12"> must be a Picture or Format string, there may be cases where your "replacement data" might include characters that are already defined as special-purpose Picture or Format codes. If you need such characters treated as ordinary data rather than as Picture or Format codes, you can escape those characters by preceding them with a </span><span class="rvts54">\ </span><span class="rvts12">backslash. See </span><a class="rvts33" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Because the vertical bar </span><span class="rvts11">|</span><span class="rvts12"> character in the </span><span class="rvts11">to-string</span><span class="rvts12"> represents a </span><span class="rvts50">split point</span><span class="rvts12">, but is </span><span class="rvts11">not</span><span class="rvts12"> itself a literal character, when you specify the to-string literally as </span><span class="rvts54">P'|'</span><span class="rvts12"> with no other characters, you are asking the </span><span class="rvts11">SPLIT</span><span class="rvts12"> command to </span><span class="rvts11">delete</span><span class="rvts12"> each instance of the from-string and replace it with a line break. (Conceptually, this deletes data exactly the same as a </span><span class="rvts11">CHANGE</span><span class="rvts12"> command with a to-string of </span><span class="rvts54">''</span><span class="rvts12">.) &nbsp;If you don't want your found-strings completely deleted, or if you want your found-strings replaced with something else, you have to specify that in the to-string Picture - either before the vertical bar, after the vertical bar - or both places, if you wish.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite treats the </span><span class="rvts11">SPLIT</span><span class="rvts12"> command as a specialized type of </span><span class="rvts11">CHANGE</span><span class="rvts12"> command. Because of this, the </span><span class="rvts11">RFIND</span><span class="rvts12">, </span><span class="rvts11">RLOCFIND</span><span class="rvts12"> and </span><span class="rvts11">RCHANGE</span><span class="rvts12"> commands will also apply to </span><span class="rvts11">SPLIT</span><span class="rvts12">. Traditionally, </span><span class="rvts11">RFIND</span><span class="rvts12"> (or </span><span class="rvts11">RLOCFIND</span><span class="rvts12">) is mapped to F5, and </span><span class="rvts11">RCHANGE</span><span class="rvts12"> to F6. This means you can selectively split lines by alternating the use of the F5 and F6 keys (or, other keys if you map these commands differently).</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">from-string</span><span class="rvts12"> may be any SPFLite string type (except for F-type Format strings), including Pictures and Regular Expressions. If the </span><span class="rvts11">from-string</span><span class="rvts12"> is a P-type Picture string, it may contain the </span><span class="rvts50">alignment</span><span class="rvts12"> Picture codes </span><span class="rvts11">[</span><span class="rvts12"> and </span><span class="rvts11">]</span><span class="rvts12"> if desired. Be mindful that alignment Picture codes do not represent data values, and so a search Picture cannot consist solely of alignment Picture codes. (Unlike the </span><span class="rvts11">JOIN</span><span class="rvts12"> command, which </span><span class="rvts50">requires</span><span class="rvts12"> the from-string to contain an alignment code, the </span><span class="rvts11">SPLIT</span><span class="rvts12"> command </span><span class="rvts50">allows</span><span class="rvts12"> but does not </span><span class="rvts50">require</span><span class="rvts12"> the use of alignment codes.)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">to-string</span><span class="rvts12"> Picture may contain any number of </span><span class="rvts11">!</span><span class="rvts12"> Picture/Format codes. Each </span><span class="rvts11">!</span><span class="rvts12"> Picture code represents the entire text found by the </span><span class="rvts11">from-string</span><span class="rvts12">, even when that text can vary in size or content when it is described by a P-type Picture string or R-type Regular Expression. This capability could be very useful in some SPLIT situations. For example, suppose you had a "label" in your data consisting of ABC plus a digit. You could change this into two lines, where the first line ends in the label and the second line begins with a duplicate copy of the label, by issuing a command of</span><span class="rvts54"> </span></p>
+<p class="rvps4"><span class="rvts54"><br/></span></p>
+<p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">SPLIT P'ABC#' P'!|!' ALL</span><span class="rvts12">.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">See </span><a class="rvts33" href="WorkingwithSPLITandJOINCommands.html">Working with SPLIT and JOIN Commands</a><span class="rvts12"> for example usage of the SPLIT command.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="SPLITandvirtualhighlightingpens"></a>
+<span class="rvts11">SPLIT and virtual highlighting pens</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts11">SPLIT</span><span class="rvts12"> command does not use the various "virtual highlighting pen" color name keywords, like </span><span class="rvts11">FIND</span><span class="rvts12"> and </span><span class="rvts11">CHANGE</span><span class="rvts12"> do. The colors that are present after </span><span class="rvts11">SPLIT</span><span class="rvts12"> completes depends on how the original found string is colored.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If the found string is entirely of one color, any text inserted by </span><span class="rvts11">SPLIT</span><span class="rvts12"> will have the same color that the found string had before being split. If that text had been colored by using one of the "virtual highlighting pen" keyboard functions, that color will remain intact after the split takes place, or if the text had the default (normal) color beforehand, the new text will also have the default color.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If the found string is not entirely one color, but contains text in two or more colors (where the default text display is also considered a color), all of the text inserted by </span><span class="rvts11">SPLIT</span><span class="rvts12"> will have the default (standard) color. SPFLite does things this way because it would be too hard to reliably determine how and where the newly inserted text should be colored, if multiple colors had to be assigned to the inserted text.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Splittinglineswithlabelsandtags"></a>
+<span class="rvts40">Splitting lines with labels and tags</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When you split a line containing a label, the label will remain with the </span><span class="rvts40">first</span><span class="rvts6"> line produced from the splitting. This is true even when a line is split in more than one place. For example, suppose you had a line like this:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">.A 001 A-B-C</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you issue the command</span><span class="rvts139"> SPLIT '-' P'|' ALL .A</span><span class="rvts6">, </span><span class="rvts40">line 1</span><span class="rvts6"> will keep the label &nbsp;(the extra digits on a line with a tag or label don't really appear in SPFLite; we are just showing them here for explanation purposes):</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">.A 001 A</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000002 B</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000003 C</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When you split a line containing a tag, the tag is propagated on to </span><span class="rvts40">every</span><span class="rvts6"> line produced from the splitting. This is true even when a line is split in more than one place. For example, suppose you had a line like this:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">:A 001 A-B-C</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you issue the command</span><span class="rvts139"> SPLIT '-' P'|' ALL :A</span><span class="rvts6">, </span><span class="rvts40">every</span><span class="rvts6"> line will have the tag:</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">:A 001 A</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">:A 002 B</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">:A 003 C</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps4"><a name="Splittingstringsvs.splittinglines"></a>
+<span class="rvts40">Splitting strings vs. splitting lines</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Just to be clear, </span><span class="rvts40">SPLIT</span><span class="rvts6"> can only split a </span><span class="rvts40">string</span><span class="rvts6"> in one place, but that doesn't mean it can't split a </span><span class="rvts40">line</span><span class="rvts6"> in more than one place. For example, suppose you had a line like this:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000001 A-B-C-D</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you issued the command</span><span class="rvts139"> SPLIT '-' P'|' ALL .1</span><span class="rvts6">, the data on line 1 would be split apart exactly as you'd hope, and you'd get the following result. A message "Split performed 3 times" would appear, corresponding to the 3 places where the </span><span class="rvts139">'-'</span><span class="rvts6"> dash appears on the line:</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000001 A</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000002 B</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000003 C</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">000004 D</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">What you </span><span class="rvts40">can't</span><span class="rvts6"> do is issue a command like</span><span class="rvts139"> SPLIT 'A-B-C-D' P'A|B|C|D' .1</span><span class="rvts6">, because that is asking the </span><span class="rvts40">single </span><span class="rvts6">string </span><span class="rvts139">'A-B-C-D'</span><span class="rvts6"> to be split </span><span class="rvts40">three</span><span class="rvts6"> times, and SPFLite doesn't support that. But, what if that </span><span class="rvts40">is</span><span class="rvts6"> what you wanted to do? &nbsp;Keep reading ...</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="PerformingsplitsmorecomplexthanSPLITcansupport"></a>
+<span class="rvts40">Performing splits more complex than SPLIT can support</span></p>
+<p class="rvps4"><span class="rvts6"> </span></p>
+<p class="rvps5"><span class="rvts6">You may encounter cases where the </span><span class="rvts40">SPLIT</span><span class="rvts6"> command won't do everything you want. You might want to split a particular string into multiple lines, whereas </span><span class="rvts40">SPLIT</span><span class="rvts6"> will break a string in only one place. You may have text already colored by highlighting pens and you need precise control over how the text colors are affected by splitting. You may need special features supported by </span><span class="rvts40">CHANGE</span><span class="rvts6">, such as </span><span class="rvts40">LEFT</span><span class="rvts6">, </span><span class="rvts40">RIGHT</span><span class="rvts6">, </span><span class="rvts40">TRUNC</span><span class="rvts6">, </span><span class="rvts40">MX</span><span class="rvts6">, </span><span class="rvts40">DX</span><span class="rvts6">, etc. These and other cases may require a different approach.</span></p>
+<p class="rvps11"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Keeping in might that a </span><span class="rvts40">SPLIT</span><span class="rvts6"> is a type of "change" to a line, you can perform more-complex splitting by doing this in two stages. First, use a </span><span class="rvts40">CHANGE</span><span class="rvts6"> command to insert "user-defined split points" into your data, and then go back and use </span><span class="rvts40">SPLIT</span><span class="rvts6"> to actually break them apart. This technique has the nice feature that after the first part, you can go and manually inspect all of the user-defined split points you just put in, and verify they are all where you want them, possibly adding and removing a few before the second part, if you have certain special cases where some extra data must be split and other split points have to be taken out. Because the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command, and any manual editing of your own, will have placed these user-defined split points exactly where you need them, only a simple form of </span><span class="rvts40">SPLIT</span><span class="rvts6"> will be required to break the lines apart.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">To do this, you might want to map some special ANSI character that you rarely use in your own data, and use that to represent your user-defined split points. If necessary, you can use the </span><a class="rvts34" href="ListofKeyboardPrimitives.html">(Ansi)</a><span class="rvts6"> function to get any ANSI character into the clipboard, and then use it as a value for KEYMAP. For example, you could use the ?</span><span class="rvts6"> character for a user-defined split point,.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Suppose your task was to split some string "AB-CD-EF" into three lines on the dashes, between lines .ONE and .TWO. You can't do that directly with SPLIT, but (assuming that ?</span><span class="rvts6"> does not appear in your data) you could do the following instead.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">CHANGE 'AB-CD-EF' 'AB</span><span class="rvts6">?</span><span class="rvts139">CD</span><span class="rvts6">?</span><span class="rvts139">EF' ALL .ONE .TWO</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">SPLIT '</span><span class="rvts6">?</span><span class="rvts139">' P'|' ALL .ONE .TWO</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">So, can you see </span><span class="rvts40">now</span><span class="rvts6"> how to do that three-way split we said (back in the last paragraph) you couldn't do? &nbsp;Remember, we said that</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">SPLIT 'A-B-C-D' P'A|B|C|D' .1</span></p>
+<p class="rvps5"><span class="rvts139"><br/></span></p>
+<p class="rvps5"><span class="rvts6">was illegal, and it is. But you </span><span class="rvts40">can</span><span class="rvts6"> do this:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">CHANGE 'A-B-C-D' 'A</span><span class="rvts6">?</span><span class="rvts139">B</span><span class="rvts6">?</span><span class="rvts139">C</span><span class="rvts6">?</span><span class="rvts139">D' .1</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">SPLIT '</span><span class="rvts6">?</span><span class="rvts139">' P'|' ALL .1</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Just that easy.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">By the way, if you don't feel like using a </span><span class="rvts6">?</span><span class="rvts6"> character, pick anything you like that's convenient and not already in your data.</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Splittingzero-lengthlines"></a>
+<span class="rvts40">Splitting zero-length lines</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts11">SPLIT</span><span class="rvts12"> cannot be applied to zero-length lines, since there is literally nothing for </span><span class="rvts11">SPLIT</span><span class="rvts12"> to find. If you were inclined to do this, it implies that you wanted to add another zero-length line next to the original zero-length line. That is, wherever there was a blank line, you'd now have two of them. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you really want to do this, the easiest way to do it is to find all the zero-length lines, </span><span class="rvts11">APPEND</span><span class="rvts12"> as many</span><span class="rvts40"> </span><span class="rvts6">user-defined split points as you need, and then split these characters as needed. Here is an example of converting all zero-length lines into two zero-length lines each. The commands will exclude all lines that are zero-length, then place a ? character on each excluded line (and also unexcludes them in the process) and then splits each marked line into two lines, in a way that also removes the </span><span class="rvts6">?</span><span class="rvts6"> character.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps6"><span class="rvts139">RESET</span></p>
+<p class="rvps6"><span class="rvts139">NX P'=' ALL</span></p>
+<p class="rvps6"><span class="rvts139">APPEND '</span><span class="rvts6">?</span><span class="rvts139">' ALL X</span></p>
+<p class="rvps6"><span class="rvts139">SPLIT '</span><span class="rvts6">?</span><span class="rvts139">' P'|' ALL</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The</span><a class="rvts34" href="PL.html"> Pad to Length command PL</a><span class="rvts6"> can take a </span><span class="rvts40">/</span><span class="rvts6"> or </span><span class="rvts40">\</span><span class="rvts6"> modifier. Putting </span><span class="rvts139">PL/</span><span class="rvts6"> on line 1 of a file will ensure that every line of the file is at least one character long.</span></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Linesplittingandlineexclusion"></a>
+<span class="rvts40">Line splitting and line exclusion</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">SPLIT</span><span class="rvts6"> command supports the </span><span class="rvts40">X</span><span class="rvts6"> and </span><span class="rvts40">NX</span><span class="rvts6"> keywords, to allow you to limit your line-range selection to only excluded (</span><span class="rvts40">X</span><span class="rvts6">), or only not-excluded lines (</span><span class="rvts40">NX</span><span class="rvts6">), if you wish. Regardless of the use of </span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">NX</span><span class="rvts6"> keywords, when a line is split, it is considered a "change" to the line. Any line that was excluded at the time is was split will become two lines, and both of these lines will be </span><span class="rvts40">unexcluded</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">SPLIT</span><span class="rvts6"> command does </span><span class="rvts40">not</span><span class="rvts6"> support the </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX</span><span class="rvts6"> keywords at this time.</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="UsingALLFIRSTandALLLASTonSPLIT"></a>
+<span class="rvts11">Using ALL FIRST and ALL LAST on SPLIT</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Because the processing performed by </span><span class="rvts11">SPLIT</span><span class="rvts12"> is different than ever done in ISPF or any prior version of SPFLite, an unusual situation may occur that could affect how </span><span class="rvts11">SPLIT</span><span class="rvts12"> works, perhaps in a way you would not want.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Suppose you had some lines like this (</span><span class="rvts51">original data)</span><span class="rvts12">:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000001</span><span class="rvts54"> </span><span class="rvts272">oneTWO oneTWOsix</span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000002</span><span class="rvts54"> </span><span class="rvts272">oneTWO</span><span class="rvts435"> </span><span class="rvts272">oneTWOsix</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">and you wanted to split the "oneTWO" strings into "one" and "TWO", but </span><span class="rvts11">only</span><span class="rvts12"> the </span><span class="rvts11">left</span><span class="rvts12">-most ones. That is, you are hoping you can change this data to look like this (</span><span class="rvts51">desired result)</span><span class="rvts12">:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000001</span><span class="rvts54"> </span><span class="rvts272">one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000002</span><span class="rvts54"> </span><span class="rvts272">TWO oneTWOsix</span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000003</span><span class="rvts54"> </span><span class="rvts272">one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000004</span><span class="rvts54"> </span><span class="rvts272">TWO oneTWOsix</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Remembering that </span><span class="rvts11">SPLIT</span><span class="rvts12"> allows a </span><span class="rvts11">LEFT</span><span class="rvts12"> or </span><span class="rvts11">RIGHT</span><span class="rvts12"> operand, you might be inclined to write your SPLIT command like this:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">SPLIT 'oneTWO' P'one|TWO' LEFT ALL</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">This splits the left-most occurrence of 'oneTWO' on each line. That should work, right? &nbsp;Unfortunately, </span><span class="rvts11">no</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The reason it won't work is that the SPLIT command will (a) effectively split the data the way you see it above as the 'desired result', but then (b) it will </span><span class="rvts11">keep on</span><span class="rvts12"> splitting the data </span><span class="rvts11">again</span><span class="rvts12">, on the lines it just split.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For example, notice above that line 2 contains '</span><span class="rvts272">TWO oneTWOsix</span><span class="rvts12">' after the first split. The </span><span class="rvts11">SPLIT</span><span class="rvts12"> command, after splitting line 1, moves on to "line 2". </span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">However</span><span class="rvts11">,</span><span class="rvts12"> </span><span class="rvts11">that</span><span class="rvts12"> line 2 is not the </span><span class="rvts11">original</span><span class="rvts12"> line 2, but the </span><span class="rvts11">newly created</span><span class="rvts12"> line 2. On </span><span class="rvts11">that</span><span class="rvts12"> line 2, there is an instance of the string </span><span class="rvts54">'oneTWO'</span><span class="rvts12"> which is the beginning of the string </span><span class="rvts54">'oneTWOsix'</span><span class="rvts12"> - and so </span><span class="rvts11">that</span><span class="rvts12"> instance is </span><span class="rvts11">also</span><span class="rvts12"> the "left-most" of its kind on </span><span class="rvts11">that</span><span class="rvts12"> line. This means that it matches the SPLIT command's search string of </span><span class="rvts54">'oneTWO'</span><span class="rvts12">, and so it also gets split. The net result is that the file will actually end up looking like this:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000001</span><span class="rvts54"> </span><span class="rvts272">one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000002</span><span class="rvts54"> </span><span class="rvts272">TWO one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000003</span><span class="rvts54"> </span><span class="rvts272">TWOsix</span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000004</span><span class="rvts54"> </span><span class="rvts272">one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000005</span><span class="rvts54"> </span><span class="rvts272">TWO one</span></p>
+<p class="rvps5"><span class="rvts435"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts434">000006</span><span class="rvts54"> </span><span class="rvts272">TWOsix</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">So even though you </span><span class="rvts11">asked</span><span class="rvts12"> for only the </span><span class="rvts11">left</span><span class="rvts12">-most string of </span><span class="rvts54">'oneTWO'</span><span class="rvts12"> to be split on any given line, you got them </span><span class="rvts11">all</span><span class="rvts12"> split. Well, what can be done about this?</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Recall we starting this discussion by saying that the processing performed by </span><span class="rvts11">SPLIT</span><span class="rvts12"> is different than ever done in ISPF or any prior version of SPFLite? &nbsp;This is the first time for any SPF-style editor that a primary command, under the control of find and change strings, could split apart lines while in the process of scanning them. This issue has to do with the way the keyword </span><span class="rvts11">ALL</span><span class="rvts12"> works.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you think about a standard </span><span class="rvts11">CHANGE</span><span class="rvts12"> command, you could change the </span><span class="rvts11">NEXT</span><span class="rvts12"> string, the </span><span class="rvts11">PREV</span><span class="rvts12"> string, or </span><span class="rvts11">ALL</span><span class="rvts12"> strings. Now, when you say </span><span class="rvts11">CHANGE ALL</span><span class="rvts12">, do you really </span><span class="rvts11">care</span><span class="rvts12"> in what order they are </span><span class="rvts11">ALL</span><span class="rvts12"> changed, as long as it gets done? &nbsp;Normally, </span><span class="rvts11">no</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">However, a </span><span class="rvts11">SPLIT</span><span class="rvts12"> command could find a string on a line, and split that line, and </span><span class="rvts11">then</span><span class="rvts12"> "run into" the remainder of the line it just split, possibly finding </span><span class="rvts11">more</span><span class="rvts12"> of the same specified search string. That's what happened in our example. This will normally only be an issue when you are splitting a string which may have more than one occurrence on a given line. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">In particular, this problem will normally only happen when using the </span><span class="rvts11">LEFT</span><span class="rvts12"> operand on </span><span class="rvts11">ALL</span><span class="rvts12"> lines. If you did a split of the </span><span class="rvts11">RIGHT</span><span class="rvts12"> string on </span><span class="rvts11">ALL</span><span class="rvts12"> lines, you would not "run into" a partial line that had more instances of the string, and so the problem we are discussing wouldn't happen. That's because </span><span class="rvts11">SPLIT</span><span class="rvts12"> does its </span><span class="rvts11">ALL</span><span class="rvts12"> processing going forward from the beginning of the line range you are working on to the last line of it. It's also because, once a line is split, and the right-hand side of the split point becomes a new line, the determination of what constitutes the "left side" or what is the "left most" occurrence of a string, </span><span class="rvts11">starts over from the beginning of that new line</span><span class="rvts50">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Because SPLIT with the ALL operand performs its processing in a forward direction, the possibility of "running into" a "partial line" and re-processing it may exist.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">How does</span><span class="rvts11"> ALL FIRST</span><span class="rvts12"> and </span><span class="rvts11">ALL LAST</span><span class="rvts12"> solve this? &nbsp;Think of these keywords like this:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">ALL FIRST</span><span class="rvts12"> looks for </span><span class="rvts11">ALL</span><span class="rvts12"> search strings, from the </span><span class="rvts11">FIRST</span><span class="rvts12"> line in the line range to the </span><span class="rvts11">last</span><span class="rvts12"> line, doing so in a </span><span class="rvts11">forward</span><span class="rvts12"> direction</span></li>
+</ul></ul>
+<p class="rvps11"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts11">ALL LAST</span><span class="rvts12"> looks for </span><span class="rvts11">ALL</span><span class="rvts12"> search strings, from the </span><span class="rvts11">LAST</span><span class="rvts12"> line in the line range to the </span><span class="rvts11">first</span><span class="rvts12"> line, doing so in a </span><span class="rvts11">backwards</span><span class="rvts12"> direction</span></li>
+</ul></ul>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The behavior of ordinary ISPF and SPFLite commands that take the </span><span class="rvts11">ALL</span><span class="rvts12"> command has always been as if </span><span class="rvts11">ALL FIRST</span><span class="rvts12"> had been specified. Except, up until now, you couldn't </span><span class="rvts11">do</span><span class="rvts12"> that -</span><span class="rvts11"> ALL FIRST</span><span class="rvts12"> was illegal syntax. Now, you </span><span class="rvts11">can</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When you have repeating data on several lines, and you only want to change the </span><span class="rvts11">LEFT</span><span class="rvts12"> or </span><span class="rvts11">RIGHT</span><span class="rvts12"> instance of them, you need to make sure you're using the right "form" of the SPLIT command to make sure you are getting the results you wanted. This means, in most cases, you will want to issue your SPLIT commands that have </span><span class="rvts11">LEFT</span><span class="rvts12"> or </span><span class="rvts11">RIGHT</span><span class="rvts12"> like this:</span></p>
+<p class="rvps5"><span class="rvts54"> </span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">SPLIT 'oldnew' P'old|new' RIGHT ALL</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">SPLIT 'oldnew' P'old|new' LEFT ALL LAST</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Keep in mind that the first of these commands is really a shorthand for</span></p>
+<p class="rvps5"><span class="rvts54"> </span></p>
+<p class="rvps5"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">SPLIT 'oldnew' P'old|new' RIGHT ALL FIRST</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">but you don't need to be that explicit, because the </span><span class="rvts11">FIRST</span><span class="rvts12"> is understood.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Remember that, as always, the various reserved keywords can be specified in any order you wish.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="UsingALLFIRSTandALLLASTelsewhere"></a>
+<span class="rvts11">Using ALL FIRST and ALL LAST elsewhere</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Because much of SPFLite uses common logic to handle common features across many primary commands, you will find that the keywords ALL FIRST and ALL LAST will be accepted on other commands, such as </span><span class="rvts11">FIND</span><span class="rvts12"> and </span><span class="rvts11">CHANGE</span><span class="rvts12">. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">However, because the special circumstances present for SPLIT don't occur for </span><span class="rvts11">FIND</span><span class="rvts12"> and </span><span class="rvts11">CHANGE</span><span class="rvts12">, you will find that the </span><span class="rvts11">ALL FIRST</span><span class="rvts12"> and</span><span class="rvts11"> ALL LAST</span><span class="rvts12"> work the same way that an ordinary, garden-variety </span><span class="rvts11">ALL</span><span class="rvts12"> keyword does.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts51">Why didn't we just skip over the rest of the line after splitting, to avoid this problem?</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">That's a good question. The answer is, if the </span><span class="rvts11">SPLIT</span><span class="rvts12"> engine did such a thing, you would only be able to make one physical split per line. That is too big a restriction to impose on you, especially when it's very likely you would want to do that very thing, and probably quite often.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">For certain, </span><span class="rvts11">SPLIT</span><span class="rvts12"> is powerful, and will take some study and experimentation to get the hang of it, but if you need to break apart large numbers of lines based on find/change criteria, there's nothing else like it.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="AnoteabouttheIBMISPFlegacySPLITcommand"></a>
+<span class="rvts40">A note about the IBM ISPF legacy SPLIT command </span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite does not support the IBM ISPF feature of "3270 split screen mode" and the associated legacy </span><span class="rvts11">SPLIT</span><span class="rvts12"> command. With tabbed editing and the ability to open multiple instances of SPFLite, as well as the Multi-Edit feature to edit several files simultaneously in the same edit window, IBM's 3270 split screen mode is not really needed. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The SPFLite primary command </span><span class="rvts11">SPLIT</span><span class="rvts12"> described here is unrelated to the IBM ISPF legacy </span><span class="rvts11">SPLIT</span><span class="rvts12"> command, and merely reuses the </span><span class="rvts11">SPLIT</span><span class="rvts12"> command name for a different purpose. </span></p>
+<p class="rvps5" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free CHM Help documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

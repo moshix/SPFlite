@@ -1,0 +1,773 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Specifying a Picture or Format String</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Specifying a Picture or Format String">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Specifying a Picture or Format String" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="SpecifyingaPictureorFormatString"
+		  data-hnd-context="32"
+		  data-hnd-title="Specifying a Picture or Format String"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Specifying a Picture or Format String</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#PictureStrings">Picture Strings</a></p>
+<p class="rvps5"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#SpecialnoteforP'['andP']'orP'%7B'andP'%7D'">Special note for P'[' and P']' or P'{' and P'}'</a></p>
+<p class="rvps5"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#PictureStringExamples">Picture String Examples</a></p>
+<p class="rvps5"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#UsingPicturestringsastheTOoperandofaCHANGEcommand">Using Picture strings as the TO operand of a CHANGE command</a></p>
+<p class="rvps9"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#SPFLiteFormatChangeStrings">SPFLite Format Change Strings</a></p>
+<p class="rvps5"><a class="rvts45" href="SpecifyingaPictureorFormatString.html#Displayableandnon-displayablecharacters">Displayable and non-displayable characters</a></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">IBM ISPF users are familiar with Picture strings. These are used to perform pattern-matching for the search-string part of </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> commands, and for selectively changing text to upper-case or lower-case in the change-string part of </span><span class="rvts36">CHANGE</span><span class="rvts35">. Pictures are like a simple form of regular expression. When IBM first introduced them in ISPF, they were a novel and innovative feature for their time, but by today's standards they may seem quite rigid and limited. Still, because Pictures are easier to use than regular expressions, they remain useful. And, as implemented in SPFLite, they are far more useful than IBM's. SPFLite's implementation of Picture strings is more extensive than in ISPF, and includes support for the Picture-like </span><span class="rvts36">Format</span><span class="rvts35"> string.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts12">A picture or format string in a </span><span class="rvts11">FIND</span><span class="rvts12">, </span><span class="rvts11">CHANGE</span><span class="rvts12">, </span><span class="rvts11">EXCLUDE</span><span class="rvts12">, </span><span class="rvts11">SPLIT</span><span class="rvts12"> or </span><span class="rvts11">JOIN</span><span class="rvts12"> command allows you to search for a particular category of character, rather than looking for a specific literal character value. </span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">Picture and Format strings are very similar. However, </span><span class="rvts11">Format</span><span class="rvts12"> strings may only be used as the string-2 change-string operand in </span><span class="rvts11">CHANGE</span><span class="rvts12">, </span><span class="rvts11">SPLIT</span><span class="rvts12"> and </span><span class="rvts11">JOIN</span><span class="rvts12"> commands.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">The </span><span class="rvts11">SPLIT</span><span class="rvts12"> and </span><span class="rvts11">JOIN</span><span class="rvts12"> primary commands use some additional special characters.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts12">New variations on </span><span class="rvts54">P'!'</span><span class="rvts12"> now also allow you to copy arbitrary text and perform case conversion at the same time.</span></p>
+<p class="rvps9"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When a </span><span class="rvts11">FIND</span><span class="rvts12"> or </span><span class="rvts11">CHANGE</span><span class="rvts12"> search picture uses the special characters = or . and a character that cannot be displayed is found, that character's hexadecimal representation is used in the confirmation message that appears in the upper-right corner of the Edit or Browse screen. For example, the command</span><span class="rvts54"> FIND P'..' </span><span class="rvts12">could result in the message</span><span class="rvts54"> CHARS X'0415' found</span><span class="rvts12">. This change was made to be compliant with how ISPF handles this situation. </span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="PictureStrings"></a>
+<span class="rvts11">Picture Strings</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can use special characters within the picture string to represent the kind of character to be found, as follows. Note that SPFLite does not support the ISPF APL pictures</span><span class="rvts54"> P'_' </span><span class="rvts12">and</span><span class="rvts54"> P'÷'</span><span class="rvts12">, and will will treat these as ordinary data characters.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<div class="rvps5"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'='</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any character</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'^' or P'¬'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any character that is not a blank. Both </span><span class="rvts54">P'^'</span><span class="rvts12"> and </span><span class="rvts54">P'¬'</span><span class="rvts12"> work identically.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Note that </span><span class="rvts54">¬</span><span class="rvts12"> can be either the ANSI </span><span class="rvts54">¬</span><span class="rvts12"> character (X'AC') or the the OEM </span><span class="rvts54">¬</span><span class="rvts12"> character (X'AA'). You should select the character that displays properly with your chosen editor font, but either one will work.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'#'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any numeric character, 0-9</span></p>
+<p class="rvps2"><span class="rvts12">Note that the three special superscript characters in ANSI for </span><span class="rvts138">¹</span><span class="rvts12">, </span><span class="rvts138">²</span><span class="rvts12"> and </span><span class="rvts138">³</span><span class="rvts12"> are </span><span class="rvts11">not</span><span class="rvts12"> considered numeric.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'-'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any non-numeric character. which is any character not matching a Picture of </span><span class="rvts54">P'#'</span></p>
+<p class="rvps2"><span class="rvts54"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'.'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any non-displayable character; that is, any character </span><span class="rvts11">not</span><span class="rvts12"> in the </span><span class="rvts11">Normal</span><span class="rvts12"> list in Global Options</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" height="22" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'@'</span></p>
+</td>
+<td width="794" height="22" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any alphabetic character, uppercase or lowercase. This includes the non-English letters in the ANSI character set.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" height="18" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'&lt;'</span></p>
+</td>
+<td width="794" height="18" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any lowercase alphabetic character. This includes the non-English letters in the ANSI character set.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'&gt;'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any uppercase alphabetic character. This includes the non-English letters in the ANSI character set.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps5"><span class="rvts54">P'$'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Any special character, neither alphabetic nor numeric. &nbsp;</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'%'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Any character </span><span class="rvts36">not </span><span class="rvts35">defined in the </span><span class="rvts36">WORD</span><span class="rvts35"> setting. i.e. a delimiter.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'&amp;'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Any character defined in the </span><span class="rvts36">WORD</span><span class="rvts35"> setting. A span of P'&amp;' characters would be a "user-defined word".</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'!'</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89">P'!='</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Allowed only in the </span><span class="rvts85">change-string</span><span class="rvts35">. It represents the </span><span class="rvts36">entire</span><span class="rvts35"> string value actually found (not the string-1 </span><span class="rvts85">operand</span><span class="rvts35">), </span><span class="rvts36">regardless</span><span class="rvts35"> of its length. It is allowable to use the </span><span class="rvts36">!</span><span class="rvts35"> code multiple times in the change-string; if done, the found string is repeated in the result as many times as the </span><span class="rvts36">!</span><span class="rvts35"> code is used.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The found string is copied as-is without case conversion.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">A Picture of </span><span class="rvts89">P'!'</span><span class="rvts35"> may be specified as </span><span class="rvts89">P'!='</span><span class="rvts35"> with essentially identical meaning. </span><span class="rvts89">P'!='</span><span class="rvts35"> would only be used in cases where a Picture of </span><span class="rvts89">P'!'</span><span class="rvts35"> needed to be followed by a Picture of </span><span class="rvts89">P'&gt;'</span><span class="rvts35"> or </span><span class="rvts89">P'&lt;'</span><span class="rvts35"> to mean that (a) a found string is copied as is, and then (b) an individual copied character is converted to upper or lower case. The </span><span class="rvts89">P'!='</span><span class="rvts35"> &nbsp;notation is like an "escape" that prevents the </span><span class="rvts36">!</span><span class="rvts35"> from being confused with </span><span class="rvts89">P'!&gt;'</span><span class="rvts35"> or </span><span class="rvts89">P'!&lt;'</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'!&gt;'</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89">P'»'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Allowed only in the </span><span class="rvts85">change-string</span><span class="rvts35">. It represents the </span><span class="rvts36">entire</span><span class="rvts35"> string value actually found (not the string-1 </span><span class="rvts85">operand</span><span class="rvts35">), </span><span class="rvts36">regardless</span><span class="rvts35"> of its length. It is allowable to use the </span><span class="rvts36">!&gt;</span><span class="rvts35"> code multiple times in the change-string; if done, the found string is repeated in the result as many times as the </span><span class="rvts36">!</span><span class="rvts35"> code is used.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The found string is copied and converted to upper case.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If desired, </span><span class="rvts89">P'!&gt;'</span><span class="rvts35"> can be shortened to </span><span class="rvts89">P'»'</span><span class="rvts35"> if the </span><span class="rvts89">»</span><span class="rvts35"> character is mapped to some key, so that it can be typed on the command line.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Note that </span><span class="rvts89">»</span><span class="rvts12"> can be either the ANSI </span><span class="rvts89">»</span><span class="rvts12"> character (X'BB') or the the OEM </span><span class="rvts89">»</span><span class="rvts12"> character (X'AF'). You should select the character that displays properly with your chosen editor font, but either one will work.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'!&lt;'</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps9"><span class="rvts89">P'«'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Allowed only in the </span><span class="rvts85">change-string</span><span class="rvts35">. It represents the </span><span class="rvts36">entire</span><span class="rvts35"> string value actually found (not the string-1 </span><span class="rvts85">operand</span><span class="rvts35">), </span><span class="rvts36">regardless</span><span class="rvts35"> of its length. It is allowable to use the </span><span class="rvts36">!&lt;</span><span class="rvts35"> code multiple times in the change-string; if done, the found string is repeated in the result as many times as the </span><span class="rvts36">!</span><span class="rvts35"> code is used.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">The found string is copied and converted to lower case.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">If desired, </span><span class="rvts89">P'!&lt;'</span><span class="rvts35"> can be shortened to </span><span class="rvts89">P'«'</span><span class="rvts35"> if the </span><span class="rvts89">«</span><span class="rvts35"> character is mapped to some key, so that it can be typed on the command line.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">Note that </span><span class="rvts89">«</span><span class="rvts12"> can be either the ANSI </span><span class="rvts89">«</span><span class="rvts12"> character (X'AB') or the the OEM </span><span class="rvts89">«</span><span class="rvts12"> character (X'AE'). You should select the character that displays properly with your chosen editor font, but either one will work.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'['</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">In a search string, </span><span class="rvts88">P'['</span><span class="rvts35"> is used to represent the left-hand edge of a line. When used this way, the </span><span class="rvts88">[</span><span class="rvts35"> code must appear left-most in the Picture string, and there must not be any other </span><span class="rvts88">[</span><span class="rvts35"> &nbsp;codes present in the Picture, unless escaped as </span><span class="rvts88">\[</span><span class="rvts35">. Because the </span><span class="rvts88">[</span><span class="rvts35"> code represents the edge of a line, and not an actual data character value, there must be at least one other character in the string, such as </span><span class="rvts88">P'[ABC'</span><span class="rvts35">.</span><span class="rvts88"> &nbsp;</span><span class="rvts35"> A find-string written literally as </span><span class="rvts88">P'['</span><span class="rvts35"> is illegal. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In a </span><span class="rvts85">change-string</span><span class="rvts35">, a Picture or Format of </span><span class="rvts88">P'['</span><span class="rvts35"> is treated as ordinary data.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P']'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">In a search string, </span><span class="rvts88">P']'</span><span class="rvts35"> is used to represent the right-hand edge of a line. When used this way, the </span><span class="rvts88">]</span><span class="rvts35"> code must appear right-most in the Picture string, and there must not be any other </span><span class="rvts88">]</span><span class="rvts35"> &nbsp;codes present in the Picture, unless escaped as </span><span class="rvts88">\]</span><span class="rvts35">. Because the </span><span class="rvts88">]</span><span class="rvts35"> code represents the edge of a line, and not an actual data character value, there must be at least one other character in the string, such as </span><span class="rvts88">P'ABC]'</span><span class="rvts35">.</span><span class="rvts88"> &nbsp;</span><span class="rvts35"> A find-string written literally as </span><span class="rvts88">P']'</span><span class="rvts35"> is illegal. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In a </span><span class="rvts85">change-string</span><span class="rvts35">, a Picture or Format of </span><span class="rvts88">P']'</span><span class="rvts35"> is treated as ordinary data.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'{'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">In a search string </span><span class="rvts88">P'{'</span><span class="rvts35"> is used to represent the left-hand edge of a line </span><span class="rvts36">including any optional </span><span class="rvts36">leading blanks</span><span class="rvts35">. When used this way, the </span><span class="rvts36">{</span><span class="rvts35"> code must appear left-most in the Picture string, and there must not be any other </span><span class="rvts88">{</span><span class="rvts35"> &nbsp;codes present in the Picture, unless escaped as </span><span class="rvts88">\{</span><span class="rvts35">. Because the { code represents the logical left edge of a line, and possibly not an actual data string (since the optional blanks may not be present), there must be at least one other character in the string, such as </span><span class="rvts88">P'{ABC'</span><span class="rvts35">.</span><span class="rvts88"> </span><span class="rvts35">A </span><span class="rvts36">find </span><span class="rvts35">string written literally as </span><span class="rvts88">P'{'</span><span class="rvts35"> is illegal. When a successful find occurs, the effective length of the 'found' string includes the leading spaces, if present.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In a </span><span class="rvts36">change</span><span class="rvts35"> string</span><span class="rvts85">, </span><span class="rvts35">a Picture or Format of </span><span class="rvts139">P'{'</span><span class="rvts6"> </span><span class="rvts35">is legal, and </span><span class="rvts6">is treated as a </span><span class="rvts35">variable number </span><span class="rvts6">of spaces equal to the leading spaces found by the accompanying </span><span class="rvts140">search-string</span><span class="rvts35">, and may be of zero length. The change Picture or Format of </span><span class="rvts139">P'{'</span><span class="rvts6"> </span><span class="rvts35">is somewhat similar to the change Picture or Format of </span><span class="rvts139">P'!'</span><span class="rvts6"> in that it represents a variable number of characters, and can appear anywhere in the change string, even multiple times. When the </span><span class="rvts139">{</span><span class="rvts6"> code is used in a change string Picture or Format, and there is no associated </span><span class="rvts139">{</span><span class="rvts6"> code in the find picture, the </span><span class="rvts139">{</span><span class="rvts6"> code on the change side represents a zero-length string.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'}'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">In a search string &nbsp;</span><span class="rvts88">P'}'</span><span class="rvts35"> is used to represent the right-hand edge of a line </span><span class="rvts36">including any optional trailing blanks</span><span class="rvts35">. When used this way, the </span><span class="rvts36">}</span><span class="rvts35"> code must appear right-most in the Picture string, and there must not be any other </span><span class="rvts36">}</span><span class="rvts35"> &nbsp;codes present in the Picture, unless escaped as </span><span class="rvts88">\}</span><span class="rvts35">. Because the </span><span class="rvts36">}</span><span class="rvts35"> code represents the logical right edge of a line, and possibly not an actual data string (since the optional blanks may not be present), there must be at least one other character in the string, such as </span><span class="rvts88">P'ABC}'</span><span class="rvts35">.</span><span class="rvts88"> </span><span class="rvts35">A </span><span class="rvts36">find </span><span class="rvts35">string written literally as </span><span class="rvts88">P'}'</span><span class="rvts35"> is illegal. When a successful find occurs, the effective length of the 'found' string includes the trailing spaces, if present.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">In a </span><span class="rvts36">change</span><span class="rvts35"> string</span><span class="rvts85">, </span><span class="rvts35">a Picture or Format of </span><span class="rvts139">P'}'</span><span class="rvts6"> </span><span class="rvts35">is legal, and </span><span class="rvts6">is treated as a </span><span class="rvts35">variable number </span><span class="rvts6">of spaces equal to the trailing spaces found by the accompanying </span><span class="rvts140">search-string</span><span class="rvts35">, and may be of zero length. The change Picture or Format of </span><span class="rvts139">P'}'</span><span class="rvts6"> </span><span class="rvts35">is somewhat similar to the change Picture or Format of </span><span class="rvts139">P'!'</span><span class="rvts6"> in that it represents a variable number of characters, and can appear anywhere in the change string, even multiple times. When the </span><span class="rvts139">}</span><span class="rvts6"> code is used in a change string Picture or Format, and there is no associated </span><span class="rvts139">}</span><span class="rvts6"> code in the find picture, the </span><span class="rvts139">}</span><span class="rvts6"> code on the change side represents a zero-length string.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'|'</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">In the </span><span class="rvts85">change-string</span><span class="rvts35"> Picture of a </span><span class="rvts36">SPLIT</span><span class="rvts35"> primary command, </span><span class="rvts88">P'|'</span><span class="rvts35"> is used to represent a line-break, where the line is to be split in two. For </span><span class="rvts36">SPLIT</span><span class="rvts35">, the contents of the change-string completely replace the find-string. It is possible to delete the entire find-string and replace it by a line-break by having a change-string written literally as </span><span class="rvts88">P'|'</span><span class="rvts35"> as the only Picture code present.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">For commands other than SPLIT, a </span><span class="rvts85">change-string</span><span class="rvts35"> Picture containing </span><span class="rvts88">P'|'</span><span class="rvts35"> is ignored, and will neither be used for line-splitting purposes nor as a literal </span><span class="rvts88">'|'</span><span class="rvts35"> character. If you wish to have a change-string Picture contain a literal </span><span class="rvts88">'|'</span><span class="rvts35"> character, it must be escaped as </span><span class="rvts88">P'\|'</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="190" style="padding: 1px;"><p class="rvps9"><span class="rvts89">P'\x'</span><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+</td>
+<td width="794" style="padding: 1px;"><p class="rvps2"><span class="rvts35">The </span><span class="rvts36">\</span><span class="rvts35"> backslash is used to escape a character that might otherwise be used as a special Picture code, like </span><span class="rvts36">$</span><span class="rvts35">. For example, </span><span class="rvts36">P'@#'</span><span class="rvts35"> is used to find to a letter followed by a digit, whereas </span><span class="rvts36">P'\@#'</span><span class="rvts35"> is used to find to an </span><span class="rvts36">@</span><span class="rvts35"> sign followed by a digit. When </span><span class="rvts36">\</span><span class="rvts35"> backslash is doubled as </span><span class="rvts36">\\</span><span class="rvts35"> or is used as the last character of a Picture string, it is taken literally as a single </span><span class="rvts36">\</span><span class="rvts35"> backslash data character. When </span><span class="rvts36">\</span><span class="rvts35"> backslash precedes a letter, the letter is taken literally; that is, it matches exactly in case, even when </span><span class="rvts36">CASE T</span><span class="rvts35"> is in effect.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps4"><a name="SpecialnoteforP'['andP']'orP'{'andP'}'"></a>
+<span class="rvts11">Special note for P'[' and P']' or P'{' and P'}'</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">It is possible to specify both </span><span class="rvts11">[</span><span class="rvts12"> and </span><span class="rvts11">]</span><span class="rvts12"> (or </span><span class="rvts11">{</span><span class="rvts12"> and </span><span class="rvts11">}</span><span class="rvts12"> ) in the same find-string Picture, when </span><span class="rvts11">[</span><span class="rvts12"> begins the Picture, and </span><span class="rvts11">]</span><span class="rvts12"> ends the Picture; that is, if you specify a Picture in the form </span><span class="rvts54">P'[string]'</span><span class="rvts12">. When this is done, it requests the command to search for a string which is the only data present on a line. For example, the find-string Picture </span><span class="rvts89">P'[ABC]'</span><span class="rvts12"> will find the string ABC when it is the only data present on a line, with neither leading nor trailing spaces present.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The </span><span class="rvts139">P'{ABC}'</span><span class="rvts6"> version would find ABC when it is the only data on a line, regardless of any leading or trailing spaces.</span><span class="rvts40">Note:</span><span class="rvts6"> &nbsp;When </span><span class="rvts40">HILITE FIND</span><span class="rvts6"> is effect, a find picture like </span><span class="rvts139">P'{ABC}'</span><span class="rvts6"> will cause any extra spaces on the edge of the line that correspond to a </span><span class="rvts40">{</span><span class="rvts6"> or</span><span class="rvts40"> }</span><span class="rvts6"> Picture to be included in the string that is highlighted.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">For the </span><span class="rvts11">JOIN</span><span class="rvts12"> command, the first string operand must be a Picture string of the form </span><span class="rvts89">P'[</span><span class="rvts54">string</span><span class="rvts89">'</span><span class="rvts12"> or </span><span class="rvts89">P'</span><span class="rvts54">string</span><span class="rvts89">]'</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">The first string operand of </span><span class="rvts11">JOIN</span><span class="rvts12"> can also be a Picture string of the form </span><span class="rvts89">P'{</span><span class="rvts54">string</span><span class="rvts89">'</span><span class="rvts12"> or </span><span class="rvts89">P'</span><span class="rvts54">string}</span><span class="rvts89">'</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">It is not possible to directly join one line to </span><span class="rvts11">both</span><span class="rvts12"> the line that precedes it </span><span class="rvts11">and</span><span class="rvts12"> the line that follows it, at the same time. That is to say, a </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command cannot be specified in the form of </span><span class="rvts54">P'[string]'</span><span class="rvts12">. or as &nbsp;</span><span class="rvts54">P'{string}'</span><span class="rvts12">. For any given line, only one </span><span class="rvts11">JOIN</span><span class="rvts12">, on one side of a line, is allowed. </span><span class="rvts11">JOIN</span><span class="rvts12"> cannot perform a left-join and a right-join at the same time, since this would imply converting three lines of data into one line in a single join operation, an action that SPFLite does not support. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts35">A find-string written literally as</span><span class="rvts111"> </span><span class="rvts89">P'[]'</span><span class="rvts35"> is illegal. This cannot be used to find zero-length lines, because there is literally no data to find.</span></p>
+<p class="rvps5"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Even though the new Picture codes of</span><span class="rvts36"> {</span><span class="rvts35"> and </span><span class="rvts36">}</span><span class="rvts35"> represent optional spaces, a find-string written literally as</span><span class="rvts111"> </span><span class="rvts89">P'{}'</span><span class="rvts35"> is also illegal because, based on the definition of these codes, one possible meaning of such a Picture is a string of zero length, which cannot be found.</span></p>
+<p class="rvps5"><span class="rvts35"> &nbsp;</span></p>
+<p class="rvps5"><span class="rvts35">To find a zero-length line, the command</span><span class="rvts137"> </span><span class="rvts89">NFIND P'='</span><span class="rvts137"> </span><span class="rvts35">or</span><span class="rvts137"> </span><span class="rvts89">LOCATE SIZE 0</span><span class="rvts137"> </span><span class="rvts35">may be used.</span></p>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps4"><a name="PictureStringExamples"></a>
+<span class="rvts11">Picture String Examples</span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="14" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find a string of 3 numeric characters: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P'###' &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find any 2 characters that are not blanks but are separated by a blank: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P'^ ^' &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find a blank followed by a numeric character: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P' #' &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find a numeric character followed by AB: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P'#AB' &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find the next character in column 72 that is not a blank: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P'^' 72 &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To change any characters in columns 73 through 80 to blanks: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">CHANGE ALL P'=' ' ' 73 80 &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts12">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps4"><span class="rvts12">To find the next line with a blank in column 1 and a character in column 2 that is not a blank: &nbsp;</span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="rvps4"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="28" valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts6"><br/></span></p>
+</td>
+<td valign="top" style="padding: 0px;"><p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P' ¬' 1 &nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="UsingPicturestringsastheTOoperandofaCHANGEcommand"></a>
+<span class="rvts11">Using Picture strings as the TO operand of a CHANGE command </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite expands on the ISPF </span><span class="rvts36">CHANGE</span><span class="rvts35"> Picture standard in a number of ways that make them even more useful:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">ISPF allows three types of “copy codes” in a change Picture. The </span><span class="rvts36">=</span><span class="rvts35"> sign is used to copy a character as-is from the search string to the result string; a </span><span class="rvts36">&lt;</span><span class="rvts35"> sign will copy data and convert it to lower case, and a </span><span class="rvts36">&gt;</span><span class="rvts35"> sign will copy data and convert it to upper case. SPFLite adds a </span><span class="rvts36">fourth</span><span class="rvts35"> “copy code” of </span><span class="rvts36">~</span><span class="rvts35"> </span><span class="rvts36">tilde</span><span class="rvts35">. A tilde in a change Picture is used to “match against” a character in the search string, but then it will “ignore” or “discard” that character in the result string. So, a change Picture of </span><span class="rvts36">P'=~='</span><span class="rvts35"> will copy the first and third characters of the search string, but will skip over the second character of the search picture. The resulting string value will be 2 characters long. </span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">A second extension is the picture character </span><span class="rvts36">!</span><span class="rvts35"> which is taken to mean the </span><span class="rvts36">entire string</span><span class="rvts35"> located by the </span><span class="rvts36">CHANGE</span><span class="rvts35"> function. It is </span><span class="rvts85">not</span><span class="rvts35"> the string-1 operand of CHANGE, but is the actual value found by the command. (So, if the search operand were </span><span class="rvts36">P'#'</span><span class="rvts35"> then then actual value found is not </span><span class="rvts36">'#'</span><span class="rvts35"> but </span><span class="rvts85">might</span><span class="rvts35"> be a </span><span class="rvts36">'5'</span><span class="rvts35">.) &nbsp;It can be used multiple times in the change string if desired, to replicate the found string. If a command &nbsp;</span><span class="rvts89">CHANGE P'@@@' P'!!!'</span><span class="rvts35"> &nbsp;were issued, and it located the data string ABC, the resulting string would be ABCABCABC.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">You can use change Pictures and Formats of the form </span><span class="rvts89">P'!&gt;'</span><span class="rvts35">, &nbsp;</span><span class="rvts89">F'!&gt;'</span><span class="rvts35">, </span><span class="rvts89">P'!&lt;'</span><span class="rvts35"> and &nbsp;</span><span class="rvts89">F'!&lt;'</span><span class="rvts35">. These work like </span><span class="rvts89">P'!'</span><span class="rvts35"> and &nbsp;</span><span class="rvts89">F'!'</span><span class="rvts35"> do, with the added effect of converting the result to upper or lower case afterwards. See the discussion above for details.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">The ISPF standard required that a change Picture must have exactly the same length as the search string . That prevents Pictures from being used to shorten or lengthen the value found by the search string. SPFLite relaxes this requirement. Now, a change Picture can be shorter or longer than the search string. When this is done, SPFLite does impose one requirement: &nbsp;If the change Picture is longer, the positions of the change Picture that extend beyond the length of the search string cannot contain “copy codes” of </span><span class="rvts36">= &lt; &gt;</span><span class="rvts35"> or </span><span class="rvts36">~</span><span class="rvts35"> because there is nothing to match against. For example, you can't say </span><span class="rvts89">CHANGE P'@@@' P'@@@=' WORD ALL</span><span class="rvts35">, because the fourth position of the change string has an </span><span class="rvts36">=</span><span class="rvts35"> sign, asking that the fourth character of the find string be copied. But, there </span><span class="rvts36">is</span><span class="rvts35"> no fourth character, since the command only asked to look for strings of length 3.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">In ISPF, pattern codes like $, # and @ are allowed in search Pictures, but not in change Pictures, even though they don't really mean anything special in a change Picture. IBM just doesn't allow it. SPFLite does. Anything in a change Picture which is not one of the “copy codes” is treated as ordinary data. As noted, SPFLite allows an extended copy code of </span><span class="rvts89">!</span><span class="rvts35">, </span><span class="rvts89">!&gt;</span><span class="rvts35"> and &nbsp;</span><span class="rvts89">!&lt;</span><span class="rvts35"> to represent the entire found string.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">SPFLite introduces the </span><a class="rvts32" href="CASE.html">CASE</a><span class="rvts35"> primary command, which may be issued as </span><span class="rvts36">CASE T</span><span class="rvts35"> or </span><span class="rvts36">CASE C</span><span class="rvts35">. When you issue this command, you will see a </span><span class="rvts36">T </span><span class="rvts35">or </span><span class="rvts36">C</span><span class="rvts35"> on the status line in a little box by itself. This defines what the default case sensitivity mode is for quoted strings that don't have a T or C type code on them. In ISPF, IBM chooses to treat alphabetic characters in search Pictures as case-insensitive (like T strings), and they offer no way to change that assumption. In SPFLite, the current state of </span><span class="rvts36">CASE</span><span class="rvts35"> defines how search Pictures are treated. So, a </span><span class="rvts85">search</span><span class="rvts35"> Picture of P'ABC' is case-</span><span class="rvts85">insensitive</span><span class="rvts35"> if there is a </span><span class="rvts36">T </span><span class="rvts35">in the status line, and is case-</span><span class="rvts85">sensitive</span><span class="rvts35"> if there is a </span><span class="rvts36">C</span><span class="rvts35"> there. </span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps71"><span class="rvts35">Note that</span><span class="rvts36"> CASE T</span><span class="rvts35"> or </span><span class="rvts36">CASE C</span><span class="rvts35"> affects how a </span><span class="rvts85">search</span><span class="rvts35"> string is handled. The </span><span class="rvts85">change</span><span class="rvts35"> string in a </span><span class="rvts36">CHANGE</span><span class="rvts35"> command, no matter what string type, is treated as case-sensitive, in the sense that any alphabetic data you enter is used exactly as you typed it, and </span><span class="rvts36">CASE T/C</span><span class="rvts35"> is ignored there.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">In ISPF, any character defined as a Picture code cannot be used as ordinary data. In SPFLite, you can escape any special character with a </span><span class="rvts36">\</span><span class="rvts35"> backslash, including the backslash itself.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="SPFLiteFormatChangeStrings"></a>
+<span class="rvts36">SPFLite Format Change Strings</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">With SPFLite, a new Picture-like change string is now available: the </span><span class="rvts85">Format</span><span class="rvts35"> string. A Format can only be used on the </span><span class="rvts85">change</span><span class="rvts35">-side of a </span><span class="rvts36">CHANGE</span><span class="rvts35"> command; it cannot be used as a </span><span class="rvts85">search</span><span class="rvts35"> string on </span><span class="rvts36">FIND</span><span class="rvts35">, </span><span class="rvts36">CHANGE</span><span class="rvts35"> or any similar command. Format change strings (we'll just call them </span><span class="rvts85">Format</span><span class="rvts35"> strings from now on) have the following properties:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Format strings have a type code of </span><span class="rvts36">F</span><span class="rvts35"> rather than the type code </span><span class="rvts36">P</span><span class="rvts35"> for Pictures.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Like Pictures, a Format string can be longer or shorter than the search string.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">The same special codes of </span><span class="rvts36">= &lt; &gt;</span><span class="rvts35"> and </span><span class="rvts36">~</span><span class="rvts35"> allowed in a change Picture are allowed in a change Format, and they have the same basic meaning. Also, the same characters considered as ordinary data in a change Picture are ordinary in a Format.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Since a Format can only be used for changes, it is not affected by the state of </span><span class="rvts36">CASE T</span><span class="rvts35"> or </span><span class="rvts36">CASE C</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The thing that makes change Formats different than change Pictures is how the “copy codes” of = &lt; &gt; and ~ are “lined up” or “associated” with the search string. Here is the distinction:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">In a change </span><span class="rvts36">Picture</span><span class="rvts35">, a copy code of = &lt; &gt; or ~ in position </span><span class="rvts91">n</span><span class="rvts35"> is used to match up to a character from the search string </span><span class="rvts85">in that same position</span><span class="rvts35"> </span><span class="rvts91">n</span><span class="rvts35">. So if = is in position 3, it copies position 3 of the search string into position 3 of the result string.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">In a change </span><span class="rvts36">Format</span><span class="rvts35">, each copy code of = &lt; &gt; or ~ is effectively “enumerated” from left to right. That is, if you look at the Format string, and </span><span class="rvts85">ignore</span><span class="rvts35"> any characters which are </span><span class="rvts85">not</span><span class="rvts35"> a copy code of = &lt; &gt; or ~, then the </span><span class="rvts85">first</span><span class="rvts35"> copy code is “code 1”, the </span><span class="rvts85">second</span><span class="rvts35"> code is “code 2”, etc. </span><span class="rvts85">regardless of what relative position they are in.</span><span class="rvts35"> &nbsp;Then, the </span><span class="rvts85">first </span><span class="rvts35">copy code in the Format is matched up to </span><span class="rvts85">position 1</span><span class="rvts35"> of the search string; &nbsp;the </span><span class="rvts85">second </span><span class="rvts35">copy code in the Format is matched up to </span><span class="rvts85">position 2</span><span class="rvts35"> of the search string; etc.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts85">Why use Format strings?</span><span class="rvts35"> &nbsp;With all the features of Picture strings, you might think that was enough. You can even insert data to the right of a found-string using a change Picture longer than the search string.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">But, what if you wanted to insert something </span><span class="rvts85">before</span><span class="rvts35"> the search string? &nbsp;With Pictures, you can't do it.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Example</span><span class="rvts35">: &nbsp;I want to find all 3-letter words and put parentheses around them. Let's try it with a Picture:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">CHANGE P'@@@' P'(===)' WORD ALL</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">However, this won't work. Why not? &nbsp;Let's match up the two strings, and see what happens. The arrows represent character matching, and the dashes represent inserted data:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">P'@@@'</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89"> &nbsp;-^^</span><span class="rvts136">^</span><span class="rvts89">-</span></p>
+<p class="rvps76"><span class="rvts89">P'(===)'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here, you can see where the </span><span class="rvts71">^</span><span class="rvts35"> red arrow is that the third = is being matched up against a non-existent search string position, and that's illegal, even in SPFLite.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Let's try this again, using a change Format:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">CHANGE P'@@@' F'(===)' WORD ALL</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This </span><span class="rvts85">does</span><span class="rvts35"> work. Why ? Again, let's match up the two strings, and see what happens:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89"> P'@@@'</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89"> &nbsp;-^^^-</span></p>
+<p class="rvps76"><span class="rvts89">P'(===)'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here, the </span><span class="rvts85">second character</span><span class="rvts35"> in the Format is the </span><span class="rvts85">first copy code</span><span class="rvts35">. Enumerating the copy codes, that corresponds to </span><span class="rvts85">position 1</span><span class="rvts35"> of the search string. The same holds for the other = signs. So, if CHANGE finds a word like </span><span class="rvts36">ABC</span><span class="rvts35">, it will change it to </span><span class="rvts36">(ABC) </span><span class="rvts35">and </span><span class="rvts36">XYZ</span><span class="rvts35"> will be changed to</span><span class="rvts36"> (XYZ)</span><span class="rvts35">.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Suppose you wanted to change a word like </span><span class="rvts36">ABC</span><span class="rvts35"> into </span><span class="rvts36">(A/B/C) </span><span class="rvts35">? &nbsp;Easy. Just put the slashes in the format to insert them:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">CHANGE P'@@@' F'(=/=/=)' WORD ALL</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Note that in the Format, the = signs are in relative positions 2, 4 and 6, but since we </span><span class="rvts85">enumerate</span><span class="rvts35"> them, and we aren't looking at their </span><span class="rvts85">positions</span><span class="rvts35"> in the Format string, the = sign in position 2 is the </span><span class="rvts85">first</span><span class="rvts35"> = sign, so it copies position 1; the </span><span class="rvts85">second</span><span class="rvts35"> = in position 4 copies position 2, and the </span><span class="rvts85">third</span><span class="rvts35"> = in position 6 copies position 3.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Any time you need to insert data </span><span class="rvts85">before</span><span class="rvts35"> or in the </span><span class="rvts85">middle</span><span class="rvts35"> </span><span class="rvts85">of</span><span class="rvts35"> the search string, Format is what you want. If you want to insert </span><span class="rvts85">after,</span><span class="rvts35"> either Format or Picture should work fine.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note</span><span class="rvts35">: When a Format string contains the "copy entire string" codes of </span><span class="rvts89">F'!'</span><span class="rvts35">, </span><span class="rvts89">F'!&gt;'</span><span class="rvts35"> or &nbsp;</span><span class="rvts89">F'!&lt;'</span><span class="rvts35">, the copying operation for these codes is done </span><span class="rvts36">independently</span><span class="rvts35"> of any copy codes of = &lt; &gt; or ~ that may be present in the Format string. The </span><span class="rvts89">F'!'</span><span class="rvts35">, </span><span class="rvts89">F'!&gt;'</span><span class="rvts35"> or &nbsp;</span><span class="rvts89">F'!&lt;'</span><span class="rvts35"> codes do not count when considering the enumeration of characters in the found-string.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Why didn't we just make Pictures work the same as Formats, and be done with it? &nbsp;Because, for people who make extensive use of Pictures, Formats don't really work exactly the same way as Pictures, and we didn't want to cause confusion or break old editing habits if it wasn't necessary to do so.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Displayableandnon-displayablecharacters"></a>
+<span class="rvts11">Displayable and non-displayable characters</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The picture character </span><span class="rvts48">P'.'</span><span class="rvts12"> (period) requests a search for non-displayable characters. Depending on the font you are using, particularly when national characters are involved, deciding what is non-displayable can be confusing. SPFLite provides you with the ability to specifically indicate what characters you wish to consider displayable. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The Options - General settings page allows you to alter what these characters are. See </span><a class="rvts32" href="OptionsGeneral.html">Options - General</a><span class="rvts12"> for how this is changed. </span></p>
+<p class="rvps5"><span class="rvts12">Note that the Normal Characters on that screen define what the </span><span class="rvts48">P'.'</span><span class="rvts12"> picture does </span><span class="rvts11">not</span><span class="rvts12"> match to. Be careful not to get this point confused.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The non-displayable picture concept comes from IBM's ISPF that originally ran on 3270 terminals, which have far fewer displayable characters in EBCDIC than PCs do using the ANSI character set. A 3270 terminal would "lock up" if non-displayable characters were written to the screen, but this will not happen in SPFLite. Because of this, the issue of non-displayable characters is of less importance to an SPFLite user than it would be to an IBM ISPF user. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The &nbsp;</span><span class="rvts48">P'.'</span><span class="rvts12"> &nbsp;Picture code is provided for ISPF compatibility, but you may not have extensive need for it. </span><span class="rvts11">If you chose to,</span><span class="rvts12"> you could probably define the Normal Characters string so that a </span><span class="rvts48">P'.'</span><span class="rvts12"> Picture would detect essentially the same unprintable characters that it would on the mainframe. However, it would be very unusual to try to emulate a mainframe 3270 in this manner.</span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

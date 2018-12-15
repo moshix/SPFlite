@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>COMPRESS - Compress Duplicate Strings</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="COMPRESS - Compress Duplicate Strings">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="COMPRESS - Compress Duplicate Strings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="COMPRESS"
+		  data-hnd-context="157"
+		  data-hnd-title="COMPRESS - Compress Duplicate Strings"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>COMPRESS - Compress Duplicate Strings</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Syntax</span></p>
+<p class="rvps4"><span class="rvts170"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="238" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps217"><span class="rvts54">COMPRESS</span></p>
+</td>
+<td width="888" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps4"><span class="rvts98"> </span><span class="rvts89">string-1 &nbsp;[ string-2 ] </span></p>
+<p class="rvps2"><span class="rvts89">[ start-column [ end-column ] ] </span></p>
+<p class="rvps4"><span class="rvts89">[ line-control-range ]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-selection-criteria]</span></p>
+<p class="rvps2"><span class="rvts89">[ color-change-request]</span></p>
+<p class="rvps4"><span class="rvts89">[ X | NX ]</span></p>
+<p class="rvps4"><span class="rvts89">[ U | NU }</span></p>
+<p class="rvps4"><span class="rvts89">[ MX | DX ] &nbsp;</span></p>
+<p class="rvps4"><span class="rvts89">[ ALL ]</span></p>
+<p class="rvps4"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Operands</span></p>
+<p class="rvps4"><span class="rvts104"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">string-1</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">The string being searched for. The string should contain the single occurrence of the value you wish to compress, unless you also specify string-2. See </span><span class="rvts36">Description</span><span class="rvts35"> for issues related to Text, Picture and Regular-Expression search strings.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">string-2</span></p>
+<p class="rvps217"><span class="rvts54"><br/></span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">The string that replaces string-1. String-2 must be shorter than string-1.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">start-column</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Left column of a range (with end-column) within which the from-string value must be found. If no end-column operand, then the from-string operand must be found starting in start-col.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">end-column</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">Right </span><span class="rvts12">column of a range (with end-column) within which the from-string value must be found. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">line-control-range</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">The range of lines which are to be processed by the command. Line control ranges provide a powerful tool to customize the range of lines to be processed. The full syntax and allowable operands which make up a line control range are </span><span class="rvts12">discussed in </span><a class="rvts32" href="PCLineRange.html">"Line Control Range Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span><span class="rvts35"> &nbsp;</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-selection-criteria</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the from-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps217"><span class="rvts54">color-change-request</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A request for selection based on the highlight color of the from-string. Color requests provide another powerful tool to control search selection. The full syntax and allowable operands which make up a color-selection-criteria &nbsp;are discussed in </span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color Selection Criteria Specification"</a><span class="rvts12">. Refer to that section of the documentation for details.</span></p>
+<p class="rvps227"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">X | NX</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">Specifies a subset of the line range to be processed. X requests only excluded lines are to be </span><span class="rvts12">processed</span><span class="rvts35">, NX requests only non-excluded lines are to be </span><span class="rvts12">processed</span><span class="rvts35">. If neither X or NX are specified, all lines in the range will be </span><span class="rvts12">processed</span><span class="rvts35">.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">U | NU</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specifies a subset of the line range to be processed. </span><span class="rvts11">U</span><span class="rvts12"> requests only User lines are to be examined, </span><span class="rvts11">NU </span><span class="rvts12">requests only non-User lines are to be examined. If neither </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> are specified, all lines in the range will be examined.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">MX</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">MX requests that all lines which DO contain from-string be excluded from the display following command processing. MX = Make Excluded.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">DX</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">DX requests that lines which DO contain from-string, which, if excluded, would normally be made visible, be left in their excluded status. DX = Don't change Excluded status.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">ALL</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps4"><span class="rvts35">ALL requests that all lines in the line range will be compressed. If the ALL option is omitted, then by default the first line in the lines in the line range will be compressed. Note that this default action is what is done in other SPFLite commands when a NEXT operand is used. However, be aware that COMPRESS does not support any of the options FIRST, LAST, PREV or NEXT.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" style="padding: 1px;"><p class="rvps9"><span class="rvts89">TOP</span></p>
+</td>
+<td width="721" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first, or only, line processed is highlighted (if it is on the current screen) or the screen is scrolled to the 2nd screen line (as ISPF does) if the line is not on the current screen. If TOP is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts11"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps9"><span class="rvts36">COMPRESS</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CP</span></p>
+<p class="rvps4"><span class="rvts14"> </span></p>
+<p class="rvps4"><span class="rvts14"> </span><span class="rvts11">Description</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps9"><span class="rvts36">COMPRESS</span><span class="rvts35"> is used for two purposes: (1) you can specify a single string, to collapse repetitive spans of a search string to single occurrences of that string, and (2) you can specify two strings to repetitively change a longer string to a shorter one. The first action is called string compressing, and the second is called string condensing.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><span class="rvts36">String Compressing</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Every span of strings is compressed on each line of the selected line range if you say ALL; otherwise, just the first available line in the line range is compressed. For example, to compress spans of multiple </span><span class="rvts36">*</span><span class="rvts35"> characters on the first two lines of a file, you could issue a command like this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts399">Command &gt; COMPRESS '*' ALL U</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts399">U2 001</span><span class="rvts89"> </span><span class="rvts332">*** ABC *** DEF ***</span></p>
+<p class="rvps10"><span class="rvts399">000002</span><span class="rvts89"> </span><span class="rvts332">*** PDQ *** XYZ ***</span></p>
+<p class="rvps10"><span class="rvts399">000003</span><span class="rvts89"> </span><span class="rvts332">*** 123 *** 456 ***</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Result:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts399">000001|</span><span class="rvts332">* ABC * DEF *</span></p>
+<p class="rvps10"><span class="rvts399">000002|</span><span class="rvts332">* PDQ * XYZ *</span></p>
+<p class="rvps10"><span class="rvts399">000003</span><span class="rvts89"> </span><span class="rvts332">*** 123 *** 456 ***</span></p>
+<p class="rvps4"><span class="rvts98"><br/></span></p>
+<p class="rvps4"><span class="rvts290">String Condensing</span></p>
+<p class="rvps4"><span class="rvts290"><br/></span></p>
+<p class="rvps9"><span class="rvts110">Condensing text means to repetitively change one string into a shorter string. There are no restrictions on the values you choose to condense text, except that the replacement text in string-2 must be shorter than string-1. String-2 can be a zero-length string, so that all occurrences of string-1 are removed.</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts110">SPFLite condenses a line by scanning it for any occurrence of string-1, and when found, replaces it with string-2. If any replacements were made, the line is scanned </span><span class="rvts400">again</span><span class="rvts110"> to see if any additional occurrences of string-1 are found, and these are again replaced with string-2. This continues until no more replacements can be made.</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts110">This is best explained by an example. Suppose you had a line with words having a closing parenthesis with space between them, and you wanted to remove the extra space, and further assume that the spacing before the parentheses are unequal. Let's say the line looked this this:</span></p>
+<p class="rvps9"><span class="rvts110"> </span></p>
+<p class="rvps10"><span class="rvts399">000001</span><span class="rvts89"> (</span><span class="rvts332">ABC &nbsp; ) &nbsp; &nbsp; (DEF &nbsp; &nbsp; &nbsp; )</span></p>
+<p class="rvps9"><span class="rvts110"> </span></p>
+<p class="rvps9"><span class="rvts110">Now, you </span><span class="rvts400">could </span><span class="rvts110">issue many CHANGE commands like</span><span class="rvts401"> CHANGE ' )' ')' ALL </span><span class="rvts110">to remove all the extra blanks, which would require a lot of typing. Or, you could do a simple</span><span class="rvts402"> COMPRESS ' ' </span><span class="rvts110">but that would compress ALL blanks, not just the blanks before the parentheses, and also would not remove all blanks between the word and the right parentheses. Instead, let's use COMPRESS with the second string operand. What we need is&nbsp;</span><span class="rvts401"> COMPRESS ' )' ')'</span><span class="rvts110">. This causes ALL instances of</span><span class="rvts401"> ' )' </span><span class="rvts110">to be replaced with&nbsp;</span><span class="rvts401"> ')'</span><span class="rvts110">. Result:</span></p>
+<p class="rvps9"><span class="rvts110"> </span></p>
+<p class="rvps10"><span class="rvts399">000001</span><span class="rvts89"> </span><span class="rvts332">(ABC) &nbsp; &nbsp; (DEF)</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps4"><span class="rvts290">Considerations when using non-specific search strings in COMPRESS</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The COMPRESS search string can be any SPFLite string type, including T, P and R, and untyped strings when CASE T is in effect. When strings of such types are used, it is possible that more than one kind of character will match the search string. For example, </span><span class="rvts36">T'a'</span><span class="rvts35"> will match on</span><span class="rvts36"> 'a'</span><span class="rvts35"> or </span><span class="rvts36">'A</span><span class="rvts35">', and </span><span class="rvts36">P'#'</span><span class="rvts35"> will match digits </span><span class="rvts36">'0'</span><span class="rvts35"> through </span><span class="rvts36">'9'</span><span class="rvts35">. Because these types of strings do not match one value alone they are called </span><span class="rvts85">non-specific strings.</span><span class="rvts35"> &nbsp;When COMPRESS is provided with a non-specific string to search for, it finds the first actual string that matches the non-specific search item, and that actual value is used to compress any further repetitions of itself.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For example, given a line that contained</span><span class="rvts98"> </span><span class="rvts89">111222333</span><span class="rvts98">, </span><span class="rvts35">a command of</span><span class="rvts98"> </span><span class="rvts89">COMPRESS P'#' ALL</span><span class="rvts98"> </span><span class="rvts35">will produce</span><span class="rvts98"> </span><span class="rvts89">123</span><span class="rvts35">. Even though all nine digits in</span><span class="rvts98"> </span><span class="rvts89">111222333</span><span class="rvts98"> </span><span class="rvts35">match against</span><span class="rvts98"> &nbsp;</span><span class="rvts89">P'#'</span><span class="rvts98"> </span><span class="rvts35">in a FIND or CHANGE command, only identical spans of digits get compressed. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The reason that</span><span class="rvts98"> </span><span class="rvts89">111222333</span><span class="rvts98"> &nbsp;</span><span class="rvts35">does not compress down to a single digit is that COMPRESS first matches the non-specific string</span><span class="rvts98"> </span><span class="rvts89">P'#'</span><span class="rvts98"> </span><span class="rvts35">to the actual string</span><span class="rvts98"> </span><span class="rvts89">'1'</span><span class="rvts98"> </span><span class="rvts35">and from that point on, only</span><span class="rvts98"> </span><span class="rvts89">'1'</span><span class="rvts98"> </span><span class="rvts35">characters are matched and compressed. The first instance of</span><span class="rvts98"> </span><span class="rvts89">'2'</span><span class="rvts98"> </span><span class="rvts35">starts a new string, and then the non-specific string</span><span class="rvts98"> </span><span class="rvts89">P'#'</span><span class="rvts98"> </span><span class="rvts35">matches the actual string</span><span class="rvts98"> </span><span class="rvts89">'2'</span><span class="rvts98"> </span><span class="rvts35">and from that point on, only</span><span class="rvts98"> </span><span class="rvts89">'2'</span><span class="rvts98"> </span><span class="rvts35">characters are matched and compressed, and so on. This same principle applies to Text strings, Pictures and Regular Expression strings.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This rule may seem a little complicated, but it's only reasonable to do it this way. After all, if COMPRESS really did reduce a string like</span><span class="rvts98"> </span><span class="rvts89">111222333</span><span class="rvts98"> </span><span class="rvts35">to a single digit, which one would it pick? &nbsp;1, 2 or 3? &nbsp;Or something else? &nbsp;The way it does it as described above is the only way that makes sense. If you </span><span class="rvts85">really</span><span class="rvts35"> wanted to collapse strings like</span><span class="rvts98"> </span><span class="rvts89">111222333</span><span class="rvts98"> </span><span class="rvts35">to a single digit, the best way to do it would be to first issue a command like</span><span class="rvts98"> </span><span class="rvts89">CHANGE&nbsp; P'#' '9'&nbsp;ALL</span><span class="rvts98"> </span><span class="rvts35">on the lines where you wanted to do this, then go back and &nbsp;</span><span class="rvts89">COMPRESS '9'</span><span class="rvts98"> </span><span class="rvts35">as needed.</span></p>
+<p class="rvps5" style="page-break-before: always;"><span class="rvts12"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create EPub books</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

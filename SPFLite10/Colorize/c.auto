@@ -1,0 +1,98 @@
+; SPFLite Colorize File
+ MIXEDCASE YES
+ ESCAPECHR \
+ QUOTED    5
+ NUMERIC   6
+ COMMENT1  7 // 0
+ COMMENT2  7 /* */
+
+;DELIMS    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~    (all delimiters between 33 and 127)
+ DELIMS    !"$%&'()*+,-./:;<=>?@[\]^`{|}~
+
+ WORD  8 !
+ WORD  8 "
+ WORD  8 #
+ WORD  8 $
+ WORD  8 %
+ WORD  8 &
+ WORD  8 '
+ WORD  8 (
+ WORD  8 )
+ WORD  8 *
+ WORD  8 +
+ WORD  8 ,
+ WORD  8 -
+ WORD  8 .
+ WORD  8 /
+ WORD  8 :
+ WORD  8 ;
+ WORD  8 <
+ WORD  8 =
+ WORD  8 >
+ WORD  8 ?
+ WORD  8 @
+ WORD  8 [
+ WORD  8 \
+ WORD  8 ]
+ WORD  8 ^
+ WORD  8 _
+ WORD  8 `
+ WORD  8 {
+ WORD  8 |
+ WORD  8 }
+ WORD  8 ~
+
+ AUTOCAPS 10 #define
+ AUTOCAPS 10 #elif
+ AUTOCAPS 10 #else
+ AUTOCAPS 10 #endif
+ AUTOCAPS 10 #endregion
+ AUTOCAPS 10 #error
+ AUTOCAPS 10 #if
+ AUTOCAPS 10 #ifdef
+ AUTOCAPS 10 #ifndef
+ AUTOCAPS 10 #import
+ AUTOCAPS 10 #include
+ AUTOCAPS 10 #line
+ AUTOCAPS 10 #pragma
+ AUTOCAPS 10 #region
+ AUTOCAPS 10 #undef
+ AUTOCAPS 10 #warning
+
+ AUTOCAPS 11 BOOL
+ AUTOCAPS 11 BYTE
+ WORD 11 break
+ WORD 11 case
+ WORD 11 char
+ WORD 11 const
+ WORD 11 continue
+ WORD 11 default
+ WORD 11 define
+ WORD 11 do
+ WORD 11 double
+ WORD 11 else
+ WORD 11 endif
+ WORD 11 enum
+ WORD 11 extern
+ WORD 11 float
+ WORD 11 for
+ WORD 11 goto
+ WORD 11 if
+ WORD 11 int
+ WORD 11 long
+ WORD 11 register
+ WORD 11 return
+ WORD 11 short
+ WORD 11 signed
+ WORD 11 sizeof
+ WORD 11 static
+ WORD 11 struct
+ WORD 11 switch
+ WORD 11 typedef
+ WORD 11 union
+ WORD 11 unsigned
+ WORD 11 void
+ WORD 11 volatile
+ WORD 11 while
+
+; done

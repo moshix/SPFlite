@@ -1,0 +1,84 @@
+; SPFLite Colorize File
+ MIXEDCASE YES
+ ESCAPECHR \
+ QUOTED    5
+ NUMERIC   6
+ COMMENT1  7 REM 0
+ COMMENT2  7 ::  0
+
+;DELIMS    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~    (all delimiters between 33 and 127)
+ DELIMS    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+ WORD  8 !
+ WORD  8 "
+ WORD  8 #
+ WORD  8 $
+ WORD  8 %
+ WORD  8 &
+ WORD  8 '
+ WORD  8 (
+ WORD  8 )
+ WORD  8 *
+ WORD  8 +
+ WORD  8 ,
+ WORD  8 -
+ WORD  8 .
+ WORD  8 /
+ WORD  8 :
+ WORD  8 ;
+ WORD  8 <
+ WORD  8 =
+ WORD  8 >
+ WORD  8 ?
+ WORD  8 @
+ WORD  8 [
+ WORD  8 \
+ WORD  8 ]
+ WORD  8 ^
+ WORD  8 _
+ WORD  8 `
+ WORD  8 {
+ WORD  8 |
+ WORD  8 }
+ WORD  8 ~
+
+ WORD 11 call
+ WORD 11 cd
+ WORD 11 defined
+ WORD 11 dir
+ WORD 11 do
+ WORD 11 echo
+ WORD 11 else
+ WORD 11 endlocal
+ WORD 11 equ
+ WORD 11 errorlevel
+ WORD 11 exist
+ WORD 11 exit
+ WORD 11 for
+ WORD 11 geq
+ WORD 11 goto
+ WORD 11 gtr
+ WORD 11 if
+ WORD 11 in
+ WORD 11 leq
+ WORD 11 lss
+ WORD 11 neq
+ WORD 11 not
+ WORD 11 nul
+ WORD 11 pause
+ WORD 11 set
+ WORD 11 setlocal
+ WORD 11 shift
+
+ WORD 12 aux
+ WORD 12 com1
+ WORD 12 com2
+ WORD 12 com3
+ WORD 12 com4
+ WORD 12 con
+ WORD 12 lpt1
+ WORD 12 lpt2
+ WORD 12 lpt3
+ WORD 12 prn
+
+; done

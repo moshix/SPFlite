@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Command Keys and Substitution Strings</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Command Keys and Substitution Strings">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Command Keys and Substitution Strings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Substitution"
+		  data-hnd-context="35"
+		  data-hnd-title="Command Keys and Substitution Strings"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Command Keys and Substitution Strings</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts35">SPFLite did not initially support direct interfacing with external scripting engines for macro support, although scripts could be launched using the </span><span class="rvts36">CMD</span><span class="rvts35"> commands. Because of this, a simplified variable substitution system was used to assist in creating custom </span><span class="rvts36">CMD</span><span class="rvts35"> commands, and for key-mapped key definitions, </span><span class="rvts36">PRINT</span><span class="rvts35"> </span><span class="rvts36">SETUP</span><span class="rvts35"> strings, and </span><span class="rvts36">SUBMIT</span><span class="rvts35"> codes.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, with full macro support available,the need for this variable substitution is gone, &nbsp;but support is being retained until such time as it has been superseded.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Substitution Strings are values identified as a prefix of </span><span class="rvts36">~</span><span class="rvts35"> tilde or </span><span class="rvts36">^</span><span class="rvts35"> circumflex followed by a single letter code. The letter code is case-insensitive and can be either upper or lower case; we show upper case here for clarity.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">A </span><span class="rvts36">~</span><span class="rvts35"> tilde prefix before the letter code identifies a Substitution String, and requests that its string value be substituted as-is at the point it appears.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">A </span><span class="rvts36">^</span><span class="rvts35"> circumflex prefix before the letter code identifies a Substitution String, and requests that its string value be substituted in UPPER-CASE at the point it appears. Only the value of the Substitution String is put into upper case, the original data remains as-is.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Currently, the following Substitution Strings are available: &nbsp;</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<div class="rvps6"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps4"><span class="rvts11">~F </span><span class="rvts12">and</span><span class="rvts11"> ^F</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps4"><span class="rvts12">This variable will be replaced by the current filename being edited. e.g. If editing C:\MyData\Letters\May01.txt, the ~F variable would become May01. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps2"><span class="rvts343">~K(</span><span class="rvts346">f</span><span class="rvts345">unction</span><span class="rvts343">)</span><span class="rvts344"> and </span><span class="rvts343">^K(</span><span class="rvts345">function</span><span class="rvts343">)</span></p>
+<p class="rvps2"><span class="rvts343">~K(</span><span class="rvts344">keyname</span><span class="rvts343">)</span><span class="rvts344"> and </span><span class="rvts343">^K(</span><span class="rvts345">keyname</span><span class="rvts343">)</span></p>
+<p class="rvps2"><span class="rvts343">~K(</span><span class="rvts345">modifier-keyname</span><span class="rvts343">)</span><span class="rvts344"> and </span></p>
+<p class="rvps2"><span class="rvts343">^K</span><span class="rvts346">(</span><span class="rvts345">modifier-keyname</span><span class="rvts343">)</span></p>
+<p class="rvps2"><span class="rvts344"><br/></span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps2"><span class="rvts35">Here, </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps195"><span class="rvts85">function</span><span class="rvts35"> is any primitive keyboard function in parentheses, such as </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.date">(Date)</a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps195"><span class="rvts85">keyname</span><span class="rvts35"> is the “official” name of any key in the KEYMAP GUI as described with the “Current Key:” label.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps195"><span class="rvts85">modifier</span><span class="rvts35"> is an optional list of one to three letters from the list of </span><span class="rvts36">C</span><span class="rvts35">, </span><span class="rvts36">A</span><span class="rvts35"> and/or </span><span class="rvts36">S</span><span class="rvts35"> to indicate Ctrl, Alt and/or Shift. When modifier is used, the letters C, A and/or S may each appear at most once for each one, may appear in any order, and are case-insensitive. The modifier codes are separated from the keyname by a </span><span class="rvts36">–</span><span class="rvts35"> dash character.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">Examples: </span></p>
+<p class="rvps2"><span class="rvts36">~K(Date) &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts36">~K(F2)</span></p>
+<p class="rvps2"><span class="rvts36">~K(A-F1)</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">When the function notation is used, the listed function is used as-is, as if typed from a key-mapped key. Only functions or keys that emit text, such as </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.date">(Date)</a><span class="rvts35"> are permitted.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts35">When the keyname or modifier-keyname notation is used, the corresponding key mapping for that particular key (as modified) is used to fetch the defined list of functions, text, etc. Any characters in [ ] brackets or text which is unenclosed is treated as emitted text.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps4"><span class="rvts11">~L </span><span class="rvts12">and </span><span class="rvts11">^L</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Similarly to ~W, SPFLite will assign the contents of the current line on which the cursor is sitting to the ~L (line) variable.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps4"><span class="rvts11">~P </span><span class="rvts12">and</span><span class="rvts11"> ^P</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps4"><span class="rvts12">This variable will be replaced by the current path to the file being edited. e.g. If editing C:\MyData\Letters\May01.txt, the ~P variable would become C:\MyData\Letters.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps2"><span class="rvts36">~S(</span><span class="rvts85">name</span><span class="rvts36">)</span><span class="rvts35"> and </span></p>
+<p class="rvps2"><span class="rvts36">^S(</span><span class="rvts85">name</span><span class="rvts36">)</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps2"><span class="rvts35">This variable will be replaced by the current contents of the defined SET variable called </span><span class="rvts85">name</span><span class="rvts35">. It is an error if the SET variable called </span><span class="rvts85">name</span><span class="rvts35"> is undefined. ~S returns the value of the variable as-is, and ^S returns the value in upper-case.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps4"><span class="rvts11">~W </span><span class="rvts12">and</span><span class="rvts11"> ^W</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Each time the Enter key, or any other key mapped to issue a primary command is pressed, SPFLite will attempt to extract, if possible, the 'word' on which the cursor is sitting. This 'word' is made available as the substitution string (~W). This enables a mapped key definition to incorporate the 'word' into the stored command.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><span class="rvts12">e.g. </span><span class="rvts54">X ALL; F ALL '~W'</span></p>
+<p class="rvps4"><span class="rvts37"><br/></span></p>
+<p class="rvps4"><span class="rvts37">If this were assigned using </span><a class="rvts339" href="KeyboardCustomize.html">KEYMAP</a><span class="rvts37"> to the Ctrl-F key then this could be used as follows:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts37">Place the cursor on a word or string of interest</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts37">Press Ctrl-F</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts37">The display will now show only lines containing the word of interest, all other lines will be in Excluded status.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts37">Similarly,</span></p>
+<p class="rvps4"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND FIRST '~W'</span></p>
+<p class="rvps4"><span class="rvts37">would, </span><span class="rvts12">following the same instructions, scroll the screen to the first occurrence of the 'word' under the cursor. &nbsp;</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="220" style="padding: 1px;"><p class="rvps4"><span class="rvts11">~X </span><span class="rvts12">and</span><span class="rvts11"> ^X</span></p>
+</td>
+<td width="681" style="padding: 1px;"><p class="rvps4"><span class="rvts12">This variable will be replaced by the current file extension of the file being edited. e.g. If editing C:\MyData\Letters\May01.txt, the ~X variable would become txt.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpauthoringsoftware.com">What is a Help Authoring tool?</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

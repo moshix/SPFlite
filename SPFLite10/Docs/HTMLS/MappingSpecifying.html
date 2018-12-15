@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>How a mapping string is specified</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How a mapping string is specified">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="How a mapping string is specified" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingSpecifying"
+		  data-hnd-context="283"
+		  data-hnd-title="How a mapping string is specified"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>How a mapping string is specified</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Mapping strings are defined with a string type code of </span><span class="rvts139">M</span><span class="rvts6">. As with all SPFLite strings, this code may appear at the beginning or at the end of the string, as &nbsp;</span><span class="rvts139">M'xxx'</span><span class="rvts6"> or </span><span class="rvts139">'xxx'M</span><span class="rvts6">. The </span><span class="rvts139">M</span><span class="rvts6"> is case-insensitive. Inside this string, blanks outside of inserted-text literals are ignored other than as delimiters. However, the </span><span class="rvts139">M</span><span class="rvts6"> string cannot be entirely blank or zero-length; this would imply that the string was to perform no mapping operation at all. An empty </span><span class="rvts139">M</span><span class="rvts6"> string is reported as an error.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A mapping string must have at least one valid command code or column reference (even if that command does not happen to alter the </span><span class="rvts140">source string</span><span class="rvts6">). It is not an error to specify a valid mapping string that does not happen to result in a data change to the contents of your </span><span class="rvts140">source string</span><span class="rvts6">. In addition, any time you issue a mapping string that contains a syntax error or other problems, your original source data will not be changed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A mapping string is a quoted string value containing one or more </span><span class="rvts140">mapping items.</span><span class="rvts6"> &nbsp;</span><span class="rvts140">Mapping items</span><span class="rvts6"> must be delimited from each other by one or more blanks. An </span><span class="rvts140">individual</span><span class="rvts6"> mapping item, including any optional command codes, string operand and/or numeric operands, must not have any embedded spaces or other characters not shown as part of the syntax, unless those are within a quoted string operand.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When an item references character positions that don't exist in the particular found string, they effectively map to null (zero length) character values. For example, if you try to use a mapping string to select column 5 from a data value, but the value is only of length 4, it is not an error, but no value is selected for the absent column. The request to do </span><span class="rvts140">that part of the mapping</span><span class="rvts6"> is simply ignored. The way this is handled is of particular importance when using a Regular Expression (a type-</span><span class="rvts40">R</span><span class="rvts6"> find-string) to locate data, because a Regular Expression may be used to locate strings of varying lengths. See the Examples in the </span><span class="rvts165">Quick Reference</span><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When certain kinds of items are preceded by a </span><span class="rvts139">\</span><span class="rvts40"> </span><span class="rvts6">backslash, it reverses the order of the </span><span class="rvts140">result string</span><span class="rvts6">. The </span><span class="rvts139">\</span><span class="rvts40"> </span><span class="rvts6">backslash must be immediately followed by a number, but must itself occur at the beginning of the mapping string or be preceded by a delimiter. (That is, you cannot run two numbers together with a backslash between, like</span><span class="rvts168"> </span><span class="rvts139">"12\45+"</span><span class="rvts6">. This must instead appear as</span><span class="rvts168"> </span><span class="rvts139">"12 \45+"</span><span class="rvts168"> </span><span class="rvts6">to make your intentions clear.) &nbsp;See the discussion below for details.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Column-range operands can accept a special &nbsp;</span><span class="rvts139">/</span><span class="rvts6"> or </span><span class="rvts168">\</span><span class="rvts6"> punctuation as part of </span><span class="rvts174">mixed-mode end-relative notation</span><span class="rvts6">, discussed next.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,8 @@
+' DOS.MACRO     
+' Open a DOS command window
+' Syntax:  DOS
+'
+' Author: George Deluca
+'
+ SPF_Cmd("CMD")
+ halt

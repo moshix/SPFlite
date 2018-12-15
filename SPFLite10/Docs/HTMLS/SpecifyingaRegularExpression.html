@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Specifying a Regular Expression</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Specifying a Regular Expression">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Specifying a Regular Expression" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="SpecifyingaRegularExpression"
+		  data-hnd-context="115"
+		  data-hnd-title="Specifying a Regular Expression"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Specifying a Regular Expression</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps80"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps80"><span class="rvts12"><br/></span></p>
+<p class="rvps46"><a class="rvts25" href="SpecifyingaRegularExpression.html#Introduction">Introduction</a></p>
+<p class="rvps46"><a class="rvts45" href="SpecifyingaRegularExpression.html#PerformanceConsiderations">Performance Considerations</a></p>
+<p class="rvps46"><a class="rvts155" href="SpecifyingaRegularExpression.html#CompatibilityConsiderations">Compatibility Considerations</a></p>
+<p class="rvps46"><a class="rvts45" href="SpecifyingaRegularExpression.html#Examples">Examples</a></p>
+<p class="rvps46"><a class="rvts155" href="SPFTestProgram.html">Using the SPFTest Program</a></p>
+<p class="rvps80"><span class="rvts11"><br/></span></p>
+<p class="rvps80"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps80"><span class="rvts12"><br/></span></p>
+<p class="rvps46"><span class="rvts12">Using a Regular Expression string in a </span><span class="rvts11">FIND</span><span class="rvts12">, </span><span class="rvts11">CHANGE</span><span class="rvts12">, </span><span class="rvts11">JOIN, EXCLUDE</span><span class="rvts12"> or similar command provides you with a powerful tool for searching. If you have never used regular expressions they may appear quite complex. However many users will already be familiar with them from their use on other systems like Linux or Unix.</span></p>
+<p class="rvps46"><span class="rvts12"><br/></span></p>
+<p class="rvps81"><span class="rvts11">Note</span><span class="rvts12">: Users familiar with regular expressions should be aware that there are many variants of regular expression syntax implemented in different systems and applications, some with fairly subtle differences. The description below describes the regular expression engine supported by SPFLite. The RegEx engine chosen for SPFLite is PCRE (Perl Compatible Regular Expression). This engine is widely used and supports a robust RegEx syntax. Because regular expressions can be complex, SPFLite provides a small program to allow you to experiment with Regular Expressions and become familiar with their use. See </span><a class="rvts66" href="SPFTestProgram.html">Using the SPFTest Program </a><span class="rvts12">for details. </span></p>
+<p class="rvps81"><span class="rvts12"><br/></span></p>
+<p class="rvps81"><span class="rvts12">There are several sites on the web providing assistance in learning about and testing Regular Expressions. One such tutorial can be found at </span><a class="rvts52" href="www.regexlab.com">www.regexlab.com</a><a class="rvts162" href="www.regexlab.com">.</a></p>
+<p class="rvps81"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The regular expression must be enclosed in quotes (single, double, or accent) preceded or followed by the character </span><span class="rvts11">R</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">Examples:</span></p>
+<p class="rvps82"><span class="rvts54">R'abc$'</span></p>
+<p class="rvps82"><span class="rvts54">'abc$'R</span></p>
+<h2 class="rvps84"><span class="rvts0"><span class="rvts143">SubTopics</span></span></h2>
+<p class="rvps9"><span class="rvts156"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps85"><a class="rvts159" href="SpecifyingaRegularExpression.html#PCREREGULAREXPRESSIONSYNTAXSUMMARY">PCRE Regular Expression Syntax Summary</a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#QUOTING">Quoting</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts159" href="SpecifyingaRegularExpression.html#CHARACTERS">Characters</a><a class="rvts160" href="SpecifyingaRegularExpression.html#CHARACTERS"> </a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#CHARACTERTYPES">Character Types</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#GENERALCATEGORYPROPERTIESFOR">General category Properties for \p and \P</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts161" href="http://www.pcre.org/original/doc/html/pcresyntax.html#SEC6">PCRE Special Category Properties for \p and \P</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#CHARACTERCLASSES">Character Classes</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#QUANTIFIERS">Quantifiers</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#ANCHORSANDSIMPLEASSERTIONS">Anchors and Simple Assertions</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#MATCHPOINTRESET">Match Point Reset</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts159" href="SpecifyingaRegularExpression.html#ALTERNATION">Alternation</a><a class="rvts160" href="SpecifyingaRegularExpression.html#ALTERNATION"> </a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#CAPTURING">Capturing</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#ATOMICGROUPS">Atomic Groups</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#COMMENT">Comments</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#OPTIONSETTING">Option Setting</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#NEWLINECONVENTION">Newline Convention</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html">What \R Matches</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#LOOKAHEADANDLOOKBEHINDASSERTIONS">Lookahead and Lookbehind Assertions</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts159" href="SpecifyingaRegularExpression.html#BACKREFERENCES">Backreferences</a><a class="rvts160" href="SpecifyingaRegularExpression.html#BACKREFERENCES"> </a></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#SUBROUTINEREFERENCES(POSSIBLYRECURSIVE)">Subroutine References (Possibly Recursive)</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#CONDITIONALPATTERNS">Conditional Patterns</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#BACKTRACKINGCONTROL">Backtracking Control</a><span class="rvts140"> </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps83"><a class="rvts148" href="SpecifyingaRegularExpression.html#CALLOUTS">Callouts</a><span class="rvts140"> </span></li>
+</ul></ul>
+<p class="rvps88"><span class="rvts6"><br/></span></p>
+<p class="rvps88"><span class="rvts6"></span><br/><a name="PCREREGULAREXPRESSIONSYNTAXSUMMARY"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">PCRE Regular Expression Syntax Summary</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts35">This PCRE Syntax documentation courtesy of www.pcre.org - Copyright © 1997-2014 University of Cambridge. This is a summary only. The full description can be found at </span><a class="rvts52" href="http://www.pcre.org/original/doc/html/pcrepattern.html">http://www.pcre.org/original/doc/html/pcrepattern.html</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"></span><br/><a name="QUOTING"></a>
+<a class="rvts150" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">QUOTING</a></p>
+<p class="rvps9"><span class="rvts157"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\x &nbsp; &nbsp; &nbsp; &nbsp; where x is non-alphanumeric is a literal x</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\Q...\E &nbsp; &nbsp;treat enclosed characters as literal</span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that in PCRE, the code </span><span class="rvts139">\Q</span><span class="rvts6"> differs from prior SPFLite RegEx usage of </span><span class="rvts139">\q</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6">See </span><a class="rvts44" href="SpecifyingaRegularExpression.html#CompatibilityConsiderations">Compatibility Considerations</a><span class="rvts6"> below for more information.</span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<h2 class="rvps84"><a name="CHARACTERS"></a>
+<span class="rvts0"><a class="rvts149" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CHARACTERS</a></span></h2>
+<p class="rvps9"><span class="rvts158"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\a &nbsp; &nbsp; &nbsp; &nbsp; alarm, that is, the BEL character (hex 07)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\cx &nbsp; &nbsp; &nbsp; &nbsp;"control-x", where x is any ASCII character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\e &nbsp; &nbsp; &nbsp; &nbsp; escape (hex 1B)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\f &nbsp; &nbsp; &nbsp; &nbsp; form feed (hex 0C)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\n &nbsp; &nbsp; &nbsp; &nbsp; newline (hex 0A)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\r &nbsp; &nbsp; &nbsp; &nbsp; carriage return (hex 0D)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\t &nbsp; &nbsp; &nbsp; &nbsp; tab (hex 09)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\0dd &nbsp; &nbsp; &nbsp; character with octal code 0dd</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\ddd &nbsp; &nbsp; &nbsp; character with octal code ddd, or backreference</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\o{ddd..} &nbsp;character with octal code ddd..</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\xhh &nbsp; &nbsp; &nbsp; character with hex code hh</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\x{hhh..} &nbsp;character with hex code hhh..</span></span></h1>
+<p class="rvps87"><span class="rvts146"><br/></span></p>
+<p class="rvps87"><span class="rvts146">Note that</span><span class="rvts147"> \0dd</span><span class="rvts146"> is always an octal code, and that </span><span class="rvts147">\8</span><span class="rvts146"> and </span><span class="rvts147">\9</span><span class="rvts146"> are the literal characters "8" and "9". </span></p>
+<p class="rvps9"><span class="rvts6">Note that in PCRE, the code </span><span class="rvts139">\c</span><span class="rvts6"> differs from prior SPFLite RegEx usage.</span></p>
+<p class="rvps9"><span class="rvts6">See </span><a class="rvts44" href="SpecifyingaRegularExpression.html#CompatibilityConsiderations">Compatibility Considerations</a><span class="rvts6"> below for more information.</span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="CHARACTERTYPES"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CHARACTER TYPES</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">These codes represent any character except for newline. In "dotall mode", these &nbsp;codes represent any character whatsoever.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\C &nbsp; &nbsp; &nbsp; &nbsp; one data unit, even in UTF mode (best avoided)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\d &nbsp; &nbsp; &nbsp; &nbsp; a decimal digit</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\D &nbsp; &nbsp; &nbsp; &nbsp; a character that is not a decimal digit</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\h &nbsp; &nbsp; &nbsp; &nbsp; a horizontal white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\H &nbsp; &nbsp; &nbsp; &nbsp; a character that is not a horizontal white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\N &nbsp; &nbsp; &nbsp; &nbsp; a character that is not a newline</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\p{</span></span><span class="rvts0"><span class="rvts151">xx</span></span><span class="rvts0"><span class="rvts145">} &nbsp; &nbsp; a character with the </span></span><span class="rvts0"><span class="rvts151">xx</span></span><span class="rvts0"><span class="rvts145"> property</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\P{</span></span><span class="rvts0"><span class="rvts151">xx</span></span><span class="rvts0"><span class="rvts145">} &nbsp; &nbsp; a character without the </span></span><span class="rvts0"><span class="rvts151">xx</span></span><span class="rvts0"><span class="rvts145"> property</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\R &nbsp; &nbsp; &nbsp; &nbsp; a newline sequence</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\s &nbsp; &nbsp; &nbsp; &nbsp; a white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\S &nbsp; &nbsp; &nbsp; &nbsp; a character that is not a white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\v &nbsp; &nbsp; &nbsp; &nbsp; a vertical white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\V &nbsp; &nbsp; &nbsp; &nbsp; a character that is not a vertical white space character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\w &nbsp; &nbsp; &nbsp; &nbsp; a "word" character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\W &nbsp; &nbsp; &nbsp; &nbsp; a "non-word" character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\X &nbsp; &nbsp; &nbsp; &nbsp; a Unicode extended grapheme cluster</span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts152">By default, </span></span><span class="rvts0"><span class="rvts145">\d, \s,</span></span><span class="rvts0"><span class="rvts152"> and </span></span><span class="rvts0"><span class="rvts145">\w</span></span><span class="rvts0"><span class="rvts152"> match only ASCII characters.</span></span></h1>
+<p class="rvps9"><span class="rvts6">Note that in PCRE, the code </span><span class="rvts139">\s</span><span class="rvts6"> differs from prior SPFLite RegEx usage.</span></p>
+<p class="rvps9"><span class="rvts6">See </span><a class="rvts44" href="SpecifyingaRegularExpression.html#CompatibilityConsiderations">Compatibility Considerations</a><span class="rvts6"> below for more information.</span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="GENERALCATEGORYPROPERTIESFOR"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">GENERAL CATEGORY PROPERTIES FOR \p and \P</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Other</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Cc &nbsp; &nbsp; &nbsp; &nbsp; Control</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Cf &nbsp; &nbsp; &nbsp; &nbsp; Format</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Cn &nbsp; &nbsp; &nbsp; &nbsp; Unassigned</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Co &nbsp; &nbsp; &nbsp; &nbsp; Private use</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Cs &nbsp; &nbsp; &nbsp; &nbsp; Surrogate</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;L &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Ll &nbsp; &nbsp; &nbsp; &nbsp; Lower case letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Lm &nbsp; &nbsp; &nbsp; &nbsp; Modifier letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Lo &nbsp; &nbsp; &nbsp; &nbsp; Other letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Lt &nbsp; &nbsp; &nbsp; &nbsp; Title case letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Lu &nbsp; &nbsp; &nbsp; &nbsp; Upper case letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;L&amp; &nbsp; &nbsp; &nbsp; &nbsp; Ll, Lu, or Lt</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mark</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Mc &nbsp; &nbsp; &nbsp; &nbsp; Spacing mark</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Me &nbsp; &nbsp; &nbsp; &nbsp; Enclosing mark</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Mn &nbsp; &nbsp; &nbsp; &nbsp; Non-spacing mark</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;N &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Nd &nbsp; &nbsp; &nbsp; &nbsp; Decimal number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Nl &nbsp; &nbsp; &nbsp; &nbsp; Letter number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;No &nbsp; &nbsp; &nbsp; &nbsp; Other number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;P &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Pc &nbsp; &nbsp; &nbsp; &nbsp; Connector punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Pd &nbsp; &nbsp; &nbsp; &nbsp; Dash punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Pe &nbsp; &nbsp; &nbsp; &nbsp; Close punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Pf &nbsp; &nbsp; &nbsp; &nbsp; Final punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Pi &nbsp; &nbsp; &nbsp; &nbsp; Initial punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Po &nbsp; &nbsp; &nbsp; &nbsp; Other punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Ps &nbsp; &nbsp; &nbsp; &nbsp; Open punctuation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;S &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Symbol</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Sc &nbsp; &nbsp; &nbsp; &nbsp; Currency symbol</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Sk &nbsp; &nbsp; &nbsp; &nbsp; Modifier symbol</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Sm &nbsp; &nbsp; &nbsp; &nbsp; Mathematical symbol</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;So &nbsp; &nbsp; &nbsp; &nbsp; Other symbol</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Separator</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Zl &nbsp; &nbsp; &nbsp; &nbsp; Line separator</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Zp &nbsp; &nbsp; &nbsp; &nbsp; Paragraph separator</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Zs &nbsp; &nbsp; &nbsp; &nbsp; Space separator</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="PCRESPECIALCATEGORYPROPERTIESFOR"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">PCRE SPECIAL CATEGORY PROPERTIES FOR \p and \P</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Xan &nbsp; &nbsp; &nbsp; &nbsp;Alphanumeric: union of properties L and N</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Xps &nbsp; &nbsp; &nbsp; &nbsp;POSIX space: property Z or tab, NL, VT, FF, CR</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Xsp &nbsp; &nbsp; &nbsp; &nbsp;Perl space: property Z or tab, NL, VT, FF, CR</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Xuc &nbsp; &nbsp; &nbsp; &nbsp;Univerally-named character: one that can be</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; represented by a Universal Character Name</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;Xwd &nbsp; &nbsp; &nbsp; &nbsp;Perl word: property Xan or underscore</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="CHARACTERCLASSES"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CHARACTER CLASSES</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;[...] &nbsp; &nbsp; &nbsp; positive character class</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;[^...] &nbsp; &nbsp; &nbsp;negative character class</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;[x-y] &nbsp; &nbsp; &nbsp; range (can be used for hex characters)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;[[:</span></span><span class="rvts0"><span class="rvts151">xxx</span></span><span class="rvts0"><span class="rvts145">:]] &nbsp; positive POSIX named set; see list below</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;[[:^</span></span><span class="rvts0"><span class="rvts151">xxx</span></span><span class="rvts0"><span class="rvts145">:]] &nbsp;negative POSIX named set; see list below</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts163"> &nbsp; &nbsp; </span><span class="rvts164">xxx</span><span class="rvts62"> &nbsp; can be one of the following:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;alnum &nbsp; &nbsp; &nbsp; alphanumeric</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;alpha &nbsp; &nbsp; &nbsp; alphabetic</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;ascii &nbsp; &nbsp; &nbsp; characters in the range of 0 to 127 (\x00 to \x7F)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;blank &nbsp; &nbsp; &nbsp; space or tab</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;cntrl &nbsp; &nbsp; &nbsp; control character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;digit &nbsp; &nbsp; &nbsp; decimal digit</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;graph &nbsp; &nbsp; &nbsp; printing, excluding space</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;lower &nbsp; &nbsp; &nbsp; lower case letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;print &nbsp; &nbsp; &nbsp; printing, including space</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;punct &nbsp; &nbsp; &nbsp; printing, excluding alphanumeric</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;space &nbsp; &nbsp; &nbsp; white space</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;upper &nbsp; &nbsp; &nbsp; upper case letter</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;word &nbsp; &nbsp; &nbsp; &nbsp;same as \w</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;xdigit &nbsp; &nbsp; &nbsp;hexadecimal digit</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="QUANTIFIERS"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">QUANTIFIERS</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 or 1, greedy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;?+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 or 1, possessive</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;?? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 or 1, lazy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 or more, greedy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;*+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 or more, possessive</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;*? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 or more, lazy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 or more, greedy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;++ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 or more, possessive</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;+? &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 or more, lazy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n} &nbsp; &nbsp; &nbsp; &nbsp; exactly n</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,m} &nbsp; &nbsp; &nbsp; at least n, no more than m, greedy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,m}+ &nbsp; &nbsp; &nbsp;at least n, no more than m, possessive</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,m}? &nbsp; &nbsp; &nbsp;at least n, no more than m, lazy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,} &nbsp; &nbsp; &nbsp; &nbsp;n or more, greedy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,}+ &nbsp; &nbsp; &nbsp; n or more, possessive</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;{n,}? &nbsp; &nbsp; &nbsp; n or more, lazy</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts6">Note that in PCRE, the quantifier code </span><span class="rvts139">?</span><span class="rvts6"> may be used in some cases like the code </span><span class="rvts139">\s</span><span class="rvts6"> from prior SPFLite RegEx usage.</span></p>
+<p class="rvps9"><span class="rvts6">See </span><a class="rvts44" href="SpecifyingaRegularExpression.html#CompatibilityConsiderations">Compatibility Considerations</a><span class="rvts6"> below for more information.</span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="ANCHORSANDSIMPLEASSERTIONS"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">ANCHORS AND SIMPLE ASSERTIONS</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;word boundary</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;not a word boundary</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;^ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; start of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; also after internal newline in multiline mode</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;start of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; also before newline at end of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; also before internal newline in multiline mode</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; also before newline at end of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end of subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\G &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;first matching position in subject</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="MATCHPOINTRESET"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">MATCH POINT RESET</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;reset start of match</span></span></h1>
+<p class="rvps10"><span class="rvts6">\K is honored in positive assertions, but ignored in negative ones. </span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="ALTERNATION"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">ALTERNATION</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;expr|expr|expr...</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="CAPTURING"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CAPTURING</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(...) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; capturing group</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?&lt;name&gt;...) &nbsp; &nbsp;named capturing group (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?'name'...) &nbsp; &nbsp;named capturing group (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?P&lt;name&gt;...) &nbsp; named capturing group (Python)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?:...) &nbsp; &nbsp; &nbsp; &nbsp; non-capturing group</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?|...) &nbsp; &nbsp; &nbsp; &nbsp; non-capturing group; reset group numbers for</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;capturing groups in each alternative</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="ATOMICGROUPS"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">ATOMIC GROUPS</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?&gt;...) &nbsp; &nbsp; &nbsp; &nbsp; atomic, non-capturing group</span></span></h1>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="COMMENT"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">COMMENT</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?#....) &nbsp; &nbsp; &nbsp; &nbsp;comment (not nestable)</span></span></h1>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="OPTIONSETTING"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">OPTION SETTING</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?i) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;caseless</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?J) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;allow duplicate names</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?m) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;multiline</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?s) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;single line (dotall)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?U) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;default ungreedy (lazy)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?x) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;extended (ignore white space)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?-...) &nbsp; &nbsp; &nbsp; &nbsp; unset option(s)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts152"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts152">The following are recognized only at the very start of a pattern or after one of the newline or \R options with similar syntax. More than one of them may appear. </span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*LIMIT_MATCH=d) set the match limit to d (decimal number)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*LIMIT_RECURSION=d) set the recursion limit to d (decimal number)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*NO_AUTO_POSSESS) no auto-possessification (PCRE_NO_AUTO_POSSESS)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*NO_START_OPT) no start-match optimization (PCRE_NO_START_OPTIMIZE)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*UTF8) &nbsp; &nbsp; &nbsp; &nbsp; set UTF-8 mode: 8-bit library (PCRE_UTF8)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*UTF16) &nbsp; &nbsp; &nbsp; &nbsp;set UTF-16 mode: 16-bit library (PCRE_UTF16)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*UTF32) &nbsp; &nbsp; &nbsp; &nbsp;set UTF-32 mode: 32-bit library (PCRE_UTF32)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*UTF) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;set appropriate UTF mode for the library in use</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*UCP) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;set PCRE_UCP (use Unicode properties for \d etc)</span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that LIMIT_MATCH and LIMIT_RECURSION can only reduce the value of the limits set by the caller of pcre_exec(), not increase them. </span></p>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="NEWLINECONVENTION"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">NEWLINE CONVENTION</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">These are recognized only at the very start of the pattern or after option settings with a similar syntax. </span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*CR) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carriage return only</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*LF) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linefeed only</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*CRLF) &nbsp; &nbsp; &nbsp; &nbsp; carriage return followed by linefeed</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*ANYCRLF) &nbsp; &nbsp; &nbsp;all three of the above</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*ANY) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;any Unicode newline sequence</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="WHATRMATCHES"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">WHAT &nbsp;\R &nbsp;MATCHES</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">These are recognized only at the very start of the pattern or after option setting with a similar syntax. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*BSR_ANYCRLF) &nbsp;CR, LF, or CRLF</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*BSR_UNICODE) &nbsp;any Unicode newline sequence</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts6">Note: Be careful not to confuse </span><span class="rvts139">\R</span><span class="rvts6"> with </span><span class="rvts139">\r</span><span class="rvts6">. The code </span><span class="rvts139">\r</span><span class="rvts6"> only means a carriage return character (</span><span class="rvts40">\x0D</span><span class="rvts6">), while the meaning of </span><span class="rvts139">\R</span><span class="rvts6"> depends on the settings above.</span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="LOOKAHEADANDLOOKBEHINDASSERTIONS"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">LOOKAHEAD AND LOOKBEHIND ASSERTIONS</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?=...) &nbsp; &nbsp; &nbsp; &nbsp; positive look ahead</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?!...) &nbsp; &nbsp; &nbsp; &nbsp; negative look ahead</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?&lt;=...) &nbsp; &nbsp; &nbsp; &nbsp;positive look behind</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?&lt;!...) &nbsp; &nbsp; &nbsp; &nbsp;negative look behind</span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts152">Each top-level branch of a look behind must be of a fixed length.</span></span><span class="rvts0"><span class="rvts153"> </span></span></h1>
+<p class="rvps9"><span class="rvts142"></span><br/><a name="BACKREFERENCES"></a>
+<a class="rvts144" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">BACKREFERENCES</a></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;reference by number (can be ambiguous)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\gn &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reference by number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g{n} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reference by number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g{-n} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;relative reference by number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\k&lt;name&gt; &nbsp; &nbsp; &nbsp; &nbsp;reference by name (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\k'name' &nbsp; &nbsp; &nbsp; &nbsp;reference by name (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g{name} &nbsp; &nbsp; &nbsp; &nbsp;reference by name (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\k{name} &nbsp; &nbsp; &nbsp; &nbsp;reference by name (.NET)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?P=name) &nbsp; &nbsp; &nbsp; reference by name (Python)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="SUBROUTINEREFERENCES(POSSIBLYRECURSIVE)"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">SUBROUTINE REFERENCES (POSSIBLY RECURSIVE)</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?R) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;recurse whole pattern</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?n) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by absolute number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?+n) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call subpattern by relative number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?-n) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call subpattern by relative number</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?&amp;name) &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by name (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?P&gt;name) &nbsp; &nbsp; &nbsp; call subpattern by name (Python)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g&lt;name&gt; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by name (Oniguruma)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g'name' &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by name (Oniguruma)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g&lt;n&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call subpattern by absolute number (Oniguruma)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g'n' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call subpattern by absolute number (Oniguruma)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g&lt;+n&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by relative number (PCRE extension)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g'+n' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by relative number (PCRE extension)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g&lt;-n&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by relative number (PCRE extension)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;\g'-n' &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;call subpattern by relative number (PCRE extension)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="CONDITIONALPATTERNS"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CONDITIONAL PATTERNS</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(condition)yes-pattern)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(condition)yes-pattern|no-pattern)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(n)... absolute reference condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(+n)... relative reference condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(-n)... relative reference condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(&lt;name&gt;)... named reference condition (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?('name')... named reference condition (Perl)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(name)... named reference condition (PCRE)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(R)... overall recursion condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(Rn)... specific group recursion condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(R&amp;name)... specific recursion condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(DEFINE)... define subpattern for reference</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?(assert)... assertion condition</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="BACKTRACKINGCONTROL"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">BACKTRACKING CONTROL</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The following act immediately they are reached: </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*ACCEPT) &nbsp; &nbsp; &nbsp; force successful match</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*FAIL) &nbsp; &nbsp; &nbsp; &nbsp; force backtrack; synonym (*F)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*MARK:NAME) &nbsp; &nbsp;set name to be passed back; synonym (*:NAME)</span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts152">The following act only when a subsequent match failure causes a backtrack to reach them. They all force a match failure, but they differ in what happens afterwards. Those that advance the start-of-match point do so only if the pattern is not anchored. </span></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*COMMIT) &nbsp; &nbsp; &nbsp; overall failure, no advance of starting point</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*PRUNE) &nbsp; &nbsp; &nbsp; &nbsp;advance to next starting character</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*PRUNE:NAME) &nbsp; equivalent to (*MARK:NAME)(*PRUNE)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*SKIP) &nbsp; &nbsp; &nbsp; &nbsp; advance to current matching position</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*SKIP:NAME) &nbsp; &nbsp;advance to position corresponding to an earlier</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(*MARK:NAME); if not found, the (*SKIP) is ignored</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*THEN) &nbsp; &nbsp; &nbsp; &nbsp; local failure, backtrack to next alternation</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(*THEN:NAME) &nbsp; &nbsp;equivalent to (*MARK:NAME)(*THEN)</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"></span></span><br/><a name="CALLOUTS"></a>
+<span class="rvts0"><a class="rvts154" href="http://www.pcre.org/original/doc/html/pcresyntax.html#TOC1">CALLOUTS</a></span></h1>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?C) &nbsp; &nbsp; &nbsp;callout</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts145"> &nbsp;(?Cn) &nbsp; &nbsp; callout with data n</span></span></h1>
+<h1 class="rvps86"><span class="rvts0"><span class="rvts153"><br/></span></span></h1>
+<p class="rvps9"><span class="rvts142"><br/></span></p>
+<p class="rvps77"><a name="PerformanceConsiderations"></a>
+<span class="rvts36">Performance Considerations</span></p>
+<p class="rvps78"><span class="rvts35">Be aware that the *, + and ? meta-characters can cause the regular expression engine to perform backtracking, which can cause its pattern-matching to run a little slower. As with all regular expressions, performance is dependent on file size and the complexity of the expression.</span></p>
+<p class="rvps78"><span class="rvts35"><br/></span></p>
+<p class="rvps77"><a name="CompatibilityConsiderations"></a>
+<span class="rvts36">Compatibility Considerations</span></p>
+<p class="rvps78"><span class="rvts35">The PCRE regular expression syntax is mostly compatible with what SPFLite offered in prior releases. You will generally not need to be concerned about compatibility if you only issue RegEx expressions on the command line with R strings. If you have stored regular expressions, either in a macro or a keyboard definition, you should be aware of the following differences.</span></p>
+<div class="rvps89"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="410" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Pre-PCRE Regular Expression syntax prior to release 8.3</span></p>
+</td>
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">PCRE Regular Expression syntax as of release 8.3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="410" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><br/>
+</td>
+</tr>
+<tr valign="top">
+<td width="410" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts40">\c</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Signifies a case-sensitive search</span></p>
+</td>
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">PRCE uses this code in an incompatible way. The PCRE code </span><span class="rvts40">\c</span><span class="rvts6">x to indicate a "control" character. For example, if you want to use a Ctrl-A as a literal value, you would specify </span><span class="rvts40">\cA</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">SPFLite honors the</span><span class="rvts40"> CASE C/T</span><span class="rvts6"> setting when executing a PCRE regular expression. Where you might previously have used </span><span class="rvts40">\c</span><span class="rvts6"> to mean "case sensitive", you can now issue a </span><span class="rvts40">CASE C</span><span class="rvts6"> primary command prior to executing a regular expression.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you want to embed a code in your RegEx string to control case sensitivity,</span><span class="rvts40"> (?i)</span><span class="rvts6"> means case insensitive (like </span><span class="rvts40">CASE T</span><span class="rvts6">) and </span><span class="rvts40">(?-i)</span><span class="rvts6"> means case sensitive (like </span><span class="rvts40">CASE C</span><span class="rvts6">).</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="410" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts40">\q</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Signifies a literal double-quote character </span><span class="rvts40">"</span></p>
+</td>
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">PCRE does not implement the </span><span class="rvts40">\q</span><span class="rvts6"> code. It does have a </span><span class="rvts40">\Q</span><span class="rvts6"> code, but with an unrelated meaning.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">The prior RegEx engine allowed this code to make it easier to specify literal double-quote characters in Basic strings. You will generally not need to do this. A double-quote character </span><span class="rvts40">" </span><span class="rvts6">has no special meaning in a PCRE RegEx, and can be directly specified as a data value, as long it's not also being used to enclose the </span><span class="rvts40">R</span><span class="rvts6"> string as a whole.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">If you are creating a RegEx string within a SPFLite macro script, you can use the Basic string equate </span><span class="rvts40">$DQ</span><span class="rvts6"> to get a double-quote character.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">You can also insert a double quote by using the RegEx hex value for the ASCII double quote, which is </span><span class="rvts40">\x22</span><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="410" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts40">\s</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Signifies a request to match the shortest-possible string</span></p>
+</td>
+<td width="377" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">PRCE uses this code in an incompatible way. The PCRE code </span><span class="rvts40">\s</span><span class="rvts6"> is used to search for a "white space" character.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">PCRE uses the term "greedy" when a string-matching process could match against a variable number of characters, and the longest possible length is taken. When the shortest-possible length is taken, this is called "lazy" or "non-greedy". Thus, the old code of </span><span class="rvts40">\s</span><span class="rvts6"> meant "lazy" or "non-greedy" in PCRE terminology.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">To set "lazy" matching in PCRE, you can use a general option setting code of </span><span class="rvts40">(?U)</span><span class="rvts6">, and greedy mode would be </span><span class="rvts40">(?-U)</span><span class="rvts6">. These options affect the entire RegEx expression. PCRE matching is "greedy" by default, so the code </span><span class="rvts40">(?-U)</span><span class="rvts6"> is not usually required.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">PCRE also lets you control the greedy-vs-lazy matching on a finer level, using a </span><span class="rvts40">?</span><span class="rvts6"> in certain types of syntax. See the PCRE documentation under </span><a class="rvts44" href="SpecifyingaRegularExpression.html#QUANTIFIERS">QUANTIFIERS</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps89"><span class="rvts142"><br/></span></p>
+<p class="rvps77"><a name="Examples"></a>
+<span class="rvts36">Examples</span></p>
+<p class="rvps78"><span class="rvts35">Given a file with lines:</span></p>
+<p class="rvps79"><span class="rvts89">"Blah blah blah blah"</span></p>
+<p class="rvps79"><span class="rvts89">"Please send email to FredFarkle@mydomain.com"</span></p>
+<p class="rvps79"><span class="rvts89">"Thank you very much."</span></p>
+<p class="rvps78"><span class="rvts35">The line with the email address could be found with:</span></p>
+<p class="rvps79"><span class="rvts89">FIND R"([a-z0-9._/+-]+)(@[a-z0-9.-]+)"</span></p>
+<p class="rvps78"><span class="rvts35">Given the lines:</span></p>
+<p class="rvps79"><span class="rvts89">"Balance due by 15th of the month"</span></p>
+<p class="rvps79"><span class="rvts89">"Amount owed: $42.75 and is overdue!"</span></p>
+<p class="rvps78"><span class="rvts35">The line with the Balance amount could be found with:</span></p>
+<p class="rvps79"><span class="rvts89">FIND R"\$[0-9.,]+"</span></p>
+<p class="rvps78" style="page-break-before: always;"><span class="rvts141"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

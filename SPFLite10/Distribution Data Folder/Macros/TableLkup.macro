@@ -1,0 +1,60 @@
+' TableLkup.macro
+' 
+' This macro shows how to use an E'xxxx' macro to provide a table lookup
+' facility.  The macro is invoked as part of a normal CHANGE command
+'   e.g.   CHANGE P'@@##' WORD ALL E'TableLkup'
+' This command searches for all 'words' consisting of 2 Alpha and 2 numeric characters, 
+' 
+' The located words are passed to this routine to be replaced via a table lookup of 
+' an external table (in this case in the file 'TableLkuip.data') 
+' The external file is only loaded once per SPFLite session.  The format is simply 
+' 2 entries per line separated by a comma.  e.g. 
+'  AA12,ABCD 
+'  AA13,ABCE 
+'  BB01,DEFG 
+'  CC99,HIJK 
+'  XX00,ZZZZ 
+
+uses "FILE"                                           ' Attach the FILE module
+dim str, dline, operand1, operand2, ErrMsg as string
+dim fHandle as dword
+dim i, TableLoaded as number
+
+'----- See if this is an initialize call, if so, load the table 
+str = Get_E_Source$()                                 ' Get the passed found string  
+
+if str = "" then                                      ' If null, its the initialize call  
+   TableLoaded = Get_Gbl_Num("TableLkupOK")           ' See if table already loaded  
+   if TableLoaded > 0 then                            ' Yes, say all is well  
+      Set_E_Result("OK")                              ' and 
+      Halt(OK)                                        ' exit quickly 
+   end if                                             ' 
+   '----- Need to load the table file 
+   fHandle = FILE_OPEN("D:\Documents\SPFLite\Macros\TableLkup.Data", "INPUT") 
+   if fHandle = 0 then halt(fail, "TableLkup.Data load failed, cannot open file")
+   do while isfalse file_eof(fHandle)                 ' read file 
+      dline = FILE_LineInput(fHandle)                 ' Get a line 
+
+      '-----  Create a lookup key by preceding the string with "TL_" 
+      operand1 = "TL_" + parse$(dline, ",", 1)        ' Build key by prefixing with TL_           
+      operand2 = parse$(dline, ",", 2)                ' Extract the return data          
+      Set_Gbl_Str(operand1, operand2)                 ' Save entry in table in Global storage 
+   loop                                               ' 
+   i = FILE_Close(fHandle)                            ' Close file, we're done 
+   Set_Gbl_Num("TableLkupOK", 1)                      ' Remember we've loaded the table 
+   Set_E_Result("OK")                                 ' Tell mainline we're done 
+   Halt(OK)                                           ' 
+ 
+'----- It's the normal execution call 
+else 
+   operand1 = "TL_" + str                             ' Build lookup key 
+   operand2 = Get_Gbl_Str$(operand1)                  ' Fetch the data 
+   ErrMsg = Get_Msg$                                  ' Catch any error message 
+   if Get_RC = 0 then                                 ' If OK, pass back answer  
+      Set_E_Result(operand2)                          ' 
+      halt(ok)                                        ' return 
+   else                                               ' 
+      Set_E_Result(str)                               ' Pass back unchanged string 
+      halt(Fail, "TableLkup: " + ErrMsg + " in line: " + format$(Get_LNum(Get_Find_Lptr)))                         ' Else error 
+   end if                                             '  
+end if 

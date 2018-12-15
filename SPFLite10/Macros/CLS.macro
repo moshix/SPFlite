@@ -1,0 +1,4 @@
+' CLS.macro
+uses "console"
+cls
+halt

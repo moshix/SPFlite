@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Introduction to Keyboard Primitives</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Introduction to Keyboard Primitives">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Introduction to Keyboard Primitives" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="KeyboardPrimitives1"
+		  data-hnd-context="220"
+		  data-hnd-title="Introduction to Keyboard Primitives"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Introduction to Keyboard Primitives</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents </span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><a class="rvts25" href="KeyboardPrimitives1.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts25" href="KeyboardPrimitives1.html#ClipboardFunctionsnowsupportNamedPrivateClipboards">Clipboard Functions now support Named Private Clipboards</a></p>
+<p class="rvps5"><a class="rvts84" href="KeyboardPrimitives1.html#MarkedTextBlocks">Marked Text Blocks</a></p>
+<p class="rvps5"><a class="rvts25" href="KeyboardPrimitives1.html#Repetitionfactors">Repetition factors</a></p>
+<p class="rvps5"><a class="rvts133" href="KeyboardPrimitives1.html#MovementRepetition">Movement Repetition</a></p>
+<p class="rvps5"><span class="rvts40"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In a key mapping definition, any string enclosed in </span><span class="rvts36">( )</span><span class="rvts35"> parentheses is treated as a keyboard primitive function. Keyboard primitives are those functions</span><span class="rvts85"> other than </span><span class="rvts35">line commands or primary commands. In early versions of SPFLite, the only primitives available were simple functions like Enter, Tab, Delete, Insert, and Arrow keys. All those functions still exist (though some are renamed), and new ones have been added. The available keyboard primitive functions are listed below. Only primitive names predefined by SPFLite may be specified; you cannot create or add your own.</span></p>
+<p class="rvps258"><span class="rvts35"><br/></span></p>
+<p class="rvps258"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">To assist in remembering these function names, a drop-down list is provided in the lower right corner of the KEYMAP dialog, shown as </span><span class="rvts36">Valid keyboard Primitives</span><span class="rvts35">. If you open this list and select an item by clicking on it, the value will be placed in the clipboard. You can then paste that value into the text box for your desired key. This saves time and avoids typing errors.</span></p>
+<p class="rvps258"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="ClipboardFunctionsnowsupportNamedPrivateClipboards"></a>
+<span class="rvts36">Clipboard Functions support Named Private Clipboards</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Keyboard functions that involve the clipboard can take an option to specify a Named Private Clipboard. The format of this option is a </span><span class="rvts139">/</span><span class="rvts35"> slash followed by the name of the private clipboard. For example, suppose a private clipboard of </span><span class="rvts36">myclip</span><span class="rvts35"> exists. To paste from the Windows clipboard, you would use the function</span><span class="rvts36"> </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.paste">(Paste)</a><span class="rvts35">, but to paste from the </span><span class="rvts36">myclip</span><span class="rvts35"> private clipboard, you would use</span><span class="rvts6"> </span><span class="rvts40">(Paste</span><span class="rvts62">/</span><span class="rvts40">myclip)</span><span class="rvts6">. This technique works for every keyboard function that uses a clipboard.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="MarkedTextBlocks"></a>
+<span class="rvts40">Marked Text Blocks</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Many of the primitive functions require a block of text to be highlighted (marked), either with the mouse or keyboard mark functions. For example, functions like (Copy) and (UperCase) require a block of text to have been previously highlighted (marked) before the data is copied or changed to upper case. </span><span class="rvts19">Now, if functions like these are used when the cursor is in the data area, but no data is actively being highlighted, the single character at the cursor position is used </span><span class="rvts114">as if</span><span class="rvts19"> that character were highlighted. Applying functions to single characters is now easier, faster and more reliable.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For example, a (Copy) function (normally mapped to Ctrl-C) is requested with no area marked, then the single character located at the cursor location will be copied to the clipboard.</span></p>
+<p class="rvps4"><span class="rvts35"><br/></span></p>
+<p class="rvps4"><a name="Repetitionfactors"></a>
+<span class="rvts36">Repetition factors</span></p>
+<p class="rvps258"><span class="rvts35"><br/></span></p>
+<p class="rvps258"><span class="rvts35">You may specify a </span><span class="rvts36">repetition factor</span><span class="rvts35"> for primitive functions. The repetition factor is specified as a decimal number just after the opening left parenthesis of the function, and followed by a colon.</span></p>
+<p class="rvps258"><span class="rvts35"><br/></span></p>
+<p class="rvps258"><span class="rvts35">Note there is also a </span><span class="rvts36">Movement repetition</span><span class="rvts35"> provision available for the cursor movement primitives which is actually more efficient for those functions, see Movement repetition. It does not preclude using the method directly below, it will simply perform the operation faster.</span></p>
+<p class="rvps258"><span class="rvts35"><br/></span></p>
+<p class="rvps258"><span class="rvts35">For example, the function </span><a class="rvts33" href="ListofKeyboardPrimitives.html#kb.right">(Right)</a><span class="rvts35"> w</span><span class="rvts6">ill move the cursor one character to the right. If you wanted to move the cursor four positions to the right, you previously had to specify this as </span><span class="rvts36">(Right)(Right)(Right)(Right)</span><span class="rvts6">. </span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">With a repetition factor, this can be simplified to </span><span class="rvts40">(4:Right)</span><span class="rvts6">. </span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">It is also possible to use repetition factors to repeat literal text. For example, to generate twenty asterisk characters, instead of using </span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168">[********************] </span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">you can now achieve the same effect with </span></p>
+<p class="rvps258"><span class="rvts310"><br/></span></p>
+<p class="rvps258"><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts168">(20:[*]) </span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">and it will run faster. This feature will make it easy to define long strings that would be impractical to enter literally.</span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">For example, to generate 80 asterisks, you could specify </span><span class="rvts40">(80:[*])</span><span class="rvts6">, which would be difficult to enter in the KEYMAP definition if you had to individually type all 80 asterisks manually; you might count them wrong, or the entire string might not even fit in the field.</span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts6">Other than text repetition, repetition factors can only be used within primitive functions in </span><span class="rvts40">( )</span><span class="rvts6"> parentheses, not on un-enclosed primary commands or on the other types of enclosed keyboard items like </span><span class="rvts40">{ }</span><span class="rvts6"> or </span><span class="rvts40">&lt; &gt;</span><span class="rvts6">.</span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps258"><span class="rvts40">Note: </span><span class="rvts6">A repetition factor should only be applied to functions where it makes sense to use. For example, cursor movement makes sense if repeated, while repeating a (Home) command would be redundant, and repeating other commands like (Ansi) or (Edit) would produce undesirable behavior.</span></p>
+<p class="rvps258"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="MovementRepetition"></a>
+<span class="rvts40">Movement Repetition</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The cursor movement primitives (Left), (Right), (Up) and (Down) will support an option direct repeat operand. It is specified in KEYMAP when specifying the key by following the primitive name with a </span><span class="rvts40">/</span><span class="rvts6"> and a numeric operand. e.g. </span><span class="rvts62">(Right/5)</span></p>
+<p class="rvps5"><span class="rvts62"><br/></span></p>
+<p class="rvps5"><span class="rvts6">For example if the Right Arrow key were mapped to (Right) and Ctrl-Right Arrow mapped to (Right/5), you would have the ability to move right normally with the Arrow key, and to move quickly by using the Ctrl-Arrow key.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Due to the way primitives are handled internally, a key mapped to </span><span class="rvts139">(Right/5)</span><span class="rvts6"> will perform much faster than </span><span class="rvts139">(5:Right)</span><span class="rvts6">. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts139">(Column/n)</span><span class="rvts6"> function will move the cursor directly to column </span><span class="rvts173">n</span><span class="rvts6"> of the data area. If </span><span class="rvts173">n</span><span class="rvts6"> is omitted, </span><span class="rvts139">(Column)</span><span class="rvts6"> will move the cursor directly to column 1.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4" style="page-break-before: always;"><span class="rvts168"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

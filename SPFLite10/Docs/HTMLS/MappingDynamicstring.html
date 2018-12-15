@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Dynamic mapping string item – DV</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dynamic mapping string item – DV">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Dynamic mapping string item – DV" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingDynamicstring"
+		  data-hnd-context="263"
+		  data-hnd-title="Dynamic mapping string item – DV"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Dynamic mapping string item – DV</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts167"><br/></span></p>
+<p class="rvps9"><span class="rvts177">This is an advanced technique, somewhat related to the SV commands. Because you could run into problems if this command is used incorrectly, you should be sure you fully understand the mapping string facility before attempting to use this command. It is highly recommended that you test this technique first, using the </span><span class="rvts196">Mapping Test Program</span><span class="rvts177">, before attempting to use it with your production data.</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The purpose of the DV command is to create a dynamic mapping command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Syntax of a </span><span class="rvts140">dynamic mapping string item:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6"> &nbsp;</span><span class="rvts40">DV &nbsp;</span><span class="rvts6">[ &nbsp;</span><span class="rvts140">delete-option</span><span class="rvts6"> &nbsp;]&nbsp;</span><span class="rvts140"> &nbsp;column-reference </span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts40">DV</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Introduces the dynamic mapping string item. </span><span class="rvts40">DV</span><span class="rvts6"> stands for Dynamic Value, as compared to Set Value (</span><span class="rvts40">SV</span><span class="rvts6">).</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">delete-option</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">An optional quoted string operand. If present, it contains a single letter specifying what is done with the </span><span class="rvts140">result string</span><span class="rvts6"> prior to the DV command finishing. The letter is case-insensitive.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">'K'</span><span class="rvts6"> &nbsp;means to keep the </span><span class="rvts140">result string</span><span class="rvts6"> as-is without change.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">'D'</span><span class="rvts6"> &nbsp;means to delete the portion of the </span><span class="rvts140">result string</span><span class="rvts6"> that was referenced by the </span><span class="rvts140">column-reference</span><span class="rvts6"> operand. This is the default if the </span><span class="rvts140">delete-option</span><span class="rvts6"> is omitted. </span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps96"><span class="rvts6">'E'&nbsp;</span><span class="rvts6"> means to erase the entire </span><span class="rvts140">result string</span><span class="rvts6"> so that it contains a null (empty) string as it does when mapping string is first processed.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Column-reference:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">A standard column reference. Only the </span><span class="rvts140">result string</span><span class="rvts6"> is referenced.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A dynamic command value is formed by creating, in the </span><span class="rvts140">result string</span><span class="rvts6">, any suitable mappings commands as text values. You do this using any desired mapping commands to help you build up one or more </span><span class="rvts40">new</span><span class="rvts6"> mapping commands </span><span class="rvts40">as data</span><span class="rvts6">, by whatever means is needed. Such commands to build up and create these strings appear in your main mapping string before the </span><span class="rvts40">DV</span><span class="rvts6"> is specified.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You then use the </span><span class="rvts140">column-reference</span><span class="rvts6"> operand of the </span><span class="rvts40">DV</span><span class="rvts6"> command to select one or more columns from the result string as your “dynamic value”, taking care that the text you built up and selected is in fact valid as one or more mapping commands. This text is “inserted” into the original mapping string at the point where the </span><span class="rvts40">DV</span><span class="rvts6"> command appeared.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts177">Because any problems with your inserted commands, such as unmatched quotes or other syntax errors, could cause the mapping string as a whole to malfunction, you should exercise great care using DV commands.</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Prior to executing the commands you inserted with the </span><span class="rvts40">DV</span><span class="rvts6"> command, some or all of the current contents of the </span><span class="rvts140">result string</span><span class="rvts6"> can be deleted, depending on the </span><span class="rvts140">delete-option</span></p>
+<p class="rvps9"><span class="rvts6">operand you specify. As noted, if you omit the </span><span class="rvts140">delete-option</span><span class="rvts6"> operand, the default is to remove the portion of the </span><span class="rvts140">result string</span><span class="rvts6"> text that was submitted for execution.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once the mapping commands you have provided are processed, the original mapping commands after your </span><span class="rvts40">DV</span><span class="rvts6"> command resume where they left off. In that sense, the </span><span class="rvts40">DV</span><span class="rvts6"> mapping command is like an #INCLUDE statement in a programming language.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If the text you select from the </span><span class="rvts140">result string</span><span class="rvts6"> is blank or empty, it is not an error. The blank text that is submitted by </span><span class="rvts40">DV</span><span class="rvts6"> for execution will simply do nothing.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Unlike the </span><span class="rvts40">SV</span><span class="rvts6"> command, you cannot “nest” a </span><span class="rvts40">DV</span><span class="rvts6"> command. That is, the dynamic value you submit to the mapping system to be executed cannot itself have a </span><span class="rvts40">DV</span><span class="rvts6"> command. If this detected, execution of the mapping string as a whole is halted and an error message produced.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Why would you want to use a </span><span class="rvts173">DV</span><span class="rvts140"> command?</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The most likely reason is that you need to perform some action that is dependent on the data you have found. You may have data files that contain mapping string command codes, and you want to directly execute them. You might also wish to construct an elaborate </span><span class="rvts140">calculation operand</span><span class="rvts6"> that sets one or more </span><span class="rvts140">calculation variables.</span><span class="rvts6"> &nbsp;There are doubtless many uses for this facility, limited only by your imagination.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

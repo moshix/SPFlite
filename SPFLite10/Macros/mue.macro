@@ -1,0 +1,4 @@
+' MUE.macro
+dim liptr as number value 99
+liptr = Get_LPtr(2)
+Set_msg("M02",liptr, Get_RC , Get_Msg$)

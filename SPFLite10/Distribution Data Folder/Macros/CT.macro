@@ -1,0 +1,29 @@
+' CT.MACRO
+' Center text on a line. Uses RBound (if active) or specified length
+' Syntax:  CTnn or CTTnn / CTTnn as line commands     nn is the width to center on
+' 
+' Author: George Deluca
+' 
+dim tt, tt2 as string  
+dim lno1, lno2, width, i as number
+   if is_primary_Cmd then halt(fail, "CT macro was not invoked as a line command")
+
+   '----- Get the line numbers
+   lno1 = Get_Src1_Lptr                               ' From line
+   lno2 = Get_Src2_Lptr                               ' To line
+   width = Get_Src_Op                                 ' Get the centering width
+   if width = 0 then width = Get_RBound               '
+
+   for i = lno1 to lno2                               ' Loop through the line range
+      if Is_Data(i) then                              ' Just Data lines
+         tt = trim$(Get_Line$(i))                     ' Get the trimmed text
+         if width = 0 then width = Get_Line_Len(i)    ' Use line length if no other
+         if len(tt) > width then                      ' Center possible?
+            Set_Msg(8, "One or more lines exceed Center length")
+         else                                         '
+            tt2 =  repeat$((width - len(tt)) / 2, " ") + tt ' Center it
+            Set_Line(i, tt2)                          ' Stuff it back 
+         end if                                       '
+      end if                                          '
+   next                                               '
+   halt                                               ' Done

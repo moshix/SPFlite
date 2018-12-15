@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Using AUTOFAV to add to File Lists</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using AUTOFAV to add to File Lists">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Using AUTOFAV to add to File Lists" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="UsingAUTOFAVtoaddtoFileLists"
+		  data-hnd-context="244"
+		  data-hnd-title="Using AUTOFAV to add to File Lists"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Using AUTOFAV to add to File Lists</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts19">When working on a project that involves many files, it can be convenient to have these files stored in a Favorites File List. However, if files are created frequently, it can be easy to forget to consistently issue a </span><a class="rvts33" href="FAVORITE.html">FAVORITE</a><span class="rvts19"> primary command every time. If that command is forgotten, your favorites list can be incomplete. </span></p>
+<p class="rvps9"><span class="rvts19"><br/></span></p>
+<p class="rvps9"><span class="rvts19">It is now possible to issue a </span><a class="rvts33" href="SET.html">SET</a><span class="rvts19"> command, so that whenever a file matching a particular file pattern (mask) is created or saved, a corresponding entry will be automatically created in a Favorites File List. Because SET names are a global resource, the AUTOFAV feature applies to every file that matches the file pattern(s), regardless of what profile they are associated with.</span></p>
+<p class="rvps9"><span class="rvts19"><br/></span></p>
+<p class="rvps2"><span class="rvts114">Setting up an AUTOFAV request</span></p>
+<p class="rvps9"><span class="rvts19"><br/></span></p>
+<p class="rvps9"><span class="rvts19">Creation of an AUTOFAV request is done with a </span><span class="rvts114">SET </span><span class="rvts19">command, using the format:</span></p>
+<p class="rvps10"><span class="rvts139"><br/></span></p>
+<p class="rvps10"><span class="rvts139">SET AUTOFAV.</span><span class="rvts164">filemask</span><span class="rvts139"> = </span><span class="rvts164">filelist-name</span></p>
+<p class="rvps10"><span class="rvts139"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Here, </span><span class="rvts40">filemask</span><span class="rvts6"> is a simple standard file mask string to specify what files are to be included, and </span><span class="rvts40">filelist-name</span><span class="rvts140"> </span><span class="rvts6">is the name of the File List to which the name is to be added.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps187"><span class="rvts19">For example, to place every new or saved file having a name like </span><span class="rvts324">ABC*.TXT</span><span class="rvts19"> into the </span><span class="rvts324">ABC_PROJECT</span><span class="rvts19"> File List, you would issue the command:</span></p>
+<p class="rvps7"><span class="rvts324">SET AUTOFAV.ABC*.TXT = ABC_PROJECT</span></p>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<p class="rvps9"><span class="rvts19">You may create multiple SET entries with different masks, all referring to the same File List; this is not a problem.</span></p>
+<p class="rvps9"><span class="rvts19"><br/></span></p>
+<p class="rvps9"><span class="rvts114">NOTE:</span><span class="rvts19"> Because of the use of wildcard characters * and ?, it is possible that you may create multiple SET entries that could apply to a particular file-name. Which one takes precedence? &nbsp;The SET entries are maintained in alphabetical order, and</span><span class="rvts114"> the first one which causes a match will be the one used</span><span class="rvts19">, even if a SET further down alphabetically is 'more specific'.</span></p>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<p class="rvps9"><span class="rvts19">Example:</span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">Given the two SET entries,</span></p>
+<p class="rvps9"><span class="rvts19"><br/></span></p>
+<p class="rvps10"><span class="rvts139">SET autofav.*.txt = Temp1</span></p>
+<p class="rvps10"><span class="rvts139">SET autofav.ABC*.txt = Temp2</span></p>
+<p class="rvps9"><span class="rvts139"><br/></span></p>
+<p class="rvps9"><span class="rvts19">the file </span><span class="rvts139">ABC.TXT</span><span class="rvts6"> would be added to the </span><span class="rvts168">Temp1.FLIST</span><span class="rvts6"> even though the </span><span class="rvts139">ABC*.txt</span><span class="rvts62"> mask </span><span class="rvts6">is more specific.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note: &nbsp;</span><span class="rvts6">Because the SET list is </span><span class="rvts19">maintained in alphabetical order, and gets re-sorted each time it is modified, the order you create your SET entries - whether by using the </span><span class="rvts114">SET</span><span class="rvts19"> command or by direct editing in a SET Edit session - may </span><span class="rvts114">not</span><span class="rvts19"> be the order in which the entries are stored. If you have any question on this, issue a </span><span class="rvts114">SET</span><span class="rvts19"> command with no operands to enter a SET Edit session, </span><span class="rvts114">after</span><span class="rvts19"> any changes have been made to it. That way, you will be able to see the (newly sorted) order of the SET names.</span></p>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<p class="rvps2"><span class="rvts114">Using AUTOFAV with Named and standard File Lists</span></p>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts19">When you wish to have a file recorded in a </span><span class="rvts114">named</span><span class="rvts19"> File List of your choosing, simply use the File List name you have set aside for this. If the named File List does not yet exist, SPFLite will automatically create it the first time a file is saved when an appropriate </span><span class="rvts114">AUTOFAV</span><span class="rvts19"> definition is in effect, unless you take some action to create it some other way.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts19"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts19">If you wish to have an </span><span class="rvts114">AUTOFAV</span><span class="rvts19"> definition reference the </span><span class="rvts114">standard</span><span class="rvts19"> ("unnamed") Favorite Files list, you can spell out the full name of this list, as </span><span class="rvts114">Favorite Files</span><span class="rvts19">, such as, </span><span class="rvts139">SET AUTOFAV.XYZ*.TXT = "Favorite Files"</span><span class="rvts19">. If you do that, you have to include the name in quotes if you enter it on the command line. However, SPFLite understands the common abbreviations of this list, and so you can define this as any of the following, and they all mean the same thing as </span><span class="rvts139">"Favorite Files"</span><span class="rvts19">:</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts19"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts139">SET AUTOFAV.XYZ*.TXT = Fav</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts139">SET AUTOFAV.XYZ*.TXT = Favorite</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts139">SET AUTOFAV.XYZ*.TXT = Favourite</span><span class="rvts19"> &nbsp;</span></li>
+</ul></ul></ul>
+<p class="rvps13"><span class="rvts19"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts19">The other predefined lists, such as </span><span class="rvts114">Open Files</span><span class="rvts19">, </span><span class="rvts114">Recent Files</span><span class="rvts19">, etc. cannot be used with </span><span class="rvts114">AUTOFAV</span><span class="rvts19">.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts19"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts114">Named Favorites</span><span class="rvts19"> cannot literally be used with </span><span class="rvts114">AUTOFAV</span><span class="rvts19"> either, but that is not really a File List anyway, but rather, a "list of lists".</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts19"><br/></span></p>
+<p class="rvps187" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

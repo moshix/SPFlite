@@ -1,0 +1,13 @@
+' ALIGN.MACRO                                      Align text at a specified column
+sub Align(Col_Num as string)
+dim i, j as number
+j = val(Col_Num)                                 ' Convert operand to numeric
+if j < 1 then HALT(FAIL, "Invalid/missing alignment column") ' Better have one
+
+for i = Get_First_Lptr to Get_Last_Lptr          ' Loop through the file 
+   if Is_Data(i) then                            ' Doing only data lines 
+      Set_Line(i, repeat$(j - 1, " ") + trim$(Get_Line$(i))) ' Align the text 
+   end if                                        ' 
+next i                                           ' 
+stop                                             ' All done 
+end sub                                          ' End of Align SUB

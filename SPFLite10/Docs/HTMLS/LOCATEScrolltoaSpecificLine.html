@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>LOCATE - Scroll to a Specific Line</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LOCATE - Scroll to a Specific Line">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="LOCATE - Scroll to a Specific Line" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="LOCATEScrolltoaSpecificLine"
+		  data-hnd-context="113"
+		  data-hnd-title="LOCATE - Scroll to a Specific Line"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>LOCATE - Scroll to a Specific Line</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts107">Syntax</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="207" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps2"><span class="rvts40">Specific Format:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps244"><span class="rvts89">LOCATE</span></p>
+</td>
+<td width="760" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts89">{ line-label | line-num }</span></p>
+<p class="rvps2"><span class="rvts89"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="207" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">Generic Format:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps244"><span class="rvts89">LOCATE</span></p>
+</td>
+<td width="760" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts89">[ { { line-label-a | line-num-a }</span><span class="rvts367">&nbsp;</span><span class="rvts89"> { line-label-b | line-num-b }</span><span class="rvts367">&nbsp;</span><span class="rvts89"> } &nbsp;]</span></p>
+<p class="rvps2"><span class="rvts89">[ </span><span class="rvts54">NOT</span><span class="rvts89"> ]</span></p>
+<p class="rvps2"><span class="rvts89">{ CHANGE &nbsp;| COMMAND | ERROR &nbsp; | EXCLUDED | LABEL | </span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;NOTE &nbsp; &nbsp;| xNOTE &nbsp; | ZNOTE &nbsp; | U &nbsp; &nbsp; &nbsp; &nbsp;| NU</span></p>
+<p class="rvps2"><span class="rvts89"> &nbsp;FIND &nbsp; &nbsp;| SPECIAL | KEEP &nbsp; &nbsp;| TAG &nbsp; &nbsp; &nbsp;| LONG &nbsp;[ n ] |</span></p>
+<p class="rvps2"><span class="rvts54"> &nbsp;PAGE &nbsp;[ n ] &nbsp; &nbsp; &nbsp; | FILE &nbsp; &nbsp;| SIZE n &nbsp; | </span><span class="rvts398">tagname</span><span class="rvts54"> &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts89">[ </span><span class="rvts131">NEXT</span><span class="rvts89"> &nbsp; &nbsp;| FIRST &nbsp; | LAST &nbsp; &nbsp;| PREV &nbsp; &nbsp; | CURRENT | ALL [ MX ]</span><span class="rvts137"> </span><span class="rvts89">] &nbsp; </span></p>
+<p class="rvps2"><span class="rvts89">[ </span><span class="rvts367">colorname</span><span class="rvts89"> | STD &nbsp; &nbsp; ]</span></p>
+<p class="rvps2"><span class="rvts89">[ TOP ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<p class="rvps4"><span class="rvts107">Operands</span></p>
+<p class="rvps4"><span class="rvts352"><br/></span></p>
+<div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps209"><span class="rvts54">line-label | </span></p>
+<p class="rvps209"><span class="rvts54">line-num</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">The line number or line label which you wish located and scrolled to the top of the screen when specifying a specific format </span><span class="rvts11">LOCATE</span><span class="rvts12"> command.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps209"><span class="rvts54">line-label-a | line-num-a</span></p>
+<p class="rvps209"><span class="rvts54">line-label-b | line-num-b</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">An optional range of lines to be searched when using the generic format </span><span class="rvts11">LOCATE</span><span class="rvts12"> command.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">NOT</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">This will negate or reverse the generic search request to locate the next line which does </span><span class="rvts11">not</span><span class="rvts12"> meet the specified criteria.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">CHANGE</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line flagged as modified by Change processing. i.e. a line marked by </span><span class="rvts11">==CHG&gt;</span><span class="rvts12">.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">COMMAND</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line containing an unprocessed line command.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">ERROR</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line flagged as in error. i.e. a line marked by </span><span class="rvts11">==ERR&gt;</span><span class="rvts12">. (Future use).&nbsp;</span><span class="rvts11"> LOCATE ERROR</span><span class="rvts12"> is not currently supported. You can issue a command of </span><span class="rvts11">LOCATE ERROR</span><span class="rvts12">, but nothing will be found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">EXCLUDED</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next excluded line.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">FILE</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line marked by </span><span class="rvts54">=FILE&gt;</span><span class="rvts12"> marker.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">FIND</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line which has been previously found by a </span><span class="rvts11">FIND</span><span class="rvts12"> command, or changed by a </span><span class="rvts11">CHANGE</span><span class="rvts12"> command. </span><span class="rvts35">Even though there are no visible markers for found lines as there are for changed lines, SPFLite will ‘remember' the location of found lines as if a ‘hidden' marker existed on such lines. Just as with the ==CHG&gt; marker, the hidden found-markers are cleared in response to a </span><span class="rvts36">RESET</span><span class="rvts35"> command.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">KEEP</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line containing a 'kept' line command.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">LABEL</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line which contains a label.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">LONG [ n ]</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line longer than the specified value (or when omitted, the current </span><span class="rvts11">LRECL</span><span class="rvts12"> value when LRECL is &gt; 0).</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">NOTE</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line having a </span><span class="rvts54">=NOTE&gt;</span><span class="rvts12"> marker.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">xNOTE</span></p>
+<p class="rvps73"><span class="rvts139"><br/></span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line having an extended </span><span class="rvts54">xNOTE&gt;</span><span class="rvts12"> marker, where "</span><span class="rvts11">x</span><span class="rvts12">" is any letter from </span><span class="rvts11">A</span><span class="rvts12"> to </span><span class="rvts11">Y</span><span class="rvts12">.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">ZNOTE</span></p>
+<p class="rvps73"><span class="rvts139"><br/></span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line having an extended </span><span class="rvts54">xNOTE&gt;</span><span class="rvts12"> marker </span><span class="rvts53">of any kind</span><span class="rvts12">, where "</span><span class="rvts11">x</span><span class="rvts12">" is any letter from </span><span class="rvts11">A</span><span class="rvts12"> to </span><span class="rvts11">Y</span><span class="rvts12">. When </span><span class="rvts11">ZNOTE</span><span class="rvts12"> is specified, "plain" &nbsp;</span><span class="rvts54">=NOTE&gt;</span><span class="rvts12"> markers are </span><span class="rvts11">not</span><span class="rvts12"> located. As a reminder, &nbsp;extended </span><span class="rvts54">xNOTE&gt;</span><span class="rvts12"> markers of type '</span><span class="rvts11">Z</span><span class="rvts12">' are not permitted; that is, you cannot issue a line command of </span><span class="rvts11">ZNOTE</span><span class="rvts12"> and no </span><span class="rvts54">ZNOTE&gt;</span><span class="rvts12"> line markers can be created.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">SIZE n</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line whose length is </span><span class="rvts11">equal</span><span class="rvts12"> to the specified value (0 is permitted to search for empty (null) lines).</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">PAGE [ n ]</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line having a </span><span class="rvts54">=PAGE&gt;</span><span class="rvts12"> marker. If the optional 'n' page number is provided, it will scroll to the requested page number.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">SPECIAL</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next special line (COLS, BNDS, TABS etc.)</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">TAG</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next line containing a Tag</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">:tag</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Locate the next occurrence of the specified Tag.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" height="42" style="padding: 1px;"><p class="rvps73"><span class="rvts302">NEXT</span><span class="rvts139"> | FIRST |</span></p>
+<p class="rvps73"><span class="rvts139">LAST | PREV</span></p>
+</td>
+<td width="721" height="42" style="padding: 1px;"><p class="rvps2"><span class="rvts12">These modify the search action from the normal default of </span><span class="rvts11">NEXT</span><span class="rvts12"> and refer to a line's position within the file.</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">ALL [ MX ]</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Specify </span><span class="rvts11">ALL</span><span class="rvts12"> when </span><span class="rvts11">LOCATE</span><span class="rvts12"> is used for the side-effect of changing the exclusion status of one or more lines. The </span><span class="rvts11">ALL</span><span class="rvts12"> keyword will also report on the number of lines found.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts11">LOCATE ALL</span><span class="rvts12"> will locate lines matching the specified condition, and will then unexclude them.</span></p>
+<p class="rvps2"><span class="rvts11">LOCATE ALL MX</span><span class="rvts12"> will locate lines matching the specified condition, and will then make them excluded.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">The keywords </span><span class="rvts11">FILE</span><span class="rvts12"> and </span><span class="rvts11">ALL</span><span class="rvts12"> cannot be used together. See discussion below.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">CURRENT | CURR</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">May be used only with </span><span class="rvts11">LOCATE FIND</span><span class="rvts12"> and </span><span class="rvts11">LOCATE CHANGE</span><span class="rvts12"> to locate the </span><span class="rvts11">most recently</span><span class="rvts12"> found or changed line processed by these commands.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts164">colorname</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Used to locate lines having the specified color, as set by a corresponding</span><span class="rvts6"> </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.penred">(Pen/colorname)&nbsp;</a><span class="rvts6"> </span><span class="rvts12">"virtual highlighting pen" keyboard function. May be used with the </span><span class="rvts11">NOT</span><span class="rvts12"> keyword to locate lines not having the specified color. To "have" a color means that at least one character on the line has the specified color. It is not necessary for the entire line to be of that color.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">See </span><a class="rvts33" href="WorkingwithVirtualHighlightingPe.html">Working with Virtual Highlighting Pens</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">STD</span></p>
+</td>
+<td width="721" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Used to locate lines </span><span class="rvts11">not</span><span class="rvts12"> having any of the colors that can be set by a&nbsp;</span><span class="rvts6"> </span><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.penred">(Pen/</a><a class="rvts425" href="ListofKeyboardPrimitives.html#kb.penred">colorname</a><a class="rvts41" href="ListofKeyboardPrimitives.html#kb.penred">)</a><span class="rvts12"> "virtual highlighting pen" keyboard function. That is, lines that are located are ones that only consist of the </span><span class="rvts11">standard</span><span class="rvts12"> text color. When used with the </span><span class="rvts11">NOT</span><span class="rvts12"> keyword, it can be use to locate lines having any text marked by a virtual highlighting pen in any of the standard colors. Because </span><span class="rvts11">LOCATE</span><span class="rvts12"> locates </span><span class="rvts11">lines</span><span class="rvts12"> and not any particular character string, a </span><span class="rvts11">line</span><span class="rvts12"> is considered "standard" when there are no characters on it in </span><span class="rvts11">any</span><span class="rvts12"> of the standard colors. Since at least one character must be present for a colorized character to exist, lines of length zero are always considered "standard" lines (because no characters of any of the other standard colors were present on the line).</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">See </span><a class="rvts33" href="WorkingwithVirtualHighlightingPe.html">Working with Virtual Highlighting Pens</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="198" style="padding: 1px;"><p class="rvps73"><span class="rvts139">TOP</span></p>
+</td>
+<td width="721" style="padding: 1px;"><div class="rvps4"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="755" style="padding: 1px;"><p class="rvps2"><span class="rvts12">Normally, at the completion of the command, the first or only line located is highlighted (if it is on the current screen) or the screen is scrolled to the next appropriate screen line (as ISPF does) if the desired line is not on the current screen. </span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><span class="rvts12">If </span><span class="rvts11">TOP</span><span class="rvts12"> is coded, then the line is always positioned as the </span><span class="rvts11">top</span><span class="rvts12"> line of the screen, regardless of its current location. Using </span><span class="rvts11">TOP</span><span class="rvts12"> can be helpful if you are scrolling through a large file containing many instances of repetitive data; </span><span class="rvts11">TOP</span><span class="rvts12"> will prevent the appearance of the screen from "bouncing around" as you go through the file, making the data easier to read.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps234"><span class="rvts12"> </span></p>
+<p class="rvps4"><span class="rvts14">Abbreviations and Aliases</span></p>
+<p class="rvps4"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">LOCATE</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">L </span><span class="rvts13">or</span><span class="rvts14"> LOC</span></p>
+<p class="rvps5"><span class="rvts14">CHANGE</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">C, CHG </span><span class="rvts13">or</span><span class="rvts14"> CHA</span></p>
+<p class="rvps5"><span class="rvts14">COMMAND</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CMD </span><span class="rvts13">or</span><span class="rvts14"> COM</span></p>
+<p class="rvps5"><span class="rvts14">CURRENT</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">CURR</span></p>
+<p class="rvps5"><span class="rvts14">EXCLUDED</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">X, EX, EXC, </span><span class="rvts13">or </span><span class="rvts14">EXCLUDE</span></p>
+<p class="rvps5"><span class="rvts14">LABEL</span><span class="rvts13"> can also be spelled as </span><span class="rvts14">LAB </span><span class="rvts13">or</span><span class="rvts14"> LABELS</span></p>
+<p class="rvps5"><span class="rvts14">SPECIAL </span><span class="rvts13">can also be spelled as </span><span class="rvts14">SPE</span></p>
+<p class="rvps5"><span class="rvts14">TAGS </span><span class="rvts13">can also be spelled as </span><span class="rvts14">TAG</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Description</span></p>
+<p class="rvps189"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts110">The </span><span class="rvts290">LOCATE </span><span class="rvts110">command repositions the visible portion of the file to the location specified by the operands.</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts110">The </span><span class="rvts290">ALL</span><span class="rvts110"> option allows you to use </span><span class="rvts290">LOCATE</span><span class="rvts110"> to exclude or unexclude lines based on a "locate condition".</span><span class="rvts35"> &nbsp;When </span><span class="rvts36">ALL</span><span class="rvts35"> is used on </span><span class="rvts36">LOCATE</span><span class="rvts35">, no particular line is located. In practice, the edit screen will be positioned at the last line located.</span><span class="rvts110"> &nbsp;For example, suppose the condition you were interested in was whether lines had labels. Then, you can issue commands like this:</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts36">LOCATE ALL LABEL</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of labeled lines, and as a side-effect, unexclude all of them.</span></p>
+<p class="rvps13"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts36">LOCATE ALL LABEL MX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of labeled lines, and as a side-effect, make all of them excluded. The </span><span class="rvts36">MX</span><span class="rvts35"> option is allowed only when </span><span class="rvts36">ALL</span><span class="rvts35"> is present.</span></p>
+<p class="rvps2"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts290">Note</span><span class="rvts110">: In a </span><span class="rvts290">Multi-Edit</span><span class="rvts110"> </span><span class="rvts290">session</span><span class="rvts110">, the =FILE&gt; marker lines cannot be manually excluded or tampered with. To maintain the integrity of these lines, you cannot issue the command </span><span class="rvts290">LOCATE ALL FILE MX</span><span class="rvts110">, nor (for sake of consistency) can you say </span><span class="rvts290">LOCATE ALL FILE </span><span class="rvts127">without</span><span class="rvts110"> the </span><span class="rvts290">MX</span><span class="rvts110"> either. </span><span class="rvts290">LOCATE ALL FILE</span><span class="rvts110"> would only have reported the number files in the Multi-Edit session, and this information is available on the status line.</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps9"><span class="rvts290">Note:</span><span class="rvts110">&nbsp;</span><span class="rvts290"> LOCATE ERROR</span><span class="rvts110"> is reserved for future use to support ISPF-compatible functionality, but is not currently supported.</span></p>
+<p class="rvps9"><span class="rvts110"><br/></span></p>
+<p class="rvps2"><span class="rvts110"><br/></span></p>
+<p class="rvps188"><span class="rvts290">Examples</span></p>
+<p class="rvps188"><span class="rvts35"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the next special line</span></p>
+<p class="rvps220"><span class="rvts89">LOCATE SPE</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the next line with a label</span></p>
+<p class="rvps220"><span class="rvts89">LOC NEXT LABEL</span></p>
+<p class="rvps188"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts12">To find the next line with a tag</span></p>
+<p class="rvps220"><span class="rvts54">LOC NEXT TAG</span></p>
+<p class="rvps188"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts12">To find the last line with a tag of :T</span></p>
+<p class="rvps220"><span class="rvts54">LOC LAST :T</span></p>
+<p class="rvps188"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the next excluded line between</span><span class="rvts98"> </span><span class="rvts89">.START</span><span class="rvts98"> </span><span class="rvts35">and</span><span class="rvts98"> </span><span class="rvts89">.END</span></p>
+<p class="rvps220"><span class="rvts89">LOC X .START .END</span></p>
+<p class="rvps188"><span class="rvts98"> </span></p>
+<p class="rvps189"><span class="rvts35">To find the first excluded line between</span><span class="rvts111"> </span><span class="rvts89">.E</span><span class="rvts98"> </span><span class="rvts35">and</span><span class="rvts98"> </span><span class="rvts89">.S</span></p>
+<p class="rvps220"><span class="rvts89">L FIRST .E .S X</span></p>
+<p class="rvps220"><span class="rvts89"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the first line that is exactly of length 25</span></p>
+<p class="rvps220"><span class="rvts89">L FIRST SIZE 25</span></p>
+<p class="rvps188"><span class="rvts98"> </span></p>
+<p class="rvps189"><span class="rvts35">To find the first line with text that </span><span class="rvts36">is</span><span class="rvts35"> marked with the Green virtual highlighting pen color&nbsp;</span><span class="rvts89"> </span></p>
+<p class="rvps220"><span class="rvts89">L FIRST GREEN &nbsp;</span></p>
+<p class="rvps220"><span class="rvts89"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the last line with text that is </span><span class="rvts36">not</span><span class="rvts35"> marked with the Red virtual highlighting pen color</span></p>
+<p class="rvps220"><span class="rvts89">L LAST NOT RED </span></p>
+<p class="rvps220"><span class="rvts98"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the first line with text that is </span><span class="rvts36">not</span><span class="rvts35"> marked with any virtual highlighting pen color&nbsp;</span><span class="rvts89"> </span></p>
+<p class="rvps220"><span class="rvts89">L FIRST STD &nbsp;</span></p>
+<p class="rvps220"><span class="rvts89"><br/></span></p>
+<p class="rvps189"><span class="rvts35">To find the last line with text that </span><span class="rvts36">is</span><span class="rvts35"> marked with any virtual highlighting pen color</span></p>
+<p class="rvps223"><span class="rvts89">L LAST NOT STD </span></p>
+<p class="rvps223" style="page-break-before: always;"><span class="rvts89"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

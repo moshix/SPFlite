@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Color Change Request Specification</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Color Change Request Specification">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Color Change Request Specification" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="ColorChangeRequestSpecification"
+		  data-hnd-context="232"
+		  data-hnd-title="Color Change Request Specification"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Color Change Request Specification</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts284">Text can be selected manually (either with the mouse or keyboard) and color highlighted using the (Pen/xxxx) keyboard primitives. (Pen/Blue), (Pen/Green), etc. This is fine for ad-hoc marking of text, but when you'd like to mark, &nbsp;say, all occurrences of a string this would be a large task.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Many of the primary commands which support selection criteria now also support the automatic highlighting of the text found during the operation. This is performed </span><span class="rvts285">in addition to</span><span class="rvts284"> the basic basic purpose of the command. The operands described here allow you to request this highlighting. Rather than repeat these details in each command syntax diagram, whenever the parameter </span><span class="rvts285">color-change-request</span><span class="rvts284"> appears, the following operands can be substituted.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Color operands are used primarily on FIND and CHANGE commands. Just as you have a choice whether you want to just find data or change it, you have a choice as to whether you just want to look for data in some given color, and/or if you want to change its color. Note that finding vs. changing the </span><span class="rvts285">color</span><span class="rvts284"> of your data is performed </span><span class="rvts285">independently</span><span class="rvts284"> of changing the </span><span class="rvts285">contents</span><span class="rvts284"> of your data. </span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">This ability gives you the most flexibility, because the two actions are not dependent on each other. That is, you can change the color of text using a FIND command, or you can use a CHANGE command to alter the data contents of strings that were found to be of some color without also changing that color. Its up to you how you want to manage the color of your data.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps5"><span class="rvts35">Note: Color </span><span class="rvts36">selection</span><span class="rvts35"> criteria and a color </span><span class="rvts36">change</span><span class="rvts35"> request can often be combined in the same command, but </span><span class="rvts36">not in all cases</span><span class="rvts35">. Refer to the syntax of the particular command you are interested in to see which color operands, if any, are supported. Specific color operands are supported only where it makes logical sense to do so.</span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Standard Color Names</span></p>
+<p class="rvps2"><span class="rvts285"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Throughout this description various color names are used. There are 15 fixed color names (</span><span class="rvts285">BLUE</span><span class="rvts284">, </span><span class="rvts285">GREEN</span><span class="rvts284">, </span><span class="rvts285">YELLOW, RED, BLACK, NAVY, TEAL, VIOLET, ORANGE, GRAY, LIME, CYAN, PINK, MAGENTA and WHITE</span><span class="rvts284">). These are all specified in </span><a class="rvts390" href="OptionsHiLites.html">Options -HiLites</a><span class="rvts284">. (You are free, if you so choose, to have the standard color name </span><span class="rvts285">RED</span><span class="rvts284"> actually display purple on the screen, or for </span><span class="rvts285">BLUE</span><span class="rvts284"> to display gray, but for most users that would be very confusing). </span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">All names are used in the same way.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">As well as the names described above, there is also:</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps10"><span class="rvts285">+STD</span></p>
+<p class="rvps10"><span class="rvts285"><br/></span></p>
+<p class="rvps9"><span class="rvts284">where +</span><span class="rvts285">STD</span><span class="rvts284"> means the standard default Foreground / Background colors you have chosen for normal text.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts285">Note:</span><span class="rvts284"> &nbsp;The + plus sign should be read as "change", </span><span class="rvts285">not</span><span class="rvts284"> as "positive". The operand +RED is </span><span class="rvts285">not</span><span class="rvts284"> the opposite of a "negative" search color like -RED. -RED means to </span><span class="rvts285">search</span><span class="rvts284"> for data which is not RED, while +RED means to </span><span class="rvts285">change</span><span class="rvts284"> the color of data to RED.</span></p>
+<p class="rvps9"><span class="rvts285"><br/></span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Syntax</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps225"><span class="rvts88"><br/></span></p>
+<p class="rvps225"><span class="rvts88">[ +</span><span class="rvts391">colorname</span><span class="rvts88"> ] [ +STD ]</span></p>
+<p class="rvps225"><span class="rvts88"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts285"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Operands</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<div class="rvps2"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="238" style="padding: 1px;"><p class="rvps225"><span class="rvts40">+color-name</span></p>
+</td>
+<td width="896" style="padding: 1px;"><p class="rvps2"><span class="rvts6">You may specify </span><span class="rvts40">at most only one color name</span><span class="rvts6">. For example </span><span class="rvts62">F "ABC" +RED ALL</span><span class="rvts6"> means find all the strings </span><span class="rvts62">"ABC"</span><span class="rvts6"> and add </span><span class="rvts62">RED </span><span class="rvts6">highlighting to the string. It would not make sense to use multiple change-color names, since a given text string can only be in one color at any given time.</span><span class="rvts62"> </span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Description</span></p>
+<p class="rvps2"><span class="rvts382"><br/></span></p>
+<p class="rvps9"><span class="rvts284">The following examples should help. </span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "ABC" 1 10 +BLUE</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Find string "ABC" in columns 1 to 10 and highlight it in </span><span class="rvts384">BLUE</span><span class="rvts383">.</span></p>
+<p class="rvps10"><span class="rvts383"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Here, a "change" occurs to the color of the data, even though there is no change to the contents of the data. For that reason, we use a </span><span class="rvts384">FIND</span><span class="rvts383"> rather than a </span><span class="rvts384">CHANGE</span><span class="rvts383"> command.</span></p>
+<p class="rvps9"><span class="rvts383"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "DEF" .110 .120 GREEN +YELLOW</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">This example uses both a color-selection-criteria and a color-change-request criteria. </span></p>
+<p class="rvps10"><span class="rvts383">Find the string "DEF" on lines 110 through 120 only if it currently is entirely </span><span class="rvts384">GREEN</span><span class="rvts383">, and if found, change its color to </span><span class="rvts384">YELLOW</span><span class="rvts383">.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts89">CHANGE "GHI" "XYZ" +BLUE ALL</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Change all &nbsp;strings "GHI" anywhere in the file to "XYZ" and set the changed string to BLUE.</span></p>
+<p class="rvps10"><span class="rvts383"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Note that because no "simple" name like </span><span class="rvts384">RED</span><span class="rvts383"> and no "negative" name like </span><span class="rvts384">-RED</span><span class="rvts383"> is specified, the original color of any </span><span class="rvts384">GHI</span><span class="rvts383"> strings is ignored. The command will find all </span><span class="rvts384">GHI</span><span class="rvts383"> strings without regard to their original color.</span></p>
+<p class="rvps9"><span class="rvts383"><br/></span></p>
+<p class="rvps9"><span class="rvts89">FIND "DEF" .110 .120 -STD +STD</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts383">This example uses both a color-selection-criteria and a color-change-request criteria. </span></p>
+<p class="rvps10"><span class="rvts383">Find the string "DEF" on lines 110 through 120 only if it currently is </span><span class="rvts384">not</span><span class="rvts383"> the standard default color, and if found, change its color back so that it </span><span class="rvts384">is</span><span class="rvts383"> the default color.</span></p>
+<p class="rvps10"><span class="rvts383"><br/></span></p>
+<p class="rvps10"><span class="rvts383">Note that if the </span><span class="rvts89">-STD</span><span class="rvts383"> operand above was omitted, the </span><span class="rvts384">DEF</span><span class="rvts383"> data would still end up set to the standard color the same way, but some text that was </span><span class="rvts384">already</span><span class="rvts383"> in the standard color would get needless "changed" to the color it already was. For small files, this may not matter, but for very large files you will likely want to restrict the color changing operation to only the data that actually needs to be changed.</span></p>
+<p class="rvps2"><span class="rvts285"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Additional Criteria</span></p>
+<p class="rvps2"><span class="rvts284"><br/></span></p>
+<p class="rvps224"><span class="rvts284">Many of the primary commands provide additional selection abilities (like </span><span class="rvts285">X</span><span class="rvts284"> or </span><span class="rvts285">NX, U or NU </span><span class="rvts284">operands) which work in conjunction with the normal action of the line range operands described above. Check the detailed description of the individual primary command.</span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps224"><span class="rvts284"><br/></span></p>
+<p class="rvps2"><span class="rvts285">Clearing colors</span></p>
+<p class="rvps2"><span class="rvts285"><br/></span></p>
+<p class="rvps9"><span class="rvts284">If you need to clear the colors from a file, there are various ways to do this.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">To clear colors from the entire file, issue the primary command </span><span class="rvts285">RESET COLOR</span><span class="rvts284">. See </span><a class="rvts390" href="RESETResetEditMode.html">RESET - Reset (Edit Mode)</a><span class="rvts284"> for more information.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps10"><span class="rvts284">Note: &nbsp;A plain </span><span class="rvts285">RESET</span><span class="rvts284"> without </span><span class="rvts285">COLOR</span><span class="rvts284"> doesn't clear colors, because if you went through the trouble of coloring your text, and you issued a plain </span><span class="rvts285">RESET</span><span class="rvts284"> (say, to clear out some excluded lines), you'd be really annoyed if all your colors went away. That's why SPFLite generally doesn't have its plain RESET command do more things than IBM's ISPF does. People would not be expecting it, and it would cause too many problems. Plus, colors are not reset very often, whereas plain RESET commands get issued all the time.</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Suppose you wanted to reset a block of text you highlighted with the mouse. (Be careful here not to confuse "highlighting" with "coloring". When we say highlighting, we mean "text selection" using the mouse or with the shift-arrow keys. Highlighting just means "this is a piece of text I want to reference". It has nothing to do with colors.) &nbsp;</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Now, if you highlight some text, you can alter the color of it using keyboard primitive functions. (Yes, in the Screen Options menu, it says "Highlight Red" etc. and the Help talks about Virtual Highlighting Pens. Unfortunately, there are not enough English words to say everything we'd like to say as uniquely as we'd like to say it.)</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">For example, you could define the following </span><a class="rvts390" href="KeyMapDialog.html">KEYMAP</a><span class="rvts284"> entries with virtual highlighting pen functions:</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Ctrl-Shift R = (Pen/Red)</span></p>
+<p class="rvps9"><span class="rvts284">Ctrl-Shift B = (Pen/Blue)</span></p>
+<p class="rvps9"><span class="rvts284">Ctrl-Shift G = (Pen/Green)</span></p>
+<p class="rvps9"><span class="rvts284">Ctrl-Shift Y = (Pen/Yellow)</span></p>
+<p class="rvps9"><span class="rvts284">Ctrl-Shift S = (Pen/Std)</span></p>
+<p class="rvps9"><span class="rvts284"><br/></span></p>
+<p class="rvps9"><span class="rvts284">Let's say you have some string that is red. You can highlight it with the mouse, and assuming your keys are set up as shown, you could press Ctrl-Shift S, and the text color will be changed back to the "standard" non-colored one.</span></p>
+<p class="rvps224" style="page-break-before: always;"><span class="rvts297"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

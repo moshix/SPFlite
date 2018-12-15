@@ -1,0 +1,912 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>IBM ISPF Command Support</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IBM ISPF Command Support">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="IBM ISPF Command Support" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="IBMISPFCommandSupport"
+		  data-hnd-context="201"
+		  data-hnd-title="IBM ISPF Command Support"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>IBM ISPF Command Support</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts6">Following is a list of the normal IBM ISPF Primary and Line commands along with an indication of whether they are supported or not, and if so, the name of the equivalent SPFLite command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:&nbsp;</span><span class="rvts12"> When a line command is longer than 1 character, the "block mode" name of the command is formed by repeating the last letter. For example, the command </span><span class="rvts11">UC</span><span class="rvts12"> becomes </span><span class="rvts11">UCC</span><span class="rvts12">. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">IBM Line Commands</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<div class="rvps10"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts40">IBM Line Command</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts40">Supported</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><span class="rvts40">SPFLite Command</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">(—Column Shift Left</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="ShiftLeft.html">(</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">)—Column Shift Right</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="ShiftRight.html">)</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">&lt;—Data Shift Left </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="ShiftDataLeft.html">&lt;</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">&gt;—Data Shift Right </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="ShiftDataRight.html">&gt;</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">A—Specify an “After” Destination</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="A.html">A</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">B—Specify a “Before” Destination</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="B.html">B</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">BOUNDS—Define Boundary Columns</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="BNDS.html">BNDS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">C—Copy Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="C.html">C/CC</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">COLS—Identify Columns</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="COLSL.html">COLS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">D—Delete Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="D.html">D/DD</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">F—Show the First Line </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="F.html">F</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" height="15" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">I—Insert Lines </span></p>
+</td>
+<td width="121" height="15" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" height="15" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="I.html">I</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">L—Show the Last Line(s)</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="L.html">L</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">LC—Convert Characters to Lowercase</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="LC.html">LC/LCC</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">M—Move Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="M.html">M/MM</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">MASK—Define Masks</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="MASK.html">MASK</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">MD—Make Dataline</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="MD.html">MD</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">O—Overlay Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="O.html">O/OO</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">R—Repeat Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="R.html">R/RR</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">S—Show Lines </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="SI.html">SI</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">TABS—Control Tabs</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="TABSL.html">TABS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">TE—Text Entry</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><span class="rvts40">none - see note 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">TF—Text Flow </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="TF.html">TF/TFF</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">TS—Text Split </span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="TS.html">TS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">UC—Convert Characters to Uppercase</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="UC.html">UC/UCC</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="493" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">X—Exclude Lines</span></p>
+</td>
+<td width="121" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><a class="rvts301" href="X.html">X/XX</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">IBM Primary Commands</span></p>
+<div class="rvps10"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps242"><span class="rvts40">IBM Primary Command</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts40">Supported</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">SPFLite Command</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">AUTOLIST—Create a Source Listing Automatically</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">AUTONUM—Number Lines Automatically</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">AUTOSAVE—Save Data Automatically</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="AUTOSAVE.html">AUTOSAVE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">BOUNDS—Control the Edit Boundaries</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="BOUNDS.html">BOUNDS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">BROWSE—Browse from within an Edit Session</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="BROWSEOpenaFileforReadOnly.html">BROWSE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">BUILTIN—Process a Built-In Command</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 4</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">CANCEL—Cancel Edit Changes</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="CANCEL.html">CANCEL</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">CAPS—Control Automatic Character Conversion</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="CAPS.html">CAPS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">CHANGE—Change a Data String</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="CHANGE.html">CHANGE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">COLS—Display Fixed Columns Line</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="COLSP.html">COLS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">COMPARE—Edit Compare</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 5</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">COPY—Copy Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="COPY.html">COPY</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">CREATE—Create Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="CREATE.html">CREATE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">CUT—Cut and Save Lines</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="CUT.html">CUT</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" height="17" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">DEFINE—Define a Name</span></p>
+</td>
+<td width="106" height="17" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" height="17" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 4</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">DELETE—Delete Lines</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="DELETE.html">DELETE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">EDIT—Edit from within an Edit Session</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="EDIT.html">EDIT</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">EDITSET—Display the Editor Settings Dialog</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="OPTIONSSetGlobalEditorOptions.html">OPTIONS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">END—End the Edit Session</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="END.html">END</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">EXCLUDE—Exclude Lines from the Display</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="EXCLUDEEdit.html">EXCLUDE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">FIND—Find a Data String</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="FINDFindaCharacterString.html">FIND</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">FLIP—Reverse Exclude Status of Lines</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="FLIP.html">FLIP</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">HEX—Display Hexadecimal Characters</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="HEX.html">HEX</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">HIDE—Hide Excluded Lines Message</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="HIDE.html">HIDE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">HILITE—Enhanced Edit Coloring</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="HILITE.html">HILITE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">IMACRO—Specify an Initial Macro</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">LEVEL—Specify the Modification Level Number</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 6</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">LOCATE—Locate a Line</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="LOCATEScrolltoaSpecificLine.html">LOCATE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">MODEL—Copy a Model into the Current Data Set</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 7</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">MOVE—Move Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 8</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">NONUMBER—Turn Off Number Mode</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">NOTES—Display Model Notes</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">NULLS—Control Null Spaces</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 11</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">NUMBER—Generate Sequence Numbers</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">PACK—Compress Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 12</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">PASTE—Move or Copy Lines from Clipboard</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="PASTE.html">PASTE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">PRESERVE—Enable Saving of Trailing Blanks</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="PRESERVE.html">PRESERVE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">PROFILE—Control and Display Your Profile</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="PROFILE.html">PROFILE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RCHANGE—Repeat a Change</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="RCHANGE.html">RCHANGE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RECOVERY—Control Edit Recovery.</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="SETUNDO.html">SETUNDO</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RENUM—Renumber Data Set Lines</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">REPLACE—Replace Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="REPLACE.html">REPLACE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RESET—Reset the Data Display</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="RESETResetEditMode.html">RESET</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RFIND—Repeat Find</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="RFIND.html">RFIND</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">RMACRO—Specify a Recovery Macro</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">SAVE—Save the Current Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="SAVE.html">SAVE</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">SETUNDO—Set the UNDO Mode</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="SETUNDO.html">SETUNDO</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">SORT—Sort Data</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="SORTSorttheEditData.html">SORT</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">STATS—Generate Library Statistics</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 9</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">SUBMIT—Submit Data for Batch Processing</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="SUBMIT.html">SUBMIT</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">TABS—Define Tabs</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="TABSP.html">TABS</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">UNDO—Reverse Last Edit Interaction</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">Yes</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts301" href="UNDO.html">UNDO</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">UNNUMBER—Remove Sequence Numbers</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">VERSION—Control the Version Number</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><span class="rvts40">none - see note 6</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="488" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6">VIEW—View from within an Edit Session</span></p>
+</td>
+<td width="106" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts6">No</span></p>
+</td>
+<td width="253" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps266"><a class="rvts308" href="VIEWViewaFileinBrowseMode.html">VIEW</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 1: The TE command was implemented by IBM to simplify large text entry on 3270 terminals. It is possible to enter text using the I line command, then post-processing it with other "text" line commands, to simulate the effect of TE.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 2: The PRINT and PRINT SETUP can be used to print a data file. AUTOLIST was not implemented because this command, implemented in the 1980's on IBM mainframes, supports a "hardcopy-centric" way of working, which modern PC users don't do.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 3: The Enumerate keyboard functions can be used to simulate some of the effect of AUTONUM, but would have to be applied manually as needed. AUTONUM in ISPF is intended to put sequence numbers in fixed columns of "card image" files, something that is rarely needed on PC files.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 4: Some of the functionality of BUILTIN and DEFINE is handled by the SET primary command.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 5: For COMPARE operations, an external Compare or DIFF utility can be used. A useful freeware DIFF program for Windows is called KDiff3.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 6: The LEVEL and VERSION commands were intended to store versions and modification level numbers in the "sequence field" of card-image data. For PC users, this functionality is better served by storing files in a source code control system of some type.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 7: The ISPF command MODEL is intended to copy 'prototype' definitions into a file, such as a standard calling sequence. It is possible to create a somewhat similar prototype file if the prototype file and your data file both have a file type for which STATE ON is in effect, and then use NOTE lines to define the prototype definition. As you fill-in your prototype to make it an actual part of your data file, you can use the MD (Make Data) line command to transform the NOTE lines into data lines.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 8: The ISPF command MOVE was not implemented because experience has shown that most mainframe users will first COPY an external file, and then delete it afterwards, after the file it was copied into is saved. Doing it that way prevents loss of information if there was an interruption between the MOVE and the subsequent SAVE. The MOVE command is thus a high-risk command. By not implementing MOVE, we have "erred on the side of caution" to help you avoid unrecoverable data loss.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 9: Presently, the only ISPF-compatible STATS information that SPFLite does not maintain is the number of data lines in the file. The remaining information that ISPF maintained is already present from information in the Windows directory entry, which appears on the File Manager display. The amount of detail shown in such displays is controlled by the File Manager tab in the SPFLite Global Options GUI.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 10: SPFLite does not have a Dialog Manager and does not support Models or model notes. It is possible to create "model-like" files. See note 7.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 11: In ISPF it it necessary to manage the handling of 3270 NULL characters because it affects the transmission of data to and from the host, and can affect the ability to insert data into fields without being "locked out". In SPFlite, the equivalent of a 3270 "locked" condition will not happen, and so the NULLS command is not needed.</span></p>
+<p class="rvps10"><span class="rvts12"><br/></span></p>
+<p class="rvps10"><span class="rvts12">Note 12: The ISPF command PACK was intended to provide a form of data compression. This capability can be achieved directly in Windows through the use of data compression, applied as a property of an individual file or of its containing directory. Windows compression works better than ISPF PACK does, because unlike ISPF, Windows directly supports compressed files and does not require a decompress utility to access and use them.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

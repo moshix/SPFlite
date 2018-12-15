@@ -1,0 +1,1071 @@
+; ------------- ESC         
+.
+U/(EraseEOL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F1          
+.
+./Help
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F2          
+.
+./Reset
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F3          
+.
+./End
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F4          
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F5          
+.
+./Rfind
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F6          
+.
+./Rchange
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F7          
+.
+./UP
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F8          
+.
+./DOWN
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F9          
+.
+./SWAP
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F10         
+.
+./LEFT
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F11         
+.
+./RIGHT
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- F12         
+.
+./CRETRIEV
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- PRTSCR      
+.
+U/(PrtScrnClipboard)
+U/(PrtScrnPrinter)
+U/(PrtTextClipboard)
+U/(PrtScrnLog)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- SCRLK       
+.
+./(Record)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- PAUSE       
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- `           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 1           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 2           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 3           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 4           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 5           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 6           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 7           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 8           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 9           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- 0           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- -           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- =           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- BKSP        
+.
+./(NewLine)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- TAB         
+.
+./(tab)
+./(backtab)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- Q           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- W           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- E           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- R           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- T           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- Y           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- U           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- I           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- O           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- P           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- [           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- ]           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- ENTER       
+.
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+./(Enter)
+; ------------- CAPSLK      
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- A           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- S           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- D           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- F           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- G           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- H           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- J           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- K           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- L           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- ;           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- '           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- \           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- LSHIFT      
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- Z           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- X           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- C           
+.
+./(PassThru)
+./(PassThru)
+U/(Copy)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- V           
+.
+./(PassThru)
+./(PassThru)
+U/(paste)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- B           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- N           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- M           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- ,           
+.
+./(Passthru)
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(Passthru)
+; ------------- .           
+.
+./(PassThru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(PassThru)
+; ------------- /           
+.
+./(Passthru)
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(Passthru)
+; ------------- RSHIFT      
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- LCTRL       
+.
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- LWIN        
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- LALT        
+.
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- SPACE       
+.
+./(Passthru)
+./(PassThru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- RALT        
+.
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- RWIN        
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- APPMENU     
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- RCTRL       
+.
+U/(Enter)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- INS         
+.
+./(insert)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- HOME        
+.
+./(home)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- PGUP        
+.
+./Up
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- DEL         
+.
+./(delete)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./This entry is Reserved, Do NOT use.
+; ------------- END         
+.
+./(endofline)
+./(MarkEnd)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- PGDN        
+.
+./Down
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- UP          
+.
+./(up)
+./(markup)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- DOWN        
+.
+./(down)
+./(markdown)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- LEFT        
+.
+./(left)
+./(markleft)
+./(wordleft)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- RIGHT       
+.
+./(right)
+./(markright)
+./(wordright)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- NUMLK       
+.
+./(Null)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP/         
+.
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP*         
+.
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP-         
+.
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP7         
+.
+./(Home)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP8         
+.
+./(Up)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP9         
+.
+./Up
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP+         
+.
+./(Passthru)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP4         
+.
+./(Left)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP5         
+.
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP6         
+.
+./(Right)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP1         
+.
+./(End)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP2         
+.
+./(Down)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP3         
+.
+./Down
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KPENTER     
+.
+./(Enter)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP0         
+.
+./(insert)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+; ------------- KP.         
+.
+./(delete)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./(NULL)
+./This entry is Reserved, Do NOT use.
+; ------------- LMB         
+.
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- MMB         
+.
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+; ------------- RMB         
+.
+./(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+U/(NULL)
+FC916D1C

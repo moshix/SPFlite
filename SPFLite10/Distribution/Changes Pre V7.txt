@@ -1,0 +1,3031 @@
+Between 6.2.3060 and 6.2.3061 (Mar 02/2013)
+===========================================
+
+  * Fixed loss of mousewheel control if a CANCEL out of the Options dialog is
+    performed rather than a DONE exit.
+
+  * Corrected handling of SET command with no operands.  It was not opening
+    an Edit of all SET variables as it should.
+
+  * Corrected loss of colorize support if running with STATE OFF.
+
+
+Between 6.1.3024 and 6.2.3060 (Mar 01/2013)
+===========================================
+
+  PRIMARY COMMANDS
+  ----------------
+
+  * The keywords PREFIX and SUFFIX may now also be abbreviated as PFX and SFX.
+
+  * A new Profile option, MINLEN, defines the minimum length for lines in a
+    file.  When MINLEN is greater than zero, whenever the file is edited and
+    lines are inserted, modified or copied from the clipboard or from another
+    file, the minimum line length will be enforced, by blank-padding any lines
+    that are shorter than MINLEN characters.  One reason to use a MINLEN value
+    greater than zero is to avoid the existence of zero-length lines, which can
+    create certain issues with FIND and CHANGE pictures.
+
+  * The SWAP primary command, which accepts the operands PREV, NEXT and PRIOR,
+    now additionally accepts FIRST, LAST, HOME and LIST.  SWAP FIRST will select
+    the leftmost file tab.  SWAP LAST will select the rightmost file tab.  SWAP
+    HOME will select the File Manager tab.  SWAP LIST will switch to File
+    Manager and display the Open FILELIST from which you can choose a tab.
+
+  * The OPTIONS primary command now accepts an optional keyword to select a
+    specific tab within the Options Dialog.  The keyword can be used to select
+    the General, File Manager, Submit, Screen, Mouse or Keyboard tab.  If this
+    new operand is omitted, the General tab is displayed as was done previously.
+
+  * A change Picture of P'!' copies the entire found-string as-is.  Now, you can
+    also copy the entire found-string and convert the value to upper or lower
+    case.  A change Picture of P'!>' copies a found-string of any length and
+    converts it to upper case.  A change Picture of P'!<' copies a found-string
+    of any length and converts it to lower case.  If desired, these new Picture
+    codes can be shortened using the extended Ansi characters P'»' for P'!>',
+    and P'«' for P'!<'.
+
+  * When the =X command followed the CANCEL command, as in CANCEL;=X it now
+    operates correctly.  This resolves a prior command parsing issue that
+    prevented such command usage from working properly.
+
+  * The LOCATE primary command now accepts a keyword of ALL.  When ALL is used,
+    LOCATE does not "locate" any specific line, but is used for the side effect
+    of un-excluding excluded lines that meet the the 'condition' described in
+    the LOCATE command, such as CHANGE, LABEL or RED.  In addition, the MX
+    keyword can be combined with ALL to perform the opposite action, that of
+    excluding non-excluded lines that have a given condition.
+
+  * When the BOUNDS primary command is provided a single numeric operand, it is
+    taken to be the righthand column boundary, and the lefthand column boundary
+    is assumed to be 1.  So, a command of BOUNDS 10 is now legal, and has the
+    same effect as BOUNDS 1 10.
+
+  * The CUT primary command now takes a new additional keyword of RAW, which
+    will copy one or more lines to the clipboard without an End of Line
+    terminator stored for any of the lines, comparable to what the new keyboard
+    functions (CopyRaw) and (CopyPasteRaw) do.  Using CUT RAW, it is possible to
+    copy a block of lines and have them treated as one long line of text, which
+    could then be pasted into an external text editor program such as Notepad,
+    which could then treat that block as one continuous flowing paragraph of
+    text.
+
+
+  LINE COMMANDS
+  -------------
+
+  * If a numeric-only value is entered into the line command area, it will be
+    removed, and the original sequence number will be restored.  Previously, if
+    a numeric-only value were entered by mistake, it would not be treated as an
+    error, but it would not get deleted either, requiring the user to erase it
+    manually.
+
+  * The Text Split line command TS will now accept a line count of 0.  For the
+    TS command, the 'n' value represents the number of blank lines inserted, so
+    that TS0 means you can split a line without inserting any blank lines in the
+    middle of the line you just split.  In addition, a new line command called
+    Text Break (TB and TBB) will allow insertion of permanent blank lines (not
+    the temporary blank/MASK lines used by TS).  The block mode TBB line command
+    may be used to split multiple lines in the same place all at once.  Like TS,
+    TB and TBB will accept an 'n' value of 0.
+
+  * A new Text Margin line command, TM and TMM, may be used to reformat one or
+    more paragraphs of text, in a manner similar to that of the Text Flow line
+    command TF/TFF, except that the operation of TM/TMM is simpler, is less
+    sensitive to any non-default BOUNDS settings that might be in effect, and
+    will not encounter the types of conflicts with BOUNDS that sometimes occurs
+    when using TF/TFF.
+
+  * The Text Flow line command TF/TFF, and the new Text Margin line command
+    TM/TMM, will break lines based on 'words' being delimited by blanks or by
+    the beginning and/or end of a line.  Previously, SPFLite took into account
+    the "Normal characters for P'.' picture literals" (as defined on the Global
+    Options/General dialog) to help determine how to break lines apart into
+    words; this approach caused problems at times.  The new method is simpler,
+    more reliable, and easier to understand.
+
+  * A new Text Selection line command T/TT may be used to select large amounts
+    of text for use with keyboard primitive commands that need such defined
+    areas of text, such as (PenGreen).  This can be useful in cases where the
+    area that needs to be selected is so large that mouse selection or the use
+    of shift/arrow keys is not possible or practical.
+
+    Note: The new T/TT command has nothing to do with a prior usage of T/TT,
+    which meant, "Take Lines".  That old T/TT line command was removed, as of
+    the 6.0 version of SPFLite.  The old usage for T/TT has been superseded by
+    more conventional C/CC blocks.
+
+  * The Pad to Length line command PL will now accept a special modifier of
+    / or \.  When used in this way, a command of PL/ will pad all following
+    lines to a minimum length of 1; PL\ will do the same to preceding lines.
+    Placing PL/ on line 1 of a file can be used to ensure that all lines in the
+    file have a minimum line length of 1; that is, it is a quick way to ensure
+    there are no zero-length lines in the file.
+
+
+  FILE MANAGER
+  ------------
+
+  * A new Global Options tab is available for the File Manager.  This gathers in
+    one place all global options relating to the FM, which makes them easier to
+    find and modify as needed, rather than having these options associated with
+    the General options tab, as was done previously.
+
+  * In File Manager, if an FM line command of the form 'ALL cmd' is entered on
+    a FILELIST line, the 'cmd' is applied to every file named in the FILELIST.
+    For example, ALL E will open every file for editing that is named in the
+    FILELIST, and ALL M will open a Multi Edit session utilizing every file that
+    is named in the FILELIST.
+
+
+  OTHER CHANGES
+  -------------
+
+  * Further enhancements to high overhead code areas sensitive to handling large
+    files.  Improvements were made in the line insertion / deletion handling as
+    well as the saving of data for UNDO support.
+
+  * SPFLite will respect the Read Only attribute of a file.  If an attempt is
+    made to EDIT such a file, SPFLite will open the file in BROWSE mode
+    instead, and issue a warning message, to prevent inadvertent modification
+    of the Read Only file.
+
+  * If enabled by a new General Option checkbox, you can now highlight (select)
+    a 2D (multi-line) block of text without using the Shift, Ctrl or Alt keys in
+    combination with mouse movement.
+
+  * To prevent users familiar with IBM ISPF from creating invalid line commands
+    in KEYMAP, an attempt to define a key with a line command like :R will
+    result in a warning popup message advising the user that the command has
+    been automatically converted to the SPFLite-compatible equivalent format
+    of {R}.
+
+  * You now have finer control on how you are notified of a change to a file
+    being edited by SPFLite when it is also modified from an outside source.
+    You can continue to be always notified of outside modifications, or to only
+    be notified if the file is in an EDIT session but not in a BROWSE session,
+    or to not be notified at all.  This control can be set on a permanent,
+    global basis or can be temporarily altered as needed.
+
+  * New keyboard functions (CopyRaw) and (CopyPasteRaw) will copy text without
+    an End of Line terminator stored.  This can be important if you copy text
+    inside of SPFLite and then paste it to an application outside of SPFLite.
+    In addition, the CUT primary command will take a new additional keyword of
+    RAW which supports a similar capability.
+
+  * Correct a KEYMAP bug, in which a key mapping that defaulted to (Passthru)
+    was not getting restored to (PassThru) if it had been mapped to some other
+    non-default setting and then erased later.
+
+  * Correct a timing error in UNDO handling when several files are opened
+    in rapid succession (as on program startup with a list of previously open
+    files).  The error caused diagnostic popup boxes to appear.
+
+  * New options in specifying AUTO colorization file settings.  Previously, the
+    non-data areas of the screen (Headings, command line, line numbers etc.)
+    were drawn using your normal screen colors.   This sometimes resulted in
+    unworkable combinations.  You may now set the color schemes for these
+    areas with the new NORMHI, NORMLO, LINEHI and LINELO keywords.
+
+
+Between 6.1.3004 and 6.1.3011 (Jan 11/2013)
+===========================================
+
+  * Correct a long standing bug (since V5.0) which could cause unpredictable
+    crashes and/or loops when doing a SAVE (or AUTOSAVE during END processing).
+    This only occurred for long running SPFLite sessions which had performed
+    numerous file edits/saves.
+
+  * Line command parsing was not correctly recognizing associated primary
+    commands if the command line was built using =SET variables.  This is now
+    supported.
+
+
+Between 6.1.2325 and 6.1.3004 (Jan  4/2013)
+===========================================
+
+  * The filename operand on the command line may now specify a wild-card file
+    specification to request a filtered display of the named folder in the
+    initial File Manager display.  e.g. SPFLite C:\Users\Me\Folder\*.BAT
+
+    In addition a simple 'name' as this operand, which also matches an existing
+    FILELIST, will be taken as a request for an initial File Manager display of
+    the named FILELIST.
+
+  * File Manager will now highlight the line command area where the current
+    cursor is located similarly to the way an edit tab highlights the line
+    number.  This will make it easier to spot an underline cursor amongst the
+    _______ line command fill characters.
+
+  * Performance improvement to the internal module tracing used by crash/loop
+    detection reporting.
+
+  * Performance improvements to the loading of large files as well as
+    improvements to deleting large line ranges.
+
+  * A detected loop will now offer the option to simply ignore and continue
+    execution rather than continue termination. As well, suppression of loop
+    detection was added to some additional potential long-running processes.
+
+  * An EDIT request for a non-existent file will now report the error and then
+    open it as newly created zero length file.
+
+  * A new macro variable ~V(varname) has been created to allow substitution of
+    data from the System Environment variables. e.g. you could fetch the
+    system command processor name with ~V(COMSPEC)
+
+  * Correct error which prevented the File Manager LOCATE command from working.
+
+  * Correct error in saving some Options settings.
+
+  * Correct error in handling the SET xxx OFF command.
+
+  * Correct error in UNDO handling of large files.
+
+
+Between 6.0.2319 and 6.1.2325 (Nov 20/2012)
+===========================================
+
+  * Correct saving of File Manager Scroll Amount setting.
+
+  * Correct screen width handling with certain fonts. Calculation error could
+    cause width to 'creep' larger with every SPFLite startup.
+
+
+
+Between 6.0.2317 and 6.1.2319 (Nov 14/2012)
+===========================================
+
+Enhancements
+------------
+
+  * Correct broken RFIND command and the REVERSE RFIND option.
+
+
+Between 6.0.2184 and 6.1.2317 (Nov 12/2012)
+===========================================
+
+Enhancements
+------------
+
+  * New primary commands SPLIT and JOIN are available to automate splitting
+    and joining of lines based on string searches.  An extensive tutorial
+    explains these new features.
+
+  * FTP support has been added to File Manager.  You can now edit and browse
+    files located on a remote FTP server just as you would do for local files
+    and directories.
+
+  * File Manager now contains two additional navigation lines.  A "Recent
+    Paths" line which is like the "Recent Files" but for paths.  As well, an
+    "Open Files" is present to display files currently open in tabs.  This is
+    useful when many tabs are open and not all tab headers are visible due to
+    horizontal scrolling of the tab headers.  The "Recent FILELIST" has been
+    renamed to the "Recent Files FILELIST".
+
+  * When File Manager lists are created from a FILELIST, you may now also
+    specify a File Type mask to selectively display only certain file types.
+
+  * When a file list is created using the MAKELIST command with the SYM option,
+    the format of the resulting symbolic file list now causes the file names to
+    be displayed in a shorter format without the full path-name qualification.
+    This makes the list of files easier to read.
+
+  * The File Manager line command area has been expanded to allow for future
+    enhancements to line commands and for commands longer than one letter.
+    Several existing commands have been modified to utilize the additional
+    line command size.
+
+  * A new FIND command in File Manager support searches for filenames based on
+    any string or substring within a path name or file name.
+
+  * FILELIST maintenance functions have been enhanced to better handle the
+    addition, removal and rename of filenames in multiple FILELISTs.  This is
+    done to prevent inconsistencies when the same file appears in more than one
+    FILELIST.
+
+  * Commands initiated by using a Command key (like CHANGE ABC DEF started via
+    an RFIND command key) will now be captured in the command stack for use by
+    the RETRIEVE/CRETRIEV commands.  This means if you start a FIND or CHANGE
+    using RFIND/RCHANGE (usually the F5 or F6 keys), you can retrieve the
+    original FIND/CHANGE or other command and run it again.
+
+  * Text marking and Copy/Cut functions may now be performed on the Primary
+    Command line as well as in the normal text area, using the shift-Arrows keys
+    or the mouse.  This can be useful when you need to paste strings or file
+    names into the command area.
+
+  * A new Primary command MARK ON/OFF allows you to suppress the display of MARK
+    lines without actually altering the MARK line definition itself.  This is
+    similar to the way TABS ON/OFF suppresses tabbing without altering the
+    location of the tab locations.
+
+  * CHANGE now supports a new operand, TRUNC, which will cause all remaining
+    characters on the line following the new change string to be deleted.
+
+  * A Cancel button has been added to the Options dialog, so you can exit
+    without saving any changes if desired.
+
+  * New line shift commands [[ and ]] have been added, which are referred to as
+    Indent Shifts, since they shift in terms of INDENT LEVELS.  The size of an
+    indent level is determined by the following new item.
+
+  * A new Options -> General entry has been added to allow changing the default
+    number of columns to be shifted by the shift line commands (( )) << >> [[
+    and ]].
+
+  * The text string keyboard primitive, like [string], when used for creating
+    repetitive string values, can now be coded more simply.  The new coding
+    also will execute significantly faster.  To generate 20 * asterisks, for
+    example, rather than coding [********************] you can achieve the same
+    effect by specifying (20:[*]).
+
+  * The TF line command (Text Flow) has been extended for use as the block mode
+    command TFF, so that multiple paragraphs can be formatted in a single step.
+
+  * PowerType has been enhanced with the addition of faint vertical lines at the
+    cursor column, to better show the cursor location on all the lines included
+    in the PowerType process.
+
+  * The SET command will now support PUSH and POP options for the variables.
+    The PUSH option will allow macros to temporarily adjust SET variables, and
+    then restore the previous value with POP.
+
+  * Private clipboards have been expanded from a fixed list of ten (0 thru 9) to
+    an unlimited number of Named Private Clipboards.  A Named Private Clipboard
+    can be accessed from primary commands or by new extensions to keyboard
+    functions, without involving the normal Windows clipboard as an intermediary
+    holding area.
+
+  * The ISPF MASK line command is now supported.
+
+  * Support has been added for "Virtual Highlighting Pens", which allow you to
+    highlight text areas similar to how felt highlighting pens are used on paper
+    listings.   Four highlight colors are available, and highlighting is
+    persistent across edit sessions when STATE saving is enabled.  The exact
+    color palette that is displayed by these Virtual Highlighting Pens may be
+    tailored to any desired color via the Screen Options dialog.
+
+  * The text SWAP function has been extended to support blocks of text in
+    addition to single text line selections.
+
+  * Two new keyboard primitives (DataInsert) and (DataDelete) will now support
+    character insertion and deletion which attempts to maintain data column
+    alignment when present, in a manner similar to the way a CHANGE command
+    performs the same action when FIND / CHANGE strings are of different
+    lengths and the changed strings have spans of spaces next to them.
+
+Bug Fixes
+---------
+
+  * Correction to COPY command when copying into an (Empty) tab with no A/B line
+    command entered. It was basically ignoring the command instead of inserting
+    after the Top Of Dataset line.
+
+  * Relax filtering of folders in File Manager so that Hidden and System folders
+    will now be processed.
+
+  * Correct error in Line command parsing which could result in a permanent
+    loop.
+
+  * Correct error in STATE load of files with labels and/or tags during a COPY
+    command.
+
+  * Correct scrolling when an incomplete line command group was present. Also
+    remove a duplicate call to an attention routine, pure wasted activity.
+
+
+Between 6.0.2181 and 6.0.2184
+=============================
+
+  * Correct error in Line command processing which could result in false errors
+    of "Pending command" following an otherwise perfectly successful line
+    command.
+
+  * Correct another error in Line command processing which could trigger a
+    variety of false validation errors.
+
+
+Between 6.0.2096 and 6.0.2181
+=============================
+
+Enhancements
+____________
+
+  * Finally re-write line command processing so that the need for the UU and TT
+    line commands is removed.  All places where UU/TT were used previously will
+    now accept the CC/MM (sometimes HH) line commands as equivalents.  This
+    returns the use of CC/MM to old favorites such as CUT, CREATE, REPLACE and
+    PRINT.
+
+  * Alter UNDO processing so that large files do not cause performance delays
+    when creating the UNDO checkpoints.
+
+  * Also to assist large file performance issues, an optional, alternate line
+    numbering technique is available.  This method avoids the need for
+    frequently renumbering ALL lines in the Edit session.  The downside of this
+    is that the visible line numbers are no longer equal to their 'physical'
+    line number.  All functions that use these visible line numbers continue to
+    work as usual, no differences whatsoever.
+
+    However, if you prefer line numbers = to physical line numbers, a setting
+    under Options -> General allows you to specify a file size, in lines, under
+    which the old method of numbering is to be used. Setting this value to a
+    very large number (e.g 999999) will effectively turn off this new numbering.
+
+  * Mark SPFLite as UAC aware.  When editing files under Vista or Windows 7/8,
+    this will prevent Windows from doing UAC Virtualization (AKA Data
+    Redirection) and NOT writing the file into it's original location.
+
+    In simple terms this means editing files in Windows protected folders (e.g.
+    c:\Program Files\) will not report successful saving, while actually doing
+    the save into a C:\Users\.... folder.
+
+    Instead, you will receive a failure message of "File is in use or
+    protected".  And you will need to run SPFLite as an Administrator to
+    properly save the file in it's protected location.
+
+  * Allow REPLACE command to be used when Browsing a file.
+
+  * When multiple files are re-opened at startup, the initial display will now
+    be set to the tab which was active when SPFLite was shut down.
+
+  * Add the current BNDS setting to the status bar.
+
+  * Alter File Watch handling.  If SPFLite does not have the focus when a file
+    has been modified externally, it will not report the change till the tab for
+    the affected file is given control.
+
+  * For simple cursor left/right functions, make screen column 7 (between the
+    line number and the text) into an Auto-Skip type field.
+
+  * There is now a new Global option for BROWSE.  You may now request a warning
+    at END time if the Browse session has modified the data.  It will allow you
+    to return to Browse and use CREATE or REPLACE to save the data.  Sometimes
+    it is too easy to forget you are in Browse, make changes and then lose
+    them without warning when END is entered.   See Options => General for the
+    new setting.
+
+Corrections
+___________
+
+  * Correction to SAVEALL.  It was not properly resetting the Tab Title colors
+    to indicate the modified status.
+
+  * Correction to mouse handling.  Incorrect handling of middle mouse button
+    clicks could cause mouse-wheel scrolling to be ignored.
+
+  * Correction to EOL command parsing, and validation during file load.
+
+  * Ensure the Options -> Submit -> Working directory does not end with a "\"
+    character, remove it if present.
+
+  * Correct SUBMIT handling of filenames that require quotes (embedded blanks).
+    This was not working when the command itself was a quoted type.
+
+  * Correct INI value handling of quoted strings to prevent the Windows API
+    from inadvertently removing the outer quotes.
+
+  * Correct COPY/PASTE -> BB/BB range when the range occurs right at the top of
+    the file.
+
+  * Correct MM -> Overlay type line command combinations which were failing to
+    mark the file as being modified.
+
+  * Improve performance in altering line labels and tags.
+
+  * Correct error in UC line command.   It was basically doing nothing if
+    active BNDS were set.
+
+  * Correct the display of the 3rd PFKSHOW line, it was overlaying the 2nd line.
+
+  * When in PowerType mode, prevent a mouse click from moving the cursor off
+    the PowerType model line.
+
+  * Alter handling of 'Illogical Line Command Group' error so that text
+    scrolling is permitted.
+
+  * Correct RCHANGE so it will not proceed unless the most recent search
+    function was actually successful.   Previously it was re-using results from
+    the last successful search even if the most recent search failed.
+
+  * Correct mouse scrolling on the FM screen.  It was not properly going to the
+    last line when FM Help lines were being displayed at the bottom of the
+    screen.
+
+  * Ensure CREATE and REPLACE commands update the RECENT FILELIST.  And if the
+    RECENT FILELIST is actively displayed in FM tab, refresh the display to
+    include the new filename.
+
+  * Correct loading of RECFM F files when saved with an EOL value other than
+    NONE.  The deblocking will take into account the length of the EOL
+    delimiters.
+
+  * Correct cursor vertical scrolling when in HIDE mode.
+
+  * Correct Left Data Shift ( << or < ) when a word exists at the left boundary
+    separated by only one blank from other text in the bounded area.
+
+
+Between 6.0.2080 and 6.0.2096
+=============================
+
+  * FILTER functionality has been enhanced to allow filters to perform actions
+    beyond simply modifying text lines and returning them.   Filters now can
+    perform customized search functions and can, like the FIND command, cause
+    scrolling to a desired line and cursor positioning and hi-lighting of text
+    strings.
+
+    Filters can now also act as summarization tools.  e.g. performing some
+    calculation based on the input lines, and insertion elsewhere of new text
+    lines containing the calculation results.  Think like a SUM function that
+    inserts a Total line.
+
+  * Colorize will now properly handle multiple /* */ comment strings on a
+    single line.
+
+  * Correct error in SORT. It was incorrectly only selecting input lines
+    located from the top displayed screen line onward instead of selecting from
+    ALL lines.
+
+  * If the SOURCE format is changed while active Edit data exists, a warning
+    will be issued to remind users to SAVE the current data immediately to
+    prevent problems reloading in the future.
+
+  * Alter the default key mapping for the keypad, for New users only, to mimic
+    the normal, printed, non-Numlock mode key labels.   i.e. Home, End, PgUp,
+    PgDn etc.
+
+  * Correct the AUTOSAVE default for any Initial Profile settings to AUTOSAVE
+    ON PROMPT.
+
+  * When a Normal or Shifted version of a key in KEYMAP is nulled (""), it
+    will be set to (Passthru) rather than (Null) as this is the normal desired
+    setting. Also, (Passthru) can no longer be accidentally combined with any
+    other key settings.
+
+  * Correct error in (Tab) primitive when display is in Hex mode.
+
+  * Correct handling of columns during a CHANGE command.
+
+  * Correct error in TF line command if a right boundary is specified which is
+    smaller than the line indent value. Also correct handling when a long 'word'
+    is actually bigger than the left/right bounds allow.
+
+  * Correct error in TAG command syntax checking.
+
+  * Correct action of LOCATE command when a pending line command state exists.
+
+  * If START NEW is set and the .START line is in excluded state at file load
+    time, the .START line will be removed from excluded status.
+
+  * Correct cursor positioning in File Manager to properly remain on the last
+    line item selected.
+
+  * Correct error in PROF NEW which did not properly use the specified
+    profile name.
+
+
+Between 5.0.1270 and 6.0.2080
+=============================
+
+
+ Major new Functions / Facilities
+
+  * You can now perform Multi-Edit sessions: the ability to edit multiple files,
+    at the same time, in the same edit tab.  You begin a Multi-Edit session by
+    selecting multiple files from a File Manager list, using the M line command
+    on each desired file and then pressing Enter after all files have been
+    selected.  When you SAVE or END a multi-edit session, every file in the
+    session will be saved at the same time.  See "Working with Multi-Edit
+    Sessions" in the Help file for more information.
+
+  * File Manager now supports named collections of files, and refers to these
+    collections as FILELISTS.  A FILELIST is itself a text file containing a
+    list of file names of interest to you.  A FILELIST is retained between
+    SPFLite sessions.  There are a number of pre-defined FILELIST names, and
+    you may also create your own named FILELISTs as needed.  There is a RECENT
+    list, having the most recently opened files (up to a user-specified maximum
+    number).  There is a standard FAVORITE list of files you want to be
+    remembered as favorites, and you can create you own private, named favorites
+    as well.  For example, you can create a "Project" FILELIST containing all
+    files for some project, even if these files reside in different folders.
+
+  * The new primary command SUBMIT provides the ability to submit an edit file
+    to an external process (which may be an executable program or batch file) in
+    a manner similar to the ISPF SUBMIT command.  The facility is flexible
+    enough to be usable in a wide variety of applications.  It is expected that
+    a principle use of the SUBMIT command will be to submit jobs for execution
+    on mainframe systems operating under control of the Hercules emulator
+    program.  The SPFLite 6.0 installation includes the utility program
+    SPFSUBMIT.EXE which may be used to submit jobs from SPFLite to a Hercules
+    emulated card reader device using Socket I/O.  SUBMIT can be issued from an
+    Edit, Browse or Clipboard session.
+
+  * A new primary command FILTER allows a range of lines to be filtered through
+    an external process and then returned to the edit file.  This allows the
+    user to apply data transformations to a file using any desired utility
+    program, without leaving the SPFLite edit session.  A sample filter program,
+    ReverseLines, has been included with SPFLite, to give you an example of what
+    you might do with filters.  This new function effectively now allows users
+    to code macros in any scripting language which allows use of re-directed
+    Input/Output or named input/output files.
+
+  * A new edit primary command PTYPE allows Power Typing, a way to perform
+    simultaneous editing multiple lines of text in parallel.(Some editors refer
+    to this as "column mode editing".)  A number of keyboard primitive commands
+    have been added, and enhanced, to support Power Typing.  See the Help
+    article, Working with Power Typing Mode, for more information.
+
+  * A new primary Find in Files command FF, only available for use in File
+    Manager, provides the ability to search through a list of files for the
+    presence (or absence) of a particular string.  The operation will return a
+    list of the files which match the search criteria.  The list can be used to
+    initiate Edit/Browse of those files, or to use as the basis for further
+    searches of other different string criteria.  A Find in Files search returns
+    a FILELIST, for which you can perform any commands that can be done on any
+    FILELIST.
+
+  * NOTE lines are now supported.  NOTE lines are non-data text lines
+    that may contain any desired user comments.  NOTE lines are not part of the
+    data file per se, and do not have line numbers.  New, blank NOTE lines are
+    created with the NOTE line command.  Data lines can be Made into Notes using
+    the MN line command, and note lines can be Made into Data lines with the MD
+    line command.  You can also convert the special lines that appear in a
+    PROFILE display into NOTE lines or data lines.  See the Help article,
+    Working with Notes, for more information.
+
+
+ New and Enhanced Primary Commands
+
+  * The CANCEL primary command now accepts two new operands, DELETE (DEL) or
+    PURGE.  They will, after terminating the Edit, cause the underlying file to
+    be deleted (sent to the Recycle Bin if that option activated) or purged
+    (bypassing the Recycle Bin, even if that option is enabled).
+
+  * A new command START, supports the PROFILE option which allows you to control
+    how a file is positioned when opened.  You can choose FIRST (top of file);
+    LAST (bottom of file); USER (position to a user entered label of .START);
+    NEW (like USER, but the .START label is always moved to the last line on
+    file on close); or OFF (effectively like FIRST).  It is expected that START
+    NEW will be useful in viewing SYSOUT files, possibly in conjunction with the
+    EOL AUTO feature.
+
+  * New LOCATE options, FIND and CHANGE, will locate lines which have been
+    previously changed by a FIND, CHANGE or similar command.  All other LOCATE
+    options such as FIRST, LAST etc.  are supported as usual.  In addition, a
+    new keyword CURRENT, abbreviated as CURR) may be used with LOCATE FIND or
+    LOCATE CHG to locate the line that was most recently found or changed.
+    LOCATE LONG allows lines to be found that exceed a size operand or exceed
+    the LRECL value (when not zero), and LOCATE SIZE locates lines that are
+    exactly a certain length.  LOCATE NOT LONG and LOCATE NOT SIZE are also
+    allowed.
+
+  * The primary commands that change the exclusion status are now "unified".
+    This means that EXCLUDE, FLIP, SHOW, NEXCLUDE, NSHOW and NFLIP all have the
+    same underlying syntax and take the same operands as EXCLUDE does, including
+    the optional string argument.  As a result of this change, FLIP,  which used
+    to apply to all lines by default, now requires the ALL keyword for this
+    action to occur.
+
+  * The SORT primary command now performs a "stable" sorting operation; this
+    maintains the original ordering of data lines when the sort keys are
+    considered equal.
+
+  * FIND and CHANGE can now utilize regular-expression search-strings when the
+    search direction is specified as LAST or PREV.  When this is done, the
+    search is limited to the left-most only occurrence of the search string.
+    Additionally, there are now no restrictions to using PREV, LAST, PREFIX or
+    SUFFIX with Picture search strings, which now also performs better.
+
+  * A new primary command EXIT or =X allows SPFLite to be closed, which is
+    functionally the same as clicking the X button in the upper-right corner of
+    the SPFLite window.  The command =X is an abbreviation for EXIT.
+
+  * A new edit primary command RENAME allows the currently-edited file to be
+    renamed while being edited.  When issued, RENAME will cause a Rename popup
+    to be displayed, which asks for a new file name.
+
+  * A new primary command RELOAD will discard any unsaved changes in the current
+    edit file and then reload the file from its current contents on disk.  If
+    any unsaved changes exist, a popup will ask for confirmation of the Reload.
+
+  * FIND, CHANGE and similar commands will now report the number of lines in
+    which a string is found or changed, in addition to the number of times the
+    string itself is found.
+
+  * PRESERVE C.  New option C to PRESERVE command causes trailing blanks to be
+    retained except when the last non-blank character on the line is a \
+    backslash.  This is intended for use in C-like languages that use \ for line
+    continuation and do not allow blanks to follow it.
+
+  * As a companion to the UNDO command, there is now a REDO command.  Sometimes
+    when doing repeated UNDO commands to reach a previous edit status, it is
+    easy to UNDO more than intended.  REDO allows you to reapply changes,
+    effectively reversing the UNDO.
+
+  * A new TAG option of SET operates much like TAG ON, except that lines not
+    eligible to have the new tag assigned will have any old tag cleared.  This
+    allows a line range to get a new tag without the need to pre-clear the line
+    range of old tags beforehand.
+
+  * When the DELETE command is used to delete the entire edit file by using the
+    ALL option, DELETE cannot be abbreviated as DEL.  This is a safeguard to
+    prevent deleting the entire file by accident, in case an X|NX option or line
+    labels should have been used but were forgotten.
+
+  * PROFILE EDIT profile-name allows editing of any existing Profile, either
+    from an Edit session or from the File Manager.  As well, the PROFILE NEW
+    profile-name may be issued either from an Edit session or from the File
+    Manager.  For both commands, the SPFLite Profile Editor window is displayed
+    so that the Profile information can be created or changed.
+
+  * A new primary command COMPRESS can be used to compress repetitive spans of
+    strings down to single occurrences.
+
+  * A new REVERSE operand on RFIND, RLOCFIND and RLOC allows repeated FIND or
+    LOCATE operations to be done in the direction opposite to the initial
+    direction.  This allow you to ‘change your mind’ as to the search direction
+    without having to re-issue the original FIND or LOCATE command.
+
+  * You can now perform a virtual save operation during the course of editing a
+    file, using the new primary command VSAVE.  A virtual save will save the
+    edit session to a temporary file, without committing the edit changes to the
+    permanent file you started editing.  If you are editing a critical file and
+    experience a system outage, the VSAVE files can be used to resume editing,
+    while if the edit ends normally, the VSAVE files are automatically deleted.
+
+  * Duplicate adjacent lines can now be deleted with the new primary command
+    DELETE DUP.  DUP is now a reserved word on the DELETE command, so if you
+    wish to delete lines that contain a literal of DUP it must be quoted like
+    'DUP'.
+
+  * The new LEFT and RIGHT operands of FIND and CHANGE allow strings to be
+    searched for and changed at most once per line.  Either the left-most or
+    right-most string is found on a line, and any additional occurrences of the
+    same string are ignored.
+
+  * A new primary command SAVEALL saves every open edit file.  SAVEALL by
+    itself will unconditionally save all edit files, whether currently in a
+    modified state or not.  SAVEALL COND will save all edit files that are in  a
+    modified state, but unmodified edit files will not be saved.  SAVEALL will
+    not save files opened in browse mode, even if such browsed files are in a
+    temporarily modified state.
+
+  * The COPY primary command now supports the full ISPF syntax for COPY,
+    including BEFORE and AFTER keywords and start/end line numbers for copied
+    file.  The copied lines may replace an existing block of line if they are
+    marked as a UU or TT block, if the BEFORE / AFTER option is omitted.
+
+  * The PASTE command now also permits the BEFORE/AFTER option as well as ERASE
+    to clear the clipboard after the operation.
+
+  * Enhancements have been made to primary command RETRIEVE processing.  The
+    RETRIEVE ‘command stack’ will now hold the last 50 commands.  A new RETF
+    command will retrieve commands in the ‘forward’ direction, as opposed to the
+    'backward' direction done by RETRIEVE; the command stack can be cleared by
+    RESET RETRIEVE.
+
+  * The APPEND primary command will insert a string at the end of every line in
+    a line range.  The complementary PREPEND primary command will insert a
+    string in column 1 of every line in a line range.
+
+  * The PRINT SETUP command can now define "formatted printing" of pages with
+    page numbers, headers and footers, file names, and other variable
+    information inserted.
+
+ New and Enhanced Line Commands
+
+  * The =TABS> line may now use a + character as a "repeating virtual tab"
+    position.  If used, the + may appear only once as the last code on the
+    =TABS> line, and must be preceded by an * tab code.  Using the distance in
+    columns between the + code and the last * code that precedes it, ‘virtual’
+    tab positions are implied indefinitely to the right, starting in the column
+    where the + appears.
+
+  * The K (Keep) line command modifier, and the -/+ (post-exclude and
+    post-unexclude) line command modifier, can now coexist for the line commands
+    A, B, C/CC, O/OO, and OR/ORR.   On CC, OO and ORR the block-header lines
+    themselves will not be excluded or unexcluded by the -/+ modifier, but only
+    the lines within those blocks.
+
+  * The MARK line command now allows codes < and > to more accurately place the
+    column marker lines, in addition to the * code which remains available.
+
+  * G/GG and J/JJ are now defined as ‘physical’ glue and join operations that do
+    not involve data trimming.  To trim data before gluing or joining, the new
+    line command TG/TGG and TJ/TJJ are now supported.  Additionally, for the
+    Glue commands G/GG and TG/TGG, a user-defined string can be specified to
+    insert in between the glued lines, using the GLUEWITH command.
+
+  * Two separate blocks of text may now be swapped by marking one block with
+    M/MM and the other block with the new Swap line command W/WW.
+
+  * A new Overlay/Replace line command OR/ORR is similar to the standard Overlay
+    line command, but will unconditionally overlay data from the 'sending’ lines
+    to the ‘receiving’ lines.
+
+  * New keyboard primitive functions (FindNext) and (FindPrev) will find the
+    next or previous text that is currently highlighted.  These actions are
+    typically performed in other text editors using the keys Ctrl-F and/or F3,
+    and may be mapped in SPFLite to any desired key.
+
+
+ New and Enhanced Keyboard Primitives
+
+  * A piece of text on one line can now be swapped with another (non -
+    overlapping) piece of text on the same line or on another line by using the
+    new keyboard primitive function (Swap).
+
+  * New keyboard primitive functions (Edit) and (Browse) allow you to directly
+    jump into a file for editing or browsing through a highlighted a file name.
+    For example, suppose Alt-E is mapped to (Edit).  Then you would highlight a
+    file name and press Alt-E.  This causes that highlighted file to be opened
+    up in a new Edit tab.
+
+  * A new keyboard primitive command (ToggleHome) will toggle the position of
+    the cursor between column 1 and the first non-blank character of the line.
+
+  * The (SetInsert) and (ResetInsert) primitives have been enhanced to save the
+    existing insert-mode state internally prior to changing it.  A new primitive
+    called (RestoreInsert) takes the insert-mode state saved by the most recent
+    (SetInsert) or (ResetInsert) and restores it.  If neither (SetInsert) nor
+    (ResetInsert) have yet been performed, (RestoreInsert)  does not change the
+    insert mode from its current setting.  These new and enhanced functions are
+    useful in keyboard macros that need to modify the insert mode a certain way
+    and then restore it to what it was previously.
+
+  * New  keyboard primitive commands (JustifyL), (JustifyR) and (JustifyC)
+    enable you to left-justify, right-justify or center (center-justify) a span
+    of highlighted text.  The Justify commands act by removing spaces from one
+    side of the highlighted text, and adding it to the other side of it.  When
+    Power Typing mode is in effect, and a span of text is highlighted on the
+    first line, these commands will apply the justification to every line in
+    range of the Power Typing command.
+
+  * A new keyboard primitive function (Ansi) will display a 16 by 16 grid of
+    characters which may be used to insert any characters into the clipboard,
+    including ones not currently mapped to a key.  The same display may be
+    accessed in the KEYMAP window, by clicking a new button, "Show ANSI
+    Character map".
+
+  * New keyboard primitives (ScrollLeft), (ScrollRight), (ScrollUp) and
+    (ScrollDown) allow the screen to be scrolled while leaving the cursor in its
+    current location.
+
+  * A new keyboard primitive (ClipClear) will clear the contents of the
+    clipboard.
+  * Keyboard functions can take a repetition factor so that if you
+    need a function run several times, it only needs to be specified once.
+
+
+ New and Enhanced Mouse Support
+
+  * When a file tab is clicked with the right mouse button, it closes the file
+    in the same way that the END command does.  The PROFILE option AUTOSAVE is
+    handled in the same way as is done for END.
+
+  * Previously, the mouse could be used to highlight a section of a single line
+    (a 1-dimensional highlight) or a square block of text  (a  2-dimensional
+    highlight).  Now, you must hold the Shift key when doing a 2-dimensional
+    highlight, while 1-dimensional highlighting is done without the Shift.  This
+    change means that 2-dimensional highlighting will not occur accidentally but
+    only when intended, and makes normal highlighting easier and faster.
+
+  * There are enhanced capabilities available with highlighted text; see the
+    Help for more information.
+
+  * You may now perform a ‘word select’ by double-clicking on a word, and
+    highlighted text may be deleted and replaced with new text in one step,
+    which is especially useful when Insert Mode is on.
+
+  * When you hold down the Ctrl key while using the mouse wheel, the number of
+    lines or columns moved is increased by a factor of 4; this is termed Turbo
+    Motion.
+
+  * When using a 3-button mouse, the middle mouse button may now be mapped in
+    the same way as the left and right buttons.  In addition to allowing use of
+    all three mouse buttons, you may now use any combination of Shift, Ctrl and
+    Alt, for a total of eight possible mappings for each button.  And defining
+    these mouse definitions is simpler, as they are now part of the KEYMAP
+    facility, meaning an easy, one-step process just like keyboard keys are
+    defined.
+
+
+ Cosmetic / Interface Changes
+
+  * Previously, when a file was Saved by an END command, the normal "File Saved"
+    message would never appear since the Edit tab itself was removed as part of
+    END processing.  To ensure that you do receive a notification that the file
+    was indeed saved, the message "File Saved" will appear in the message area
+    of the status line, as a reminder that the automatic save took place.  This
+    message will disappear as soon as any key is pressed.
+
+  * When the scroll amount field is blanked out for any reason, the default
+    scroll amount will be restored without an error message being displayed.
+
+  * The File Manager has new and updated primary and line commands, and has been
+    reformatted to make it more functional, easier to use, easier to read, and
+    with less clutter that allows more useful information to fit on the screen.
+    See the section on Working with the File Manager for complete details.
+
+  * A change has been made in the way screen colors are applied to file tabs.
+    In prior versions, the Active and Inactive tabs had both a foreground color
+    and a background color option available.  With version 6.0, the background
+    color is settable for both Active and Inactive tabs, but now the foreground
+    color is decided based on whether the file is in a Modified or Unmodified
+    state.  The former use of (M) to indicate modified status was removed.  For
+    the File Manager tab, and tabs in GUI windows like SPFLite Global Options,
+    the foreground text color used will be the same as the Tab Text - Unmodified
+    Files color.
+
+  * The visual spacing of messages in the multi-use status box (where "KB
+    Recording" appears), and the "scroll progress bar" which appears below it,
+    have been adjusted slightly so as not to overlap, so that when both are
+    present the message portion is easier to read.
+
+  * A new Option is available, Visual BEEP.  This provides a short visual
+    'blink' when an error occurs that would normally trigger an Audible BEEP.
+    For users that turn Audible BEEP off because it is disturbing, or for users
+    that are hearing-impaired, this provides an alternative.  Audible and Visual
+    BEEPs may be activated independently from each other.  As well, the audible
+    BEEP is now produced as the standard Windows 'Asterisk' sound and can
+    therefore be enabled, disabled and/or customized as desired through the
+    "Sounds and Audio Devices" option in the Windows Control Panel.
+
+  * The installation process for SPFLite will now add a Windows Explorer context
+    menu item that says, "Open with SPFLite".  This will allow a file to be
+    quickly opened by SPFLite for editing by right-clicking on the mouse.   At
+    present, if you uninstall SPFLite, the uninstall process will not remove
+    this context menu item; it can be manually removed by right-clicking on the
+    RemoveOpenWithSPFLite.reg file and selecting Merge.
+
+  * SPFLite will no longer steal the Windows focus back to itself when it is
+    not the currently active task, and a file it is editing is modified by some
+    outside application.  SPFLite will now wait to notify you about the outside
+    file modifications until you again click on SPFLite to make it the active
+    task.  This change makes it easier to use SPFLite collaboratively with other
+    software, such as a compiler IDE or debugger, which may also have their own
+    editing facilities.
+
+  * In File Manager, the END command will now return to the parent directory, or
+    to the prior FILELIST, of the currently displayed one.  The same action will
+    occur if you right-click the File Manager tab.
+
+
+ Performance Enhancements
+
+  * A change was made in the way SPFLite detects and responds to keystrokes in
+    Repeat mode vs non-Repeat mode.  The change allows SPFLite to process
+    keystrokes more quickly and reliably, and prevents certain types of key
+    combinations from being misinterpreted if typed at very high speeds.  When a
+    mapped key has the Repeat checkbox left blank, the key is now acted upon
+    during "key-down time" instead of during "key-up time" so there is no longer
+    a latency in responding to these keys.
+
+  * The code used when searching for Picture strings has been totally redone.
+    It is now 4-5 times faster and also now allows reverse searching.  i.e.
+    using the PREV or LAST operands of Find/Change.
+
+  * Within the Key Map window, you can now jump from one of the eight various
+    definitions (with or without Shift, Ctrl and/or Alt) of a key to another by
+    using the Tab and Back-Tab keys.  This reduces the need to frequently switch
+    between the mouse and keyboard when entering many definitions for the same
+    physical key.
+
+
+ Miscellaneous Changes
+
+  * It is now possible to have deleted files either sent to the Windows Recycle
+    Bin or immediately deleted, based on new CANCEL command options and new
+    handling of File Manager line commands D and U.  The default action when
+    files are deleted is controlled by a new global option checkbox, Delete to
+    Recycle Bin.
+
+  * Two new codes for Picture literal searches have been created; the P'%',
+    which indicates the "special" characters defined in the DLMS setting; and
+    P'@', which indicates all character NOT in the DLMS setting.  i.e.  the two
+    types used to define a WORD in string searches.
+
+  * As well, you can now 'escape' a character in a picture code which might be a
+    defined picture code like @ by prefixing it with a \ (e.g.  P'\@') When ‘x’
+    is a letter, it is matched literally including case, even when CASE T is in
+    effect.
+
+  * The new change Picture/Format code of P'!' or F'!' is used to represent the
+    entire found search string value, regardless of that string’s length.  The
+    !  code can be used more than once, which would cause the found string value
+    to be replicated as many times as there are !  codes.  To use an actual  !
+    in a change Picture or Format as a literal value, it must be escaped as
+    P'\!' or F'\!'.
+
+  * You can now create SET symbols and reference them in an edit session.
+    Symbols are created with the SET command or in a SET edit session, and may
+    be used in primary commands with the notation =NAME.
+
+  * The Enumerate Facility allows a selected set of columns in a range of lines
+    to be enumerated, that is, sequenced starting from an initial value on the
+    first line and incrementing by 1 for each subsequent line, within a fixed
+    field on a set of lines.  Enumeration requires that Power Typing mode is be
+    enabled, and one or more columns on the first line of the Power Typing line
+    range are highlighted.  Enumerated values may be in decimal or hex and are
+    unsigned.  When these conditions are true, one of the Enumerate keyboard
+    primitive commands (Enum), EnumHexLc) or (EnumHexUc),  can be issued.
+    Increments other than 1 can also be used.
+
+  * A new set of End of Line profile options, EOL AUTO/AUTONL allow for
+    automatic detection of  line terminations, possibly containing inconsistent
+    and spurious line terminators, so that files edited across different system,
+    mainframe SYSOUT files, and other inconsistently-terminated text files can
+    be opened, viewed and edited in a reasonable way.  EOL AUTO/AUTONL may be
+    applied to non-mainframe files as well, to handle situations where a file’s
+    line termination is inconsistent for some reason.    A possible cause of
+    this is a file shared between Windows and Unix on a network and edited with
+    different editors applying different line endings.
+
+  * SPFLite now supports Private Clipboards. Ten are provided for and are
+    referred to as CB0 thru CB9.   The clipboards are Global (shared amongst
+    all active Edit tabs) and are also Permanent (saved and restored between
+    SPFLite sessions. These are ideal for storing a variety of boilerplate type
+    text.  New keyboard primitives are available for moving clipboard data
+    between the normal Windows clipboard and these new Private clipboards. These
+    primitives can be easily used to create a coordinated 'set' of keyboard macros
+    to access this new support.  The default keyboard definitions contain
+    Copy and Paste macros set up on the 0-9 keys.
+
+
+Between 5.0.1232 and 5.0.1270
+=============================
+
+  * Correct checking of PROFILE STATE.  It was being done after the check for
+    the NTFS status of the drive rather than before.
+ 
+  * Pending line controls (e.g. A/B) were not being correctly detected by
+    primary commands like COPY issued from macros.
+ 
+  * Line command processing was not properly detecting incomplete block
+    commands followed by Immediate commands.
+ 
+  * UU block line commands with the K (keep) modifier were not being properly
+    retained following their use in a command.
+ 
+  * CANCEL command could not be issued if there were line commands in 'Pending'
+    status.
+ 
+  * SAVE issued for a file with zero lines in it was incorrectly skipping the
+    actual writing of the empty file.
+ 
+  * The Tab expansion using the IMPORTTABS value was not correctly expanding
+    text when only 1 character followed the Tab character.
+ 
+  * A replacement EBCDIC.TXT file to alter the EBCDIC <-> ANSI translation was
+    not being properly recognized during initialization.
+
+
+Between 5.0.1221 and 5.0.1232
+=============================
+
+  * If a file save is done as part of closing a tab, the "File Saved" message
+    will be displayed for a short time in the status bar of the next tab to be
+    displayed.
+ 
+  * The file extension inserted by the substitution string ~X will remain in
+    normal case rather than being forced to Upper case.
+ 
+  * Keyboard routines were enhanced to better handle keys flagged as
+    non-repeating in keymap.  This should eliminate possible dropped keys when
+    the key is a 'chorded' key.  (Like Crtl-Z,   Alt-U, etc.)
+ 
+  * The horizontal scroll bar in the status line has been altered so that it
+    does not interfere with character text shown in the same status bar box.
+ 
+  * SPFLite can now automatically check for a new version update on a regular
+    basis.  Whether to do this, and the interval to use (7 or 30 days) are
+    settable now by a new option under Options -> General.  The Options tab
+    also contains a button which will perform an immediate check.  The initial
+    setting for this until you choose will be to never check automatically.
+ 
+  * Instead of imposing a fixed key-mapping for the critical ENTER and NEWLINE
+    keys, an initial install of SPFLite will provide a pop-up menu to choose
+    between three suggested key mappings.  This will prevent the all too common
+    problem for new users of forgetting where the ENTER key is mapped.
+    Regardless of which choice is made, these settings may be modified later
+    via the KEYMAP function.
+ 
+  * The new commands FIND WORDS and FIND CHARS can be used to set the default
+    "search context".  This is useful if you frequently search for strings on a
+    WORD basis, so that the WORD operand can be omitted on FIND and CHANGE
+    commands.  When the default search context is set to WORDS, a W will appear
+    in the C/T indicator on the status line that shows the current CASE C/T
+    mode.
+
+
+
+Between 5.0.1208 and 5.0.1221
+=============================
+
+  * File Manager was not 'forgetting' the file list position when display
+    criteria had altered.
+ 
+  * RCHANGE was not reacting to a previous search if it was invoked via the
+    RLOCFIND command ather than RFIND.
+ 
+  * Certain combinations of keyboard primitives in a keyboard macro were
+    leaving remnants of the previous cursor behind.
+ 
+  * Entering a full CHANGE command and pressing RCHANGE was not being honored.
+ 
+  * Tab and BackTab handling on the Top/Bottom of data lines was not being
+    handled correctly.
+ 
+  * Handling of the Profile option IMPORTTABS was not being done properly when
+    IMPORTTABS was set to 0 to suppress tab expansion.
+ 
+  * Selecting a directory name in File Manager to switch to that directory was
+    not being done properly.  An embedded blank was being inserted into the
+    path.  Bug introduced by build 1208 inadvertently.
+ 
+  * Mapping of the KP-Enter key was not being handled correctly.
+ 
+  * Possible data corruption when loading files over 128K in size.
+ 
+  * If Profile STATE is ON, and the file is being saved to drive which is not
+    using the NTFS file system, a warning that STATE information will not be
+    saved is generated.  All other normal save activities continue as normal.
+ 
+  * Add additional Icon sizes for the SPFLite5 program icon to display properly
+    at different screen desktop resolutions and icon size settings.
+
+
+Between 5.0.1195 and 5.0.1208
+=============================
+
+  * File Manager was not handling file masks with trailing * properly.
+
+  * Add additional validation to BNDS setting when loading a file Profile.
+
+  * RESET command was not always clearing previous error message text.
+
+  * Correct handling of Enter key when NumLock is ON. (i.e. by toggling it with
+    Shift-NumLock.
+
+  * RESET was not being processed if there were outstanding line command errors.
+    It should always be performed regardless of such errors.
+
+  * Cosmetic changes to several messages.
+
+  * Corrected handling of shutdown when modified, unsaved new files are being
+    processed.
+
+  * Pending line commands were suppressing the action of scrolling commands
+    such as LOCATE, FIND etc.
+
+  * Clarify STATE error message when file changes prevent re-establishing the
+    previous STATE environment.
+
+  * Editing of a new file type was not properly picking up the DEFAULT
+    profile's parameters.  As well, new profiles will start as UNLOCKED.
+
+  * CAPS ON processing was not being properly handled in INSERT mode.
+
+  * Correct formatting of the PROFILE NEW dialog.  Some fields were not spaced
+    properly.
+
+  * File manager will now handle file names with leading blanks.   However, use
+    of such names is discouraged as it can be very confusing.
+
+  * Cursor performance improved during rapid cursor movement. It will now be
+    much more visible than before.    Cursor also will no longer 'disappear'
+    when the user has the Windows cursor blink rate set to 'Off'.
+
+  * Altered the test for SPFLite residing on a removable drive when installed
+    in 'portable' mode.  Windows basic device type API insisted that a USB
+    connected hard drive was not removable.  Another API was found that acted
+    more reasonably.
+
+
+Between 5.0.1189 and 5.0.1195
+=============================
+
+  * FIND and CHANGE were treating quoted "*" and unquoted * operands as the
+    same, they were both being treated as 'previous operand'.
+
+  * Line commands inserted by keyboard customization settings were not being
+    honored on '''''' inserted lines.
+
+  * Documentation updated to describe keyboard customization when using non
+    English keyboard which require use of the AltGr key to create national
+    characters. Also corrected typo error in the Help file and Tutorial related
+    to TAG handling.
+
+  * Termination did not always provide the option to save a tabs data if the
+    tab had never been saved.  i.e. was still marked as (Empty) even though
+    text lines existed.
+
+  * PASTE into an empty file did not 'clean up' an optional A/B line command
+    if it had been entered.
+
+
+Between 5.0.1186 and 5.0.1189
+=============================
+
+  * Keymap will no longer accept changes that leave the ENTER key undefined as
+    this makes further use of SPFLite impossible.
+
+  * Global BOUNDS or BNDS settings were not being correctly honored by Primary
+    commands like FIND/CHANGE.  Boundaries were only being honored if they
+    were specified on the commands themselves.
+
+  * If specified bounds were included on a primary command, SPFLite was not
+    allowing an arbitrary large value to be used for the right boundary which
+    was larger than the current maximum length record.  For example, specifying
+    FIND P'^' 73 1000 on a file with all records under length 100 was rejected.
+
+  * Data entry in the Scroll amount field (upper right) was not being handled
+    properly.
+
+  * The Keypad DEL key was not functional.
+
+  * The Keypad Enter key incorrectly had a default assigned of RCHANGE.
+
+  * UP and DOWN commands were incorrectly calculating the new screen position
+    when excluded lines were present.
+
+  * Multiple adjacent ranges of excluded lines were not being 'collapsed' in
+    to one range following a line delete command.
+
+  * File Manager was not handling Directories with very long names if the name
+    was being abbreviated to fit a narrow screen display.
+
+
+Between 4.4.9 and 5.0.0
+=======================
+
+  * Support added for EBCDIC input and output files, along with the EBCDIC NL
+    character X'15' as another EOL delimiter character.  In addition, you may
+    now specify an LRECL value to specify that the file contains records with a
+    fixed Logical RECord Length.
+
+  * When editing EBCDIC files, conversion is done between Ansi code page MS-1252
+    (used for the editor display) and EBCDIC code page 1140 for user data files.
+
+  * When a non-zero LRECL is specified, you may also specify an EOL of NONE, to
+    indicate that none of the usual end of line delimiters are being used.  The
+    combination of a non-zero LRECL and EOL NONE is used to edit files that are
+    a set of fixed-length records stored as a continuous stream of bytes with no
+    line delimiters at all.
+
+  * Persistent storage of the labels, tags and line exclude status between Edit
+    sessions.  You can now close a file, and resume editing it at another time,
+    with your file's edit session conditions restored to the same state it had
+    at the time it was closed.  This feature is enabled with a new PROFILE
+    option called STATE.
+
+  * Add automatic cleanup of stray recovery files that may have been left behind
+    in the event of an SPFLite crash.
+
+  * A change was made to the naming standard for Automatic Colorization files.
+    These files now have names like "type.AUTO", where "type" is the filename
+    extension that defines the file's type.  Use of a "type.AUTO" Automatic
+    Colorization file is enabled by a PROFILE command of HILITE AUTO ON.
+    Automatic Colorization files are "linked" to to the file's PROFILE.  This
+    means that when a PROFILE USE is in effect, a common colorization scheme can
+    be defined for a group of related file types.  Support for the former
+    PROFILE ALIAS command has been removed.
+
+  * Allow use of temporary line labels in commands.  Temporary labels are
+    .labels where the label value is a numeric line number; to reference line 10
+    in this way, a temporary line label of .10 could be used.  This allows line
+    ranges to be used in commands which also support column ranges (like FIND
+    and CHANGE) without needing to assign some permanent labels to the lines
+    just for the sake of that command and then having to delete them later.
+
+  * New KEYMAP command and totally rewritten keyboard mapping support.  The
+    whole concept of PFKs has been replaced (don't worry, it's actually
+    simpler), Now, the commands you desire are actually associated with the key,
+    rather than the former two-stage process of associating a keyboard key with
+    a PF key, and then associating the PF key with an SPF command.  As well, the
+    mapping allows for mapping of all control key combinations for the allowable
+    keys (this is sometimes referred to as "chords").  There are 8 variations of
+    each key allowed: Normal, Shift, Control, Alt, Shift-Control, Shift-Alt,
+    Shift-Control-Alt, and Control-Alt.
+
+    These are now easily managed by a new graphic dialog which allows you to
+    click on a keyboard image to access the commands associated with each key.
+
+    As well, support is now provided for keyboard macros.  This includes a new
+    Keyboard Recording function to assist in creating these macros.  While
+    Keyboard Recording is in progress, a message of "KB Recording" will appear
+    on the status line.
+
+  * Separate file option preferences for each file type.  Many formerly global
+    preferences are now settable by file type.   The PREFERENCES command is now
+    renamed to OPTIONS, and a new PROFILE command is used to display the file-
+    oriented options.  Setting of individual PROFILE options is done via primary
+    commands as in the original ISPF, such as CAPS, TABS, HILITE, etc.
+
+  * The PFSHOW feature now allows specification of 1 to 5 lines at the bottom of
+    the screen.  Only keys which have PFSHOW labels defined (via the KEYMAP
+    facility) will appear in this area.  The PFSHOW screen functionality is now
+    being handled as an OPTIONS|SCREEN setting, and the former PFSHOW primary
+    command is no longer supported.
+
+  * The status line is no longer optional, and now appears as a conventional
+    Windows-style status line at the bottom of the screen.  The redesigned
+    status area contains many new, useful fields in a concise, ease-to-read
+    format.
+
+  * The primary commands OPEN and EDIT have been swapped to have consistent
+    meaning with other commands.  BROWSE starts a browse tab, EDIT starts an
+    edit tab, and OPEN will now open a new instance of SPFLite.
+
+  * The primary command CRLF has been renamed to EOL (End-Of-Line) to better
+    reflect its meaning.  As well, the operands have been renamed from
+    WIN/UNIX/MAC to CRLF/LF/CR to also better reflect their meaning.  Also added
+    is the ability to use a user specified 1 or 2 byte hex string as the
+    delimiter.  The EBCDIC NL character (X'15') is also now available, as is
+    the ability to say EOL NONE to have no delimiters at all, which requires a
+    specified LRECL value to delimit lines by their length alone.
+
+  * The sort criteria for the File Manager may be quickly changed by
+    left-clicking on the column headings.  If currently sorted on the clicked
+    column, the sort will switch direction (a + will appear next to the column
+    heading for ascending order, and - will appear for descending order).  If
+    clicked on a different column, it will switch to an ascending sort on that
+    column.  In addition, a new option to sort on file extension has been
+    added.  As a result, the SORT type entry line at the top of the screen has
+    been removed.
+
+  * File Manager has altered the file type criteria from being a simple list of
+    file types, to using the Windows standard file masking characters.  For
+    example, previously you might have had criteria like txt;BAS;CPP which would
+    now be entered as *.txt; *.BAS;*.CPP.   But more importantly, you can now
+    enter criteria like PRJ*.C??  or *.B* to specify a much finer filtering of
+    the resultant list.
+
+  * New Keyboard Primitive commands:
+      TxtHome       - Moves cursor to 1st visible data column of the current
+                      line.  Like Home in a conventional editor.
+
+      TxtNewLine    - Like NewLine, but moves cursor to the 1st visible data
+                      column of the next line rather than the line number area.
+
+      LineNo        - Moves the cursor to the line number area of the current
+                      line.
+
+      LastTab       - Tabs to the last (rightmost) tab marker.
+
+      EndOfText     - Moves cursor to 1 past last non-blank on the line, unlike
+                      EndOfLine which moves the cursor to 1 past the last
+                      character on the line, blank or non-blank.
+
+      LowerCase     - Will lower-case selected text on the screen.
+
+      UpperCase     - Will upper-case selected text on the screen.
+
+      TitleCase     - Will title-case selected text on the screen.
+
+      SentenceCase  - Will sentence-case selected text on the screen.
+
+      CutPaste      - Will act like Copy if text is selected, and if no text is
+                      selected will act like Paste.
+
+      Date          - Will Paste, at the current cursor location, the current
+                      Date in your normal Windows Short format.
+
+      Time          - Will Paste, at the current cursor location, the current
+                      Time in the format hh:mm:ss AM. (12 hr format with
+                      trailing AM/PM indication.
+
+      ClipDate      - Will insert the current date, in normal Windows short
+                      format, into the Clipboard.
+
+      ClipTime      - Will insert the current time into the Clipboard in the
+                      format hh:mm:ss AM (12 hr format with trailing AM/PM
+                      indication).
+
+      IsoDate       - Will Paste, at the current cursor location, the current
+                      Date in ISO format YYYY-MM-DDD.
+
+      IsoTime       - Will Paste, at the current cursor location, the current
+                      Time in the format hh:mm:ss (24 hr format without AM/PM).
+
+      ClipIsoDate   - Will insert the current date, in ISO format, into the
+                      Clipboard.
+
+      ClipIsoTime   - Will insert the current time into the Clipboard in the
+                      format hh:mm:ss (24 hr format without AM/PM).
+
+      ClipPath      - Will insert into the Clipboard the full path and
+                      filename of the currently edited file.
+
+      ClipName      - Will insert into the Clipboard the filename of the
+                      currently edited file.
+
+      SetInsert     - Will turn Insert mode ON regardless of its current
+                      setting.
+
+      ResetInsert   - Will turn Insert mode OFF regardles of its current
+                      setting.
+
+  * New key-mapping capabilities for labels and tags.  To define a key to set a
+    label or tag, {.label} and {:tag} are used.  To define a key to clear a
+    label or tag, {.} and {:} are used.  To define a key to toggle a label or
+    tag, {..label} and {::tag} are used.
+
+  * New line command H/HH ("Here"), which can be used as a destination for the
+    line copy (C/CC) and move (M/MM) commands in much the same manner as A/B
+    line commands are used.  The lines marked by H/HH will be REPLACED by the
+    copied or moved lines; the lines originally marked with H/HH are deleted.
+
+  * Two new line commands U/UU ("Use") and T/TT ("Take") may be used to specify
+    line range operands to many of the Primary commands (CHANGE, CREATE, CUT,
+    etc.) When a valid range has been marked with these commands, affected
+    Primary commands will react as if a line range had been specified as part of
+    the command itself.
+
+    These new line commands effectively replace the use of the C/CC and M/MM
+    line commands when used in conjunction with Primary commands, which now use
+    U/UU in place of C/CC and use T/TT in place of M/MM commands.
+
+    The existing C/CC and M/MM are now used exclusively to copy and move lines
+    around in the edit file, and are not referenced any more by primary
+    commands.
+
+  * The Primary command line area will now scroll left/right as needed so that
+    commands of any length can be entered.  Previously, if commands like FIND
+    and CHANGE were entered with long text literals, it was very easy to 'run
+    out of room' to enter the desired command.
+
+  * Support for the 'K' line command modifier ("Keep").  When added to a line
+    command, the command will be retained following the normal line operation.
+    For example if a CK is entered on a line, and A on another, then after the
+    copy of the line from the CK line to following the A line, the CK line
+    command will remain in the line-command area.  All that is needed is another
+    A command to repeat the Copy.  Unlike ISPF's implementation, 'kept' line
+    commands are only removed by specifically blanking them, or via a RESET
+    COMMAND primary command.
+
+  * Support for two new line command modifiers, '+' and '-'.  When added to a
+    line command, it requests that the lines, following the specified line
+    operation, be Excluded ('-') or UnExcluded ('+') from the display.  For
+    example, copying lines using a CC- /  CC pair to mark the source lines,
+    will perform the Copy and then hide the lines marked by the CC commands
+    as if the lines were marked with XX line commands as well.  If a CC+/CC
+    pair were to be used, any excluded lines within the CC+/CC block will be
+    unexcluded upon conclusion of the copy command.  When + or - is added to an
+    A or B line command, the A or B itself is not changed, but the target lines
+    themselves that are moved or copied After or Before that point are
+    excluded (-) or unexcluded (+) as the move or copy takes place.
+
+  * A new primary command TAG and associated enhancements to other commands now
+    provide a powerful tool to locate and mark (i.e.  TAG) lines.  These
+    'tagged' lines, whether contiguous or not, can now be isolated for
+    processing by other commands.  Thus you are able to apply multiple criteria
+    to select the lines to be processed.  For example, the following commands:
+
+         TAG :AB ALL 'AB' 10
+         CHANGE 'ONE' 'TWO' ALL :AB
+
+    would first Tag all lines which have AB in column 10 with the Tag :AB, and
+    then would change ONE to TWO on ONLY those lines previously tagged with :AB.
+
+    Tags can be set 'en masse' via the TAG command, or manually by entering
+    a Tag in the line number field. A Tag is a : followed by up to 5 characters.
+    A tag is much like a line label (.HERE), except the same Tag can appear on
+    any number of lines.
+
+  * A special 'generic' tag of :ZALL can be used to reference every line having
+    a line tag of any kind whatsoever regardless of tag name.  Similarly, a tag
+    of :\ZALL can be used to reference every line NOT having a line tag.  :ZALL
+    and :\ZALL are useful on commands such as FIND, CHANGE and EXCLUDE.
+
+  * A label and a tag may co-exist on the same line (the label and tag are said
+    to be "co-located").  When this condition exists, only the label will be
+    visible in the sequence area of the affected line.  When the cursor is
+    placed anywhere on the affected line, the tag name will appear below on the
+    status line.  Additionally, for such lines, the blank column that normally
+    appears between the sequence number field and column 1 of the data line will
+    contain a : colon as a visible reminder that this line, which has a visible
+    label, also has an undisplayed tag name.  If the label for this line is
+    removed (in the usual way) the undisplayed tag will reappear in the sequence
+    area.
+
+  * The primitive keyboard command "(Delete)" will now delete a currently
+    highlighted block of text on the screen.  This works for highlighted blocks
+    having single lines and for multi-line blocks.
+
+  * For consistency, the CUT command will now accept a REPLACE keyword even
+    though this is the default if APPEND is not coded.  In addition, CUT will
+    now accept the X and NX selection criteria to be used along with normal line
+    range selection.
+
+  * The CREATE and REPLACE commands may now optionally use the full range of
+    line range commands, tag selection and X / NX selection when specifying
+    the lines to be included.
+
+  * The SORT command may now optionally use the full range of line range
+    commands, tag selection and X / NX selection when specifying the lines to be
+    included.   This means that scattered lines may be sorted independently of
+    the intervening lines.  (For SORT X to operate the same as mainframe ISPF,
+    it must be specified in SPFLite as SORT X DX to keep sorted lines excluded.)
+
+    Also, new codes may be added to explicitly request a case sensitive sort (C)
+    or a case insensitive sort (T).  These C or T codes may stand alone to apply
+    to the entire sort, or may be combined with A or D to control individual
+    sort fields.  The default for SORT's case sensitivity is the same as the
+    current profile setting for the CASE option, which is also C or T.  (Note
+    that the current CASE setting also appears as the letter C or T on the
+    status line.)
+
+    Former uses of Tritus SPF will notice these features and options are
+    essentially the same as the Tritus SPF implementation of SORT.
+
+  * Two new primary commands NFIND/NF and NEXCLUDE/NX.  These are effectively
+    the negative versions of FIND/F and EXCLUDE/X, that is, they perform
+    the 'NOT found' version of the tests that normal FIND/EXCLUDE do.  For
+    example,  NFIND 'ABC' 10 will locate the 1st line that DOES NOT HAVE
+    the characters ABC in column 10.   NEXCLUDE ALL 'ABC' 10 would exclude
+    all lines which DO NOT HAVE the characters ABC in column 10.  In particular,
+    starting from a file with no lines excluded, the command NX 'ABC' ALL will
+    result in only lines containing 'ABC' still displayed. (Some editors refer
+    to this capability as an ONLY function.)
+
+  * Two new primary commands SHOW and NSHOW.  SHOW directly corresponds to
+    EXCLUDE (X) with the same syntax, and NSHOW directly corresponds to NEXCLUDE
+    (NX) with the same syntax.  Whereas EXCLUDE/NEXCLUDE only consider
+    non-excluded lines (and based on some criteria, select lines to become
+    excluded), SHOW/NSHOW only consider excluded lines, and based on some
+    criteria, select lines to become un-excluded.
+
+  * Many of the commands which support line range operands (CHANGE, CREATE,
+    DELETE, EXCLUDE, FIND, FLIP, LC, NEXCLUDE, NFIND, RESET, SC, SORT, TAG, TC,
+    UC) will now also support two new operands DX and MX.  These are used to
+    override the normal action of line searching where a located line, if in
+    excluded (X'd) state, will be unexcluded.
+
+    The DX option (don't change exclusion) will leave the excluded status
+    unchanged.  That means, previously excluded lines will remain excluded, and
+    previously unexcluded lines will remain unexcluded.
+
+    The MX option (make excluded) will force the line into excluded status,
+    regardless of what its prior exclusion status was (excluded or not
+    excluded).
+
+    MX and DX should not be confused with X or NX.  X or NX on a command is used
+    to decide which lines should be used or acted upon, based on their current
+    exclusion status.  MX and DX control what the exclusion status of those
+    lines is to be set to, after the command in question is completed.  The
+    distinction is important to understand, because X or NX can be combined with
+    MX or DX on the same command.  Example:  To change all occurrences of 'ABC'
+    to 'DEF' on excluded lines, and then leave them excluded, can be done by the
+    command: CHANGE 'ABC' 'DEF' ALL X DX
+
+  * Two new line command modifiers which apply to some specific line range
+    commands: (C, D, LC, M, O, S, SC, T, TC, UC, X, H, U).  These new
+    modifiers / and \ are used to represent a range of lines that extends from
+    the entered line all the way to the top (\) or all the way to the bottom
+    (/) of the file.  For example entering D/ as a line command means "Delete
+    all lines from here to the bottom".
+
+    The / modifier may be thought of as a shortcut to typing '9' many times to
+    mean 'all the lines from this point forward' like a line command of D99999.
+    Instead of typing all those 9's you can just say D/ to do the same thing.
+    The \ is basically the same idea, but it works in the opposite direction.
+
+  * The LOCATE command has now been enhanced greatly to not only locate
+    specific line numbers or labels, but can now be used to generically search
+    for lines in various conditions. e.g. LOCATE NEXT LABEL will find the next
+    line containing any label.  LOCATE CHANGE will find lines flagged by the
+    ==CHG> line marker.  Other options are EXCLUDED, TAG, SPECIAL, KEEP, LONG,
+    and COMMAND.  The FIRST, LAST, NEXT and PREV keywords are also supported.
+    LOCATE LONG is used to find lines longer than the specified LRECL length.
+
+  * A new Picture-like string called a Format is now supported.  Format strings
+    use a type code of F instead of P.  Format strings differ from Pictures in
+    that the codes other than those used for copying string characters (=, < and
+    >) are not associated with positions in the source text.  This makes it
+    possible to use F strings to "insert" and "format" values in ways
+    traditional P strings cannot do.
+
+  * New features with Picture and Format strings: The ~ tilde code may be used
+    to skip over, or "delete" corresponding positions from the source string; a
+    change Picture or a Format need not be the same length as the search string;
+    the use of search picture codes like $ and @ in change pictures has been
+    relaxed; these codes are now permitted (whereas in ISPF, these codes cannot
+    be used in change pictures even though they otherwise have no special
+    meaning).
+
+  * A new command CASE, which takes an operand of C or T.  CASE is a PROFILE
+    setting and is associated with the file type.  CASE controls how a search
+    string is treated in FIND, CHANGE and similar commands, and is used when a
+    string is not enclosed in quotes, or if a string is enclosed in quotes but
+    does not contain a type code like C or T.  CASE does not affect letters that
+    are within R strings, and does not apply to X strings, but does apply to P
+    and F strings.
+
+    For CASE C, the case of letters is treated "as is" or case-sensitive; for
+    CASE T, the case of of letters is treated as case-insensitive.  The current
+    state of the CASE option is shown on the status line as a C or T.
+
+    The current CASE setting is respected by the SORT command.  As well, when
+    Picture or Format search strings (with string types of P or F) contain
+    letters, the matching process for these letters respects the CASE C or
+    CASE T mode in effect at the time.
+
+    When search strings contain explicit C or T string types, the C or T search
+    string and its case-sensitivity is honored as in traditional ISPF, and the
+    CASE mode in effect at the time is disregarded for such strings.
+
+    In conjunction with this change, SPFLite fully supports and respects search
+    strings of both types C and T, which it did not do previously.
+
+  * Case-conformant text changes may be achieved by using a string of T'xxx' as
+    a change-string value.  The character casing of the result string will
+    conform to the casing of the source string, which is determined on a string
+    by string basis.  When a case-conformant change string is longer than the
+    search string, the upper or lower casing of the 'tail end' of the result is
+    determined by 'propagating' the case of the last letter of the search
+    string.  For example, CHANGE T'one' T'two' will change 'one' to 'two', 'One'
+    to 'Two' and 'ONE' to 'TWO'.  CHANGE T'ONE' T'FOUR' will change 'One' to
+    'Four' because the casing of lower-case 'e' in the third position of 'One'
+    becomes propagated to the fourth position of T'FOUR' to become 'r'.
+
+  * A new "show" line/block command S/SS is used to un-exclude a range of lines,
+    regardless of the prior exclusion status of a block.  If the S line command
+    is placed on an excluded line range, that entire excluded range becomes
+    un-excluded.  This is a new use for the S line command, and the legacy ISPF
+    S line command has been renamed to SI (Show Indentation).  The S/SS line
+    commands may be thought of as the opposite of existing line commands X/XX.
+
+  * KEEP and DROP primary commands may be used to selectively delete certain
+    lines when groups of two or more adjacent lines have the same line tag.
+
+  * A relative line label uses a defined line label to define a region of lines
+    with respect to that label.  The following describes all allowable forms of
+    relative line labels:
+
+    .ABC                             the line .ABC
+
+    .\ABC or .<>ABC or .¬ABC         all lines other than line .ABC
+
+    .>ABC                            all lines after line .ABC
+
+    .>=ABC                           the line .ABC and all lines after it
+
+    .<ABC                            all lines before line .ABC
+
+    .<=ABC                           the line .ABC and all lines before it
+
+  * The PRINT command can now be run with a single operand (SETUP).  This will
+    allow you to select a default printer for SPFLite output other than the
+    Windows default printer.  Following the choice of printer, you will then
+    be presented with a Font selection dialog to choose what Font, Pitch and
+    Style (Bold, Italic, etc.) you prefer.
+
+    The values chosen, along with the printer Duplex setting (if the printer
+    supports Duplex) will be saved as your standard PRINT command settings.
+
+  * The Join line command (J) has been extended from a single line join only, to
+    a multi-line command.   Multiple lines may be joined either by appending a
+    number to the J (like J5) or by using the standard JJ/JJ block command
+    notation.  As well, a companion command has been created called Glue
+    (G/GG).  The operation of Join and Glue are almost identical.  Join connects
+    the data with one intervening blank character between the data from each
+    line, while Glue joins lines together with no intervening blanks between
+    them.
+
+  * New primary commands RLOC and RLOCFIND.  RLOC will repeat the last generic
+    LOCATE command.  For example, if the last generic locate was LOCATE CHG
+    NEXT, then RLOC will continue to locate changed lines.  The RLOCFIND
+    combines the capabilities of the new RLOC command with the traditional ISPF
+    command RFIND, in order to repeat the last FIND or LOCATE command, whichever
+    was issued most recently.  This makes RLOCFIND useful enough that many users
+    may wish to set RLOCFIND as the command mapped to the F5 key rather than
+    RFIND.
+
+  * New line commands to trim, pad and truncate lines:
+
+    Commands TR/TRR/TRTR ("Trim") are used to trim trailing blanks from one or
+    more lines.  Their sole purpose is to selectively trim trailing blanks; no
+    other data changes take place.
+
+    Commands PL/PLL/PLPL ("Pad to Length") are used to force one or more lines
+    to have an explicit minimum length.  Their sole purpose is to selectively
+    add trailing blanks; no other data changes take place.
+
+    Commands TL/TLL/TLTL ("Truncate to Length") are used to force one or more
+    lines to have an explicit fixed length.  This action may involve deletion of
+    non-blank data characters from the right-hand side of selected lines.
+
+  * The representation of excluded lines is now shown in a new simplified design
+    appearing as:  ------ ----------------------- < 001234 > ------.  This is a
+    'fixed format' layout which is easier to find and read, especially when a
+    file contains many interspersed instances of excluded and non-excluded
+    lines.
+
+  * File Manager will 'remember' the displayed list's position properly so
+    that returning to the FM screen will not lose positioning.
+
+  * The HELP command will now accept an operand to allow opening the Help file
+    directly at a specified primary or line command. e.g. HELP EXCLUDE.
+
+  * The DELETE primary command has a new, relaxed syntax that accepts the
+    keyword ALL but treats it as optional and assumed.  This makes the DELETE
+    syntax compatible with many different SPF-type editor programs.  In
+    addition, unlike ISPF, the command DELETE ALL is now allowed in SPFLite as a
+    legal command and will delete the entire edit file, and thus must be used
+    with care.
+
+
+Between 4.4.7 and 4.4.9
+=======================
+
+ * The 4.4.8 and 4.4.9 releases were entirely bug fixes, no new features.
+
+Between 4.4.6 and 4.4.7
+=======================
+
+ * Correct intermittent crashes when ENDing an Edit. 
+ * Correct character case testing in the Picture literals to correctly handle 
+   the additional characters in the European languages.  
+ * Correct display handling of long path names in File Manager when screen 
+   width is very narrow.  
+ * Correct handling of Newline key when display is in Hex mode.  
+
+Between 4.4.5 and 4.4.6
+=======================
+
+ * Use different Installer / packaging to prevent false AV warnings.
+ * Correct error in CLIP mode not autosaving to Clipboard at END.
+
+Between 4.4.4 and 4.4.5
+=======================
+
+ * Correct error in CANCEL of a newly created file.
+ * Correct error in calculating visible top/bottom of display screen.  This 
+   could affect positioning performed by Find/RFind/Change/RChange processing.  
+
+
+Between 4.4.3 and 4.4.4
+=======================
+
+ * Correct bug in Find/Change using the WORD option.
+
+
+Between 4.4.2 and 4.4.3
+=======================
+
+ * Correct minor bug in marking textvia the keyboard.
+
+
+Between 4.4.1 and 4.4.2
+=======================
+
+ Enhancements / New Features
+ ===========================
+
+  * The SPFLite screen can now be re-sized by normal stretching operations, in 
+    addition to specifying the width and height in the Preferences - Screen 
+    setting.  Altering the Font selection or Font size is still done in the 
+    Preferences settings.  
+
+  * Add monitoring of files while they are being Edited/Browsed for changes by 
+    other applications in the system.  When modifications are detected, you 
+    will be given the option to reload the modified data and replace the text 
+    currently in the edit buffer.  
+
+  * Add Column Marking.  This option is similar to TABS.  It will provide a 
+    slim vertical line on the screen at specified column locations to assist in 
+    aligning columnar data.  The columns specified are independent of TABS 
+    columns; they may be the same, or different.  The color of the vertical 
+    line is specified in the Preferences - Screen tab.  The column marking is 
+    retained between sessions, and may be different for each file type.   The 
+    new MARK line command is otherwise handled just like the TABS line 
+    command.  
+
+  * FIND, EXCLUDE and the 1st operand of CHANGE may now use Regular Expression 
+    format for the search.  This is similar to the Use of the Picture literal 
+    (e.g.  P'==##==') for those users who are familiar with and comfortable 
+    using Regular Expressions.   The operand is coded, like the Picture literal 
+    except the leading literal type character is 'R'.   For example to find the 
+    letters ABC at the end of a line code R'ABC$'.  Full details of the Regular 
+    Expression syntax will be in the Help file.  
+
+  * Expand key mapping again to add the Ctl and Alt combinations with the 
+    numeric (0-9) and special character keys (`-=[];'\,./).  As well, allow Ctl 
+    and Alt keys to be mapped as individual keys and still be used in 
+    combination with other keys.  
+
+  * Prevent Numlock key from altering the overall system Numlock status.  
+
+  * Add Numlock support.  The keypad may now be mapped as before for use as 
+    Function keys, etc.  and will function this way when NumLock is OFF.   When 
+    NumLock is ON (i.e.  LED is lit) the keypad will function as a normal 
+    numeric keypad.   Since the NumLock key is mappable, toggling between 
+    NumLock ON and NumLock OFF must be done with the Shift-Numlock 
+    combination.  
+
+  * Display column numbers in status line when cursor is on TABS, BNDS or MARK 
+    lines.  
+
+  * Add TOP and BOTTOM/BOT scroll commands.
+
+  * BNDS added to the settings maintained by file type, like TABS, CAPS, DLMS 
+    and MARK.  
+
+  * If OPEN creates an Empty file because the file did not exist, and is still 
+    empty when an END command is entered, you will be prompted as to whether 
+    you really wish to save the empty file or delete it.  
+
+  * Prevent DLMS line command from removing the blank as a delimiter.  If 
+    DLMS=> line is completely blanked/erased, then the default set of DLMS 
+    characters will be recreated.  
+
+  * Line range operands  (.aa, .bb, etc.) support has been added to the 
+    following commands: 
+
+     FIND, CHANGE, RESET, SORT, and EXCLUDE
+
+  * Alter text select to use inverse video of the selection area rather than a 
+    simple line box around the selection.  
+
+  * Some New 'primitive' key functions are now available, these are all to 
+    provide a more familiar Windows style Cut / Paste operation ability: 
+
+      Users who are running a 4.4.0 or 4.4.1 release will have to manually use 
+      Preferences - Keymap to activate these new keys.  
+
+      'MRKx' four companion commands MRKU, MRKD, MRKL and MRKR (Up, Down, Left 
+             and Right) to support marking (MRK) of text via the keyboard in 
+             the same manner as text can be selected with the mouse.  
+
+             The keyboard text selection will support selecting areas larger 
+             than a visible screen as well as stretching/shrinking of the 
+             selected area.  Mouse support for selection is still restricted to 
+             a single screen.  
+
+             For new SPFLite installs, these will be defaulted to the Shift-Up, 
+             Down, Left and Right arrow keys.  
+
+      'KCPY' new keyboard function to separate the Cut of marked text on the 
+             screen from the classic ISPF CUT command which is related to whole 
+             text lines selected with CC/MM line commands.  It functions like 
+             the normal Windows Ctl-C keyboard command.  
+
+             For new SPFLite installs, this will be defaulted to the Ctl-C key.
+
+      'KPAS' which is a new keyboard level paste command, different from both 
+             the Primary PASTE and BPAS (below) commands.  KPAS will allow 
+             pasting from the Clipboard into the middle of text lines, as well 
+             as pasting into the Primary command line.  The function will honor 
+             the INS/OVR status to either Insert the text (shifting existing 
+             data right) or Overtype the existing data.  If more than one line 
+             exists in the clipboard, only the 1st line will be used.  
+
+             For new SPFLite installs, this will be defaulted to the Ctl-V key.
+
+      'BPAS' (Block Paste) this is the previous BPASTE primary command which 
+             has moved to become a keyboard function for compatability with the 
+             other cut / paste functions.  
+
+             BPAS will also now position the cursor following the last 
+             character of the pasted data.  
+
+             For new SPFLite installs, this will be defaulted to the Alt-V key.
+
+ Maintenance / Bug Fixes
+ =======================
+
+  * Correct handling of the NewLine key when below the last line.
+
+  * Correct positioning following Paste / Overlay.
+
+  * Correct an error which caused the Back-Tab function to 'disappear'.
+
+  * Reset ==CHG> indication on any activity in the line number field as well as 
+    text field.  
+
+  * For clarity, add spacer pixels between text margins and screen border.
+
+  * Add missing aliases for the line commands TAB, BND and DLM.
+
+  * Add aliases .ZF and .ZL for .ZFIRST and .ZLAST.
+
+  * Correct Move --> Overlay to work like SPF itself regarding equal characters 
+    in the two lines.  
+
+  * A mouse click to position the cursor on the command line will automatically 
+    move the cursor to the left margin if the command field is blank.  
+
+  * UNDO now properly restores the modified data indicator along with the data.
+
+Between 4.4.0 and 4.4.1
+=====================
+
+  * Correct nasty startup bug in 4.4.0
+
+
+Between 4.3.2 and 4.4.0
+=====================
+
+  Enhancements
+  ____________
+
+  * Add additional overall command and operand aliases to match real SPF usage.
+
+  * Extend PFKeys from 36 to 48 by allowing the Alt-Fx combination to be used.  
+    i.e.  there are now unaltered, Shift, Control and Alt versions of the F1 
+    thru F12 keys.  
+
+  * Extend key mapping to include Alt-A to Alt-Z, as well as Ctl/Shift/Alt 
+    combinations with the following keys:  Backspace, Delete, Down, End, Enter, 
+    Home, Insert, Left, PgDown, PgUp, Right, and Up.  This should considerably 
+    assist when using Laptop type keyboards.  
+
+  * The "Re-Open last file at Start" option of the Preferences - General tab 
+    has been enhanced so that SPFLite will re-open the SET of files that were 
+    being edited when SPFLite last terminated.  Note this works properly only 
+    when SPFLite is terminated using the Close Button (X) on the Title bar, not 
+    if tabs are closed individually.  
+
+  * Alter the 'Modified' indicator.  A modified file will now be indicated by 
+    the characters (M) in front of the filename on the Tab header.  This will 
+    allow the modified status of all open tabs to be seen at once as well as on 
+    BROWSE and CLIP tabs which previously did not show Modified status.  
+
+  * Enhance File Manager operation to properly monitor for changes in the 
+    currently displayed directory regardless of where or how altered.  
+
+  * Allow user control of the delimiters used to determine WORD, PREFIX and 
+    SUFFIX searches by the FIND and CHANGE commands.  This will allow proper 
+    support for programming languages which allow special characters to be part 
+    of variable names.  e.g.  characters like _ .  - etc.  
+
+    A new line command DLMS (Delimiters) will display the current set of 
+    delimiter characters and you may alter these as desired.  Like the TABS 
+    line data, the values set for DLMS are retained uniquely by file type.   
+    i.e.  You may have separate delimiter sets for TXT files, CPP files, CMD 
+    files etc.  
+
+  * Add new line command 'N' - New line.   This is just like the 'I' - Insert 
+    command except the lines inserted are permanent and will remain as blank 
+    lines even if unused.  
+
+  * Add a new Primary command - SAVEAS.  This saves the current text as a new 
+    file and immediately swaps the current tab to using the new filename as the 
+    defalt filename.  Just like the comparable Windows file system Save As 
+    does.  
+
+  * Enhance PASTE command.  As well as specifying an A/B to indicate where to 
+    insert the data, you may now use the O / OO (Overlay) line commands to 
+    request the Clipboard data be overlaid onto existing text lines rather than 
+    simply inserted.  
+
+  * Enhance cursor mode (INS/OVR) handling to keep modes in multiple tabs 
+    unique.  
+
+  * The CAN/CANCEL command will close the current tab if File Manager is active 
+    and switch to the File Manager screen.  If File Manager is not active, it 
+    will simply 'throw away' the current edit and remain on the current tab.  
+
+  * Support Print Screen key (and its Shift, Ctl, and Alt versions).  This will 
+    provide 4 variations of capturing the current screen: 
+      PrtScr       - Captures the entire SPFLite screen to the clipboard in 
+                     Text mode.  
+
+      Ctl-PrtScr   - Captures only the text area of the screen to the clipboard 
+                     in Text mode.  
+
+      Shft-PrtScr  - Prints the entire SPFLite screen to the Default Printer.  
+
+      Alt-PrtScr   - Captures the entire screen to a LOG filein Append mode.
+
+    Note: If you wish a normal Windows Screen Print it should be done when 
+          SPFLite does NOT have the keyboard focus, for obvious reasons.  
+
+  Bug fixes / Maintenance
+  _______________________
+
+  * Conversion of Help file to different Help Authoring tool.  I would 
+    appreciate it if any 'oops' in the conversion could be reported.  Mostly 
+    they will be in the Internal Topic Links which had to be manually 
+    converted.  
+
+  * Correct Insert line cleanup following an UNDO command.   Remove '''''' line 
+    markers earlier in processing to indicate sooner that they are real lines.  
+
+  * Correct parsing of Scroll amount field to better match the real SPF 
+    parsing.  
+
+  * Simplify format of the Status line.
+
+  * Correct cursor positioning when Left/Right scrolling with fixed amounts 
+    (PAGE/HALF/etc.) 
+
+  * Correct minor errors in Up/Down commands for differing scroll amounts and 
+    RULER status.  
+
+  * Correct missing error messages when error occurs during new tab creation.  
+
+  * Correct RETRIEVE recall when doing repeated recalls of the same command.  
+
+  * Correct parse error in SORT command when optional operands were omitted.  
+
+Between 4.3.1 and 4.3.2
+=====================
+
+  * Add error message when invalid Colorize control file statement detected.  
+
+  * Fix Duh!  error.  An = sign was not being considered a delimiter when 
+    FIND/CHANGE were searching for WORD operands.  
+
+  * Correct some errors related to switching in and out of HEX mode.
+
+  * Correct missing function keys in Preferences key mapping.  Sort Real-Key 
+    selection list.  
+
+  * Allow mouse selection of blocks of text from the screen (i.e.  not 
+    necessarily entire lines.) When a CUT command is issued with a selected 
+    text block present, then ONLY that selected block is copied.  
+
+  * A new command BPASTE (Block Paste) will perform an overlay type block paste 
+    where the current cursor location is the upper-left corner of the paste 
+    area.  Any existing text is overlaid, lines will be lengthened as needed 
+    and additional lines added if the paste block extends past the last line.  
+
+  * Improvements to the loading speed for text files, particularly large ones, 
+    and add a visual progress indicator of activity during loading or saving of 
+    large files.  
+
+  * Allow key mapping of the Ctl-A thru Ctl-Z keys.  Activate via the KeyMap 
+    tab of Preferences.  The default is as in previous versions (NOT to map) 
+    and to pass Ctl keys through as normal text characters.  This will aid 
+    SPFLite on laptop keyboards where it is easy to 'run out' of map'able 
+    keys.  As well, mapping (for example) Ctl-C and Ctl-V to PFKeys set to CUT 
+    and BPASTE will allow cut/paste operations using familiar Windows 
+    short-cuts.  
+
+Between 4.3.0 and 4.3.1
+=====================
+
+  * Correct error in assigning default directories.
+
+Between 4.2b and 4.3.0
+=====================
+
+  * Alter default mapping for the KeyPad Ins/Del keys to actually BE Ins/Del.
+
+  * Several cosmetic changes related to cursor positioning after some commands 
+    to more closely match the real ISPF actions.  
+
+  * Correct certain cursor positioning when movement passes through Excluded 
+    lines.  
+
+  * When using File Manager, a mouse Left-Click may now be used on any of the 
+    detail line items displayed to simulate the entry of an "S" (Select) + 
+    <Enter> for that line.  This provides an alternate and usually quicker 
+    method of navigation when moving up/down/through file directories.  
+
+  * New option for the naming of BKP files.  Previously the .BKP level was 
+    always added to the end of the Edit filename (e.g.  Test.txt backup would 
+    be Test.txt.BKP).  This caused the filetype of all backup files to be the 
+    same and also incorrectly reflect the type of file.  A new Preferences 
+    option may be selected to have the .BKP level INSERTED before the file 
+    type.  (e.g Test.txt backup would be Test.BKP.txt) 
+
+  * Add support for basic handling of UniCode encoded files.  The support 
+    provides for translation on Input and for re-translation to the same 
+    encoding format on output.  While editing, only normal ANSI character 
+    handling is performed based on your current default codepage.  Encoding 
+    support is provided for UTF-8 and UTF-16 (both Big-Endian and 
+    Little-Endian).  See the new ENCODING command as well as a new Help section 
+    "Handling Unicode Files" 
+
+  * Alter handling of filenames and default directories.  It had become rather 
+    inconsistent since the introduction of the File Manager option.  
+
+    Now, when no operand at all or only a simple unqualified filename is 
+    provided for the CREATE, REPLACE, OPEN or EDIT commands, the default 
+    directory used for writing the file or for the file open dialog's starting 
+    directory will be determined as follows: 
+
+    -- If there is an active file being edited in the tab where the command is 
+       issued, then the Path for THAT Active file is used as the default for 
+       the command.  
+
+    -- If there is NO active file (i.e. the tab header displays (Empty):
+
+       -- If File Manager is active, the current displayed directory of File 
+          Manager will be used.  
+
+       -- If File Manager is NOT active, then the Preferences setting for 
+          Default Open directory will be used (Last Used or Working).  Remember 
+          'Working' means the Windows working directory when SPFLite was 
+          started.  
+
+  * As well as the above, file names passed on the command line to SPFLite when 
+    starting, will always use the Working Directory as the default location 
+    unless the passed filename is a complete full pathname (which will of 
+    course be used).  
+
+
+
+Between 4.2a and 4.2b
+=====================
+
+  * Adjust TS line command to keep indent of split lines the same.
+
+  * Correct calculation of mouse click cursor location when adjacent to window 
+    border.  
+
+  * Correct Profile Preferences dialog.  The Mouse and Key Mapping pull-down 
+    lists for 3270 keys were missing the UP, RIGHT and TAB settings.  
+
+Between 4.2 and 4.2a
+====================
+
+Bug Fixes
+---------
+
+  * Correct Colorise parsing error introduced by the new ESCAPECHR support.
+
+  * Correct cursor positioning in File Manager when switching to directories
+    with fewer display items than the previous directory.
+
+  * Correct corrupted Help and PDF Documentation files.
+
+Between 4.1c and 4.2
+========================
+
+Enhancements
+------------
+
+  * Introduce an optional integrated File Manager to assist in managing and 
+    selecting files for Edit or Browse, and for basic File Delete & Rename 
+    functions.  This support can be activated via an option on the Preferences 
+    - General Tab.  
+
+  * Improve Colorize support: 
+      > New MIXEDCASE YES/NO option to Colorize files to support languages 
+        which are sensitive to the case of keywords.  (e.g.  Java) 
+      > New ESCAPECHR x option to allow specification of an ESC character 
+        sequence for those languages that use this.   e.g.  With ESCAPECHR \ 
+        the following would be a valid literal.  
+                                        'What\'s the answer'
+
+  * Add two new text support line commands:
+      SC / SCSC - Sentence case.  Convert the text to sentence format.  All 
+                  words are first lower-cased, then the first word of each 
+                  'sentence' is capitalized.  
+      TC / TCTC - Title case.  Convert the text to Title format.  All words are 
+                  first lower-cased, then the first letter of each word is 
+                  capitalized.  
+
+  * Reinstate the Scroll amount field on the SPFLite screen to allow setting a 
+    different default scroll amount from the previous CSR only default.  Add 
+    another Preferences value to control the default starting value for the 
+    field.  If not altered, the default will be CSR as in previous versions.  
+
+  * An optional Label is now available for PFK definitions.  If used the label 
+    will be displayed by the PFSHOW line(s) rather than the actual command and 
+    its parameters.  To enter a Label, simply prefix the actual command with 
+    the label enclosed in square brackets.  
+        e.g.    [Test Data]Can;OPEN "D:\Public\Data\Test Data.txt"    assigned to PFK5
+    would display in the PFSHOW line as 05=Test Data
+                            rather than 05="Can;OPEN D:\Pu...
+
+  * Implement the CRETRIEV primary command.
+
+  * Add a visible "Changed" indicator to show a file has been altered since 
+    Open / Last Save.  
+
+  * Add X and NX operands to PRINT to allow printing of only excluded or 
+    non-excluded lines.  
+
+Bug Fixes
+---------
+
+  * Correct handling of Locate commands past the last line.  (e.g.  L 999999) 
+
+  * Correct Find/RFind handling of 'Not found' and wrapping back to the top to 
+    continue the search.  
+
+  * Altered scanning of multiple mixed line commands to improve the 'sorting 
+    out' of non-contiguous sets of commands.  e.g.  Copy/Move --> After groups 
+    with interspersed Immediate commands (I / D type).  
+
+  * Correct Preferences reporting a false error related to Key Mapping when no 
+    change to Key Mapping had been performed.  
+
+  * Correct OPEN processing when specifying a non-existent file from the Open 
+    Dialog.  
+
+  * Correct error in loading Colorize control files.
+
+  * Revise RETRIEVE handling to more closely match the normal IBM ISPF 
+    handling.  
+
+  * Correct logical Screen position following a CANCEL command.
+
+  * Correct parsing of stacked commands with embedded Cmd delimiters within 
+    literals.  
+
+  * Correct inadvertent altering of the Screen Height setting when PFK Show is 
+    activated.  
+
+  * Correct incorrect display of PF24 when PFSHOW is used.
+
+  * Correct handling of Up/Down commands when cursor line is being deleted.  
+
+  * Correct colorize keyword lookup, it was somewhat less than 100% accurate 
+    before.  
+
+  * Correct colorize parsing error related to the COMMENT2 delimiter.
+
+  * Correct error in shutting down when AUTOSAVE is set to ON.
+
+  * Correct intermittent 'phantom' cursor when switching tabs.
+
+  * Correct error when opening a new file in a 'CANCELed' tab.
+
+
+Between 4.1b and 4.1c
+========================
+* Correct internal remnants of one line command corrupting subsequent line 
+  commands.  
+
+
+Between 4.1a and 4.1b
+========================
+* Correct previous bug fix which caused pending line commands to be 
+  overlooked.  
+
+
+Between 4.1 and 4.1a
+========================
+* Correct CREATE / REPLACE treating MM line commands as CC commands.
+
+* Keep current screen location following CREATE / REPLACE command completion.  
+
+* Correct handling of default directory when multiple tabs open to different 
+  directories.  
+
+
+Between 4.0Beta2 and 4.1
+========================
+* Performance improvements for simple cursor movements.
+
+* Correct handling of line number references on CREATE / REPLACE / CUT / PRINT 
+  commands.  
+
+* Change PAGE command name to SWAP (more logical and matches ISPF usage).  PAGE 
+  will be kept internally as an alias for SWAP.  
+
+* Correct handling of COPY and PASTE commands when other line commands, in 
+  addition to the required A/B location specifier, are entered at the same 
+  time.  
+
+* Add additional aliases for LCLC/UCUC commands (LL/UU) and correct parsing 
+  error on line commands which would allow numeric repeat factor on commands 
+  which do not need/support it.  
+
+* Internal changes to simplify code re: Windows common dialog prompts.
+
+* Add new Line Command (J) - Join, which will join the specified line with the 
+  next line.  
+
+    e.g       J.....       Here's   some   text
+              ......    Some more text
+    would become the single line
+              ......       Here's   some   text    Some more text
+
+    Note multiple embedded spaces are not compressed (like the TF command) nor 
+    are leading spaces removed from the lines.  
+
+* SPFLite will now accept files via Drag/Drop onto the window to OPEN them (in 
+  a new tab if the currently selected tab is not (Empty).  
+
+* Correct handling of Background color setting when change is made from a tab 
+  running with a colorize setting with a different BG color than that set in 
+  the Preferences - Screen tab.  
+
+* New PROFILE option to request all SPFLite edits be kept as tabs in a single 
+  window.  e.g.  If turned ON, a file dropped on the SPFLite Icon, would simply 
+  Open as an edit, in a new tab, in the existing SPFLite session.  A separate 
+  window can always be created via the EDIT command in the currently active 
+  window, which will always open a new independent window.  
+
+* Ctl-LeftArrow and Ctl-Right arrow will now provide a 'quicker' way to move 
+  the cursor left and right.  The cursor will be moved to the start of the 
+  next/previous word on the line.  At the left/right end of the line, the 
+  cursor will move to the appropriate word on the prev/next line.  
+
+  These keys are only active on text lines, and 'word' is a simple blank 
+  delimited string.  i.e.  multiple words within quotes (e.g.  a literal) are 
+  NOT considered to be one word.  
+
+  If you dislike compound key sequences, the functions can be re-assigned to 
+  some other keys (like a PFK) with Profile Preferences - Key Map.   The keys 
+  are named CTLF and CTRT.  
+
+
+Between 4.0Beta1 and 4.0Beta2
+=============================
+* Correct default minimum size for Cursor size in Preferences - Screen to 20%.  
+  Values lower than 20 may not even appear on certain Font / Screen 
+  resolutions.  
+
+* Correct Left/Right mouse click event handling (inadvertently crippled - 
+  Oops).  
+
+
+Between 3.2 and 4.0Beta1
+========================
+* The main enhancement in this release is the addition of a Tabbed interface.  
+  You can now open multiple edits in the same window.  Each edit will appear in 
+  its own Tab.  Short description of Tab handling: 
+    > An OPEN command issued in an Edit session containing existing data will 
+      open a new tab.  
+
+    > An OPEN issued in an 'empty' tab (e.g.  from a prior CANCEL) will open in 
+      the same tab.  
+
+    > Switching tabs can be done via the mouse (clicking on the desired tab) or 
+      via a new primary command PAGE Next/Prev.  The command would typically be 
+      assigned to a PFK.  
+    > An END command will close the active tab (saving if appropriate).  
+
+    > A click on the Window Close button (X) will cause all tabs to close (with 
+      saving as appropriate) 
+
+
+* Correction to line number reset in Copy/Overlay handling.
+
+* Correct recovery from illegal line commands on Top / Bottom of File lines.
+
+* Correct RFIND start search location when cursor is not in the data area.
+
+* Prevent program crash using X99999 line command on large files with multiple 
+  large blocks already excluded.  
+
+* Correct handling of CRLF setting in the Preferences General tab.
+
+* LOCATE (L) command will now un-'X' the requested line if it is currently X'd 
+  out' 
+
+* Enhance FIND parsing to 1) Prevent mixed numeric/alpha operands being treated 
+  as numeric 
+
+                          2) Allow simple single numeric operands to be treated 
+                             as literals 
+
+                                e.g.    FIND 1234         will be treated as
+                                        FIND "1234"
+
+* Correction to FIND FIRST for incorrect starting column on 1st line.
+
+* Reduce unneeded space in preferences dialog to reduce total height.
+
+* New preference option for the Window Title.  The filename may be chosen to be 
+  1st in the title line.  This means the text in the Windows Task bar will 
+  properly identify which file is edited rather than always saying "SPFLite 
+  (Vx.y).......  
+
+* New Preference option to replace the Blob cursor setting.  You may now 
+  control the height of the Normal and Insert cursors individually, each based 
+  on a % height of a full Blob cursor.  The defaults are 20% for a normal 
+  cursor, and 90% for an Insert cursor.  
+
+* Correct handling of cursor positioning when Enter is pressed while the cursor 
+  is in the Line number area.  
+
+Between 3.2 and 3.1a
+===================
+* Performance improvements for scrolling of large text files.
+
+* The code for handling of data entry in the line number area has been totally 
+  replaced.  The 1st action in the line number area will now blank the whole 
+  field to avoid possible incorrect line commands being formed by a blend of 
+  typed characters and previous line number numerics.  This change also removes 
+  the need for the 'Insert in Line number safely' option which has been 
+  removed.  
+
+* Support has been added for bookmarks (line labels).  Any character string 
+  starting with a period may be entered in the line number area.  e.g.  .here, 
+  .there, .back, etc.  Once entered you can reposition quickly to the 
+  bookmarked location with the Locate command.  For example,entering L .here 
+  would scroll the bookmarked .here line to the top of the screen.  
+
+  As well, primary commands which can have line number operands will accept 
+  either absolute line numbers or bookmark labels.  e.g.  PRINT NONUM .from .to 
+  (assuming the .from and .to labels had previously been assigned).  Primary 
+  commands affected are: CREATE, CUT, DELETE, LOCATE, PRINT and REPLACE.  
+
+* Enhancements to the CUT command.
+   * CUT command will will now ignore X'd lines which are included in the CUT 
+     range.  This will allow CUT'ing of fragmented ranges of lines by excluding 
+     the undesired embedded ranges.  
+   * The CUT command will now accept an APPEND command (or any abbreviation of 
+     it) to request the specified CUT range be ADDED to the current contents of 
+     the clipboard.  e.g.  CUT 10 20 APP 
+
+* Prevent internal commands appearing in the RETRIEVE stack.
+
+* Correct cursor positioning after an 'S' line command on an Excluded range.
+
+* Correct Preferences processing when invoked by a PFKEY command.
+
+* Correct Preferences 3270 Key List (typo for PF34)
+
+* Minor spelling errors corected.
+
+* An EDIT filename, or OPEN filename command where the filename does not exist, 
+  will continue and open the file as a new, empty text file rather than report 
+  an error.  A CANCEL out of the edit will delete the newly created file (e.g.  
+  it was a typo) 
+
+* The HIDE command is now a 'toggle' type command (like HEX) to turn HIDE mode 
+  on and off.  The HIDE operand of RESET has been removed.  
+
+* The RESET command now supports the CHANGE, COMMAND, EXCLUDED, LABEL and 
+  SPECIAL operands.  
+
+* EOLN (Erase to end of field) now works in line number area.
+
+* SPFLite previously always initialized using the last used directory as the 
+  starting directory.  a new option now allows you to specify that it should 
+  use the 'Working' directory as the default.  
+
+* Format of the COLS and RULER line altered to match the format of IBM's ISPF.
+
+Between 3.1a and 3.0b
+===================
+* Correct initialization code so -CLIP command option is handled properly.
+
+* Correct Preferences handling of Insert Line Numbers Safely.
+
+* Correct display of INI file name at the bottom of the Preferences Dialog so 
+  that long path/filename combinations are not truncated.  
+
+* Correct handling of Status Line after change in color preferences.
+
+* Correct repaint of selected color choice in Preferences.
+
+* Show effect of selected color in main window while choosing colors in 
+  Preferences.  
+
+* A filename specified as an operand when starting SPFLite will, if it does not 
+  exist, cause an empty Null file to be created rather than report as a "File 
+  not found" error.  If the edit is CANCELed before saving, the file will be 
+  deleted.  
+
+* An UP arrow while in the Command Line when Keyboard scrolling is active will 
+  wrap to the last line of the screen rather than remain on the Command line.  
+
+* The command line option -INIT will now accept a fully qualified filename.  If 
+  this is provided in place of the 'simple' INI name then SPFLite will use the 
+  noted filename, even if it is NOT in the normal INI path.  A 'simple' name 
+  will still be searched for in the normal INI path.  
+
+* The command retrieve stack, used by the RETRIEVE command, will now only save 
+  unique values (it will not save the same command twice) and will also now 
+  save the current stack between SPFLite sessions.  
+
+* Add support to Picture literals for the '.' character (any non display 
+  character).  The Preferences > General tab now also contains a setting to 
+  allow specification of 'normal' characters.  This will allow customization of 
+  'normal' to include national characters (Å, Ç etc.) and other special 
+  characters (Euro €, Pound £, etc.) 
+
+Between 3.0b and 3.0a
+===================
+* Remove PFK line insertion fix for review, it was seriously flawed.
+
+* Correct handling color selection of Line Number area Hi/Lo.
+
+* Correct Preferences handling of Screen Height when PFK Show is active.
+
+* Correct Font selection when OK pressed with no font actually selected.
+
+* Correct handling of Keyboard Scrolling selection (it was not being saved).
+
+* Corrected logic in handling BKP file creation.
+
+Between 3.0a and 2.16
+===================
+* Major change to the saving of Profile and Initialization settings.  
+  Previously some were kept in the INI file, and some in the System Registry.  
+  These settings have now been combined and will be kept in a new format INI 
+  file.  The INI file is now in 'standard' INI file format.  
+
+* Direct editing of the INI file is no longer needed (nor recommended).  All 
+  INI settings are now alterable by a Tabbed Preferences dialog.  This is 
+  reached via the PROFILE command.  
+
+* The TRY command no longer exists, the preferences dialog now serves this 
+  purpose.  
+
+* The former PROFILE and PFKEY commands will both now invoke the Preferences 
+  Dialog.  
+
+* To better handle security in Vista (and later) systems, the INI file will no 
+  longer be stored in the Install directory, but in the standard user documents 
+  folder (e.g.  My Documents\SPFLite in XP, or Documents\SPFLite in Vista).  
+
+* User macros (*.SPM files) and colorize files (*.CLR) files will also be 
+  stored in the same data directory.  The initial execution of SPFLite V3.00 
+  will handle copying these files to the new location.  
+
+* Screen color customization can now select the full range of available colors, 
+  not just the simple basic 16 'standard' colors.  
+
+* CLR (Colorize control files) may also now use the full range of available 
+  colors.  See the Help Appendix for the change to the SCHEME statement.  
+
+* As much as possible, previous settings have been migrated automatically, 
+  however it was not possible to handle them all.  The first execution of this 
+  release will automatically place you into the Preferences Dialog.  Two main 
+  areas not converted were the Keyboard Mapping, and the Screen color 
+  settings.  As well TABS settings which were automatically saved for each 
+  edited file type will not have been converted.  
+
+* If SPFLite is copied to a removeable drive (e.g.  a USB thumbdrive) and 
+  executed from the removeable drive, then the EXE file location will be used 
+  to look for the INI, SPM and CLR files.  This will enable a properly 
+  customized SPFLite to be used on systems to which it has never been 
+  installed.  
+
+* Correction to handling screen background color during colorize processing.
+
+* Correction to handling of LEFTCLICK and RIGHTCLICK options when the CHRx 
+option is selected.  
+
+* Correction to UP command when cursor is in line number area of the last line 
+  on the screen.  
+
+* Correction to PFK insertion of line commands when the cursor is IN the Top Of 
+  Data / Bottom of Data text area.
+
+* Yet another tweak to line command parsing.
+
+* Correct Find logic when search literal contains trailing blanks, or is all 
+  blanks.  
+
+* Some more optimizations using new compiler features.
+
+Between 2.16 and 2.15
+===================
+
+* Correct handling of dead keys with International keyboard layouts.
+
+* Add support to CLR files to point at a different (common) CLR file to use.  
+  This will allow a single common CLR file to support multiple source file 
+  types.  See Help file for more details.  
+
+* Add Beep (if ERRORBEEP ON) when character key hit when in a non-typeable 
+  area.  
+
+* Finally (for the many requesting it) add HEX support.
+
+* Add support for Hex literals as well.   e.g. x'3132'.
+
+* Add PROFILE option (ROpenLast - Yes/No).  If YES, and no filename is provided 
+  on the command line, SPFLite will re-Open the last file edited when 
+  starting.  
+
+Between 2.15 and 2.14
+===================
+
+* Correct nasty bug which, for larger files, would cause lines to be split in 
+  two.  
+
+Between 2.14 and 2.13
+===================
+
+* Correct FIND/CHANGE command parsing for handling bounds overrides when global 
+  BOUNDS values are active.  
+
+* Add new command line parameter to allow alternate INI files to be specified.  
+  This will allow separate Startup Icons to be created for different screen 
+  sizes, keyboard mappings, etc.  
+
+* Due to previous item, parsing of the command line is slightly altered.  If 
+  you currently use the CLIP or BROWSE options, a trivial format change to the 
+  operands is required.  
+
+* Correct LOCATE command positioning when used in stacked commands which also 
+  move the cursor when non-data lines (X, BNDS, etc.) are present.  
+
+* Correction to properly save PROFILE ERRORBEEP setting.
+
+* Correction to CHANGE ALL X so that all occurrences on an X'd line are done, 
+  not just the 1st.  
+
+* Leave cursor position unchanged unless needed when processing PFK commands.  
+
+* Alter file reading routine to always read to the true EOF.  Previously an 
+  embedded Ctl-Z was treated as the end of file.  
+
+* Add support for the Data Shift line commands:  << < > >> .
+
+* Add new TRY command to allow testing new Screen Width / Height / and Font 
+  selections.  
+
+* Add new EDIT command to spawn additional SPFLite sessions.
+
+* Give up on Windows MSI files for the installer. Way too picky; way too slow.
+
+Between 2.13 and 2.12
+===================
+
+* Add NOFLUSH command for Batch files to prevent a command error stopping the 
+  execution of following commands.  e.g.  a series of CHANGE commands where 
+  some of the search values may not always be present.  
+
+* Correction (further) to Line Command parsing.
+
+* Enhance keyboard routine which did not support Shift and Ctl with the 
+  Function keys to support additional function keys.  Note that this change has 
+  altered the DEFAULT sample INI file.  If you have a customized INI file you 
+  should review it to see if you might use this support.  
+    Note also the default ENTER key is now Enter (not Right-Ctl) as this seemed 
+    to cause a lot of confusion to new users before any customization was 
+    performed.  
+
+* Variety of cleanup in handling command line refreshing when command syntax 
+  errors occur.  
+
+* Corrections to keyboard handling of Numeric keys and Numlock combinations.  
+
+* Corrections to Search commands when search literal has trailing blanks and 
+  the searched for text occurs at end of line.  
+
+* Correction to F and L line commands to properly adjust for subsequent line 
+  commands.  
+
+* Correction for CANCEL command not resetting Left/Right scroll.
+
+* Correction for Line Insert not scrolling to inserted line.
+
+* Correction for FIND/CHANGE ignoring cursor position if in the line number 
+  area.  
+
+* Add a few more aliases for primary commands.
+
+* Add support for the S (Show) line command.
+
+* Correction to tab handling when on Top/Bottom of Dataset lines.
+
+* Correct window title of Help file.
+
+Between 2.12 and 2.11
+===================
+
+* Correction to PFKEY command which ignored settings for PFK10.
+
+* Addition to Colorize support to allow unique color for quoted literals.  See 
+  the Appendix description of Colorize support for the new QUOTED keyword.  
+
+* Correction to handling variable substitution in macros.
+
+* Correct RUN command to invoke all commands IN the SPFLite install directory.
+
+* Allow PFK definitions to stack Primary Commands after an initial Line 
+  Command.  
+
+
+Between 2.11 and 2.10
+===================
+
+* Enhance the RUN command to allow use of the variable substitution 
+  characters.  (~f, ~p, etc.) 
+
+* Addition of ~l/~L variable for the current line the cursor is on.
+
+* Addition of Source Colorize support.  See new PROFILE COLORIZE option and 
+  Appendix description of Colorize support and Keyword file layout.  
+
+* Correction to CREATE and REPLACE commands when used with a new file to load 
+  the appropriate TABS and Colorize defaults for the file extension.  
+
+* Correction (again) to line command parsing.
+
+* Correct error which caused the command line to sometimes appear to not be 
+  recognized.  
+
+* Correction to PASTE command to properly handle text data with non-standard 
+  line delimiters.  i.e.  MAC or UNIX type line endings.  
+
+Between 2.10 and 2.9
+===================
+
+* Correction to line command handling of MM/OO ranges where scrolling is needed 
+  to enter the commands.  
+
+* Correction in handling copied/moved BNDS or TABS lines.
+
+* Correction to Change command handling of blank search string and column 
+  oriented data.  
+
+* Correction to handling of RETRIEVEd commands.
+
+* Correction to Save Open file dialogue from forcing .txt extension.
+
+* Correction to parsing of operands containing mixed single and double quotes.  
+
+* Correction to search logic during backward searches (PREV operand).  
+
+* Correction to search hi-lighting when line ultimately becomes Excluded.  
+
+* Enhance search logic to treat short or null lines as space filled during 
+  compares.  
+   
+* Blank lines in the INI file are now treated as comments.
+
+* Addition of optional Beep for error messages.  See PROFILE ErrorBeep ON/OFF.  
+
+* Addition of PROMPT as an option of PROF AUTOSAVE in addition to ON/OFF.  
+
+* Addition of CAPS status to filetype data saving along with the TABS line.  
+
+* Addition of support for a limited Macro ability.  Support for a simple file 
+  of Primary commands with operand variable substitution.  
+
+* Addition of a Font package on the SPFLite web site to supply some alternative 
+  fixed pitch fonts for use with SPFLite.  
+
+Between 2.9 and 2.8
+===================
+
+* Corrections so that Shortcuts dropped on the SPFLite icon will properly open 
+  the file to which the shortcut points.  
+
+* Correct error where the 'F' Line command prior to a Change command could 
+  corrupt Data.  
+
+* Correct error which could cause crashes at program termination under some 
+  Windows versions.  
+
+* Correct error in PRINT command handling of line ranges.  
+
+* Improvements to File loading speed for larger files.  
+
+* Update to finally add UNDO support.  
+
+* Update to allow keyboard mapping to specify a actual character to substitute 
+  as well as the normal 3278 control keys.  e.g.  make the keypad back into a 
+  'normal' numeric keypad.  
+
+* Update to support NONUM operand on PRINT command.
+
+* Update to support a BROWSE mode to prevent accidental changing and saving of 
+  data when using SPFLite to simply browse files.  
+
+* Update to support optional Cursor Blink/Noblink
+
+* Update to support an optional Status line on the bottom of the screen.  Line 
+  will show status of: Insert, Caps, Screen cursor position, and logical data 
+  cursor location.  
+
+* Update to support optional display of PFK definitions at bottom of screen.
+
+  Refer to new SET values in the INI file for:
+      > CursorBlink option
+      > StatLine ON/OFF
+      > UNDO number of levels specification
+      > Color definitions for the New Status and PFK Show lines
+      > Sample use of new Leyboard mapping option (CHRx)
+
+  Refer to the PROFILE command for PFK definition display (PROFILE PFKSHOW).
+
+Between 2.8 and 2.7
+===================
+
+* Corrections to line command handling of ranges with Excluded lines.
+
+* Corrections to restore the RETRIEVE command damaged by a fix in the 2.7 
+  release.  
+
+* Corrections for window Title bar contents following a CANCEL command.
+
+* Updates to keyboard support.  SPFLite should now support alternate keyboard 
+  layouts.  
+
+Between 2.7 and 2.6
+===================
+
+* Corrections to scrolling when there are pending Line Commands.
+
+* Several new customization options related to how Insert Mode is handled.
+  There are four new PROFILE options:
+    INSMODE      - ON/OFF - specifies whether to start in Insert mode or not - 
+                            default OFF.  
+
+    INSRESET     - ON/OFF - specifies whether to reset active Insert mode to 
+                            the default INSMODE on an Attn key.  Default ON.  
+
+    INSSAFELN    - ON/OFF - Specifies handling of Insert mode in the Line 
+                            Number area.  Default is ON.  ON  - Insert chars 
+                            only if trailing blanks exist in field OFF - Insert 
+                            always, shift and truncate at right end as needed.  
+
+    INSBLOBCUR   - ON/OFF - Specifies what cursor to use in Insert mode.  ON  - 
+                            Use a 'blob' cursor.  OFF - Use a normal Underline 
+                            cursor.  
+
+Between 2.6 and 2.5
+===================
+
+* Correct Title Bar setup when SPFLite started with a filename on the command 
+  line.  
+
+* Corrected cursor positioning for FIND/CHANGE.  When CHANGE text contains the 
+  FIND string, incorrect positioning caused SPFLite to 'loop' on the text line 
+  till cancelled or memory was exhausted.  
+
+* Correction to handling Repeat value on CC/MM line commands.
+
+* Correct location of inserted BNDS line to be BEFORE the requesting line 
+  rather than AFTER.  
+
+* Correct RESET logic handling of 'special' lines (COLS, BNDS, etc.).
+
+* Correct several problems when manipulating files with very large line 
+  counts.  Note: SPFLite's memory management is NOT designed for very large 
+  files (> 100,000 lines).  It will simply run slower and slower and become 
+  basically unusable.  
+
+Between 2.5 and 2.4
+===================
+
+* Implemented the Primary HIDE command and associated RESET HIDE.
+
+* Corrected error handling when PASTE issued without an A/B line command.
+
+* Corrected line command processing when multiple pending requests are 
+  entered.  
+
+* Numerous corrections to the handling of line commands involving XX'd out 
+  lines.  The errors ranged from incorrect data handling to outright crashes.  
+
+* Corrected error in handling MOVE/OVERLAY when fewer source lines than 
+  destination lines.  
+
+* Corrected error in Primary FLIP command.
+
+Between 2.4 and 2.3
+===================
+
+* Corrected a long-undiscovered bug in handling Move/Overlay when the Overlay 
+  lines are higher in the file than the Move lines.  
+
+Between 2.3 and 2.2
+===================
+
+* Alter handling of insert mode typing in the line number area to prevent 
+  SPFLite interpreting shifted line numbers as numeric operands.  In Insert 
+  mode characters will not be inserted unless characters to the right have been 
+  deleted previously.   e.g.  Typing a 'D' in position 1 of Line # (000123) 
+  used to shift and leave the field as (D00012) - certainly NOT what was 
+  desired.  
+
+* Corrections to handling FIND/CHANGE/RCHANGE strings, particularly null quoted 
+  strings e.g.  "" 
+
+
+Between 2.2 and 2.1
+===================
+
+* Version 2.2 fixes a the same dumb error in the OPEN / COPY primary commands 
+  as 2.1 did for CREATE / REPLACE.  A true embarrassment to have missed it.  
+
+Between 2.1 and 2.0
+===================
+
+* Version 2.1 fixes a dumb error related to the CREATE / REPLACE primary 
+  commands when they are using the standard Windows 'Save As' dialogue box.  
+
+Between 1.4 and 2.0
+===================
+
+* Version 2.0 switches SPFLite from a Console mode application to a normal 
+  Windows application.  
+
+* Almost full keyboard customization is now available.  You may re-map nearly 
+  all the keyboard control keys as you desire.  
+
+* Some additional mouse support has been added (including MouseWheel support), 
+  however SPFLite treats these all as extensions to the basic keyboard 
+  functioning.  No change to keyboard operation (other than the new keyboard 
+  mapping) has been made.  
+
+* Keyboard mappings and customization of the screen options have been removed 
+  from the PROFILE options and are now contained in an optional SPFLite.INI 
+  file for easier access and modification.  
+
+* A new RULER option is available to cause a ruler to appear as the top line of 
+  the data screen.  
+
+Between 1.3 and 1.4
+===================
+
+* Finally, with the assistance of many others in the PowerBasic forums, a way 
+  to access the Right-Ctl in SPFLite for use as the SPF Enter key for those who 
+  prefer it.  See the new PROFILE option RIGHTCTL for details.  Activating this 
+  option also frees up the BKSP key which will now function as a normal PC BKSP 
+  key.  
+
+* The mouse can now be clicked anywhere on the screen to quickly move the 
+  cursor to that location.  
+
+* A new PROFILE option (AUTOSCROLL) can be turned on which alters the cursor 
+  handling within the text data area.  Moving the cursor 'past' a boundary will 
+  cause the text data to scroll rather than wrap the cursor to the other side 
+  of the screen.  
+
+* The Close button in the Title bar has been re-activated and will be treated 
+  as a Primary END command.  
+
+* Pressing Enter with the cursor on an empty command line will now tab 
+  properly.  
+
+* Additional aliases for some of the Primary commands have been included.  
+
+* Support is available for altering the command stacking character (default of 
+  ;).  See the PROFILE option CMDCHR.  
+
+Between 1.2 and 1.3
+===================
+
+* Repeat FIND which reaches the top or bottom (ending in a 'Not Found') will 
+  continue from the Top/Bottom as appropriate.  
+
+* Added alias line commands LCC/UCC for Lower/Uppercase line range commands 
+  equivalent to LCLC/UCUC.  
+
+* Added support for the Picture type literal in FIND and CHANGE commands 
+
+Between 1.1 and 1.2
+===================
+
+* Correction to TF line command re: handling of lines containing quotes and/or 
+  double quotes 
+
+Between 1.0 and 1.1
+===================
+
+* Correction to primary CUT command in placing data in Windows clipboard.  
+
+* Correct PASTE command of text containing TAB characters (they weren't being 
+  expanded).  
+
+* Correct text of PASTE error message.
+
+* Add new PROF option (DEL3270) to provide alternate DELETE key handling.
+
+* PROF command was not displaying the status of the ENDERASE setting.
+
+* Add command line option 'CLIP' to auto Edit/Save the clipboard contents
+
+Between 1.0beta and 1.0
+=======================
+
+* Improve Left/Right Scrolling when cursor in actual text area.
+
+* Add link to Help file in Start Menu Group during install.
+
+* Correct extraction of substrings with embedded quotes (like it's).
+
+* Correct Text Flow line command (TF) when paragraph is at bottom of document.
+
+* Make formatting of window title consistent.
+
+* Leave screen position 'as is' after a CUT/PASTE operation rather than TOP.
+
+* Really long file names cause problems (grrr!)
+
+* Correct really nasty Line Repeat errors (mispositioned Cursor, misadjustment 
+  of following line commands, etc.) 
+
+* Correct Right scroll when max line length < viewable screen width.
+
+* Support UNIX/Mac style text files (i.e. line endings CRLF/LF/CR)
+
+* Add primary PRINT command.
+
+* Correct 'lost' instruction causing SAVE missing filename errors.
+
+* Correct TF line command when requested flow column > max. line size
+
+* Added CRLF primary command to simplify support for non-WIN format text 
+  files.  
+
+* Additional scrolling and cursor positioning cleanup when multiple commands 
+  issued in one interaction.  
+
+* Added Pop-Up display of current PROFILE options following any change to the 
+  PROFILE.  
+
+* Added Pop-Up display of current PFKEY settings following any PFKEY change.  
+

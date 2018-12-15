@@ -1,0 +1,201 @@
+' SPMConvert.MACRO  
+'
+' This macro will convert a former SPFLite basic SPM type macro into the new
+' .MACRO format.
+'
+' Syntax: SPMConvert
+'
+' Author: George Deluca
+'
+dim MacName, lclText, lclTrail, lclC, QUsed as string value ""
+dim fOnce, fNoFlush, fUnSupp, fCheckQuote as number value 0
+dim i, j as number value 0
+dim cLPtr as number value 1
+
+if Get_Last_LPtr = 0 then halt(FAIL, "No lines in the file")
+
+'----- Get the macro name
+MacName = ucase$(Get_FileBase$)                       ' Get uppercase macro name
+
+while cLPtr < Get_Last_LPtr                           ' Loop through all lines
+   if Is_Data(cLPtr) then                             ' Only do data lines
+      lclText = trim$(Get_Line$(cLPtr))               ' Get the text of the data line 
+      fCheckQuote = 0                                 ' Reset fCheckQuote flag 
+      fUnSupp = 0                                     ' Reset fUnSupp flag 
+
+      '----- Check for comment line 
+      if left$(lclText, 1) = ";" or left$(lcltext, 1) = "\" then  ' Got a comment? 
+
+         '----- Check for macro prototype line 
+         if fOnce = 0 then                            ' One time check for prototype line
+            fOnce = 1                                 ' Flip one-time switch
+            if ucase$(mid$(lclText, 2, len(MacName))) = MacName then        ' Got the macro name? (valid prototype) 
+               lclText = "' " + MacName + ".MACRO " + mid$(lclText, 3 + len(MacName)) ' Build new prototype line 
+            else 
+               lclText = "' " + MacName + ".MACRO "   ' Build new header line 
+            end if                                    ' 
+         end if                                       '
+         lclText = "'" + mid$(lclText, 2)             ' Convert the comment 
+         Set_Line(cLPtr, lclText)                     ' Update the line 
+
+      '----- Check for NOFLUSH 
+      elseif ucase$(left$(trim$(lclText), 7)) = "NOFLUSH" then ' NOFLUSH directive?
+         fNoFlush = 1                                 ' Remember we saw it
+         lclText = "' NOFLUSH"                        ' Convert to a commant 
+         Set_Line(cLPtr, lclText)                     ' Update the line 
+
+      '----- Check for null 
+      elseif trim$(lclText) = "" then                 ' Null line?? 
+         ' Do nothing                                 '   
+
+      else                                            ' Everything else is a command line 
+         lclText = SPF_Quote$(lclText)                ' Smart quote it
+         QUsed = left$(lclText, 1)                    ' Copy whatever quote was used by Quote$ 
+         if Get_RC > 0 then fCheckQuote = 1           ' If problems, have a NOTE added
+
+
+         '----- Convert ~n type variables
+         i = instr(lclText, any "~^")                 ' Get ~^ location
+         while i > 0                                  ' While we have a ~n operand 
+            j = val(mid$(lclText, i + 1))             ' Yes, get the operand number 
+            if j > 0 then                             ' A numeric ~ value?
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_Arg$(" + j + _      ' ~n becomes 
+                      ") + " + QUsed + mid$(lclText, i + 2) ' Surround ~n with quotes     ' QUsed + Get_Arg$(n) + QUsed 
+            end if                                    '
+            i = instr(i + 2, lclText, any "~^")       ' Get next ~^ location (if any) 
+         wend                                         ' 
+
+         '----- Convert ~x type variables
+         i = instr(lclText, "~")                      ' Get ~ location
+         while i > 0                                  ' While we have a ~n operand 
+            lclC = ucase$(mid$(lclText, i + 1, 1))    ' Yes, get the operand character 
+            if lclC = "C" then                        '    
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_INI_Path$" + " + " + QUsed + mid$(lclText, i + 2)  
+
+            elseif lclC = "D" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FileDate$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "E" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_EXEPath$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "F" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FileBase$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "L" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_Curr_Line$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "N" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FileName$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "P" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FilePath$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "T" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FileTime$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "W" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_Curr_Word$" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "X" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "Get_FileExt$" + " + " + QUsed + mid$(lclText, i + 2)
+                 
+            elseif lclC = ">" then 
+               ' Ignore for now
+                 
+            else 
+               fUnsupp = 1                            ' Unsupported ~ variable 
+                 
+            end if 
+            i = instr(i + 2, lclText, any "~^")       ' Get next ~ location (if any) 
+         wend                                         ' 
+
+         '----- Convert ^x type variables
+         i = instr(lclText, "^")                      ' Get ^ location
+         while i > 0                                  ' While we have a ^n operand 
+            lclC = ucase$(mid$(lclText, i + 1, 1))    ' Yes, get the operand character 
+            if lclC = "C" then                        '    
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_INI_Path$)" + " + " + QUsed + mid$(lclText, i + 2)  
+
+            elseif lclC = "D" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FileDate$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "E" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_EXEPath$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "F" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FileBase$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "L" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_Curr_Line$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "N" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FileName$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "P" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FilePath$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "T" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FileTime$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "W" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_Curr_Word$)" + " + " + QUsed + mid$(lclText, i + 2)  
+                 
+            elseif lclC = "X" then 
+               lclText = left$(lclText, i - 1) + QUsed + " + " + "ucase$(Get_FileExt$)" + " + " + QUsed + mid$(lclText, i + 2)
+                 
+            elseif lclC = ">" then 
+               ' Ignore for now
+                 
+            else 
+               fUnSupp = 1                            ' Unsupported ^ variable 
+                 
+            end if 
+            i = instr(i + 2, lclText, any "^")       ' Get next ^ location (if any) 
+         wend                                         ' 
+
+         '----- Convert >n type variables
+         i = instr(lclText, ">")                      ' Get > location
+         if i > 0 then                                ' We have a >n operand 
+            j = val(mid$(lclText, i + 1))             ' Yes, get the operand number 
+            lclTrail = mid$(lclText, i+2)             ' Save trailer string 
+            lclText = left$(lclText, i - 1)           ' Get left end of command
+            lclText = lclText + QUsed + " + " + "Get_Arg$(" + format$(j) + ", 0) + " + QUsed + lclTrail 
+         end if                                       ' 
+
+         lclText = "SPF_Cmd(" + lclText + ")"         ' Make it a SPF_Cmd string 
+         Set_Line(cLPtr, lclText)                     ' Update the line 
+
+         '----- Add a NOTE if weird quotes discovered
+         if fCheckQuote = 1 then                      ' Must add a Note line 
+            SPF_CMD("LINE Note !" + tstr$(cLPtr))     ' Insert a line after this one 
+            Set_Line(cLPtr + 1, "Check quoting on line above, multiple quote types detected") 
+            incr cLPtr                                ' Adjust cLPtr for the inserted line 
+         end if                                       ' 
+
+         '----- Add a NOTE if unsupported variable types
+         if fUnSupp = 1 then                          ' Must add a Note line 
+            SPF_CMD("LINE Note !" + tstr$(cLPtr))     ' Insert a line after this one 
+            Set_Line(cLPtr + 1, "Check unsupported ^/~ variable on previous line") 
+            incr cLPtr                                ' Adjust cLPtr for the inserted line 
+         end if                                       ' 
+
+         '----- Add RC test if NOFLUSH wasn't requested 
+         if fNoFlush = 0 then                         ' Must add a RC test 
+            SPF_CMD("LINE N1 !" + tstr$(cLPtr))       ' Insert a line after this one 
+            Set_Line(cLPtr + 1, "if Get_RC > 0 then stop") 
+            incr cLPtr                                ' Adjust cLPtr for the inserted line 
+         end if                                       ' 
+
+      end if                                          ' 
+   end if                                             '
+
+   incr cLPtr                                         ' Bump to next line 
+wend 
+
+lclText = "CREATE " + SPF_Quote$(Get_INI_Path$ + "\MACROS\" + MacName + ".MACRO") + " .ZF .ZL"
+SPF_Cmd(lclText)
+if Get_RC = 0 then 
+   halt("Converted to", MacName + ".MACRO and saved")
+else 
+   halt("Converted, but CREATE of", MacName + ".MACRO was NOT successful, try REPLACE")
+end if 

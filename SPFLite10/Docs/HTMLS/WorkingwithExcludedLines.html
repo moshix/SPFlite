@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with Excluded Lines</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,,,,,,,,,,,,,,,,,,,,,Unexclude,New keyword 1">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with Excluded Lines">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with Excluded Lines" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithExcludedLines"
+		  data-hnd-context="12"
+		  data-hnd-title="Working with Excluded Lines"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with Excluded Lines</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#BasicconceptsfromISPF">Basic concepts from ISPF</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#Excludedlinesandline-commandusage">Excluded lines and line-command usage</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#Excluded-lineplaceholderdisplayandtheHIDEcommand">Excluded-line placeholder display and the HIDE command</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#PersistenceofexcludedlinesandtheSTATEoption">Persistence of excluded lines and the STATE option</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#Methodsofexcludinglines">Methods of excluding lines</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#Methodsofunexcludinglines">Methods of unexcluding lines</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#PrimarycommandoptionsXandNX">Primary command options X and NX</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#PrimarycommandoptionsMXandDX">Primary command options MX and DX</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#UsingSORTX">Using SORT X</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#TheconsequencesofFINDXDXandCHANGEXDX">The consequences of FIND X DX and CHANGE X DX</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#The%E2%80%98%E2%80%93'post-excludeand%E2%80%98%20'post-unexcludemodifiers">The ‘–' post-exclude and ‘+' post-unexclude modifiers</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#LOCATE(L):">Primary command examples</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwithExcludedLines.html#TheconsequencesofFINDXDXandCHANGEXDX">LOCATE and excluded lines</a></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Users of IBM ISPF have long had the ability to exclude lines from their edit files. SPFLite builds on this idea and adds many new, powerful features to fully exploit the benefits of line exclusion.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts36">Note:</span><span class="rvts35"> &nbsp;</span><span class="rvts36">User Lines</span><span class="rvts35"> provide a means to segregate lines into two groups, known as</span><span class="rvts36"> U lines</span><span class="rvts35"> and</span><span class="rvts36"> V lines</span><span class="rvts35">, where U lines are a set of lines of particular interest to a user at a given point in time, and "non-User" lines are everything else. The terms </span><span class="rvts36">User Line</span><span class="rvts35"> and </span><span class="rvts36">U line</span><span class="rvts35"> mean the same thing; and, </span><span class="rvts36">non-User Line</span><span class="rvts35">, </span><span class="rvts36">V line</span><span class="rvts35"> and </span><span class="rvts36">ordinary data line</span><span class="rvts35">, all mean the same thing. </span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">User lines have a number of similarities with excluded lines, but User lines are not hidden and then revealed the way excluded lines are. If you only need two types of lines to work with, using User Lines may be simpler than using excluded lines. While User Lines are simpler, and share many similarities with excluded lines, there are also fewer supported features with User Lines. Both techniques have their place.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">See </span><a class="rvts32" href="WorkingwithUserlines.html">Working with User lines</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">An </span><span class="rvts85">excluded</span><span class="rvts35"> line is a line that exists, but is not visible. When multiple adjacent lines are excluded, the entire range of lines is visually collapsed and represented as a single line with a placeholder. Excluding lines serves a number of purposes. It gets lines “out of the way” when some lines are more important than others at a given time. It segregates lines into two groups, so that a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> could be limited to one of the two types of lines (excluded, or non-excluded). Commands like </span><span class="rvts36">DELETE ALL X</span><span class="rvts35"> or </span><span class="rvts36">DELETE ALL NX</span><span class="rvts35"> can quickly get rid of selected, unwanted lines in a file, and so on.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There isn't a single accepted word to describe reversing the effect of excluding a line or its condition. “Unexcluded” does not appear to be a real English word, but it's often used to describe the line itself. SPFLite also uses the term “show” for the </span><span class="rvts85">act</span><span class="rvts35"> of re-displaying a line. The word “reveal” would also be correct but is seldom used, and “include” is never used.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When discussing whether a line is, or is not, excluded, we use the term </span><span class="rvts85">exclusion status</span><span class="rvts35"> or </span><span class="rvts85">exclusion state</span><span class="rvts35">. The exclusion status of a line is either excluded or unexcluded. Sometimes the exclusion status is simply called </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> for short, after the commands and keywords of the same spelling, and you may see that in some messages.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="BasicconceptsfromISPF"></a>
+<span class="rvts36">Basic concepts from ISPF</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Users of mainframe IBM ISPF are familiar with the look of an excluded line range, like this screen shot from an actual z/OS ISPF session:</span></p>
+<p class="rvps6"><span class="rvts310"><br/></span></p>
+<p class="rvps148"><span class="rvts168">EDIT &nbsp; &nbsp; &nbsp; MYLIB.TEST.DATA(ONE) - 01.30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Columns 00001 00072 </span></p>
+<p class="rvps148"><span class="rvts168">Command ===&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Scroll ===&gt; HALF </span></p>
+<p class="rvps148"><span class="rvts168">****** ***************************** Top of Data ******************************</span></p>
+<p class="rvps148"><span class="rvts168">000001 LINE ONE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps148"><span class="rvts168">- - - &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;- &nbsp;2 Line(s) not Displayed </span></p>
+<p class="rvps148"><span class="rvts168">000004 LINE FOUR</span></p>
+<p class="rvps148"><span class="rvts168">****** **************************** Bottom of Data ****************************</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The dashed line is an </span><span class="rvts85">excluded-line placeholder,</span><span class="rvts35"> something that simply indicates where the excluded lines are in the file, and how many of them are there. It also permits a line command to be entered in the sequence area of that placeholder line. Such line commands are normally of the “simple” type and not the “block” type.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Unfortunately, there isn't an agreed-upon word or terminology to describe the “excluded-line placeholder”. IBM never came up with an official (and shorter) name or term for it in their manuals. Calling it an “excluded </span><span class="rvts85">line</span><span class="rvts35">” isn't really correct, since that refers to the </span><span class="rvts85">data,</span><span class="rvts35"> not to this visual display, which could represent </span><span class="rvts85">more</span><span class="rvts35"> than one line of data. So, if </span><span class="rvts85">we</span><span class="rvts35"> are stuck with the accurate (but wordy) description “excluded-line placeholder”, then so are you. Hope you don't mind.</span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps2"><a name="Excludedlinesandline-commandusage"></a>
+<span class="rvts36">Excluded lines and line-command usage</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For example, if you wanted to delete excluded lines 2 and 3, you would not use </span><span class="rvts36">DD</span><span class="rvts35"> or even </span><span class="rvts36">D2</span><span class="rvts35"> on the excluded-line placeholder sequence area, but just </span><span class="rvts36">D</span><span class="rvts35">. The reason you wouldn't use </span><span class="rvts36">D2</span><span class="rvts35"> is that the entire excluded range represented by the placeholder is treated </span><span class="rvts85">as if</span><span class="rvts35"> one line, for purposes of the line command. If you had said </span><span class="rvts36">D2</span><span class="rvts35"> instead, what would happen is that you would delete lines 2 and 3 </span><span class="rvts85">as a single unit,</span><span class="rvts35"> and </span><span class="rvts85">then also</span><span class="rvts35"> delete line 4 as well.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">If you like, you can think of </span><span class="rvts36">D2</span><span class="rvts35"> as deleting 2 </span><span class="rvts85">units</span><span class="rvts35">, where a </span><span class="rvts85">unit</span><span class="rvts35"> is either a single displayed line, or an excluded-line placeholder (that may itself represent multiple lines). If you think of it this way, you will note that such a </span><span class="rvts85">unit</span><span class="rvts35"> always takes up exactly one line </span><span class="rvts85">visually</span><span class="rvts35"> in the edit display.</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps10"><span class="rvts35">What if you had a lot of excluded and unexcluded lines interspersed together and you needed to delete several of them? &nbsp;How would you count all these </span><span class="rvts85">units</span><span class="rvts35"> if you couldn't use the sequence numbers any more for that purpose? &nbsp;For all but the smallest examples, it would probably be too hard to count them, and that's where you would employ a </span><span class="rvts36">DD</span><span class="rvts35"> block instead.</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Wait a minute! &nbsp;Didn't we just say </span><span class="rvts85">not</span><span class="rvts35"> to use </span><span class="rvts36">DD</span><span class="rvts35">? &nbsp;Well, yes and no. You wouldn't use </span><span class="rvts36">DD</span><span class="rvts35"> to delete </span><span class="rvts85">just </span><span class="rvts35">the lines represented by the placeholder. But, you </span><span class="rvts85">can</span><span class="rvts35"> use a </span><span class="rvts36">DD</span><span class="rvts35"> block where excluded-lines placeholders are one or both of the </span><span class="rvts85">ends</span><span class="rvts35"> of the </span><span class="rvts36">DD</span><span class="rvts35"> block. When you do this, all the lines on the DD commands (whether excluded or not) as well as everything inside the </span><span class="rvts36">DD</span><span class="rvts35"> block, are deleted.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you wanted to shift </span><span class="rvts36">all</span><span class="rvts35"> of the excluded line right by 4 columns, place )4 in the sequence area and press Enter; the block mode shift command )) would not be used.</span></p>
+<p class="rvps2"><span class="rvts111"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In SPFLite, you don't have to worry about the dashed lines in the sequence area. These dashes, like line numbers in a normal line, instantly disappear the moment you start typing something into the sequence area.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Excluded-lineplaceholderdisplayandtheHIDEcommand"></a>
+<span class="rvts36">Excluded-line placeholder display and the HIDE command</span></p>
+<p class="rvps2"><span class="rvts35"> </span></p>
+<p class="rvps9"><span class="rvts35">The ISPF version of the placeholder display is fine for new users unfamiliar with the concept of using excluded lines, and it looks good in a help document. Prior versions of SPFLite also used a similar display. But, once you get the hang of it, IBM's format is a little wordy and distracting, especially if you have a lot of them in a file. SPFLite now uses a new, streamlined format that dispenses with all these words. It provides just what is needed, and looks like this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 01.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In some cases, even this brief format is too much. For that, you can use the </span><span class="rvts36">HIDE</span><span class="rvts35"> command to collapse these excluded regions down to just an underline. IBM ISPF users familiar with this may be used to saying </span><span class="rvts36">HIDE X</span><span class="rvts35">. Since there is nothing else you can hide other than excluded lines, SPFLite does not support </span><span class="rvts36">HIDE X</span><span class="rvts35"> as such, but instead uses </span><span class="rvts36">HIDE ON</span><span class="rvts35"> and </span><span class="rvts36">HIDE OFF</span><span class="rvts35">. A plain </span><span class="rvts36">HIDE</span><span class="rvts35"> means </span><span class="rvts36">HIDE ON</span><span class="rvts35">, and does the collapsing action. </span><span class="rvts36">HIDE OFF</span><span class="rvts35"> or </span><span class="rvts36">RESET HIDE</span><span class="rvts35"> will reverse this. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In order for </span><span class="rvts36">HIDE</span><span class="rvts35"> to be most effective, the fixed-width font you use in SPFLite for editing needs to be capable of being underlined in a readable way. </span><span class="rvts85">Courier New</span><span class="rvts35"> meets this requirement, as do fonts in the supplementary SPFLite fixed font library, such as </span><span class="rvts85">Raster</span><span class="rvts35">. </span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps2"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Example (before </span><span class="rvts36">HIDE</span><span class="rvts35">):</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 02.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">After </span><span class="rvts36">HIDE</span><span class="rvts35">:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 03.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="PersistenceofexcludedlinesandtheSTATEoption"></a>
+<span class="rvts36">Persistence of excluded lines and the STATE option</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What “happens” to excluded lines? &nbsp;Nothing happens to the </span><span class="rvts85">data,</span><span class="rvts35"> it just isn't displayed, and you don't lose any data when you save or close the file while lines are excluded. What about the </span><span class="rvts85">fact</span><span class="rvts35"> that a line is excluded? &nbsp;Is that </span><span class="rvts85">fact</span><span class="rvts35"> saved or lost once you close the file? &nbsp;In IBM ISPF, that information is lost. In SPFLite, this information can be retained, it depends on a PROFILE setting called </span><span class="rvts36">STATE</span><span class="rvts35">. See </span><a class="rvts32" href="SavingtheEditSTATE.html">Edit STATE saving</a><span class="rvts35"> for a full description of State saving.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Methodsofexcludinglines"></a>
+<span class="rvts36">Methods of excluding lines</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">How do lines get excluded in the first place? &nbsp;There are several ways:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The direct approach: Place </span><span class="rvts36">X</span><span class="rvts35"> on a line, or place an </span><span class="rvts36">XX</span><span class="rvts35">/</span><span class="rvts36">XX</span><span class="rvts35"> pair on a block of lines to exclude them. For an </span><span class="rvts36">XX</span><span class="rvts35"> block, if there are any excluded lines already present within it, they will get merged together in one big excluded block. An </span><span class="rvts36">XX</span><span class="rvts35"> line command can be put on a line which already displays the excluded-line placeholder; you would do that to make the excluded region even bigger than it already was.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><span class="rvts36">TX</span><span class="rvts35"> or </span><span class="rvts36">TXX</span><span class="rvts35"> line command can be used to 'toggle' the exclusion state of one or more lines. If the lines were previously unexcluded, they will be unexcluded; if the lines were previously excluded, they will be unexcluded. Lines in the range of a </span><span class="rvts36">TX</span><span class="rvts35">/</span><span class="rvts36">TXX</span><span class="rvts35"> line command could be a mixture of excluded and unexcluded lines. Each line is handled individually.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The X line command can take the form of </span><span class="rvts36">X</span><span class="rvts91">n</span><span class="rvts35"> where </span><span class="rvts91">n</span><span class="rvts35"> is a number of lines, or it may appear as </span><span class="rvts36">X/</span><span class="rvts35"> or </span><span class="rvts36">X\ </span><span class="rvts35">using the new </span><span class="rvts36">/</span><span class="rvts35"> forward and </span><span class="rvts36">\</span><span class="rvts35"> backward modifiers.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><span class="rvts36">EXCLUDE</span><span class="rvts35"> (</span><span class="rvts36">X</span><span class="rvts35">) primary command will exclude lines based on a search string, a line range, a tag name, a CC block, or it can exclude all lines.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><span class="rvts36">NEXCLUDE</span><span class="rvts35"> (</span><span class="rvts36">NX</span><span class="rvts35">) primary command will exclude lines similar to </span><span class="rvts36">EXCLUDE</span><span class="rvts35">, but it works by excluding lines in which a search string is NOT found. For that reason, </span><span class="rvts36">NEXCLUDE</span><span class="rvts35"> (</span><span class="rvts36">NX</span><span class="rvts35">) requires a search string to be specified, whereas in </span><span class="rvts36">EXCLUDE</span><span class="rvts35"> (</span><span class="rvts36">X</span><span class="rvts35">) you can omit the string if desired.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> (and related) primary commands can now accept a new keyword option of </span><span class="rvts36">MX</span><span class="rvts35">, which means </span><span class="rvts85">make excluded</span><span class="rvts35">. Any lines found in the course of processing a</span><span class="rvts36"> FIND MX</span><span class="rvts35"> or </span><span class="rvts36">CHANGE MX</span><span class="rvts35"> will be made excluded.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The “</span><span class="rvts36">–</span><span class="rvts35">” modifier on certain line commands can be used to exclude lines after the primary purpose of the line command is completed.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><a class="rvts33" href="LINE.html">LINE</a><span class="rvts35"> primary command can be used to apply the </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">XX</span><span class="rvts35"> line command to a range of lines.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">A command of the form </span><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html">LOCATE </a><a class="rvts312" href="LOCATEScrolltoaSpecificLine.html">condition</a><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html"> ALL MX</a><span class="rvts35"> can be used to exclude all lines having a certain condition, such as LABEL, CHANGED or RED.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="Methodsofunexcludinglines"></a>
+<span class="rvts36">Methods of unexcluding lines</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Once a given line is excluded, how can it ever get unexcluded? &nbsp;Again, there are many ways:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts36">RESET EXCLUDED</span><span class="rvts35">, </span><span class="rvts36">RESET X</span><span class="rvts35"> or plain </span><span class="rvts36">RESET</span><span class="rvts35"> will unexclude all lines (or just </span><span class="rvts36">RES</span><span class="rvts35"> for short)</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">The </span><span class="rvts36">S</span><span class="rvts35"> and </span><span class="rvts36">SS</span><span class="rvts35"> line commands will show (unexclude) a range of lines. If an </span><span class="rvts36">S</span><span class="rvts35"> command is placed on an excluded-line placeholder, the entire region is unexcluded. </span><span class="rvts36">S</span><span class="rvts35"> and </span><span class="rvts36">SS</span><span class="rvts35"> are the opposite of </span><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">XX</span><span class="rvts35">. The SPFLite </span><span class="rvts36">S</span><span class="rvts35"> line command is a new use for this command name</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35">.</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><span class="rvts36">TX</span><span class="rvts35"> or </span><span class="rvts36">TXX</span><span class="rvts35"> line command can be used to 'toggle' the exclusion state of one or more lines. If the lines were previously unexcluded, they will be unexcluded; if the lines were previously excluded, they will be unexcluded. Lines in the range of a </span><span class="rvts36">TX</span><span class="rvts35">/</span><span class="rvts36">TXX</span><span class="rvts35"> line command could be a mixture of excluded and unexcluded lines. Each line is handled individually.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><span class="rvts36">SHOW</span><span class="rvts35"> and </span><span class="rvts36">NSHOW</span><span class="rvts35"> primary commands will unexclude selected lines; these are the opposite of </span><span class="rvts36">EXCLUDE</span><span class="rvts35"> and </span><span class="rvts36">NEXCLUDE</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">When a </span><span class="rvts36">FIND</span><span class="rvts35">, </span><span class="rvts36">CHANGE</span><span class="rvts35"> or similar primary command locates a search string on an excluded line, it will normally unexclude or “pop out” such lines</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">The “</span><span class="rvts36">+</span><span class="rvts35">” modifier on certain line commands can be used to unexclude lines after the primary purpose of the line command is completed.</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">To display just the first ‘n' or the last ‘n' lines in an excluded region, the </span><span class="rvts36">F</span><span class="rvts35"> and </span><span class="rvts36">L</span><span class="rvts35"> line commands are available.</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">IBM ISPF has a seldom-used line command called </span><span class="rvts36">S</span><span class="rvts35">, which shows the indentation level of a group of excluded lines. This command still exists in SPFLite, but is renamed to </span><span class="rvts36">SI</span><span class="rvts35"> for </span><span class="rvts36">Show Indentation</span><span class="rvts35">. The old IBM ISPF functionality of </span><span class="rvts36">S</span><span class="rvts35"> is retained for compatibility as </span><span class="rvts36">SI</span><span class="rvts35">, although experience has shown it to be of limited usefulness.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">The </span><a class="rvts33" href="LINE.html">LINE</a><span class="rvts35"> primary command can be used to apply the </span><span class="rvts36">S</span><span class="rvts35"> or </span><span class="rvts36">SS</span><span class="rvts35"> line command to a range of lines. Other line commands applied via the </span><a class="rvts33" href="LINE.html">LINE</a><span class="rvts35"> primary command (except for </span><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">XX</span><span class="rvts35">) will generally cause already-excluded lines to pop out and be unexcluded.</span></li>
+</ul></ul>
+<p class="rvps139"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps139"><span class="rvts35">A command of the form </span><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html">LOCATE </a><a class="rvts312" href="LOCATEScrolltoaSpecificLine.html">condition</a><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html"> ALL</a><span class="rvts35"> can be used to locate and then unexclude all lines having a certain condition, such as </span><span class="rvts36">LABEL</span><span class="rvts35">, </span><span class="rvts36">CHANGED</span><span class="rvts35"> or </span><span class="rvts36">RED</span><span class="rvts35">.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="PrimarycommandoptionsXandNX"></a>
+<span class="rvts36">Primary command options X and NX</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Traditional ISPF allows for the options </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> to be used on certain primary commands. </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35"> on a command is used to decide which lines should be used or acted upon, based on their current exclusion status. A command </span><span class="rvts36">FIND ABC ALL X</span><span class="rvts35"> will find all instances of the string ABC on excluded lines and report the number thereof, and </span><span class="rvts36">FIND ABC ALL NX</span><span class="rvts35"> will only look at non-excluded lines. The </span><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">NX</span><span class="rvts35"> options are allowed on these commands:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts36">CHANGE</span></p>
+<p class="rvps10"><span class="rvts36">COMPRESS</span></p>
+<p class="rvps10"><span class="rvts36">CREATE</span></p>
+<p class="rvps10"><span class="rvts36">CUT</span></p>
+<p class="rvps10"><span class="rvts36">DELETE</span></p>
+<p class="rvps10"><span class="rvts36">FIND</span></p>
+<p class="rvps10"><span class="rvts36">FLIP</span></p>
+<p class="rvps10"><span class="rvts36">LC</span></p>
+<p class="rvps10"><span class="rvts36">LINE</span></p>
+<p class="rvps10"><span class="rvts36">NFIND</span></p>
+<p class="rvps10"><span class="rvts36">PRINT</span></p>
+<p class="rvps10"><span class="rvts36">REPLACE</span></p>
+<p class="rvps10"><span class="rvts36">SC</span></p>
+<p class="rvps10"><span class="rvts36">SHOW</span></p>
+<p class="rvps10"><span class="rvts36">SORT</span></p>
+<p class="rvps10"><span class="rvts36">SUBMIT</span></p>
+<p class="rvps10"><span class="rvts36">TAG</span></p>
+<p class="rvps10"><span class="rvts36">TC</span></p>
+<p class="rvps10"><span class="rvts36">UC</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">NX</span><span class="rvts35"> are not allowed on the following commands. Either the command itself limits the scope of lines considered to only one type, or else it simply doesn't apply:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts36">DROP</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">X|NX </span><span class="rvts85">not supported</span></p>
+<p class="rvps10"><span class="rvts36">EXCLUDE</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">only non-excluded lines considered</span></p>
+<p class="rvps10"><span class="rvts36">FLIP</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">X|NX </span><span class="rvts85">not supported</span></p>
+<p class="rvps10"><span class="rvts36">KEEP</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">X|NX </span><span class="rvts85">not supported</span></p>
+<p class="rvps10"><span class="rvts36">NEXCLUDE</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">only non-excluded lines considered</span></p>
+<p class="rvps10"><span class="rvts36">NSHOW</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">only excluded lines considered</span></p>
+<p class="rvps10"><span class="rvts36">RESET</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">X|NX </span><span class="rvts85">not supported</span></p>
+<p class="rvps10"><span class="rvts36">SHOW</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">only excluded lines considered</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="PrimarycommandoptionsMXandDX"></a>
+<span class="rvts36">Primary command options MX and DX</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a command such as </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> finds the requested search string on a line, and that line where the search string is found happens to be excluded, the standard action in ISPF is to unexclude that line. When this happens, those excluded lines are sometimes said to “pop out”, since visually, that's what it looks like when it happens.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Up until now, this standard action (to unexclude) was the only action available. With SPFLite, there are now two new possible actions that can take place.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Using the </span><span class="rvts36">DX</span><span class="rvts35"> option (</span><span class="rvts85">don't change exclusion</span><span class="rvts35">), commands such as </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> will leave the exclusion status of found lines unchanged after the command completes. That means previously excluded lines will remain excluded, and previously unexcluded lines will remain unexcluded, even though the search string had been located.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Using the </span><span class="rvts36">MX</span><span class="rvts35"> option (</span><span class="rvts85">make excluded</span><span class="rvts35">), when commands such as </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> locate their search string, will force the lines the string is found on to be excluded after the command completes, regardless of what their prior exclusion status was (excluded or not excluded).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts35">The </span><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html">LOCATE</a><span class="rvts35"> command will accept an </span><span class="rvts36">MX</span><span class="rvts35"> option if </span><span class="rvts36">ALL</span><span class="rvts35"> is also specified, but it will not accept the </span><span class="rvts36">DX</span><span class="rvts35"> option.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts36">MX</span><span class="rvts35"> and </span><span class="rvts36">DX</span><span class="rvts35"> should not be confused with </span><span class="rvts36">X</span><span class="rvts35"> or </span><span class="rvts36">NX</span><span class="rvts35">. One way to think of these options is that </span><span class="rvts36">X</span><span class="rvts35"> and </span><span class="rvts36">NX</span><span class="rvts35"> affect which lines are selected </span><span class="rvts85">beforehand</span><span class="rvts35"> to be inspected or changed, but </span><span class="rvts36">MX</span><span class="rvts35"> and </span><span class="rvts36">DX</span><span class="rvts35"> affect what is done with those lines </span><span class="rvts85">afterwards</span><span class="rvts35">. The distinction is important to understand, because X or NX can be combined with MX or DX on the same command. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Example: &nbsp;Changing all occurrences of ABC to DEF only on excluded lines, and then </span><span class="rvts85">leaving</span><span class="rvts35"> them excluded, can be done with the command:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">CHANGE ABC DEF ALL X DX</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="UsingSORTX"></a>
+<span class="rvts36">Using SORT X</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Users of the IBM ISPF have the ability to sort using excluded or non-excluded lines. When the </span><span class="rvts36">SORT</span><span class="rvts35"> command completes, the sorted lines are successively stored back in a way that respects the excluded or unexcluded status of the original lines, in the same relative locations as previously occupied, but in a different order. This can be done even when the excluded or non-excluded lines are in non-contiguous locations. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">This action, in which sorted lines are returned to non-contiguous locations, could be called storing those lines in a “scattered” or “interspersed” manner. It's a little unusual, and won't often be needed, but it can be useful at times.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In ISPF, when </span><span class="rvts36">SORT</span><span class="rvts35"> is applied to excluded lines, the sorted lines remain excluded. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">However, in SPFLite, the act of sorting excluded lines, and then storing them back, is considered a </span><span class="rvts85">change</span><span class="rvts35">. Since a change to a line, just like with the </span><span class="rvts36">CHANGE</span><span class="rvts35"> command, defaults to unexcluding or “popping out” of excluded lines, this part of SPFLite's </span><span class="rvts36">SORT</span><span class="rvts35"> behavior is not quite the same as in ISPF. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To get the same results in SPFLite when doing </span><span class="rvts36">SORT X</span><span class="rvts35"> as ISPF produces, it is necessary to add </span><span class="rvts36">DX</span><span class="rvts35"> when sorting these excluded lines. You must say </span><span class="rvts36">SORT X DX</span><span class="rvts35"> to prevent the sorted lines from being unexcluded afterwards.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="TheconsequencesofFINDXDXandCHANGEXDX"></a>
+<span class="rvts36">The consequences of FIND X DX and CHANGE X DX</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Because the new exclusion options </span><span class="rvts36">MX</span><span class="rvts35"> and </span><span class="rvts36">DX</span><span class="rvts35"> are not available in standard ISPF, users may find themselves encountering a situation that never existed before on the mainframe. Recall that the standard action in ISPF is to unexclude an excluded line when found by a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35">. If you were to do such commands one at a time (repeating F5 or F6, for example), you would see lines “pop out” as they were found or changed, and the cursor would be successively placed on the line where this happened each time.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now, suppose you have a group of excluded lines, and on each of them there is a string ABC which you are finding, or changing to DEF. And, for some reason, you want the lines </span><span class="rvts85">not</span><span class="rvts35"> to pop out, but be left excluded, so you do this:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">FIND ABC X DX</span></p>
+<p class="rvps9"><span class="rvts35">or</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">CHANGE ABC DEF X DX</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">That will do the job, alright, but after the first time, or the second time, etc. where is the cursor? &nbsp;Since the lines are </span><span class="rvts85">still</span><span class="rvts35"> excluded, all you have is the excluded-line placeholder, that dashed line with the count of excluded lines. How are you supposed to keep track of the cursor?</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SPFLite helps out here by continuing to display the line and column number at the bottom on the status line. When you issue commands like this, SPFLite realizes it has gotten within the “interior” of an excluded range. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">This is something that traditional ISPF can't do, since, as soon as it finds something. it unexcludes it. ISPF can </span><span class="rvts85">never</span><span class="rvts35"> be within the “interior” of a block of excluded lines, but SPFLite </span><span class="rvts85">can</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the cursor is in the interior of an excluded range, the line and column display is shown in reverse video, to remind you that something special is going on. In addition, you will see the visible cursor placed on the excluded-line placeholder line, in the same relative location it would have had, if the excluded lines had been visible.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Example: &nbsp;Let's say this is our original file, and we exclude lines 2 and 3. Here, we are going to indent the word LINE to emphasize what's happening. Notice line 1 starts in column 1; line 2 starts in column 2, etc.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img width="760" height="233" alt="" style="padding : 1px;" src="lib/Excluded 04.jpg"></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Then, find the first occurrence of LINE in the excluded area:</span></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><img width="760" height="241" alt="" style="padding : 1px;" src="lib/Excluded 05.jpg"></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">That's on line 2 – but we can't </span><span class="rvts85">see</span><span class="rvts35"> line 2 right now. And because the </span><span class="rvts36">FIND</span><span class="rvts35"> has a </span><span class="rvts36">DX</span><span class="rvts35"> on it, line 2 is going to </span><span class="rvts85">stay</span><span class="rvts35"> excluded. What will the display look like after you do the FIND command?</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img width="757" height="212" alt="" style="padding : 1px;" src="lib/Excluded 06.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Notice the cursor is on column 2 of the placeholder. You will also see the Line/Column display on the status line showing the position of line 2, column 2, in reverse video, like this: &nbsp;&nbsp;</span><span class="rvts276"> L 000002 &nbsp;C 2</span><span class="rvts309">&nbsp;</span><span class="rvts35"> . If you press F5 to repeat the </span><span class="rvts36">FIND</span><span class="rvts35">, the cursor will advance to line 3, column 3, because that's where the next “LINE” is located:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img width="760" height="207" alt="" style="padding : 1px;" src="lib/Excluded 07.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">And the Line/Column display on the status will now show &nbsp;</span><span class="rvts276"> L 000003 &nbsp;C 3</span><span class="rvts309">&nbsp;</span><span class="rvts35"> . A final F5 will result in “Bottom of data reached” because there are no more “LINE” strings that are excluded, and the Line/Column display will go back to its normal appearance.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">What about </span><span class="rvts36">FIND X DX</span><span class="rvts35"> or </span><span class="rvts36">CHANGE X DX</span><span class="rvts35"> when the excluded lines are </span><span class="rvts85">hidden</span><span class="rvts35"> as a result of the </span><span class="rvts36">HIDE</span><span class="rvts35"> command? &nbsp;You can still do this, but because </span><span class="rvts36">HIDE</span><span class="rvts35"> causes even the excluded-line placeholder to disappear, there is no “interim place” for the cursor to be displayed while you are successively going through the excluded lines, and the editor does not support this situation. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">So, SPFLite will only allow you to use your </span><span class="rvts36">FIND X DX</span><span class="rvts35"> or </span><span class="rvts36">CHANGE X DX</span><span class="rvts35"> against </span><span class="rvts85">hidden</span><span class="rvts35"> excluded lines if you specify </span><span class="rvts36">ALL</span><span class="rvts35"> as part of the command. If you can't say </span><span class="rvts36">FIND </span><span class="rvts287">ALL</span><span class="rvts36"> X DX</span><span class="rvts35"> or </span><span class="rvts36">CHANGE </span><span class="rvts287">ALL</span><span class="rvts36"> X DX</span><span class="rvts35"> when </span><span class="rvts36">HIDE</span><span class="rvts35"> is in effect, you will have to set </span><span class="rvts36">HIDE OFF</span><span class="rvts35"> first.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="The‘–'post-excludeand‘+'post-unexcludemodifiers"></a>
+<span class="rvts36">The ‘–' post-exclude and ‘+' post-unexclude modifiers</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you move or copy one or more lines from one part of the file to another, and any of those lines were originally excluded, they stay excluded afterwards. So, moving and copying lines does not normally change their exclusion status. Suppose you </span><span class="rvts85">did</span><span class="rvts35"> want to change the exclusion status of these lines. Let's say you are ‘gathering' blocks of lines from several places in a file and placing the copied lines at some point. As you continue this copying process, the copied lines will take up more and more ‘space' in the file, and you will have to scroll through or scroll past them as you continue working. Eventually all those lines will start “getting in your way”. It would be convenient if you could tell the editor, ‘just exclude the copied lines for right now; I'll get back to them later'. How could you do it?</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For sake of discussion, we will assume that you are going to copy lines using </span><span class="rvts36">CC</span><span class="rvts35">/</span><span class="rvts36">CC</span><span class="rvts35"> and an</span><span class="rvts36"> A</span><span class="rvts35"> command. Suppose you had a file like this, and are copying lines as shown:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 08.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are done, the file display will look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 09.jpg"></p>
+<p class="rvps10"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Lines 1-4 have been copied and are now lines 7-10. The copies of originally excluded lines 2-3 remain excluded as lines 8-9. If you wanted lines 7-10 “all one way”, you could now go back and manually exclude them with an </span><span class="rvts36">XX</span><span class="rvts35"> line command, or you could manually unexclude them with an </span><span class="rvts36">SS</span><span class="rvts35"> line command, or you could use the primary command equivalents of these. But suppose you didn't </span><span class="rvts85">want</span><span class="rvts35"> to do that – you just wanted your newly copied lines to </span><span class="rvts85">already</span><span class="rvts35"> be in a certain exclusion state “right off the bat”. Here's where the “</span><span class="rvts36">+</span><span class="rvts35">” and “</span><span class="rvts36">–</span><span class="rvts35">” &nbsp;modifiers come into play. Let's say you want all your copied lines to be excluded right when the copy is done. This is easily done by placing a minus after the </span><span class="rvts36">A</span><span class="rvts35"> command:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 10.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are done, the file display will look like this. Notice that the copied lines are </span><span class="rvts85">immediately excluded</span><span class="rvts35"> for you, so you don't have to go back and do it yourself manually. You can continue this process until you've copied everything you need, and </span><span class="rvts85">then</span><span class="rvts35"> go back and unexclude them later and do further editing when it's more convenient.</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 11.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The minus (or plus) could be on the </span><span class="rvts36">CC</span><span class="rvts35"> as well. What that does is exclude (or unexclude) the block of </span><span class="rvts85">source lines</span><span class="rvts35"> after the copy operation is completed. That happens independently of what happens to the </span><span class="rvts85">target lines</span><span class="rvts35"> copied after the </span><span class="rvts36">A–</span><span class="rvts35">.</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 12.jpg"></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you are done, the file display will look like this:</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Excluded 13.jpg"></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Likewise, the </span><span class="rvts36">+</span><span class="rvts35"> can be used to unexclude lines being copied or moved. The Before command </span><span class="rvts36">B</span><span class="rvts35"> can accept a </span><span class="rvts36">+</span><span class="rvts35"> or </span><span class="rvts36">– </span><span class="rvts35">in the same way</span><span class="rvts36"> A</span><span class="rvts35"> can.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Like anything else you would do with a block command, if you have some modifier or number on a block, you can put the modifier on one end, or on the other end, or on both ends, but if you use both they must agree. You can't have a </span><span class="rvts36">CC+</span><span class="rvts35"> matched with a</span><span class="rvts36"> CC–</span><span class="rvts35"> and not expect SPFLite to complain.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Line commands like </span><span class="rvts36">D</span><span class="rvts35"> and </span><span class="rvts36">M</span><span class="rvts35"> don't take </span><span class="rvts36">+</span><span class="rvts35"> and </span><span class="rvts36">–</span><span class="rvts35"> modifiers, because that would be asking the editor to delete a line and </span><span class="rvts85">then</span><span class="rvts35"> go back and exclude or unexclude a line that no longer exists. (SPFLite is good, but it's not </span><span class="rvts85">that</span><span class="rvts35"> good.) &nbsp;You can use an ordinary </span><span class="rvts36">M</span><span class="rvts35">/</span><span class="rvts36">MM</span><span class="rvts35"> block and move it using </span><span class="rvts36">A+</span><span class="rvts35">, </span><span class="rvts36">A–</span><span class="rvts35">, </span><span class="rvts36">B+</span><span class="rvts35"> or </span><span class="rvts36">B–</span><span class="rvts35">, but the </span><span class="rvts36">M</span><span class="rvts35">/</span><span class="rvts36">MM</span><span class="rvts35"> can't use the </span><span class="rvts36">+</span><span class="rvts35"> or </span><span class="rvts36">–</span><span class="rvts35"> itself.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">Primary command examples</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In order to get a feel for how the various primary commands operate under the control of excluded lines, here are a number of examples, with commentary as to what the commands mean and what they would accomplish. These examples will not show every possible feature of every command, but only those that relate to how they interact with excluded lines.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The examples will generally show the use of the </span><span class="rvts36">ALL</span><span class="rvts35"> option. Many of these commands will have other options for selecting lines, such as a line label, a line-label range, line tags and CC or MM blocks. Line tags and </span><span class="rvts36">CC</span><span class="rvts35"> or </span><span class="rvts36">MM</span><span class="rvts35"> blocks are new features that are explained in another section. For clarity, the full names of commands are shown, like </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35">, whereas in practice people normally use the abbreviations like </span><span class="rvts36">F</span><span class="rvts35"> and </span><span class="rvts36">C</span><span class="rvts35">, which are shown in parentheses.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="LOCATE(L):"></a>
+<span class="rvts36">LOCATE (L):</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">LOCATE ALL LABEL</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of labeled lines, and as a side-effect, unexclude all of them. When </span><span class="rvts36">ALL</span><span class="rvts35"> is used on LOCATE, no particular line is located.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">LOCATE ALL LABEL MX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of labeled lines, and as a side-effect, make all of them excluded. When </span><span class="rvts36">ALL</span><span class="rvts35"> is used on LOCATE, no particular line is located.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The LOCATE ALL handling of excluded lines is described </span><a class="rvts33" href="LOCATEScrolltoaSpecificLine.html">here</a><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><span class="rvts36">FIND (F):</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">FIND ALL ABC X</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within excluded lines. Each excluded line having ABC is unexcluded and “pops out” of the display. When ALL is used, a count of strings is displayed. Lines already unexcluded remain unexcluded, but they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">FIND ALL ABC X DX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within excluded lines. Each excluded line having ABC remains excluded afterwards.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">FIND ALL ABC NX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within unexcluded lines. Each unexcluded line having ABC remains unexcluded. When ALL is used, a count of strings is displayed. Any excluded lines remain excluded, and they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">FIND ALL ABC NX MX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within unexcluded lines. Each unexcluded line having ABC will be newly excluded. When ALL is used, a count of strings is displayed. Any formerly excluded lines remain excluded, and they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts311"><br/></span></p>
+<p class="rvps2"><span class="rvts36">NFIND (NF):</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NFIND ALL ABC X</span></p>
+<p class="rvps10"><span class="rvts35">Find all excluded lines in which ABC is NOT found. Each excluded line NOT having ABC is unexcluded and “pops out” of the display. When ALL is used, a count of </span><span class="rvts85">lines</span><span class="rvts35"> is displayed. (The count is a count of </span><span class="rvts85">lines</span><span class="rvts35">, not </span><span class="rvts85">strings</span><span class="rvts35">, because we are finding lines where the string is NOT there. The </span><span class="rvts85">lines</span><span class="rvts35"> exist, but the </span><span class="rvts85">strings</span><span class="rvts35"> don't, so we can't very well count something that doesn't exist!) &nbsp;Lines already unexcluded remain unexcluded, and they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NFIND ALL ABC X DX</span></p>
+<p class="rvps10"><span class="rvts35">Find all excluded lines in which ABC is NOT found. Each excluded line NOT having ABC remains excluded afterwards.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NFIND ALL ABC NX</span></p>
+<p class="rvps10"><span class="rvts35">Find all unexcluded lines in which ABC is NOT found. Each unexcluded line NOT having ABC remains unexcluded. When ALL is used, a count of </span><span class="rvts85">lines&nbsp;</span><span class="rvts35"> is displayed. Any excluded lines remain excluded, but they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NFIND ALL ABC NX MX</span></p>
+<p class="rvps10"><span class="rvts35">Find all unexcluded lines in which ABC is NOT found. Each unexcluded line NOT having ABC will be newly excluded. When ALL is used, a count of </span><span class="rvts85">lines</span><span class="rvts35"> is displayed. Any formerly excluded lines remain excluded, and they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">CHANGE (C):</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ALL ABC DEF X</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within excluded lines, and change ABC to DEF. Each excluded line having ABC is unexcluded and “pops out” of the display. When ALL is used, a count of strings is displayed. Lines already unexcluded remain unexcluded, but they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ALL ABC DEF X DX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within excluded lines, and change ABC to DEF. Each excluded line having ABC remains excluded afterwards.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ALL ABC DEF NX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within unexcluded lines, and change ABC to DEF. Each unexcluded line having ABC remains unexcluded. When ALL is used, a count of strings is displayed. Any excluded lines remain excluded, but they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CHANGE ALL ABC DEF MX</span></p>
+<p class="rvps10"><span class="rvts35">Find all occurrences of ABC within unexcluded lines, and change ABC to DEF. Each unexcluded line having ABC will be newly excluded. When ALL is used, a count of strings is displayed. Any formerly excluded lines remain excluded, but they are not looked at for purposes of determining the count.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">EXCLUDE (X):</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">EXCLUDE ALL</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">Exclude every line in the file.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">EXCLUDE ALL ‘ABC' WORD</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">Exclude all lines having the word ‘ABC'</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">NEXCLUDE (NX): </span><span class="rvts35">(requires a search string)</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts35">NEXCLUDE ‘ABC' ALL</span></p>
+<p class="rvps10"><span class="rvts35">Excludes all lines NOT having ABC somewhere on the line. If you begin with no exclusions, like after a RESET is issued, and then issue NX ABC ALL, only those lines containing ABC will be visible, and everything else will be excluded. Some editors refer to this capability as an ‘ONLY' function. </span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Note that for NEXCLUDE, the string operand is required. (Otherwise, you'd be asking SPFLite to exclude all lines in which “nothing” is not present, which doesn't make sense.)</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Tritus SPF users will recognize the NX command.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">SHOW:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SHOW ALL</span></p>
+<p class="rvps10"><span class="rvts35">Unexcludes all lines in the file or in a CC block. This performs the same function as a RESET command, except that SHOW respects CC blocks.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SHOW ‘ABC' WORD ALL</span></p>
+<p class="rvps10"><span class="rvts35">Unexcludes all excluded lines in the file or in a CC block which contain the word ‘ABC'. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SHOW ‘ABC' PREFIX .A .B</span></p>
+<p class="rvps10"><span class="rvts35">Unexcludes all excluded lines in range of .A .B which contain the prefix ‘ABC'. </span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">NSHOW: </span><span class="rvts35">(requires a search string)</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NSHOW ‘ABC' WORD ALL</span></p>
+<p class="rvps10"><span class="rvts35">Unexcludes all excluded lines in the file or in a CC block which do NOT contain the word ‘ABC'. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">NSHOW ‘ABC' PREFIX .A .B</span></p>
+<p class="rvps10"><span class="rvts35">Unexcludes all excluded lines in range of .A .B which do NOT contain the prefix ‘ABC'. </span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">UC, LC, SC, TC:</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">These four commands all modify the alphabetic case of one or more lines in some way. Since they are so similar, they are discussed together, using </span><span class="rvts36">UC</span><span class="rvts35"> as an example. These commands change text, so they all will unexclude lines by default.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">UC ALL X </span></p>
+<p class="rvps10"><span class="rvts35">Convert all excluded lines in the file or in a CC block to upper case, and then unexclude them.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">UC ALL X DX</span></p>
+<p class="rvps10"><span class="rvts35">Convert all excluded lines in the file or in a CC block to upper case, and leave them excluded.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">UC ALL NX</span></p>
+<p class="rvps10"><span class="rvts35">Convert all unexcluded lines in the file or in a CC block to upper case, and leave them unexcluded.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">UC ALL NX MX</span></p>
+<p class="rvps10"><span class="rvts35">Convert all unexcluded lines in the file or in a CC block to upper case, and then exclude them.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">CREATE (CRE):</span></p>
+<p class="rvps2"><span class="rvts36">REPLACE (REP):</span></p>
+<p class="rvps9"><span class="rvts311"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CREATE file-name X</span></p>
+<p class="rvps9"><span class="rvts35">CREATE file-name NX</span></p>
+<p class="rvps9"><span class="rvts35">REPLACE file-name X</span></p>
+<p class="rvps9"><span class="rvts35">REPLACE file-name NX</span></p>
+<p class="rvps10"><span class="rvts35">REPLACE will overwrite an existing file, whereas CREATE will not; otherwise these two commands work the same way. (However, REPLACE cannot be used to write over the file you are currently editing.) &nbsp;CREATE and REPLACE can select their source data from among excluded or non-excluded lines using the X or NX option. The source lines may be come from a line-label range, a tag name, or a CC or MM block.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">COPY:</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The COPY command doesn't take X, NX, MX or DX. However, if you can use the A– or B– line commands so that the copied lines will be excluded afterwards. It is legal to use the A+ or B+ &nbsp;commands instead, but lines copied from an external file are normally inserted as unexcluded, so adding + would not change anything.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">CUT X:</span></p>
+<p class="rvps2"><span class="rvts36">CUT NX:</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">CUT can select its source data from among excluded or non-excluded lines using the X or NX option. The source lines may be come from a line-label range, a tag name, or a CC or MM block.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">DELETE (DEL):</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">ISPF, prior versions of SPFLite, and other SPF-style editors such as Tritus SPF all handled the DELETE primary command somewhat differently. </span></p>
+<p class="rvps13"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For some of the operands of DELETE, such as X and NX, the ALL option previously was implied but not allowed by SPFLite, but was required by other editors. For others, ALL was not implied and it had to be present. For a simple DELETE ALL, the command was illegal. SPFLite has simplified these rules as follows.</span></p>
+<p class="rvps13"><span class="rvts98"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps149"><span class="rvts35">In most cases, the ALL keyword is optional. That means to delete all excluded lines, you may say either DELETE ALL X or just DELETE X. Either one is legal, and either one does exactly the same thing. So, long-time users of SPF-style editors that required DEL </span><span class="rvts36">ALL</span><span class="rvts35"> X can keep typing it.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps149"><span class="rvts35">It is important to remember that </span><span class="rvts36">ALL</span><span class="rvts35"> lines that meet the criteria provided to the DELETE command will be deleted, </span><span class="rvts85">whether the ALL keyword is used or not.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps149"><span class="rvts35">If you wish to delete every line in the file, </span><span class="rvts36">DELETE ALL is now a legal command</span><span class="rvts35">. </span><span class="rvts36">Be aware</span><span class="rvts35"> that every line in the entire file </span><span class="rvts36">WILL</span><span class="rvts35"> be deleted, so issue this command with care </span><span class="rvts36">!</span><span class="rvts35"> &nbsp;</span><span class="rvts36">There is no “are you sure” message to confirm a DELETE ALL.</span><span class="rvts35"> &nbsp;If you do a </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> by mistake, issue the </span><span class="rvts36">UNDO</span><span class="rvts35"> command immediately, and the file will be restored.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps149"><span class="rvts35">As a safeguard, </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> cannot be abbreviated as </span><span class="rvts36">DEL ALL</span><span class="rvts35">. Since most users always type the shortest form of a command to save time, </span><span class="rvts36">DEL ALL</span><span class="rvts35"> with no other operands will be treated as an unintended deletion of the entire file. If you attempt this, the command will be rejected and you will be reminded to fully spell out </span><span class="rvts36">DELETE ALL</span><span class="rvts35"> if that is your intent.</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps149"><span class="rvts35">A plain </span><span class="rvts36">DELETE</span><span class="rvts35"> with no other operands is not permitted.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">PRINT X :</span></p>
+<p class="rvps2"><span class="rvts36">PRINT NX:</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">PRINT can select its source data from among excluded or non-excluded lines using the X or NX option. The source lines may be come from a line-label range, a tag name, or a CC or MM block.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">FLIP:</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The FLIP primary command will invert the exclusion status of a specified range of selected lines or of all the lines in the file. Excluded will become unexcluded, and vice-versa. If the range is omitted, the entire file is “flipped”. What is notable about SPFLite is that FLIP will take a CC block to define its range, in addition to a label range.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">RESET (RES): </span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps10"><span class="rvts35">RESET EXCLUDED will unexclude all excluded line. Since this is the default action, everyone just says RES instead of spelling out the whole command.</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">SORT: </span><span class="rvts35">(see also the section </span><a class="rvts33" href="WorkingwithExcludedLines.html#Using%20SORT%20X">Using SORT X</a><span class="rvts36"> </span><span class="rvts35">for more information)</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SORT X</span></p>
+<p class="rvps10"><span class="rvts35">Excluded lines only are sorted, and returned as unexcluded lines to the same set of line locations, except in sorted order.</span></p>
+<p class="rvps13"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SORT X DX</span></p>
+<p class="rvps10"><span class="rvts35">Excluded lines only are sorted, and returned as excluded lines to the same set of line locations, except in sorted order.</span></p>
+<p class="rvps13"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SORT NX</span></p>
+<p class="rvps13"><span class="rvts35">Unexcluded lines only are sorted, and returned as unexcluded lines to the same set of line locations, except in sorted order.</span></p>
+<p class="rvps71"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">SORT NX MX</span></p>
+<p class="rvps10"><span class="rvts35">Unexcluded lines only are sorted, and returned as excluded lines to the same set of line locations, except in sorted order.</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts36">RESET (RES):</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">ISPF provides </span><span class="rvts36">RESET</span><span class="rvts35"> to reset a number of “special” line conditions, such as changed-line markers, profile lines, and excluded lines. If you want to clear your line exclusions, most people just type </span><span class="rvts36">RES</span><span class="rvts35"> on the command line. Doing so will not reset any labels that might be present. In SPFLite, RESET works basically the same way, but since you now have the possibility of labels, tags and kept line commands, when you really need to reset a number of kinds of special lines, you would ordinarily need several </span><span class="rvts36">RESET</span><span class="rvts35"> commands. A regular </span><span class="rvts36">RESET</span><span class="rvts35"> without any options does not reset labels, tags or kept commands.</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">To allow everything to be cleared at one time, SPFLite provides </span><span class="rvts36">RESET ALL</span><span class="rvts35">. This command will reset everything that is possible to reset, including excluded lines, labels, tags, kept line commands, lines with special indicators like ==CHG&gt; and the lines displayed in response to a </span><span class="rvts36">PROFILE</span><span class="rvts35"> command.</span></p>
+<p class="rvps10" style="page-break-before: always;"><span class="rvts98"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Character conversion items – AX / XA / EX / XE</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Character conversion items – AX / XA / EX / XE">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Character conversion items – AX / XA / EX / XE" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingCharConv"
+		  data-hnd-context="271"
+		  data-hnd-title="Character conversion items – AX / XA / EX / XE"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Character conversion items – AX / XA / EX / XE</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A </span><span class="rvts140">character conversion item</span><span class="rvts6"> is used to convert data to and from character mode and ASCII or EBCDIC encoding. This conversion is applied to a specified column range of original data. To perform this operation on the current contents of the </span><span class="rvts140">result string,</span><span class="rvts6"> specify a </span><span class="rvts40">. </span><span class="rvts6">dot symbol instead of, or in addition to, a standard </span><span class="rvts140">column-range</span><span class="rvts6"> operand.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Note that when dealing with EBCDIC conversions, special considerations apply:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">Character conversion items in mapping strings do not know or respect the data type of the underlying file. You must know this, and apply the correct conversion for the data you are working with. That is your responsibility.</span></li>
+</ol></ol>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="2" style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">The facility for the </span><span class="rvts40">EX</span><span class="rvts6"> and </span><span class="rvts40">XE</span><span class="rvts6"> codes is described here supports EBCDIC. When you do this, SPFLite will supply a default EBCDIC translation table corresponding to code page </span><span class="rvts40">1140</span><span class="rvts6">. This is identical to the supplied </span><span class="rvts6">EBCDIC.SOURCE</span><span class="rvts6"> code page that comes with SPFLite. There is no way to override this default.</span></li>
+</ol></ol>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="3" style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">You must bear in mind that, internally, SPFLite only processes data as ASCII (Ansi) characters. In an EBCDIC-encoded file, when you see a character like '</span><span class="rvts40">1</span><span class="rvts6">' displayed in an edit session, SPFLite sees it as an ASCII value of </span><span class="rvts40">X'31'</span><span class="rvts6">, but in your data file, it exists as </span><span class="rvts40">X'F1'</span><span class="rvts6">. The way editing works for EBCDIC files is that your EBCDIC data is brought into an edit session and temporarily converted to ASCII as you edit. When the file is saved, it is converted back to EBCDIC.</span></li>
+</ol></ol>
+<p class="rvps107"><span class="rvts6"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="4" style="margin-left: 0px; text-indent: 0px" class="rvps107"><span class="rvts6">When character conversion items are introduced into this environment, if you have original EBCDIC data like </span><span class="rvts40">X'F1'</span><span class="rvts6">, it is first converted to </span><span class="rvts40">X'31'</span><span class="rvts6"> to make it an ASCII character '</span><span class="rvts40">1</span><span class="rvts6">' that you recognize, when the file is opened. If you then ask for this '</span><span class="rvts40">1</span><span class="rvts6">' to be converted to hex using </span><span class="rvts40">EX</span><span class="rvts6">, the '</span><span class="rvts40">1</span><span class="rvts6">' which is internally held as </span><span class="rvts40">X'31'</span><span class="rvts6"> is first converted to a byte value of </span><span class="rvts40">X'F1'</span><span class="rvts6">, and then </span><span class="rvts165">that</span><span class="rvts6"> is converted to the two ASCII </span><span class="rvts165">characters</span><span class="rvts6"> "</span><span class="rvts40">F1</span><span class="rvts6">". Likewise, if you ask for the two characters "</span><span class="rvts40">F1</span><span class="rvts6">" to be converted using </span><span class="rvts40">XE</span><span class="rvts6">, they are first converted a single byte with the value </span><span class="rvts40">X'F1'</span><span class="rvts6">. This byte value is then converted from EBCDIC to ASCII, which is </span><span class="rvts40">X'31'</span><span class="rvts6">. That byte value becomes the result, which appears as the ASCII character '</span><span class="rvts40">1</span><span class="rvts6">' in your edit session. When your EBCDIC file is saved, that ASCII '</span><span class="rvts40">1</span><span class="rvts6">' will get translated (again) back to EBCDIC, resulting your file containing an EBCDIC '</span><span class="rvts40">1</span><span class="rvts6">' value of </span><span class="rvts40">X'F1'</span><span class="rvts6">. </span></li>
+</ol></ol>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">This may all seem rather complex, but the underlying goal is to help you “maintain the illusion” that this Ansi-based editor is really editing EBCDIC, as if you were actually running on a mainframe. SPFLite is able to maintain this illusion by very carefully translating your data at precisely the right time, and by requiring its translation tables to conform to “lossless” conversion in both directions. SPFLite’s default EBCDIC table meets that requirement.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Syntax of a </span><span class="rvts140">character conversion item:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">{ </span><span class="rvts40">AX</span><span class="rvts6"> | </span><span class="rvts40">XA</span><span class="rvts6"> | </span><span class="rvts40">EX</span><span class="rvts6"> | </span><span class="rvts40">XE</span><span class="rvts6"> } &nbsp;[ </span><span class="rvts140">bypass-string</span><span class="rvts6"> ] &nbsp;</span><span class="rvts140">column-reference</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">AX</span><span class="rvts6"> | </span><span class="rvts40">XA</span><span class="rvts6"> | </span><span class="rvts40">EX</span><span class="rvts6"> | </span><span class="rvts40">XE</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Defines the type of character conversion to be done:</span></p>
+<p class="rvps71"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps106"><span class="rvts40">AX</span><span class="rvts6"> converts individual ASCII characters (ignoring any </span><span class="rvts140">bypassed</span><span class="rvts6"> characters) into two-character values, where these characters show the ASCII encoding. After conversion, the field would be twice as long as originally. For example, a string of "B&nbsp;4" would become </span><span class="rvts6">"422034"</span><span class="rvts6">, since that is what the ASCII values for these characters are. </span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps106"><span class="rvts40">XA</span><span class="rvts6"> converts pairs of ASCII characters into single-character values. The string being so converted must contain an even number of characters, and each character may only be in the range of </span><span class="rvts40">0</span><span class="rvts6">-</span><span class="rvts40">9</span><span class="rvts6">, </span><span class="rvts40">A</span><span class="rvts6">-</span><span class="rvts40">F</span><span class="rvts6"> or </span><span class="rvts40">a</span><span class="rvts6">-</span><span class="rvts40">f</span><span class="rvts6">. After conversion, the field would be half as long as originally. It is illegal to attempt to apply the conversion code </span><span class="rvts40">XA</span><span class="rvts6"> to data which does not meet the restrictions described here. For example, a string of "422034"</span><span class="rvts6"> would become </span><span class="rvts6">"B&nbsp;4"</span><span class="rvts6">, since that is what the ASCII characters represented by these values are. </span><span class="rvts40">Note</span><span class="rvts6">: &nbsp;If the selected columns (ignoring any </span><span class="rvts140">bypassed</span><span class="rvts6"> characters) are not spans of hex-digit characters of even length, the operation will halt with an error message.</span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps106"><span class="rvts40">EX</span><span class="rvts6"> converts individual EBCDIC characters (ignoring any </span><span class="rvts140">bypassed</span><span class="rvts6"> characters) into two-character values, where these characters show the EBCDIC encoding. After conversion, the field would be twice as long as originally. For example, a string of "B&nbsp;4" would become </span><span class="rvts6">"C240F4"</span><span class="rvts6">, since that is what the EBCDIC values for these characters are. </span></li>
+</ul>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 72px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps106"><span class="rvts40">XE</span><span class="rvts6"> converts pairs of EBCDIC characters into single-character values. The string being so converted must contain an even number of characters, and each character may only be in the range of </span><span class="rvts40">0</span><span class="rvts6">-</span><span class="rvts40">9</span><span class="rvts6">, </span><span class="rvts40">A</span><span class="rvts6">-</span><span class="rvts40">F</span><span class="rvts6"> or </span><span class="rvts40">a</span><span class="rvts6">-</span><span class="rvts40">f</span><span class="rvts6">. After conversion, the field would be half as long as originally. It is illegal to attempt to apply the conversion code </span><span class="rvts40">XE</span><span class="rvts6"> to data which does not meet the restrictions described here. For example, a string of "C240F4"</span><span class="rvts6"> would become </span><span class="rvts6">"B&nbsp;4"</span><span class="rvts6">, since that is what the EBCDIC characters represented by these values are. </span><span class="rvts40">Note</span><span class="rvts6">: &nbsp;If the selected columns (ignoring any </span><span class="rvts140">bypassed</span><span class="rvts6"> characters) are not spans of hex-digit characters of even length, the operation will halt with an error message.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Bypass-string:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Defines an optional string containing one or more characters to be bypassed. The idea behind the </span><span class="rvts140">bypass string</span><span class="rvts6"> is that you might have several spans of normal characters, or hex-digit characters, separated by blanks, commas, etc. and you want to convert the “real” data, but not the “delimiter” data. Any spans of characters contained within the </span><span class="rvts140">bypass string</span><span class="rvts6"> are ignored for conversion purposes and are copied as-is to the </span><span class="rvts140">result string</span><span class="rvts6"> in their relative locations, and the conversion process applies only to the remaining (non-bypassed) data. Bear in mind that, for </span><span class="rvts40">XA</span><span class="rvts6"> and </span><span class="rvts40">XE</span><span class="rvts6"> conversions, </span><span class="rvts40">each span</span><span class="rvts6"> of characters that may be delimited by these </span><span class="rvts140">bypass characters</span><span class="rvts6"> must </span><span class="rvts165">individually</span><span class="rvts6"> be of even length and contain only hex-digit characters.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Column-reference:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Selects the columns of data in the </span><span class="rvts140">source string</span><span class="rvts6"> that are to be converted (unless </span><span class="rvts140">dot notation</span><span class="rvts6"> is used to select column of data from the </span><span class="rvts140">result string</span><span class="rvts6">). The syntax of this field are the same as an ordinary column reference. A</span><span class="rvts140"> single column, remaining-columns, forward column-range </span><span class="rvts6">or</span><span class="rvts140"> reverse column range</span><span class="rvts6"> may be requested. No spaces or other characters not part of the syntax may appear between the conversion codes of </span><span class="rvts40">AX</span><span class="rvts6">, </span><span class="rvts40">XA</span><span class="rvts6">, </span><span class="rvts40">EX</span><span class="rvts6"> or </span><span class="rvts40">XE</span><span class="rvts6">, and the column-reference specification.</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For codes </span><span class="rvts40">XA</span><span class="rvts6"> and </span><span class="rvts40">XE</span><span class="rvts6">, the column reference field must result in a selection of an even number of characters, which must consist of valid hex-digit characters. For this reason, care must be taken when using a </span><span class="rvts140">remaining columns</span><span class="rvts6"> reference, such as </span><span class="rvts40">XA22+</span><span class="rvts6">. If the source data value was obtained using a Regular Expression, it is possible that the number of characters in it is variable and unpredictable, and could unexpectedly be of odd length. In those cases, it may not be possible to perform </span><span class="rvts40">XA</span><span class="rvts6"> or </span><span class="rvts40">XE</span><span class="rvts6"> conversions on your data. You may have to ‘normalize’ your data to ensure it only contains an even number of hex-digit characters.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For conversion codes </span><span class="rvts40">AX</span><span class="rvts6"> and </span><span class="rvts40">EX</span><span class="rvts6">, when the resulting value contains hex digits greater than 9, by default, these digits will be rendered as upper-case </span><span class="rvts40">A</span><span class="rvts6">-</span><span class="rvts40">F</span><span class="rvts6">. If a </span><span class="rvts140">case conversion code</span><span class="rvts6"> of </span><span class="rvts40">&gt;</span><span class="rvts6"> (convert to upper case) or </span><span class="rvts40">&lt;</span><span class="rvts6"> (convert to lower case) is in effect prior to the </span><span class="rvts40">AX</span><span class="rvts6"> or </span><span class="rvts40">EX</span><span class="rvts6"> code, those case conversions will be respected, and hex-digit characters will be rendered accordingly. Otherwise, you can use a </span><span class="rvts140">case alteration code</span><span class="rvts6"> of </span><span class="rvts40">UC</span><span class="rvts6">, </span><span class="rvts40">LC</span><span class="rvts6">, </span><span class="rvts40">SC</span><span class="rvts6">, </span><span class="rvts40">TC</span><span class="rvts6"> or </span><span class="rvts40">IC</span><span class="rvts6"> afterwards, to alter the contents of the </span><span class="rvts140">result string</span><span class="rvts6"> once it has been formed.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,50 @@
+' XF.MACRO
+'
+' Tag  all occurrances of lines with the word the cursor is on, or the macro operand. 
+' Display only those lines and save the current location for XPOP or XFLY macros. 
+' The companion XPOP macro will clear the created tags and put the cursor back where 
+'                          it was when XF was issued. 
+'               XFLY macro will NOT clear the tags, but will put the cursor back where 
+'                          it was when XF was issued. 
+' 
+'               These macros would almost certainly be assigned to command keys. 
+' 
+' Syntax:   XF [ string ]           Note the tag used will be :X + the 1st 3 chars of string 
+' 
+' Author: George Deluca 
+'
+dim lword, ltag, t as string
+dim i, j as number            
+
+if Get_Arg_Count > 0 then                             ' Got arguments?
+   lword = Get_Arg$(0)                                ' Save them
+else                                                  ' No argument, better be a cursor word
+   lword = Get_Curr_Word$                             ' Get the word
+   if lword = "" then halt(8, "No operand or word under the cursor")
+end if                                                '
+
+ltag = ":X" + left$(SPF_UnQuote$(lword), 3)           ' Create the tag 
+Set_Gbl_Str("XFTag", ltag)                            ' Save the tag for XPOP
+
+'--- Save where we are for the XPOP macro 
+if Get_Csr_LPtr > 0 then                              ' Got a cursor location?
+   Set_Gbl_Num("XFLine", Get_LNum(Get_Csr_LPtr))      ' Save where the cursor is (LNUM) 
+   Set_Gbl_Num("XFCol", Get_Csr_Col)                  ' 
+else                                                  ' 
+   i = Get_TopScrn_LPtr                               ' Get top of screen 
+   i = Get_Next_LPtr(i, 1, "DATA")                    ' Get 1st data line 
+   Set_Gbl_Num("XFLine", Get_LNum(i))                 ' Save topscreen instead (LNUM)   
+   Set_Gbl_Num("XFCol", 1)                            ' Save where the cursor is 
+end if
+
+SPF_Cmd("TAG " + ltag + " OFF")                       ' Clear current ltag names 
+SPF_Cmd("TAG " + ltag + " " + SPF_Quote$(lword) + " ALL")   ' Set the new tags
+if Get_RC > 0  then                                   ' Find anything at all? 
+   halt(fail, "String not found")                     ' No, tell of error 
+else
+   SPF_Cmd("EXCLUDE ALL") 
+   SPF_Cmd("LOCATE " + ltag + " ALL") 
+   SPF_Cmd("FIND FIRST " + SPF_Quote$(lword))         ' Find string again 
+   Set_Csr(Get_Find_LPtr, Get_Find_Col, Get_Find_Len) ' Put cursor on 1st one 
+end if                                                ' 
+halt                                                  ' Done

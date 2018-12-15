@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Character enumeration guide</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Character enumeration guide">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Character enumeration guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingQCharacterenumeration"
+		  data-hnd-context="287"
+		  data-hnd-title="Character enumeration guide"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Character enumeration guide</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><a class="rvts193" href="MappingQCharacterenumeration.html#General">General</a></p>
+<p class="rvps9"><a class="rvts241" href="MappingQCharacterenumeration.html#ColumnReferenceSyntax">Column Reference Syntax</a></p>
+<p class="rvps9"><a class="rvts241" href="MappingQCharacterenumeration.html#DotNotation">Dot Notation</a></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<h2 class="rvps84"><a name="General"></a>
+<span class="rvts0"><span class="rvts143">General</span></span></h2>
+<p class="rvps9"><span class="rvts156"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Consider an example </span><span class="rvts140">source string</span><span class="rvts6"> value of </span><span class="rvts168">ABCDwxyz</span><span class="rvts6">. The columns for this value are enumerated as follows:</span></p>
+<p class="rvps9"><span class="rvts209"><br/></span></p>
+<div class="rvps120"><table width="70%" border="0" cellpadding="2" cellspacing="1" style="border-width: 0px; border-spacing: 1px;">
+<tr valign="top">
+<td width="278" height="20" valign="top" style="padding: 2px;"><p class="rvps121"><span class="rvts220"><br/></span></p>
+</td>
+<td width="42" height="20" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="114" height="20" valign="bottom" style="padding: 2px;"><p class="rvps2"><span class="rvts217">12345678</span></p>
+</td>
+<td width="36" height="20" valign="bottom" style="padding: 2px;"><p class="rvps9"><span class="rvts221"><br/></span></p>
+<p class="rvps9"><span class="rvts221">←</span></p>
+</td>
+<td width="194" height="20" valign="bottom" style="padding: 2px;"><p class="rvps9"><span class="rvts197">normal enumeration</span></p>
+<p class="rvps9"><span class="rvts197">column numbers</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="278" valign="top" style="padding: 2px;"><p class="rvps121"><span class="rvts220"><br/></span></p>
+</td>
+<td width="42" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+<td width="114" valign="top" style="padding: 2px;"><p class="rvps2"><span class="rvts139">ABCDwxyz</span></p>
+</td>
+<td width="36" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts212"><br/></span></p>
+</td>
+<td width="194" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts222"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="278" height="29" valign="top" style="padding: 2px;"><p class="rvps122"><span class="rvts239">end-relative enumeration column</span></p>
+<p class="rvps122"><span class="rvts239">numbers with </span><span class="rvts240">*</span><span class="rvts239"> suffix</span></p>
+</td>
+<td width="42" height="29" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts224">→</span></p>
+</td>
+<td width="114" height="29" valign="top" style="padding: 2px;"><p class="rvps2"><span class="rvts238">87654321</span></p>
+</td>
+<td width="36" height="29" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts225"><br/></span></p>
+</td>
+<td width="194" height="29" valign="top" style="padding: 2px;"><p class="rvps9"><span class="rvts209"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Notes:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Throughout this document, when column references appear in explanations and examples, they are </span><span class="rvts177">color-coded</span><span class="rvts6"> to help remind you which type of column reference or enumeration type is being used. </span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps104"><span class="rvts6">Since there are a limited number of useful colors available, a given color may be used for more than one purpose; </span><span class="rvts177">red</span><span class="rvts6"> will often but not always mean </span><span class="rvts177">end-relative</span><span class="rvts6">. Read the context to confirm the meaning. </span></p>
+<p class="rvps10"><span class="rvts6"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">For fixed-length data, </span><span class="rvts7">normal enumeration</span><span class="rvts6"> is the easiest to understand and use. Follow the examples below in </span><span class="rvts7">blue</span><span class="rvts6"> for </span><span class="rvts197">normal column range notation</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"> </span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When your goal is to access the right-hand “tail” portion of a value, the </span><span class="rvts226">remaining-columns notation</span><span class="rvts6"> can be useful. To select an entire string value (like </span><span class="rvts139">ABCDwxyz</span><span class="rvts6"> above) you can use a using </span><span class="rvts226">remaining-columns</span><span class="rvts6"> reference with a </span><span class="rvts227">1+</span><span class="rvts6"> notation. This will work for a</span><span class="rvts140"> </span><span class="rvts6">string of any length. </span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"> </span></p>
+<p class="rvps13"><span class="rvts6">When starting column number is </span><span class="rvts6">1</span><span class="rvts6">, the </span><span class="rvts6">1</span><span class="rvts6"> </span><span class="rvts40">can be omitted</span><span class="rvts6"> and you can </span><span class="rvts40">use the</span><span class="rvts6"> </span><span class="rvts6">+</span><span class="rvts6"> </span><span class="rvts40">plus by itself</span><span class="rvts6"> to mean the same as </span><span class="rvts6">1+. When </span><span class="rvts6">+</span><span class="rvts6"> is used in this way, it is comparable to the </span><span class="rvts6">!</span><span class="rvts6"> </span><span class="rvts40">Picture</span><span class="rvts6"> code that copies the entire found string. A +</span><span class="rvts6"> plus sign, whether preceded by a number or alone, must always be followed by a blank, unless it's the last thing in your mapping string.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When you are dealing with variable-length data, perhaps as found by a Regular Expression </span><span class="rvts140">find string</span><span class="rvts6"> on your </span><span class="rvts40">CHANGE</span><span class="rvts6"> command, the </span><span class="rvts177">end-relative</span><span class="rvts6"> and</span><span class="rvts40"> </span><span class="rvts203">mixed-mode end-relative</span><span class="rvts6"> notations can help you deal with data when you don't know its exact size in advance.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When it is easier to view your data from the standpoint of its </span><span class="rvts177">right-hand end</span><span class="rvts6"> (wherever that may be), </span><span class="rvts177">end-relative</span><span class="rvts6"> </span><span class="rvts177">enumeration</span><span class="rvts6"> is a convenient notation, in which your column numbers are “reversed” (as compared to how </span><span class="rvts7">normal</span><span class="rvts6"> column notation does it), and an “</span><span class="rvts40">*</span><span class="rvts6">”</span><span class="rvts6"> asterisk suffix is used. (By “reversed”, refer to the </span><span class="rvts177">red column numbers</span><span class="rvts6"> in the diagram above.) &nbsp;Follow the examples below in </span><span class="rvts177">red</span><span class="rvts6"> for </span><span class="rvts195">end‑relative column range notation</span><span class="rvts6">, noting carefully the column-number ordering that is used.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">For</span><span class="rvts228"> </span><span class="rvts205">mixed-mode end-relative notation</span><span class="rvts6">, the first (</span><span class="rvts7">left-hand</span><span class="rvts6">) number always uses </span><span class="rvts7">normal enumeration</span><span class="rvts6">, while the second (</span><span class="rvts177">right-hand</span><span class="rvts6">) number always uses </span><span class="rvts177">end-relative enumeration</span><span class="rvts6">. The separator for these numbers is a </span><span class="rvts6">/</span><span class="rvts6">&nbsp;</span><span class="rvts165">slash</span><span class="rvts6"> to indicate forward column ordering, and is a </span><span class="rvts210">\</span><span class="rvts6">&nbsp;</span><span class="rvts165">backslash</span><span class="rvts6"> to indicate </span><span class="rvts165">reverse</span><span class="rvts6"> column ordering. </span><span class="rvts205">Mixed-mode end-relative notation</span><span class="rvts6"> can be useful in cases where, for example, you want to reference </span><span class="rvts40">all but</span><span class="rvts6"> the first </span><span class="rvts40">2</span><span class="rvts6"> and last </span><span class="rvts40">2</span><span class="rvts6"> positions of a value and start with relative position </span><span class="rvts40">3</span><span class="rvts6"> in both directions; you would do that with a</span><span class="rvts168"> </span><span class="rvts6">3/3*</span><span class="rvts168"> </span><span class="rvts6">column reference. Follow the examples below in </span><span class="rvts203">violet</span><span class="rvts6"> for </span><span class="rvts205">mixed-mode end-relative column range notation</span><span class="rvts6">, observing carefully the special syntax it uses. </span></li>
+</ul>
+<p class="rvps104"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Note that </span><span class="rvts40">only</span><span class="rvts6"> by using a </span><span class="rvts6">\</span><span class="rvts6"> backslash do you indicate </span><span class="rvts165">column reversal</span><span class="rvts6"> in</span><span class="rvts228"> </span><span class="rvts203">mixed-mode enumeration</span><span class="rvts6">; you do </span><span class="rvts40">not</span><span class="rvts6"> reverse the numbers to indicate column reversal, as is done with </span><span class="rvts7">normal enumeration</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Examples using the </span><span class="rvts140">source string &nbsp;</span><span class="rvts171">ABCDwxyz</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To explicitly reference the </span><span class="rvts40">entire</span><span class="rvts6"> </span><span class="rvts140">source string</span><span class="rvts6"> normally as &nbsp;</span><span class="rvts171">ABCDwxyz</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1-8</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">8-1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1/1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, forward</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts226">remaining-columns notation</span></p>
+<p class="rvps9"><span class="rvts230"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To explicitly reference the </span><span class="rvts40">entire</span><span class="rvts6"> </span><span class="rvts140">source string</span><span class="rvts6"> in </span><span class="rvts167">reverse</span><span class="rvts6"> to obtain &nbsp;</span><span class="rvts171">zyxwDCBA</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">8-1</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1-8*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1\1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, </span><span class="rvts174">reversed order</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">\1+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts231">reversed order</span><span class="rvts226"> remaining-columns notation</span></p>
+<p class="rvps9"><span class="rvts230"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate substring </span><span class="rvts171">ABCD</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1-4</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">8-5*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1/5*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, forward</span></p>
+<p class="rvps9"><span class="rvts232"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate substring </span><span class="rvts171">wxyz</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">5-8</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">4-1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">5/1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, forward</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">5+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts226">remaining-columns notation</span></p>
+<p class="rvps9"><span class="rvts230"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate and </span><span class="rvts167">reverse</span><span class="rvts6"> substring </span><span class="rvts171">ABCD</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6"> to get </span><span class="rvts171">DCBA</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">4-1</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">5-8*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1\5*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, </span><span class="rvts174">reversed order</span></p>
+<p class="rvps9"><span class="rvts232"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate and </span><span class="rvts167">reverse</span><span class="rvts6"> substring </span><span class="rvts171">wxyz</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6"> to get </span><span class="rvts171">zyxw</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">8-5</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">1-4*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">5\1*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, </span><span class="rvts174">reversed order</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">\5+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts231">reversed order</span><span class="rvts226"> remaining-columns notation</span></p>
+<p class="rvps9"><span class="rvts233"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate substring </span><span class="rvts171">BCDwxy</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">2-7</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">7-2*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">2/2*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, forward</span></p>
+<p class="rvps9"><span class="rvts232"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To locate and </span><span class="rvts167">reverse</span><span class="rvts6"> substring </span><span class="rvts171">BCDwxy</span><span class="rvts6"> within the </span><span class="rvts140">source string</span><span class="rvts6"> to get </span><span class="rvts171">yxwDCB</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">7-2</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts197">normal column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">2-7*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts223">end-relative column range notation</span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts171">2\2*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts205">mixed-mode end-relative column range notation, </span><span class="rvts174">reversed order</span></p>
+<p class="rvps9"><span class="rvts232"><br/></span></p>
+<h2 class="rvps84"><a name="ColumnReferenceSyntax"></a>
+<span class="rvts0"><span class="rvts219">Column Reference Syntax</span></span></h2>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> [ </span><span class="rvts140">dot-notation</span><span class="rvts6"> ] &nbsp;</span><span class="rvts140">column-item</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Column-item:</span><span class="rvts6"> &nbsp;one of the following formats:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">5</span><span class="rvts201"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts201"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts7">single column, normal notation</span></p>
+<p class="rvps9"><span class="rvts6">5*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts234">single column, end-relative notation</span></p>
+<p class="rvps9"><span class="rvts6">1-4</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts7">column range, forward order, normal notation</span></p>
+<p class="rvps9"><span class="rvts6">4-1</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts208"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts7">column range, </span><span class="rvts235">reversed order</span><span class="rvts7">, normal notation</span></p>
+<p class="rvps9"><span class="rvts6">8-5*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts234">column range, forward order, end-relative notation</span></p>
+<p class="rvps9"><span class="rvts6">5-8*</span><span class="rvts229"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts234">column range, </span><span class="rvts236">reversed order</span><span class="rvts234">, end-relative notation</span></p>
+<p class="rvps9"><span class="rvts6">2/3*</span><span class="rvts228"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts203">column range, forward order, mixed-mode end-relative notation</span></p>
+<p class="rvps9"><span class="rvts6">2\3*</span><span class="rvts228"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts203">column range,</span><span class="rvts202"> reversed order</span><span class="rvts203">, mixed-mode end-relative notation</span></p>
+<p class="rvps9"><span class="rvts6">5+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts233"> remaining columns (like 5 and above), forward order</span></p>
+<p class="rvps9"><span class="rvts6">\5+</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts230"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts233"> remaining columns (like 5 and above), </span><span class="rvts237">reversed order</span></p>
+<p class="rvps9"><span class="rvts6">0</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40"> </span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40">as-yet-unreferenced source-string columns, forward order</span></p>
+<p class="rvps9"><span class="rvts6">\0</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40"> </span><span class="rvts40"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts40">as-yet-unreferenced source-string columns, </span><span class="rvts167">reversed order</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a </span><span class="rvts140">column reference</span><span class="rvts6"> appears by itself without an associated </span><span class="rvts140">command code</span><span class="rvts6">, the </span><span class="rvts140">column reference</span><span class="rvts6"> is considered a </span><span class="rvts140">copying command</span><span class="rvts6"> that refers to data in the </span><span class="rvts140">source string; </span><span class="rvts6">it would require </span><span class="rvts140">dot notation</span><span class="rvts6"> to make it refer to the current </span><span class="rvts140">result string.</span><span class="rvts6"> </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, to copy </span><span class="rvts7">column 1 to 4</span><span class="rvts6"> of the </span><span class="rvts140">source string</span><span class="rvts6"> into the </span><span class="rvts140">result string, </span><span class="rvts6">simply specify 1-4</span><span class="rvts208"> </span><span class="rvts6">without a command code. To copy </span><span class="rvts7">column 1 to 4</span><span class="rvts6"> from the beginning of the </span><span class="rvts140">result string</span><span class="rvts6"> and appending it to the end of that same </span><span class="rvts140">result string</span><span class="rvts6">, specify .1-4</span><span class="rvts208"> </span><span class="rvts6">without a command code.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a </span><span class="rvts140">column reference</span><span class="rvts6"> appears as </span><span class="rvts165">part of a command code</span><span class="rvts6">, it is treated like an </span><span class="rvts140">operand</span><span class="rvts6"> to that command. See </span><a class="rvts44" href="MappingStringCommandTopics.html">Specific Command Coding Notes</a><span class="rvts6"> for complete information on how each command code operates, and how it treats its operands.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h2 class="rvps84"><a name="DotNotation"></a>
+<span class="rvts0"><span class="rvts219">Dot Notation</span></span></h2>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a column reference is preceded by a </span><span class="rvts40">dot</span><span class="rvts6">, the reference is to the </span><span class="rvts165">current contents</span><span class="rvts6"> of the </span><span class="rvts140">result string</span><span class="rvts6"> at the time the reference is made.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Without</span><span class="rvts6"> the dot, it may reference to the original </span><span class="rvts140">source string</span><span class="rvts6"> or to the </span><span class="rvts140">result string</span><span class="rvts6">, depending on whether a </span><span class="rvts40">copying command</span><span class="rvts6"> or a </span><span class="rvts40">modifying command</span><span class="rvts6"> is used.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When a command is a </span><span class="rvts165">copying command</span><span class="rvts6">, </span><span class="rvts140">dot notation</span><span class="rvts6"> causes a </span><span class="rvts140">column reference</span><span class="rvts6"> to refer to the current contents of the </span><span class="rvts140">result string</span><span class="rvts6"> </span><span class="rvts40">instead</span><span class="rvts6"> </span><span class="rvts40">of</span><span class="rvts6"> the </span><span class="rvts140">source string.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts140"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">When a command is a </span><span class="rvts165">modifying command</span><span class="rvts6">, </span><span class="rvts40">all</span><span class="rvts6"> </span><span class="rvts140">column references </span><span class="rvts6">refer to the current contents of the </span><span class="rvts140">result string</span><span class="rvts6"> </span><span class="rvts40">regardless</span><span class="rvts6"> of whether </span><span class="rvts40">.</span><span class="rvts6"> dot notation is used or not. A</span><span class="rvts140"> modifying command</span><span class="rvts6"> always refers to the </span><span class="rvts140">result string</span><span class="rvts6">, and so “dot mode” is implied for such commands.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">See description of each command code for the meaning of the </span><span class="rvts140">column reference</span><span class="rvts6"> operand for that command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">1-4</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">may refer to </span><span class="rvts7">columns 1-4</span><span class="rvts6"> in the </span><span class="rvts140">source string</span><span class="rvts6"> </span><span class="rvts40">or</span><span class="rvts6"> in the </span><span class="rvts140">result string</span></p>
+<p class="rvps13"><span class="rvts6">.1-4</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">refers to</span><span class="rvts208"> </span><span class="rvts7">columns 1-4</span><span class="rvts6"> in the </span><span class="rvts140">result string</span><span class="rvts6"> </span><span class="rvts40">only</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Dot-notation</span><span class="rvts6"> cannot be combined with </span><span class="rvts140">unreferenced columns</span><span class="rvts6"> (column number of </span><span class="rvts40">0</span><span class="rvts6">)</span><span class="rvts40">.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

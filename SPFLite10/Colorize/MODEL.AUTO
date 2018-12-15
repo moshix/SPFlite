@@ -1,0 +1,45 @@
+; SPFLite Colorize File
+ MIXEDCASE YES
+ ESCAPECHR \
+ QUOTED    5
+ NUMERIC   6
+ COMMENT1  7 // 0
+ COMMENT2  7 /* */
+
+;DELIMS    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~    (all delimiters between 33 and 127)
+ DELIMS    !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+
+ WORD  8 !
+ WORD  8 "
+ WORD  8 #
+ WORD  8 $
+ WORD  8 %
+ WORD  8 &
+ WORD  8 '
+ WORD  8 (
+ WORD  8 )
+ WORD  8 *
+ WORD  8 +
+ WORD  8 ,
+ WORD  8 -
+ WORD  8 .
+ WORD  8 /
+ WORD  8 :
+ WORD  8 ;
+ WORD  8 <
+ WORD  8 =
+ WORD  8 >
+ WORD  8 ?
+ WORD  8 @
+ WORD  8 [
+ WORD  8 \
+ WORD  8 ]
+ WORD  8 ^
+ WORD  8 _
+ WORD  8 `
+ WORD  8 {
+ WORD  8 |
+ WORD  8 }
+ WORD  8 ~
+
+; done

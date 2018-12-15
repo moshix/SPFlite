@@ -1,0 +1,1261 @@
+Change Log
+==========
+
+Between 10.1.8350 and 10.1.8351 (Dec 16/2018)
+=============================================
+
+*  10.1.8350 had a fix which effectively crippled RFIND and RCHANGE.  I must
+   apologize for letting this slip by me.  Corrected in this release.
+
+
+Between 10.0.8319 and 10.1.8350 (Dec 16/2018)
+=============================================
+
+*  As of the date of this release, I turn 76, and have decided to semi-retire
+   from active development and only work on errors and bug corrections as my
+   time and inclination permit.  You may still report bugs, just be aware I may
+   not respond or work on them at the same speed as today.
+
+*  So, as my birthday present to you, I am converting SPFLite to an Open Source
+   license.  It will be released under the GNU General Public License (V3). The
+   complete source and development folder will be made available on the SPFLite
+   web site.
+
+   At this time, I have removed the random registration nagging (for
+   unregistered versions), and removed the online checking for new releases.
+   This removes any dependency on the SPFLite web site.
+
+   Any new fix releases will simply be made available on the web site and announced
+   on the web site and in the SPFLite forum.
+
+Other Changes / Fixes
+
+*  As per the GPL recommendation, added an optional Splash screen at startup.
+   The display of this can be suppressed in the Options => General settings.
+
+*  Correct display routine for the Command line. It was not handling length of
+   line correctly.
+
+*  Correct generalized search routine to properly handle the +/- color
+   operands.  The routine was performing color processing when driven by
+   commands which did not expect nor want color processing to take place.
+
+*  To prevent corrupted screen displays which can occur when the edit text
+   contains characters which are not displayable in the currently chosen screen
+   font, SPFLite will now use the list of displayable characters specified under
+   the Options => General Tab and replace undisplayable characters with a user
+   specified character.  This is similar to what ISPF used to do when it
+   replaced non-displayable characters with a '.' (Period).
+
+*  Correct handling of the Displayable Characters setting in Options => General.
+   It was not correctly saving the value.
+
+*  Correct error in Vertical cursor support.  Non text lines on the screen (COLS,
+   BNDS, etc.) were not being re-drawn when the cursor moved.
+
+*  Correct error in the TF line command, it was mis-handling the text attributes
+   (color etc.) at some end of line conditions.
+
+*  Improve handling of marked text highlighting when using the Vertical Cursor
+   line support. (Still not perfect, but better)
+
+
+
+Between 10.0.8298 and 10.0.8319 (Nov 15/2018)
+=============================================
+
+*  Cosmetic correction to File Manager Help lines to properly show LINES as a
+   valid line command for a Filepath Display.
+
+*  Correct STATE processing to flush the File Type/STATE cache whenever a change
+   to STATE status is made.  This enables the File Manager LINES command to
+   properly obtain STATE status for a file.
+
+*  Correct macro Set_Line (again).  It was truncating text set in the Command
+   Line to the length of the visible command line.
+
+*  Correct EraseEOL of the Command line.   If the command line had been shifted
+   due to exceeding the visible length, the truncation was not handled
+   properly.
+
+*  Correct handling of a RESET COLOR command to clean up data structures when
+   complete to prevent interaction with future color related commands.
+
+*  Correct File Manager layout formatting. EXT field was mis-handled and would
+   not always appear when selected.
+
+*  Resize the Options and Profile Edit dialogs to increase the font size and make
+   them more readable. Add a promotional icon to these dialogs to promote the
+   Open Source movement.
+
+*  Correct error in CHANGE handling of +color values.
+
+*  Correct error in handling of multiple SORT keys.
+
+*  Correct error in text memory management affecting files over 10,000 lines. The
+   color attributes for the text were damaged during buffer expansion.
+
+
+Between 10.0.8287 and 10.0.8298 (Oct 25/2018)
+=============================================
+
+*  Correct File Manager Open File display which was incorrectly creating $Empty
+   items.
+
+*  Provide a default for the File Manager Submit working directory on brand new
+   installations.  The default will be the \Documents\SPFLite\JOBS folder.
+
+*  Correct error in CurrWord support which somehow stopped working during the
+   Version 10 changes.
+
+*  Correct macro Set_Line support to properly clear the previous line data when
+   used to set a string in the command line.
+
+*  Correct timing of initial colorization when a tabbed file is loaded.
+   Colorization was being performed incorrectly before the tabs were expanded.
+
+*  Correct Profile corruption when doing a Find-In-Files, a file is found which
+   does not have a Profile yet, and the option to create a new USING profile is
+   chosen.
+
+*  Reduce font size of Status Bar and Tab Headers a bit from the original V10
+   increase.
+
+
+Between 8.5.8144 and 10.0.8287 (Oct 15/2018)
+============================================
+
+*  Complete revision of all internal color management.  This will correct the
+   long running incompatibilities between the handling of normal screen color
+   choices and defining the colors in the AUTO colorization files.
+
+*  The initial run of this new version perform the following:
+    - Create a backup copy of your \Documents\SPFLite folder.
+    - Migrate all your old color choices to the new environment, your normal
+      screen color settings will be maintained.
+    - Display a short document providing more details.
+    - IF you use Colorize support, prompt you for a default AUTO file to convert.
+      IF you do not use Colorize support, there is nothing further for you to do.
+
+*  All color choices are now made in the OPTIONS dialog, and all choices now
+   will display sample text in the chosen colors.  This makes it much easier to
+   choose colors and quickly see what the effect will be.
+
+*  Color high-lighting support now allows up to 15 different colors.
+
+   However, you can no longer specify MULTIPLE Hi-Lite colors names on commands
+   like FIND/CHANGE/etc.   i.e. You can no longer use commands like
+      FIND fred RED GREEN
+   to search for 'fred' in either RED or GREEN.  One colorname at a time.
+
+*  A FIND ALL command will now high-light ALL the occurrences of the found
+   string the same way ISPF does.  This introduces a new RESET option - RESET
+   FIND.   Otherwise the high-lighting is removed by the next FIND/CHANGE, or by
+   any direct change to the contents of a high-lighted string.
+
+*  The new color support can now 'paint' the screen about 25-30% faster then
+   the prior version, meaning screen scrolling/paging is much faster.
+
+*  Color support has been extended to Printing.  A new option on the PRINT
+   SETUP dialog allows you to request printing in color or not.  Color
+   printing only functions if you have HILITE AUTO ON and have a valid .AUTO
+   file for the file being edited.   Color support is not functional for
+   FM initiated PRINT nor for Print Screen requests.
+
+*  The size of the Status Bar and Tab Headers has been slightly increased to
+   accomodate a larger Font size.  (My eyes are getting worse, my guess is yours
+   are too!)
+
+*  You can also now choose which fields of the Status Bar you wish to be
+   displayed, and can specify the order, left to right, in which they should
+   appear.  With 14 available fields, most normal screen widths cannot display
+   all of them, so you can choose based on your own priorities.  This
+   specification has been added to the OPTIONS dialog. (Options => Status)
+
+*  A new File Manager Line command has been added - L/LINES - this command will
+   refresh the STATE information for the selected file.  The FM display column
+   LINES obtains it's information from the STATE data.  The PROFILE for the
+   selected file must have been set to STATE ON for this to function.
+
+*  A new primitive was added (FirstLineCmd) which will move the cursor to column
+   1 of the first Line command area on the screen.
+
+*  Support has been added to allow KEYMAP entries to be saved as separate files
+   in the MACROS folder.  This allows for easier editing of long complex
+   keyboard macros which can now be split into multiple lines and also have
+   comments added.  These macros are invoked in KEYMAP using an @macname
+   syntax.
+
+*  A new DO command is available to provide an alternative to the full MACRO
+   support.  It provides no programability, it can only issue a series of commands.
+   However it CAN issue all Primary commands (except DO), all KB primitives and all
+   line commands.
+
+*----- Plus current maintenance from Version 8.5 not yet released
+
+*  Correct cursor positioning after Exclude line commands.
+
+*  Allow LOCATE command in FM to operate with Profile lists.
+
+*  Correct RLOCFIND so that it can be used to scroll while there are Line
+   Commands pending.
+
+*  Correct the Primary DIR command which was simply not working at all.
+
+*  UNDO / REDO will now clear any pending Line Commands.
+
+*  Correct crash when using .AUTO files with a large number of keyword entries.
+
+*  Correct scrolling in File Manager which was not honoring a CSR setting.
+
+
+Between 8.5.8104 and 8.5.8144 (May 25/2018)
+===========================================
+
+*  Correct RFIND handling when prior commands like EXCLUDE have altered the
+   last line position.
+
+*  Correct missing internal flag setting.  EXCLUDE/SHOW requests were not always
+   triggering UNDO Save processing.
+
+*  Correct internal logic error.  With large files (> 10,000 lines)  and use of
+   Colour Highlighting, internal data structures could be corrupted.
+
+
+Between 8.5.7231 and 8.5.8104 (Apr 15/2017)
+==========================================
+
+*  Add macro support for sub-tables within the Global storage support.  This
+   enables multiple 'tables' to exist within the global storage area.  See the
+   full description in the Macros Help document.
+
+*  Correct initialization of 2 File Manager related INI values. One was missing
+   and one had a wrong value.  Error could cause crashes during File Manager
+   column sorting.
+
+*  Correct handling of :ZALL and :\ZALL selection criteria.  i.e.  make them
+   work as intended.
+
+*  Treat a SAVEAS command in a CLIP session as if it were a CREATE command rather
+   than triggering an error message saying to use CREATE.
+
+*  Correct failure to add newly created files to the Recent Files list.
+
+*  Correct error in AUTOFAV file masking support.
+
+*  Add -NOLOOP command line option to request SPFLite internal loop detection
+   logic be turned off.  This can assist with I/O operations to slower external
+   file systems over network connections.
+
+
+Between 8.5.7156 and 8.5.7231 (Aug 19/2017)
+==========================================
+
+*  Correct error in validating E-type literals.  The macro validation was
+   inadvertently interfering with normal operand parsing.
+
+*  Correct CHANGE handling of M and E type literals to properly adjust for
+   the dynamic length of the change strings.
+
+*  Add a simple #INCLUDE ability to SUBMIT jobstreams.
+
+*  Alter macro function SetLine() to ensure any Color hiliting for the line does
+   not exceed the text line length.
+
+*  Alter macro function Set_CLR_Line() to allow specifying a CLR line longer
+   than the text line without an error message.  The CLR line will be truncated
+   to the text line length.
+
+*  Correct the BackTab keyboard primitive.  It was crashing when used in HEX
+   mode.
+
+*  Add the back quote ` (x'60') to the Colorize scan for quoted strings along
+   with the normal ' and ".
+
+*  Correct handling of RFIND values so they are not 'lost' during other primary
+   commands which also use the common internal search routines.
+
+
+Between 8.5.7110 and 8.5.7156 (Jun 5/2017)
+==========================================
+
+*  Correct error in colorize keyword lookup, it was ignoring the last WORD table
+   entry.
+
+*  Yet another re-write of the BOUNDS command and the associated BNDS line data
+   entry.  Basically now, the BNDS line data, when Enter is pressed, must be
+   valid; it is no longer possible to just overtype a BNDS line and leave old <
+   and > characters around and expect SPFLite to just 'know' to ignore them.
+
+*  Correct several errors in MEdit support.  Line command (D)etach wasn't
+   working, first file wasn't being marked modified correctly, a CANCEL command
+   was crashing SPFLite and some other errors in marking lines and files
+   modified.
+
+*  Correct handling of certain substitution characters.  Some were failing to be
+   resolved properly.
+
+*  Revise the Get_Line$() macro function to allow retrieval of all line types,
+   even normally non-modifyable lines.  These non-modifyable lines are still
+   restricted from being 'saved back' using Set_Line$ function.
+
+*  Create a new macro function Get_Modified_FileName() to allow requesting the
+   modified status of a particular filename within a MEdit session.  If used in
+   a non-MEdit session, it will act just like the simple Get_Modified()
+   function.
+
+*  Remove limitations on the number of files an FM ALL MEDIT command could
+   handle.  Also, when more than 100 filenames are entered, it will pop-up an
+   option to allow suppression of the File-Watch function.   As the number of
+   files increases, there is more risk of exceeding program Stack space, and
+   less likelihood of File-Watch even being needed.
+
+
+Between 8.5.7027 and 8.5.7110 (Apr 21/2017)
+==========================================
+
+*  Correct error in handling dotted line references which are larger than the
+   last real line.
+
+*  Extend the display support for horizontal and Vertical line cursor rulers to
+   the File Manager screen.  Formerly, these enhanced cursors were only
+   available on the normal Edit screen.
+
+*  Correct error in typing into the Command line in Insert mode when the cursor
+   position is past the end of the current line data.
+
+*  Correct error in handling EOL AUTO deblocking when the last line in the file
+   does not contain any valid delimiter.
+
+*  Correct several errors in the new NUMBER support.  The errors were impacting
+   the operation of the PROFILE EDIT handling.
+
+*  Remove support for the FILTER command.  This command is really no longer
+   needed since full Macro support was added.   For the last couple releases, a
+   warning message has been issued announcing the coming removal.
+
+*  Add a new "Lines" column to the File Manager to show the number of data lines
+   in the file.  Note that this value will only be displayed for those files
+   whose Profile STATE option is set to ON, and which actually HAVE valid STATE
+   data.  All other conditions will be displayed as blanks.  To make this a bit
+   more similar to ISPF, the command STATS will be added as an alias of the
+   STATE command.
+
+*  Correct error in print headers / footers when performing the print from
+   within File Manager.  Substitution of ~x type file related variables was not
+   being performed correctly.
+
+*  Correct error in the RLOCFIND REVERSE handling.  It was not properly handling
+   the REVERSE option when the last search was a LOCATE.
+
+*  Correct error in handling BKP file creation during a MEdit session.  Only the
+   first file was having the BKP file created.
+
+*  Correct errors in MEdit handling.  When converting a simple Edit session into
+   a MEdit session, the modified state of the existing Edit file was not being
+   carried forward.  Also, converting a session from a normal Edit to a MEdit
+   session, was enqueing the new fileame twice.
+
+*  Enhance the File Manager RENAME command to also rename any associated STATE
+   files the same way the Primary RENAME command already did.
+
+*  Correct cleanup code which removes old SUBMIT work files.  In prior versions,
+   these were all created as *.TXT files.  This was altered to use the extension
+   of the edited file.  These non *.TXT files were not being cleaned up
+   properly.
+
+
+
+Between 8.4.6153 and 8.5.7027 (Jan 27/2017)
+==========================================
+
+*  Correct handling of Left arrow in Command line when command line has shifted
+   left due to length.
+
+*  Correct handling of a RESET command issued within a macro.
+
+*  Add support for number of new commands to handle text numbering similar to
+   that provided by the ISPF NUMBER command.  Check the documentation for
+   details on these new commands.
+
+*  Enhance Macro function Set_Line() to allow setting a string into the Command
+   line.  (Experimental)
+
+*  Correct error in Request_Label$() macro functio.  (Loop when no existing
+   normal label exists)
+
+*  Alter the dialog building on systems where the default font size has been
+   altered so that dialog labels are displayed in an appropriately scaled font.
+   This will prevent the truncation of labels on systems which run in larger
+   text font mode.
+
+*  Revise the SPF_Parse() macro function to provide additional flexibility in
+   specifying the macro operands.  Please refer to the Macros Help file for full
+   details.
+
+*  Correct the operation of the Macro HALT command when issued with no
+   operands.  It was terminating the macro without allowing thinBasic to perform
+   it's normal cleanup functions.
+
+*  Corrected error in the (Swap) keyboard function when operating in PowerType
+   mode.
+
+*  Correct error in the TC Line command. Depending on the specific data content,
+   the processing could perform an incorrect Title Case operation.
+
+*  Correct error in handling changes to the BNDS line.
+
+*  Correct screen drawing when HEX ON, HIDE ON and excluded lines are used
+   together.
+
+*  Add new option to the File Manager lists.  The dates for files modified since
+   the SPFLite session started, as well as those modified since yesterday at
+   12:01 AM will be color hi-lighted to make them stand out in the list.
+
+*  Add a new option to the SORT command (MARKUNIQ).  This option allows you to
+   mark unique sort lines in the file as USER lines.  This will allow
+   manipulation of unique / non-unique lines in a file in a convenient manner.
+
+
+Between 8.4.6075 and 8.4.6153 (Jun 01/2016)
+==========================================
+
+*  Correct error in handling a move of a COLS line.
+
+*  Correct building of STATE file data when filtering using Excluded lines or
+   U/NU is active.
+
+*  Correct handling of the Re-Open files logic when SPFLite is started using
+   -INIT to specify an alternate INI file.
+
+*  Improve handling of the Windows Clipboard to report when errors occur while
+   reading / writing the clipboard.
+
+*  Ensure File Manager path entries entered on the screen contain a trailing \
+   for consistency.
+
+*  Correct cursor positioning when left/right autoscrolling occurs while in HEX
+   mode.
+
+*  Add two new functions to the macro support.  Reset_Gbl_Str and
+   Reset_Gbl_Num.  These functions will reset (Empty) the global string and
+   numeric storage areas.
+
+
+Between 8.3.6022 and 8.4.6075 (Mar 15/2016)
+==========================================
+
+*  Revise the handling of searches which have trailing blanks in the search
+   string and how they are treated when there is a partial match at end of
+   line.  Previously, SPFLite would treat an end of line as if it had been
+   extended with blanks.  This is being changed so that this creation of
+   'virtual blanks' is no longer done.
+
+   This means that search strings must match the actual real data present in the
+   line.  e.g.  a search for "ABC  " will no longer match a line which simply
+   ends in "ABC".
+
+   If you require the more flexible search as it used to be done, please explore
+   using Picture Literals and use the { and } arguments, or the other
+   alternative would be to use a Regex expression.   Both of these provide
+   powerful tools for text searching.
+
+   The former SPFLite method was not exact and could cause incorrect lines to be
+   selected.  e.g.  What if the search for "ABC  " did NOT want to be satisfied
+   with a line ending in simple "ABC"?
+
+*  Correct loop in (Edit), (Browse) and (View) KB primitives when the selected
+   filename is effectively null.
+
+*  Revise International character support and replace the global option with a
+   new setting "Only English letters A-Z and a-z are considered alphabetic".
+   This should provide for more consistent handling of Upper/Lower case
+   conversions. Please see the Help file for more information.
+
+*  Standardize the insertion point for special lines like BNDS, COLS, MARK
+   etc.  Previously some were inserted before the selected line, and some were
+   inserted after.  They will now all be inserted before the line containing the
+   line command.
+
+*  Upgrade the macro support to use the latest version of thinBasic. Also make
+   the standard \SPFLite\Macros folder become the default folder for #INCLUDE
+   directives.
+
+*  Correct error in the line number lookup code.
+
+*  Reinstate the change which causes the Enter key to perform a reset of a
+   marked area automatically.  This change inadvertently crippled the TT line
+   command and was withdrawn.  The replacement code no longer interferes with
+   the TT line command.
+
+*  Correct the new CLONE command to use the proper Profile for the cloned file
+   rather than using DEFAULT.
+
+*  Correct error in the RUN command which created a temp. file with two periods
+   preceding the file extension.
+
+*  Revise handling of line commands when an error condition is detected along
+   with other valid commands being present.   Where possible now, the valid
+   commands will be performed before the error condition is reported.
+
+*  Correct initialization routine.  The default status of the INS/OVR keyboard
+   flag was being cleared after being set.
+
+*  Add Date and Time to the filename used to save Crash Reports.  This will
+   uniquely identify each one and prevent overlay of previous reports when
+   multiple crashes occur close together.
+
+*  Correct handling of the command line -INIT option.  It was not handling
+   INI file names other than fully qualified ones.
+
+*  Correct error in the Keyboard Trap which was not handling "Null'd" keys
+   properly.
+
+
+Between 8.3.5337 and 8.3.6022 (Jan 22/2016)
+==========================================
+
+*  The -INIT command line option had been accidentally disabled. Fixed.
+
+*  The logic for running in 'Portable' mode somehow lost the change which
+   moved all the environment folders to a \CONFIG subfolder.  Corrected.
+
+*  Prevent attempts to place data in the clipboard which contains X'00'
+   characters.  To do so would truncate the clipboard contents resulting in data
+   loss.
+
+*  The Primary RENAME command was not working when using the pop-up Rename Box,
+   it worked only when the new name was entered as a command operand.
+   Corrected.
+
+*  Correct crash error in the Mapping string Hex support function.
+
+*  Correct crash when using Vertical cursor line support and switching between
+   HEX modes.
+
+*  Enhance the ANSI pop-up window support.  A second primitive (CharSetCol) has
+   been added in addition to (CharSet). The new version will rotate the rows /
+   cols of the character display to match your visual preference.   In addition,
+   you may now have multiple instances of the ANSI window open at one time.
+   e.g. one in ANSI mode, one in EBCDIC mode.  The status display of the current
+   clipboard contents has also been improved.
+
+*  Correct (again) the handling of Inserted lines.  A change in 8.3.5295 had
+   accidentally crippled the automatic insertion of new Insert lines when
+   pressing Enter while the cursor is located within the last inserted line.
+
+*  Correct the CLONE command to ensure the new cloned tab is opened in Edit
+   mode.
+
+*  Correct handling of the line number field with 'special' lines like BNDS,
+   COLS, etc. to prevent incorrect results when locating lines by line number.
+
+*  Correct SAVE/SAVEAS to properly place the filename in the Recent Files FLIST.
+
+*  Reverse a previous change which had Enter key processing perform a reset of
+   a marked area automatically.  This worked fine, except that it completely
+   crippled the T/TT line commands.  (Oops!)
+
+*  The OPEN command had always opened the specified file in Edit mode.   There
+   are now two variations OPENV and OPENB which will cause the file to be opened
+   in View or Browse mode respectively.
+
+   As well, OPEN/O OPENV/OV and OPENB/OB line commands will now be supported in
+   File Manager to perform the same functions.
+
+*  The CLONE command has been re-purposed.  It no longer simply creates a
+   temporary file of the *.ext format, which you have to SAVE/SAVEAS later to
+   make a permanent file.   Since the majority of CLONE uses are to create an
+   actual alternate file, that is what it will now do.  You will be prompted
+   immediately for the name of the new cloned file.
+
+*  Add a DELETE/DEL option to the CUT command.  CUT would always delete the CUT
+   lines if specified via M/MM line commands, but the same delete option did not
+   exist when selecting CUT lines using other criteria (X lines, U lines etc).
+   The DELETE/DEL operand now allows you to delete the CUT lines, no matter how
+   they were selected.
+
+*  Revise code used to paint hi-lighted (pen color) areas of the display. There
+   should be a noticeable speed improvement when multiple hi-lighted areas exist
+   on the current screen.
+
+*  When Read-Only files are requested to be opened in Edit mode, SPFLite has
+   previously issued a message and opened the file in Browse mode.  This has
+   been altered to now open the file in View mode.
+
+*  Correct CAPS ON processing when the Keyboard is in Insert mode.
+
+
+Between 8.3.5295 and 8.3.5337 (Dec  3/2015)
+==========================================
+
+*  Clicking on the Date to change sort order in File Manager was broken. Fixed.
+
+*  Correct display of the 'Page n of m' Status bar message when running in
+   PAGE ON mode.
+
+*  Alter START FIRST in PAGE mode to position on the first real data line rather
+   than on the Start of Data line.
+
+
+Between 8.2.5174 and 8.3.5295 (Oct 22/2015)
+==========================================
+
+*  Add a new FM primary command - ALL.  It supports operands of:  BROWSE, CLONE,
+   EDIT, MEDIT, PRINT, TOUCH and VIEW.  It acts on all normal files currently
+   being displayed, regardless of the method used to select the files.
+
+*  Expand the normal ALL FM line command to support VIEW.  (Overlooked when
+   BROWSE was split into BROWSE and VIEW commands).
+
+*  Expand the handling of column sorting in File Manager.   File Manager will
+   now save the column sorting data uniquely for each type of display.  e.g.
+   Recent, Found, FilePath, Favorites etc.  and switch to the saved values
+   whenever the basic display is changed from one to another.
+
+*  Expand the display of the current filename in the Title Bar when editing
+   files in MEDIT mode to display the filename of the top screen line when the
+   cursor in not located within the edit lines (e.g. on the command line)
+
+*  Add a new facility we have called 'Block Insert Mode'.  This enhances the
+   edit capabilities when a block of text is highlighted.   If Insert mode is
+   set, and the cursor is located within the Highlighted block, then characters
+   can be Inserted, Deleted or Backspaced over within the block and the typing
+   duplicated for EACH LINE in the block.  The Highlighted block will
+   dynamically expand or contract to adapt to the changes.   This is a 'sort of'
+   mini PowerType mode.
+
+*  Replace the Regular Expression engine used internally with a much more
+   powerful, industry standard one.   We have chosen to use PCRE (Perl
+   Compatible Regular Expression) as the engine.  This will provide
+   significantly enhanced search abilities using the RegEx literal type
+   (R"xxx").
+
+*  Add two new CHANGE only literal types.  These new functions provide some
+   major new abilities in making text changes.
+
+   - E"xxxxx" which allows the invocation of a MACRO to perform the actual
+     change of the found string.   This will allow creation of complex change
+     commands beyond the scope of normal SPFLite supported options.  Refer to
+     the Documentation for full details.
+
+   - M"xxxxx" which provides a powerful Mapping function to allow complex
+     transformations of the found string.  Refer to the Documentation for full
+     details.
+
+*  Add two new AUTO file directives INCLUDE and EXCLUDE.  These allow early
+   filtering of the data lines and the ability to choose only certain lines for
+   complete colorization.  Lines rejected by these operands will be colored in
+   the normal SCHEME 0 default.
+
+*  Modify the file mask support in File Manager so that the * wild card
+   handling is more compatible with that used in Windows Explorer when followed
+   by a .(period).  A mask with *. will skip to the LAST period, not just the
+   NEXT period.  Any other character following the * will still skip to only
+   the NEXT occurrence of that character.
+
+*  Some instability has been detected in the internal Hash routine used by
+   SPFLite to ensure the validity of the State files and the User keyboard
+   definition file (SPFLite.KBD).  As a result, the hash routine has had to be
+   revised.
+
+   The conversion to the new hash algorithm will be automatic, both your KBD
+   file and newly created STATE files will be written using the new algorithm.
+
+   This unfortunately means these files are not backward compatible should you
+   for any reason go back to an older version of SPFLite after using this new
+   release.
+
+   If you DO back off this new release, your old KBD file has been retained for
+   you with the name SPFLite.Pre8.3.KBD.  Simply swap this back to SPFLite.KBD
+   to regain your old definitions.
+
+   The new STATE files however will be rejected.  Unfortunately this cannot be
+   prevented.  All the real data files are unaffected, only the STATE
+   information will be lost.
+
+*  Modify the validation of the previous screen position.  Previous changes to
+   accomodate multi-monitors prevented the rejection of invalid locations.
+
+*  Modify SUBMIT so that the temporary Submit file is created with the same
+   extension as the file being edited.
+
+*  Correct the handling of the 'Close FM on last file close', recent changes to
+   choosing the next tab to display when one closes had crippled this support.
+
+*  Correct saving of the saved FM criteria during shutdown.
+
+*  Correct handling of PROF USE when removing an existing USE profile.
+
+*  Correct handling of MIXEDCASE in colorize AUTO files.
+
+*  Correct Status Bar initial display of the selected text # and @ values.
+
+*  Correct Status Bar display of file date/time for New files and SaveAs files.
+
+*  Correct the ~X substitution variable, it was not returning the Extension
+   with a leading period.
+
+*  Correct handling of Inserted line cleanup. Some combinations of KB sequences
+   were not being handled the same as real ISPF.
+
+*  Correct handling of internal debug stack during Macro processing.
+
+*  Correct error in colorize parsing triggered by an unclosed quoted string.
+
+*  Correct error in parsing filenames with folder names containing periods and
+   filenames without extensions.
+
+*  Correct loop when searching for blanks and a totally null text line occurs.
+
+*  Correct UNDO processing to properly retain PROF display lines.
+
+*  Correct UNDO processing. It was incorrectly always leaving the file in
+   modified status.
+
+
+Between 8.2.5174 and 8.2.5179 (Jun 28/2015)
+==========================================
+
+*  Correct cleanup of UNDO checkpoint files.
+
+*  Correct re-open previous files opening file in the incorrect mode (Edit,
+   View, Browse)
+
+
+Between 8.2.5165 and 8.2.5174 (Jun 23/2015)
+==========================================
+
+*  Correct cursor positioning performed by the Primary PASTE command.
+
+*  Correct button label in the Choose Default INI pop-up dialog.
+
+*  Expand the number of allowable SCHEMEs in an AUTO colorize file to 30.
+
+*  Correct logic of ESCAPECHR handling in AUTO colorize files.
+
+*  Correct handling of command line options, -V and -B were being ignored, and
+   FM path requests were not always being honored.
+
+*  The EXIT command has been extended to accept either END or CANCEL as
+   operands, this allows a quick shutdown using CANCEL instead of END to
+   terminate each tab.  If CANCEL is used, it also accepts the DELETE / PURGE
+   operands.
+
+*  When editing multiple files in MEdit, the filename of the file on which the
+   cursor is located will be shown in the Windows title bar.  This will assist
+   in knowing which file is being worked on when the =FILE> lines are not
+   vivible.
+
+*  Correct error in the 'Portable Version' support, it was not properly
+   switching the default INI file location to the portable drive.  In addition
+   restructure the portable file structure to reduce clutter in the main EXE
+   file folder.
+
+*  Revise tab switching logic when tabs are closed to swap to the most recent
+   active tab before the one being closed.
+
+*  To make use on Non-US keyboards easier, aliases have been created for the
+   / and \ line command modifiers.  . will equal / and .. will equal \
+   For example c. will mean copy to the bottom of the file, just like c/
+
+*  Allow an overriding Profile to be specified on the external command line
+   startup of SPFLite.  This is equivalent to specifying the Profile on an
+   normal Primary Edit command.  The .profilename operand should be entered
+   on the command line immediately following the filename.   If the filename is
+   quoted, the .profile name should appear following the quoted filename
+
+
+Between 8.2.5103 and 8.2.5165 (Jun 16/2015)
+==========================================
+
+*  Correct a serious problem in handling the Status Bar.  This problem was
+   causing SPFLite to randomly become totally non-responsive.
+
+*  Add a new AUTO colorize word type.  Colorize will now support a NUMERIC
+   directive to specify a unique color for totally numeric 'words'.
+
+*  Correct handling of the File Manager FF exemption list.  V8.2 accidentally
+   created a problem in storing the value properly in the INI file.
+
+*  Correct a minor formatting error in the File Manager Quick Launch bar.
+
+*  Prevent loss of previous FIND/CHANGE criteria caused by file write processes
+   (SAVE, VSAVE, CREATE, etc.)
+
+*  Correct error which prevented using an RFIND/RLOCFIND function key to perform
+   an initial FIND / CHANGE command.
+
+*  Correct error when a file is reloaded following a notification of
+   modification by an external program.  The edit mode (Edit, Browse, View) was
+   not being re-established properly, all sessions were converted to Edit
+   sessions.
+
+*  Correct badly formed entry in the Recent FLIST when a file was saved.
+
+*  Correct handling of marked text to prevent inadvertent text selection
+   during mouse operations.
+
+*  Correct screen marking routine, particularly in the Command line.
+
+*  Correct handling of color hi-liting by CHANGE commands.  Removal of
+   color from a line's text was not always fully processed.
+
+*  Correct CLIP command.  It was not properly honoring a private clipboard
+   name operand.
+
+*  Correct handling of the Tab mode flag internally, caused various errors in
+   the handling of tabs.
+
+*  Correct saving of MARK columns.
+
+*  Improve saving of FM NOTE data when swapping away from the FM tab.
+
+*  Correct (CopyPaste) to work properly with FM NOTE fields.
+
+*  Correct error in handling line label/Tag toggle commands.
+
+*  Correct action of Bksp when in a highlighted area, it was not properly
+   handling multi-line marked areas.
+
+*  Correct handling of command line operands which provide starting values for
+   the File Manager display.
+
+*  Add a safety check in the file open routines to ensure that the filename
+   requested is not actually a folder name.
+
+*  Correct error in RCHANGE, it was not allowing it's use as the starting point
+   for a full CHANGE command.
+
+*  Correct error in building the VSAVE filename when the file being edited is
+   still an unsaved clone file (e.g. the name is *.extn).
+
+*  Correct 'broken' Primary BOUNDS command.
+
+*  Correct mis-positioned COLS line. It was being inserted after the requested
+   line rather than before.
+
+*  Correct the COPY command which was not properly handling the inclusion of
+   files which needed different SOURCE translate tables from the primary file.
+
+*  Correct tab selection when a new file is opened from Windows Explorer and
+   passed to an existing SPFLite instance.
+
+*  Correct initialization handling of the DEFAULT.INI file, it was incorrectly
+   being reset to defaults.
+
+*  Correct an error in re-sizing operations that could cause a crash.
+
+
+Between 8.2.5085 and 8.2.5103 (Apr 13/2015)
+==========================================
+
+*  Correct keyboard handling of the extra keys present on foreign language
+   keyboards. An incorrect index was triggering a crash.
+
+*  Correct handling of PROFILE USING. Altered values were being stored in the
+   incorrect INI file (i.e. not the USE'd profile).
+
+*  Correct errors in FILTER and CMD commands in handling the CMD window.
+
+
+Between 8.1.5064 and 8.2.5085 (Mar 26/2015)
+==========================================
+
+*  Alter the field delimiter used internally for FLIST contents.  Previously a
+   comma was used, but since a comma is a legitimate character for a filename
+   (who knew!) users who had such filenames found FM simply didn't work.
+
+   The delimiter has been altered to a | (vertical bar).  If you do not manually
+   create FLISTS, then the change will be transparent and you need do nothing.
+
+   ** However ** once you migrate to this version, if you back off to a prior
+   SPFLite version, your FLISTS will probably not work.  They will need to be
+   manually edited to change all | back to ,
+
+*  Improve File Manager 'nesting' so that when browsing up/down folder
+   structures, a return to a prior level will re-display the previous scroll and
+   cursor positions.
+
+*  Correct false warning message when loading RECFM F LRECL nnnn files. The
+   message incorrectly warned that the file was not a multiple of the LRECL
+   value.
+
+*  Add a new option to File Manager to allow choosing the location within a list
+   of Directory entries.  They can be positioned at the Top (as is done
+   currently), at the bottom, or in-line in alphabetical sequence within the
+   filenames.
+
+*  Correct error in routine which deletes unused Insert lines.  If additional
+   Insert lines are requested before cleanup has been performed on prior lines,
+   it was possible for extraneous '''''' lines to remain.
+
+*  Prevent unresolved '''''' lines from being written to a file if they exist at
+   the time of the write operation.
+
+
+
+Between 8.1.5002 and 8.1.5064 (Mar 5/2015)
+==========================================
+
+*  Correct error in the FM VER line command which could trigger a crash if the
+   FLIST ends up empty and is deleted.
+
+*  Alter list of FLIST files in FM so that only the filename (minus path) is
+   displayed.  If the cursor is over a single line, the full path will be
+   shown in the FSPEC line in the headings.
+
+*  Correct loss of cursor during Minimize / Restore activity, or loss / regain
+   of focus (sometimes).
+
+*  Correct error in COPY and PASTE commands when the insertion point is marked
+   with a 'B' line command on the Bottom of File line.
+
+*  Correct error in the UNDO process which can cause program crashes. If chained
+   commands cause UNDO processing to be followed immediately by a switch to a
+   different Tab, depending on the size of the edit datasets, and the speed of
+   the processor, a crash can occur.
+
+*  Add a new function - ACTION - which can optionally be used to request an
+   automatic SAVE or VSAVE to be performed after 'n' data altering
+   interactions.  See the ACTION command in the Help document for further
+   details.
+
+*  Correct macro function Get_Find_LPtr().  If the status of excluded lines
+   changed during the FIND/CHANGE command, the returned LPtr could be
+   incorrect.
+
+*  Correct error in the DELETE ALL xxx command.   The deletes were performed
+   correctly, but the setting of the modified flag for the file was not being
+   set correctly depending on the state of excluded lines adjacent to the
+   line(s) being deleted.
+
+*  Add additional validity checking to AUTO file statements and improve the
+   contents of the error message.
+
+*  Rename the FM line command VERIFY to NORM (Normalize) to avoid conflict
+   with the recently added View command.  The command can be entered as
+   N or NORM. (Or the block mode NN/NN version). As well, NORM will no longer
+   re-write an FLIST which has not actually been altered.
+
+
+Between 8.1.4311 and 8.1.5002 (Jan 2/2015)
+==========================================
+
+*  Correct AUTO colorization when using comments with start/end delimiters.
+   (Like /*   */)
+
+*  Correct loop in macro handling of SPF_CMD items.
+
+*  Correct PRINTER SETUP saving of a printers DUPLEX setting.
+
+*  Correct screen size calculation error which caused width to slowly grow.
+
+*  Relax pseudo line label syntax to allow use of .0 to indicate the
+   *** Top of Data **** line.  This will allow commands such as ADD and LINE to
+   use the top of data line as a valid reference.   e.g. "LINE N .0" would
+   insert a blank line at the top of the file.
+
+*  Correct command table entry for VV command (alias of REVERT).  It was not
+   flagged as being eligible for command chaining.
+
+*  Expand AUTO color controls to support COMMENT1 thru COMMENT9 statements.
+
+*  Remove validation of previous screen position vs the curent desktop so that
+   previous locations on multiple screen configurations are not treated as
+   being invalid INI values.
+
+*  CREATE REPLACE with MM line markers were not deleting the lines following
+   the file creation.  Corrected.
+
+*  Correct the OPEN logic to use the name of the currently running EXE file for
+   the new session rather than assuming it is named SPFLite.EXE.
+
+*  Alter the timing of the automatic 'Check for New Version' to later in
+   the initialization process.  It was failing to initialize completely if for
+   some reason it could not reach the SPFLite Web Site.
+
+*  Alter File Manager display of FLISTS so that if all files are from a simple
+   single-path request, the list will only display the filename (without the
+   repetitive path) for easier reading.
+
+
+
+Between 8.0.4181 and 8.1.4311 (Nov 7/2014)
+==========================================
+
+*  Correct handling of cursor positioning when multiple primary commands are
+   entered separated by ; delimiters.
+
+*  Correct handling of SPFLite.EXE command line operands specifying a starting
+   path and mask for File Manager.
+
+*  Correct handling of EOL hex character strings as delimiters.
+
+*  Correct SAVEALL command which was crippled by the V7 => V8 restructuring.
+
+*  Correct cursor positioning when mouse scrolling.  The cursor remained
+   'locked' to the screen location rather than following the text line on which
+   it was located.
+
+*  Correct error in (( line command when the shift created a null length line.
+
+*  Correct error in cursor positioning when switching back to File Manager
+   after CANCELing out of an Edit tab.
+
+*  Correct cursor positioning following a line sequence C -> A to put cursor
+   in the line number area rather than the data area.
+
+*  Alter the RESET command to remove RETRIEVE from items reset when using the
+   ALL operand.
+
+*  Add support to the FF (Find in Files) command to better handle files which
+   do not have an existing Profile to control the reading of the file's data.
+   You may now Abort the FF command, or have the file type automatically added
+   to the FF file exemption list and continue.
+
+*  Correct some pop-up dialogs to be properly MODAL so that they can not be
+   ignored or dismissed without taking the needed pop-up action.
+
+*  Expand message handling ability.  When one interaction generates multiple
+   messages, the most severe message is the one issued.  When multiple messages
+   are issued internally, this message will be prefixed with a + sign.   If
+   HELP is immediately issued, the full chain of messages will be displayed in a
+   pop-up list box for review.
+
+*  Add documentation to the FF Command (Find in Files) to indicate that it DOES
+   support column range operands.   It had always supported columns, however
+   the documentation did not indicate it was supported.
+
+*  Add missing documentation for the (CondLineNo) KB primitive.
+
+*  Add support for new built-in Tags :Z  :ZF and :ZNF.  These new tags will
+   allow command chaining based on the lines processed by the immediately prior
+   command.
+      :Z   includes all lines examined by the prior command
+      :ZF  includes all lines selected by the prior command
+      :ZNF includes all lines examined but not selected by the prior command
+
+   This will allow commands like:
+      CHANGE ALL "ABC" "DEF"; LINE ] ALL :ZF
+   which would change all "ABC" to "DEF" and then Indent all the changed lines.
+
+   Or
+      COPY INSERT.TXT AFTER .A; EXCLUDE all :ZF
+   to copy a file into the edit and immediately exclude all the inserted lines.
+
+   Or
+      CHANGE ALL "AAA" "BBB" .L1 .L2 X NU; CHANGE ALL "CCC" "DDD" :Z
+   which would do the first change, with its specialized line range, and
+   then do the 2nd change to the same set of lines, without needing to repeat
+   the .L1 .L2 X NU operands.
+
+   Full details may be found in the Help file under "Working with Command
+   Chaining".
+
+*  Add a new EXCLUDE command to File Manager.   This will enable bulk excludes
+   of files from the list based on the same type of Mask string allowed on the
+   Mask line for FilePath or the Mask operand of FLIST entries.   This command
+   would be useful for example when using FF (Find in Files) and there is a
+   class of filenames which you would prefer be exempted from the FF operation.
+
+*  Add a new Primary command - THEME - to allow quick saving and loading of the
+   custom color settings.  Often, if you want to experiment with a different set
+   of colors, it becomes awkward since there is no simple way to revert back to
+   what you had.  Now you can save your settings and 'play' with new settings.
+   It's also possible to share such 'themes' with other users by posting your
+   themes on the SPFLite Forum.
+
+*  Add a new Primary command - VIEW. This is a complementary command to the
+   existing BROWSE which has been altered to make it impossible to accidentally
+   modify the data.   BROWSE is now a *true* browse, changes are impossible.
+   VIEW is now the browse tool to use when you may want to modify the data, but
+   want additional protection against accidentally saving. A companion change
+   also added the (View) KB primitive.
+
+*  The ability to use KEYMAP to remap the NumLock key has been withdrawn.  This
+   support was always tricky to implement and is being withdrawn due to problems
+   in maintaining it.  The key is now classed like Shift, Caps Lock etc.  as
+   being un-mappable.
+
+
+Between 8.0.4181 and 8.0.4216 (Aug 4/2014)
+==========================================
+
+*  Add an option for printed output to have background banding in the same
+   manner as the screen background banding.  See the additional option fields
+   located on the PRINT SETUP dialog.
+
+*  Corrected another error in reading RECFM V files, lengths > 256 were not
+   being handled.
+
+*  Added a new command line option -WINE, which tells SPFLite that it is running
+   under the Wine emulator on Linux.  This triggers some minor differences in
+   screen handling which improves operation.
+
+* Corrected loss of mouse wheel function after some settings dialogs.
+
+
+Between 8.0.4172 and 8.0.4181 (Jun 30/2014)
+===========================================
+
+*  Corrected checking of changes to File Manager file-path to only be done
+   after Enter is pressed, it was doing it after each keypress.
+
+*  Corrected error in reading RECFM V files introduced by the new code for
+   RECFM VBI and VLI.
+
+*  Correct handling of the Keyboard Hook routine to prevent accidental doubling
+   of keyboard entries under some initialization combinations.
+
+*  Alter the default master key mapping table so that the Ctrt-Alt key mapping
+   of all keys with printable values (i.e.  the letter, number and special
+   character keys) will now be (Passthru) instead of (Null).  This default
+   will simplify the initial setup for all new users who require non-US
+   keyboards and use of the Alt Gr key to enter national/special characters.
+
+
+Between 8.0.4163 and 8.0.4172 (Jun 21/2014)
+===========================================
+
+*  Corrected missing screen refresh following execution of a user macro.
+
+*  Corrected keyboard focus problem for pop-up dialogues when running under
+   WINE.
+
+
+Between 8.0.4157 and 8.0.4163 (Jun 12/2014)
+===========================================
+
+*  Corrected cursor not appearing in tab initially.   Only occurred in certain
+   Windows releases.
+
+*  Corrected various error in CANCEL / END which could trigger crashes.
+
+*  (Backtab) KB primitive was simply not working correctly.  Corrected.
+
+*  Corrected crash when deleting multiple individual lines, one of which is the
+   last line, and the Reset Inset Mode on Attention option is active.
+
+
+Between 8.0.4155 and 8.0.4157 (Jun 06/2014)
+===========================================
+
+*  File Manager keyboard selection of FilePath on the Quick Launch bar is not
+   working.  This has been corrected.
+
+*  Crash on Initial Start in the Welcome Dialog for brand new installs.
+   Corrected.
+
+*  File Manager directory display changes should always Home the cursor.
+   Corrected.
+
+*  EXIT and =X do not properly exit the program.  Corrected.
+
+*  Corrected crash following the New Version Available pop-up message.
+
+
+Between 7.1.4050 and 8.0.4155 (Jun 04/2014)
+===========================================
+
+
+A major review and revision of SPFLite internal code was completed.  The review
+has had only small effects externally, but incorporates significant internal
+improvements which should improve long term reliability and performance.
+
+A completely revised File Manager was completed, introducing many new features
+(see below).
+
+
+File Manager
+------------
+
+A revised screen layout which has added a single line 'quick launch' line to
+eliminate the previous set of lines at the top for Recent Files, Open Files,
+etc.  This line remains visible while scrolling the list to remain easy to
+access.  Other changes to File Manager include:
+
+Quick access to your list of Profiles.  Browse, Edit, Delete etc.  line commands
+are supported.
+
+Enhanced FILELIST support.  File lists can now contain multiple file path
+requests, each with their own unique file mask filters.
+
+Line commands can now be entered in block mode, similar to line commands in the
+Editor.  e.g.  selecting a series of files for MEDIT processing can now be done
+with MM/MM line commands (or M3).
+
+Exclude (X) is now supported to allow 'hiding' of lines in a long file display.
+
+Forget (F) is supported for FILELIST displays to request a long term exclusion
+of lines.  This support extends to FILELISTs which include generic path
+requests.  Forget requests are maintained across SPFLite sessions and may be
+undone or 'remembered' with a RESET F command.
+
+A NOTE display column can be added to FILELIST displays where you can enter
+reminders etc.  for a particular file.   These are also 'remembered' across
+SPFLite sessions.
+
+FF (Find in File) searches can now be interrupted not only between files, but
+during an individual file search.  Useful when the file list accidentally
+contains some huge non-text files.
+
+A new DEFAULT command which allows you to switch the default line command for a
+mouse click (normally SELECT) to any other valid line command.
+
+
+Editor Changes
+--------------
+
+Several improvements to Editor functions:
+
+File specific STATE setting.   You can now not only Specify STATE ON or OFF for
+all files controlled by a Profile, but can establish a default ON/OFF status for
+most files and exempt individual files from this default.   e.g.  You could have
+STATE ON for all .TXT files and exempt SPECIAL.TXT from this default since you
+know it is updated often outside SPFLite.
+
+Simplification of Line Command aliases.  Many block mode line commands had
+optional aliases to match the ISPF naming conventions.  e.g.  we had Uppercase
+commands of UC / UCC / UCUC.  In this release we have eliminated 'doubling the
+command name' as an option.  So Uppercase is now simply UC / UCC where the last
+character is repeated for the block mode.  So line commands like LCLC, MDMD,
+MNMN, OROR, PLPL etc.  are all gone.
+
+Colorize support has been improved.  When the basic color theme of the AUTO file
+differs widely from the color scheme used for a normal edit screen (e.g.
+different background colors), some areas of the colorized screen could be
+painted in unreadable colors.  New settinfs in the .AUTO file allow specifying
+the colors of these non-text-data areas.
+
+Dynamic colorization has been added.  Previously when editing a line,
+colorization was only performed the next time the line was fully displayed.
+This has been changed so that colorization occurs 'as you type'.
+
+An AUTOCAPS mode is available when editing programming languages where it is
+desirable to have language keywords uppercased for readability.  This support is
+dependent on the existing AUTO colorize support being activated.   Keywords
+defined in the .AUTO control file will be updated to be in Uppercase.   This
+action is in two stages.  The first Uppercases the keywords only on the screen
+display.   This is to prevent Uppercasing during typing; if typing the word
+'forget', you wouldn't be happy with 'FORget' just because FOR was a language
+keyword as you typed the 'r'.   When the file is saved, the uppercasing is
+finalized and written to the file.
+
+A new Options -> General selection is available to activate Keyword hi-lighting
+on the command line.   This will trigger the hi-lighting of known command name
+and operand keywords on the command line.  This is helpful where you might
+accidentally enter what you thought was a simple text literal and 'forgot' that
+it was a supported keyword operand for the command.  It can make deciphering an
+error message a bit simpler.
+
+The support for recognizing changes to the BNDS line has been re-written again
+to react more logically to changes made to the line.  By matching the old and
+new BNDS line, and recognizing specific changes, it will make altering this data
+simpler and more reliable.
+
+The PFKSHOW help lines now have an improved sort routine which should organize
+the display to handle key names in a more 'natural' manner.  e.g.  F2 will sort
+before F10.
+
+

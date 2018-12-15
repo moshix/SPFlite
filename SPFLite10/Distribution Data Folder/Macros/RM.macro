@@ -1,0 +1,25 @@
+' RM.MACRO
+' Find rightmost occurrence of a string 
+' Syntax: RM string
+'
+' Author: George Deluca
+'
+dim hicol, hiline as number value 0 
+
+if Get_Arg$(0) = "" then halt(fail, "Missing search argument")
+
+SPF_Cmd("FIND FIRST " & Get_Arg$(0))                  ' Issue 1st FIND cmd 
+do while Get_RC = 0                                   ' while found 
+   if Get_Find_Col > hicol then                       ' Save hi-water mark 
+      hicol = Get_Find_Col                            ' 
+      hiline = Get_Find_LPtr                          ' 
+   end if                                             ' 
+   SPF_Cmd("RFIND")                                   ' Look some more 
+loop                                                  ' 
+
+if hiline = 0 then                                    ' Find anything? 
+   halt(fail, "String not found")                     ' No, tell of error 
+else                                                  ' Yes 
+   Set_Csr(hiline, hicol, Get_Find_Len)               ' Set cursor to it 
+   halt("Found", Get_Arg$(0), "rightmost in col:", format$(hicol)) ' Issue good message 
+end if                                                ' 

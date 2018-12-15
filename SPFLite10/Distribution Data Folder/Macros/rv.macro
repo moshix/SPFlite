@@ -1,0 +1,38 @@
+' RV.MACRO
+' Vertically reverse a line range 
+'Syntax: RVV line commands                       Mark the line range with RV/RV commands
+
+'
+dim i, j, k, l as number value 0 
+
+   if is_primary_cmd then halt(fail, "RV is only a line command") 
+
+'--Ensure a marked line range                    ' Ensure we have a marked range
+   i = Get_Src1_LPtr: j = Get_Src2_LPtr          ' Get start/end of line range 
+   if i = j then                                 ' Just an RV command? 
+      k = Get_Src_Op                             ' Get numeric operand 
+      if k > 0 then                              ' Got a numeric operand?  
+         j = i + k - 1                           ' Fudge up an end line value 
+      end if                                     ' 
+   end if                                        '  
+   if i = 0 or j = 0  or i = j then halt(fail, "No line range marked") ' Start or End missing
+
+dim slines(j - i + 1) as string                  ' Dim a table big enough to hold lines 
+
+'----- Load the lines to be reversed 
+   for k = i to j                                ' 
+      if is_Data(k) then                         ' Data line? 
+         incr l                                  ' Bump table index 
+         slines(l) = Get_Line$(k)                ' Save the line 
+      end if                                     ' 
+   next k                                        ' 
+
+'----- Store them back in reverse order
+   for k = i to j                                ' 
+      if is_Data(k) then                         ' Data line? 
+         Set_Line(k, slines(l))                  ' Replace it from table 
+         decr l                                  ' Backup one in table 
+      end if                                     ' 
+   next k                                        ' 
+
+   halt(ok, "Line re-order complete") 

@@ -1,0 +1,13 @@
+' XFLY.MACRO
+' Fly back to the starting XF location, don't reset related tags 
+' Refer to XF.macro for details
+'
+' Author: George Deluca 
+'
+dim i, j as number            
+
+i = Get_Gbl_Num("XFLine")                             ' Get saved line number
+j = Get_Gbl_Num("XFCol")                              ' Get saved column
+if i = 0 then halt(FAIL, "No saved XF location")      ' 
+Set_Csr(Get_LPtr(i), j, 0)                            ' Put cursor on line 
+stop                                                  ' Done

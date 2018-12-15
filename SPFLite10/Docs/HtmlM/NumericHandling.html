@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Numeric Handling</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Numeric Handling">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Numeric Handling" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite Edit Macros - V10.1.8351 - 2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite Edit Macros - V10.1.8351 - 2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="NumericHandling"
+		  data-hnd-context="9"
+		  data-hnd-title="Numeric Handling"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Numeric Handling</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps46"><span class="rvts13">Note</span><span class="rvts11">: The following functions should not be considered a complete list of all available </span><span class="rvts13">thinBasic</span><span class="rvts11"> numeric functions, but this set will probably do for 99% of your requirements. If time permits, explore the full </span><span class="rvts13">thinBasic</span><span class="rvts11"> Help document to review the complete set. Enter </span><span class="rvts14">HELP thinBasic</span><span class="rvts11"> at the SPFLite command prompt to open the </span><span class="rvts13">thinBasic</span><span class="rvts11"> help file.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">ABS</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = ABS(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the absolute value of a expression.</span></p>
+<p class="rvps45"><span class="rvts109">The absolute value of a number is its non-negative value . For example, the absolute value of -3 is 3, and the absolute value of +3 is also 3. The absolute value of 0 is 0.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">ATN</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Num-var = ATN(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the arctangent of an argument.</span></p>
+<p class="rvps45"><span class="rvts18">ATN</span><span class="rvts109"> returns the arctangent (Inverse Tangent) of </span><span class="rvts110">numeric-expression</span><span class="rvts109">; that is, the angle whose tangent is </span><span class="rvts110">numeric-expression</span><span class="rvts109">.</span></p>
+<p class="rvps45"><span class="rvts109">The result is in radians rather than degrees. To convert radians to degrees, multiply the radian value by 180/pi, or 57.29577951308232.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">CEIL</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Num-var = CEIL(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Convert a variable or expression into an value, by returning the smallest integral value that is greater than or equal to its argument.</span></p>
+<p class="rvps45"><span class="rvts109">The </span><span class="rvts18">CEIL</span><span class="rvts109"> function rounds upward, returning the smallest integral value that is greater than or equal to </span><span class="rvts110">numeric-expression</span><span class="rvts109">. </span></p>
+<p class="rvps45"><span class="rvts109">For example, </span><span class="rvts18">y = CEIL(1.5)</span><span class="rvts109"> places the value 2 into y.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">CHOOSE</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = CHOOSE(index, string-expression [,string-expression] ... )</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11">Return one of several values, based upon the value of an index. It returns one of the parameters based upon the value of </span><span class="rvts33">index</span><span class="rvts11">. That is, if </span><span class="rvts33">index</span><span class="rvts11"> is one, choice1 is returned. If two, choice2 is returned, etc. If </span><span class="rvts33">index</span><span class="rvts11"> is not equal to one of the choice values, 0 is returned.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">COS</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = COS(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the cosine of an argument.</span></p>
+<p class="rvps45"><span class="rvts110">numeric-expression</span><span class="rvts109"> is an angle specified in radians. To convert radians to degrees, multiply by 57.29577951308232##. To convert degrees to radians, multiply by 0.0174532925199433.</span></p>
+<p class="rvps45"><span class="rvts109">COS returns a value that always ranges between -1 and +1 inclusive.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">DECR</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">DECR &nbsp;numeric-variable</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Decrement a </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVariables.htm">variable</a><span class="rvts109"> by 1.</span></p>
+<p class="rvps45"><span class="rvts109">Note: A variable may also be decremented by the notation &nbsp;</span><span class="rvts119">variable</span><span class="rvts118"> -= 1</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">EXP</span></p>
+<p class="rvps2"><span class="rvts18">EXP2</span></p>
+<p class="rvps2"><span class="rvts18">EXP10</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Num-var = EXP(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return a base number raised to a power. The base is </span><span class="rvts112">e</span><span class="rvts109"> for </span><span class="rvts18">EXP</span><span class="rvts109">,</span><span class="rvts112"> </span><span class="rvts109">2 for </span><span class="rvts18">EXP2</span><span class="rvts109">, and </span><span class="rvts112">10</span><span class="rvts109"> for </span><span class="rvts18">EXP10</span><span class="rvts109">.</span></p>
+<p class="rvps45"><span class="rvts109">EXP returns e to the nth power, where n is a numeric </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVariables.htm">variable</a><span class="rvts109"> or expression and e is the base for natural logarithms, approximately 2.718282. Among other uses, this provides a simple way to obtain the value of e itself:</span></p>
+<p class="rvps45"><span class="rvts18">e = EXP(1)</span></p>
+<p class="rvps45"><span class="rvts18">EXP2(n)</span><span class="rvts91"> </span><span class="rvts109">returns 2 to the nth power, where</span><span class="rvts112"> n</span><span class="rvts109"> is a numeric variable or expression.</span></p>
+<p class="rvps45"><span class="rvts18">EXP10(n)</span><span class="rvts109"> returns 10 to the nth power, where </span><span class="rvts112">n</span><span class="rvts109"> is a numeric variable or expression.</span></p>
+<p class="rvps45"><span class="rvts109">The </span><span class="rvts18">EXP</span><span class="rvts109"> functions provide a convenient alternative to the ^ operator, which works with any base. </span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">FIX</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = FIX(numeric-expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Truncate a number to an integer value.</span></p>
+<p class="rvps45"><span class="rvts18">FIX</span><span class="rvts109"> strips off the fractional part of its argument, and returns the integer part. Unlike </span><span class="rvts18">INT</span><span class="rvts109">, </span><span class="rvts18">FIX</span><span class="rvts109"> does not perform any form of rounding or scaling.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">FALSE</span></p>
+<p class="rvps2"><span class="rvts18">TRUE</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Same as literal value of 0</span></p>
+<p class="rvps2"><span class="rvts90"> Same as literal value of -1</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts6">FALSE and TRUE may be used anywhere the literal values of 0 and -1 can be used, including the VALUE clause of DIM statements. </span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6">Be aware that, while the value of TRUE is -1, a "true" value for purposes of conditional expressions such as in IF statements is a </span><span class="rvts26">non-zero</span><span class="rvts6"> value, not just the value -1. This is similar to how conditions are tested in the C language. You can use TRUE and FALSE to set a flag variable, and you can test a flag for FALSE, but it's best not to test a flag for TRUE. Instead of using </span><span class="rvts20">IF flag = TRUE THEN</span><span class="rvts6">, you should simply say </span><span class="rvts20">IF flag THEN</span><span class="rvts6">. If you want to </span><span class="rvts26">force</span><span class="rvts6"> a numeric expression to be exactly equal to either TRUE or FALSE, you can use the </span><span class="rvts26">thinBasic</span><span class="rvts6"> function </span><span class="rvts26">IsTrue.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">FRAC</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Num-var = FRAC(Numeric-expression) </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the fractional part of a number.</span></p>
+<p class="rvps45"><span class="rvts18">FRAC</span><span class="rvts109"> returns the number after the decimal point of a number or expression. </span><span class="rvts18">FRAC</span><span class="rvts109"> rounds the result to fit the precision of Numeric Expression..</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">IIF</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Num-var = IIF(Num-expression, true-part, false-part) </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return one of two values based upon a </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CISFALSE_and_ISTRUE_operators.htm">TRUE</a><span class="rvts109">/</span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CISFALSE_and_ISTRUE_operators.htm">FALSE</a><span class="rvts109"> evaluation.</span></p>
+<p class="rvps45"><span class="rvts109">If </span><span class="rvts110">num-expression</span><span class="rvts109"> evaluates to </span><span class="rvts91">TRUE</span><span class="rvts109"> (non-zero), the </span><span class="rvts110">true-part</span><span class="rvts109"> is returned, else the </span><span class="rvts110">false-part</span><span class="rvts109"> is returned. </span><span class="rvts110">num-expression</span><span class="rvts109"> is evaluated as a normal Boolean expression.</span></p>
+<p class="rvps45"><span class="rvts116">Both </span><span class="rvts117">true-part</span><span class="rvts116"> and </span><span class="rvts117">false-part</span><span class="rvts116"> should generate a normal numeric return value.</span></p>
+<p class="rvps45"><span class="rvts11">Compare to the </span><span class="rvts18">IIF$</span><span class="rvts11"> function.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">INCR</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> INCR &nbsp;numeric-variable</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Increment a </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CVariables.htm">variable</a><span class="rvts109"> by 1.</span></p>
+<p class="rvps45"><span class="rvts109">Note: A variable may also be incremented by the notation &nbsp;</span><span class="rvts119">variable</span><span class="rvts118"> += 1</span></p>
+<p class="rvps45"><span class="rvts118"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">INT</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = INT(Num-expression) </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">INT rounds </span><span class="rvts110">num-expression</span><span class="rvts109"> to the largest integral value that is less than or equal to </span><span class="rvts110">num_expression.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">ISFALSE</span></p>
+<p class="rvps2"><span class="rvts18">ISTRUE</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90">ISFALSE(expression)</span></p>
+<p class="rvps2"><span class="rvts90">ISTRUE(expression)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts18">ISTRUE</span><span class="rvts102"> returns -1 (</span><span class="rvts18">TRUE</span><span class="rvts102">) when </span><span class="rvts115">expression</span><span class="rvts102"> evaluates as non-zero; otherwise, it returns zero (</span><span class="rvts18">FALSE</span><span class="rvts102">). </span><span class="rvts18">ISFALSE</span><span class="rvts102"> returns -1 when </span><span class="rvts115">expression</span><span class="rvts102"> evaluates as 0 (</span><span class="rvts18">FALSE</span><span class="rvts102">); otherwise, it returns zero.</span></p>
+<div class="rvps47"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px; margin: 0px auto;">
+<tr valign="top">
+<td colspan="3" width="279" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">Truth table</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">operator</span></p>
+</td>
+<td width="113" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts115">expression</span></p>
+</td>
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">Result</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">ISTRUE</span></p>
+</td>
+<td width="113" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">= 0</span></p>
+</td>
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">0 (False)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">ISTRUE</span></p>
+</td>
+<td width="113" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">&lt;&gt; 0</span></p>
+</td>
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">-1 (True)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">ISFALSE</span></p>
+</td>
+<td width="113" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">= 0</span></p>
+</td>
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">-1 (True)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">ISFALSE</span></p>
+</td>
+<td width="113" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">&lt;&gt; 0</span></p>
+</td>
+<td width="83" valign="top" style="padding: 0px;"><p class="rvps48"><span class="rvts102">0 (False)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">MAX</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = MAX(Number1, [,Number2] ...)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the argument with the &nbsp;largest (maximum) value.</span></p>
+<p class="rvps45"><span class="rvts109">This function takes any number of arguments and return the argument with the largest (maximum) value.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">MIN</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = MIN(Number1, [,Number2] ...)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the argument with the smallest (minimum) value.</span></p>
+<p class="rvps45"><span class="rvts109">This function takes any number of arguments and return the argument with the smallest (minimum) value.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">MOD</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = MOD(Quotient, Divisor)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts102">Return the remainder of the division between two numbers.</span></p>
+<p class="rvps45"><span class="rvts102">The </span><span class="rvts14">MOD</span><span class="rvts102"> operator divides the two operands, </span><span class="rvts115">Quotient</span><span class="rvts102"> and </span><span class="rvts115">Divisor</span><span class="rvts102">, and returns the remainder of that division. The result of the initial division is truncated to an integer value, before the remainder is calculated.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">RANDOMIZE</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">[ number ]</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Seed the random number generator.</span></p>
+<p class="rvps45"><span class="rvts110">number</span><span class="rvts109"> is a seed value. If number is not specified, a random value based on the TIME is used.</span></p>
+<p class="rvps45"><span class="rvts109">Values returned by the random number generator (</span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CRND_function.htm">RND</a><span class="rvts109">) depend on an initial seed value. For a given seed value, </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CRND_function.htm">RND</a><span class="rvts109"> always returns the same sequence of values, yielding a predictable pseudo-random number sequence. Thus, any program that depends on </span><a class="rvts106" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CRND_function.htm">RND</a><span class="rvts109"> will run exactly the same way each time unless a different seed is given.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">RND</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Num-var = RND(From-value, To-Value)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return a random number.</span></p>
+<p class="rvps45"><span class="rvts109">If no operands are provided, </span><span class="rvts18">RND</span><span class="rvts109"> returns a random value that is less than 1, but greater than or equal to 0. Numbers generated by </span><span class="rvts18">RND</span><span class="rvts109"> aren't really random, but are the result of applying a pseudo-random transformation algorithm to a starting ("seed") value. Given the same seed, the </span><span class="rvts18">RND</span><span class="rvts109"> algorithm always produces the same sequence of "random" numbers. </span></p>
+<p class="rvps45"><span class="rvts109">When From-value and To-value are provided, </span><span class="rvts18">RND(a, b)</span><span class="rvts109"> returns a </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CLong_integers_(&).htm">integer</a><span class="rvts109"> in the range of a to b inclusive. a and b can each be a numeric </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5CConstants_and_Literals.htm">literal</a><span class="rvts109"> or a numeric expression.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">ROUND</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = ROUND(Num-exprerssion, Num-decimal-places)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Round a numeric value to a specified number of decimal places.</span></p>
+<p class="rvps45"><span class="rvts110">Num-decimal-places</span><span class="rvts109"> is an expression specifying the number of decimal places required in the result. </span></p>
+<p class="rvps45"><span class="rvts109">Rounding is done according to the "banker's rounding" principle: if the fractional digit being rounded off is exactly five, with no trailing digits, the number is rounded to the nearest even number. This provides better results, on average, than the simple "round up at five" approach.</span></p>
+<p class="rvps45"><span class="rvts14">A% = ROUND(0.5, 0) &nbsp; &nbsp; &nbsp;' 0</span></p>
+<p class="rvps45"><span class="rvts14">A% = ROUND(1.5, 0) &nbsp; &nbsp; &nbsp;' 2</span></p>
+<p class="rvps45"><span class="rvts14">A% = ROUND(2.5, 0) &nbsp; &nbsp; &nbsp;' 2</span></p>
+<p class="rvps45"><span class="rvts14">A% = ROUND(2.51, 0) &nbsp; &nbsp; ' 3</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">SGN</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> </span><span class="rvts90">Num-var = SGN(Num-exprerssion)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the sign of a numeric expression.</span></p>
+<p class="rvps45"><span class="rvts109">If </span><span class="rvts110">num-expression</span><span class="rvts109"> is positive, </span><span class="rvts35">SGN</span><span class="rvts109"> returns 1. If </span><span class="rvts110">num-expression</span><span class="rvts109"> is zero, </span><span class="rvts18">SGN</span><span class="rvts109"> returns 0. If </span><span class="rvts110">num-expression</span><span class="rvts109"> is negative, </span><span class="rvts18">SGN</span><span class="rvts109"> returns -1.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">SIN</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts90"> Num-var = SIN(Num-exprerssion)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the sine of its argument.</span></p>
+<p class="rvps45"><span class="rvts110">num-expression</span><span class="rvts109"> is an angle specified in radians. </span><span class="rvts91">SIN</span><span class="rvts109"> returns a value between -1 and +1.</span></p>
+<p class="rvps45"><span class="rvts109">To convert radians to degrees, multiply by 57.29577951308232. To convert degrees to radians, multiply by 0.0174532925199433.</span></p>
+<p class="rvps45"><span class="rvts86"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="240" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts18">SQR</span></p>
+</td>
+<td width="564" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 0px;"><p class="rvps2"><span class="rvts87"> Num-var = SQR(Num-exprerssion)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps45"><span class="rvts109">Return the square root of its argument.</span></p>
+<p class="rvps45"><span class="rvts110">num-expression</span><span class="rvts109"> must be greater than or equal to zero. </span><span class="rvts35">SQR</span><span class="rvts109"> calculates square roots using an optimized algorithm. That is, </span><span class="rvts35">y</span><span class="rvts18"> = SQR(x)</span><span class="rvts109"> takes less time to execute than </span><span class="rvts18">y = x^0.5</span><span class="rvts109">.</span></p>
+<p class="rvps45"><span class="rvts109">Attempting to take the square root of a negative number does not produce any </span><a class="rvts107" href="mk:@MSITStore:C:%5CProgram%20Files%20(x86)%5CPBWin103%5Cbin%5CPBWin.chm::%5Chtml%5Cerrors.htm">run-time errors</a><span class="rvts109">, but the results of such an operation are undefined.</span></p>
+<p class="rvps45"><span class="rvts109">Note that unlike some other languages, the square root function is SQR and not SQRT.</span></p>
+<p class="rvps45" style="page-break-before: always;"><span class="rvts113"><br/></span></p>
+<p></p>
+<p class="rvps6" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour">Easily create EPub books</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

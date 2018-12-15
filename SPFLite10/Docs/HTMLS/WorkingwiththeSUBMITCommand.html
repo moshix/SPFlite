@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with the SUBMIT Command</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with the SUBMIT Command">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with the SUBMIT Command" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwiththeSUBMITCommand"
+		  data-hnd-context="181"
+		  data-hnd-title="Working with the SUBMIT Command"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with the SUBMIT Command</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts36">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#ConfiguringSUBMITintheGlobalOptions">Configuring SUBMIT in the Global Options</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#TheSUBMITprocess">The SUBMIT process</a></p>
+<p class="rvps112"><a class="rvts52" href="WorkingwiththeSUBMITCommand.html#IncludingotherfilesintheSUBMITjobstream">Including other files in the SUBMIT jobstream</a></p>
+<p class="rvps112"><a class="rvts52" href="WorkingwiththeSUBMITCommand.html#CustomizingSUBMITfordifferentFileTypes">Customizing SUBMIT for different File Types</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#Managingtemporaryfiles">Managing temporary files</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#DebuggingtheSUBMITprocess">Debugging the SUBMIT process</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#TheSPFSUBMITutilityprogram">The SPFSUBMIT utility program</a></p>
+<p class="rvps9"><a class="rvts45" href="WorkingwiththeSUBMITCommand.html#SPFSUBMITsyntax">SPFSUBMIT syntax</a></p>
+<p class="rvps9"><a class="rvts66" href="WorkingwiththeSUBMITCommand.html#ComplementaryFeaturesforHerculesUsers">Complementary Features for Hercules Users</a></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts36">Introduction</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Mainframe ISPF users are familiar with using the </span><span class="rvts36">SUBMIT</span><span class="rvts35"> command to send JCL and data to be executed as a job under DOS/VS, MVS, VM or z/OS. The SPFLite primary command </span><a class="rvts33" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> provides the ability to submit an edit file to an external process (which may be an executable program or batch file).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><a class="rvts33" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> facility is flexible enough to be usable in a wide variety of applications. Because of this, the notion of a “job” is very flexible, and may be configured as desired using SPFLite's Options GUI. The </span><a class="rvts33" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> command may also take optional user parameters that could be used in a submit script if desired. A "job" </span><span class="rvts36">can</span><span class="rvts35"> be, but need not be, a JCL job stream destined for a mainframe system. Alternatives to using SUBMIT might be </span><a class="rvts52" href="RUN.html">RUN</a><span class="rvts35"> or </span><a class="rvts52" href="CMD.html">CMD</a><span class="rvts35"> depending on your needs.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">It is expected that a principle use of the </span><a class="rvts33" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> command will be to submit jobs for execution on mainframe systems operating under control of the Hercules emulator program. More details on this are provided below. See </span><a class="rvts52" href="WorkingwiththeSUBMITCommand.html#TheSPFSUBMITutilityprogram">The SPFSUBMIT utility program</a><span class="rvts36">. SUBMIT</span><span class="rvts35"> can be issued from an Edit, Browse or Clipboard session.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="ConfiguringSUBMITintheGlobalOptions"></a>
+<span class="rvts36">Configuring SUBMIT in the Global Options</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Prior to using SUBMIT, you will need to determine just </span><span class="rvts36">how</span><span class="rvts35"> you are going to be using it. If you're a Hercules user, skip to </span><a class="rvts52" href="WorkingwiththeSUBMITCommand.html#TheSPFSUBMITutilityprogram">The SPFSUBMIT Utility program</a><span class="rvts35"> for details. Otherwise, you will probably be doing a simple invocation of a program or batch script file. So first, figure out exactly what the command should be to perform your desired function. Test the syntax using a normal DOS command window till you have it correct. </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Then, set up this command in the SPFLite Submit options. (Enter Options =&gt; Submit) and you should see something similar to the following.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Options - Submit.jpg"></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Enter your tested command in the Prototype box. Replace the operand containing the filename to process with ~i &nbsp; SPFLite will replace ~i with the temporary filename containing your edit text and invoke the command. The example below shows the prototype setup to use the SPFSUBMIT utility for Hercules users, use whatever command </span><span class="rvts287">you</span><span class="rvts35"> tested above in the command window.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">There are many other codes available in addition to </span><span class="rvts36">~I.</span><span class="rvts35"> &nbsp; All submit codes are optional, but it would be unusual to omit the </span><span class="rvts36">~</span><span class="rvts88">I</span><span class="rvts35"> code. See the description of the </span><a class="rvts52" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> command for a complete list of submit codes.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you plan on using the SUBMIT INCLUDE feature, complete the two values to specify the INCLUDE trigger key. See </span><a class="rvts52" href="OptionsSubmit.html">Options =&gt; SUBMIT</a><span class="rvts35"> for further details.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="TheSUBMITprocess"></a>
+<span class="rvts36">The SUBMIT process</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Because SPFLite does not know what the user's intent is in “submitting” a “job” it is necessary for you to define this meaning. The sequence of events that occur during a SUBMIT operation is as follows:</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;"><ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+<li value="1" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">A file is opened for editing or browsing, or the contents of the Clipboard are opened for editing.</span></li>
+<li value="2" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">The desired line range is determined. This may be the entire file, or a subset of the file based on a line-label range, a </span><span class="rvts36">CC</span><span class="rvts35"> block or </span><span class="rvts36">MM</span><span class="rvts35"> block, or a set of lines defined by an ordinary or relative tag name. The line range may be further limited by excluded or non-excluded lines.The selected group of line is copied to a temporary file having the general form </span><span class="rvts36">SUBMIT_JOB12345.xxx</span><span class="rvts35">. (xxx will be the same filetype as that being edited) &nbsp; This file is written in the SUBMIT Working Directory as defined in the SPFLite Submit Options tab. This file is called the “submit input file”.</span></li>
+<li value="3" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">A name is created for any messages that the external submit process generates in response to the submit action. If the </span><span class="rvts36">~R</span><span class="rvts35"> or </span><span class="rvts36">^R</span><span class="rvts35"> </span><span class="rvts85">submit-codes</span><span class="rvts35"> are coded, SPFLite will create an empty file for it. This file is called the “response file”. Names created as response-file names have the general form </span><span class="rvts36">SUBRESULTS_JOB12345.TXT</span><span class="rvts35">.</span></li>
+<li value="4" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">A 'prototype' command is generated from the information given in the OPTIONS-SUBMIT dialog described above (in the configuration section) &nbsp;This command may be a script command file like</span><span class="rvts36"> .BAT</span><span class="rvts35">, or it may be an executable program.</span></li>
+<li value="5" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">Once the prototype command has been tailored, the command is executed. On the upper-right corner of the edit screen, you will see an initial message like, “</span><span class="rvts36">40 lines submitted for (JOB12345)</span><span class="rvts35">”.</span></li>
+<li value="6" style="margin-left: 0px; text-indent: 0px" class="rvps191"><span class="rvts35">If your process utilizes a response file and writes to it during the submit process, SPFLite will detect the file being changed, and will display the first few lines produced by the submit process. e.g If you use </span><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> as your submit process, and redirect its </span><span class="rvts85">stdout</span><span class="rvts35"> messages to the response file, you will see a popup message like “</span><span class="rvts36">SPFSUBMIT: 'ABC.JCL' submitted, 40 lines</span><span class="rvts35">” if the job submission was successful. Press OK on the popup message to proceed.</span></li>
+</ol></ol>
+<p class="rvps191"><span class="rvts35"><br/></span></p>
+<p class="rvps190"><a name="IncludingotherfilesintheSUBMITjobstream"></a>
+<span class="rvts36">Including other files in the SUBMIT jobstream</span></p>
+<p class="rvps190"><span class="rvts36"><br/></span></p>
+<p class="rvps192"><span class="rvts35">SUBMIT allows you to embed / include external files into the jobstream during SUBMIT. To do this, you must define a unique identifier which will be used to trigger INCLUDE processing. This is done on the </span><a class="rvts52" href="OptionsSubmit.html">OPTIONS=&gt;SUBMIT</a><span class="rvts35"> setting panel.</span></p>
+<p class="rvps192"><span class="rvts35"><br/></span></p>
+<p class="rvps192"><span class="rvts35">The default values for this trigger is the string </span><span class="rvts36">#INCLUDE</span><span class="rvts35"> located in Column 1. You may of course set these to whatever you desire. The operand for </span><span class="rvts36">#INCLUDE</span><span class="rvts35"> is simply the name of the file to be included. This value may be unquoted or quoted (single or double). If a simple filename, it must be located in the same folder as the file being edited. It can also be a fully qualified path / filename.&nbsp;</span><span class="rvts12"> Examples:</span></p>
+<p class="rvps5"><span class="rvts12"> &nbsp; </span><span class="rvts11">#INCLUDE MYFILE.TXT</span></p>
+<p class="rvps5"><span class="rvts12"> &nbsp; </span><span class="rvts11">#INCLUDE "C:\Users\Documents\Files\AnotherFile.txt"</span><span class="rvts12">.</span></p>
+<p class="rvps190"><span class="rvts35"><br/></span></p>
+<p class="rvps190"><a name="CustomizingSUBMITfordifferentFileTypes"></a>
+<span class="rvts36">Customizing SUBMIT for different File Types</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You may be using SUBMIT to run local batch files against the text you are editing. An example might be to run the C compiler while editing a C source file. Setting up SUBMIT for this is straightforward, just specify the BAT file for the C compile in the SUBMIT prototype command.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">But once you are using multiple languages, you certainly do not want your ASM files passed to the C compiler. What to do?</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">One of the settings available for a file type Profile is SUBARG, which can be any string you desire. Say you have several BAT files for different languages, such as ASMCOMP for ASM files, &nbsp;CCOMP for C files and BASCOMP for BAS files.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Set the SUBARG value for each of the file types to the appropriate BAT file name. Now you can specify the Prototype as (example):</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts89"> &nbsp; C:\Users\Me\BatFiles\~Z.BAT &nbsp;~i &nbsp; &nbsp; &nbsp; (</span><span class="rvts137">The ~Z variable is replaced by the SUBARG value.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Now when you issue SUBMIT while editing an ASM file, it will use the ASMCOMP.BAT file. Similarly it will use the BASCOMP.BAT file for BAS files, etc.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="Managingtemporaryfiles"></a>
+<span class="rvts36">Managing temporary files</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Every time SPFLite is started up, it looks in the SUBMIT working directory for any temporary submit files more than 2 days old, and if found, deletes them. This means that you generally will not need to be concerned about these temporary files accumulating. If you wish, you can always manually delete these temporary files more frequently.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If your SUBMIT functions require supporting BAT or script files, this temporary directory is a convenient and relevant place to store them.</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="DebuggingtheSUBMITprocess"></a>
+<span class="rvts36">Debugging the SUBMIT process</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you use the </span><span class="rvts36">DEBUG</span><span class="rvts35"> option, it causes the SUBMIT prototype command (such as </span><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35">) to be run in a command window that stays open until you explicitly close it with a Windows </span><span class="rvts36">EXIT</span><span class="rvts35"> command or by closing the command window by clicking on the X. This allows you to view any generated messages, run additional command-line programs, etc. if the external process launched by </span><span class="rvts36">SUBMIT</span><span class="rvts35"> is not working properly.</span></p>
+<p class="rvps189"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps2"><a name="TheSPFSUBMITutilityprogram"></a>
+<span class="rvts36">The SPFSUBMIT utility program</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Included in the distribution of SPFLite is the batch utility program </span><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35"> for submitting jobs to the Hercules mainframe emulator. This program has parameters and performs a function comparable to a utility supplied with Hercules, with the following differences:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35"> uses SPFSUBMIT as the name of the environment variable with the host/port address</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">Run-time messages and help are worded differently and include SPFSUBMIT in message text</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> assumes a default timeout interval of 5 seconds</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">The return code values are zero for success and positive values when errors are detected</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">Non-zero return codes are included in error message displays (such as, "RC=3")</span></li>
+</ul></ul>
+<p class="rvps138"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps138"><span class="rvts35">All run-time messages are written to </span><span class="rvts85">stdout</span><span class="rvts35"> so that they can be redirected to an output file, such as the Response File represented by the SPFLite submit code ~R or ^R</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the SPFLite primary command </span><span class="rvts36">SUBMIT</span><span class="rvts35"> is being used for simple job submissions to a single emulated mainframe system, it may be sufficient to call SPFSUBMIT.EXE directly as the prototype command that is defined in the </span><a class="rvts33" href="OptionsSubmit.html">Options - Submit</a><span class="rvts35"> tab of the Global Options dialog. When the submit requirements are more complex, the submit prototype command can launch a batch script that would in turn call </span><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">For </span><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> to successfully submit a job to an emulated mainframe system, the Hercules configuration file must have an emulated card reader device configured to read from a </span><span class="rvts85">socket</span><span class="rvts35"> rather than from a PC disk file. A </span><span class="rvts85">sample</span><span class="rvts35"> card reader device line in the Hercules configuration file might look like this:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps10"><span class="rvts88">000C &nbsp; &nbsp;3505 &nbsp; &nbsp;localhost:3505 SOCKDEV ASCII AUTOPAD TRUNC EOF &nbsp;# card reader </span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In the </span><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35"> command line, the “localhost” name can be specified literally as &nbsp;</span><span class="rvts36">localhost</span><span class="rvts35"> &nbsp;or as </span><span class="rvts36">127.0.0.1</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35"> can only submit a job when the target system is currently running. (There is no "job queue" in case the target system is not active.)</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When </span><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> is executed with no parameters, a Help screen is displayed as follows, which explains how to use the program:</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="SPFSUBMITsyntax"></a>
+<span class="rvts36">SPFSUBMIT syntax</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The </span><span class="rvts36">SPFSUBMIT</span><span class="rvts35"> program is used to submit a file to a given host:port address.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36">Command syntax:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts88">SPFSUBMIT [-nnn] [host:port] file [file ...]</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;-nnn &nbsp; &nbsp; &nbsp; &nbsp;Timeout value (1-999) in seconds; default is 5 seconds</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;host:port &nbsp; Target address to submit to; if not specified, the value</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;of SPFSUBMIT environment variable is used, if defined</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;file &nbsp; &nbsp; &nbsp; &nbsp;File being submitted</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88">Examples:</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;SPFSUBMIT localhost:3505 job111.txt job222.txt</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;set SPFSUBMIT=localhost:2501</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;SPFSUBMIT job333.txt job444.txt</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;SPFSUBMIT myhost:3505 job555.txt</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;SPFSUBMIT 192.168.0.1:3505 job6.jcl job7.jcl</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;SPFSUBMIT -2 127.0.0.1:3505 C:\mypath\myjob.jcl</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88">Return code values:</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;0 &nbsp; &nbsp;Successfully submitted</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;1 &nbsp; &nbsp;Cannot connect to host, bad socket address, or connection refused</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;2 &nbsp; &nbsp;Timeout value exceeded while trying to connect</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;3 &nbsp; &nbsp;Transmission error, or connection prematurely closed</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;4 &nbsp; &nbsp;File not found or cannot be opened</span></p>
+<p class="rvps9"><span class="rvts88"> &nbsp; &nbsp;5 &nbsp; &nbsp;Submit failed, missing or invalid arguments, or unexpected failure</span></p>
+<p class="rvps9"><span class="rvts86"><br/></span></p>
+<p class="rvps9"><span class="rvts88">SPFSUBMIT messages are written on stdout and can be redirected</span></p>
+<p class="rvps9"><span class="rvts88">SPFSUBMIT with no parameters displays this help</span></p>
+<p class="rvps9"><span class="rvts88"><br/></span></p>
+<p class="rvps189"><span class="rvts35"><br/></span></p>
+<p class="rvps188"><a name="ComplementaryFeaturesforHerculesUsers"></a>
+<span class="rvts290">Complementary Features for Hercules Users</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">The following features of SPFLite will prove useful to users of the </span><a class="rvts33" href="SUBMIT.html">SUBMIT</a><span class="rvts35"> command:</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">The profile option </span><a class="rvts33" href="EOL.html">EOL</a><span class="rvts35"> </span><span class="rvts36">AUTO</span><span class="rvts35"> or </span><span class="rvts36">AUTONL</span><span class="rvts35"> can be used to read SYSOUT files having nonstandard or inconsistent line terminations that include CR, LF and FF in unusual combinations. Hercules is known to create such files, and the </span><span class="rvts36">EOL AUTO</span><span class="rvts35"> or </span><span class="rvts36">AUTONL</span><span class="rvts35"> option works well for viewing them. When </span><span class="rvts36">EOL AUTO</span><span class="rvts35"> or </span><span class="rvts36">AUTONL</span><span class="rvts35"> is in effect, the first line of the file, and any lines read in that contained a Form Feed character will be marked with =PAGE&gt; in the sequence area. You can use </span><span class="rvts36">UP PAGE</span><span class="rvts35"> and </span><span class="rvts36">DOWN PAGE</span><span class="rvts35"> to scroll up and down to the previous or next PAGE boundary. See </span><a class="rvts33" href="EOL.html">EOL – Set End-of-Line Handling</a><span class="rvts35"> for more information. (The distinction between </span><span class="rvts36">AUTO</span><span class="rvts35"> and </span><span class="rvts36">AUTONL</span><span class="rvts35"> is in how lines terminated by a single CR are handled, as to whether this is a simple line end or if it implies overprinting.)</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">The profile option </span><a class="rvts33" href="START.html">START</a><span class="rvts35"> </span><span class="rvts36">NEW</span><span class="rvts35"> can be used to automatically set a line label of </span><span class="rvts36">.START</span><span class="rvts35"> on the last line of the file when the file is closed, and when reopened, SPFLite will automatically position the file to the</span><span class="rvts36"> .START</span><span class="rvts35"> label. This technique allows print spool files to be easily browsed at the point where new print information has been added by an outside process such as Hercules. See the </span><a class="rvts33" href="START.html">START</a><span class="rvts35"> command for more information.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">The </span><span class="rvts36">SPFSUBMIT.EXE</span><span class="rvts35"> program is provided with SPFLite to facilitate the submission of jobs for SPFLite to Hercules. The SPFLite installation will ensure this program is available to execute without requiring a full path, or you may specify a full path for this program if it is located elsewhere.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps9"><span class="rvts35">SUBMIT-related commands </span><a class="rvts32" href="SUBCMD.html">SUBCMD</a><span class="rvts35"> and </span><a class="rvts32" href="XSUBMIT.html">XSUBMIT</a><span class="rvts35"> were added to recent versions..</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps13" style="page-break-before: always;"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts98"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

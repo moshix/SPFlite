@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with User lines</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with User lines">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with User lines" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithUserlines"
+		  data-hnd-context="239"
+		  data-hnd-title="Working with User lines"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with User lines</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#Introduction">Introduction</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#WhyuseUserLines?">Why use User Lines ?</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#PrimarycommandusageofUserLines">Primary command usage of User Lines</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#SettingtheUserLinestatusisrepeatable,andwhatthatmeans">Setting the User Line status is repeatable, and what that means</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#Comparisonoffeatures:ExcludedLinesvs.UserLines">Comparison of features: Excluded Lines vs. User Lines</a></p>
+<p class="rvps5"><a class="rvts81" href="WorkingwithUserlines.html#SpecialhandlingofRESETwhenresettingUserLinestatus">Special handling of RESET when resetting User Line status</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#Specialhandlingofco-locatedlabel,tagandUserstateonsameline">Special handling of co-located label, tag and User state on same line</a></p>
+<p class="rvps9"><a class="rvts81" href="WorkingwithUserlines.html#Examples">Examples</a></p>
+<p class="rvps2"><span class="rvts170"><br/></span></p>
+<p class="rvps2"><span class="rvts170"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Conceptually, all data lines exist in one of two states: either they are "</span><span class="rvts40">U lines</span><span class="rvts6">" or they are "</span><span class="rvts40">V lines</span><span class="rvts6">", where </span><span class="rvts40">U lines</span><span class="rvts6"> are simply a set of one or more lines of special interest to the user at some given time, and </span><span class="rvts40">V lines</span><span class="rvts6"> are everything else. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Essentially, the U/V state of a line is like a </span><span class="rvts40">bit</span><span class="rvts6">: &nbsp;It's </span><span class="rvts40">on</span><span class="rvts6"> if it's a U line, and </span><span class="rvts40">off</span><span class="rvts6"> if it's </span><span class="rvts40">not</span><span class="rvts6"> a U line. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Not being a U line</span><span class="rvts6"> is the same as </span><span class="rvts40">being a V line</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts40">Note: &nbsp;</span><span class="rvts6">While "</span><span class="rvts40">U Line</span><span class="rvts6">" is short for "</span><span class="rvts40">User line</span><span class="rvts6">", what does "</span><span class="rvts40">V line</span><span class="rvts6">" stand for? &nbsp;To be honest, not much. The </span><span class="rvts40">V</span><span class="rvts6"> doesn't have any especially clever meaning, other than simply "</span><span class="rvts40">not being a U line</span><span class="rvts6">". The letter "</span><span class="rvts40">V</span><span class="rvts6">" was chosen for practical reasons, because the line command </span><span class="rvts40">V</span><span class="rvts6"> wasn't being used for anything else at the time. We tried to tie-in </span><span class="rvts40">V</span><span class="rvts6"> with the "</span><span class="rvts40">V</span><span class="rvts6">" in the primary command names</span><span class="rvts40"> REVERT</span><span class="rvts6"> and </span><span class="rvts40">NREVERT</span><span class="rvts6">, which have abbreviations of </span><span class="rvts40">VV</span><span class="rvts6"> and </span><span class="rvts40">NV</span><span class="rvts6"> respectively. That's about as clever as it gets.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">A file will ordinarily consist entirely of </span><span class="rvts40">V lines</span><span class="rvts6">, which is the default state of a file when no lines have been marked as U lines. You will see the expression "</span><span class="rvts40">ordinary V lines</span><span class="rvts6">" throughout this Help documentation, to describe lines that are not marked as U lines. Other that being in one or the other of these U/V states, there is no difference between U and V lines and the data lines you have always worked with. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a data line becomes a U line, a </span><span class="rvts139">|</span><span class="rvts6"> vertical bar character appears in the "gap column" just after the line number. This vertical bar marks the line as being a U line.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The U/V state of a file is persistent if </span><span class="rvts40">STATE ON</span><span class="rvts6"> is in effect. If </span><span class="rvts40">STATE OFF</span><span class="rvts6"> is in effect for a file you're working on, and you set any lines in the file to be U lines, they will all revert back to V lines once the file is closed and reopened.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note:</span><span class="rvts6"> &nbsp;Because the U/V state of a file affects the </span><span class="rvts40">state</span><span class="rvts6"> but not the </span><span class="rvts40">data</span><span class="rvts6">, just marking and unmarking User Lines does not count as a "change" to the file, and so during an edit, you will not see the modified-marker like </span><span class="rvts40">Edit *</span><span class="rvts6"> in the lower-left part of the screen. See </span><a class="rvts34" href="SavingtheEditSTATE.html">Saving the Edit STATE</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="WhyuseUserLines?"></a>
+<span class="rvts40">Why use User Lines ?</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Using U lines can make it convenient to perform extended editing tasks that repeatedly target the same given area of interest within a file, in a way that can be easier than using labels, tags or line exclusion.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As seen below, there is a fairly close comparison between User Lines and excluded lines. If you wanted, you could also compare User Lines to tagged lines. Suppose you used a tag of </span><span class="rvts40">:U</span><span class="rvts6"> for user lines; much of what User Lines offers could also be done with tags. However, there are drawbacks to both these techniques.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Drawbacks of excluded lines</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">When lines are excluded, you can't see them. That can be a good thing at times, but not always.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6"> make excluded lines "pop out". If you don't like that, there are the </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX</span><span class="rvts6"> keywords, but that adds complexity, and not all commands support </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX</span><span class="rvts6">, either.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">If an excluded line "pops out" it's not excluded any more, and so if you used excluded/unexcluded to segregate lines into two groups, lines that "popped out" are now "in the other group". Again, that can be a good thing at times, but not always.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">There are </span><span class="rvts40">SORT</span><span class="rvts6"> issues to consider</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts94">Drawbacks of tagged lines</span></p>
+<p class="rvps9"><span class="rvts94"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">Tagged lines are powerful, but more complex than excluded lines.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The </span><span class="rvts40">TAG</span><span class="rvts6"> command contains many options, and may be intimidating for some.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">When a tag is present in a line (as with labels) it obscures the line number sequence field. If you have many tags on many lines, this could be a bit distracting.</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">The tag notation is a little lengthy and hard to type, requiring a </span><span class="rvts40">:</span><span class="rvts6"> colon as a shifted key to enter it.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Does this mean that User Lines are the answer to everything? &nbsp;</span><span class="rvts40">No</span><span class="rvts6">. Excluded and tagged lines are still needed:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Excluding lines get lines of lesser interest "out of the way". Often times, that </span><span class="rvts40">is</span><span class="rvts6"> a good thing.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">The "pop out" action in </span><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6"> can reveal strings of special interest; that can be very important when you're trying to find something and you don't know if, or where, it might be.</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">Some complex "data mining" actions using </span><span class="rvts40">TAG</span><span class="rvts6"> and </span><span class="rvts40">ASSERT</span><span class="rvts6"> can't be easily done any other way.</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The User line status is independent of other line characteristics. Because of that, User Lines don't </span><span class="rvts11">have</span><span class="rvts12"> </span><span class="rvts11">to</span><span class="rvts12"> be the answer to everything. You can </span><span class="rvts11">combine</span><span class="rvts12"> User Lines and other techniques, for even </span><span class="rvts11">more powerful</span><span class="rvts12"> methods of referencing lines. That means that </span><span class="rvts11">any</span><span class="rvts12"> of these attributes may be applied to a line </span><span class="rvts11">independently</span><span class="rvts12"> of each other:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">a line can be excluded, or not excluded</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">a line can have a label, or not</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">a line can have a tag, or not</span></li>
+<li style="margin-left: 0px" class="rvps6"><span class="rvts12">a line can be designated as a User line, or not</span></li>
+</ul></ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, you may set a group of lines as User Lines, and work on them for a while. Then, when you're done with a particular aspect of your work, you can exclude those User Lines and "get them out of the way", but </span><span class="rvts40">they are still User Lines</span><span class="rvts6">, and</span><span class="rvts40"> will remain so</span><span class="rvts6"> if you unexclude them later with a </span><span class="rvts40">RESET</span><span class="rvts6">, </span><span class="rvts40">SHOW</span><span class="rvts6"> or other command.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">As with all tools, you have to pick the right one for the right job.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="PrimarycommandusageofUserLines"></a>
+<span class="rvts40">Primary command usage of User Lines</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><a class="rvts315" href="ULINE.html">ULINE</a><span class="rvts6">, </span><a class="rvts315" href="REVERT.html">REVERT</a><span class="rvts6">, </span><a class="rvts315" href="NULINE.html">NULINE</a><span class="rvts6"> and </span><a class="rvts315" href="NREVERT.html">NREVERT</a><span class="rvts6"> commands allow the "U/V state" of a line to be set, based on the presence or absence of a search string. </span><span class="rvts40">Reverting</span><span class="rvts6"> a line means to revert its U/V state back to </span><span class="rvts40">V</span><span class="rvts6">, the default state of ordinary data lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">These four commands may be thought of as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><a class="rvts315" href="ULINE.html">ULINE</a><span class="rvts6"> is like </span><a class="rvts315" href="FINDFindaCharacterString.html">FIND</a><span class="rvts6"> or </span><a class="rvts315" href="EXCLUDEEdit.html">EXCLUDE</a></li>
+<li style="margin-left: 0px" class="rvps10"><a class="rvts315" href="REVERT.html">REVERT</a><span class="rvts6"> is like </span><a class="rvts315" href="SHOW.html">SHOW</a><span class="rvts6"> </span></li>
+<li style="margin-left: 0px" class="rvps10"><a class="rvts315" href="NULINE.html">NULINE</a><span class="rvts6"> is like </span><a class="rvts315" href="NFIND.html">NFIND</a><span class="rvts6"> or &nbsp;</span><a class="rvts315" href="NEXCLUDE.html">NEXCLUDE</a></li>
+<li style="margin-left: 0px" class="rvps10"><a class="rvts315" href="NREVERT.html">NREVERT</a><span class="rvts6"> is like </span><a class="rvts315" href="NSHOW.html">NSHOW</a><span class="rvts6"> </span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Using </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">NU</span><span class="rvts6"> is very similar to operating on lines that either are, or are not, excluded, using the keywords </span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">NX</span><span class="rvts6">. User lines can be combined with line exclusion, line labels and line tags, if desired. During the design phase, we patterned the </span><span class="rvts40">U|NU</span><span class="rvts6"> usage on the existing </span><span class="rvts40">X|NX</span><span class="rvts6"> usage that ISPF and SPFLite users are familiar with. If you'd like an easy-to-remember rule, then just remember that essentially any primary command that takes </span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">NX</span><span class="rvts6"> will take </span><span class="rvts40">U</span><span class="rvts6"> or </span><span class="rvts40">NU</span><span class="rvts6">. The exceptions to this rule are as follows:</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">the commands </span><span class="rvts40">EXCLUDE</span><span class="rvts6">, </span><span class="rvts40">SHOW</span><span class="rvts6">, </span><span class="rvts40">NEXCLUDE</span><span class="rvts6"> and </span><span class="rvts40">NSHOW</span><span class="rvts6"> don't allow </span><span class="rvts40">X|NX</span><span class="rvts6"> on the command line but </span><span class="rvts40">do</span><span class="rvts6"> allow </span><span class="rvts40">U|NU</span></li>
+<li style="margin-left: 0px" class="rvps13"><span class="rvts6">the commands </span><span class="rvts40">ULINE</span><span class="rvts6">, </span><span class="rvts40">REVERT</span><span class="rvts6">, </span><span class="rvts40">NULINE</span><span class="rvts6"> and </span><span class="rvts40">NREVERT</span><span class="rvts6"> don't allow </span><span class="rvts40">U|NU</span><span class="rvts6"> on the command line but </span><span class="rvts40">do</span><span class="rvts6"> allow </span><span class="rvts40">X|NX</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Why didn't we make the primary command keywords </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">V</span><span class="rvts6">, instead of </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">NU</span><span class="rvts6">, since we just got through saying there are </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">V</span><span class="rvts6"> lines, </span><span class="rvts40">and</span><span class="rvts6"> there are </span><span class="rvts40">U/UU</span><span class="rvts6"> and </span><span class="rvts40">V/VV</span><span class="rvts6"> line commands? &nbsp;That was possible, and we did discuss it, but it wouldn't have followed the </span><span class="rvts40">X|NX</span><span class="rvts6"> pattern. So, we have the keywords as </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">NU</span><span class="rvts6"> because it is the more consistent approach.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">It's sort of the same reason why we stuck with </span><span class="rvts40">X</span><span class="rvts6"> and </span><span class="rvts40">NX</span><span class="rvts6">, even though there is a </span><span class="rvts40">SHOW</span><span class="rvts6"> primary command and an </span><span class="rvts40">S/SS</span><span class="rvts6"> line command. Why not introduce an </span><span class="rvts40">S</span><span class="rvts6"> keyword instead of continuing to use </span><span class="rvts40">NX</span><span class="rvts6">? &nbsp;Because that's not how ISPF does it. Same here. We are trying to follow the "spirit" of how ISPF would have done </span><span class="rvts40">this</span><span class="rvts6">, if IBM had designed it.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The syntax of the commands </span><span class="rvts40">ULINE</span><span class="rvts6">, </span><span class="rvts40">REVERT</span><span class="rvts6">, </span><span class="rvts40">NULINE</span><span class="rvts6"> and </span><span class="rvts40">NREVERT</span><span class="rvts6"> were patterned after the </span><span class="rvts40">FIND</span><span class="rvts6"> command. This includes the string search argument, </span><span class="rvts40">CHAR</span><span class="rvts6">/</span><span class="rvts40">WORD</span><span class="rvts6">/</span><span class="rvts40">PREFIX</span><span class="rvts6">/</span><span class="rvts40">SUFFIX</span><span class="rvts6"> options, color keywords, </span><span class="rvts40">X|NX</span><span class="rvts6"> and </span><span class="rvts40">MX|DX</span><span class="rvts6">. If you are modifying several different sections of your file to be U lines (or reverting them back to V lines), you can exclude them afterwards by using the </span><span class="rvts40">MX</span><span class="rvts6"> keyword, or keep them excluded if they already are, by using the </span><span class="rvts40">DX</span><span class="rvts6"> keyword. This can help you organize your work, by getting lines you just marked as U lines "out of the way," so that you can concentrate on other parts of your file. Once you have set all the desired lines, you can unexclude them and begin working on them. See </span><a class="rvts316" href="WorkingwithUserlines.html#Special%20handling%20of%20RESET%20when%20resetting%20User%20Line%20status">Special handling of RESET when resetting User Line status</a><span class="rvts6"> below, and </span><a class="rvts316" href="WorkingwithExcludedLines.html">Working with Excluded Lines</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In addition, primary commands can be restricted to operating on lines that either are, or are not, U lines, using the keywords </span><span class="rvts40">U</span><span class="rvts6"> or </span><span class="rvts40">NU</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The commands where </span><span class="rvts40">U</span><span class="rvts6"> and </span><span class="rvts40">NU</span><span class="rvts6"> can be specified are as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts40">APPEND, CHANGE (C), COMPRESS (CP), CREATE (CRE), CUT, DELETE (DEL), EXCLUDE (X), FIND (F, FF), FLIP, JOIN, LC, LINE, LOCATE (LOC, L), NDELETE (NDEL), NFIND (NF), NEXCLUDE (NX), NFLIP, NSHOW, PREPEND, PRINT, PTYPE (PT), REPLACE (REP), SC, SHOW, SORT, SPLIT, SUBMIT (SUB), TAG, TC</span><span class="rvts6"> and </span><span class="rvts40">UC</span><span class="rvts6">.</span></p>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">See also the</span><a class="rvts316" href="U.html"> </a><a class="rvts316" href="U.html">U/UU</a><span class="rvts6">, </span><a class="rvts316" href="V.html">V/VV</a><span class="rvts6"> and </span><a class="rvts316" href="TU.html">TU/TUU</a><span class="rvts6"> line commands for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="SettingtheUserLinestatusisrepeatable,andwhatthatmeans"></a>
+<span class="rvts40">Setting the User Line status is repeatable, and what that means</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you use a command like </span><span class="rvts40">ULINE</span><span class="rvts6"> (</span><span class="rvts40">UU</span><span class="rvts6">) or </span><span class="rvts40">REVERT</span><span class="rvts6"> (</span><span class="rvts40">VV</span><span class="rvts6">) over a range of lines, that command is repeatable. That is, if you were to retrieve the command (probably with F12) and run the same command again, it would re-mark, or re-unmark, the same set of lines the same way. That is because the same set of conditions (like search strings) would still hold, and unlike the </span><span class="rvts40">EXCLUDE</span><span class="rvts6"> and </span><span class="rvts40">SHOW</span><span class="rvts6"> primary commands, </span><span class="rvts40">ULINE</span><span class="rvts6"> and </span><span class="rvts40">REVERT</span><span class="rvts6"> don't change the visibility of those lines. (Recall that these commands are like </span><span class="rvts40">FIND</span><span class="rvts6">, which doesn't change the data.)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This property, where you can do the same thing over again, has the peculiar mathematical name of "idempotent", a word which signifies an operation that produces the same results no matter how many additional times you perform it. It is like setting a bit on using in </span><span class="rvts40">OR</span><span class="rvts6"> operator; if you set on a bit that was already on, it will still have the same value it had before.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">In some ways, line exclusion is also repeatable, but not to the extent that User Lines are. For example, you can issue a primary command of </span><span class="rvts40">EXCLUDE .A .B ALL</span><span class="rvts6">, and if you re-issue it, the same line range will be excluded (again). This corresponds to a command like </span><span class="rvts40">ULINE .A .B ALL</span><span class="rvts6">, which can also be repeated. However, suppose you issue a line command like </span><span class="rvts40">X3</span><span class="rvts6"> on line 1; it will exclude lines 1 to 3. If you issue </span><span class="rvts40">X3</span><span class="rvts6"> again where line 1 used to be, it now has a placeholder representing 3 lines, so putting </span><span class="rvts40">X3</span><span class="rvts6"> there will (again) exclude lines 1 to 3 </span><span class="rvts40">as a unit</span><span class="rvts6"> and then also exclude lines 4 and 5. So, you get more lines excluded the second time, and thus the action is not repeatable. In contrast, if you put a </span><span class="rvts40">U3</span><span class="rvts6"> command on line 1, no matter how many times you do it, it will still only mark lines 1 to 3 as User Lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Why bring up this bit of trivia? &nbsp;Recall the beginning of this article, where we said that the </span><span class="rvts40">U/V status is like a bit</span><span class="rvts6">? &nbsp;If it is, and if setting the "bit" using </span><span class="rvts40">ULINE</span><span class="rvts6"> is like OR-ing the bit, then you could set various ranges of lines using any combination of </span><span class="rvts40">ULINE</span><span class="rvts6">, </span><span class="rvts40">NULINE</span><span class="rvts6"> and </span><span class="rvts40">UU</span><span class="rvts6"> line commands, and when you were done, the set of lines marked as U lines would be in an </span><span class="rvts40">OR relationship</span><span class="rvts6">.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">For example, assuming the file had no existing U lines, if you did this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps76"><span class="rvts40">ULINE ABC ALL</span></p>
+<p class="rvps76"><span class="rvts40">NULINE DEF ALL</span></p>
+<p class="rvps76"><span class="rvts6">line command</span><span class="rvts40"> U\</span><span class="rvts6"> on line 10</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">where would U lines be found? &nbsp;They would be:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts6">all line containing </span><span class="rvts40">ABC</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts40">OR</span><span class="rvts6"> all lines </span><span class="rvts40">not</span><span class="rvts6"> containing </span><span class="rvts40">DEF</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts40">OR</span><span class="rvts6"> the first 10 lines of the file</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Once you have described this </span><span class="rvts40">OR relationship</span><span class="rvts6">, you can use the </span><span class="rvts40">U</span><span class="rvts6"> or </span><span class="rvts40">NU</span><span class="rvts6"> keywords to work with those lines from the primary command line. For example, suppose you now want to convert all those lines to upper case:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">UC U ALL</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Or, suppose you want only those lines written to a a temporary file:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts139">CREATE TEMP.TXT .ZFIRST .ZLAST U</span></p>
+<p class="rvps9"><span class="rvts170"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Remember, essentially any command that takes </span><span class="rvts40">X</span><span class="rvts6"> or </span><span class="rvts40">NX</span><span class="rvts6"> will also take </span><span class="rvts40">U</span><span class="rvts6"> or </span><span class="rvts40">NU</span><span class="rvts6">. So, you can use the U or non-U status to selectively act on a set of (possibly non-adjacent) lines.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<div class="rvps9"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="761" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">By the way, if that </span><span class="rvts40">CREATE</span><span class="rvts6"> command seems a little long, it's because </span><span class="rvts40">U</span><span class="rvts6"> doesn't imply a line range by itself, so we have to give it one. If you do this frequently, you may want to create a SET symbol to shorten it:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">SET ALL = ".ZFIRST .ZLAST"</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Then the command becomes (also using the short form of the command itself):</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">CRE TEMP.TXT =ALL U</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If it turns out that dealing with "all U lines" is something you do a lot, you could make this even shorter:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">SET U = ".ZFIRST .ZLAST U"</span></p>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">and then</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">CRE TEMP.TXT =U</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Creating SET symbols can be useful, but it's best to limit them to things you do all the time, to avoid creating so many you start forgetting what you have defined or how to use them.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Comparisonoffeatures:ExcludedLinesvs.UserLines"></a>
+<span class="rvts40">Comparison of features: &nbsp;Excluded Lines vs. User Lines</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps9"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">Feature of Excluded Lines</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">Feature of User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="EXCLUDEEdit.html">EXCLUDE (X)</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="ULINE.html">ULINE (UU)</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="NEXCLUDE.html">NEXCLUDE (NX)</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="NULINE.html">NULINE (NU)</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="SHOW.html">SHOW</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="REVERT.html">REVERT (VV)</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="NSHOW.html">NSHOW</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command</span><a class="rvts314" href="NREVERT.html"> </a><a class="rvts316" href="NREVERT.html">NREVERT (NV)</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command </span><a class="rvts316" href="HIDE.html">HIDE</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding primary command for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command option </span><span class="rvts40">X</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command option </span><span class="rvts40">U</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command option </span><span class="rvts40">NX</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command option </span><span class="rvts40">NU</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Primary command options </span><span class="rvts40">MX</span><span class="rvts6"> and </span><span class="rvts40">DX</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding primary command options for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="X.html">X</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="U.html">U</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="X.html">XX</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="U.html">UU</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="S.html">S</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="V.html">V</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="S.html">SS</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="V.html">VV</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="TX.html">TX</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><a class="rvts315" href="TU.html">TU</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="TX.html">TXX</a></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Block-mode line command </span><a class="rvts315" href="TU.html">TUU</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">LOCATE ALL</span><span class="rvts6"> </span><span class="rvts140">type</span><span class="rvts6"> will unexclude lines</span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">LOCATE ALL U</span><span class="rvts6"> will unexclude User Lines.</span></p>
+<p class="rvps2"><span class="rvts6">There is presently no corresponding LOCATE option to find lines of a certain type and then alter their U/V state.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">LOCATE ALL</span><span class="rvts6"> </span><span class="rvts140">type</span><span class="rvts6"> </span><span class="rvts40">MX</span><span class="rvts6"> will exclude lines</span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">LOCATE ALL U MX</span><span class="rvts6"> will exclude User Lines.</span></p>
+<p class="rvps2"><span class="rvts6">There is presently no corresponding LOCATE option to find lines of a certain type and then alter their U/V state.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><span class="rvts40">F</span><span class="rvts6"> shows first </span><span class="rvts40">n</span><span class="rvts6"> excluded lines</span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command of </span><span class="rvts40">Vn</span><span class="rvts6"> is comparable to </span><span class="rvts40">Fn</span><span class="rvts6">, provided that the next </span><span class="rvts40">n</span><span class="rvts6"> lines are not excluded</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><span class="rvts40">L</span><span class="rvts6"> shows last </span><span class="rvts40">n</span><span class="rvts6"> excluded lines</span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding line command</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Line command </span><span class="rvts40">SI</span><span class="rvts6"> shows indentation level</span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding line command</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" height="12" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Post-exclude modifier</span><span class="rvts40"> </span><span class="rvts139">-</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding line command option for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Post-unexclude modifier </span><span class="rvts139">+</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding line command option for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="STATEControlSavingofEditStateInf.html">STATE ON</a><a class="rvts314" href="STATEControlSavingofEditStateInf.html"> </a><span class="rvts6">retains excluded lines</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="STATEControlSavingofEditStateInf.html">STATE ON</a><span class="rvts6"> retains User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40">HIDE</span><span class="rvts6"> conceals excluded lines</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding feature, unless </span><span class="rvts40">also</span><span class="rvts6"> excluded</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Excluded lines disappear</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">User Lines remain visible unless </span><span class="rvts40">also</span><span class="rvts6"> excluded</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Excluded lines represented by a "placeholder" line</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">User Lines represented by a </span><span class="rvts40">|</span><span class="rvts6"> vertical mark in gap column</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Excluded areas vary in size; affect line commands</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding issues</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="FINDFindaCharacterString.html">FIND</a><span class="rvts6"> and </span><a class="rvts315" href="CHANGE.html">CHANGE</a><span class="rvts6"> will make excluded lines appear</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="FINDFindaCharacterString.html">FIND</a><span class="rvts6"> and </span><a class="rvts315" href="CHANGE.html">CHANGE</a><span class="rvts6"> do not alter User Line status</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40"><br/></span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts40"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="FINDFindaCharacterString.html">FIND X DX</a><span class="rvts6"> can position cursor on hidden lines</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding issue for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="CHANGE.html">CHANGE X DX</a><span class="rvts6"> can position cursor on hidden lines</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding issue for User Lines</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><a class="rvts315" href="SORTSorttheEditData.html">SORT X</a><span class="rvts6"> requires </span><span class="rvts40">DX</span><span class="rvts6"> for ISPF compatibility</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">No corresponding issue for User Lines; </span><span class="rvts40">SORT U</span><span class="rvts6"> allowed</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="363" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Plain </span><a class="rvts315" href="RESETResetEditMode.html">RESET</a><span class="rvts6"> implies </span><span class="rvts40">RESET X</span></p>
+</td>
+<td width="419" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Plain </span><a class="rvts315" href="RESETResetEditMode.html">RESET</a><span class="rvts6"> implies </span><span class="rvts40">RESET U</span><span class="rvts6"> but </span><span class="rvts40">only</span><span class="rvts6"> if enabled (see below)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps4"><span class="rvts37"><br/></span></p>
+<p class="rvps4"><span class="rvts37"><br/></span></p>
+<p class="rvps4"><a name="SpecialhandlingofRESETwhenresettingUserLinestatus"></a>
+<span class="rvts313">Special handling of RESET when resetting User Line status</span></p>
+<p class="rvps4"><span class="rvts37"><br/></span></p>
+<p class="rvps5"><span class="rvts37">Long-time ISPF users are accustomed to </span><a class="rvts315" href="RESETResetEditMode.html">RESET</a><span class="rvts37"> performing a number of default reset-actions when no options are specified. A plain </span><span class="rvts313">RESET</span><span class="rvts37"> is commonly used to reset excluded lines, as if </span><span class="rvts313">RESET X</span><span class="rvts37"> were specified. These default actions can be extended to the new User Line feature. That is, a plain </span><span class="rvts313">RESET</span><span class="rvts37"> can </span><span class="rvts313">also</span><span class="rvts37"> revert any User Lines back to ordinary non-User Lines, as if </span><span class="rvts313">RESET U</span><span class="rvts37"> were specified.</span></p>
+<p class="rvps5"><span class="rvts37"><br/></span></p>
+<p class="rvps5"><span class="rvts37">However, since User Lines are a new editing concept, there is no prior experience to form a consensus about how this should best be handled. Some people may want User Lines implicitly reverted, and others might not.</span></p>
+<p class="rvps5"><span class="rvts37"><br/></span></p>
+<p class="rvps5"><span class="rvts37">To address this, a plain </span><span class="rvts313">RESET</span><span class="rvts37"> will revert any existing User Lines back to ordinary non-User Lines, but </span><span class="rvts313">only</span><span class="rvts37"> if you enable the checkbox on the </span><span class="rvts313">General Options</span><span class="rvts37"> dialog that says, "</span><span class="rvts313">Default RESET will revert user line status</span><span class="rvts37">". As with other settings on this dialog, it is global and applies to all SPFLite edit sessions.</span></p>
+<p class="rvps5"><span class="rvts37"><br/></span></p>
+<p class="rvps5"><span class="rvts37">This checkbox is initially disabled.</span></p>
+<p class="rvps5"><span class="rvts37"><br/></span></p>
+<p class="rvps5"><span class="rvts37"><br/></span></p>
+<p class="rvps2"><a name="Specialhandlingofco-locatedlabel,tagandUserstateonsameline"></a>
+<span class="rvts40">Special handling of co-located label, tag and User state on same line</span></p>
+<p class="rvps2"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When a label and a tag exist on the same line, the "gap column" will display a </span><span class="rvts40">:</span><span class="rvts6"> colon to remind you of this situation, and there is also a special status line display whenever the cursor is on that line. See </span><a class="rvts316" href="WorkingwithLineTags.html#Line%20label%20and%20line%20tag%20co-location">Line label and line tag co-location</a><span class="rvts6"> for more information.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">It is possible for such a label/tag co-location line to </span><span class="rvts40">also</span><span class="rvts6"> be a User Line. When this occurs, the </span><span class="rvts40">:</span><span class="rvts6"> colon in the gap column is replaced by the </span><span class="rvts40">|</span><span class="rvts6"> vertical bar character. The special notation on the status line remains as in previous versions, displaying the tag name for that line. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you revert this line back to a non-User line, using </span><span class="rvts40">REVERT</span><span class="rvts6">, </span><span class="rvts40">NREVERT</span><span class="rvts6">, </span><span class="rvts40">RESET U</span><span class="rvts6"> or the </span><span class="rvts40">V/VV</span><span class="rvts6"> line commands, and make no other changes to this line, the </span><span class="rvts40">:</span><span class="rvts6"> colon in the gap column will reappear.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><a name="Examples"></a>
+<span class="rvts40">Examples</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Let's start with a simple test file. Notice there is a missing right parenthesis on line 2.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 01.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The goal will be to mark the first three lines as User Lines. There are a number of ways this could be done:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts139">U3</span><span class="rvts62"> </span><span class="rvts6">line command on line 1</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts139">U\</span><span class="rvts62"> </span><span class="rvts6">line command on line 3</span></li>
+<li style="margin-left: 0px" class="rvps10"><span class="rvts139">UU .1 .3</span><span class="rvts62"> </span><span class="rvts6">primary command</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">But suppose we are looking for some particular condition to mark. In this case, 'words' of three letters that start with a left parenthesis, where the words are in lower case. We can do this with a </span><span class="rvts40">UU</span><span class="rvts6"> command using a Picture. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">(Note that parentheses are not special Picture characters, and don't need to be escaped. If you needed to use some special characters, you can always put a</span><span class="rvts40"> \ </span><span class="rvts6">backslash in front of them, to have them treated as ordinary data.)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 02.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">This will mark the desired lines, and then report on the number of lines affected:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 03.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Now, noting that 3 lines were marked, suppose we knew (or suspected) that there might be some unmatched parentheses somewhere in the file. We could see if that condition existed in the marked User Lines by doing a </span><span class="rvts40">FIND</span><span class="rvts6"> with a</span><span class="rvts40"> U</span><span class="rvts6"> keyword:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 04.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts40">U</span><span class="rvts6"> keyword directs the </span><span class="rvts40">FIND</span><span class="rvts6"> command to only look at lines marked as User Lines, which in this case are lines 1-3, as seen by the</span><span class="rvts40"> |</span><span class="rvts6"> vertical bar on those lines. Result:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 05.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The FIND message confirms that the unmatched parentheses are somewhere in the User Line area. If you wanted to successively look at every U line that had a left parenthesis, to visually inspect which didn't have a right parenthesis, you could issue a</span><span class="rvts40"> FIND '(' U</span><span class="rvts6"> and then repeat that manually with F5.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">But, suppose you're in a hurry, and don't </span><span class="rvts40">want</span><span class="rvts6"> to do all that manual inspection. You could exclude all the lines, and then find all User Lines which did not have a right parenthesis:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 06.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Sure enough, once you do that, the only line left displayed is the one with the missing right parenthesis on line 2:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/User Lines 07.jpg"></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">What's nice about User Lines is that, since they act independently of line exclusion, you can </span><span class="rvts40">RESET</span><span class="rvts6"> the file and unexclude (or re-exclude) everything, and perform these tests all over again, or run other ones. When you do, all of your User Line marks remain undisturbed.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps10"><span class="rvts6">Remember that a plain </span><span class="rvts40">RESET</span><span class="rvts6"> command either </span><span class="rvts40">will</span><span class="rvts6">, or will </span><span class="rvts40">not</span><span class="rvts6">, clear the User Line marks from your file, depending on the General Options RESET checkbox described </span><a class="rvts316" href="WorkingwithUserlines.html#Special%20handling%20of%20RESET%20when%20resetting%20User%20Line%20status">above</a><span class="rvts6">.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

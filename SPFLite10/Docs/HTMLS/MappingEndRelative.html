@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>End-relative column references</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="End-relative column references">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="End-relative column references" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingEndRelative"
+		  data-hnd-context="260"
+		  data-hnd-title="End-relative column references"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>End-relative column references</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts196"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When the Picture or Regular Expression </span><span class="rvts140">find string</span><span class="rvts6"> of your </span><span class="rvts40">CHANGE</span><span class="rvts6"> command locates data of varying lengths, if may be more convenient to refer to data positions </span><span class="rvts177">relative to the </span><span class="rvts195">end</span><span class="rvts177"> of the string</span><span class="rvts6">, rather than</span><span class="rvts7"> relative to the </span><span class="rvts197">beginning</span><span class="rvts6">. Suppose we find a string containing </span><span class="rvts40">abcPDQxyz</span><span class="rvts6">. (Remember that the string that is found is the </span><span class="rvts140">source string.</span><span class="rvts6">)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><span class="rvts197">regular enumeration</span><span class="rvts6"> of the </span><span class="rvts140">source string </span><span class="rvts6">value is as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">abcPDQxyz</span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">123456789</span></p>
+<p class="rvps9"><span class="rvts7"><br/></span></p>
+<p class="rvps9"><span class="rvts195">End-relative</span><span class="rvts177"> </span><span class="rvts6">enumeration of this same </span><span class="rvts140">source string </span><span class="rvts6">value is the reverse of that:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts168"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">abcPDQxyz</span></p>
+<p class="rvps9"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">987654321</span></p>
+<p class="rvps9"><span class="rvts177"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Now, if every string you found were exactly 9 positions long, and you wanted the last 3 positions, you could easily get them with a column range of </span><span class="rvts7">7-9</span><span class="rvts6">. But, if the strings varied in size from </span><span class="rvts40">5</span><span class="rvts6"> to </span><span class="rvts40">20</span><span class="rvts6"> characters, what could you use to get those last 3 positions? &nbsp;Without using end-relative notation, there is no easy way to do it.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">To specify an</span><span class="rvts177"> end-relative column reference</span><span class="rvts6">, you use a single column number, or a column range with two number separated by a </span><span class="rvts177">–</span><span class="rvts6"> minus sign, and then follow it with an </span><span class="rvts194">*</span><span class="rvts6">&nbsp;asterisk. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Examples, using the </span><span class="rvts140">source string </span><span class="rvts6">noted above:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">To reference the rightmost character of the example data (</span><span class="rvts6">“z”</span><span class="rvts6">) use </span><span class="rvts6">1*</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">To reference the third character from the right (</span><span class="rvts6">“x”</span><span class="rvts6">) use </span><span class="rvts6">3*</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">To reference the rightmost 3 characters (</span><span class="rvts6">“xyz”</span><span class="rvts6">) use </span><span class="rvts6">3-1*</span></li>
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">To reference the rightmost 3 characters in reverse order (</span><span class="rvts6">“zyx”</span><span class="rvts6">) use </span><span class="rvts6">1-3*</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts40">Note carefully</span><span class="rvts6">: &nbsp;When an </span><span class="rvts177">end-relative column range</span><span class="rvts6"> is used, a notation of </span><span class="rvts195">first</span><span class="rvts198">‑</span><span class="rvts195">second</span><span class="rvts194">*</span><span class="rvts6"> selects columns in </span><span class="rvts40">reverse</span><span class="rvts6"> order when </span><span class="rvts140">first</span><span class="rvts6"> is </span><span class="rvts40">smaller</span><span class="rvts6"> than </span><span class="rvts140">second</span><span class="rvts6"> (like </span><span class="rvts6">1‑3*</span><span class="rvts6">), and in </span><span class="rvts40">forward</span><span class="rvts6"> order when </span><span class="rvts140">first</span><span class="rvts6"> is </span><span class="rvts40">larger</span><span class="rvts6"> than </span><span class="rvts140">second</span><span class="rvts6"> (like </span><span class="rvts6">3-1*</span><span class="rvts6">)</span><span class="rvts140">.</span><span class="rvts6"> &nbsp;Because of this, you must use this notation carefully and not get these confused.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The column ordering is the </span><span class="rvts40">exact</span><span class="rvts6"> </span><span class="rvts40">opposite</span><span class="rvts6"> of how </span><span class="rvts7">normal column-range</span><span class="rvts6"> references are done, where a range like </span><span class="rvts6">1-3</span><span class="rvts6"> is forward order, and </span><span class="rvts6">3-1</span><span class="rvts6"> is reverse order. This is necessary in order to be consistent with how the columns are numbered in reverse order (as shown above), when </span><span class="rvts195">end-relative</span><span class="rvts177"> </span><span class="rvts6">column numbering is used.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Example: To select the last 3 positions of a variable length field and convert them to upper case, use this:</span></p>
+<h1 class="rvps102"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span class="rvts0"><span class="rvts145">CHANGE R'[A-Za-z]+' M'&gt; </span></span><span class="rvts0"><span class="rvts200">3-1*</span></span><span class="rvts0"><span class="rvts145">' WORD ALL</span></span></h1>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Example: To select the last 3 positions of a variable length field and convert them to upper case, </span><span class="rvts40">and reverse their order</span><span class="rvts6">, use this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<h1 class="rvps102"><span class="rvts0"><span class="rvts145"> &nbsp; &nbsp; &nbsp; &nbsp;</span></span><span class="rvts0"><span class="rvts145">CHANGE R'[A-Za-z]+' M'&gt; 1-3*' WORD ALL</span></span></h1>
+<p class="rvps9"><span class="rvts40"><br/></span></p>
+<p class="rvps9"><span class="rvts195">End-relative notation</span><span class="rvts6"> can be used to on any command that accepts a </span><span class="rvts140">column reference.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts195">End-relative notation</span><span class="rvts6"> cannot be combined with </span><span class="rvts199">+</span><span class="rvts6"> </span><span class="rvts140">remaining-column</span><span class="rvts6"> notation, and </span><span class="rvts199">0</span><span class="rvts6"> cannot be used as a column number. (Those capabilities are not really needed with </span><span class="rvts195">end-relative</span><span class="rvts177"> </span><span class="rvts6">notation, since you can already reverse the columns selected by switching the two numbers in a range.)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The range of column numbers that can be used for</span><span class="rvts177"> </span><span class="rvts195">end-relative notation</span><span class="rvts6"> is the same as for </span><span class="rvts7">regular notation</span><span class="rvts6">:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps101"><span class="rvts6">If an </span><span class="rvts177">e</span><span class="rvts195">nd-relative</span><span class="rvts6"> single column number is higher than the length of the </span><span class="rvts140">source string</span><span class="rvts6">, no data is selected.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps101"><span class="rvts6">If an</span><span class="rvts140"> </span><span class="rvts195">end-relative</span><span class="rvts6"> single column range has both numbers higher than the length of the </span><span class="rvts140">source string</span><span class="rvts6">, no data is selected.</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps101"><span class="rvts6">If an</span><span class="rvts177"> </span><span class="rvts195">end-relative</span><span class="rvts6"> single column range has one column number higher than the length of the </span><span class="rvts140">source string</span><span class="rvts6"> but not both, the higher number is effectively reduced to be equal to the length of the </span><span class="rvts140">source string</span><span class="rvts6">.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">The </span><a class="rvts166" href="MappingQuickReference.html">Mapping Strings Quick Reference</a><span class="rvts6"> has several examples of how all the various column reference types are specified and what they mean.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

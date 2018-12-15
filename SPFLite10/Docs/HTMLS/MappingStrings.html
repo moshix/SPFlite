@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Understanding how string mapping works</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Understanding how string mapping works">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Understanding how string mapping works" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="MappingStrings"
+		  data-hnd-context="281"
+		  data-hnd-title="Understanding how string mapping works"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Understanding how string mapping works</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps9"><span class="rvts165"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When you request a string to be </span><span class="rvts40">mapped</span><span class="rvts6">, you are taking data from a </span><span class="rvts140">source string</span><span class="rvts6"> and using it to create a </span><span class="rvts140">result string.</span><span class="rvts6"> &nbsp;The </span><span class="rvts140">mapping string</span><span class="rvts6"> can be thought of as a list of ‘commands’ or ‘instructions’, which are operated upon in left-to-right order. These instructions, or </span><span class="rvts140">mapping items,</span><span class="rvts6"> consist of column ranges, command codes, and optional string and numeric operands, and are described below.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Visually, think of it like this:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts140">“source string” &nbsp;</span><span class="rvts172">→</span><span class="rvts140"> &nbsp;{ mapping items … } &nbsp;</span><span class="rvts172">→</span><span class="rvts140"> &nbsp;“result string”</span></p>
+<p class="rvps9"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6">When the mapping operation begins, SPFLite will initially set the </span><span class="rvts140">result string</span><span class="rvts6"> to a ‘null’ (zero-length) value. The </span><span class="rvts140">result string</span><span class="rvts6"> is then subsequently changed as a result of the mapping commands you specify.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">You may reference the </span><span class="rvts140">source string</span><span class="rvts6"> using as many commands as you wish. As you do, each successive command will update the contents of the </span><span class="rvts140">result string</span><span class="rvts6">. However,</span><span class="rvts40"> the source string itself is never changed, and may be thought of as a constant, read-only value.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">Just to clarify this, the </span><span class="rvts140">source string</span><span class="rvts6"> is essentially an “input parameter” to a “mapping function”. The mapping function does </span><span class="rvts40">not </span><span class="rvts6">change this input parameter during the course of its operation while interpreting your mapping commands. That means you can refer to the </span><span class="rvts140">source string</span><span class="rvts6"> multiple times with multiple mapping items, and the contents of the </span><span class="rvts140">source string</span><span class="rvts6"> always retains the original string found by the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command. Once you have created your </span><span class="rvts140">result string</span><span class="rvts6"> by specifying one or more mapping items, that </span><span class="rvts140">result string</span><span class="rvts6"> replaces the found string in your data file.</span></p>
+<p class="rvps13"><span class="rvts6"><br/></span></p>
+<p class="rvps13"><span class="rvts6">For example, in the command noted above, </span><span class="rvts139">CHANGE P'@@@@' WORD M'4-1'</span><span class="rvts6">, if the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command finds the string ABCD, that string is the </span><span class="rvts140">source string</span><span class="rvts6"> for the duration of whatever mapping commands you issue within your M string. The </span><span class="rvts140">source string</span><span class="rvts6"> never changes from being ABCD, since that is an “input parameter” to the mapping process. The “output parameter” from the mapping process is your </span><span class="rvts140">result string.</span><span class="rvts6"> &nbsp;That output parameter is then sent back to the </span><span class="rvts40">CHANGE</span><span class="rvts6"> command processor to complete the </span><span class="rvts40">CHANGE</span><span class="rvts6"> process, by replacing your original data of ABCD with DCBA.</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Each column-reference selects and </span><span class="rvts40">copies</span><span class="rvts6"> data from the </span><span class="rvts140">source string</span><span class="rvts6"> and places it in the </span><span class="rvts140">result string</span><span class="rvts6">, successively appending the selected values on the right side of it, to produce an updated version of the </span><span class="rvts140">result string</span><span class="rvts6">. These are known as </span><span class="rvts40">copying commands</span><span class="rvts6">.</span><span class="rvts40"> &nbsp;</span><span class="rvts6">Each </span><span class="rvts140">mapping item</span><span class="rvts6"> generally causes the </span><span class="rvts140">result string</span><span class="rvts6"> to built up and get longer and longer until the final result is produced. (A few operations are an exception to this, because they may make the string shorter or update it in place.)</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">Some operations such as case alteration, alignment or trimming, operate on and </span><span class="rvts40">modify</span><span class="rvts6"> the </span><span class="rvts140">result string</span><span class="rvts6"> as a whole, </span><span class="rvts140">as it exists as of the point where the operation in the mapping string is reached.</span><span class="rvts6"> &nbsp;These &nbsp;are known as </span><span class="rvts40">modifying commands</span><span class="rvts140">.</span><span class="rvts6"> &nbsp;Thus, it is possible, for example, to “trim” the </span><span class="rvts140">result string</span><span class="rvts6"> by a trimming command in the middle of the mapping string, and then go on to make the </span><span class="rvts140">result string</span><span class="rvts6"> longer with additional mapping items after that. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts140">Mapping items</span><span class="rvts6"> which are </span><span class="rvts40">modifying commands</span><span class="rvts6"> do not use or reference the contents of the </span><span class="rvts140">source string</span><span class="rvts6">, but </span><span class="rvts40">only</span><span class="rvts6"> the </span><span class="rvts140">result string.</span><span class="rvts6"> &nbsp;For example, suppose you had a </span><span class="rvts140">source string</span><span class="rvts6"> of “</span><span class="rvts139">abcd</span><span class="rvts6">”, and applied a mapping string to it of</span><span class="rvts168"> </span><span class="rvts139">M'1-2 UC 3-4'</span><span class="rvts6">. This would work as follows:</span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Columns 1-2 of the </span><span class="rvts140">source string</span><span class="rvts6"> are selected as “</span><span class="rvts139">ab</span><span class="rvts6">”. This value is </span><span class="rvts40">copied</span><span class="rvts6"> to the </span><span class="rvts140">result string</span><span class="rvts6">, </span><span class="rvts40">which is initially empty</span><span class="rvts6">. The </span><span class="rvts140">result string</span><span class="rvts6"> now contains “</span><span class="rvts139">ab</span><span class="rvts6">”. (Technically, the string “</span><span class="rvts40">ab</span><span class="rvts6">” is </span><span class="rvts165">appended to a null result string</span><span class="rvts6">, resulting in “</span><span class="rvts40">ab</span><span class="rvts6">”, but the effect is the same as if it were simply copied.)</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">The case alteration command </span><span class="rvts139">UC</span><span class="rvts6"> is applied to </span><span class="rvts40">modify</span><span class="rvts6"> the current </span><span class="rvts140">result string</span><span class="rvts6">. The </span><span class="rvts140">result string</span><span class="rvts6"> now contains “</span><span class="rvts139">AB</span><span class="rvts6">” &nbsp;</span></li>
+</ul>
+<p class="rvps10"><span class="rvts6"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px; text-indent: 0px" class="rvps90"><span class="rvts6">Columns 3-4 of the </span><span class="rvts140">source string</span><span class="rvts6"> are selected, “</span><span class="rvts139">cd</span><span class="rvts6">”. This is </span><span class="rvts40">copied</span><span class="rvts6"> and appended to the end of the </span><span class="rvts140">result string</span><span class="rvts6">, which at this point had “</span><span class="rvts168">AB</span><span class="rvts6">” because of the prior </span><span class="rvts139">UC</span><span class="rvts6"> command. The final value of the </span><span class="rvts140">result string</span><span class="rvts6"> is now “</span><span class="rvts171">ABcd</span><span class="rvts6">”.</span></li>
+</ul>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">In some cases, if you specify a column-range on a command code that is outside the range of data columns or your </span><span class="rvts140">source string</span><span class="rvts6">, or you have otherwise specified your command improperly, no change will be performed on your data. If you issue a </span><span class="rvts40">CHANGE</span><span class="rvts6"> command with an </span><span class="rvts40">M</span><span class="rvts6"> string, but nothing seems to be happening, check your data and your </span><span class="rvts40">M</span><span class="rvts6"> string to see if you have specified it correctly. Also, check to see if your </span><span class="rvts40">CHANGE</span><span class="rvts6"> command has produced a mapping-string error message, which may help you to identify and correct the problem. </span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6">If you have a legitimate reason to attempt to access column positions that don't (yet) exist in your </span><span class="rvts140">source string</span><span class="rvts6">, the best way to achieve this may be to first pad the data to the desired length (likely with spaces), and then proceed with any additional modifications to your data that you need. You cannot pad the </span><span class="rvts140">source string</span><span class="rvts6"> itself, but you can pad a </span><span class="rvts165">copy</span><span class="rvts6"> of it in the </span><span class="rvts140">result string.</span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts140"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p class="rvps9"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">&copy; G. D. Deluca / R. L. Hodge</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

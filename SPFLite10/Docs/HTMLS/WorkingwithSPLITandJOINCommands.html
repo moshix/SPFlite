@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Working with SPLIT and JOIN Commands</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Working with SPLIT and JOIN Commands">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Working with SPLIT and JOIN Commands" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="WorkingwithSPLITandJOINCommands"
+		  data-hnd-context="209"
+		  data-hnd-title="Working with SPLIT and JOIN Commands"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Working with SPLIT and JOIN Commands</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps4"><span class="rvts40">Contents of Article</span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Introduction">Introduction</a></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><a class="rvts81" href="WorkingwithSPLITandJOINCommands.html#SPLITCommandExamples">SPLIT Command Examples</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example1:">Example 1: Split comma-separated values, discarding commas</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example2:">Example 2: Split comma-separated values, retaining commas before split</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example3:">Example 3: Split comma-separated values, retaining commas after split</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example4:">Example 4: Split data without delimiters</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example5:">Example 5: Split using Picture and Format strings</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example6:">Example 6: Split on dashes</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example7:">Example 7: Split on delimiter and blank</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example8:">Example 8: Split using </a><a class="rvts342" href="WorkingwithSPLITandJOINCommands.html#Example8:">F'!|' </a><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example8:">change string</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example9:">Example 9: Split using a regular expression</a></p>
+<p class="rvps5"><a class="rvts34" href="WorkingwithSPLITandJOINCommands.html#Example%2010:%20Split%20on%20left%20using%20P'[string'">Example 10: Split on left using</a><a class="rvts341" href="WorkingwithSPLITandJOINCommands.html#Example%2010:%20Split%20on%20left%20using%20P'[string'"> P'[</a><a class="rvts342" href="WorkingwithSPLITandJOINCommands.html#Example10:">string'</a></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><a class="rvts160" href="WorkingwithSPLITandJOINCommands.html#JOINCommandExamples">JOIN Command Examples</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example11:">Example 11: Join on left</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example12:">Example 12: Join on right</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example13:">Example 13: Replacement join</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example14:">Example 14: Left join with dash inserted</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example15:">Example 15: Right join with space between</a></p>
+<p class="rvps5"><a class="rvts42" href="WorkingwithSPLITandJOINCommands.html#Example16:">Example 16: Right join without space between</a></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Introduction"></a>
+<span class="rvts40">Introduction</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">SPLIT</span><span class="rvts6"> edit primary command is used to selectively split apart lines of text based on a search string. After a split occurs, a line on which the </span><span class="rvts40">from-string</span><span class="rvts6"> is found will become two lines. Everything before the "split point" will be on the first line, while everything after the split point will be on the second line.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The </span><span class="rvts40">JOIN</span><span class="rvts6"> edit primary command is used to selectively combine lines of text based on a search string. After a join occurs, a line on which the </span><span class="rvts40">from-string</span><span class="rvts6"> is found will be combined either with the line before it, or with the line after it. So, each time a join takes place, two lines of text will become one line of text.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This section provides a number of examples of how to use the </span><span class="rvts40">SPLIT</span><span class="rvts6"> and </span><span class="rvts40">JOIN</span><span class="rvts6"> commands. Because these commands provide complementary functions, they are grouped together here. See </span><a class="rvts34" href="SPLIT.html">SPLIT - Split Lines Using Find/Change Strings</a><span class="rvts6"> and </span><a class="rvts34" href="JOIN.html">JOIN - Join lines Using Find/Change Strings</a><span class="rvts6"> for detailed descriptions of the command syntax.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Because the precise state of your data lines may be critical to how a </span><span class="rvts40">SPLIT</span><span class="rvts6"> or </span><span class="rvts40">JOIN</span><span class="rvts6"> command operates, in some cases (depending on your requirements) it may be important to manage the trailing blanks that might exist on the lines you are splitting or joining. </span><span class="rvts284">For example, if you wished to trim the entire file of trailing blanks, you can place a line command of </span><span class="rvts338">TR/</span><span class="rvts284"> on line 1 and press Enter. You may find the line commands </span><a class="rvts339" href="TR.html">TR/TRR</a><span class="rvts284">, </span><a class="rvts339" href="PL.html">PL/PLL</a><span class="rvts284"> and </span><a class="rvts339" href="TL.html">TL/TLL</a><span class="rvts284">, and the primary commands </span><a class="rvts339" href="APPEND.html">APPEND</a><span class="rvts284"> and </span><a class="rvts339" href="PREPEND.html">PREPEND</a><span class="rvts284"> to be useful in conjunction with </span><span class="rvts285">SPLIT</span><span class="rvts284"> and </span><span class="rvts285">JOIN</span><span class="rvts284">, either to prepare lines for SPLIT/JOIN processing, or to modify them afterwards.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Bear in mind that </span><span class="rvts40">SPLIT</span><span class="rvts6"> and </span><span class="rvts40">JOIN</span><span class="rvts6"> are treated as specialized forms of </span><span class="rvts40">FIND</span><span class="rvts6"> and </span><span class="rvts40">CHANGE</span><span class="rvts6">. This means that the </span><span class="rvts40">RFIND</span><span class="rvts6">/</span><span class="rvts40">RLOCFIND</span><span class="rvts6"> and </span><span class="rvts40">RCHANGE</span><span class="rvts6"> commands (usually mapped to F5 and F6) may be used to selectively find text on lines to be split or joined using F5, and then you can selectively perform the </span><span class="rvts40">SPLIT</span><span class="rvts6"> or </span><span class="rvts40">JOIN</span><span class="rvts6"> with F6 </span><span class="rvts40">if</span><span class="rvts6"> that is what meets your requirements; it's not necessary to always use the ALL keyword to process your entire line range.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A JOIN </span><span class="rvts11">from-string</span><span class="rvts12"> may be specified as a Regular Expression, in addition to a Picture string.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A JOIN </span><span class="rvts11">from-string</span><span class="rvts12"> must be either:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps11"><span class="rvts12">a Picture string in one of the following formats:</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">P'[string'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">left-join operation.</span><span class="rvts12"> &nbsp;The value of </span><span class="rvts11">string</span><span class="rvts12"> must appear on the left side of lines within the line range in order to be joined; otherwise any lines not beginning with </span><span class="rvts11">string</span><span class="rvts12"> will be ignored for </span><span class="rvts11">JOIN</span><span class="rvts12"> purposes. When a </span><span class="rvts11">[</span><span class="rvts12"> Picture code appears in the </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command, it must appear in the left-most position of the Picture string, and nowhere else.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">P'string]'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">right-join operation.</span><span class="rvts12"> &nbsp;The value of </span><span class="rvts11">string</span><span class="rvts12"> must appear on the right side of lines within the line range in order to be joined; otherwise any lines not ending with </span><span class="rvts11">string</span><span class="rvts12"> will be ignored for </span><span class="rvts11">JOIN</span><span class="rvts12"> purposes. When a </span><span class="rvts11">]</span><span class="rvts12"> Picture code appears in the </span><span class="rvts11">from-string</span><span class="rvts12"> of a </span><span class="rvts11">JOIN</span><span class="rvts12"> command, it must appear in the right-most position of the Picture string, and nowhere else.</span></p>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts12">a Regular Expression string in one of the following formats:</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">R'^expression'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">left-join operation.</span><span class="rvts12"> &nbsp;The regular expression </span><span class="rvts11">must</span><span class="rvts12"> start with the </span><span class="rvts11">^</span><span class="rvts12"> directive to indicate the left-hand edge of the line. The remaining expression may be any valid RegEx expression. </span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">R'expression$'</span></p>
+<p class="rvps12"><span class="rvts11">JOIN</span><span class="rvts12"> is being asked to perform a </span><span class="rvts50">right-join operation.</span><span class="rvts12"> &nbsp;The regular expression </span><span class="rvts11">must</span><span class="rvts12"> end with the </span><span class="rvts11">$</span><span class="rvts12"> directive to indicate the right-hand edge of the line. The remaining expression may be any valid RegEx expression. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The section on </span><span class="rvts40">JOIN</span><span class="rvts6"> command examples starts </span><a class="rvts34" href="WorkingwithSPLITandJOINCommands.html#JOIN%20Command%20Examples">here</a><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="SPLITCommandExamples"></a>
+<span class="rvts40">SPLIT Command Examples</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example1:"></a>
+<span class="rvts40">Example 1: Split comma-separated values, discarding commas</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 01.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: Each place that a comma is found is split to form a new line. Two commas are found, so two splits occur. Since the change Picture has the vertical bar </span><span class="rvts170">|</span><span class="rvts6"> split code but nothing else, the commas that are found are "consumed" by the splitting process, and so they don't appear in the result.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 01B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><span class="rvts40"><br/></span></p>
+<p class="rvps4"><a name="Example2:"></a>
+<span class="rvts40">Example 2: Split comma-separated values, retaining commas before split</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 02.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: Each place where a comma is found is split to form a new line. Two commas are found, so two splits occur. Since the change Picture has a comma </span><span class="rvts40">before</span><span class="rvts6"> the vertical bar </span><span class="rvts170">|</span><span class="rvts6"> split code, the commas that are found are first "consumed" by the splitting process, and then re-inserted back because of appearing in the Picture string, so that they appear at the ends of lines 1 and 2.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 02B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example3:"></a>
+<span class="rvts40">Example 3: Split comma-separated values, retaining commas after split</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 03.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: Each place where a comma is found is split to form a new line. Two commas are found, so two splits occur. Since the change Picture has a comma </span><span class="rvts40">after</span><span class="rvts6"> the vertical bar </span><span class="rvts170">|</span><span class="rvts6"> split code, the commas that are found are first "consumed" by the splitting process, and then restored because of appearing in the Picture string, so that they appear at the beginning of lines 2 and 3. </span><span class="rvts40">Compare examples 2 and 3.</span><span class="rvts6"> &nbsp;See how characters </span><span class="rvts40">before</span><span class="rvts6"> the vertical bar are on the </span><span class="rvts40">first</span><span class="rvts6"> line of a split, while characters </span><span class="rvts40">after</span><span class="rvts6"> the vertical bar are on the </span><span class="rvts40">second</span><span class="rvts6"> line of a split.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 03B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example4:"></a>
+<span class="rvts40">Example 4: Split data without delimiters</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">When you have to split some text that doesn't have any delimiters, you may have to repeat some or all of the find-string data in the change string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 04.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: ONETWO on one line is replaced by ONE and TWO on two lines. We had to repeat the original data appearing in the change-string with a split mark of </span><span class="rvts40">|</span><span class="rvts6"> in the middle of the change string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 04B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example5:"></a>
+<span class="rvts40">Example 5: Split using Picture and Format strings</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">You can use a Picture for the find-string, so that the change-string is handled 'generically'. Here we are splitting all strings of 6 upper case letters. Note the use of the F-type Format string for the change-string. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">We use a </span><span class="rvts40">Format</span><span class="rvts6">, because the '</span><span class="rvts40">=</span><span class="rvts6">' signs don't correspond to the same positions between the find and change strings, and so a P-type Picture string won't work. That is, the right-hand 3 '</span><span class="rvts40">=</span><span class="rvts6">' signs are in position 5-7 of the Format string, but they correspond to positions 4-6 of the original data. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">The one-character shift is the result of the fact that the vertical bar </span><span class="rvts40">|</span><span class="rvts6"> code does not correspond to a character position of original data, but it 'takes up a place' in the string, so we must use a Format string here in order to be consistent with how Formats are used elsewhere, like in </span><span class="rvts40">CHANGE</span><span class="rvts6"> commands. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you had used a Picture here instead of a Format, you would get an error message, "</span><span class="rvts139">CHANGE chars =&lt;&gt;~ appear past the length of the Find string</span><span class="rvts6">". As you can see below, the Format string contains 7 characters (6 </span><span class="rvts40">=</span><span class="rvts6"> equal signs and one </span><span class="rvts40">|</span><span class="rvts6"> vertical bar) whereas the find-string is a Picture string of length 6. If the change string were a Picture instead of a Format, the right-most </span><span class="rvts40">=</span><span class="rvts6"> equal sign would correspond to "position 7" of the found string. Since the first operand is of length 6, there </span><span class="rvts40">is</span><span class="rvts6"> no position 7, and that's why an error occurs. Format strings deal with character positions differently, and that's why it works. See </span><a class="rvts34" href="SpecifyingaPictureorFormatString.html">Specifying a Picture or Format String</a><span class="rvts6"> for a detailed discussion of these issue.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 05.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: Both lines are split, making four lines from the original two. In the change Format string, the first three </span><span class="rvts40">=</span><span class="rvts6"> equal signs, before the </span><span class="rvts40">|</span><span class="rvts6"> vertical bar, correspond to the first three positions (1-3) of the strings ONETWO and SIXTEN, and the second &nbsp;three &nbsp;</span><span class="rvts40">=</span><span class="rvts6"> equal signs, after the </span><span class="rvts40">|</span><span class="rvts6"> vertical bar, correspond to the last three positions (4-6) of those strings.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Now you can start seeing some of the real power in using </span><span class="rvts40">SPLIT</span><span class="rvts6"> with Pictures. You are not just finding delimiters and breaking lines apart by using them, but here we actually split lines based upon undelimited text contents.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 05B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example6:"></a>
+<span class="rvts40">Example 6: Split on dashes</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Split a line on dashes, which are then discarded. Note that a literal </span><span class="rvts40">|</span><span class="rvts6"> vertical bar in the </span><span class="rvts40">data</span><span class="rvts6"> does not cause line splits, and is not confused in the </span><span class="rvts40">SPLIT</span><span class="rvts6"> operation. You can also specify the command as</span><span class="rvts139"> SPLIT &nbsp;'-' &nbsp;F'|' &nbsp;ALL</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 06.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: See that the </span><span class="rvts40">|</span><span class="rvts6"> literal data is still present. The mere fact that a Picture split code is specified as </span><span class="rvts40">|</span><span class="rvts6"> has nothing to do with an ordinary </span><span class="rvts40">| </span><span class="rvts6">vertical-bar character appearing in your data.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 06B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example7:"></a>
+<span class="rvts40">Example 7: Split on delimiter and blank</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Split apart some programming statements: only split where a semicolon is followed by a blank, then discard the blank after splitting. </span></p>
+<p class="rvps5"><span class="rvts6">Because split-point strings are discarded, the resulting lines don't have trailing blanks on them. </span><span class="rvts94">Blanks</span><span class="rvts6"> have been highlighted in </span><span class="rvts340">blue</span><span class="rvts6"> for clarity. The split points are substituted where the blanks were located, and are then discarded after the split. </span></p>
+<p class="rvps5"><span class="rvts6">You can also specify the command as</span><span class="rvts139"> SPLIT &nbsp;'; ' &nbsp;F';|' &nbsp;ALL</span><span class="rvts6">.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 07.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: &nbsp;Notice that the part with "</span><span class="rvts139">two=2;TWENTY=20;</span><span class="rvts6">" does not get split. That's because the part with "</span><span class="rvts139">two=2;</span><span class="rvts6"> " didn't have a blank after it, and the SPLIT find-picture insists on a blank after the </span><span class="rvts139">;</span><span class="rvts6"> semicolon. The result lines do not have any trailing blanks on them, and the last line is a zero-length line.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 07B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example8:"></a>
+<span class="rvts40">Example 8: Split using</span><span class="rvts168"> F'!|' </span><span class="rvts40">change string</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Split apart lines using the </span><span class="rvts40">!</span><span class="rvts6"> code in for string-2. This </span><span class="rvts40">!</span><span class="rvts6"> code represents the </span><span class="rvts40">entire</span><span class="rvts6"> string found by the 'find-string' of</span><span class="rvts139"> T'ABC'</span><span class="rvts6">, which in this case will be any of the letters ABC regardless of case. Because the entire string that was found will appear in the change-string, no source characters are deleted (lost) during the split process. </span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">This command could also have been specified as</span><span class="rvts139"> SPLIT T'ABC' P'===|' ALL</span><span class="rvts6"> &nbsp; or as</span><span class="rvts139"> SPLIT T'ABC' F'===|' ALL</span><span class="rvts6">, </span></p>
+<p class="rvps5"><span class="rvts6">but using the</span><span class="rvts337"> ! </span><span class="rvts6">notation is more concise, because no matter how long the found-string is, only a single </span><span class="rvts40">!</span><span class="rvts6"> code is needed in the change Format.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 08.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 08B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example9:"></a>
+<span class="rvts40">Example 9: Split using a regular expression</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Sometimes your data is not very well-defined, but you need to split it anyway. Below, we have a file in which we want to split lines where there is a "word" at the beginning of the line, so that the split happens at whatever follows the "word". The problem is that the words vary in size, don't always begin the line, and have inconsistent data following them (digits, special characters and blanks appear after the words). There is no specific data we can "home in on" to decide where splits should be done. The best way to find such strings is with a Regular Expression. The Regular Expression codes </span><span class="rvts139">^</span><span class="rvts6"> and </span><span class="rvts139">$</span><span class="rvts6"> correspond to Picture codes of </span><span class="rvts139">[</span><span class="rvts6"> and </span><span class="rvts139">]</span><span class="rvts6">. We can use that fact to look for "words" that only begin a line and no where else. Then, using the fact that the </span><span class="rvts40">!</span><span class="rvts6"> Picture/Format code represents the entire found-string regardless of length, that will do nicely for the change-string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 09.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: Note that on original line 4, the data </span><span class="rvts139">444FOUR444</span><span class="rvts6"> doesn't meet the criteria, because the "word" </span><span class="rvts139">FOUR</span><span class="rvts6"> doesn't start the line. So, that line doesn't get split. Out of 6 original lines, just 5 of them are split. See how the </span><span class="rvts40">!</span><span class="rvts6"> code represents each of the "word" strings in turn, even though they are of differing sizes. This example also demonstrates how powerful Regular Expressions can be. We needed to find strings that were ended, not by a delimiter or by a fixed length, but by a character that was not in the correct "class" (alphabetic, in this case). Only a Regular Expression could do that.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 09B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example10:"></a>
+<span class="rvts40">Example 10: Split on left using</span><span class="rvts168"> P'[string'</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Given the file below, we want to replace the first ABC on each line with DEF, and remove the blank that follows it, and then split the lines.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 10.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Split 10B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="JOINCommandExamples"></a>
+<span class="rvts40">JOIN Command Examples</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example11:"></a>
+<span class="rvts40">Example 11: Join on left</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">A left-join is performed on line 2.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 01.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: The left side of line 2 is joined with the right side of line 1. Former lines 1 and 2 are combined into a new line 1, and the former line 3 becomes the new line 2.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 01B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example12:"></a>
+<span class="rvts40">Example 12: Join on right</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">A right-join is performed on line 2.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 02.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: The right side of line 2 is joined with the left side of line 3. Former lines 2 and 3 are combined into a new line 2.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 02B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example13:"></a>
+<span class="rvts40">Example 13: Replacement join</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">If you look at the first two </span><span class="rvts40">JOIN</span><span class="rvts6"> examples (11 and 12 above), you will see that there is no second string operand. When you omit this, </span><span class="rvts40">JOIN</span><span class="rvts6"> assumes that the second operand is </span><span class="rvts139">P'!'</span><span class="rvts6">. That is, whatever string is found using the first operand is appended to the joined line. (Recall that </span><span class="rvts139">P'!'</span><span class="rvts6"> stands for the value of the </span><span class="rvts40">entire</span><span class="rvts6"> found string, </span><span class="rvts40">regardless of its length</span><span class="rvts6">.) &nbsp;In example 12, this means that you will get the same results by any of the following commands:</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">JOIN P'TWO]' .2</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">JOIN P'TWO]' 'TWO' .2</span></p>
+<p class="rvps5"><span class="rvts139"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts139">JOIN P'TWO]' P'!' .2</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Try it yourself, and convince yourself that this works. We can call this a "simple join".</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Now, internally this is what is really happening:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps5"><span class="rvts6">A line with "TWO" at the end is found (the </span><span class="rvts40">]</span><span class="rvts6"> right bracket means "at the end")</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts6">The string "TWO" is deleted from the end of line 2</span></li>
+<li style="margin-left: 0px" class="rvps5"><span class="rvts6">The contents of line 2 (with the ending "TWO" removed) </span><span class="rvts40">plus</span><span class="rvts6"> the string "TWO" </span><span class="rvts40">plus</span><span class="rvts6"> the contents of line 3 are concatenated together to make a new line 2.</span></li>
+</ul></ul>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Why are we describing this in such excruciating detail? &nbsp;It all seems very obvious, even redundant, that it works this way. Well, not entirely. The point is, we can use something for the "middle" part of this concatenation process </span><span class="rvts40">other than</span><span class="rvts6"> the string that is found.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Here, we are going to join lines 2 and 3 again. But, instead of merely joining them, the string "TWO" is going to be replaced by "222". When you understand the process above for a "simple join", joins that are not as simple will make sense to you.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 03.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: &nbsp;As you can see, the string "TWO" that was found by the first operand of JOIN is replaced by "222" instead of being merely repeated. If you like, you can call this a "replacement join" if you want a fancy term for it.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 03B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example14:"></a>
+<span class="rvts40">Example 14: Left join with dash inserted</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">In the file below, line 2 is joined to the end of line 1, even though line 1 is not within the line-control-range specified on the command. This is because the leading P'[' code on the search string defines a left-side alignment, and left-sided </span><span class="rvts40">JOIN</span><span class="rvts6">. For a left-sign join, when the first line of the line range is matched by the </span><span class="rvts40">JOIN</span><span class="rvts6"> find string, a join takes place between the first line of the line range and the line which precedes it (if one exists). In this example, that means that line 2, the beginning of the line range .2 .3, will be joined to the line that precedes is, which is line 1.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">In the find-picture, the </span><span class="rvts40">=</span><span class="rvts6"> equal sign successively matches to the first character of each line, which is, in order, </span><span class="rvts40">O</span><span class="rvts6">, </span><span class="rvts40">T</span><span class="rvts6"> then </span><span class="rvts40">T</span><span class="rvts6"> again. The change string first inserts a </span><span class="rvts139">-</span><span class="rvts6"> minus sign, then repeats the character matched by the find-string (</span><span class="rvts40">O</span><span class="rvts6">, </span><span class="rvts40">T</span><span class="rvts6"> then </span><span class="rvts40">T</span><span class="rvts6"> again), and then finally it joins the lines.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">A left-side join joins to the line before it, whereas a right-side join joins to the line after it. So, in this case, line 2 is left-joined to line 1, then line 3 is left-joined to line 1.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 04.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: The lines in the line range are joined together with dashes between them.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 04B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example15:"></a>
+<span class="rvts40">Example 15: Right join with space between</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Assume in the file below that lines 1-3 are trimmed of all trailing blanks. This is a necessary condition for this example, and can be enforced with a TR line command. The change string includes a '</span><span class="rvts139">;</span><span class="rvts6">' semicolon to restore the one being matched against, and a blank for readability. Note that the join process consumes the empty line 4, because we are doing a right-join here.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 05.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: The four lines are joined into one. Because line 3 is joined with line 4, and </span><span class="rvts139">'; '</span><span class="rvts6"> is inserted between them, and line 4 was a zero-length line, line 1 of the result will have one trailing blank on the end, inserted there as part of the </span><span class="rvts139">'; '</span><span class="rvts6"> change string.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 05B.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps4"><a name="Example16:"></a>
+<span class="rvts40">Example 16: Right join without space between</span></p>
+<p class="rvps4"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Here, we are joining together 3 lines into one with no spaces between. This action consumes line 4. The JOIN find Picture</span><span class="rvts139"> P'=]' </span><span class="rvts6">here matches the last character of each line, which is </span><span class="rvts40">C</span><span class="rvts6">, then </span><span class="rvts40">c</span><span class="rvts6">, then </span><span class="rvts40">c</span><span class="rvts6"> again. The change Picture of</span><span class="rvts139"> P'=' </span><span class="rvts6">replaces each </span><span class="rvts40">C</span><span class="rvts6"> or </span><span class="rvts40">c</span><span class="rvts6"> "with itself".</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 06.jpg"></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><span class="rvts6">Result: The three lines are joined together as one, and the blank line 4 has disappeared.</span></p>
+<p class="rvps5"><span class="rvts6"><br/></span></p>
+<p class="rvps5"><img alt="" style="padding : 1px;" src="lib/Join 06B.jpg"></p>
+<p class="rvps5" style="page-break-before: always;"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+

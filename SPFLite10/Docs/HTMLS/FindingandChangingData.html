@@ -1,0 +1,781 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Finding and Changing Data</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finding and Changing Data">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Finding and Changing Data" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="SPFLite - V10.1.8351                2018-12-16" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 300px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 300px} body.md-nav-expanded header { padding-left: 314px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>SPFLite - V10.1.8351                2018-12-16</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="FindingandChangingData"
+		  data-hnd-context="31"
+		  data-hnd-title="Finding and Changing Data"
+		>
+            
+
+            <a id="main-content"></a>
+
+            <h2>Finding and Changing Data</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts11">Contents of Article</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><a class="rvts45" href="FindingandChangingData.html#Introduction">Introduction</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#SpecifyingtheSearchString">Specifying the Search String</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#Simplestring">Simple string</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#DelimitedString">Delimited String</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#PictureStringandFormatString">Picture String and Format String</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#RegularExpressionString">Regular Expression String</a></p>
+<p class="rvps5"><span class="rvts134">Mapping Expression String</span></p>
+<p class="rvps5"><a class="rvts133" href="FindingandChangingData.html#MacroControlledStringChange">Macro Controlled String Change</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#HexadecimalString">Hexadecimal String</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#CharacterandTextStrings">Character and Text Strings</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#EffectofCHANGECommandonColumn-DependentData">Effect of CHANGE Command on Column-Dependent Data</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#StartingPointandDirectionoftheSearch">Starting Point and Direction of the Search</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#ScrollAlignmentusingTOP">Scroll Alignment using TOP</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#QualifyingtheSearchStringContext">Qualifying the Search String Context</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#TruncationfollowingtheCHANGE">Truncation following the CHANGE</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#DelimitersusedtodetermineWord,PrefixandSuffixboundaries">Delimiters used to determine Word, Prefix and Suffix boundaries</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#Limitingthesearchtospecificcolumns">Limiting the search to specific columns</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#LimitingthesearchtoExcludedorNon-Excludedlines">Limiting the search to Excluded or Non-Excluded lines</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#LimitingthesearchtoUserornon-Userlines">Limiting the search to User or non-User lines</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#Limitingthesearchtospecifichighlightedstrings">Limiting the search to specific highlighted strings</a></p>
+<p class="rvps5"><a class="rvts45" href="FindingandChangingData.html#RepeatingtheFINDandCHANGEcommands">Repeating the FIND and CHANGE commands</a></p>
+<p class="rvps9"><a class="rvts45" href="FindingandChangingData.html#Case-ConformantChangeStrings">Case-Conformant Change Strings</a></p>
+<p class="rvps9"><a class="rvts45" href="FindingandChangingData.html#ChangingtheDefaultSearchContext">Changing the Default Search Context</a></p>
+<p class="rvps9"><a class="rvts45" href="FindingandChangingData.html#RestrictionsontheuseofLASTandPREVwithRegularExpressions">Restrictions on the use of LAST and PREV with Regular Expressions</a></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><a name="Introduction"></a>
+<span class="rvts11">Introduction</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><a class="rvts32" href="FINDFindaCharacterString.html">FIND</a><span class="rvts12">, &nbsp;and </span><a class="rvts32" href="CHANGE.html">CHANGE</a><span class="rvts12">, (and the negative version </span><a class="rvts32" href="NFIND.html">NFIND</a><span class="rvts12">) allow you to find a specified search string, and /or change one search string to another based on &nbsp;a specified search string. These commands provide powerful editing functions because they operate on a complete file rather than on a single line. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The characteristics of each command follow:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<div class="rvps5"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="212" style="padding: 1px;"><p class="rvps5"><a class="rvts122" href="FINDFindaCharacterString.html">FIND</a></p>
+</td>
+<td width="762" style="padding: 1px;"><p class="rvps5"><span class="rvts12">Searches for the specified string and moves the cursor (scrolling if necessary) to the first occurrence of the search string.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="212" style="padding: 1px;"><p class="rvps5"><a class="rvts122" href="CHANGE.html">CHANGE</a></p>
+</td>
+<td width="762" style="padding: 1px;"><p class="rvps5"><span class="rvts12">Causes the same effect as </span><a class="rvts32" href="FINDFindaCharacterString.html">FIND</a><span class="rvts12">, but it also has a second string operand (string-2). During a search, whenever string-1 is found, the editor replaces that string with string-2. Data to the right is shifted, if necessary.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="212" style="padding: 1px;"><p class="rvps5"><a class="rvts124" href="NFIND.html">NFIND</a></p>
+</td>
+<td width="762" style="padding: 1px;"><p class="rvps5"><span class="rvts12">Is like the </span><a class="rvts32" href="FINDFindaCharacterString.html">FIND</a><span class="rvts125"> </span><span class="rvts119">command except it searches for text lines which do </span><span class="rvts126">not</span><span class="rvts119"> contain the specified search string. Because the search string itself is </span><span class="rvts126">not present,</span><span class="rvts119"> </span><span class="rvts126">NFIND</span><span class="rvts119"> only looks for </span><span class="rvts128">lines</span><span class="rvts119"> which do not have the string, and only whole lines are found.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts123"><br/></span></p>
+<p class="rvps4"><a name="SpecifyingtheSearchString"></a>
+<span class="rvts11">Specifying the Search String</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The primary control for any search is the search string, because it represents the value for which you are looking. Two operands, string-1 and string-2, are required for the </span><a class="rvts32" href="CHANGE.html">CHANGE</a><span class="rvts12"> command to specify the replacement value of the string once the search string is found. The rules for specifying string-1 and string-2 are mostly the same, except that if you type a single asterisk for either one, the previous value from the previous </span><span class="rvts11">FIND</span><span class="rvts12"> or </span><span class="rvts11">CHANGE</span><span class="rvts12"> command is used again. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite allows you to specify the following kinds of strings: &nbsp;</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><a name="Simplestring"></a>
+<span class="rvts11">Simple string</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any series of characters not starting or ending with a single quote ( ' ), accent quote ( ` ) &nbsp;or double quote ( " ) and not containing any embedded blanks. A string which is also a command keyword, like </span><span class="rvts11">ALL</span><span class="rvts12">, cannot be specified as a simple string but must be quoted.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Note: Refer to the syntax description of each command for the complete list of reserved keywords for each command. SPFLite defines a number of extended keywords not used in ISPF, so if you are coming from a mainframe background, this could be important to you.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a name="DelimitedString"></a>
+<span class="rvts11">Delimited String</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any string enclosed (delimited) by either single quotes ( ' ), accent quotes ( ` ) &nbsp;or double quotes ( " ). The beginning and ending delimiters must be the same character. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Note: </span><span class="rvts11">SPFLite does not use quote-doubling</span><span class="rvts12"> to represent quotes as data, as some programming languages do. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">To use quotes as data, use one type of quote as the delimiters, and another type as the "quoted quote". Example:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<div class="rvps6"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="314" style="padding: 1px;"><p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">"It's correct"</span><span class="rvts12"> </span></p>
+</td>
+<td width="413" style="padding: 1px;"><p class="rvps2"><span class="rvts12">to quote a quote this way; this is standard IBM ISPF usage</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="314" style="padding: 1px;"><p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">`</span><span class="rvts54">It's also correct`</span><span class="rvts12"> </span></p>
+</td>
+<td width="413" style="padding: 1px;"><p class="rvps2"><span class="rvts12">to use accent quotes in SPFLite</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="314" style="padding: 1px;"><p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">'It isn''t correct'</span></p>
+</td>
+<td width="413" style="padding: 1px;"><p class="rvps2"><span class="rvts12">to use quote-doubling like this is </span><span class="rvts11">wrong</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a name="PictureStringandFormatString"></a>
+<span class="rvts11">Picture String and Format String</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any quoted string of characters, preceded by the character </span><span class="rvts11">P or F</span><span class="rvts12">, such as </span><span class="rvts54">P'&gt;&gt;&gt;###'</span><span class="rvts12">. The picture / format strings provide a powerful pattern matching ability to enable searching for data of certain types, rather than by specific actual characters. A Picture string can be the Find string or the Change string, but a Format can only be a Change string. A Format string is a Picture-like string that operates under slightly different rules than a Picture string does. The creation of Picture / Format strings is fully covered in </span><a class="rvts32" href="SpecifyingaPictureorFormatString.html">Specifying A Picture or Format String</a><span class="rvts12">.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">When a </span><span class="rvts11">FIND</span><span class="rvts12"> or </span><span class="rvts11">CHANGE</span><span class="rvts12"> search picture uses the special characters = or . and a character that cannot be displayed is found, that character's hexadecimal representation is used in the confirmation message that appears in the upper-right corner of the Edit or Browse screen. For example, the command</span><span class="rvts54"> FIND P'..' </span><span class="rvts12">could result in the message</span><span class="rvts54"> CHARS X'0415' found</span><span class="rvts12">. </span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a name="RegularExpressionString"></a>
+<span class="rvts11">Regular Expression String</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any quoted string of characters, preceded by the character </span><span class="rvts11">R</span><span class="rvts12">, such as </span><span class="rvts54">R'abc$'</span><span class="rvts12">. The regular expression string provides an industry standard syntax for specifying search strings. The creation of Regular Expressions is fully covered in </span><a class="rvts32" href="SpecifyingaPictureorFormatString.html">Specifying A Regular Expression</a><span class="rvts12">.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><a name="MacroControlledStringChange"></a>
+<span class="rvts64">Macro Controlled String Change</span></p>
+<p class="rvps6"><span class="rvts65"><br/></span></p>
+<p class="rvps6"><span class="rvts65">There are times when the format of the 'To' string is not a constant, nor a simple re-arrangement of the 'From' string data. e.g. it requires some form of logical reasoning to determine what the 'To' string should be. A </span><span class="rvts132">Macro Controlled String Change </span><span class="rvts65">is one which passes control to an SPFLite MACRO to determine what exactly the CHANGE should perform. </span></p>
+<p class="rvps6"><span class="rvts65"><br/></span></p>
+<p class="rvps6"><span class="rvts65">This is done by coding an </span><span class="rvts64">E </span><span class="rvts65">type literal, where the contents of the literal are the name (and possible operands) of an SPFLite MACRO. e.g. </span><span class="rvts103">E"MyMacroName aaa bbb" </span><span class="rvts65">which will cause the macro MyMacroName to be invoked with operands of aaa bbb. The macro is able to examine the found string and perform any needed logic of it's own before returning a value to CHANGE to use as the 'To' string.</span></p>
+<p class="rvps6"><span class="rvts65"><br/></span></p>
+<p class="rvps6"><span class="rvts65">This is more completely described in "</span><a class="rvts66" href="EMacros.html">Writing a MACRO for a macro controlled string CHANGE</a><span class="rvts65">"</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a name="HexadecimalString"></a>
+<span class="rvts11">Hexadecimal String</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any quoted string of Hex characters (0123456789ABCDEF), preceded by the character X, such as X'41CF'. The string must be an even number of valid hex characters. Note that when you look for Hex values, it is dependent on the encoding of the file. In ANSI, the digit 1 is X'31' while in EBCDIC it is X'F1'. Hex digits great than 9 can be in upper or lower case. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If you are looking for a known hex value, then hex strings are what you need. If you are looking for some unusual hex value in your data - but you don't know exactly what it is - there are a number of things you can do:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: square;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">You can put the editor in HEX mode, and view the data that way. If you can find the data somewhere, you will see the hex value for it.</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">If you can see the character (assuming it's displayable), you can bring up the ANSI popup window, and find it there, &nbsp;Then, just look at the 'edges' of the ANSI window that show the encoding, and add-up the row and column values to determine the hex value for it.</span></li>
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">If the character is considered "undisplayable" in "Picture" terms, you can try finding it with the </span><span class="rvts54">P'.'</span><span class="rvts12"> notation. Be aware that the roster of characters considered to be undisplayable might need to be configured or adjusted to your needs. See </span><a class="rvts33" href="OptionsGeneral.html">Options - General</a><span class="rvts12"> for more information. Be aware that the </span><span class="rvts54">P'.'</span><span class="rvts12"> notation finds characters that are </span><span class="rvts11">not</span><span class="rvts12"> in the "Normal" characters list in the General Options dialog, which may be opposite of what you expected - so be careful not to get confused by that.</span></li>
+</ul></ul></ul>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">For example, an ANSI encoded file, </span><span class="rvts49">FIND&nbsp;X'3132'</span><span class="rvts12"> would be equivalent to </span><span class="rvts49">FIND&nbsp;'12'</span></p>
+<p class="rvps11"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><a name="CharacterandTextStrings"></a>
+<span class="rvts11">Character and Text Strings</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Any quoted string of characters, preceded by the character </span><span class="rvts11">C</span><span class="rvts12">, such as C'conditions for' or </span><span class="rvts11">T</span><span class="rvts12">, such as T'some text'. &nbsp;</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">When using the normal simple or delimited strings (see above) , SPFLite uses your choice for the </span><a class="rvts32" href="CASE.html">CASE</a><span class="rvts12"> setting to determine whether simple literals are to be treated as case-sensitive or case-insensitive when performing comparisons. Explicitly specifying the </span><span class="rvts11">C</span><span class="rvts12"> or </span><span class="rvts11">T</span><span class="rvts12"> literal type will override the </span><a class="rvts32" href="CASE.html">CASE</a><span class="rvts12"> default for this individual command. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">The Character string literal is used to direct that a proper case sensitive comparison is to be made. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">For example, this command:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts48">find&nbsp;ALL&nbsp;'Condition&nbsp;No.&nbsp;1'</span></p>
+<p class="rvps11"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">would (assuming CASE = T) find all of the following:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts48">CONDITION NO. 1</span></p>
+<p class="rvps11"><span class="rvts48">Condition No. 1</span></p>
+<p class="rvps11"><span class="rvts48">condition no. 1</span></p>
+<p class="rvps11"><span class="rvts48">coNDitION nO. 1</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">however, the command:</span></p>
+<p class="rvps6"><span class="rvts48"><br/></span></p>
+<p class="rvps11"><span class="rvts48">find&nbsp;ALL&nbsp;C'Condition&nbsp;No.&nbsp;1'</span></p>
+<p class="rvps11"><span class="rvts47"><br/></span></p>
+<p class="rvps6"><span class="rvts37">would find only:</span></p>
+<p class="rvps6"><span class="rvts48"><br/></span></p>
+<p class="rvps11"><span class="rvts48">Condition&nbsp;No.&nbsp;1 &nbsp;</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps6"><span class="rvts11">Note: </span><span class="rvts12">You must use quotes if a string contains embedded blanks or commas, or if a string is the same as a command or keyword. You delimit strings with quotes, either ' singe-quotes, ` accent-quotes, or " double-quotes. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">For example, if you want to change the </span><span class="rvts51">next</span><span class="rvts12"> occurrence of </span><span class="rvts11">every one</span><span class="rvts12"> to </span><span class="rvts11">all</span><span class="rvts12">, type:</span></p>
+<p class="rvps6"><span class="rvts48"><br/></span></p>
+<p class="rvps11"><span class="rvts54">CHANGE&nbsp;'every&nbsp;one'&nbsp;'all'</span></p>
+<p class="rvps11"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts12">If you left off the quotes and did this:</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps11"><span class="rvts54">CHANGE&nbsp;every&nbsp;one&nbsp;all</span></p>
+<p class="rvps11"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts12">the </span><span class="rvts11">all</span><span class="rvts12"> would be taken as the command keyword </span><span class="rvts11">ALL</span><span class="rvts12">, and SPFLite would try to change </span><span class="rvts51">all</span><span class="rvts12"> occurrences of </span><span class="rvts11">every</span><span class="rvts12"> into </span><span class="rvts11">one</span><span class="rvts12">, which is not what you had in mind.</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="EffectofCHANGECommandonColumn-DependentData"></a>
+<span class="rvts11">Effect of CHANGE Command on Column-Dependent Data</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Historically, SPFLite has mimicked the processing of ISPF as to how the </span><span class="rvts11">CHANGE</span><span class="rvts12"> command handles data which is column oriented. This method of processing is data dependent as it varies depending of the presence or absence of columns within the data. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">This original processing is referred to as Data Shift mode and is still the default mode in SPFLite. </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Data Shift Mode (DS)</span></p>
+<p class="rvps6"><span class="rvts12">Column-dependent data is groups of non-blank source data separated by two or more blanks, such as a table, or source code with comments starting half-way across the line. When you use </span><a class="rvts32" href="CHANGE.html">CHANGE</a><span class="rvts12"> to change column-dependent data, the Editor attempts to maintain positional relationships. For instance, if you change a long word to a short word, the editor pads the short word with blanks. This padding maintains the column position of any data to the right of the change by preventing it from shifting left.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">When only one blank separates words, as in most text data, padding does not occur. Changing a long word to a short word causes data to the right of the change to shift left.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts12">Because Data Shifting is the default behavior, and is the way in which ISPF has always operated, you can think of </span><span class="rvts11">DS</span><span class="rvts12"> as meaning either Data Shift or Default Shift, whichever you find easier to remember.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Column Shift Mode (CS)</span></p>
+<p class="rvps6"><span class="rvts12">SPFLite has introduced the option of Column Shift mode to the </span><a class="rvts33" href="CHANGE.html">CHANGE</a><span class="rvts12"> command. In this mode, when the length of the from/to strings in a </span><a class="rvts33" href="CHANGE.html">CHANGE</a><span class="rvts12"> command are different, the presence or absence of columns in the data has no effect; the strings are changed and the data to the right of the change shifts left or right accordingly.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The current mode in which SPFLite is operating is associated and retained as another file Profile property, and will be displayed in the </span><a class="rvts33" href="StatusBarContents.html">Status Bar</a><span class="rvts12"> at the bottom of the screen. The default shift mode for a Profile can be changed at any time with a </span><span class="rvts11">CHANGE DS</span><span class="rvts12"> or </span><span class="rvts11">CHANGE CS</span><span class="rvts12"> command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">As well, the shift mode for an individual </span><a class="rvts33" href="CHANGE.html">CHANGE</a><span class="rvts12"> command can be explicitly specified by adding a </span><a class="rvts33" href="CHANGE.html">CS</a><span class="rvts12"> or </span><a class="rvts33" href="CHANGE.html">DS</a><span class="rvts12"> operand to the </span><a class="rvts33" href="CHANGE.html">CHANGE</a><span class="rvts12"> command.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="StartingPointandDirectionoftheSearch"></a>
+<span class="rvts11">Starting Point and Direction of the Search </span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">To control the starting point and direction of the search, use one of the following operands. SPFLite sometimes describes these keywords as </span><span class="rvts51">placement</span><span class="rvts12"> operands, since they describe the place where the search starts and the place toward which it is going.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<div class="rvps5"><table width="100%" border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">NEXT</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Starts at the first position after the current cursor location and searches ahead to find the next occurrence of string-1. </span><span class="rvts11">NEXT</span><span class="rvts12"> is the default and is generally not specified.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">ALL</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Starts at the top of the data and searches ahead to find all occurrences of string-1. When complete, a message is issued stating the number of occurrences found. If you use this operand with </span><span class="rvts11">CHANGE</span><span class="rvts12">, the lines changed are marked with ==CHG&gt; flag. The status of these lines can be changed to normal by </span><span class="rvts11">RESET</span><span class="rvts12">. When used with </span><span class="rvts11">FIND</span><span class="rvts12"> then </span><span class="rvts51">all</span><span class="rvts12"> occurrences of the string will be hi-lighted in the text.</span></p>
+<p class="rvps4"><span class="rvts12"> </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">FIRST</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Starts at the top of the data and searches ahead to find the first occurrence of string-1.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">LAST</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Starts at the bottom of the data and searches backward to find the last occurrence of string-1.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">PREV</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps4"><span class="rvts12">Starts at the current cursor location and searches backward to find the previous occurrence of string-1.</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">LEFT</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A </span><span class="rvts11">LEFT</span><span class="rvts12"> operand causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the </span><span class="rvts11">left-most</span><span class="rvts12"> occurrence of search-string is found/changed, and any other instances on that same line are ignored.</span></p>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="166" style="padding: 1px;"><p class="rvps4"><span class="rvts11">RIGHT</span></p>
+</td>
+<td width="922" style="padding: 1px;"><p class="rvps2"><span class="rvts12">A </span><span class="rvts11">RIGHT</span><span class="rvts12"> operand causes the search-string to be found at most once in any given line. Where the search-string occurs more than once in the same line, only the </span><span class="rvts11">right-most</span><span class="rvts12"> occurrence of search-string is found/changed, and any other instances on that same line are ignored.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you specify </span><span class="rvts11">ALL</span><span class="rvts12"> or </span><span class="rvts11">FIRST</span><span class="rvts12">, the direction of the search is forward. When you press the assigned function keys, the </span><a class="rvts32" href="RFIND.html">RFIND</a><span class="rvts12"> or </span><a class="rvts32" href="RCHANGE.html">RCHANGE</a><span class="rvts12"> commands find or change the next occurrence of the designated string. If you specify </span><span class="rvts11">LAST</span><span class="rvts12"> or </span><span class="rvts11">PREV</span><span class="rvts12">, the direction of the search is backward. When you specify those operands, the editor finds or changes the previous occurrence of the string. &nbsp;The search proceeds until the editor finds one or all occurrences of string-1, or the end of data.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When </span><span class="rvts36">ALL</span><span class="rvts35"> is specified, the </span><span class="rvts36">FIND</span><span class="rvts35"> and </span><span class="rvts36">CHANGE</span><span class="rvts35"> commands will report the </span><span class="rvts36">number of lines</span><span class="rvts35"> in which a string is found or changed, in addition to the </span><span class="rvts36">number of times</span><span class="rvts35"> the string itself is found.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you omit the </span><span class="rvts11">ALL</span><span class="rvts12"> operand on the </span><span class="rvts11">CHANGE</span><span class="rvts12"> command, the editor searches only for the first occurrence of string-1 after the current cursor location. If the cursor is not in the data area of the panel, the search starts at the beginning of the first line currently displayed. Scrolling is performed, if necessary, to bring the string into view.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Note: The </span><span class="rvts11">SPLIT</span><span class="rvts12"> command allows an extended syntax of</span><span class="rvts11"> ALL FIRST</span><span class="rvts12"> and </span><span class="rvts11">ALL LAST</span><span class="rvts12">. See </span><a class="rvts33" href="SPLIT.html">SPLIT - Split Lines Using Find/Change Strings</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="ScrollAlignmentusingTOP"></a>
+<span class="rvts11">Scroll Alignment using TOP</span></p>
+<p class="rvps4"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">When a command such as </span><span class="rvts11">FIND</span><span class="rvts12"> or </span><span class="rvts11">CHANGE</span><span class="rvts12"> finds successive lines on the same screen, SPFLite will "walk" down the screen by just repositioning the cursor, and will only scroll the screen when there are no more lines to be found on that same screen. If you include the word </span><span class="rvts11">TOP</span><span class="rvts12"> in your command, each time a successive line is found, the screen will be repositioned so that the found line appears on the top of the screen. This can be useful when scrolling through large files of repetitive fields, so that scrolling doesn't make the screen "jump around".</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can use the </span><span class="rvts11">TOP</span><span class="rvts12"> keyword on the commands </span><span class="rvts11">APPEND</span><span class="rvts12">, </span><span class="rvts11">CHANGE</span><span class="rvts12">, </span><span class="rvts11">COMPRESS</span><span class="rvts12">, </span><span class="rvts11">DELETE</span><span class="rvts12">, </span><span class="rvts11">EXCLUDE</span><span class="rvts12">, </span><span class="rvts11">FIND</span><span class="rvts12">, </span><span class="rvts11">FLIP</span><span class="rvts12">, </span><span class="rvts11">JOIN</span><span class="rvts12">, </span><span class="rvts11">LINE</span><span class="rvts12">, </span><span class="rvts11">LOCATE</span><span class="rvts12">, </span><span class="rvts11">NDELETE</span><span class="rvts12">, </span><span class="rvts11">NEXCLUDE</span><span class="rvts12">, </span><span class="rvts11">NFIND</span><span class="rvts12">, </span><span class="rvts11">NFLIP</span><span class="rvts12">, </span><span class="rvts11">NREVERT</span><span class="rvts12">, </span><span class="rvts11">NSHOW</span><span class="rvts12">, </span><span class="rvts11">NULINE</span><span class="rvts12">, </span><span class="rvts11">PREPEND</span><span class="rvts12">, </span><span class="rvts11">REVERT</span><span class="rvts12">, </span><span class="rvts11">SHOW</span><span class="rvts12">, </span><span class="rvts11">SPLIT</span><span class="rvts12">, </span><span class="rvts11">TAG</span><span class="rvts12"> and </span><span class="rvts11">ULINE</span><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="QualifyingtheSearchStringContext"></a>
+<span class="rvts11">Qualifying the Search String Context</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can specify the "search context" of string-1 by using the operands </span><span class="rvts11">PREFIX</span><span class="rvts12">, </span><span class="rvts11">SUFFIX</span><span class="rvts12">, </span><span class="rvts11">WORD</span><span class="rvts12"> or </span><span class="rvts11">CHARS</span><span class="rvts12">. The search context defines "where" or "under what circumstances" a given search string is considered to be "found".</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">PREFIX</span><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">Locates string-1 at the beginning of a word. String-1 must be at the beginning of the line, or must be preceded by a non-</span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> character. </span><span class="rvts11">PREFIX</span><span class="rvts12"> may be abbreviated as </span><span class="rvts11">PRE</span><span class="rvts12"> or </span><span class="rvts11">PFX</span><span class="rvts12">.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">SUFFIX</span><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">Locates string-1 at the end of a word. String-1 must be at the end of the line, or must be followed by a non-</span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> character </span><span class="rvts11">SUFFIX</span><span class="rvts12"> may be abbreviated as </span><span class="rvts11">SUF</span><span class="rvts12"> or </span><span class="rvts11">SFX</span><span class="rvts12">.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">WORD</span><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">A </span><span class="rvts11">WORD</span><span class="rvts12"> string must follow the rules for </span><span class="rvts11">PREFIX</span><span class="rvts12"> and </span><span class="rvts11">SUFFIX</span><span class="rvts12"> at the same time: It must be at the beginning of the line, or must be preceded by a non-</span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> character, </span><span class="rvts11">and</span><span class="rvts12"> it must be at the end of the line, or must be followed by a non-</span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> character.</span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">CHARS</span><span class="rvts12"> </span></p>
+<p class="rvps6"><span class="rvts12">String-1 is searched for as-is without regard to what precedes or follows it. </span></p>
+<p class="rvps6"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">CHARS</span><span class="rvts12"> is the default, and so the keyword </span><span class="rvts11">CHARS</span><span class="rvts12"> is not normally used. </span><span class="rvts11">CHARS</span><span class="rvts12"> is allowed primarily for ISPF compatibility purposes, and when the default has been changed. This default can be configured to either </span><span class="rvts11">CHARS</span><span class="rvts12"> or </span><span class="rvts11">WORD</span><span class="rvts12"> in the Global Options dialog. See </span><a class="rvts33" href="OptionsGeneral.html">Options - General</a><span class="rvts12"> for more information.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">In the following examples, the editor would find the noted strings only:</span></p>
+<p class="rvps5"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts49">FIND&nbsp;'DO'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">NT&nbsp;A</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;A</span><span class="rvts129">DO</span><span class="rvts49">PT&nbsp;'</span><span class="rvts129">DO</span><span class="rvts49">'&nbsp;(</span><span class="rvts129">DO</span><span class="rvts49">NT)&nbsp;&nbsp;&nbsp;&nbsp;Finds&nbsp;all&nbsp;of&nbsp;them</span></p>
+<p class="rvps6"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts49">FIND&nbsp;'DO'&nbsp;CHARS&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">NT&nbsp;A</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;A</span><span class="rvts129">DO</span><span class="rvts49">PT&nbsp;'</span><span class="rvts129">DO</span><span class="rvts49">'&nbsp;(</span><span class="rvts129">DO</span><span class="rvts49">NT)&nbsp;&nbsp;&nbsp;&nbsp;SAME THING - Finds&nbsp;all&nbsp;of&nbsp;them</span></p>
+<p class="rvps6"><span class="rvts54"><br/></span></p>
+<p class="rvps6"><span class="rvts49">FIND&nbsp;PREFIX&nbsp;'DO'&nbsp;&nbsp;&nbsp;-&nbsp;DO&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">NT&nbsp;ADO&nbsp;ADOPT&nbsp;'DO'&nbsp;(</span><span class="rvts129">DO</span><span class="rvts49">NT)&nbsp;&nbsp;&nbsp;&nbsp;Finds&nbsp;DONT&nbsp;(DONT)</span></p>
+<p class="rvps6"><span class="rvts49"><br/></span></p>
+<p class="rvps6"><span class="rvts49">FIND&nbsp;SUFFIX&nbsp;'DO'&nbsp;&nbsp;&nbsp;-&nbsp;DO&nbsp;DONT&nbsp;A</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;ADOPT&nbsp;'DO'&nbsp;(DONT)&nbsp;&nbsp;&nbsp;&nbsp;Finds&nbsp;ADO</span></p>
+<p class="rvps6"><span class="rvts49"><br/></span></p>
+<p class="rvps6"><span class="rvts49">FIND&nbsp;WORD&nbsp;'DO'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</span><span class="rvts129">DO</span><span class="rvts49">&nbsp;DONT&nbsp;ADO&nbsp;ADOPT&nbsp;'</span><span class="rvts129">DO</span><span class="rvts49">'&nbsp;(DONT)&nbsp;&nbsp;&nbsp;&nbsp;Finds&nbsp;DO&nbsp;and 'DO' </span></p>
+<p class="rvps6"><span class="rvts49"><br/></span></p>
+<p class="rvps4"><a name="TruncationfollowingtheCHANGE"></a>
+<span class="rvts11">Truncation following the CHANGE</span></p>
+<p class="rvps4"><span class="rvts49"><br/></span></p>
+<p class="rvps5"><span class="rvts12">By specifying the keyword </span><span class="rvts11">TRUNC</span><span class="rvts12"> in the </span><span class="rvts11">CHANGE</span><span class="rvts12"> command, you can request that all line data </span><span class="rvts11">following</span><span class="rvts12"> the new change string be deleted from the line. Because </span><span class="rvts11">TRUNC</span><span class="rvts12"> is a new reserved word, you would have to quote this word if you ever wanted to use it as a normal string value in </span><span class="rvts11">CHANGE</span><span class="rvts12"> command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The following example changes the characters </span><span class="rvts48">"END)"</span><span class="rvts12"> to </span><span class="rvts48">"END."</span><span class="rvts12"> and deletes all remaining characters on the line.</span></p>
+<p class="rvps74"><span class="rvts54">CHANGE "END)" &nbsp;"END." &nbsp;TRUNC</span></p>
+<p class="rvps73"><span class="rvts11"><br/></span></p>
+<p class="rvps73"><span class="rvts12">which would alter the line</span></p>
+<p class="rvps74"><span class="rvts54">COMING TO AN END) BUT NOT BEFORE</span></p>
+<p class="rvps73"><span class="rvts54"><br/></span></p>
+<p class="rvps73"><span class="rvts12">into</span></p>
+<p class="rvps74"><span class="rvts54">COMING TO AN END.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can use truncation to truncation all characters </span><span class="rvts50">including</span><span class="rvts12"> the search string by making the change string of length zero:</span></p>
+<p class="rvps74"><span class="rvts54">CHANGE ")" &nbsp;"" &nbsp;TRUNC</span></p>
+<p class="rvps73"><span class="rvts12"><br/></span></p>
+<p class="rvps73"><span class="rvts12">which would alter the line</span></p>
+<p class="rvps74"><span class="rvts54">COMING TO AN END) BUT NOT BEFORE&nbsp;</span><span class="rvts49"> </span></p>
+<p class="rvps73"><span class="rvts12"><br/></span></p>
+<p class="rvps73"><span class="rvts12">into</span></p>
+<p class="rvps74"><span class="rvts54">COMING TO AN END</span></p>
+<p class="rvps72"><span class="rvts49"><br/></span></p>
+<p class="rvps4"><a name="DelimitersusedtodetermineWord,PrefixandSuffixboundaries"></a>
+<span class="rvts11">Delimiters used to determine Word, Prefix and Suffix boundaries</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">In order to determine what a 'word', 'prefix' or 'suffix' actually is, SPFLite uses a set of characters to determine what a valid WORD is. The characters that make up a WORD are specified in the Profile's </span><a class="rvts33" href="WORD.html">WORD</a><span class="rvts12"> control string. These default characters are:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts54">A-Z a-z 0-9</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">However, some computer languages allow other characters to be used in variable names (such as the _ underscore character in many languages, the </span><span class="rvts54">-</span><span class="rvts12"> dash character in COBOL programs, or the </span><span class="rvts11">$</span><span class="rvts12">, </span><span class="rvts11">#</span><span class="rvts12"> and </span><span class="rvts11">@</span><span class="rvts12"> in PL/1). This can cause </span><span class="rvts11">word</span><span class="rvts12"> searches to find strings which </span><span class="rvts50">you</span><span class="rvts12"> don't consider to be a "word", or it might </span><span class="rvts50">fail</span><span class="rvts12"> to find words you </span><span class="rvts50">do</span><span class="rvts12"> want to be words. SPFLite allows you to modify the list of valid WORD characters. The modified list you create will be associated with the file type being edited, and will be saved and used in future edit sessions of this file type automatically. See the WORD line command, and &nbsp;</span><a class="rvts33" href="WorkingwithWordandDelimiterChara.html">Working with Word and Delimiter Characters</a><span class="rvts12"> for details on how to change these characters.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts51">Note that the space character is always assumed to a delimiter. This assumption cannot be changed.</span></p>
+<p class="rvps5"><span class="rvts51"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If </span><span class="rvts11">you</span><span class="rvts12"> are the one looking for a string, and you consider it to be a "word", how could SPFLite not treat it as a word and find it? &nbsp;For example, if you were looking for a word ABCD, and you said </span><span class="rvts54">FIND ABCD WORD</span><span class="rvts12">, it seems pretty straight-forward that if ABCD exists as a word, it would get found. However, what if you were looking for </span><span class="rvts11">any</span><span class="rvts12"> four-character word? &nbsp;If the word only had English letters, you could be pretty certain you'd find it with </span><span class="rvts54">FIND P'@@@@' WORD</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">But suppose it were a four-character string that might have an underscore or dash in it; what then? &nbsp;Just saying </span><span class="rvts54">FIND P'====' WORD</span><span class="rvts12"> won't work, because you would find </span><span class="rvts11">any</span><span class="rvts12"> four characters, as long as there were delimiters next to it, and that's not what you wanted. The data you found could be well-delimited </span><span class="rvts11">junk</span><span class="rvts12">. How do you solve this problem, and only find what you really want - and nothing else?</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">First, you modify the WORD lines so that your set of valid WORD characters is correct. That "expands" the definition of a "word character" and removes those characters as delimiters. For example, if you add the underscore to the WORD characters, then it will no longer be considered as a character that delimits a word.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Then, how can you tell SPFLite to only look for the characters that </span><span class="rvts11">you</span><span class="rvts12"> say are part of a special kind of "word" that you want? &nbsp;We could have changed how the @ picture works, but it's best not to tamper with that, so @ stays as-is, and only matches letters. Instead, SPFLite defines two extended picture code types:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">&amp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">defines any character in in the set of WORD characters</span></p>
+<p class="rvps5"><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">%</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">defines any character </span><span class="rvts11">not </span><span class="rvts12">in the set of WORD characters</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">So, if you want a four-character string of </span><span class="rvts11">your kind of words</span><span class="rvts12">, as defined by your settings of the WORD string, you would do this:</span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps4"><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts54">FIND P'&amp;&amp;&amp;&amp;' WORD</span></p>
+<p class="rvps4"><span class="rvts54"><br/></span></p>
+<p class="rvps5"><span class="rvts12">This works because WORD means a string delimited by </span><span class="rvts11">non</span><span class="rvts12">-WORD characters or the edges of a line, and the </span><span class="rvts11">&amp;</span><span class="rvts12"> picture means all characters which are </span><span class="rvts11">in</span><span class="rvts12"> in the WORD character list.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">What is nice about this is that the WORD characters are in the PROFILE, so whether you have ordinary text, C programs, COBOL programs, or some special-purpose data, you can customize each file type to exactly the definition of what a "word" means to best suits </span><span class="rvts11">your</span><span class="rvts12"> needs.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">Note:</span><span class="rvts12"> &nbsp;While </span><span class="rvts54">P'&amp;'</span><span class="rvts12"> can be used to find "your kind of words", SPFLite does not look more closely than that. So, there is no provision to search for things like "your kind of words in lower case only". That restriction only makes sense, because if you were to add special characters like </span><span class="rvts11">$</span><span class="rvts12">, </span><span class="rvts11">#</span><span class="rvts12"> or </span><span class="rvts11">@</span><span class="rvts12"> to the list of "word" characters, are they upper case or lower case? &nbsp;Ordinarily, the answer would be "neither", and since SPFLite doesn't know what your intentions are if it's other than that, it can't guess. If you really apply such fine distinctions to your data, you may need to write a programmable macro to inspect your data as needed.</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="Limitingthesearchtospecificcolumns"></a>
+<span class="rvts11">Limiting the search to specific columns</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The col-1 and col-2 operands allow you to search only a portion of each line, rather than the entire line. These operands, which are numbers separated by at least one blank, show the starting and ending columns for the search. The following rules apply:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">If you specify neither col-1 nor col-2, the search continues across all columns within the current boundary columns.</span></li>
+</ul></ul>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">If you specify col-1, the editor finds the string only if the string starts in the specified column.</span></li>
+</ul></ul>
+<p class="rvps12"><span class="rvts12"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps12"><span class="rvts12">If you specify both col-1 and col-2, the editor finds the string only if it is entirely within the specified columns.</span></li>
+</ul></ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="LimitingthesearchtoExcludedorNon-Excludedlines"></a>
+<span class="rvts11">Limiting the search to Excluded or Non-Excluded lines</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can limit the lines to be searched by using the </span><span class="rvts11">X</span><span class="rvts12"> or </span><span class="rvts11">NX</span><span class="rvts12"> operands:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">X</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">means search only excluded lines</span></p>
+<p class="rvps6"><span class="rvts11">NX</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">means search only unexcluded lines</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A number of commands also allow you to control the exclusion status of a line after it is found or changed, using the </span><span class="rvts11">MX</span><span class="rvts12"> (make excluded) or </span><span class="rvts11">DX</span><span class="rvts12"> (do not change exclusion status) keywords.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="LimitingthesearchtoUserornon-Userlines"></a>
+<span class="rvts11">Limiting the search to User or non-User lines</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can limit the lines to be searched by using the </span><span class="rvts11">U</span><span class="rvts12"> or </span><span class="rvts11">NU</span><span class="rvts12"> operands:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">U</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">means search only user lines</span></p>
+<p class="rvps6"><span class="rvts11">NU</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">means search only non-user lines</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">All data lines are either User lines (U lines) or non-User lines (also called V lines). A user line is marked by a vertical bar in the "gap column" to the right of the sequence number field. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">A line can be made a User line by the primary commands </span><span class="rvts11">ULINE</span><span class="rvts12"> and </span><span class="rvts11">NULINE</span><span class="rvts12"> and the line command </span><span class="rvts11">U</span><span class="rvts12">/</span><span class="rvts11">UU</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12">A line can be made a non-User line by the primary commands </span><span class="rvts11">REVERT</span><span class="rvts12"> and </span><span class="rvts11">NREVERT</span><span class="rvts12"> and the line command </span><span class="rvts11">V</span><span class="rvts12">/</span><span class="rvts11">VV</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps4"><a name="Limitingthesearchtospecifichighlightedstrings"></a>
+<span class="rvts11">Limiting the search to specific highlighted strings</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">You can request searches only locate strings that have previously been highlighted in specific colors. This is done via use of the color-selection-criteria keywords. These can be any of the names shown in </span><a class="rvts52" href="OptionsHiLites.html">"Options - Hi-Lites"</a><a class="rvts135" href="OptionsHiLites.html"> like </a><span class="rvts36">BLUE, GREEN, BLACK etc.</span><span class="rvts12">.. More details can be found in &nbsp;</span><a class="rvts33" href="ColorSelectionCriteriaSpecificat.html">"Color-Selection-Criteria-Specification"</a><span class="rvts12">.</span></p>
+<p class="rvps5"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><a name="RepeatingtheFINDandCHANGEcommands"></a>
+<span class="rvts11">Repeating the FIND and CHANGE commands</span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The easiest way to repeat </span><a class="rvts32" href="FINDFindaCharacterString.html">FIND</a><span class="rvts12">, and </span><a class="rvts32" href="CHANGE.html">CHANGE</a><span class="rvts12"> commands, without retyping them, is to assign those commands to function keys. There are already ISPF-compatible key-mapping defaults made at installation time to do this, using the </span><span class="rvts11">RFIND</span><span class="rvts12"> and </span><span class="rvts11">RCHANGE</span><span class="rvts12"> commands:</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps6"><span class="rvts11">F5</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">RFIND</span></p>
+<p class="rvps6"><span class="rvts11">F6</span><span class="rvts11"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts11">RCHANGE</span></p>
+<p class="rvps6"><span class="rvts11"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The search begins at the cursor. If the cursor has not moved since the last </span><a class="rvts32" href="find_findacharacterstring.htm">FIND</a><span class="rvts12">, or </span><a class="rvts32" href="change_changeadatastring.htm">CHANGE</a><span class="rvts12"> command, the search continues from the string that was just found. Instead of retyping string-1, you can type an * </span><span class="rvts11">asterisk</span><span class="rvts12"> to specify that you want to use </span><span class="rvts11">the last search string</span><span class="rvts12">. </span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">If you decide to type </span><a class="rvts32" href="rchange_repeatchange.htm">RCHANGE</a><span class="rvts12"> or </span><a class="rvts32" href="rfind_repeatthefindcomman.htm">RFIND</a><span class="rvts12"> on the Command line instead of using a function key, position the cursor at the desired starting location before pressing Enter. If you are searching for every string in a file, one at a time, from beginning to end, and you are using the mapped functions F5 and F6, the cursor will already be in the location you need. You would only have to reposition it if you have moved it through some type of editing action. (That's why most people use F5 and F6, for that very reason - it's easy and convenient.)</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">All these commands share the same string-1. Therefore:</span></p>
+<p class="rvps6"><span class="rvts54">FIND&nbsp;ABC</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">followed by:</span></p>
+<p class="rvps6"><span class="rvts54">CHANGE&nbsp;*&nbsp;XYZ</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">first shows you where ABC is, and then replaces it with XYZ. However, you can do this more easily by typing:</span></p>
+<p class="rvps6"><span class="rvts54">CHANGE&nbsp;ABC&nbsp;XYZ</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">Then press F5 to repeat </span><span class="rvts11">FIND</span><span class="rvts12">. The editor finds the next occurrence of ABC. You can either press F5 to find the next ABC, or F6 to change it. Continue to press F5 to find remaining occurrences of the string.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">The previous value of a search string, specified by an asterisk or by use of </span><a class="rvts32" href="RFIND.html">RFIND</a><span class="rvts12"> or </span><a class="rvts32" href="RCHANGE.html">RCHANGE</a><span class="rvts12">, is retained until you end your editing session.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts12">SPFLite adds a new command </span><span class="rvts11">RLOCFIND</span><span class="rvts12">, which repeats the last </span><span class="rvts11">LOCATE</span><span class="rvts12"> or </span><span class="rvts11">FIND</span><span class="rvts12"> command, whichever has been done most recently. For many users, it will be more productive to assign </span><span class="rvts11">RLOCFIND</span><span class="rvts12"> to F5, which can now serve both as a repeat-find (</span><span class="rvts11">RFIND</span><span class="rvts12">) and as a repeat-locate (</span><span class="rvts11">RLOC</span><span class="rvts12">) command.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps5"><span class="rvts11">RFIND</span><span class="rvts12">, </span><span class="rvts11">RLOCFIND</span><span class="rvts12"> and </span><span class="rvts11">RCHANGE</span><span class="rvts12"> also apply to the </span><span class="rvts11">SPLIT</span><span class="rvts12"> and </span><span class="rvts11">JOIN</span><span class="rvts12"> primary commands, and as well applies to the </span><span class="rvts11">DELETE</span><span class="rvts12"> primary command, when </span><span class="rvts11">PREV</span><span class="rvts12"> or </span><span class="rvts11">NEXT</span><span class="rvts12"> is specified, or when NEXT is implied by the absence of other keywords.</span></p>
+<p class="rvps5"><span class="rvts12"><br/></span></p>
+<p class="rvps2"><a name="Case-ConformantChangeStrings"></a>
+<span class="rvts36">Case-Conformant Change Strings</span></p>
+<p class="rvps2"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When you do a change with search string having a type code of T, it matches letters in a case-insensitive way. So, if you say,</span></p>
+<p class="rvps9"><span class="rvts89"><br/></span></p>
+<p class="rvps10"><span class="rvts89">CHANGE WORD T'four' 'nine'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">it will match on the word “four” no matter how it is capitalized. However, regardless of the original string, the result of this </span><span class="rvts36">CHANGE</span><span class="rvts35"> will always be capitalized as “</span><span class="rvts36">nine</span><span class="rvts35">”:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">four</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">nine</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Four</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">nine</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">FOUR</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">nine</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">and so, the result fails to </span><span class="rvts85">conform</span><span class="rvts35"> to the character-casing of the original string.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">With </span><span class="rvts85">case-conformant changes, </span><span class="rvts35">you can make the result string match the pattern of upper and lower casing that existed in the original string. That is, </span><span class="rvts36">now</span><span class="rvts35"> you can make </span><span class="rvts85">this</span><span class="rvts35"> happen:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">four</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">nine</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Four</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">Nine</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">FOUR</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">NINE</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">How? &nbsp;Just put a type code of T on the change string, like this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">CHANGE WORD T'four' T'nine'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">That's great if the two strings are the same size, but what if they're not?</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">In the easy case, when the change string is </span><span class="rvts85">shorter</span><span class="rvts35">, the pattern of upper and lower casing applies for as long as the change string is. If you change a 4-letter word into a 3-letter word, the first 3 positions of the search string are used as the “capitalization pattern”, like this:</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">CHANGE WORD T'four' T'two'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">four</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">two</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Four</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">Two</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">FOUR</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">TWO</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the change string is </span><span class="rvts85">longer</span><span class="rvts35">, it's a little more complicated. The pattern of upper and lower casing applies for as long as the search string is. Beyond that point, the case of the last character in the search string is used as a guide to </span><span class="rvts85">propagate</span><span class="rvts35"> the casing of the result string from that point forward. (This "remaining result string" could be called the 'tail' of the result string.)</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts35">What happens if the last character of the search string isn't a letter? &nbsp;SPFLite uses the following policy to handle this:</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">Characters of the search string are scanned from right to left, starting with the last character, until a letter is found or the beginning of the string is reached. </span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">If a letter is found by this scan, the case of that letter is used as a guide to </span><span class="rvts85">propagate</span><span class="rvts35"> the casing of the tail of the result string.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">If a letter is not found by this scan, the casing of the tail of the result string is copied in lower case.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts86"><br/></span></p>
+<p class="rvps10"><span class="rvts35">Is that a good choice? &nbsp;It's a toss-up. In designing this, five or six </span><span class="rvts85">different</span><span class="rvts35"> possible approaches were considered, and many were hard to explain and harder to implement. For most users, the propagation rules are about as good as any. For changing one English word to another, it works well. For changing strings like alphanumeric-coded values (such as part numbers) it may or may not be the answer for everyone. See the discussion below in case these rules are not what you need.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you change a 4-letter word into a 5-letter word, the first 3 positions of the search string are used as the capitalization pattern of the first 3 positions of the change string, and position 4 of the search string is used as the pattern for everything else:</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps10"><span class="rvts89">CHANGE WORD T'four' T'seven'</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">four</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">seven</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">Four</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">Seven</span></p>
+<p class="rvps9"><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts36">FOUR</span><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">becomes &nbsp;</span><span class="rvts36">SEVEN</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps9"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Here, the R of FOU</span><span class="rvts127">R</span><span class="rvts35"> is used as the pattern for positions 4 and 5 of the string SEV</span><span class="rvts127">EN</span><span class="rvts35">. For the first two, the R is lower case, so E and N become lower case. In the last one, the R is upper case, so the E and N become upper case.</span></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">A few final notes:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">It is not a requirement that the search string have a type code of T, if </span><span class="rvts36">CASE T</span><span class="rvts35"> is in effect. But, if you have a type code of </span><span class="rvts36">C</span><span class="rvts35"> or</span><span class="rvts36"> CASE </span><span class="rvts35">C is in effect, you will always find the same string, cased in the same way. You </span><span class="rvts85">could</span><span class="rvts35"> do that, but there wouldn't be much point to it.</span></li>
+</ul></ul>
+<p class="rvps13"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps13"><span class="rvts35">As you might expect, the case of the actual CHANGE command operands for case-conformant changes is not significant. That means,</span></li>
+</ul></ul>
+<p class="rvps76"><span class="rvts89"><br/></span></p>
+<p class="rvps75"><span class="rvts89">CHANGE WORD T'four' T'seven'</span></p>
+<p class="rvps13"><span class="rvts35">and</span></p>
+<p class="rvps71"><span class="rvts89">CHANGE WORD T'FOUR' T'SEVEN'</span></p>
+<p class="rvps10"><span class="rvts98"><br/></span></p>
+<p class="rvps13"><span class="rvts35">will work exactly the same way. And, of course, the T itself is case-insensitive.</span></p>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps71"><span class="rvts35">When </span><span class="rvts36">CASE T</span><span class="rvts35"> is in effect, it implies type code T on the </span><span class="rvts85">search</span><span class="rvts35"> string, unless you explicitly say otherwise. For the </span><span class="rvts85">change</span><span class="rvts35"> string, type code </span><span class="rvts36">T</span><span class="rvts35"> (and thus, a case-conformant change) is </span><span class="rvts85">never</span><span class="rvts35"> assumed, even when </span><span class="rvts36">CASE T</span><span class="rvts35"> is in effect. You have to put the </span><span class="rvts36">T </span><span class="rvts35">code on the change string yourself to get a case-conformant change.</span></li>
+</ul></ul>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You might ask, what if SPFLite's rules for Case-Conformant strings aren't good enough for my needs? &nbsp;You basically have these choices:</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">Use SPFLite's Case Conformant strings for what they do, and if you need to, 'correct' any improper casing after the fact. That might be a good choice if the </span><span class="rvts36">CHANGE</span><span class="rvts35"> did what you wanted most of the time, and you just had to "touch up" a few exceptions.</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;"><ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+<li style="margin-left: 0px" class="rvps10"><span class="rvts35">If Case Conformant strings do something you really dislike, you can </span><span class="rvts36">UNDO</span><span class="rvts35"> the change or </span><span class="rvts36">CANCEL</span><span class="rvts35"> the edit session and try something else</span></li>
+</ul></ul>
+<p class="rvps10"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="ChangingtheDefaultSearchContext"></a>
+<span class="rvts36">Changing the Default Search Context</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a </span><span class="rvts36">FIND</span><span class="rvts35">, </span><span class="rvts36">CHANGE</span><span class="rvts35"> or similar command is used, and none of the operands </span><span class="rvts36">CHARS</span><span class="rvts35">, </span><span class="rvts36">WORD</span><span class="rvts35">, </span><span class="rvts36">PREFIX</span><span class="rvts35"> or </span><span class="rvts36">SUFFIX</span><span class="rvts35"> are specified, the </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> command will normally assume that the string being searched for is a CHAR string; that is, any delimiters next to the search string are ignored. This is the standard way SPFLite and ISPF look for strings.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you wish to look for </span><span class="rvts36">WORD</span><span class="rvts35"> strings, that is, strings with a delimiter on each side, you normally would specify the </span><span class="rvts36">WORD</span><span class="rvts35"> operand, as in </span><span class="rvts36">FIND ABC</span><span class="rvts35"> </span><span class="rvts36">WORD</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">You are now able to set the default search context to either </span><span class="rvts36">WORDS</span><span class="rvts35"> or </span><span class="rvts36">CHARS</span><span class="rvts35">. When set to </span><span class="rvts36">WORDS</span><span class="rvts35"> mode, every </span><span class="rvts36">FIND</span><span class="rvts35">, </span><span class="rvts36">CHANGE</span><span class="rvts35"> or similar command that can take the </span><span class="rvts36">WORD</span><span class="rvts35"> operand will assume it has already been set. </span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When the default search context is set to </span><span class="rvts36">WORDS</span><span class="rvts35">, a </span><span class="rvts36">W</span><span class="rvts35"> will appear the C/T indicator on the status line that shows the current CASE C/T mode. Thus, depending on the CASE mode, the indicator will show either </span><span class="rvts36">C&nbsp; W</span><span class="rvts35"> or </span><span class="rvts36">T&nbsp; W</span><span class="rvts35"> on the status line when you are in WORD mode. When it is set back to CHARS mode, the indicator will show either </span><span class="rvts36">C</span><span class="rvts35"> or </span><span class="rvts36">T</span><span class="rvts35"> on the status line, without the </span><span class="rvts36">W</span><span class="rvts35">.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you find you frequently need to search for string in WORD mode, you can configure SPFLite to always use WORD mode as a default. This is done by checking the entry </span><a class="rvts33" href="OptionsGeneral.html#Use%20WORD%20as%20the%20default%20for%20FIND/CHANGE%20commands%20?">Use WORD as the default for FIND/CHANGE commands</a><span class="rvts35">. When this checkbox is unchecked, SPFLite will look for strings as CHAR values as usual. See "</span><a class="rvts33" href="OptionsGeneral.html">Options - General</a><span class="rvts35">".</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><img alt="" style="padding : 1px;" src="lib/Options - General.jpg"></p>
+<p class="rvps2"><span class="rvts98"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you want to quickly change the search context from the edit command line without using the Global Options window, you can issue a </span><span class="rvts36">FIND WORDS</span><span class="rvts35"> or </span><span class="rvts36">FIND CHARS</span><span class="rvts35"> command. See </span><a class="rvts33" href="FINDFindaCharacterString.html">FIND - Find a Character String</a><span class="rvts35"> for more information.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">If you issue a </span><span class="rvts36">RESET</span><span class="rvts35"> command with no operands, the default search context will revert to the setting you have for this checkbox, either </span><span class="rvts36">WORD</span><span class="rvts35"> mode (checked) or </span><span class="rvts36">CHAR</span><span class="rvts35"> mode (unchecked).</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps2"><a name="RestrictionsontheuseofLASTandPREVwithRegularExpressions"></a>
+<span class="rvts36">Restrictions on the use of LAST and PREV with Regular Expressions</span></p>
+<p class="rvps2"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35">When a </span><span class="rvts36">FIND</span><span class="rvts35"> or </span><span class="rvts36">CHANGE</span><span class="rvts35"> search operand is a Regular Expression (a string with an </span><span class="rvts36">R</span><span class="rvts35"> type code) and reverse-order searching is done with </span><span class="rvts36">PREV</span><span class="rvts35"> or </span><span class="rvts36">LAST</span><span class="rvts35">, only the left-most occurrence on any given line is found, as if the </span><span class="rvts36">LEFT</span><span class="rvts35"> operand had been used. That is, the command</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts130"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">FIND R'ABC' PREV</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">is treated as if it were specified as</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">FIND </span><span class="rvts131">LEFT</span><span class="rvts89"> R'ABC' PREV</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">and</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">FIND R'ABC' LAST</span></p>
+<p class="rvps9"><span class="rvts36"><br/></span></p>
+<p class="rvps9"><span class="rvts35">is treated as if it were specified as</span></p>
+<p class="rvps9"><span class="rvts111"><br/></span></p>
+<p class="rvps9"><span class="rvts130"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts89">FIND </span><span class="rvts131">LEFT</span><span class="rvts89"> R'ABC' LAST</span></p>
+<p class="rvps9"><span class="rvts111"><br/></span></p>
+<p class="rvps9"><span class="rvts35">This limitation stems from the regular-expression engine used by SPFLite.</span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9"><span class="rvts35"><br/></span></p>
+<p class="rvps9" style="page-break-before: always;"><span class="rvts35"><br/></span></p>
+<p></p>
+<p class="rvps8" style="clear: both;"><span class="rvts30">Created with the Personal Edition of HelpNDoc: </span><a class="rvts31" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+            </div>
+            
+            
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
